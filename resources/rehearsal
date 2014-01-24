@@ -1,0 +1,754 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>bevacqua/rehearsal · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <link rel="logo" type="image/svg" href="https://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
+    <meta property="og:image" content="https://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png">
+    <meta name="hostname" content="github-fe119-cp1-prd.iad.github.net">
+    <meta name="ruby" content="ruby 1.9.3p194-tcs-github-tcmalloc (e1c0c3f392) [x86_64-linux]">
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="/_sockets" />
+    
+
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="BA894C5A:5772:2656D6A:52C364B6" name="octolytics-dimension-request_id" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="BO0KQ7WTy2C0wTy6HywWTeNXmchPFvdhkFbCV+wS6bI=" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-3944f96c1c19f752fe766b332fb7716555c8296e.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-7f66047cec22b76987be5f65bf370a5cb7a645d6.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+    
+
+      <script src="https://github.global.ssl.fastly.net/assets/frameworks-29a3fb0547e33bd8d4530bbad9bae3ef00d83293.js" type="text/javascript"></script>
+      <script src="https://github.global.ssl.fastly.net/assets/github-de3e1342dc6592c2ac28e41f41b203f01068205d.js" type="text/javascript"></script>
+      
+      <meta http-equiv="x-pjax-version" content="3cb2fbd97d7aa54718ba9add14536e68">
+
+        <meta property="og:title" content="rehearsal"/>
+  <meta property="og:type" content="githubog:gitrepository"/>
+  <meta property="og:url" content="https://github.com/bevacqua/rehearsal"/>
+  <meta property="og:image" content="https://github.global.ssl.fastly.net/images/gravatars/gravatar-user-420.png"/>
+  <meta property="og:site_name" content="GitHub"/>
+  <meta property="og:description" content="rehearsal - Persist standard input to a file, then simulate real-time program execution."/>
+
+  <meta name="description" content="rehearsal - Persist standard input to a file, then simulate real-time program execution." />
+
+  <meta content="934293" name="octolytics-dimension-user_id" /><meta content="bevacqua" name="octolytics-dimension-user_login" /><meta content="15424615" name="octolytics-dimension-repository_id" /><meta content="bevacqua/rehearsal" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="15424615" name="octolytics-dimension-repository_network_root_id" /><meta content="bevacqua/rehearsal" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/bevacqua/rehearsal/commits/master.atom" rel="alternate" title="Recent Commits to rehearsal:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_out  env-production  vis-public">
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions">
+        <a class="button primary" href="/join">Sign up</a>
+      <a class="button signin" href="/login?return_to=%2Fbevacqua%2Frehearsal">Sign in</a>
+    </div>
+
+    <div class="command-bar js-command-bar  in-repository">
+
+      <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+        <li class="features"><a href="/features">Features</a></li>
+          <li class="enterprise"><a href="https://enterprise.github.com/">Enterprise</a></li>
+          <li class="blog"><a href="/blog">Blog</a></li>
+      </ul>
+        <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    
+      data-repo="bevacqua/rehearsal"
+      data-branch="master"
+      data-sha="f9ba96fd585fe863ba6bad9df9cc06c1a184f1fa"
+  >
+
+    <input type="hidden" name="nwo" value="bevacqua/rehearsal" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="octicon help tooltipped downwards" title="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+    </div>
+
+  </div>
+</div>
+
+
+      
+
+
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+
+  <li>
+    <a href="/login?return_to=%2Fbevacqua%2Frehearsal"
+    class="minibutton with-count js-toggler-target star-button tooltipped upwards"
+    title="You must be signed in to use this feature" rel="nofollow">
+    <span class="octicon octicon-star"></span>Star
+  </a>
+
+    <a class="social-count js-social-count" href="/bevacqua/rehearsal/stargazers">
+      4
+    </a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Fbevacqua%2Frehearsal"
+        class="minibutton with-count js-toggler-target fork-button tooltipped upwards"
+        title="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-git-branch"></span>Fork
+      </a>
+      <a href="/bevacqua/rehearsal/network" class="social-count">
+        0
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author">
+            <a href="/bevacqua" class="url fn" itemprop="url" rel="author"><span itemprop="title">bevacqua</span></a>
+          </span>
+          <span class="repohead-name-divider">/</span>
+          <strong><a href="/bevacqua/rehearsal" class="js-current-repository js-repo-home-link">rehearsal</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      
+
+      <div class="repository-with-sidebar repo-container with-full-navigation ">
+
+        <div class="repository-sidebar">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped leftwards" title="Code">
+        <a href="/bevacqua/rehearsal" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /bevacqua/rehearsal">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped leftwards" title="Issues">
+          <a href="/bevacqua/rehearsal/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /bevacqua/rehearsal/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped leftwards" title="Pull Requests">
+        <a href="/bevacqua/rehearsal/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /bevacqua/rehearsal/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped leftwards" title="Pulse">
+        <a href="/bevacqua/rehearsal/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /bevacqua/rehearsal/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Graphs">
+        <a href="/bevacqua/rehearsal/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /bevacqua/rehearsal/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Network">
+        <a href="/bevacqua/rehearsal/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /bevacqua/rehearsal/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+            <div class="only-with-full-nav">
+              
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/bevacqua/rehearsal.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/bevacqua/rehearsal.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/bevacqua/rehearsal" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/bevacqua/rehearsal" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="octicon help tooltipped upwards" title="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+
+
+              <a href="/bevacqua/rehearsal/archive/master.zip"
+                 class="minibutton sidebar-button"
+                 title="Download this repository as a zip file"
+                 rel="nofollow">
+                <span class="octicon octicon-cloud-download"></span>
+                Download ZIP
+              </a>
+            </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+<span id="js-show-full-navigation"></span>
+
+<div class="repository-meta js-details-container  " data-url="/bevacqua/rehearsal/graphs/ping" data-data-url="/bevacqua/rehearsal/graphs/ping-data">
+    <div class="repository-description js-details-show">
+      <p>Persist standard input to a file, then simulate real-time program execution.</p>
+    </div>
+
+
+
+</div>
+
+<div class="capped-box overall-summary ">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/bevacqua/rehearsal/commits/master">
+            <span class="num">
+              <span class="octicon octicon-history"></span>
+              5
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/bevacqua/rehearsal/branches">
+          <span class="num">
+            <span class="octicon octicon-git-branch"></span>
+            1
+          </span>
+          branch
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/bevacqua/rehearsal/releases">
+          <span class="num">
+            <span class="octicon octicon-tag"></span>
+            0
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+          <a href="/bevacqua/rehearsal/graphs/contributors" class="js-deferred-content" data-url="/bevacqua/rehearsal/contributors_size">
+            <span class="num">
+              <span class="octicon octicon-organization"></span>
+            </span>
+            Fetching contributors
+          </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/bevacqua/rehearsal/search?l=javascript">
+                <span class="color-block language-color" style="background-color:#f15501;"></span>
+                <span class="lang">JavaScript</span>
+                <span class="percent">100%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+  </div>
+
+</div>
+
+  <a href="#"
+     class="repository-lang-stats-graph js-toggle-lang-stats tooltipped downwards"
+     title="Show language statistics"
+     style="background-color:#f15501">
+  <span class="language-color" style="width:100%; background-color:#f15501;" itemprop="keywords">JavaScript</span>
+  </a>
+
+
+
+<div class="file-navigation in-mid-page">
+    <a href="/bevacqua/rehearsal/compare" aria-label="Compare, review, create a pull request" class="minibutton compact primary tooltipped downwards" title="Compare &amp; review" data-pjax>
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/bevacqua/rehearsal/tree/master"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+  <div class="breadcrumb"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/bevacqua/rehearsal" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">rehearsal</span></a></span></span><span class="separator"> / </span><form action="/login?return_to=%2Fbevacqua%2Frehearsal" class="js-new-blob-form tooltipped rightwards new-file-link" method="post" title="Sign in to make or propose changes"><span aria-label="Sign in to make or propose changes" class="js-new-blob-submit octicon octicon-file-add" data-test-id="create-new-git-file" role="button"></span></form></div>
+</div>
+
+
+
+<a href="/bevacqua/rehearsal/find/master"
+  data-hotkey="t" class="js-show-file-finder" style="display:none" data-pjax>Show File Finder</a>
+<div class="bubble files-bubble">
+
+
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/bevacqua/rehearsal/commit/15c4be75f4dbf852d1ebfaa06dd9945a0cd06287" class="message" data-pjax="true" title="format">format</a>
+        
+    </p>
+    <div class="commit-meta">
+      <span class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="15c4be75f4dbf852d1ebfaa06dd9945a0cd06287" data-copied-hint="copied!" title="Copy SHA"><span class="octicon octicon-clippy"></span></span>
+      <a href="/bevacqua/rehearsal/commit/15c4be75f4dbf852d1ebfaa06dd9945a0cd06287" class="sha-block" data-pjax>latest commit <span class="sha">15c4be75f4</span></a>
+
+      <div class="authorship">
+        <img class="gravatar" height="20" src="https://2.gravatar.com/avatar/bda3fc80472a48f98265364dca90a983?d=https%3A%2F%2Fidenticons.github.com%2F2817e9550beb771c991ba2bd8c268388.png&amp;r=x&amp;s=140" width="20" />
+        <span class="author-name"><a href="/bevacqua" data-skip-pjax="true" rel="author">bevacqua</a></span>
+        authored <time class="js-relative-date updated" datetime="2013-12-24T16:04:19-08:00" title="2013-12-24 16:04:19">December 24, 2013</time>
+
+      </div>
+    </div>
+  </div>
+
+  <table class="files" data-pjax>
+
+    
+<tbody class=""
+  data-url="/bevacqua/rehearsal/file-list/master">
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/tree/master/bin" class="js-directory-link" id="c1111bd512b29e821b120b86446026b8-c315b24267e177688572a6c7bf33a5b3a717b80e" title="bin">bin</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/commit/29ef4d8ec6037c83ddf31d41a780f3852c8689be" class="message" data-pjax="true" title="updated api, cli, and docs">updated api, cli, and docs</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-12-24T12:48:02-08:00" title="2013-12-24 12:48:02">December 24, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/tree/master/test" class="js-directory-link" id="098f6bcd4621d373cade4e832627b4f6-3255d8ee9bbfa4482b4e147571297a16c56182ff" title="test">test</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/commit/29ef4d8ec6037c83ddf31d41a780f3852c8689be" class="message" data-pjax="true" title="updated api, cli, and docs">updated api, cli, and docs</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-12-24T12:48:02-08:00" title="2013-12-24 12:48:02">December 24, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/blob/master/.editorconfig" class="js-directory-link" id="1e70daafb475c0ce3fef7d2728279182-e9a9bff8ebdad653f80705b5fdf61805647fa393" title=".editorconfig">.editorconfig</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/commit/e9f8e31ced25c8df900720248f92d32ee795bda9" class="message" data-pjax="true" title="initial commit">initial commit</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-12-24T11:46:43-08:00" title="2013-12-24 11:46:43">December 24, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-3c3629e647f5ddf82548912e337bea9826b434af" title=".gitignore">.gitignore</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/commit/e9f8e31ced25c8df900720248f92d32ee795bda9" class="message" data-pjax="true" title="initial commit">initial commit</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-12-24T11:46:43-08:00" title="2013-12-24 11:46:43">December 24, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/blob/master/LICENSE" class="js-directory-link" id="9879d6db96fd29134fc802214163b95a-3e427ed4e0b67255245654aa0c5d96074752cef2" title="LICENSE">LICENSE</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/commit/29ef4d8ec6037c83ddf31d41a780f3852c8689be" class="message" data-pjax="true" title="updated api, cli, and docs">updated api, cli, and docs</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-12-24T12:48:02-08:00" title="2013-12-24 12:48:02">December 24, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-d20f104ac8cafb74a99018ea04263b722bc43982" title="README.md">README.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/commit/d3e3eeea4b7ac2c26e2043ee71f5e73992aeabf7" class="message" data-pjax="true" title="updated readme">updated readme</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-12-24T12:55:23-08:00" title="2013-12-24 12:55:23">December 24, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/blob/master/api.js" class="js-directory-link" id="2d5bbda346ebb54b9745d10f2fb5b1b6-b01e5aecca0621948adc1f6f45f348f0fcd721be" title="api.js">api.js</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/commit/29ef4d8ec6037c83ddf31d41a780f3852c8689be" class="message" data-pjax="true" title="updated api, cli, and docs">updated api, cli, and docs</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-12-24T12:48:02-08:00" title="2013-12-24 12:48:02">December 24, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/blob/master/cli.js" class="js-directory-link" id="2cce40143051e25f811b56c79d619bf5-d60e17725c70abb748730ea5d91c27be2cefeccf" title="cli.js">cli.js</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/commit/29ef4d8ec6037c83ddf31d41a780f3852c8689be" class="message" data-pjax="true" title="updated api, cli, and docs">updated api, cli, and docs</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-12-24T12:48:02-08:00" title="2013-12-24 12:48:02">December 24, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/blob/master/execute.js" class="js-directory-link" id="4aeee5d7804636e5c8d5542b81eec580-7e26b3e30d763546b0944d0d88db12b9c6c465a5" title="execute.js">execute.js</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/commit/e9f8e31ced25c8df900720248f92d32ee795bda9" class="message" data-pjax="true" title="initial commit">initial commit</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-12-24T11:46:43-08:00" title="2013-12-24 11:46:43">December 24, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/blob/master/package.json" class="js-directory-link" id="b9cfc7f2cdf78a7f4b91a753d10865a2-8f07fd5a86323bed8b0f2c2f92d31eabfd7735c7" title="package.json">package.json</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/commit/3ae1a4ad484b23b2ba154f952590f82889c76df0" class="message" data-pjax="true" title="patch pkg">patch pkg</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-12-24T15:45:53-08:00" title="2013-12-24 15:45:53">December 24, 2013</time></span></td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/blob/master/rehearse.js" class="js-directory-link" id="cd85a71d330a34d857e9f0955e6695f4-bfb8143baed2babdf13308fa0371a90765122b49" title="rehearse.js">rehearse.js</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/bevacqua/rehearsal/commit/15c4be75f4dbf852d1ebfaa06dd9945a0cd06287" class="message" data-pjax="true" title="format">format</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-12-24T16:04:19-08:00" title="2013-12-24 16:04:19">December 24, 2013</time></span></td>
+    </tr>
+</tbody>
+
+  </table>
+</div>
+
+  <div id="readme" class="clearfix announce instapaper_body md">
+    <span class="name">
+      <span class="octicon octicon-book"></span>
+      README.md
+    </span>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="rehearsal" class="anchor" href="#rehearsal"><span class="octicon octicon-link"></span></a>Rehearsal</h1>
+
+<blockquote>
+<p>Persist standard input to a file, then simulate real-time program execution.</p>
+</blockquote>
+
+<p>Ever needed to give a talk on a program and show exactly how the output is going to look like, and such?</p>
+
+<p>To install <code>rehearsal</code>, use <code>npm</code>.</p>
+
+<pre lang="shell"><code>npm i -g rehearsal
+</code></pre>
+
+<p>To record the output of a program, pipe it through <code>rehearsal</code>, and then persist that to a file.</p>
+
+<pre lang="shell"><code>grunt ec2_list --color | rehearsal &gt; scenario
+</code></pre>
+
+<p>Note that <strong>your command is getting executed here</strong>, we're just redirecting its output, so make sure that that doesn't blow up your repository, or production servers, or anything.</p>
+
+<p>In this case, I had to use the <code>--color</code> argument because <code>chalk</code> won't produce any color coding, otherwise.</p>
+
+<p>At any time, the scenario can be reproduced using the <code>reheasal &lt;scenario&gt;</code> command, as shown in the screenshot below.</p>
+
+<p><a href="https://github.com/bevacqua/rehearsal" title="bevacqua/rehearsal on GitHub"><img src="https://github-camo.global.ssl.fastly.net/fbc32ddb3946658c69dafec15c6378e97f6cbaf6/687474703a2f2f692e696d6775722e636f6d2f626f4e6b52656d2e706e67" alt="rehearsal.png" style="max-width:100%;"></a></p>
+
+<p>Read some more on <a href="http://blog.ponyfoo.com/2013/12/24/rehearsal-record-program-output" title="Rehearsal: Record program output">Pony Foo</a></p></article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2013 <span title="0.02742s from github-fe119-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
+                 data-url="/bevacqua/rehearsal/suggestions/commit">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" title="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
+      title="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
+
