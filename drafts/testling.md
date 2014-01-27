@@ -14,7 +14,7 @@ One of the most challenging aspects of building successful web applications is m
 }
 ```
 
-Getters blow up in the older browsers. The classical [`assert`][3] module might be a better fit for us if we want to support older browsers.
+Getters blow up in the older browsers. The classical [`assert`][3] module might be a better fit for us if we want to support the usual suspects, such as `IE <= 8`.
 
 > You're lucky you know about this before hand, otherwise you might've needed to [translate your tests away from `should.js` and into `assert`][4].
 
