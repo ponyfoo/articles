@@ -168,7 +168,7 @@ gulp.task('build', function () {
 });
 ```
 
-I'd like to see the minified file size every time I run this task, and I could use `gulp-size` to do that. Let's see
+I'd like to see the minified file size every time I run this task, and I could use `gulp-size` to do that. Let's see how that works.
 
 ### `.pipe(size())`
 
@@ -192,7 +192,11 @@ gulp.task('build', function () {
 });
 ```
 
-Don't forget to `require` it!
+Easy enough! Don't forget to `require` it.
+
+```js
+var size = require('gulp-size');
+```
 
 # Pushing a release
 
@@ -400,5 +404,3 @@ You can check out [contra][9], which is the package I've been talking about in t
   [13]: http://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options "child_process.spawn(command, [args], [options])"
   [14]: https://github.com/buildfirst/ci-by-example "buildfirst/ci-by-example on GitHub"
   [15]: https://github.com/bevacqua/contra/blob/master/gulpfile.js "gulpfile.js for bevacqua/contra on GitHub"
-
-[gulp tutorial build]
