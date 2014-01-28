@@ -2,7 +2,11 @@
 
 Browsers are becoming a thing. The web platform is sprawling with popularity, and you have no idea what browsers your code works on. That's discouraging, scary, **unreliable**. By now we all know about the benefits of testing. Good test coverage makes your code more reliable, maintainable, predictable, and approachable. Going through a project's unit tests helps you give an idea of the intended behavior of a certain piece of functionality that might otherwise be poorly documented (although I'd rather [discourage maintainers from relying on tests as documentation][1]).
 
-In this article I aim to walk you through the necessary tooling. We will write unit tests using Mocha, and run them on browsers using Testling. Testling leverages Common.JS modules to allow us to run unit tests on multiple browsers on every `git push`, which is pretty awesome.
+In this article I aim to walk you through the necessary tooling to do continuous browser testing on the cloud with [Testling][3], a CI platform developed by [@substack][2]. We will write unit tests using Mocha, and run them on browsers using Testling. Testling leverages Common.JS modules to allow us to run unit tests on multiple browsers on every `git push`, which is pretty awesome.
+
+  [1]: /2014/01/20/how-to-design-great-programs "How to Design Great Programs"
+  [2]: https://twitter.com/substack "substack on Twitter"
+  [3]: http://ci.testling.com/ "Testling CI Platform"
 
 # Think Browser Support
 
@@ -25,7 +29,6 @@ That being said, you won't have the same requirements in every case. You might n
 
 
 
-  [1]: /2014/01/20/how-to-design-great-programs "How to Design Great Programs"
   [2]: https://github.com/visionmedia/should.js "visionmedia/should.js on GitHub"
   [3]: https://github.com/defunctzombie/commonjs-assert "defunctzombie/commonjs-assert on GitHub"
   [4]: https://github.com/bevacqua/contra/commit/1ca62b377595540eeb73fdd08a7c9edcb8ded377#diff-a11d42d80e96bd0a929b68d115fc7759 "'should -> assert, better browser compat' commit on bevacqua/contra"
