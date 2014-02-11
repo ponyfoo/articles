@@ -86,6 +86,8 @@ Angular bases its data-binding features in [a dirty-checking loop which tracks c
 > 1. [**`$$postDigestQueue`**][29] Methods registered with `$$postDigest(fn)`
 
 
+https://github.com/angular/angular.js/wiki/Understanding-Scopes
+
 scopes
 child
 
