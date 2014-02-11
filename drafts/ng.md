@@ -69,6 +69,8 @@ When triggered, event listeners are passed an `event` object, and any arguments 
 
 ## Digesting change-sets
 
+Angular bases its data-binding features in [a dirty-checking loop which tracks changes][34] and fires events when these change.
+
 > 1. [**`$$phase`**][19] Current phase in the digest cycle. One of `[null, '$apply', '$digest']`
 > 1. [**`$digest()`**][20] Executes the digest dirty-checking loop
 > 1. [**`$apply(expr)`**][21] Parses and evaluates an expression, and then executes the digest loop
@@ -144,5 +146,5 @@ Please comment on any issues regarding this article so _everyone can benefit_ fr
   [31]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L176 "scope.$new - Angular on GitHub"
   [32]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L693 "scope.$destroy - Angular on GitHub"
   [33]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L699 "scope.$$destroyed - Angular on GitHub"
-
+  [34]: http://stackoverflow.com/a/9693933/389745 "Data binding in Angular.js, Misko on StackOverflow"
 
