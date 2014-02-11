@@ -87,6 +87,7 @@ Angular bases its data-binding features in [a dirty-checking loop which tracks c
 
 
 https://github.com/angular/angular.js/wiki/Understanding-Scopes
+http://www.benlesh.com/2013/08/angularjs-watch-digest-and-apply-oh-my.html
 
 scopes
 child
