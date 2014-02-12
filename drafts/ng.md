@@ -8,14 +8,24 @@ This article aims to navigate the salt marsh that are Angular scopes and directi
 
 > The bar is high, but scopes are _sufficiently hard_ to explain. If I'm going to fail miserably at it, at least I'll throw in a few more promises I can't keep!
 
+If the following figure [_(source)_][4] looks unreasonably mind bending, then this article might be for you.
+
+[[mindbender.png][3]][4]
+
 _Disclaimer: article based on [Angular v1.2.10 tree @ `caed2dfe4f`][2]._
 
   [1]: /2013/07/09/getting-over-jquery "Getting Over jQuery"
   [2]: https://github.com/angular/angular.js/tree/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d "Angular on GitHub"
+  [3]: http://i.stack.imgur.com/fkWHA.png
+  [4]: https://github.com/angular/angular.js/wiki/Understanding-Scopes "'Understanding' Scopes - Angular wiki on GitHub"
 
 [![angularjs.png][1]][2]
 
 Angular uses scopes to abstract communication between directives and the DOM. Scopes also exist in the controller level. Scopes are plain old JavaScript objects _(POJO)_, which is fancy talk explaining that Angular does not heavily manipulate scopes, other than adding a bunch of properties, prefixed with one or two `$` symbols. The ones prefixed with `$$` aren't necessary as frequently, and using them is often a code smell, which can be avoided by having _a deeper understanding of the digest cycle_.
+
+### What kind of scopes are we talking about?
+
+In Angular slang, a _"scope"_ is not what you might be used to, when thinking about JavaScript code, or even programming in general. Usually, scopes are used to refer to the bag in a piece of code which holds the _context_, variables, and so on. In most languages variables are held in imaginary bags, which are wrapped in curly braces `{}`, or code blocks. This is known as [_block scoping_][35].
 
 ### Examination of a telescopic sight
 
@@ -39,9 +49,11 @@ Then I'm able to inspect the scope, assert that it's the scope I expected, and w
 for(o in $($0).scope())o[0]=='$'&&console.log(o)
 ```
 
+That's good enough, I'll go over each property, clustering them by functionality, and going over each portion of Angular's scoping philosophy.
+
 # Don't buy a rifle scope without reading this
 
-Here I've listed the properies yielded by that command, grouped by area of functionality. Let's start with the basics.
+Here I've listed the properies yielded by that command, grouped by area of functionality. Let's start with the basic ones, which merely provide scope navigation.
 
 > 1. [**`$id`**][7] Uniquely identifies the scope
 > 1. [**`$root`**][8] Root scope
@@ -51,7 +63,7 @@ Here I've listed the properies yielded by that command, grouped by area of funct
 > 1. [**`$$prevSibling`**][12] Previous sibling scope, if any; or `null`
 > 1. [**`$$nextSibling`**][13] Next sibling scope, if any; or `null`
 
-No surprises there. Navigating scopes like this would be utter non-sense. Sometimes accessing the `$parent` scope might seem right, but there are better, _less coupled_ ways to deal with parental communication than **tightly binding people-scopes together**. One such way is using event listeners, our next batch of scope properties!
+No surprises there. Navigating scopes like this would be utter non-sense. Sometimes accessing the `$parent` scope might seem appropriate, but there are always better, _less coupled_, ways to deal with parental communication than **tightly binding people-scopes together**. One such way is using event listeners, our next batch of scope properties!
 
 ## Events and partying: spreading the word
 
@@ -93,7 +105,7 @@ scopes
 child
 
 
-## Scope half-life
+## The `Scope` is dead, long live the `Scope`!
 
 These are the last few, rather dull-looking, properties in a scope. They deal with the scope life cycle, and are mostly used for internal purposes, although there are cases where you may want to `$new` scopes by yourself.
 
@@ -150,4 +162,5 @@ Please comment on any issues regarding this article so _everyone can benefit_ fr
   [32]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L693 "scope.$destroy - Angular on GitHub"
   [33]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L699 "scope.$$destroyed - Angular on GitHub"
   [34]: http://stackoverflow.com/a/9693933/389745 "Data binding in Angular.js, Misko on StackOverflow"
-
+  [35]: http://en.wikipedia.org/wiki/Scope_(computer_science)#Block_scope "Block scoping in Computer Science - Wikipedia"
+  [36]: http://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scoping "Lexical scoping - Wikipedia"
