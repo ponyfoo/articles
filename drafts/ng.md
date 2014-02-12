@@ -23,11 +23,72 @@ _Disclaimer: article based on [Angular v1.2.10 tree @ `caed2dfe4f`][2]._
 
 Angular uses scopes to abstract communication between directives and the DOM. Scopes also exist in the controller level. Scopes are plain old JavaScript objects _(POJO)_, which is fancy talk explaining that Angular does not heavily manipulate scopes, other than adding a bunch of properties, prefixed with one or two `$` symbols. The ones prefixed with `$$` aren't necessary as frequently, and using them is often a code smell, which can be avoided by having _a deeper understanding of the digest cycle_.
 
-### What kind of scopes are we talking about?
+# What kind of scopes are we talking about?
 
-In Angular slang, a _"scope"_ is not what you might be used to, when thinking about JavaScript code, or even programming in general. Usually, scopes are used to refer to the bag in a piece of code which holds the _context_, variables, and so on. In most languages variables are held in imaginary bags, which are wrapped in curly braces `{}`, or code blocks. This is known as [_block scoping_][35].
+In Angular slang, a _"scope"_ is not what you might be used to, when thinking about JavaScript code, or even programming in general. Usually, scopes are used to refer to the bag in a piece of code which holds the _context_, variables, and so on.
 
-### Examination of a telescopic sight
+> In most languages variables are held in imaginary bags, which are defined by curly braces `{}`, or code blocks. This is known as [_block scoping_][35]. JavaScript, in contrast, deals in [_lexical scoping_][36], which pretty much means the bags are defined by functions, or the global object, rather than code blocks.
+>
+> Bags can contain any number of smaller bags. Each bag can access the candy _(sweet, sweet variables)_ inside its parent bag (and its parent's parent, and so on), but they can't poke holes in smaller, or child bags.
+
+As a quick and dirty example, let's examine the function below.
+
+```js
+function eat (thing) {
+  console.log('Eating a ' + thing);
+}
+
+function nuts (peanut) {
+  var hazelnut = 'hazelnut';
+
+  function seeds () {
+    var almond = 'almond';
+    eat(hazelnut); // I can reach into the nuts bag!
+  }
+
+  // Inaccessible almond is inaccessible.
+  // Almonds are not nuts.
+}
+```
+
+I won't dwell on [`this` matter][37] any longer, as these are not the scopes people refer to, when talking about Angular.
+
+## Scope inheritance in Angular.js
+
+Scopes in Angular are also context, but _on Angular terms_. In Angular, a scope is associated to an element, while an element is not necessarily _directly associated_ with a scope. Elements are assigned a scope is one of the following ways.
+
+A scope is created on an element by a controller, or a directive (directives don't always introduce new scopes).
+
+```html
+<nav ng-controller='menuCtrl'>
+```
+
+If a scope isn't present on the element, then it's inherited from its parent.
+
+```html
+<nav ng-controller='menuCtrl'>
+  <a ng-click='navigate()'>Click Me!</a> <!-- also <nav>'s scope -->
+</nav>
+```
+
+If the element isn't part of an `ng-app`, then **it doesn't belong to an scope at all**.
+
+```html
+<head>
+  <h1>Pony Deli App</h1>
+</head>
+<main ng-app='DeliMenu'>
+  <nav ng-controller='menuCtrl'>
+    <a ng-click='navigate()'>Click Me!</a>
+  </nav>
+</main>
+```
+
+To figure out an element's scope, try to think of elements **recursively inside-out** following the three rules I've just outlined. Does it create a new scope? That's its scope. Does it have a parent? Check the parent, then. Is it not part of an `ng-app`? Tough luck, no scope.
+
+You can **(and most definitely should)** use developer tools magic to easily figure out the scope for an element.
+
+## Examination of a telescopic sight
 
 I'll walk through a few properties in a typical scope as a way to introduce concepts, before moving on to explaining how digests work and behave internally. I'll also let you in on how I'm getting to these properties. First, I'll open Chrome and navigate to the application I'm working on, which is written in Angular. Then I'll inspect on an element, and open the developer tools.
 
@@ -164,3 +225,4 @@ Please comment on any issues regarding this article so _everyone can benefit_ fr
   [34]: http://stackoverflow.com/a/9693933/389745 "Data binding in Angular.js, Misko on StackOverflow"
   [35]: http://en.wikipedia.org/wiki/Scope_(computer_science)#Block_scope "Block scoping in Computer Science - Wikipedia"
   [36]: http://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scoping "Lexical scoping - Wikipedia"
+  [37]: /2013/12/04/where-does-this-keyword-come-from "Where does this keyword come from?"
