@@ -235,7 +235,34 @@ This one is [also on CodePen][41].
 
 Over time you'll learn to lean towards events or services accordingly. I could say that you should use events when you expect view models to change in response to `event`, and you ought to use services otherwise, when you don't expect view model changes. Sometimes the response is a mixture of both, where an action triggers an event which calls a service, or a service which broadcasts an event on `$rootScope`. It depends on each situation, and you should analyze it as such, rather than attempting to nail down the **elusive one-size-fits-all solution**.
 
-By the way, if you have two components which communicate through `$rootScope`, you might prefer to use **`$rootScope.$emit`** _(rather than `$broadcast`)_ and `$rootScope.$on`. That way, the event will only spread among `$rootScope.$$listeners`, and it won't waste time looping through every children of `$rootScope`, which _you just know_ won't have any listeners for that event.
+If you have two components which communicate through `$rootScope`, you might prefer to use **`$rootScope.$emit`** _(rather than `$broadcast`)_ and `$rootScope.$on`. That way, the event will only spread among `$rootScope.$$listeners`, and it won't waste time looping through every children of `$rootScope`, which _you just know_ won't have any listeners for that event. Here's an example service using `$rootScope` to provide events without limiting itself to a particular scope. It provides a subscribe method which allows consumers to register event listeners, and it might do things internally, which trigger that event.
+
+```js
+angular.module('PonyDeli').factory("notificationService", function ($rootScope) {
+  function notify (data) {
+    $rootScope.$emit("notificationService.update", data);
+  }
+
+  function listen (fn) {
+    $rootScope.$on("notificationService.update", function (e, data) {
+      fn(data);
+    });
+  }
+
+  // anything that might have a reason
+  // to emit events at later points in time
+  function load () {
+    setInterval(notify.bind(null, 'Something happened!'), 1000);
+  }
+
+  return {
+    subscribe: listen,
+    load: load
+  };
+});
+```
+
+You guessed right! This one is [also on CodePen][42].
 
 Enough events versus services banter, shall we move on to some other properties?
 
@@ -340,3 +367,4 @@ Please comment on any issues regarding this article so _everyone can benefit_ fr
   [39]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/Angular.js#L1144 "The ng-app directive - Angular on GitHub"
   [40]: http://codepen.io/bevacqua/pen/qmBGd "Separation of concerns using scope events"
   [41]: http://codepen.io/bevacqua/pen/CzGla "Siblings talking to each other"
+  [42]: http://codepen.io/bevacqua/pen/HsBCa "Service events, using $rootScope"
