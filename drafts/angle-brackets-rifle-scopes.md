@@ -1,22 +1,22 @@
-# Angle brackets, rifle scopes
+# Angle Brackets, Rifle Scopes
 
-**Angular.js** presents a remarkable number of interesting design choices in its code-base. Two particularly interesting cases are the way in which scopes work; and how directives get compiled, and behave.
+**Angular.js** presents a remarkable number of interesting design choices in its code-base. Two particularly interesting cases are the way in which scopes work, and how directives behave.
 
 The first thing anyone is taught when approaching Angular for the first time is that directives are meant to interact with the DOM, or whatever does DOM manipulation for you, such as jQuery [_(Get over it!)_][1]. What immediately becomes **(and stays)** confusing for most, though, is the interaction between scopes, directives, and controllers. Particularly when we focus on scopes, and start factoring in the advanced concepts: **the digest cycle, isolate scopes, transclusion, and the different linking functions in directives.**
 
-This article aims to navigate the salt marsh that are Angular scopes and directives, while providing an amusingly informative, in-depth read.
+This _(two-part)_ article aims to navigate the salt marsh that are Angular scopes and directives, while providing an amusingly informative, in-depth read. In the first part, this one, I'll focus on scopes, and the life-cycle of an Angular application. The second part is focused on directives
 
 > The bar is high, but scopes are _sufficiently hard_ to explain. If I'm going to fail miserably at it, at least I'll throw in a few more promises I can't keep!
 
 If the following figure [_(source)_][4] looks unreasonably mind bending, then this article might be for you.
 
-[[mindbender.png][3]][4]
+[![mindbender.png][3]][4]
 
 _Disclaimer: article based on [Angular v1.2.10 tree @ `caed2dfe4f`][2]._
 
   [1]: /2013/07/09/getting-over-jquery "Getting Over jQuery"
   [2]: https://github.com/angular/angular.js/tree/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d "Angular on GitHub"
-  [3]: http://i.stack.imgur.com/fkWHA.png
+  [3]: http://i.stack.imgur.com/O1iSG.png
   [4]: https://github.com/angular/angular.js/wiki/Understanding-Scopes "'Understanding' Scopes - Angular wiki on GitHub"
 
 [![angularjs.png][1]][2]
@@ -116,13 +116,13 @@ That's good enough, I'll go over each property, clustering them by functionality
 
 Here I've listed the properies yielded by that command, grouped by area of functionality. Let's start with the basic ones, which merely provide scope navigation.
 
-> 1. [**`$id`**][7] Uniquely identifies the scope
-> 1. [**`$root`**][8] Root scope
-> 1. [**`$parent`**][9] Parent scope, or `null` if `scope == scope.$root`
-> 1. [**`$$childHead`**][10] First child scope, if any; or `null`
-> 1. [**`$$childTail`**][11] Last child scope, if any; or `null`
-> 1. [**`$$prevSibling`**][12] Previous sibling scope, if any; or `null`
-> 1. [**`$$nextSibling`**][13] Next sibling scope, if any; or `null`
+> 1. [`$id`][7] Uniquely identifies the scope
+> 1. [`$root`][8] Root scope
+> 1. [`$parent`][9] Parent scope, or `null` if `scope == scope.$root`
+> 1. [`$$childHead`][10] First child scope, if any; or `null`
+> 1. [`$$childTail`][11] Last child scope, if any; or `null`
+> 1. [`$$prevSibling`][12] Previous sibling scope, if any; or `null`
+> 1. [`$$nextSibling`][13] Next sibling scope, if any; or `null`
 
 No surprises there. Navigating scopes like this would be utter non-sense. Sometimes accessing the `$parent` scope might seem appropriate, but there are always better, _less coupled_, ways to deal with parental communication than **tightly binding people-scopes together**. One such way is using event listeners, our next batch of scope properties!
 
@@ -130,10 +130,10 @@ No surprises there. Navigating scopes like this would be utter non-sense. Someti
 
 The properties described below let us publish events and subscribe to them. This is a pattern known as [PubSub][14], or just events.
 
-> 1. [**`$$listeners`**][15] Event listeners registered on the scope
-> 1. [**`$on(evt, fn)`**][16] Attaches an event listener `fn` named `evt`
-> 1. [**`$emit(evt, args)`**][17] Fires event `evt`, roaring upward on the scope chain, triggering on the current scope and all `$parent`s, including the `$rootScope`
-> 1. [**`$broadcast(evt, args)`**][18] Fires event `evt`, triggering on the current scope and all its children
+> 1. [`$$listeners`][15] Event listeners registered on the scope
+> 1. [`$on(evt, fn)`][16] Attaches an event listener `fn` named `evt`
+> 1. [`$emit(evt, args)`][17] Fires event `evt`, roaring upward on the scope chain, triggering on the current scope and all `$parent`s, including the `$rootScope`
+> 1. [`$broadcast(evt, args)`][18] Fires event `evt`, triggering on the current scope and all its children
 
 When triggered, event listeners are passed an `event` object, and any arguments passed to the `$emit` or `$broadcast` function. There are many ways in which scope events can provide value.
 
@@ -268,63 +268,129 @@ Enough events versus services banter, shall we move on to some other properties?
 
 ## Digesting change-sets
 
-.....
-
-http://www.benlesh.com/2013/08/angularjs-watch-digest-and-apply-oh-my.html
-
-..
-
-
-
-Angular bases its data-binding features in [a dirty-checking loop which tracks changes][34], and fires events when these change. This is simpler than it sounds.
-
 > **Understanding this intimidating process is the cornerstone to understanding Angular.**
 
-I've split the properties into three groups, digest properties, evaluation properties, and watch properties. I'll go over digest properties first.
+Angular bases its data-binding features in [a dirty-checking loop which tracks changes][34], and fires events when these change. This is simpler than it sounds. No, really. It is! Let me quickly go over each of the core components of the `$digest` cycle. Firstly, there's the `scope.$digest` method. This method recursively digests changes in a scope and its children.
 
-> 1. [**`$$phase`**][19] Current phase in the digest cycle. One of `[null, '$apply', '$digest']`
-> 1. [**`$digest()`**][20] Executes the digest dirty-checking loop
-> 1. [**`$apply(expr)`**][21] Parses and evaluates an expression, and then executes the digest loop
+> 1. [`$digest()`][20] Executes the digest dirty-checking loop
+> 1. [`$$phase`][19] Current phase in the digest cycle. One of `[null, '$apply', '$digest']`
 
-> 1. [**`$eval`**][25] Parse and evaluate an scope expression immediately
-> 1. [**`$evalAsync`**][26] Parse and evaluate an expression in the next digest
-> 1. [**`$$asyncQueue`**][27] Async task queue, consumed on every digest
-> 1. [**`$$postDigest(fn)`**][28] Executes `fn` after the next digest cycle
-> 1. [**`$$postDigestQueue`**][29] Methods registered with `$$postDigest(fn)`
+It should be noted that you need to be careful about triggering digests, because attempting to do so when you're already in a digest phase will cause Angular to blow up in a mysterious haze of unexplainable phenomena. In other words, it'll be pretty hard to pinpoint the root cause of the issue.
 
-> 1. [**`$watch(watchExp, listener, objectEquality)`**][22] Adds a watch listener to the scope
-> 1. [**`$watchCollection`**][23] Watches array items or object map properties
-> 1. [**`$$watchers`**][24] Contains all the watches associated with the scope
+Let's take a look at what [the documentation][43] has to say, regarding `$digest`.
 
+> #### `$digest()`
+>
+> Processes all of the [watchers][44] of the current scope and its children. Because a [watcher][44]'s listener can change the model, the [$digest()][43] keeps calling the [watchers][44] until no more listeners are firing. This means that it is possible to get into an infinite loop. This function will throw `'Maximum iteration limit exceeded.'` if the number of iterations exceeds 10.
+>
+> Usually, you don't call [$digest()][43] directly in [controllers][45] or in [directives][46]. Instead, you should call [$apply()][47] (typically from within a [directives][46]), which will force a [$digest()][43].
 
-https://github.com/angular/angular.js/wiki/Understanding-Scopes
+So, a `$digest` processes all watchers, and then the watchers those watchers trigger, until nothing else triggers a watch. There's two questions left to understand this loop.
 
-scopes
-child
+- What the hell is _a watcher_?
+- Who triggers a `$digest`!?
 
+Answering both of these questions can be made out to be **as simple or as complicated** as the person explaining them to you feels like. I'll begin talking about watchers, and I'll let you draw _your own conclusions_.
+
+If you've read this far, you probably _already know_ what a watcher is. You've probably used [`scope.$watch`][22], and maybe even used [`scope.$watchCollection`][23]. The `$$watchers` property has all the watchers on a scope.
+
+> 1. [`$watch(watchExp, listener, objectEquality)`][22] Adds a watch listener to the scope
+> 1. [`$watchCollection`][23] Watches array items or object map properties
+> 1. [`$$watchers`][24] Contains all the watches associated with the scope
+
+Watchers are the single most important aspect of an Angular application's data-binding capabilities, but Angular needs our help in order to trigger those watchers, because otherwise it can't effectively update data-bound variables appropriately. Consider the following example.
+
+```js
+angular.module('PonyDeli').controller('foodCtrl', function ($scope) {
+  $scope.prop = 'initial value';
+  $scope.dependency = 'nothing yet!';
+
+  $scope.$watch('prop', function (value) {
+    $scope.dependency = 'prop is "' + value + '"! such amaze';
+  });
+
+  setTimeout(function () {
+    $scope.prop = 'something else';
+  }, 1000);
+});
+```
+
+```html
+<body ng-app='PonyDeli'>
+  <ul ng-controller='foodCtrl'>
+    <li ng-bind='prop'></li>
+    <li ng-bind='dependency'></li>
+  </ul>
+</body>
+```
+
+So you have `'initial value'`, and expect the second HTML line to change to `'prop is "something else"! such amaze'` after a second. Right? Even more interesting, you'd at the very least expect the first line to change to `'something else'`! Why doesn't it? That's not a watcher... or is it?
+
+Actually, a lot of what you do in the HTML markup ends up creating a watcher. In this case, [each `ng-bind` directive created a watcher][54] on the property. It will update the HTML of the `<li>`, whenever `prop` and `dependency` change, similarly to how our watch will change the property itself.
+
+That way, you can now think of your code as having three watches, one for each `ng-bind` directive, and the one in the controller. How is Angular supposed to know the property is updated, after the timeout? You could tell it, just by adding a manual digest to the timeout callback.
+
+```js
+setTimeout(function () {
+  $scope.prop = 'something else';
+  $scope.$digest();
+}, 1000);
+```
+
+Here's a CodePen [without the `$digest`][55], and one that [does `$digest`][56], after the timeout. The more [Angular way][50] to do it, however, would be using the [`$timeout` service][57] instead of `setTimeout`. It provides some error handling, and executes `$apply()`.
+
+> 1. [`$apply(expr)`][21] Parses and evaluates an expression, then executes the digest loop **on `$rootScope`**
+
+In addition to executing the digest on every scope, `$apply` provides error handling functionality, as well. If you're trying to tune your performance, then using `$digest` may be warranted, but I'd stay away from it until you feel really comfortable with how Angular works internally.
+
+We're back to the second question, now.
+
+> - Who triggers a `$digest`!?
+
+Digests are triggered internally by methods in Angular all over the place, either directly or by calls to `$apply()`, like we've just observed in the `$timeout` service. Most directives, both those found in Angular core and those out in the wild, trigger digests. Digests fire your watchers, and watchers update your UI. That's the basic idea, anyways.
+
+There's a pretty good resource with best practices in the Angular Wiki, which you can find linked at the bottom of this article.
+
+> #### A word of advice, regarding advice
+>
+> Ever since I've come aboard the Angular boat, I've read lots of advice on how to structure your code, what to do; and what not to do, when working with Angular. The truth is that you need to take advice regarding Angular with a pinch of salt. There's lots of bad advice clinging to the web, from back when Angular wasn't the mature framework that it is today, or written by people who don't have a clue what they're talking about.
+>
+> Even [the good advice][58] is **one guy's opinion**, and you shouldn't stick to whatever worked for someone else, just because they've blogged about them. I do believe that you should read about what other people to be best practices, and embrace them, if you feel they're adequate. But don't turn them into your unbreakable mantra, because they'll break you.
+
+I've explained how watches and the digest loop interact with each other. Below, I listed properties related to the digest loop, which you can find on a scope. These help you parse text expressions through Angular's compiler, or execute pieces of code at different points of the digest cycle.
+
+> 1. [`$eval(expression, locals)`][25] Parse and evaluate an scope expression immediately
+> 1. [`$evalAsync(expression)`][26] Parse and evaluate an expression at a later point in time
+> 1. [`$$asyncQueue`][27] Async task queue, consumed on every digest
+> 1. [`$$postDigest(fn)`][28] Executes `fn` after the next digest cycle
+> 1. [`$$postDigestQueue`][29] Methods registered with `$$postDigest(fn)`
+
+Phew, that's it. It wasn't that bad, was it?
 
 ## The `Scope` is dead, long live the `Scope`!
 
 These are the last few, rather dull-looking, properties in a scope. They deal with the scope life cycle, and are mostly used for internal purposes, although there are cases where you may want to `$new` scopes by yourself.
 
-> 1. [**$$isolateBindings**][30] Isolate scope bindings, e.g `{ options: '@megaOptions' }`. Very internal
-> 1. [**$new(isolate)**][31] Creates a child scope, or an isolate scope, which won't inherit from its parent
-> 1. [**$destroy**][32] Removes the scope from the scope chain. Scope and children won't receive events, and watches won't fire anymore
-> 1. [**$$destroyed**][33] Has the scope been destroyed?
+> 1. [$$isolateBindings][30] Isolate scope bindings, e.g `{ options: '@megaOptions' }`. Very internal
+> 1. [$new(isolate)][31] Creates a child scope, or an isolate scope, which won't inherit from its parent
+> 1. [$destroy][32] Removes the scope from the scope chain. Scope and children won't receive events, and watches won't fire anymore
+> 1. [$$destroyed][33] Has the scope been destroyed?
 
-isolate.. directives!
-http://stackoverflow.com/a/14914798/389745
-directive
-pre
-post(default)
+Isolate scopes? What is this madness? The second part of this article will be dedicated to directives, and it'll cover isolate scopes, transclusion, linking functions, compilers, directive controllers, and more. Can't wait? _You'll just have to._
 
-transclusion
+## Further Reading
 
+Here's some additional resources you can read to further extend your comprehension of Angular.
 
+- [The Angular Way][50]
+- [Anti Patterns][48]
+- [Best Practices][49]
+- [TodoMVC Angular.js Example][51]
+- [Training Videos from John Lindquist][52]
+- [ng-newsletter][59]
+- [Using scope.$watch and scope.$apply][60]
 
-
-
-Please comment on any issues regarding this article so _everyone can benefit_ from your feedback!
+Please comment on any issues regarding this article, so _everyone can benefit_ from your feedback. Also, you should [follow me on Twitter][53]!
 
   [1]: http://i.imgur.com/LSVpcm1.png
   [2]: http://angularjs.org/ "Angular.js"
@@ -349,15 +415,15 @@ Please comment on any issues regarding this article so _everyone can benefit_ fr
   [21]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L842-L857 "scope.$apply method - Angular on GitHub"
   [22]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L319 "scope.$watch method - Angular on GitHub"
   [23]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L415 "scope.$watchCollection method - Angular on GitHub"
-  [24]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L352 "scope.$$watchers method - Angular on GitHub"
+  [24]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L352 "scope.$$watchers collection - Angular on GitHub"
   [25]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L744 "scope.$eval method - Angular on GitHub"
   [26]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L778 "scope.$evalAsync method - Angular on GitHub"
   [27]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L568-L577 "Digest async queue - Angular on GitHub"
   [28]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L792 "$$postDigest method - Angular on GitHub"
   [29]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L793 "The $$postDigest queue - Angular on GitHub"
   [30]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/compile.js#L1412 "Assigning isolate bindings - Angular on GitHub"
-  [31]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L176 "scope.$new - Angular on GitHub"
-  [32]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L693 "scope.$destroy - Angular on GitHub"
+  [31]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L176 "scope.$new method - Angular on GitHub"
+  [32]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L693 "scope.$destroy method - Angular on GitHub"
   [33]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/rootScope.js#L699 "scope.$$destroyed - Angular on GitHub"
   [34]: http://stackoverflow.com/a/9693933/389745 "Data binding in Angular.js, Misko on StackOverflow"
   [35]: http://en.wikipedia.org/wiki/Scope_(computer_science)#Block_scope "Block scoping in Computer Science - Wikipedia"
@@ -368,3 +434,23 @@ Please comment on any issues regarding this article so _everyone can benefit_ fr
   [40]: http://codepen.io/bevacqua/pen/qmBGd "Separation of concerns using scope events"
   [41]: http://codepen.io/bevacqua/pen/CzGla "Siblings talking to each other"
   [42]: http://codepen.io/bevacqua/pen/HsBCa "Service events, using $rootScope"
+  [43]: http://docs.angularjs.org/api/ng.$rootScope.Scope#methods_$digest "$digest on Angular.js documentation"
+  [44]: http://docs.angularjs.org/api/ng.$rootScope.Scope#methods_$watch "$watch on Angular.js documentation"
+  [45]: http://docs.angularjs.org/api/ng.directive:ngController "ng-controller on Angular.js documentation"
+  [46]: http://docs.angularjs.org/api/ng.$compileProvider#methods_directive "Directives on Angular.js documentation"
+  [47]: http://docs.angularjs.org/api/ng.$rootScope.Scope#methods_$apply "$apply on Angular.js documentation"
+  [48]: https://github.com/angular/angular.js/wiki/Anti-Patterns "Angular.js Anti Patterns"
+  [49]: https://github.com/angular/angular.js/wiki/Best-Practices "Angular.js Best Practices"
+  [50]: /2013/08/27/the-angular-way "The Angular Way"
+  [51]: http://todomvc.com/architecture-examples/angularjs "TodoMVC Angular Example"
+  [52]: https://egghead.io/ "Training Videos on egghead.io"
+  [53]: https://twitter.com/nzgb "@nzgb on Twitter"
+  [54]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/directive/ngBind.js#L54-L62 "ng-bind directive creating a watch - Angular on GitHub"
+  [55]: http://codepen.io/bevacqua/pen/lLbtI "No digest means no watchers will fire"
+  [56]: http://codepen.io/bevacqua/pen/vwDoz "Using scope.$digest fixes the issue"
+  [57]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/timeout.js#L36 "$timeout service - Angular on GitHub"
+  [58]: http://www.benlesh.com/2013/08/angularjs-watch-digest-and-apply-oh-my.html "AngularJS: $watch, $digest and $apply"
+  [59]: http://www.ng-newsletter.com/ "The free, weekly newsletter of the best AngularJS links created by the AngularJS community"
+  [60]: http://stackoverflow.com/a/15113029/389745 "Using scope.$watch and scope.$apply, StackOverflow"
+
+[angle-brackets angularjs internals front-end mvc]
