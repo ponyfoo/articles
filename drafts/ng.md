@@ -239,12 +239,11 @@ By the way, if you have two components which communicate through `$rootScope`, y
 
 Enough events versus services banter, shall we move on to some other properties?
 
-
-
 ## Digesting change-sets
 
+.....
 
-...
+http://www.benlesh.com/2013/08/angularjs-watch-digest-and-apply-oh-my.html
 
 ..
 
@@ -272,7 +271,6 @@ I've split the properties into three groups, digest properties, evaluation prope
 
 
 https://github.com/angular/angular.js/wiki/Understanding-Scopes
-http://www.benlesh.com/2013/08/angularjs-watch-digest-and-apply-oh-my.html
 
 scopes
 child
