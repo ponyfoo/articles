@@ -194,7 +194,7 @@ That's a good example on paper, but you need to think about whether you need an 
 
 Both thoughts would be correct, in the given context. As more components need to be `food.click`-aware, it may feel clearer that _events are the way to go_. In reality, though, events are most useful when you actually need to bridge the gap between two scopes (or more), and other factors aren't as important.
 
-As we'll see when we inspect directives more closely later on, sometimes events aren't even necessary for scopes to communicate. A child scope may read from its parent by binding to it, and it can also update those values.
+As we'll see when we inspect directives more closely in the upcoming second part of this article, events aren't even necessary for scopes to communicate. A child scope may read from its parent by binding to it, and it can also update those values.
 
 > There's rarely a good reason to host events to help children communicate better with their parent.
 
@@ -326,7 +326,7 @@ angular.module('PonyDeli').controller('foodCtrl', function ($scope) {
 
 So you have `'initial value'`, and expect the second HTML line to change to `'prop is "something else"! such amaze'` after a second. Right? Even more interesting, you'd at the very least expect the first line to change to `'something else'`! Why doesn't it? That's not a watcher... or is it?
 
-Actually, a lot of what you do in the HTML markup ends up creating a watcher. In this case, [each `ng-bind` directive created a watcher][54] on the property. It will update the HTML of the `<li>`, whenever `prop` and `dependency` change, similarly to how our watch will change the property itself.
+Actually, a lot of what you do in the HTML markup ends up _creating a watcher_. In this case, [each `ng-bind` directive created a watcher][54] on the property. It will update the HTML of the `<li>`, whenever `prop` and `dependency` change, similarly to how our watch will change the property itself.
 
 That way, you can now think of your code as having three watches, one for each `ng-bind` directive, and the one in the controller. How is Angular supposed to know the property is updated, after the timeout? You could tell it, just by adding a manual digest to the timeout callback.
 
@@ -347,7 +347,7 @@ We're back to the second question, now.
 
 > - Who triggers a `$digest`!?
 
-Digests are triggered internally by methods in Angular all over the place, either directly or by calls to `$apply()`, like we've just observed in the `$timeout` service. Most directives, both those found in Angular core and those out in the wild, trigger digests. Digests fire your watchers, and watchers update your UI. That's the basic idea, anyways.
+Digests are triggered internally in strategic places all over the Angular code-base. They are triggered either directly or by calls to `$apply()`, like we've observed in the `$timeout` service. Most directives, both those found in Angular core and those out in the wild, trigger digests. Digests fire your watchers, and watchers update your UI. That's the basic idea, anyways.
 
 There's a pretty good resource with best practices in the Angular Wiki, which you can find linked at the bottom of this article.
 
@@ -376,7 +376,7 @@ These are the last few, rather dull-looking, properties in a scope. They deal wi
 > 1. [$destroy][32] Removes the scope from the scope chain. Scope and children won't receive events, and watches won't fire anymore
 > 1. [$$destroyed][33] Has the scope been destroyed?
 
-Isolate scopes? What is this madness? The second part of this article will be dedicated to directives, and it'll cover isolate scopes, transclusion, linking functions, compilers, directive controllers, and more. Can't wait? _You'll just have to._
+Isolate scopes? What is this madness? The second part of this article will be dedicated to directives, and it'll cover **isolate scopes, transclusion, linking functions, compilers, directive controllers, and more**. Can't wait? _You'll just have to._
 
 ## Further Reading
 
@@ -453,4 +453,4 @@ Please comment on any issues regarding this article, so _everyone can benefit_ f
   [59]: http://www.ng-newsletter.com/ "The free, weekly newsletter of the best AngularJS links created by the AngularJS community"
   [60]: http://stackoverflow.com/a/15113029/389745 "Using scope.$watch and scope.$apply, StackOverflow"
 
-[angle-brackets angularjs internals front-end mvc]
+[angle-brackets angularjs scope internals front-end mvc]
