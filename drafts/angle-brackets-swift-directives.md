@@ -2,7 +2,7 @@
 
 It's time to talk about directives.
 
-If the following figure [_(source)_][4] looks unreasonably mind bending, then this article might be for you.
+If the following figure [_(source)_][2] looks unreasonably mind bending, then this article might be for you.
 
 [![scope.png][1]][2]
 
