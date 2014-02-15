@@ -191,7 +191,7 @@ deli.directive('note', function () {
 });
 ```
 
-This is [equivalent to observing the attribute][17] for changes, and updating our local scope.
+This is [equivalent to observing the attribute][17] for changes, and updating our local scope. Of course, using the `@` notation is much more "Angular".
 
 ```js
 deli.directive('note', function () {
@@ -207,7 +207,11 @@ deli.directive('note', function () {
 });
 ```
 
-Of course, using the `@` notation is much more "Angular".
+Attribute observers are obviously most useful when **consuming options for our directive**. If we want to change the directive's behavior based on changing options, though, it _might make more sense_ to write the `attrs.$observe` line ourselves, rather than have Angular [_do that internally_][17], and creating a watch on our end, which would be slower.
+
+In those cases, merely replacing `scope.note = value`, in the `$observe` handler shown above, into whatever you would've put on the `$watch` listener, should do.
+
+> It's important to keep in mind that, when dealing with `@`, we're **talking about observing and attribute**, instead of _binding to the parent scope_.
 
 #### Expression Builder, `&`
 
@@ -230,7 +234,7 @@ deli.directive('note', function () {
 });
 ```
 
-This one is a bit more uncommon, as [it parses the expression in the attribute][18] once, building a reusable function.
+Below I outlined how you might implement that same functionality inside the linking function, if you weren't aware of `&`. This one is a tad more length than `@`, as [it parses the expression in the attribute][18] once, building a reusable function.
 
 ```js
 deli.directive('note', function ($parse) {
