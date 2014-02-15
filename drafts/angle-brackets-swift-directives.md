@@ -234,7 +234,7 @@ deli.directive('note', function () {
 });
 ```
 
-Below I outlined how you might implement that same functionality inside the linking function, if you weren't aware of `&`. This one is a tad more length than `@`, as [it parses the expression in the attribute][18] once, building a reusable function.
+Below I outlined how you might implement that same functionality inside the linking function, if you weren't aware of `&`. This one is a tad more lengthy than `@`, as [it parses the expression in the attribute][18] once, building a reusable function.
 
 ```js
 deli.directive('note', function ($parse) {
@@ -342,7 +342,7 @@ You may omit the property name if you're going to use that as the key in your lo
 
 ...
 
-usage on each of the above. then proceed!
+TODO usage on & and = then onward!!
 
 
 
