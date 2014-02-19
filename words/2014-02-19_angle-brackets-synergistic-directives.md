@@ -1,5 +1,3 @@
-// TODO links to this article in the previous part
-
 # Angle Brackets, Synergistic Directives
 
 In [the previous part of this article][4], I discussed scope events and the behavior of the digest cycle. This time around, I'll talk about directives. Just as promised, this article will cover **isolate scopes, transclusion, linking functions, compilers, directive controllers, and more**.
