@@ -1,3 +1,5 @@
+// TODO links to this article in the previous part
+
 # Angle Brackets, Synergistic Directives
 
 In [the previous part of this article][4], I discussed scope events and the behavior of the digest cycle. This time around, I'll talk about directives. Just as promised, this article will cover **isolate scopes, transclusion, linking functions, compilers, directive controllers, and more**.
@@ -15,7 +17,7 @@ _Disclaimer: article based on [Angular v1.2.10 tree @ `caed2dfe4f`][3]._
 
 [![angular.png][2]][3]
 
-## What the hell is a directive?
+# What the hell is a directive?
 
 Directives are _typically small_ components which are meant to interact with the DOM, in Angular. They are used as an abstraction layer on top of the DOM, and most manipulation can be achieved without touching DOM elements, wrapped in jQuery, jqLite, or otherwise. This is accomplished by using expressions, and other directives, to achieve the results you want.
 
@@ -27,7 +29,7 @@ Directives are, simply put, the single most important face of Angular. If you ma
 
 Synergy. **Synergy is the long sought-after secret sauce.**
 
-## Secret Sauce: Synergy
+# Secret Sauce: Synergy
 
 [_Synergy_][21] is a term I've became intimate with a few years back, as the [_enthusiastic_ (fat) Magic: The Gathering _(MTG)_ player][22] I used to be. The best decks in _MTG_ often are those where each card in your sixty-card deck is empowered by its relationship with the rest of your deck. In these synergistic decks, you run with a significant advantage: each card you draw has the potential of improving the impact each card in your hand has, and this effect grows exponentially, as you draw more cards. You could say that the two most important factors in building a good deck is card drawing sources, and synergistic potential.
 
@@ -39,7 +41,7 @@ In Angular, synergy means being able to build componentized directives, services
 
 Directives are _also_ reusable pieces of functionality, but most often, **these are associated to DOM fragments, or templates**, rather than merely providing functionality. Markup is equally important in providing synergy, if not even more so. Time for me to give you a deep down dive of Angular directives and their use cases.
 
-## Creating a directive
+# Creating a directive
 
 Earlier, I [listed each property available on a scope][7] in Angular, and I used that to explain  the digest mechanism, and how scopes operate. I'll do the same for directives, but this time I'll be going through the properties of the object returned by a directive's factory function, and how each of those properties influences the directive we're defining.
 
@@ -62,7 +64,7 @@ Even though in the snippet above I'm defining a directive named `'pieceOfFood'`,
 
 By default, directives can only be triggered as attributes, but what if you want to change this behavior? You can use the `restrict` option.
 
-> 1. [restrict][6] Defines how a directive may be applied in markup
+> 1. [`restrict`][6] Defines how a directive may be applied in markup
 
 ```js
 angular.module('PonyDeli').directive('pieceOfFood', function () {
@@ -87,7 +89,7 @@ Don't ever use `'C'` or `'M'` to restrict your directives. Using `'C'` doesn't s
 
 Unfortunately, the rest of the properties in a directive definition object are much more obscure.
 
-1. [scope][8] Sets how a directive interacts with **the `$parent` scope**
+1. [`scope`][8] Sets how a directive interacts with **the `$parent` scope**
 
 Since we've already discussed scopes at length in the previous part, learning how to use the `scope` property **properly** shouldn't be _all that excruciating_. Let's start with the default value, `scope: false`, where the scope chain remains unaffected: you get **whatever scope is found** on the associated element, following the rules I've [outlined in the previous part][7].
 
@@ -145,7 +147,7 @@ deli.directive('pieceOfFood', function () {
 
 [In this case][10], I'm evaluating the attribute value, `piece`, against the scope, which defined `$scope.piece` at the controller. Of course, you could use a template like `{{piece}}` directly, but that would require specific knowledge about which property in the scope you want to track. This pattern provides _a little more flexibility_, although you're still going to be sharing the scope **across all directives**, which can lead to _unexpected behavior_ if you were to try adding more than one directive in the same scope.
 
-## Playful Child Scopes
+# Playful Child Scopes
 
 You could solve that issue by creating a child scope, which inherits prototypically from its parent. In order to create a child scope, you merely need to declare `scope: true`.
 
@@ -186,11 +188,11 @@ One last option is creating a local, or isolate scope. The difference between an
 
 You may omit the property name if you're going to use that as the key in your local scope. That is to say, `pieceOfFood: '='` is a short-hand form for `pieceOfFood: '=pieceOfFood'`, they are equivalent.
 
-## Choose Your Weapon. `@`, `&`, or `=`?
+### Choose Your Weapon. `@`, `&`, or `=`?
 
 What do those symbols mean, then? The examples I coded, enumerated below, might help you decode them.
 
-#### Attribute Observer, `@`
+##### Attribute Observer, `@`
 
 Using `@` binds to the result of [observing an attribute][14] against the parent scope.
 
@@ -233,7 +235,7 @@ In those cases, merely replacing `scope.note = value`, in the `$observe` handler
 
 > It's important to keep in mind that, when dealing with `@`, we're **talking about observing and attribute**, instead of _binding to the parent scope_.
 
-#### Expression Builder, `&`
+##### Expression Builder, `&`
 
 Using `&` gives you an [expression evaluating function][16], in the context of the parent scope.
 
@@ -276,7 +278,7 @@ Expression builders are, as we can see, generate a method which queries the pare
 
 The other situation in which this might come in handy is when you need access to a method on the parent scope. Suppose the parent scope has a method which refreshes a table, while your local scope represents a table row. When the table row is deleted, you might want to refresh the table. If the button is in the child scope, then it would make sense using a `&` binding to access the refresh functionality on the parent scope. That's just a contrived example, as you might prefer to use events for that kind of thing, or maybe even structure your application in some way where complicating things like that could be avoided.
 
-### Bi-directional Binding, `=`
+##### Bi-directional Binding, `=`
 
 Using `=` sets up [bi-directional binding][15] between the local and parent scopes.
 
@@ -364,37 +366,199 @@ deli.directive('countable', function ($parse) {
 
 This form of data-binding is _arguably the most useful of all three_. In this case, the parent scope property is kept in sync with the local scope. Whenever the local scope value is updated, it gets set on the parent scope. Likewise, whenever the parent scope value changes, the local scope gets an update. The most straightforward scenario I've got for you as to when this could be useful, would be whenever you have a child scope which is used to represent a sub-model of the parent scope. Think of your typical [CRUD _(Create, Read, Update, Delete)_][23] table. The table as a whole would be the parent scope, whereas each row would be contained in an isolate directive, which binds to the row's data model through a two-way `=` binding. This would allow for modularity while still being able to effectively communicate between the master table and its children.
 
+That took a lot of words, but I think I've managed to sum up how the `scope` property works when declaring directives, and what the _most common use cases_ are. Time to move on to other properties in the directive definition object, shall we?
 
-....
+# Sensible View Templates
 
+Directives are most effective when they contain small, reusable snippets of HTML. That's where the true power of directives comes from. These templates can be provided in plain text, or as a resource Angular will query when bootstrapping the directive.
 
-1. [template]
-1. [templateUrl]
+1. [`template`][25] Is how you would provide the view template as plain text. `template: '<span ng-bind="message" />'`
+1. [`templateUrl`][26] Allows you to provide the url to an HTML template. `templateUrl: /partials/message.html`
 
-1. [link]
+Using a `templateUrl` to separate the HTML from your linking function _is awesome_. Making an AJAX request whenever you want to initialize a directive for the first time, **not so much**. However, you can circumvent the AJAX request if you pre-fill the `$templateCache` with a build task, such as [grunt-angular-templates][24]. That would be the **"best of both worlds"**.Separation of concerns without the extra overhead of AJAX calls.
 
-1. [require]
+You could also provide a `function (tElement, tAttrs)` as the `template`, but this is **neither necessary nor useful.**
 
-1. [controller]
-1. [controllerAs]
+1. [`replace`][28] Should the template be inserted as a child element, or inlined?
 
-1. [replace]
-1. [transclude]
+The documentation for this property is _woefully confusing_.
 
-1. [compile]
+> ##### `replace`
+>
+> Specify where the template should be inserted. Defaults to `false`.
+>
+> - `true` The template will replace the current element
+> - `false` The template will replace the contents of the current element
 
-1. [priority]
-1. [terminal]
+So when replace is `false` the directive actually replaces the element? That doesn't sound right. If you [check out this pen][28], then you'll find out that the element simply gets appended if `replace: false`, and it gets [sort of replaced][27], if `replace: true`.
 
-https://github.com/angular/angular.js/wiki/Understanding-Scopes
+As a rule of thumb, try and keep replacements to a minimum. Directives should strive to keep interferance with the DOM as close as possible to none, whenever possible, of course.
 
-pre
-post(default)
-transclusion
+Directives are compiled, which results in a pre-linking function, and a post-linking function. You can define the code which returns these functions, or just provide them. Here are the different ways in which you can provide linking functions. I warn you, this is yet another one of those _"features"_ in Angular which I feel is more of a drawback, because **it confuses the hell out of new-comers for little to no gain.** Behold.
 
+```js
+compile: function (templateElement, templateAttrs) {
+  return {
+    pre: function (scope, instanceElement, instanceAttrs, controller) {
+      // pre-linking function
+    },
+    post: function (scope, instanceElement, instanceAttrs, controller) {
+      // post-linking function
+    }
+  }
+}
+```
 
+```js
+compile: function (templateElement, templateAttrs) {
+  return function (scope, instanceElement, instanceAttrs, controller) {
+    // post-linking function
+  };
+}
+```
 
+```js
+link: {
+  pre: function (scope, instanceElement, instanceAttrs, controller) {
+    // pre-linking function
+  },
+  post: function (scope, instanceElement, instanceAttrs, controller) {
+    // post-linking function
+  }
+}
+```
 
+```js
+link: function (scope, instanceElement, instanceAttrs, controller) {
+  // post-linking function
+}
+```
+
+Actually, you could even forget about the directive definition object we've been discussing thus far, and merely return a post-linking function. However, this isn't recommended even by Angular peeps, so you better stay away from it.
+
+```js
+deli.directive('food', function () {
+  return function (scope, element, attrs) {
+    // post-linking function
+  };
+});
+```
+
+Before proceeding, here's an important note from the Angular documentation I'd like you to take a look at.
+
+> **Note:** The template instance and the link instance may be different objects if the template has been cloned. For this reason it is not safe to do anything other than DOM transformations that apply to all cloned DOM nodes within the compile function. Specifically, DOM listener registration should be done in a linking function rather than in a compile function.
+
+Compile functions currently take in a third parameter, a _transclude linking function_, but it's deprecated. Also, you shouldn't be altering the DOM during compile functions (on `templateElement`). Just do yourself a favor and avoid `compile` entirely, provide pre-linking and post-linking functions directly. Most often, a post-linking function is just enough, which is what you're using when you assign a `link` function to the definition object.
+
+I have a rule for you here. Always use a post-linking function. If a scope absolutely needs to be pre-populated before the DOM is linked, then do _just that_ in the pre-linking function, but bind the functionality in the post-linking function, like you normally would have. You'll rarely need to do this, but I think it's still worth mentioning.
+
+```js
+link: {
+  pre: function (scope, element, attrs, controller) {
+    scope.requiredThing = [1, 2, 3];
+  },
+  post: function (scope, element, attrs, controller) {
+    scope.squeal = function () {
+      scope.$emit("squeal");
+    };
+  }
+}
+```
+
+1. [`controller`][30] A controller instance on the directive
+
+Directives can have controllers, which makes sense, because directives can create a scope. The controller is shared among all directives on the scope, and it is accessible as the fourth argument in linking functions. These controllers are a useful communication channel across directives on the same scoping level, which can be contained in the directive itself.
+
+1. [`controllerAs`][29] Controller alias to reference it in the template
+
+Using a controller alias allows for using the controller within the template itself, as it'll be made available in the scope.
+
+1. [`require`][31] _I'll throw if you don't link some other directive(s) on this element!_
+
+The documentation for require is surprisingly straightforward, so I'll just cheat and paste that here.
+
+> Require another directive and inject its controller as the fourth argument to the linking function. The `require` takes a string name (or array of strings) of the directive(s) to pass in. If an array is used, the injected argument will be an array in corresponding order. If no such directive can be found, or if the directive does not have a controller, then an error is raised. The name can be prefixed with:
+>
+> `(no prefix)` Locate the required controller on the current element. Throw an error if not found
+> `?` Attempt to locate the required controller or pass `null` to the `link` fn if not found
+> `^` Locate the required controller by searching the element's parents. Throw an error if not found
+> `?^` Attempt to locate the required controller by searching the element's parents or pass `null` to the `link` fn if not found
+
+1. [`priority`][32] Defines the order in which directives are applied.
+
+Cheating time!
+
+> When there are multiple directives defined on a single DOM element, sometimes it is necessary to specify the order in which the directives are applied. The `priority` is used to sort the directives before their `compile` functions get called. Priority is defined as a number. Directives with greater numerical `priority` are compiled first. Pre-link functions are also run in priority order, but post-link functions are run in reverse order. The order of directives with the same priority is _undefined_. The default priority is `0`.
+
+1. [`terminal`][33] Prevents further processing of directives
+
+> If set to true then the current `priority` will be the last set of directives which will execute (any directives at the current priority will still execute as the order of execution on same `priority` is _undefined_).
+
+# Transcluding for much win
+
+1. [`transclude`][34] Compiles the content of the element and makes it available to the directive.
+
+I saved the best _(worst?)_ for last. This property allows two values, for more fun and less profits. You can either set it to `true`, which enables transclusion, or to `'element'`, in which case the whole element, including any directives defined at lower priority, get transcluded.
+
+At a high level, transclusion allows the consumer of a directive to define a snippet of HTML which can then be included into some part of the directive, using an `ng-transclude` directive. This sounds way too complicated, and it's only _kind of complicated_. An example might make things clearer for you.
+
+```js
+angular.module('PonyDeli').directive('transclusion', function () {
+  return {
+    restrict: 'E',
+    template:
+      '<div ng-hide="hidden" class="transcluded">' +
+        '<span ng-transclude></span>' +
+        '<span ng-click="hidden=true" class="close">Close</span>' +
+      '</div>',
+    transclude: true
+  };
+});
+```
+
+```html
+<body ng-app='PonyDeli'>
+  <transclusion>
+    <span>The plot thickens!</span>
+  </transclusion>
+</body>
+```
+
+You can [check it out on CodePen][38], of course. What happens when you try to get scopes into the mix? We'll, the content which gets transcluded inside the directive will still respond to the parent content, correctly, even though it's placed inside the directive, and even if the directive presents an isolate scope. This is what you'd expect, because the transcluded content is defined in the consuming code, which belongs to the parent scope, and not the directive's scope. The directive still binds to it's local scope, as usual.
+
+```js
+var deli = angular.module('PonyDeli', []);
+
+deli.controller('foodCtrl', function ($scope) {
+  $scope.message = 'The plot thickens!';
+});
+
+deli.directive('transclusion', function () {
+  return {
+    restrict: 'E',
+    template:
+      '<div ng-hide="hidden" class="transcluded">' +
+        '<span ng-transclude></span>' +
+        '<span ng-click="hidden=true" class="close" ng-bind="close"></span>' +
+      '</div>',
+    transclude: true,
+    scope: {},
+    link: function (scope) {
+      scope.close = 'Close';
+    }
+  };
+});
+```
+
+```html
+<body ng-app='PonyDeli' ng-controller='foodCtrl'>
+  <transclusion>
+    <span ng-bind='message'></span>
+  </transclusion>
+</body>
+```
+
+You can [find that one on CodePen][39] as well. There you have it, transclusion, demystified.
 
 ## Further Reading
 
@@ -402,9 +566,10 @@ Here's some additional resources you can read to further extend your comprehensi
 
 - [Angle Brackets _(Part I)_, Rifle Scopes][7]
 - [How to choose between no new scope, child scope, or isolate scope?][20]
+- [Transclusion Basics (screencast)][36]
+- [`transclude: true` vs `transclude: 'element'`][35]
+- [Understanding Directives, `ng-repeat` and `compile`][37]
 
-
-http://stackoverflow.com/a/14914798/389745
 Please comment on any issues regarding this article, so _everyone can benefit_ from your feedback. Also, you should [follow me on Twitter][1]!
 
   [1]: https://twitter.com/nzgb "@nzgb on Twitter"
@@ -430,10 +595,21 @@ Please comment on any issues regarding this article, so _everyone can benefit_ f
   [21]: http://en.wikipedia.org/wiki/Synergy "Synergy on Wikipedia"
   [22]: http://www.wizards.com/Magic/Magazine/Events.aspx?x=mtgevent/gpba08/welcome#11 "Braga Outlasts Record Competition in Buenos Aires!"
   [23]: http://en.wikipedia.org/wiki/Create,_read,_update_and_delete "CRUD on Wikipedia"
+  [24]: https://github.com/ericclemmons/grunt-angular-templates "grunt-angular-templates on GitHub"
+  [25]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/compile.js#L1236 "Setting a view template - Angular on GitHub"
+  [26]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/compile.js#L1663 "Using templateUrl to fetch a template using AJAX - Angular on GitHub"
+  [27]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/compile.js#L1244-L1279 "'Replacing' an element with a directive - Angular on GitHub"
+  [28]: http://codepen.io/bevacqua/pen/iteGj "Replaced versus inlined directives"
+  [29]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/compile.js#L1503-L1505 "Assigning a controllerAs alias - Angular on GitHub"
+  [30]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/compile.js#L1492 "Controller instances can be shared on the scope - Angular on GitHub"
+  [31]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/compile.js#L1362-L1365 "Require or whine - Angular on GitHub"
+  [32]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/compile.js#L1748-L1753 "Priority Sort - Angular on GitHub"
+  [33]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/compile.js#L1167-L1169 "Enforcing terminal priority - Angular on GitHub"
+  [34]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/compile.js#L1195-L1232 "Transcluded directives - Angular on GitHub"
+  [35]: http://stackoverflow.com/a/18457319/389745 "When to use transclude 'true' and transclude 'element' - StackOverflow"
+  [36]: https://egghead.io/lessons/angularjs-transclusion-basics "Angular.js Transclusion Basics - Egghead.io"
+  [37]: http://liamkaufman.com/blog/2013/05/13/understanding-angularjs-directives-part1-ng-repeat-and-compile/ "Understanding AngularJS Directives Part 1: Ng-repeat and Compile"
+  [38]: http://codepen.io/bevacqua/pen/rlmwB "Basic Transclusion on CodePen"
+  [39]: http://codepen.io/bevacqua/pen/lFHoE "Transcluded Scopes on CodePen"
 
 [angle-brackets angularjs directives front-end mvc]
-
-
-
-
-// TODO links to this article in the previous part
