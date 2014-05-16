@@ -8,8 +8,8 @@ I've also discussed [campaign][8], where I modularized email sending and templat
 
 In this article I'll **describe the process and contents of three of my latest open-source** projects. In lieu with Pony Foo's humble, [_humble beginnings_][9], I've decided to continue on the path set forth back when I wrote [campaign][7], and [re-do Pony Foo from scratch][10]. The difference is that this time I've been putting more of a **focus on modularity**, basing off of what I've learned over the last year _(and from the glaring mistakes I made implementing the original blog engine)_.
 
-- [`hint`][11] is a pure CSS implementation of the tooltips you can see today on **Pony Foo**
 - [`flexarea`][12] is a tiny library that helps humans resize `<textarea>` elements
+- [`hint`][11] is a pure CSS implementation of the tooltips you can see today on **Pony Foo**
 - [`taunus`][13] is a _micro MVC_ framework **I feel extremely excited about**
 
 Caution: This article contains words about [Browserify][14], [`npm run`][15], [Gulp][16], _isomorphic view rendering_, framework-less JavaScript and ponies. **Reader discretion is advised.**
