@@ -1,4 +1,4 @@
-# Taunus
+# Taunus: Micro Isomorphic MVC Framework
 
 I've mentioned [Taunus][2] in [one of my latest articles][1]. I believe Taunus _is interesting_, not because it introduces innovative paradigm shifts or the like, but rather, because it takes a proven concept, and iterates upon it. Bluntly put, Taunus builds upon the design of [Rendr][4]. By all accounts, Rendr was amazing. I read a lot about Rendr before even trying it out. I was really excited about it. What could be wrong? I mean, you had convention over configuration, shared rendering, and reused modules. If you tried either Ruby on Rails or _ASP.NET MVC 3+_, both of those are pretty conventional as well. Eventually, I had to use Rendr in order to determine if it was _"good enough"_ to recommend it in [JavaScript Application Design][11], as the "go-to" approach for shared-rendering in large scale applications.
 
@@ -57,7 +57,7 @@ The cool part about Taunus is that it doesn't rely on Backbone, or jQuery, or an
 
 It doesn't really break apart from what you're used to do in Express. You just do your thing, set a view model on the response, and call `next()`. Let's see how Taunus is actually used.
 
-## Taunus As A Package
+## Taunus On The Server
 
 Taunus provides three different components that operate together, offering a sane development model that doesn't get in your way. Let's start with the routes. In a typical Express application, you'd register routes by hand, like below.
 
@@ -94,6 +94,29 @@ module.exports = function (app) {
 };
 ```
 
+A controller action might look like the snippet below. The `model` property on the view model is what gets passed to partial view template functions. The layout will get the full `viewModel`, instead.
+
+```js
+module.exports = function (req, res, next) {
+
+  // fetch data from somewhere
+  // var user = ...
+
+  // assign it to the view model
+  res.viewModel: {
+    model: {
+      title: 'User Profile',
+      user: user
+    }
+  };
+
+  // we're done, yield control over to the renderer
+  next();
+}
+```
+
+#### Sharing Routes and View Templates
+
 The client-side portion of your application is where things get a bit more interesting. Like I explained back in the architecture section, the client-side will use the same routes and view templates that the server-side uses. Here's where we run into trouble. Browserify is awesome. Seriously, ragingly awesome. It does come with certain limitations, such as the inability to parse dynamically composed `require(expr)` expressions at compile time. Browserify is only smart enough to figure out how to unwrap `require('expr')` calls. The issue is that you want to initialize Taunus on the client-side as well, and for that you'll need a `routes` object which looks somewhat like the snippet of code below.
 
 ```js
@@ -108,7 +131,11 @@ module.exports = [{
 }];
 ```
 
-The above might look fine for two routes, but imagine maintaining that by hand? It's pointless! You already have a routes module, the one you used on the server. Surely you can build a small script that turns your server-side routes into these client-side routes in a heartbeat! That's what I did! Taunus comes with a small CLI interface that can compile your routes. Without any options, the program will print a client-side routing module to standard out.
+The above might look fine for two routes, but imagine maintaining that by hand? It's pointless! You already have a routes module, the one you used on the server. Surely you can build a small script that turns your server-side routes into these client-side routes in a heartbeat! That's what I did!
+
+## Taunus On The Command-Line
+
+Taunus comes with a small CLI interface that can compile your routes. Without any options, the program will print a client-side routing module to standard out.
 
 ```shell
 taunus
@@ -134,6 +161,10 @@ Option                      | Description
 
 Once you've compiled your routes and browserified your bundle, you can set up Taunus on the client-side.
 
+## Taunus on the Browser
+
+If you went for Browserify, the code will be nicely modular. _[Precious, _precious modularity_][17]_. Pat yourself on the back. [Click here for an example build file][16].
+
 ```js
 var taunus = require('taunus');
 var routes = require('path/to/client-side/routes');
@@ -141,17 +172,18 @@ var elem = document.querySelector('main');
 taunus.mount(elem, routes);
 ```
 
-If you've decided to ditch Browserify, then it's even easier to set up!
+If you've decided to ditch Browserify, then it'll be even easier to set up!
 
 ```js
 var elem = document.querySelector('main');
 taunus.mount(elem, taunus.routes);
 ```
 
+Once that's set up, all you'll need to do is create your routes, view templates, server-side and client-side controllers! Taunus will be mostly be out of your way. You can, however, get in the way of Taunus, by listening to the [events it emits][18] and reacting to them.
 
+There's still a long way to go, but I'm sure it'll drastically improve as I toy with it and learn about its weaknesses!
 
-
-
+> What do you think about Taunus?
 
 [1]: /2014/05/16/modularizing-your-front-end "Modularizing Your Front-End"
 [2]: https://github.com/bevacqua/taunus "Taunus: Micro MVC Framework"
@@ -168,5 +200,8 @@ taunus.mount(elem, taunus.routes);
 [13]: http://i.imgur.com/cHacWdA.png "Taunus Stack"
 [14]: https://github.com/aaronblohowiak/routes.js "Minimalist routing library, extracted from connect"
 [15]: http://en.wikipedia.org/wiki/Ford_Taunus "Ford Taunus on Wikipedia"
+[16]: https://github.com/bevacqua/ponyfoo/blob/158a1a130d35f77b2d6f0c22f8651a6f21334083/build/debug "`npm start`!"
+[17]: /2014/05/16/modularizing-your-front-end "Modularizing Your Front-End"
+[18]: https://github.com/bevacqua/taunus#events "Taunus Events on GitHub"
 
 [isomorphic taunus browserify npm-run]
