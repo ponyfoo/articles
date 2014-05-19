@@ -59,7 +59,24 @@ It doesn't really break apart from what you're used to do in Express. You just d
 
 ## Taunus As A Package
 
-Taunus provides three different components that operate together, offering a sane development model that doesn't get in your way.
+Taunus provides three different components that operate together, offering a sane development model that doesn't get in your way. Let's start with the routes. In a typical Express application, you'd register routes by hand, like below.
+
+```js
+app.get('/pony/foo', pony.foo);
+app.get('/pony/bar', pony.bar);
+app.get('/author/moo', author.authenticated, author.moo);
+```
+
+With Taunus, you're expected to define your view routes in a JSON format instead. It's recommended you put these into an individual module, like below.
+
+```js
+[
+  { route: '/pony/foo', action: 'pony/foo' },
+  { route: '/pony/bar', action: 'pony/bar' },
+  { route: '/author/moo', action: 'author/moo', middleware: authorAuthenticated }
+]
+```
+
 
 - Server-side API
 - Client-side API
