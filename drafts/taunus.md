@@ -67,23 +67,86 @@ app.get('/pony/bar', pony.bar);
 app.get('/author/moo', author.authenticated, author.moo);
 ```
 
-With Taunus, you're expected to define your view routes in a JSON format instead. It's recommended you put these into an individual module, like below.
+With Taunus, you're expected to define your view routes in a JSON format instead. It's recommended you put these into an individual module, like below. Note that, under the default module path resolver, controllers are expected to be defined on a per-action basis, and the same goes for views. In fact, the `action` property in the route is used to infer which view should get rendered by Taunus.
 
 ```js
-[
+var authorAuthenticated = require('./author/authenticated');
+
+module.exports = [
   { route: '/pony/foo', action: 'pony/foo' },
   { route: '/pony/bar', action: 'pony/bar' },
   { route: '/author/moo', action: 'author/moo', middleware: authorAuthenticated }
 ]
 ```
 
+Once you've created the routes module, you can boot up `taunus`. Here's a module which takes an Express instance and creates routes in it. Note how I'm perfectly able to mix my Taunus view routes with any other routes I have, such as API routes or error handling middleware.
 
-- Server-side API
-- Client-side API
-- Command-Line Interface
+```js
+var taunus = require('taunus');
+var routes = require('./routes');
+var articleList = require('./article/list');
+var errors = require('../lib/errors');
 
+module.exports = function (app) {
+  app.get('/api/articles', articleList);
+  taunus.mount(app, routes);
+  app.use(errors.handler);
+};
+```
 
+The client-side portion of your application is where things get a bit more interesting. Like I explained back in the architecture section, the client-side will use the same routes and view templates that the server-side uses. Here's where we run into trouble. Browserify is awesome. Seriously, ragingly awesome. It does come with certain limitations, such as the inability to parse dynamically composed `require(expr)` expressions at compile time. Browserify is only smart enough to figure out how to unwrap `require('expr')` calls. The issue is that you want to initialize Taunus on the client-side as well, and for that you'll need a `routes` object which looks somewhat like the snippet of code below.
 
+```js
+module.exports = [{
+  route: '/',
+  template: require('../views/home/index'),
+  controller: require('../../client/js/controllers/home/index')
+}, {
+  route: '/author/compose',
+  template: require('../views/author/compose'),
+  controller: require('../../client/js/controllers/author/compose')
+}];
+```
+
+The above might look fine for two routes, but imagine maintaining that by hand? It's pointless! You already have a routes module, the one you used on the server. Surely you can build a small script that turns your server-side routes into these client-side routes in a heartbeat! That's what I did! Taunus comes with a small CLI interface that can compile your routes. Without any options, the program will print a client-side routing module to standard out.
+
+```shell
+taunus
+```
+
+The CLI comes with a few options. Currently, these options are available, among others that aren't worth mentioning in this article.
+
+Option                      | Description
+----------------------------|----------------------------------------------------------------------------------------------------
+`-o`                        | Instead of `stdout`, the output is dumped to the `client_routes` file, as defined in `.taunusrc`
+`-w`                        | Watch for changes to the server-side routes and recalculate the output. Works well with `-o`
+`--standalone path/to/file` | Export `taunus` as a global, and your routes, using a single stand-alone bundle file
+
+**Taunus wants you to use Browserify really bad**, although you have the option of not using Common.JS in your own code, and that's okay.
+
+> Can I avoid using Browserify?
+>
+> -- **Yes!** However, you'd still have to compile Taunus using Browserify, like below. This command won't just Browserify Taunus, but it'll also compile your route definitions into client-side routes, and place them in `taunus.routes`! The `-w` flag still works just fine. `-o` is implied.
+>
+> ```shell
+> taunus --standalone client/js/vendor/taunus.js -w
+> ```
+
+Once you've compiled your routes and browserified your bundle, you can set up Taunus on the client-side.
+
+```js
+var taunus = require('taunus');
+var routes = require('path/to/client-side/routes');
+var elem = document.querySelector('main');
+taunus.mount(elem, routes);
+```
+
+If you've decided to ditch Browserify, then it's even easier to set up!
+
+```js
+var elem = document.querySelector('main');
+taunus.mount(elem, taunus.routes);
+```
 
 
 
