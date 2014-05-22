@@ -21,7 +21,7 @@ After asking [Spike Brehm][9] about it on Twitter, and figuring out [he's pretty
   [1]: https://github.com/bevacqua/taunus "Taunus: Micro MVC Framework"
   [2]: /2014/05/16/modularizing-your-front-end "Modularizing Your Front-End"
   [3]: https://github.com/rendrjs/rendr "airbnb/rendr on GitHub"
-  [4]: https://bevacqua.io/buildfirst "JavaScript Application Design: A Build First Approach"
+  [4]: http://bevacqua.io/buildfirst "JavaScript Application Design: A Build First Approach"
   [5]: https://github.com/rendrjs/rendr/tree/master/examples/00_simple "Simple Rendr App Template"
   [6]: https://github.com/rendrjs/rendr/blob/master/examples/00_simple/Gruntfile.js#L66-L98 "Rendr Browserify in Gruntfile"
   [7]: https://github.com/substack/brfs "substack/brfs on GitHub"
