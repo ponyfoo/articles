@@ -156,13 +156,19 @@ DOM events are a clear example of this case. In some versions of IE, DOM nodes d
 
 The difference lies in that using a polyfill shouldn't require you to change any of your existing code that currently functions on newer browser implementations. Meanwhile, by changing your existing code you could simply create a wrapper around the native browser APIs in a cross-browser fashion, just like jQuery does _— but at a smaller scale —_ **only for the desired browser API, and not for all the things**. In the case of Rome I implemented [my own cross-browser event handling][24] implementation and adjusted the places I used [`addEventListener`][25] to use that instead.
 
+### Compromising On Known Limitations
+
+(clone) https://github.com/bevacqua/rome/blob/master/src/clone.js
+
 ### `innerText` vs `textContent`
 
 ### The `'touchend'` event
 
 This one is quite awkward, but as it turns out iOS isn't very fond of clicks on focused input fields, and as a result they won't fire any `'click'` events on a field that's already focused when tapped again. For my calendar component, this meant that tapping on an input field would only work before selecting a date for the first time, and if the focus didn't change you wouldn't be able to get the calendar to show up ever again. Typically, you can [get rid of this issue][23] by listening for the `'touchend'` event as well, which fires when the finger is lifted, as expected.
 
+# Bare Minimum 
 
+(styling, bottom line)
 
 Open source is **such fun**, are you _willing_ to give it a try?
 
