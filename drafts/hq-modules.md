@@ -1,5 +1,3 @@
-# Building High-Quality Front-End Modules
-
 Lately I've been developing front-end modules solely based on Browserify, the latest being [rome][1]. Rome is a calendar component that has an extensive feature-set. I've compiled a list of highlights below.
 
 - Date _and time_ picker
@@ -21,7 +19,7 @@ _Rome wasn't built in a day._
   [3]: http://i.imgur.com/jU8JmSs.jpg
   [4]: http://bevacqua.github.io/rome "Rome on GitHub Pages"
 
-I believe that **one of the core drivers for high-quality modules is open-source**. Open-source _forces_ you to [think hard about the API][1] you're going to provide for your components, as well as put yourself in the shoes of an API consumer, and learn what you would like the API to be. Another module quality booster can be found in documentation. I love to thoroughly document the modules I build. This doesn't merely help outsiders, which would be too self-less. It also helps you pour your thoughts into words that explain the behavior of your API. If it's hard to describe, then chances are your API is hard to use as well.
+One of the **core drivers** for high-quality modules is **open-source**. Open-source _forces_ you to [think hard about the API][1] you're going to provide for your components, as well as put yourself in the shoes of an API consumer, and learn what you would like the API to be. Another module quality booster can be found in documentation. I love to thoroughly document the modules I build. This doesn't merely help outsiders, which would be too self-less. It also helps you pour your thoughts into words that explain the behavior of your API. If it's hard to describe, then chances are your API is hard to use as well.
 
 [Automating your build process][2] is another crucial piece of the high-quality module puzzle. An [automated build **(and release)** process][3] allows you to easily deploy new releases to [`npm`][4], [`Bower`][5], as well as creating a git tag on your public repository. Maintaining [a changelog][6] is almost a requirement when you are trying to keep your consumers up to date regarding your latest changes. Changes to your API should be reflected in both the documentation as well as the changelog, while internal code quality refactorings don't necessarily need to be reflected in the documentation.
 
@@ -156,19 +154,29 @@ DOM events are a clear example of this case. In some versions of IE, DOM nodes d
 
 The difference lies in that using a polyfill shouldn't require you to change any of your existing code that currently functions on newer browser implementations. Meanwhile, by changing your existing code you could simply create a wrapper around the native browser APIs in a cross-browser fashion, just like jQuery does _— but at a smaller scale —_ **only for the desired browser API, and not for all the things**. In the case of Rome I implemented [my own cross-browser event handling][24] implementation and adjusted the places I used [`addEventListener`][25] to use that instead.
 
-### Compromising On Known Limitations
+### Shaving Off Implementation Discrepancies
 
-(clone) https://github.com/bevacqua/rome/blob/master/src/clone.js
+There's quite a few issues that arise when trying to attain a cross-platform module. Most of which, you could work around just like I mentioned in the previous paragraph: centralize your utilization of the piece of functionality, and fix the issue in that centralized location. I listed a few below.
 
-### `innerText` vs `textContent`
+#### `innerText` vs `textContent`
 
-### The `'touchend'` event
+This one shows how often browser vendors can't even agree on a property name, or a spec. In this case, Mozilla decided to implement [`textContent`][27], whereas IE went for a propietary [`innerText`][28]. Besides the name, there's also some corner-cases where the resulting text isn't always what you'd expect, and [some people recommend walking the DOM tree][29] and generating the results oneself.
+
+#### The `'touchend'` event
 
 This one is quite awkward, but as it turns out iOS isn't very fond of clicks on focused input fields, and as a result they won't fire any `'click'` events on a field that's already focused when tapped again. For my calendar component, this meant that tapping on an input field would only work before selecting a date for the first time, and if the focus didn't change you wouldn't be able to get the calendar to show up ever again. Typically, you can [get rid of this issue][23] by listening for the `'touchend'` event as well, which fires when the finger is lifted, as expected.
 
-# Bare Minimum 
+### Compromising On Known Limitations
 
-(styling, bottom line)
+Another useful take on implementing unsupported functionality is knowing your limitations well. In Rome I needed a clone function that was used across the codebase for cloning the options object the consumer passes in, so that they can't inadvertently change an option after passing them to the API. To this end I implemented [a naïve clone method][26] that knows exactly what to expect, since it's only used for that purpose. If you can't define the limitations of a method, then you'll have to implement it as broadly as possible, and definitely not as a polyfill, which should cover corner cases too, because it could potentially be used by third-parties.
+
+# Bottom Line: The Bare Minimum 
+
+The bottom line is that you should be doing the bare minimum that needs to be done to support browsers as lowly as least graced one you are willing to support. In this case, it made sense to go all the way down to IE7, because the component was popular enough that it made supporting the oldest browsers worth it. This isn't always the case, maybe your component is an MVC library that just can't picture itself being used in a world without [a history API][30]. If this is a centerpiece of your component, then it's okay not to support browsers older than that, or alternatively to provide a graceful degradation fallback such as the [URL hash router] that you can see in Backbone or Angular when the _"HTML5 mode"_ is turned off. If this piece of functionality isn't central to your component, maybe you could consider creating a separate library that adds that functionality, and that way consumers could still benefit from the rest, even if they need to support older browsers.
+
+The bare minimum rule doesn't only apply to browser support, but also to everything you do when it comes to modules. This is your bottom line. You can see this [portrayed in a demo on CodePen][31], where you'll notice that you may not even need the stylesheet that comes with it, if you decide to roll a few styles of your own. This kind of simplicity enables the consumer to do great things with the software you produce, **by extending it and adapting it to their needs**.
+
+> Every great piece of open-source software I've come across has simplicity written all over it.
 
 Open source is **such fun**, are you _willing_ to give it a try?
 
@@ -179,7 +187,7 @@ Open source is **such fun**, are you _willing_ to give it a try?
   [5]: http://bower.io/ "bower.io"
   [6]: https://github.com/bevacqua/rome/blob/master/CHANGELOG.md "CHANGELOG.md for bevacqua/rome on GitHub"
   [7]: http://jquery.com/
-  [8]: /2013/06/10/uncovering-the-native-dom-api "Unconvering the native DOM API"
+  [8]: /2013/06/10/uncovering-the-native-dom-api "Uncovering the native DOM API"
   [9]: https://github.com/tonytomov/jqGrid "jqGrid on GitHub"
   [10]: https://github.com/angular/angular.js/blob/master/src/jqLite.js "jqLite source for angular/angular.js on GitHub"
   [11]: http://projects.jga.me/jquery-builder/ "jQuery Builder"
@@ -197,5 +205,11 @@ Open source is **such fun**, are you _willing_ to give it a try?
   [23]: https://github.com/bevacqua/rome/commit/fb8fc070fd4bc8b49009bff4b34c1b904f80a025 "'touchend on input to show' commit on GitHub"
   [24]: https://github.com/bevacqua/rome/blob/master/src/events.js "Cross-browser event handling in Rome"
   [25]: http://mdn.beonex.com/en/DOM/element.addEventListener.html "addEventListener on MDN"
-  
+  [26]: https://github.com/bevacqua/rome/blob/master/src/clone.js "clone.js for bevacqua/rome on GitHub"
+  [27]: https://developer.mozilla.org/en-US/docs/Web/API/Node.textContent "textContent on MDN"
+  [28]: http://msdn.microsoft.com/en-us/library/ie/ms533899(v=vs.85).aspx "innerText on MSDN"
+  [29]: http://stackoverflow.com/q/6272767/389745 "Firefox's textContent doesn't match Chrome's innerText"
+  [30]: https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history "Manipulating the browser history"
+  [31]: http://codepen.io/bevacqua/pen/vExbd "Rome being used in a demo on CodePen"
+
 [front-end open-source javascript jquery gulp modularity]
