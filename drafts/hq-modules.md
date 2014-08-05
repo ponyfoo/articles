@@ -1,3 +1,5 @@
+# Building High-Quality Front-End Modules
+
 Lately I've been developing front-end modules solely based on Browserify, the latest being [rome][1]. Rome is a calendar component that has an extensive feature-set. I've compiled a list of highlights below.
 
 - Date _and time_ picker
