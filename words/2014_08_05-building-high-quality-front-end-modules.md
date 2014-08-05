@@ -1,6 +1,6 @@
 # Building High-Quality Front-End Modules
 
-Lately I've been developing front-end modules solely based on Browserify, the latest being [rome][1]. Rome is a calendar component that has an extensive feature-set. I've compiled a list of highlights below.
+Lately I've been developing front-end modules solely based on [Browserify][5], the latest being [rome][1]. Rome is a calendar component that has an extensive feature-set. I've compiled a list of highlights below.
 
 - Date _and time_ picker
 - _Fancy_ [demo site][4]
@@ -20,6 +20,7 @@ _Rome wasn't built in a day._
   [2]: /2013/07/09/getting-over-jquery "Getting Over jQuery"
   [3]: http://i.imgur.com/jU8JmSs.jpg
   [4]: http://bevacqua.github.io/rome "Rome on GitHub Pages"
+  [5]: http://browserify.org/ "Browserify lets you require('modules') in the browser by bundling up all of your dependencies"
 
 One of the **core drivers** for high-quality modules is **open-source**. Open-source _forces_ you to [think hard about the API][1] you're going to provide for your components, as well as put yourself in the shoes of an API consumer, and learn what you would like the API to be. Another module quality booster can be found in documentation. I love to thoroughly document the modules I build. This doesn't merely help outsiders, which would be too self-less. It also helps you pour your thoughts into words that explain the behavior of your API. If it's hard to describe, then chances are your API is hard to use as well.
 
