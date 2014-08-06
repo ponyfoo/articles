@@ -1,4 +1,4 @@
-# A Browserify Walkthrough
+# A Gentle Browserify Walkthrough
 
 Building modules for the front-end has become an increasingly easy problem to solve. Back in the nineties we had our Java applets, our `<MARQUEE>` and `<BLINK>` tag combinations, and those beloved `<CENTER>` tags. Oh and we were mostly developing on Front Page. Anyways, time to **wean off the nostalgia**. Let's focus.
 
@@ -177,3 +177,5 @@ A `require`d module will only be interpreted once. This means that calls to `req
   [4]: http://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript "The Factory Pattern explained by Addy Osmani"
   [5]: http://nodejs.org/api/modules.html#modules_module_exports "Documentation for module.exports"
   [6]: http://nodejs.org/api/modules.html#modules_caching "Module caching documentation by Node.js"
+
+[browserify modules]
