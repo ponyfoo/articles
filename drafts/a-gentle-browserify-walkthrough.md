@@ -2,7 +2,7 @@
 
 Building modules for the front-end has become an increasingly easy problem to solve. Back in the nineties we had our Java applets, our `<MARQUEE>` and `<BLINK>` tag combinations, and those beloved `<CENTER>` tags. Oh and we were mostly developing on Front Page. Anyways, time to **wean off the nostalgia**. Let's focus.
 
-This time around I want to focus on [Browserify][2], a lean build step you can take to get [CommonJS][3] modules in your browser today. You have no idea what CommonJS modules are or why you need them? _Keep on reading!_
+This time around I want to focus on [Browserify][2], a lean build step you can take to obtain [CommonJS][3] modules in your browser **today**. You have no idea what CommonJS modules are or why you need them? _Keep on reading!_
 
 [![browserify.png][1]][2]
 
@@ -166,10 +166,77 @@ node print
 
 A `require`d module will only be interpreted once. This means that calls to `require('./printer')` won't reset `i` after the module has been interpreted once. In fact, the interface exported by [the module is cached][6], and that is returned every time. You could fiddle with the caching behavior by removing entries from the cache, but it's considered a bad practice unless you have a legitimate reason to go there.
 
-- why better than amd
-- browserify
-- benefits..
-- use cases
+### But what about the browser?
+
+So far, the CommonJS modules you've been looking at in this article work perfectly fine under a Node.js execution environment, but this article started out talking about the front-end. I wanted to first introduce you to the type of modules you'd be earning by making the switch to Browserify, so first I had to explain how CommonJS works.
+
+Now that that's out of the way, let's throw some questions at the discussion.
+
+- Why is CommonJS "better" than _["whatever"][7]_, or than using AMD?
+- Doesn't this cripple me during development?
+- How do I bring these modules to the browser?
+- What other benefits can I get from using CommonJS modules?
+- What are some advanced use cases?
+
+I'll go through these in turn, hoping to answer your concerns when it comes to using CommonJS in the browser through Browserify.
+
+# Why CommonJS?
+
+As I covered earlier, CommonJS gives you **true modules** contained in by _individual files_, but first let's look at the **reasons why you might want to ditch the alternatives**.
+
+#### Why not _"whatever"_?
+
+The idea of using nothing, while appealing, poses no benefit other than feeling nostalgic about those Java Applets you used to adore.
+
+- You are required to create a closure in every piece of code that you write, otherwise you risk leaks to the global object
+- You need to figure out your own system to develop modular components, and be consistent about it too
+- You need to ["compute the dependency graph"][9] by yourself, which is a nice way of saying you have to stack your `<script>` tag deck in order to make sure that parts of your application that depend on other pieces of code come after the pieces they depend upon
+
+![dependency-graph.png][8]
+
+Note that, in this section, I'm not speaking about ES6 modules because they need a lot of work until we can use it natively in [A-grade browsers][11] and we can consider them _"using nothing"_. Everyone pretty much agrees on this one, though. Let's move to RequireJS.
+
+#### Why not [RequireJS][10]?
+
+RequireJS is a module loader based on the AMD specification. While I personally dislike it, this way of approaching modularity is a popular alternative to CommonJS. It does provide a solution to modularity, dependency injection, and a built-in solution to the dependency graph issue, which is always a great thing.
+
+That being said, there are _some issues_ with RequireJS.
+
+- Too **verbose**. It basically needs us to wrap our code in closures using `define` and `require` statements
+- Overly **complex**. Have you seen the [documentation on the RequireJS site][12]? Jesus! Every little thing means you need to adjust and tweak your configuration to be just so for that specific corner-case. That's not very [high-quality][13] of them
+- _Compatibility issues_ with libraries that don't conform to their standards
+- Wildly different development and production distributions
+
+During development RequireJS provides [a super-asynchronous API][14] that enables modules to be loaded through AJAX as dependencies are resolved. For release, the recommended approach is to compile the modules into one or many bundles. As usual, RequireJS provides [a boatload of documentation on the subject][15]. _Way more_ than you'd ever want to know about a module system.
+
+> To me, these are all just indicators of **poor design**.
+
+Fine, I don't like RequireJS. For the record, I would still prefer it over not doing anything. Currently, the reasons why I prefer CommonJS over ES6 has nothing to do with ES6 and everything to do with the features that CommonJS boasts.
+
+- Syntax familiarity
+- Code sharing with Node.js
+- Access to [all of `npm`][16]
+
+The syntax familiarity point is a minor one, and I'll expand on the others later in the article.
+
+# Doesn't this cripple my development?
+
+You probably think that a build step which needs you to bundle your code together even during development is a nightmare from a day-to-day development productivity point of view.
+
+.....
+
+
+# How do I bring these modules to the browser?
+
+...
+
+# What other benefits can I get from using CommonJS modules?
+
+...
+
+# What are some advanced use cases?
+
+...
 
   [1]: http://wiki.commonjs.org/wiki/CommonJS "CommonJS specification"
   [2]: https://cloud.githubusercontent.com/assets/934293/3831513/6fd5d336-1d94-11e4-868b-4f1165e6600e.jpg
@@ -177,5 +244,15 @@ A `require`d module will only be interpreted once. This means that calls to `req
   [4]: http://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript "The Factory Pattern explained by Addy Osmani"
   [5]: http://nodejs.org/api/modules.html#modules_module_exports "Documentation for module.exports"
   [6]: http://nodejs.org/api/modules.html#modules_caching "Module caching documentation by Node.js"
+  [7]: /2014/01/09/gulp-grunt-whatever "Gulp, Grunt, Whatever"
+  [8]: https://cloud.githubusercontent.com/assets/934293/3849717/2f96edc6-1e7c-11e4-9de5-0a53f93fcd82.png
+  [9]: http://en.wikipedia.org/wiki/Dependency_graph "Dependency Graph as defined by Wikipedia"
+  [10]: http://requirejs.org/ "RequireJS Module Loader"
+  [11]: https://github.com/yui/yui3/wiki/Graded-Browser-Support#a-grade "A-grade browsers according to Yahoo"
+  [12]: http://requirejs.org/docs/api.html "RequireJS API Documentation"
+  [13]: /2014/08/05/building-high-quality-front-end-modules "Building High-Quality Front-End Modules"
+  [14]: /2013/05/13/the-web-wars "The Web Wars"
+  [15]: http://requirejs.org/docs/optimization.html "RequireJS Optimization Documentation"
+  [16]: http://npmjs.org/ "Node Packaged Modules"
 
-[browserify modules]
+[browserify modules front-end tutorial]
