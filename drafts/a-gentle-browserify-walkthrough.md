@@ -340,13 +340,13 @@ With a little work, you could also use modules that are written under other form
 
 There's [a StackOverflow answer][42] that details the process. I've copied part of the answer below.
 
-> 1. Install `browserify-shim`:
+> Install `browserify-shim`:
 >
 > ```shell
 > npm install browserify-shim --save-dev
 > ```
 >
-> 2. In `package.json` file, tell `browserify` to use `browserify-shim` as a transform:
+> In `package.json` file, tell `browserify` to use `browserify-shim` as a transform:
 >
 > ```json
 > {
@@ -356,7 +356,7 @@ There's [a StackOverflow answer][42] that details the process. I've copied part 
 > }
 > ```
 >
-> 3. In `package.json` file, tell `browserify-shim` to map jQuery to the jQuery in the global scope:
+> In `package.json` file, tell `browserify-shim` to map jQuery to the jQuery in the global scope:
 >
 > ```json
 > {
@@ -366,7 +366,7 @@ There's [a StackOverflow answer][42] that details the process. I've copied part 
 > }
 > ```
 >
-> 4. Run `browserify`:
+> Run `browserify`:
 >
 > ```shell
 > browserify mymodule.js > bundle.js
