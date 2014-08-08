@@ -294,7 +294,32 @@ Oh, `__dirname` is a special variable that's local to every CommonJS module, and
 browserify sites.js -t brfs -o dist/app.js
 ```
 
-When the static file naming limitation does get to you, you could do something similar to what I did in [Taunus][33], where I created a CLI that creates a [static file containing route definitions and then requires that into the bundle][32], effectively annuling the limitation. I was able to do that because I had to `require` a ton of files defined dynamically by the consumer of Taunus in a server-side route definition file, but I didn't want to have the consumer repeat that information in a very similar format for the client-side.
+Fortunately, there's a way you could work around the static file path problem, but it takes a little bit of work.
+
+### Working around static file paths
+
+When the **static file-naming** situation gets the best of you, you could work around it by doing something similar to what I did in [Taunus][33], where I created a CLI that creates a [static file containing route definitions and then requires that into the bundle][32], _effectively annuling_ the limitation. I was able to do that because I had to `require` a ton of files defined in a server-side route definition file, but I didn't want to have the consumer repeat that information in a very similar format for the client-side. Due to the limitation in Browserify, I couldn't just create a for loop either, so I worked around it with a generator. This generator ends up unrolling the `for` loop, as shown in the example below, taken from Pony Foo's [`redo` branch][34].
+
+```js
+var controllers = {
+  'author/compose': require('../../client/js/controllers/author/compose.js'),
+  'home/index': require('../../client/js/controllers/home/index.js')
+};
+ 
+var routes = {
+  '/': 'home/index',
+  '/account/login': 'account/login',
+  '/author/compose': 'author/compose'
+};
+ 
+module.exports = {
+  templates: templates,
+  controllers: controllers,
+  routes: routes
+};
+```
+
+Problem solved! That's a file Browserify **does understand**.
 
 # What other benefits can I get from using CommonJS modules?
 
@@ -302,9 +327,52 @@ Besides being _"not as bad as the alternatives"_, CommonJS has a few things goin
 
 > - Straightforward, familiar syntax
 > - Code sharing with Node.js
-> - Access to [all of `npm`][16]
 
-...
+If you're a Node developer, [Browserify][21] will feel like [the Architect][35]'s gift to you. Being able to leverage the CommonJS syntax in the client-side too opens your applications up to a world of opportunities. A big one of those is the ability to share an identical code base between the server and the client side. Quite a few libraries out there have some degree of cross-platform_ity_ built into them, perhaps using [the UMD pattern][36]. The twist in using Browserify is that you get to use CommonJS just like in Node, and you can avoid the UMD boilerplate, as well as any other boilerplate.
+
+> Access to [all of `npm`][16]
+
+Perhaps the most significant of the benefits in using CommonJS modules is that there are **so, so many** modules written in CommonJS and published to `npm`. In my experience it has almost always been easy to find a module that did what I needed to do, and most of them work as expected. While there's also [Bower][38], [Component][39] and others out there, the module-mentality in Node.js camps is much stronger than in other areas.
+
+> Note that **Component seems like it's dying**. The site has been down [for a month now][40], and [duo][41] seems to be going to be its successor.
+
+With a little work, you could also use modules that are written under other formats such as AMD or by publishing a global object. In order to make such modules work for us, we could use [`browserify-shim`][37], which makes it quite easy.
+
+There's [a StackOverflow answer][42] that details the process. I've copied part of the answer below.
+
+> 1. Install `browserify-shim`:
+>
+> ```shell
+> npm install browserify-shim --save-dev
+> ```
+>
+> 2. In `package.json` file, tell `browserify` to use `browserify-shim` as a transform:
+>
+> ```json
+> {
+>   "browserify": {
+>     "transform": [ "browserify-shim" ]
+>   }
+> }
+> ```
+>
+> 3. In `package.json` file, tell `browserify-shim` to map jQuery to the jQuery in the global scope:
+>
+> ```json
+> {
+>   "browserify-shim": {
+>     "jQuery": "global:jQuery"
+>    }
+> }
+> ```js
+>
+> 4. Run `browserify`:
+>
+> ```shell
+> browserify mymodule.js > bundle.js
+> ```
+
+Let's move on to our last topic of discussion!
 
 # What are some advanced use cases?
 
@@ -354,5 +422,14 @@ Here's a few related articles for you to chew on.
   [31]: https://github.com/substack/brfs "substack/brfs on GitHub"
   [32]: https://github.com/bevacqua/taunus/blob/b4524b1d7d74a620e40de38fad54d2f33d998f76/bin/taunus#L15-L34 "Relevant lines in the Taunus CLI"
   [33]: https://github.com/bevacqua/taunus "bevacqua/taunus on GitHub"
+  [34]: https://github.com/ponyfoo/ponyfoo/tree/redo "bevacqua/ponyfoo/redo on GitHub"
+  [35]: http://en.wikipedia.org/wiki/Architect_(The_Matrix) "You know the one."
+  [36]: https://github.com/umdjs/umd "Universal Module Definition"
+  [37]: https://github.com/thlorenz/browserify-shim "browserify-shim on GitHub"
+  [38]: http://bower.io/ "bower.io"
+  [39]: https://github.com/component/component "component/component on GitHub"
+  [40]: https://github.com/component/component/issues/587 "component.io site down"
+  [41]: https://www.npmjs.org/package/duo "duo on npmjs.org"
+  [42]: http://stackoverflow.com/a/23129051/389745 "How do I use Browserify with external dependencies?"
 
 [browserify modules front-end tutorial]
