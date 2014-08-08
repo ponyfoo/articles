@@ -168,12 +168,12 @@ A `require`d module will only be interpreted once. This means that calls to `req
 
 ### But what about the browser?
 
-So far, the CommonJS modules you've been looking at in this article work perfectly fine under a Node.js execution environment, but this article started out talking about the front-end. I wanted to first introduce you to the type of modules you'd be earning by making the switch to Browserify, so first I had to explain how CommonJS works.
+So far, the CommonJS modules you've been looking at in this article work perfectly fine under a Node.js execution environment, but this article started out talking about the front-end. I wanted to first introduce you to the type of modules you'd be earning by making the switch to [Browserify][21], so first I had to explain how CommonJS works.
 
 Now that that's out of the way, let's throw some questions at the discussion.
 
 - Why is CommonJS "better" than _["whatever"][7]_, or than using AMD?
-- Doesn't this cripple me during development?
+- Doesn't this cripple my development productivity?
 - How do I bring these modules to the browser?
 - What other benefits can I get from using CommonJS modules?
 - What are some advanced use cases?
@@ -211,32 +211,48 @@ During development RequireJS provides [a super-asynchronous API][14] that enable
 
 > To me, these are all just indicators of **poor design**.
 
-Fine, I don't like RequireJS. For the record, I would still prefer it over not doing anything. Currently, the reasons why I prefer CommonJS over ES6 has nothing to do with ES6 and everything to do with the features that CommonJS boasts.
+Fine, I **don't like** RequireJS. For the record, I would **still prefer it over not doing anything**. Currently, the reasons why I prefer CommonJS over ES6 has nothing to do with ES6 and everything to do with the features that CommonJS boasts.
 
-- Syntax familiarity
+- Straightforward, familiar syntax
 - Code sharing with Node.js
 - Access to [all of `npm`][16]
 
-The syntax familiarity point is a minor one, and I'll expand on the others later in the article.
+The syntax familiarity point is a minor one, but I'll expand on these items later in the article.
 
-# Doesn't this cripple my development?
+# Doesn't this cripple my productivity?
 
-You probably think that a build step which needs you to bundle your code together even during development is a nightmare from a day-to-day development productivity point of view.
+You probably think that a build step which needs you to **bundle your code together even during development** is a nightmare from a day-to-day development productivity point of view. Thanks to the [myriad of tools][7] that are available to us, this is _not that big_ of a deal when it comes to **Continuous Development** (the ability to rebuild the compiled bundle whenever your code changes). When it comes to productivity we take a **speed hit** because we have to wait for the build step to complete after we make changes to our code.
 
-.....
-
+Then there's also the fact that **bundled-up pieces of code make debugging hard**, because stack traces and logging statements end up referencing line numbers that don't match your source code. Luckily Browserify has great support for [source maps][17], which can point the browser to the sources of compiled assets. It's just a matter of setting the `--debug` option on the command-line, or `debug` when using the programmatic API.
 
 # How do I bring these modules to the browser?
+
+Using [Browserify][21]!
 
 ...
 
 # What other benefits can I get from using CommonJS modules?
 
-...
+Besides being _"not as bad as the alternatives"_, CommonJS has a few things going for it on its own. Earlier on, I mentioned a few benefits of using CommonJS. I'll go through these
+
+> - Straightforward, familiar syntax
+> - Code sharing with Node.js
+> - Access to [all of `npm`][16]
 
 # What are some advanced use cases?
 
 ...
+
+> **Browserify your front-end away!**
+
+Here's a few related articles for you to chew on.
+
+- [Building High-Quality Front-End Modules][13]
+- [Gulp, Grunt, Whatever][7]
+- [Browserify Handbook][18]
+- [Introduction to Browserify][19]
+- [Cross-platform JavaScript with Browserify][20]
+
 
   [1]: http://wiki.commonjs.org/wiki/CommonJS "CommonJS specification"
   [2]: https://cloud.githubusercontent.com/assets/934293/3831513/6fd5d336-1d94-11e4-868b-4f1165e6600e.jpg
@@ -254,5 +270,10 @@ You probably think that a build step which needs you to bundle your code togethe
   [14]: /2013/05/13/the-web-wars "The Web Wars"
   [15]: http://requirejs.org/docs/optimization.html "RequireJS Optimization Documentation"
   [16]: http://npmjs.org/ "Node Packaged Modules"
+  [17]: http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/ "Introduction to JavaScript Source Maps"
+  [18]: https://github.com/substack/browserify-handbook "Browserify Handbook by Substack"
+  [19]: http://blakeembrey.com/articles/introduction-to-browserify/ "require(‘modules’) in the browser."
+  [20]: https://blog.codecentric.de/en/2014/02/cross-platform-javascript/ "Sharing Code Between Node.js and the Browser"
+  [21]: http://browserify.org/ "Browserify lets you require('modules') in the browser by bundling up all of your dependencies"
 
 [browserify modules front-end tutorial]
