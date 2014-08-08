@@ -227,9 +227,9 @@ Then there's also the fact that **bundled-up pieces of code make debugging hard*
 
 # How do I bring these modules to the browser?
 
-Using [Browserify][21]!
+Using [Browserify][21]! It's quite easy. Here's what you need to know.
 
-...
+....
 
 # What other benefits can I get from using CommonJS modules?
 
