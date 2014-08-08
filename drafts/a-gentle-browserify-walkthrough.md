@@ -364,7 +364,7 @@ There's [a StackOverflow answer][42] that details the process. I've copied part 
 >     "jQuery": "global:jQuery"
 >    }
 > }
-> ```js
+> ```
 >
 > 4. Run `browserify`:
 >
