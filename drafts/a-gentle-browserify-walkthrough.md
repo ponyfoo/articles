@@ -227,17 +227,84 @@ Then there's also the fact that **bundled-up pieces of code make debugging hard*
 
 # How do I bring these modules to the browser?
 
-Using [Browserify][21]! It's quite easy. Here's what you need to know.
+Using [Browserify][21]! It's quite easy. Here's _what you need_ to know.
 
-....
+First off, you can run Browserify using its [CLI][26], its [API][25], the [Grunt plugin][22], [piping into `gulp.dest`][23], the [Broccoli plugin][24], etc. Instead of documenting each and every one of these ways to run Browserify I'll keep my examples to the CLI, which translates quite nicely to what the API and the plugins expect you to do.
+
+In the `printer` example shown earlier, for example, compiling the code so that it works in the browser would just be a matter of using the command shown below.
+
+```shell
+browserify print.js > dist/app.js
+```
+
+You could also use the `-o` flag, indicating the destination file.
+
+```shell
+browserify print.js -o dist/app.js
+```
+
+This is most useful if you need to run the task whenever your code changes. To that end, you'll use the specialized [`watchify` tool][27]. Then, when your code changes, `watchify` will make sure to recompile the bundle. Watchify has the same API as the regular `browserify` CLI does, which is super convenient for us.
+
+```shell
+npm install -g watchify
+```
+
+```shell
+watchify print.js -o dist/app.js
+```
+
+If you wanted to generate **a source map**, you'd only have to add the `-d` option.
+
+```shell
+browserify print.js -do dist/app.js
+```
+
+```shell
+watchify print.js -do dist/app.js
+```
+
+There's also an extensive list of "transforms" that allow you to do neat things during compilation. For instance, if you [love CoffeeScript like I do][28], you could use the [`coffeeify`][30] transform as shown below.
+
+```shell
+browserify print.coffee -t coffeeify -o dist/app.js
+```
+
+There's _tons_ of other transforms you could use. Make sure to [consult the wiki page][29], you'll probably find what you need in there. Another transform that you may find super helpful is [`brfs`][31]. That transform works by inlining calls to `fs.readFileSync` into your client-side bundles. This means that we could have a `cool-sites.txt` file and a piece of code like the one shown below, and compile it into something that works on the browser!
+
+```js
+var fs = require('fs');
+var sites = fs.readFileSync(__dirname + '/cool-sites.txt', { encoding: 'utf8' });
+
+sites.split('\n').forEach(function (site, i) {
+  console.log('%s: %s is pretty cool', i, site);
+});
+```
+
+```
+ponyfoo.com
+github.com
+codepen.com
+newsblur.com
+twitter.com
+```
+
+Oh, `__dirname` is a special variable that's local to every CommonJS module, and it contains the path to the directory for that module. Similarly, `__filename` is the module's file name. The compiler will be smart enough to figure out the result of `__dirname + '/cool-sites.txt'` statically. The compiler **isn't able to handle most cases** where you try to dynamically calculate the file path, so using `path.join` and the like won't be possible. This is unfortunate because its a common scenario in Node.js, however, it rarely comes up in modules that are meant for the browser. You could compile the code above using the command below.
+
+```shell
+browserify sites.js -t brfs -o dist/app.js
+```
+
+When the static file naming limitation does get to you, you could do something similar to what I did in [Taunus][33], where I created a CLI that creates a [static file containing route definitions and then requires that into the bundle][32], effectively annuling the limitation. I was able to do that because I had to `require` a ton of files defined dynamically by the consumer of Taunus in a server-side route definition file, but I didn't want to have the consumer repeat that information in a very similar format for the client-side.
 
 # What other benefits can I get from using CommonJS modules?
 
-Besides being _"not as bad as the alternatives"_, CommonJS has a few things going for it on its own. Earlier on, I mentioned a few benefits of using CommonJS. I'll go through these
+Besides being _"not as bad as the alternatives"_, CommonJS has a few things going for it on its own. Earlier on, I mentioned a few benefits of using CommonJS. Time to go through them.
 
 > - Straightforward, familiar syntax
 > - Code sharing with Node.js
 > - Access to [all of `npm`][16]
+
+...
 
 # What are some advanced use cases?
 
@@ -249,7 +316,7 @@ Here's a few related articles for you to chew on.
 
 - [Building High-Quality Front-End Modules][13]
 - [Gulp, Grunt, Whatever][7]
-- [Browserify Handbook][18]
+- [Browserify Handbook][18] (written by Substack)
 - [Introduction to Browserify][19]
 - [Cross-platform JavaScript with Browserify][20]
 
@@ -275,5 +342,17 @@ Here's a few related articles for you to chew on.
   [19]: http://blakeembrey.com/articles/introduction-to-browserify/ "require(‘modules’) in the browser."
   [20]: https://blog.codecentric.de/en/2014/02/cross-platform-javascript/ "Sharing Code Between Node.js and the Browser"
   [21]: http://browserify.org/ "Browserify lets you require('modules') in the browser by bundling up all of your dependencies"
+  [22]: https://github.com/jmreidy/grunt-browserify "grunt-browserify on GitHub"
+  [23]: https://github.com/gulpjs/plugins/issues/47 "gulp-browserify is blacklisted"
+  [24]: https://github.com/gingerhendrix/broccoli-browserify "broccoli-browserify on GitHub"
+  [25]: https://github.com/substack/node-browserify#api-example "Browserify API Example Documentation on GitHub"
+  [26]: https://github.com/substack/node-browserify#usage "Browserify CLI Usage Documentation on GitHub"
+  [27]: https://github.com/substack/watchify "substack/watchify on GitHub"
+  [28]: /2013/09/28/we-dont-want-your-coffee "We don't want your Coffee"
+  [29]: https://github.com/substack/node-browserify/wiki/list-of-transforms "List of Browserify transforms on GitHub"
+  [30]: https://github.com/jnordberg/coffeeify "coffeeify on GitHub"
+  [31]: https://github.com/substack/brfs "substack/brfs on GitHub"
+  [32]: https://github.com/bevacqua/taunus/blob/b4524b1d7d74a620e40de38fad54d2f33d998f76/bin/taunus#L15-L34 "Relevant lines in the Taunus CLI"
+  [33]: https://github.com/bevacqua/taunus "bevacqua/taunus on GitHub"
 
 [browserify modules front-end tutorial]
