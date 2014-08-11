@@ -79,7 +79,7 @@ browser-sync start --proxy localhost:3000 --files "public/*"
 
 In my experience, though, at this point you are better off using the API within your Node application.
 
-## Using in a Node application
+## Inside a Node application
 
 The upside in running [BrowserSync][3] directly in your app is that you won't bash your head against the wall when attempting to make it play nicely with tools such as [`nodemon`][7], which constantly restart the server that BrowserSync is proxying.
 
