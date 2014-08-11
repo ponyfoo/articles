@@ -376,7 +376,13 @@ Let's move on to our last topic of discussion!
 
 # What are some advanced use cases?
 
-...
+One of the most advantageous ways in which you could use Borwserify is to share code between the server and the browser. This enables you to communicate seamlessly, and to produce **an API that's consistent on both sides** of the wire.
+
+Take [poser][43] for example. It allows you to grab out-of-context prototypes such as clean `Array` or `Object` prototypes. On the server-side, it'll use the [vm][44] core module provided by Node.js, while on the browser it'll resort to `<iframe>` DOM elements to achieve the same goal.
+
+Besides adjusting an API to the environment, Browserify can also help you connect the dots between both sides of a communication, as seen in frameworks like [Socket.io][45], which handles realtime connections between the client and the server in a seamless manner, almost giving the consumer the feeling that both sides have the same capabilities.
+
+In some other cases, it's not so much about the underlying implementation changing according to the environment, but merely being able to consistently execute a piece of logic, without resorting to code duplication. Such is the case of [ultramarked][46], which can produce consistent HTML from Markdown in any environment. The nice thing about Node.js being in JavaScript is that you don't have to re-implement your server-side libraries in JavaScript, because they're already in that language!
 
 > **Browserify your front-end away!**
 
@@ -431,5 +437,9 @@ Here's a few related articles for you to chew on.
   [40]: https://github.com/component/component/issues/587 "component.io site down"
   [41]: https://www.npmjs.org/package/duo "duo on npmjs.org"
   [42]: http://stackoverflow.com/a/23129051/389745 "How do I use Browserify with external dependencies?"
+  [43]: https://github.com/bevacqua/poser "bevacqua/poser on GitHub"
+  [44]: http://nodejs.org/api/vm.html "Node core vm module"
+  [45]: https://github.com/Automattic/socket.io "Automattic/socket.io on GitHub"
+  [46]: https://github.com/bevacqua/ultramarked "bevacqua/ultramarked on GitHub"
 
 [browserify modules front-end tutorial]
