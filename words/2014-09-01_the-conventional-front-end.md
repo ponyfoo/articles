@@ -65,3 +65,5 @@ What other kinds of conventional tactics would you apply to your front-end archi
   [1]: https://github.com/bevacqua/measly
   [2]: https://github.com/bevacqua/dominus
   [3]: https://github.com/bevacqua/taunus
+
+[conventional front-end javascript measly xhr]
