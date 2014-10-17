@@ -36,7 +36,7 @@ To be fair, developing that _"framework"_ is also what got me interested in lear
 
 Back then though, **everything was part of the learning process**. I was learning more and more about Node, Express, client-side MVC, Jade, Stylus, and Grunt. _Sweet, sweet Grunt._ Meanwhile I was actively writing articles and slowly adding improvements to the engine.
 
-An RSS feed was pretty much a must, I despise blogs I can't track over RSS. You've got to have RSS. I had to have [microdata][7], of course. Otherwise why go through the trouble of even supporting search engines? A sitemap, yes, yes! Search engines love these. I think? Nobody really knows, but **I had to have one**. Obviously that wasn't enough procrastinating, so I just had to [throw in OpenSearch][8], for good measure.
+An RSS feed was pretty much a must, I despise blogs I can't track over RSS. You've got to have RSS. I had to have [microdata][7], of course. Otherwise why go through the trouble of even supporting search engines? A sitemap, yes, yes! Search engines love these. I think? Nobody really knows, but **I _had_ to have one**. Ooh, `robots.txt`! Obviously that **wasn't enough procrastinating**, so I just had to throw in [OpenSearch][8] and [humans.txt][57], for good measure.
 
 Did I mention I spent an inordinate amount of time developing a tool for asset management? It was called [`assetify`][14], and you could use it to map static assets, bundle them, minify them, run pre-processors like [LESS][15]. Sounds familiar? It was like Grunt's awkward brother nobody wanted to talk to.
 
@@ -62,7 +62,7 @@ Oh, then there were the hiragana bullet list items. Some thought those were inte
 
 **I definitely needed to change things up.**
 
-I must note that these changes weren't applied overnight. Since the codebase was in such poor shape, considering it was my landing strip into the Node.js continent, that I decided a full rewrite would've been more beneficial. The only code that lived through the rewrite was [campaign][9], because it was extracted into its very own email-sending module, and [ultramarked][16], although it was adjusted to be leaner on the client-side.
+I must note that these changes weren't applied overnight. The codebase was in such poor shape, _considering it was my landing strip into the Node.js continent_, that I decided a full rewrite would've been more beneficial than attempting to fix what I had. The only code that lived through the rewrite was [campaign][9], because it was extracted into its very own email-sending module, and [ultramarked][16], although it was adjusted to be leaner on the client-side.
 
 # Client-Side Rendering?
 
@@ -70,13 +70,13 @@ The loading indicator seemed to take forever, and in **the last year it pretty m
 
 ![page-load-nightmare-old.png][17]
 
-<sub>_Ah, the good old times! Do you miss the loading indicator?_</sub>
+<sub>_Ah, the good old times! Do you miss the loading indicator? How about the "remaining reading time" indicator?_</sub>
 
-The largest contributor to the painful Pony Foo experience was client-side rendering. That was a terrible mistake, and one that troubled me for a long time, until I got around to fixing it. This is _not an easy issue to resolve_, and I think we're really missing the target here. **We, as web workers, should be doing better.** We've been relying on client-side rendering for far too long, and fancy frameworks shouldn't be a valid excuse.
+The largest contributor to the painful Pony Foo experience was rendering views exclusively on the client-side. That was a terrible mistake, and one that troubled me for a long time, until I got around to fixing it. This is _not an easy issue to resolve_, and I think we're really missing the target here. **We, as web workers, should be doing better.** We've been relying on client-side rendering for far too long, and fancy frameworks shouldn't be a valid excuse.
 
 I love [Angular][3], I really do, but in my opinion it's nearly useless in any use case where performance is critical. As we all know, performance is critical in pretty much any application that has a practical goal _(like, you know, making you money)_. The same holds true for any client-side MVC framework that's **incapable of rendering views on the server-side** without resorting to complex gimmicks such as using [PhantomJS][18] against your own site in production.
 
-This realization left me to choose between [Backbone][4] (using [Rendr][19]), [React][5], or _"doing nothing"_. React felt like overkill, I really disliked the JSX syntax, and pretty much everything else about the library that wasn't the brilliant DOM tree diffing algorithm. I invested a couple of days in [Rendr][19], but it was [far too constrained][20] for my taste. I ended up going for a custom solution yet again.
+This realization left me to choose between [Backbone][4] (using [Rendr][19]), [React][5], or _"doing nothing"_. React felt like overkill, I really disliked the JSX syntax. The DOM tree diffing algorithm is brilliant, but that alone didn't tip me over. I invested a couple of days toying with [Rendr][19], but it was [far too constrained][20] for my taste. I ended up going for a custom solution yet again.
 
 This time however I had decided to learn from the many mistakes I made in the past, and I implemented a shared-rendering library that would work with any Node.js server, view templating engine, and client-side libraries that I needed. That's when [I built [Taunus][21].
 
@@ -166,6 +166,8 @@ As a complement, consider reading [High Performance Browser Networking][38], as 
 
 [![hpbn.jpg][39]][38]
 
+Among other topics, the book will give you a thorough understanding of the protocols underlying the web: **TCP, UDP, HTTP, TLS**, and also gives you a deep analysis of the current state of mobile networks. You'll learn about **networking opportunities in modern browsers**, such as Server-Sent Events _(SSE)_, WebSockets, and WebRTC. Meanwhile, it'll teach you about how to **optimize HTTP 1.x connections**, as well as explain how **SPDY** _(and at some point, HTTP 2.0)_ will fix most of the issues we currently observe in **HTTP 1.x**.
+
 ## Defer _Most_ Image Loading
 
 This one is probably the easiest ways to ensure the relevant pieces get to your humans as quickly as possible. In the case of Pony Foo, I chose to defer image loading for **every image except the first one**: chances are, every image after that **won't be in the human's viewport** until after a while, giving us time to load them in the background.
@@ -238,7 +240,7 @@ The script shown above is minified and inlined in the layout, preventing an unne
 
 ```html
 <noscript>
-  <link rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Cardo:700|Merriweather:400italic,400,700'>
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Cardo:700|Merriweather:400italic,400,700'>
 </noscript>
 ```
 
@@ -409,5 +411,6 @@ What kinds of performance optimizations have worked best for you and your sites?
 [54]: https://github.com/bevacqua/dominus/commit/1d0e97f9143e3050d84decfd1d32bc7332b133d5 "Getting rid of lodash.find"
 [55]: https://github.com/bevacqua/reaver "bevacqua/reaver on GitHub"
 [56]: https://github.com/bevacqua/scourge "bevacqua/scourge on GitHub"
+[57]: /humans.txt "humans.txt on Pony Foo"
 
-[ponyfoo critical-path performance]
+[ponyfoo critical-path performance nginx pagespeed]
