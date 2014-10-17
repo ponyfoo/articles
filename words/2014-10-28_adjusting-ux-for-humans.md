@@ -69,6 +69,8 @@ Progressive enhancement, using a `<form>` element, does present us with **a hurd
 
 Of course this _wouldn't stop bots running on headless browsers_ a la [PhantomJS][5], but it's more than enough to get us started in a progressively enhanced orientation.
 
+<div class='md-border'>![nojs.png][6]</div>
+
 The commenting user experience brings up an interesting point, and that's the new approach to subscriptions.
 
 # Subscription model
@@ -79,17 +81,17 @@ My problem with the latter is that the human who went through all that trouble t
 
 Here's an screenshot of the invitation email.
 
-<div class='md-border'>![invitation.png][6]</div>
+<div class='md-border'>![invitation.png][7]</div>
 
 It's always important to **get out of the way of your humans**. That means I won't spam them whenever they publish a comment. Instead, I should only extend an invitation _the first time_ they post one. It's not like they can't come to the site and subscribe on their own whenever they please!
 
-In this scenario, getting out of the way also means providing _an easy means to unsubscribe_. Being a web worker you've probably seen [all kinds of dark patterns when it comes to attempting to unsubscribe from a mailing lists][7] where people are forced to enter some more information on a web page before they can unsubscribe, or they're not removed unless they agree to something else, click on a button, or worst of all, **they're just met with an error page**.
+In this scenario, getting out of the way also means providing _an easy means to unsubscribe_. Being a web worker you've probably seen [all kinds of dark patterns when it comes to attempting to unsubscribe from a mailing lists][8] where people are forced to enter some more information on a web page before they can unsubscribe, or they're not removed unless they agree to something else, click on a button, or worst of all, **they're just met with an error page**.
 
 Providing a high-visibility link to unsubscribe in every email is just as important as doing exactly what you advertise: unsubscribe them and be done with it! Making it harder is only going to make humans angry, and then they might even **complain on the Internet about your dark UX shady practices!**
 
 # Styles and fonts
 
-I've never considered myself good at stylistic choices, although I try super hard to improve in these areas. I've read several books on UX and design, but fonts are well outside of my comfort zone. During the redesign, I wanted the site to have **a stronger identity**, and to that end I've made a few adjustments to the fonts used throughout the site. I selected a playful title font for my headings [_(Cardo)_][8], a playful but highly readable font for the first paragraph in articles [_(Merriweather)_][9], and kept the original font for the rest of the text _(Helvetica Neue)_, as it's mega easy to read.
+I've never considered myself good at stylistic choices, although I try super hard to improve in these areas. I've read several books on UX and design, but fonts are well outside of my comfort zone. During the redesign, I wanted the site to have **a stronger identity**, and to that end I've made a few adjustments to the fonts used throughout the site. I selected a playful title font for my headings [_(Cardo)_][9], a playful but highly readable font for the first paragraph in articles [_(Merriweather)_][10], and kept the original font for the rest of the text _(Helvetica Neue)_, as it's mega easy to read.
 
 > Do the new font choices improve UX? I didn't really measure it, but it _sure looks prettier_ to me! I would have to measure to know for sure, or at least, ask around!
 >
@@ -101,19 +103,19 @@ For instance, headings used to be underlined but this made them a tad harder to 
 
 I decided to go for **a flatter version** of the design I used to have, although I'm still using shades here and there, so I didn't exactly take a pure _"flat design"_ approach. I feel the current design nicely delimits the different pieces of the layout, which in my opinion does provide a cleaner-cut UX. In addition, this choice helped me redesign the buttons into **huge call-to-action rectangles**, which is quite an improvement, as buttons used to be a pretty ugly sight.
 
-Ooh, did I mention **the redesign introduced print styles**? Be aware of the performance implications of adding those styles as a separate stylesheet: [they block rendering][18]. Yes, _even if they're put a `media='print'` tag_. Here's how it looks like.
+Ooh, did I mention **the redesign introduced print styles**? Be aware of the performance implications of adding those styles as a separate stylesheet: [they block rendering][11]. Yes, _even if they're put a `media='print'` tag_. Here's how it looks like.
 
-![print.png][10]
+![print.png][12]
 
 The rest of the styling remained _largely unchanged_, allowing **Pony Foo** to build upon the identity that was established by the original design.
 
 # Links, page titles, and routing
 
-Back when I put together the blog I favored "semantic" URLs over practical ones. This means that I'd have routes such as [/2012/12/25/pony-foo-begins][11], instead of the routing scheme that I picked this time around, [/articles/pony-foo-begins][12]. The former allowed humans to hack away at URLs and find articles in a specific date, but in practice this was **just a variation of the infinite scrolling mechanism** which did more harm than good.
+Back when I put together the blog I favored "semantic" URLs over practical ones. This means that I'd have routes such as [/2012/12/25/pony-foo-begins][13], instead of the routing scheme that I picked this time around, [/articles/pony-foo-begins][14]. The former allowed humans to hack away at URLs and find articles in a specific date, but in practice this was **just a variation of the infinite scrolling mechanism** which did more harm than good.
 
-Humans are still allowed to browse articles by date [_(here are the articles published during 2014)_][13], but humans searching the site wouldn't have an interest in searching for articles written on a specific date, and thus they'd have to _know_ about the [/articles/2014][14] URL before being able to visit it.
+Humans are still allowed to browse articles by date [_(here are the articles published during 2014)_][15], but humans searching the site wouldn't have an interest in searching for articles written on a specific date, and thus they'd have to _know_ about the [/articles/2014][16] URL before being able to visit it.
 
-Similar convenience URLs were introduced, such as [/articles/first][15], [/articles/last][16], and _perhaps the most "useful" one_ [/articles/random][17]. Another UX boost was provided by allowing the user to navigate to [/rss][19], [/feed][20], and [/articles/rss][21], all pointing to the RSS feed at [/articles/feed][22]. This is a concession to the fact that _sometimes people look up the RSS feed by hand_, and when they're unable to find it they are left guessing what the URL may be.
+Similar convenience URLs were introduced, such as [/articles/first][17], [/articles/last][18], and _perhaps the most "useful" one_ [/articles/random][19]. Another UX boost was provided by allowing the user to navigate to [/rss][20], [/feed][21], and [/articles/rss][22], all pointing to the RSS feed at [/articles/feed][23]. This is a concession to the fact that _sometimes people look up the RSS feed by hand_, and when they're unable to find it they are left guessing what the URL may be.
 
 Of course, UX demands that I keep the site working through the URL changes, and that means serving **301 Moved Permanently** responses to queries to URLs _in the old scheme_, as to satisfy human and search engine needs alike.
 
@@ -121,7 +123,7 @@ Of course, UX demands that I keep the site working through the URL changes, and 
 
 The experience in search was largely refactored as part of the redesign, too. Search used to merely involve a naïve RegExp parsing algorithm, returning any article that partially matched the human's query. The improvements introduced were twofold.
 
-Firstly, the search engine itself was improved using a combination of [natural][23], [gramophone][24], regular expressions, and common sense. Of course I could've used a packaged solution like [ElasticSearch][25] or [Lucene][26], but those would've involved more work to get up and running. Besides, they felt like **overkill for a simple one-man blog** operation. If everything else fails, then a regular expression is used _as a last-ditch effort_ to find relevant articles.
+Firstly, the search engine itself was improved using a combination of [natural][24], [gramophone][25], regular expressions, and common sense. Of course I could've used a packaged solution like [ElasticSearch][26] or [Lucene][27], but those would've involved more work to get up and running. Besides, they felt like **overkill for a simple one-man blog** operation. If everything else fails, then a regular expression is used _as a last-ditch effort_ to find relevant articles.
 
 Second, the front-facing experience was improved. If you type in a query containing a tag like _"[js]"_, then the engine will know to look for articles tagged `js`. An _experimental feature_ is to return random articles if a query fails to produce any relevant results, as an attempt to **find something else of interest** to the human.
 
@@ -134,26 +136,27 @@ I had longed for related articles and now they're finally here!
   [3]: http://i.imgur.com/qnfv0n5.jpg
   [4]: /articles/archives "The archives link to every single article ever published on Pony Foo!"
   [5]: http://phantomjs.org/ "PhantomJS is a Headless Web Browser"
-  [6]: http://i.imgur.com/5sPnaji.png "Screenshot of the invitation email"
-  [7]: http://darkpatterns.org/library/roach_motel/ "Also known as the 'Roach Motel' dark pattern category"
-  [8]: http://www.google.com/fonts/specimen/Cardo "Cardo on Google Fonts"
-  [9]: http://www.google.com/fonts/specimen/Merriweather "Merriweather on Google Fonts"
-  [10]: http://i.imgur.com/1PG50fl.png "Print preview for an article on Pony Foo"
-  [11]: /articles/pony-foo-begins "Pony Foo begins"
-  [12]: /articles/pony-foo-begins "Pony Foo begins"
-  [13]: /articles/2014 "Articles published on 2014"
-  [14]: /articles/2014 "Articles published on 2014"
-  [15]: /articles/first "First article ever published on Pony Foo"
-  [16]: /articles/last "Last article published on Pony Foo"
-  [17]: /articles/random "A random article published on Pony Foo"
-  [18]: https://www.nccgroup.com/en/blog/2014/10/does-a-print-css-file-slow-your-site-down/ "Does a print CSS file slow your site down?"
-  [19]: /rss
-  [20]: /feed
-  [21]: /articles/rss
-  [22]: /articles/feed
-  [23]: https://github.com/NaturalNode/natural "NaturalNode/natural on GitHub"
-  [24]: https://www.npmjs.org/package/gramophone "gramophone on npmjs"
-  [25]: http://www.elasticsearch.org/ "Open Source Distributed Real Time Search & Analytics"
-  [26]: http://lucene.apache.org/ "Apache Lucene and Solr"
+  [6]: http://i.imgur.com/lngb2gD.png "Screen Shot 2014-10-17 at 13.46.06.png"
+  [7]: http://i.imgur.com/5sPnaji.png "Screenshot of the invitation email"
+  [8]: http://darkpatterns.org/library/roach_motel/ "Also known as the 'Roach Motel' dark pattern category"
+  [9]: http://www.google.com/fonts/specimen/Cardo "Cardo on Google Fonts"
+  [10]: http://www.google.com/fonts/specimen/Merriweather "Merriweather on Google Fonts"
+  [11]: https://www.nccgroup.com/en/blog/2014/10/does-a-print-css-file-slow-your-site-down/ "Does a print CSS file slow your site down?"
+  [12]: http://i.imgur.com/1PG50fl.png "Print preview for an article on Pony Foo"
+  [13]: /articles/pony-foo-begins "Pony Foo begins"
+  [14]: /articles/pony-foo-begins "Pony Foo begins"
+  [15]: /articles/2014 "Articles published on 2014"
+  [16]: /articles/2014 "Articles published on 2014"
+  [17]: /articles/first "First article ever published on Pony Foo"
+  [18]: /articles/last "Last article published on Pony Foo"
+  [19]: /articles/random "A random article published on Pony Foo"
+  [20]: /rss
+  [21]: /feed
+  [22]: /articles/rss
+  [23]: /articles/feed
+  [24]: https://github.com/NaturalNode/natural "NaturalNode/natural on GitHub"
+  [25]: https://www.npmjs.org/package/gramophone "gramophone on npmjs"
+  [26]: http://www.elasticsearch.org/ "Open Source Distributed Real Time Search & Analytics"
+  [27]: http://lucene.apache.org/ "Apache Lucene and Solr"
 
 [ponyfoo case-study ux css]
