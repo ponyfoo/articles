@@ -4,9 +4,10 @@ This article aims to cover the performance gains I've attained in the redesign o
 
 - Moving away from client-side rendering
 - Backing your application front-end servers with [nginx][1]
+- Optimizing images
 - Deferring non-critical asset loading
 - Inlining critical assets
-- Ditch large libraries and frameworks
+- Ditching large libraries and frameworks
 
 ![lightning-bolt.jpg][2]
 
@@ -15,7 +16,7 @@ If this article feels too _"out of the blue"_ to you, maybe you'd like to read t
 Are **blazing fast web applications** of interest to you? Read on!
 
   [1]: http://nginx.org/en/docs/ "nginx documentation"
-  [2]: http://i.imgur.com/qeqgUL2.jpg "Overly dramatic imagery depicting outstanding performance"
+  [2]: http://i.imgur.com/GeyKmn9.jpg "Overly dramatic imagery depicting outstanding performance"
   [3]: https://gist.github.com/bevacqua/18768dcc95d5c40434d8 "Email message introducing Pony Foo redesign"
 
 # Where we left off...
@@ -78,7 +79,7 @@ I love [Angular][3], I really do, but in my opinion it's nearly useless in any u
 
 This realization left me to choose between [Backbone][4] (using [Rendr][19]), [React][5], or _"doing nothing"_. React felt like overkill, I really disliked the JSX syntax. The DOM tree diffing algorithm is brilliant, but that alone didn't tip me over. I invested a couple of days toying with [Rendr][19], but it was [far too constrained][20] for my taste. I ended up going for a custom solution yet again.
 
-This time however I had decided to learn from the many mistakes I made in the past, and I implemented a shared-rendering library that would work with any Node.js server, view templating engine, and client-side libraries that I needed. That's when [I built [Taunus][21].
+This time however I had decided to learn from the many mistakes I made in the past, and I implemented a shared-rendering library that would work with any Node.js server, view templating engine, and client-side libraries that I needed. That's when I built [Taunus][21].
 
 # Shared-Rendering!
 
@@ -97,7 +98,7 @@ This has nothing to do with me being a _"purist"_ of any sort, and everything to
 
 **Strive for getting meaningful content to your humans as quickly as possible.** Then, once they have something they can read or interact with, add more content on top. Throw in the rest of the styles, fetch the JavaScript needed to obtain a fancier experience, but always provide them with _something to do other than stare at a loading indicator!_
 
-It doesn't matter whether you use [Taunus][21] itself or not. It just enables better code reuse and then gets out of the way. The concept underlying Taunus is really simple.
+It doesn't matter whether you actually use [Taunus][21] itself or not. It just enables shared rendering and better code reuse, then gets out of the way. The concept underlying Taunus is really simple. These are the steps you should be aiming for, in order to get content to your humans as quickly as possible, [Taunus][21] or not.
 
 - Define `function(model)`s for your views
 - Put these views in both the server and the client
@@ -112,7 +113,7 @@ It doesn't matter whether you use [Taunus][21] itself or not. It just enables be
 - When you get the JSON model back, render views on the client-side
 - If the `history` API is unavailable, fall back to good old request-response. **Don't confuse your humans with obscure hash routers!**
 
-Most view templating engines allow you to compile down into functions. In the case of Jade I wrote [Jadum][22], which goes the extra mile of adding `require` statements rather than inlining `include`s. As far as routing goes, that's up to you. In the case of Taunus I'm currently using [routes][23] to fulfill its routing needs, since it's really close to what Express has, but that's just for convenience.
+Most view templating engines allow you to compile your views into plain JavaScript functions. In the case of Jade I wrote [Jadum][22], which goes the extra mile of adding `require` statements rather than inlining `include`s, saving _quite a few extra bytes_ when it comes to client-side views. As far as routing goes, that's up to you. In the case of Taunus I'm currently using [routes][23] to fulfill its routing needs, since it's really close to what Express has, but that's just for convenience.
 
 If you're careful about following this outline, you might be well on your way to a progressively enhanced site.
 
@@ -120,7 +121,9 @@ One that doesn't come down crumbling when humans disable JavaScript.
 
 **One that doesn't come down crumbling when JavaScript takes forever to download.** Yes. You should care about that, because of mobile devices and poor connectivity under 2G and 3G connections.
 
-If you don't care about [Taunus][21], which is perfectly expected, you should still definitely give [React][5] or [Rendr][19] a shot. Shared-rendering is crucial to fast web applications.
+If you don't care about [Taunus][21], which is perfectly expected, you should still definitely give [React][5] or [Rendr][19] a shot. Shared-rendering is crucial to fast web applications. In fact _you can quote me_ on the following statement.
+
+> If you're going to pick one, use server-side rendering. Using only client-side rendering is slow, inaccessible, and **one of the worst aspects of modern web application development**.
 
 # Use `nginx`
 
@@ -134,13 +137,13 @@ The second worst offender when it came to performance on Pony Foo was the fact t
 
 Using `nginx`, all of your static assets will be properly cached with far-future `Expires` headers, Gzip compressed, and none of those requests will be hitting your application servers! Application servers are simply not very well suited to handle lots of requests for static assets. Do yourself a favor and put an [nginx server][24] in front of them.
 
-The current iteration fares much better on [WebPageTest][34]. Granted, I'm still not using a CDN, but a simple blog doesn't really _need_ to serve static assets near the edge of the network. Note how both compression and caching both got a higher rating as a result of using [nginx][24].
+The current iteration fares much better on [WebPageTest][34]. Granted, I'm still not using a CDN, but a simple blog doesn't really _need_ to serve static assets near the edge of the network. Note how both compression and caching got a higher rating as a result of using [nginx][24].
 
 [![webpagetest2.png][35]][34]
 
 When putting together [bevacqua.io][25] I came up with [grunt-ec2][26] as a way to easily provision [AWS EC2][29] instances and have them setup an [nginx reverse proxy][28] in front of my Node application, which ran on a cluster for failover and hot code reloads.
 
-Keep in mind that heavy caching demands that you perform _asset hashing_ on your static resources. For this purpose I've developed [reaver][55], which performs the actual asset hashing, turning files like `all.js` into something like `all.db340cff.js`. I also developed [scourge][56], which helps you replace references like `<script src='/js/all.js'></script>`  with their properly hashed counterparts.
+Keep in mind that heavy caching demands that you perform _asset hashing_ on your static resources. For this purpose I've developed [reaver][55], which performs the actual asset hashing, turning files like `all.js` into something like `all.db340cff.js`. I've also developed [scourge][56], which helps you replace references like `<script src='/js/all.js'></script>`  with their properly hashed counterparts.
 
 ## A faster build process
 
@@ -170,7 +173,7 @@ Among other topics, the book will give you a thorough understanding of the proto
 
 ## Defer _Most_ Image Loading
 
-This one is probably the easiest ways to ensure the relevant pieces get to your humans as quickly as possible. In the case of Pony Foo, I chose to defer image loading for **every image except the first one**: chances are, every image after that **won't be in the human's viewport** until after a while, giving us time to load them in the background.
+This one is probably the easiest ways to ensure the relevant pieces of content get to your humans as quickly as possible. In the case of Pony Foo, I chose to defer image loading for **every image except the first one**: chances are, every image after that **won't be in the human's viewport** until after a while, giving us time to load them in the background.
 
 Implementing the image deferral involved a two step process. The idea is to alter image tags so that they won't immediately load the associated images. Then, once the `onload` event fires, you assign the `src` property back to what it was supposed to be!
 
@@ -208,13 +211,23 @@ function unwrap (img) {
 
 Deferring all images such as gravatars and many others that won't be visible until the human scrolls further down enables us to prioritize the content that matters, enabling me to **deliver a reasonable human experience more quickly**.
 
-Obviously you'll have to take this little hack into account when putting together an email _(or RSS feed entry, etc.)_ that uses the same piece of HTML!
+Obviously you'll have to take this little hack into account when putting together an email _(or RSS feed entry, etc.)_ that uses the same piece of HTML! The effects on social media crawlers are mitigated by the use of metadata _(e.g: open graph, microdata)_ containing links to the images.
 
 ## Use Image Sprites
 
 Spritesheets are a widely known and easy-to-implement technique that [help you concatenate images in one bundle][52]. Those icons can then be individually added to your pages by using CSS class names to single them out.
 
 While the human-facing side of Pony Foo doesn't have a lot of icons, the technique still deserved a mention in this article!
+
+## Optimize Images!
+
+Image optimization is often _overlooked or underestimated_, but **critical in enabling fast-loading sites**. In the case of Pony Foo most imagery comes from uploads made to [imgur][58] over the Markdown editor. Unfortunately, imgur doesn't optimize images, other than acting as a CDN.
+
+For that reason, I've had to take image optimization upon myself, using [imagemin][59] to optimize image uploads on the fly before handing them over to imgur. Using imagemin I managed to get **savings of around 50-80%** for most images I've uploaded, easily resulting in some of the largest byte-size savings attained while boosting the overall performance of the site.
+
+Of course, this is only meaningful if you're actually planning on serving images. As Ilya observes time and again in [High Performance Browser Networking][38]:
+
+> **The fastest byte is a byte not sent.**
 
 ## Defer Expensive Font Loading
 
@@ -337,7 +350,7 @@ As a last resort, getting rid of the fat provided by large libraries will help y
 
 Some examples of cruft-cutting that allowed me to fit the entire client-side JavaScript in less than 60K are detailed below.
 
-- No [jQuery][42], which is 33K on its own. [Dominus][41] is around 7K and has a nicer API dedicated to DOM querying and manipulation
+- No [jQuery][42], which is 33K on its own. [Dominus][41] fits in 3.6K and has a nicer API dedicated to DOM querying and manipulation
 - [Taunus][21] is very small, even when you add client-side view templates! This is possible thanks to [Jadum][22], which optimizes `include`s to use `require` statements instead of inlining the included template
 - When in doubt, measure!
 
@@ -350,6 +363,8 @@ In the case of Pony Foo, I [created a script][49] that lets me quickly visually 
 Almost unsurprisingly, Pony Foo now fares _much better_ on [PageSpeed Insights][32] as a result. The issues noted in the mobile version are because cache headers used by external origins, such as `imgur.com` or `gravatar.com`, don't set far-future `Expires` headers and instead set them to short spans of time like 5 minutes.
 
 [![pagespeed-now.png][47]][32]
+
+Of course, that rating is a _"best-case scenario"_, because images are not optimized as aggressively as they could be, and long comment threads also damage performance, but we can all agree that Pony Foo is much more pleasant to read today than it was a year ago.
 
 > Yes, the site looks **a bit better overall**, as I've worked a bit on the _design and UX_ aspects as well; and I plan on writing an article about those topics as well!
 
@@ -371,7 +386,7 @@ What kinds of performance optimizations have worked best for you and your sites?
 [14]: https://github.com/assetify/assetify "assetify/assetify on GitHub"
 [15]: http://lesscss.org/ "LESSCSS.org"
 [16]: https://github.com/bevacqua/ultramarked "bevacqua/ultramarked on GitHub"
-[17]: http://i.imgur.com/MmDp7On.png "The good old times!"
+[17]: http://i.imgur.com/1VaFf31.png "The good old times!"
 [18]: http://phantomjs.org/ "Full Stack Headless Browser"
 [19]: https://github.com/rendrjs/rendr "Rendr"
 [20]: /articles/shared-rendering-with-rendr "Shared Rendering with Rendr"
@@ -387,13 +402,13 @@ What kinds of performance optimizations have worked best for you and your sites?
 [30]: https://medium.com/este-js-framework/whats-wrong-with-angular-js-97b0a787f903 "What’s wrong with Angular.js"
 [31]: http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/ "Isomorphic JavaScript: The Future of Web Apps"
 [32]: https://developers.google.com/speed/pagespeed/insights/ "Google PageSpeed Insights"
-[33]: http://i.imgur.com/J1PNzSu.png
+[33]: http://i.imgur.com/Awzpnnd.png
 [34]: http://www.webpagetest.org/ "WebPageTest.org Performance Testing and Measurement"
-[35]: http://i.imgur.com/3Q8J2BR.png
+[35]: http://i.imgur.com/f49lwPp.png
 [36]: https://github.com/ponyfoo/ponyfoo/blob/master/build/debug "npm start build script at ponyfoo/ponyfoo on GitHub"
-[37]: http://i.imgur.com/rL8QSgE.png
+[37]: http://i.imgur.com/raU3zgV.png
 [38]: http://chimera.labs.oreilly.com/books/1230000000545 "High Performance Browser Networking"
-[39]: http://i.imgur.com/bbRuywS.jpg
+[39]: http://i.imgur.com/W9nllKd.jpg
 [40]: smashingmagazine.com/2014/09/08/improving-smashing-magazine-performance-case-study/ "Improving Smashing Magazine’s Performance: A Case Study"
 [41]: https://github.com/bevacqua/dominus "bevacqua/dominus on GitHub"
 [42]: https://github.com/jquery/jquery "jquery/jquery on GitHub"
@@ -401,16 +416,18 @@ What kinds of performance optimizations have worked best for you and your sites?
 [44]: https://github.com/pocketjoso/penthouse "pocketjoso/penthouse on GitHub"
 [45]: https://github.com/addyosmani/critical "addyosmani/critical on GitHub"
 [46]: https://github.com/bevacqua/cave "bevacqua/cave on GitHub"
-[47]: http://i.imgur.com/Oyrfgjx.png
-[48]: http://i.imgur.com/nZNPz9q.png
+[47]: http://i.imgur.com/whHDV9Z.png
+[48]: http://i.imgur.com/hkeYKdJ.png
 [49]: https://github.com/ponyfoo/ponyfoo/blob/master/build/diagnose "`npm run diagnose` for ponyfoo on GitHub"
 [50]: https://github.com/hughsk/disc "hughsk/disc on GitHub"
-[51]: http://i.imgur.com/RVQRfGI.png "Measuring performance is just as important as trying to improve it directly!"
+[51]: http://i.imgur.com/2FFGh5t.png "Measuring performance is just as important as trying to improve it directly!"
 [52]: /articles/spritesheets-grunt-and-you "Spritesheets, Grunt,  and you"
 [53]: https://www.npmjs.org/package/lodash.find "lodash.find on npmjs.org"
 [54]: https://github.com/bevacqua/dominus/commit/1d0e97f9143e3050d84decfd1d32bc7332b133d5 "Getting rid of lodash.find"
 [55]: https://github.com/bevacqua/reaver "bevacqua/reaver on GitHub"
 [56]: https://github.com/bevacqua/scourge "bevacqua/scourge on GitHub"
 [57]: /humans.txt "humans.txt on Pony Foo"
+[58]: http://imgur.com/ "imgur is the simple image sharer"
+[59]: https://github.com/imagemin/imagemin "imagemin/imagemin on GitHub"
 
 [ponyfoo critical-path performance nginx pagespeed]
