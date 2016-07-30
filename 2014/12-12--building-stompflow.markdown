@@ -1,8 +1,8 @@
 <h1>I&#x2019;m Building Stompflow!</h1>
 
-<blockquote><p>Hey there! Today I have exciting news to share. We&#x2019;ve recently started developing a prototype for a project management service called <a href="http://stompflow.com/" target="_blank">Stompflow</a>, and it has a &#x2026;</p></blockquote>
-
 <div><kbd>stompflow</kbd> <kbd>announcement</kbd> <kbd>non-technical</kbd></div>
+
+<blockquote><p>Hey there! Today I have exciting news to share. We&#x2019;ve recently started developing a prototype for a project management service called <a href="http://stompflow.com/" target="_blank">Stompflow</a>, and it has a &#x2026;</p></blockquote>
 
 <div><p>Hey there! Today I have exciting news to share. We&#x2019;ve recently started developing a prototype for a project management service called <a href="http://stompflow.com/" target="_blank">Stompflow</a>, and it has a transparent process that allows everyone to get involved. Keep reading to learn more!</p></div>
 

@@ -1,8 +1,8 @@
 <h1>A Brief History of ES6 Tooling</h1>
 
-<blockquote><p>I wrote a few articles about React and ES6 these last few days, and today I wanted to add a bit more of context as to why I seem to be super into ES6 all of sudden. &#x2026;</p></blockquote>
-
 <div><kbd>es6</kbd> <kbd>history-lesson</kbd> <kbd>traceur</kbd> <kbd>babel</kbd> <kbd>es6-in-depth</kbd></div>
+
+<blockquote><p>I wrote a few articles about React and ES6 these last few days, and today I wanted to add a bit more of context as to why I seem to be super into ES6 all of sudden. &#x2026;</p></blockquote>
 
 <div><p>I wrote a few articles about React and ES6 these last few days, and today I wanted to add a bit more of context as to why I seem to be super into ES6 all of sudden. I&#x2019;ve had an interest in ES6 for a long time, but we weren&#x2019;t always prepared to write code in ES6. In this post I wanted to briefly touch on the history of ES6 tooling and why I believe that today we&#x2019;re in a much better place to adopt ES6 than where we were half a year ago.</p></div>
 

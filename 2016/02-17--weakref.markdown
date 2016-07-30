@@ -1,9 +1,9 @@
 <h1>JavaScript Proposal for weak references: <code class="md-code md-code-inline">WeakRef</code></h1>
 
+<div><kbd>ecmascript</kbd> <kbd>weakref</kbd> <kbd>proposal-draft</kbd></div>
+
 <blockquote><p>A proposal to implement weak references in JavaScript <em>&#x2013; which would expose weak references made possible by <a href="https://ponyfoo.com/articles/es6-weakmaps-sets-and-weaksets-in-depth" aria-label="ES6 WeakMaps, Sets, and WeakSets in Depth"><code>WeakMap</code> and <code>WeakSet</code></a> &#x2013;</em> is currently sitting at <em>stage 0</em>.</p>
 </blockquote>
-
-<div><kbd>ecmascript</kbd> <kbd>weakref</kbd> <kbd>proposal-draft</kbd></div>
 
 <div><p>A proposal to implement weak references in JavaScript <em>&#x2013; which would expose weak references made possible by <a href="https://ponyfoo.com/articles/es6-weakmaps-sets-and-weaksets-in-depth" aria-label="ES6 WeakMaps, Sets, and WeakSets in Depth"><code class="md-code md-code-inline">WeakMap</code> and <code class="md-code md-code-inline">WeakSet</code></a> &#x2013;</em> is currently sitting at <em>stage 0</em>.</p></div>
 

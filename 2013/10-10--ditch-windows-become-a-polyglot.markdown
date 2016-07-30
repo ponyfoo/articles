@@ -1,8 +1,8 @@
 <h1>Ditch Windows, Become a Polyglot</h1>
 
-<blockquote><p>It took me a while to realize it, but Windows has been a <em>disease</em> to me, or perhaps more analogously a <em>drug addiction</em>. Ever since I was a kid I used Windows. Well, I &#x2026;</p></blockquote>
-
 <div><kbd>windows</kbd> <kbd>ubuntu</kbd> <kbd>os</kbd> <kbd>terminal</kbd> <kbd>polyglot</kbd> <kbd>bio</kbd></div>
+
+<blockquote><p>It took me a while to realize it, but Windows has been a <em>disease</em> to me, or perhaps more analogously a <em>drug addiction</em>. Ever since I was a kid I used Windows. Well, I &#x2026;</p></blockquote>
 
 <div><p>It took me a while to realize it, but Windows has been a <em>disease</em> to me, or perhaps more analogously a <em>drug addiction</em>. Ever since I was a kid I used Windows. Well, I guess I played around in Norton Commander, which was <em>nice at the time</em>, as a way to easily navigate the file system in a terminal window, or <a href="http://en.wikipedia.org/wiki/DOS" target="_blank">DOS</a>.</p></div>
 

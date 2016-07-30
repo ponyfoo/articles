@@ -1,10 +1,10 @@
 <h1>ECMAScript Proposal for JavaScript Decorators <br><em>(and protocols)</em></h1>
 
+<div><kbd>ecmascript</kbd> <kbd>decorators</kbd> <kbd>proposal-draft</kbd></div>
+
 <blockquote><p>There&#x2019;s a JavaScript decorators proposal in the works.<br>
 We take a look at how it works and why it&#x2019;s useful.</p>
 </blockquote>
-
-<div><kbd>ecmascript</kbd> <kbd>decorators</kbd> <kbd>proposal-draft</kbd></div>
 
 <div><p>Decorators are, as most things programming, definitely <em>not a new concept</em>. That being said, they may be coming to JavaScript. There&#x2019;s a JavaScript decorators proposal in the works. It is currently sitting at stage 1 of the ECMASCript process, but may soon advance to stage 2. We take a look at how it works and why it&#x2019;s useful.</p></div>
 

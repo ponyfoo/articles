@@ -1,8 +1,8 @@
 <h1>Modularizing Your Front-End</h1>
 
-<blockquote><p>In the past <a href="https://ponyfoo.com/2014/03/07/a-less-convoluted-event-emitter-implementation">I&#x2019;ve wrote</a> about a small alternative to <a href="https://github.com/caolan/async" target="_blank"><code>async</code></a>, named <a href="https://github.com/bevacqua/contra" target="_blank"><code>contra</code></a>, which is <em>barely over 2kb</em>, and has the browser at its heart. It comes with the usual &#x2026;</p></blockquote>
-
 <div><kbd>ponyfoo</kbd> <kbd>front-end</kbd> <kbd>modules</kbd> <kbd>browserify</kbd> <kbd>npm-run</kbd> <kbd>gulp</kbd></div>
+
+<blockquote><p>In the past <a href="https://ponyfoo.com/2014/03/07/a-less-convoluted-event-emitter-implementation">I&#x2019;ve wrote</a> about a small alternative to <a href="https://github.com/caolan/async" target="_blank"><code>async</code></a>, named <a href="https://github.com/bevacqua/contra" target="_blank"><code>contra</code></a>, which is <em>barely over 2kb</em>, and has the browser at its heart. It comes with the usual &#x2026;</p></blockquote>
 
 <div><p>In the past <a href="https://ponyfoo.com/2014/03/07/a-less-convoluted-event-emitter-implementation">I&#x2019;ve wrote</a> about a small alternative to <a href="https://github.com/caolan/async" target="_blank"><code class="md-code md-code-inline">async</code></a>, named <a href="https://github.com/bevacqua/contra" target="_blank"><code class="md-code md-code-inline">contra</code></a>, which is <em>barely over 2kb</em>, and has the browser at its heart. It comes with the usual suspects, allowing you to craft asynchronous flows in series or concurrently, as well as a few functional methods, an event emitter implementation, and a queue which powers most of the library.</p></div>
 

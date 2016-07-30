@@ -1,8 +1,8 @@
 <h1>Recommended Reading</h1>
 
-<blockquote><p>I haven&#x2019;t gotten around to recommending any books yet, and I wanted to <em>break some words</em> about a few reads. I&#x2019;m excited about a batch of books I&#x2019;ve &#x2026;</p></blockquote>
-
 <div><kbd>recommended-reading</kbd> <kbd>software-development</kbd></div>
+
+<blockquote><p>I haven&#x2019;t gotten around to recommending any books yet, and I wanted to <em>break some words</em> about a few reads. I&#x2019;m excited about a batch of books I&#x2019;ve &#x2026;</p></blockquote>
 
 <div><p>I haven&#x2019;t gotten around to recommending any books yet, and I wanted to <em>break some words</em> about a few reads. I&#x2019;m excited about a batch of books I&#x2019;ve just ordered on Amazon, and I wanted to share what I have to say about some of the books I&#x2019;ve read in the past. Particularly, the timeless ones, those which aren&#x2019;t tied to a specific technology. Though, I&#x2019;ll be mentioning a couple of <em>JavaScript-specific</em> books towards the end of the article.</p></div>
 

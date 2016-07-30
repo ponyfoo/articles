@@ -1,8 +1,8 @@
 <h1><div>How Pony Foo is ridiculously over-engineered</div><div><em>&#x2014; and why that is awesome</em></div></h1>
 
-<blockquote><p>With almost 3000 <a href="https://github.com/ponyfoo/ponyfoo" target="_blank" aria-label="ponyfoo/ponyfoo on GitHub">commits</a> on record, I&#x2019;m pretty sure that Pony Foo is one of the most, <em>if not the most</em>, over-engineered blogs ever. This article goes over how it all began as a learning experience&#x2026;</p></blockquote>
-
 <div><kbd>side-projects</kbd> <kbd>ponyfoo</kbd></div>
+
+<blockquote><p>With almost 3000 <a href="https://github.com/ponyfoo/ponyfoo" target="_blank" aria-label="ponyfoo/ponyfoo on GitHub">commits</a> on record, I&#x2019;m pretty sure that Pony Foo is one of the most, <em>if not the most</em>, over-engineered blogs ever. This article goes over how it all began as a learning experience&#x2026;</p></blockquote>
 
 <div><p>With almost 3000 <a href="https://github.com/ponyfoo/ponyfoo" target="_blank" aria-label="ponyfoo/ponyfoo on GitHub">commits</a> on record, I&#x2019;m pretty sure that Pony Foo is one of the most, <em>if not the most</em>, over-engineered blogs ever. This article goes over how it all began as a learning experience, how it continued to be a learning experience, and how it still is a learning experience. At the same time, we&#x2019;ll take a look at the features I&#x2019;ve built over the years, and what each has taught me along the way.</p></div>
 

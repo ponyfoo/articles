@@ -1,8 +1,8 @@
 <h1>Tech News Reading Hints</h1>
 
-<blockquote><p>The King is Dead, Long Live the King.</p><p>Google Reader <a href="http://techcrunch.com/2013/07/01/we-were-the-1000-goodbye-google-reader/" target="_blank">died</a> last night. I wanted to make a brief blog post to help you rebuild (or even build from scratch) your news reading &#x2026;</p></blockquote>
-
 <div><kbd>recommended-reading</kbd> <kbd>rss</kbd> <kbd>link-dump</kbd></div>
+
+<blockquote><p>The King is Dead, Long Live the King.</p><p>Google Reader <a href="http://techcrunch.com/2013/07/01/we-were-the-1000-goodbye-google-reader/" target="_blank">died</a> last night. I wanted to make a brief blog post to help you rebuild (or even build from scratch) your news reading &#x2026;</p></blockquote>
 
 <div><p>The King is Dead, Long Live the King.</p></div>
 

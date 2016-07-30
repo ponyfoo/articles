@@ -1,8 +1,8 @@
 <h1>The Angular Way</h1>
 
-<blockquote><p>For the past few months I&#x2019;ve been sailing around the world of Angular. Today I can hardly imagine myself doing day to day coding on a large front-end web &#x2026;</p></blockquote>
-
 <div><kbd>angularjs</kbd> <kbd>front-end</kbd> <kbd>best-practices</kbd> <kbd>app-press</kbd></div>
+
+<blockquote><p>For the past few months I&#x2019;ve been sailing around the world of Angular. Today I can hardly imagine myself doing day to day coding on a large front-end web &#x2026;</p></blockquote>
 
 <div><p>For the past few months I&#x2019;ve been sailing around the world of Angular. Today I can hardly imagine myself doing day to day coding on a large front-end web application without <em>some kind</em> of data binding framework, such as <a href="http://angularjs.org/" target="_blank">Angular.js</a>, <a href="http://backbonejs.org/" target="_blank">Backbone.js</a>, and <a href="http://underscorejs.org/" target="_blank">friends</a>; and I can&#x2019;t believe I&#x2019;ve done so in the past.</p></div>
 

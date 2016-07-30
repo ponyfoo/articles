@@ -1,8 +1,8 @@
 <h1>Getting Over jQuery</h1>
 
-<blockquote><p>We&#x2019;ve looked at doing some of the things that you can do in native code. So far, we&#x2019;ve covered AJAX, event handling, event delegation, DOM querying, and &#x2026;</p></blockquote>
-
 <div><kbd>js</kbd> <kbd>js-native</kbd> <kbd>jquery</kbd> <kbd>front-end</kbd> <kbd>best-practices</kbd> <kbd>dom</kbd></div>
+
+<blockquote><p>We&#x2019;ve looked at doing some of the things that you can do in native code. So far, we&#x2019;ve covered AJAX, event handling, event delegation, DOM querying, and &#x2026;</p></blockquote>
 
 <div><p>We&#x2019;ve looked at doing some of the things that you can do in native code. So far, we&#x2019;ve covered AJAX, event handling, event delegation, DOM querying, and DOM manipulation. If you haven&#x2019;t <em>already</em> read that, you <a href="https://ponyfoo.com/2013/06/10/uncovering-the-native-dom-api"><em>probably should</em></a>.</p></div>
 

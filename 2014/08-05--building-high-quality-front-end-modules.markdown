@@ -1,8 +1,8 @@
 <h1>Building High-Quality Front-End Modules</h1>
 
-<blockquote><p>Lately I&#x2019;ve been developing front-end modules solely based on <a href="http://browserify.org/" target="_blank">Browserify</a>, the latest being <a href="https://github.com/bevacqua/rome" target="_blank">rome</a>. Rome is a calendar component that has an extensive feature-set. &#x2026;</p></blockquote>
-
 <div><kbd>front-end</kbd> <kbd>open-source</kbd> <kbd>javascript</kbd> <kbd>jquery</kbd> <kbd>gulp</kbd> <kbd>modularity</kbd></div>
+
+<blockquote><p>Lately I&#x2019;ve been developing front-end modules solely based on <a href="http://browserify.org/" target="_blank">Browserify</a>, the latest being <a href="https://github.com/bevacqua/rome" target="_blank">rome</a>. Rome is a calendar component that has an extensive feature-set. &#x2026;</p></blockquote>
 
 <div><p>Lately I&#x2019;ve been developing front-end modules solely based on <a href="http://browserify.org/" target="_blank">Browserify</a>, the latest being <a href="https://github.com/bevacqua/rome" target="_blank">rome</a>. Rome is a calendar component that has an extensive feature-set. I&#x2019;ve compiled a list of highlights below.</p></div>
 

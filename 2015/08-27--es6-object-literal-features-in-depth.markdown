@@ -1,8 +1,8 @@
 <h1>ES6 Object Literal Features in Depth</h1>
 
-<blockquote><p>Once again, this is <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>. If you haven&#x2019;t set foot on this series before, you might want to learn about <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, &#x2026;</p></blockquote>
-
 <div><kbd>es6</kbd> <kbd>object-literals</kbd> <kbd>es6-in-depth</kbd></div>
+
+<blockquote><p>Once again, this is <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>. If you haven&#x2019;t set foot on this series before, you might want to learn about <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, &#x2026;</p></blockquote>
 
 <div><p>Once again, this is <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>. If you haven&#x2019;t set foot on this series before, you might want to learn about <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, or the <a href="https://ponyfoo.com/articles/es6-spread-and-butter-in-depth">spread operator and rest parameters</a>. Today&#x2019;s special is <em>object literals in ES6.</em> <strong>&#x201C;Sure, I can use those today&#x201D;</strong>, you say &#x2013; object literals date all the way back to ES3. This article is about new features coming in ES6 for object literals.</p></div>
 

@@ -1,8 +1,8 @@
 <h1>Understanding Build Processes</h1>
 
-<blockquote><p>A <em>task runner</em> helps you automate everything you need to get an environment functional. Configure, build, run tests, and execute your web server. But there&#x2019;s more &#x2026;</p></blockquote>
-
 <div><kbd>build</kbd> <kbd>productivity</kbd> <kbd>best-practices</kbd></div>
+
+<blockquote><p>A <em>task runner</em> helps you automate everything you need to get an environment functional. Configure, build, run tests, and execute your web server. But there&#x2019;s more &#x2026;</p></blockquote>
 
 <div><p>A <em>task runner</em> helps you automate everything you need to get an environment functional. Configure, build, run tests, and execute your web server. But there&#x2019;s more than that to a build system. Particularly, in the <em>local environment</em>, there&#x2019;s a lot you could do to improve <em>development productivity</em>.</p></div>
 

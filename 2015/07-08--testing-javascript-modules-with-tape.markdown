@@ -1,8 +1,8 @@
 <h1>Testing JavaScript Modules with Tape</h1>
 
-<blockquote><p>I held a survey last monday where I asked for feedback about the kinds of things you want me to write about. It was quite useful, and one of the topics that seem to &#x2026;</p></blockquote>
-
 <div><kbd>tape</kbd> <kbd>proxyquire</kbd> <kbd>sinon</kbd></div>
+
+<blockquote><p>I held a survey last monday where I asked for feedback about the kinds of things you want me to write about. It was quite useful, and one of the topics that seem to &#x2026;</p></blockquote>
 
 <div><p>I held a survey last monday where I asked for feedback about the kinds of things you want me to write about. It was quite useful, and one of the topics that seem to interest quite a few people is regarding module testing. Using <a href="https://github.com/substack/tape" target="_blank">tape</a>, <a href="https://github.com/thlorenz/proxyquire" target="_blank">proxyquire</a>, and <a href="https://github.com/cjohansen/Sinon.JS" target="_blank">sinon</a> is the best possible combination of modules when it comes to testing JavaScript applications, regardless of them being server-side or front-end code.</p></div>
 

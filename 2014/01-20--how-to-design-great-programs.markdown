@@ -1,8 +1,8 @@
 <h1>How to Design Great Programs</h1>
 
-<blockquote><p>This article is a recollection of common-sense application design practices I usually follow when building things. I felt like grouping them together in a blog post, for &#x2026;</p></blockquote>
-
 <div><kbd>best-practices</kbd> <kbd>api</kbd> <kbd>open-source</kbd> <kbd>program-design</kbd></div>
+
+<blockquote><p>This article is a recollection of common-sense application design practices I usually follow when building things. I felt like grouping them together in a blog post, for &#x2026;</p></blockquote>
 
 <div><p>This article is a recollection of common-sense application design practices I usually follow when building things. I felt like grouping them together in a blog post, for future reference. I&#x2019;ll talk not so much about implementation, but more about <strong>program design theory</strong>.</p></div>
 

@@ -1,8 +1,8 @@
 <h1>Shared Rendering with Rendr</h1>
 
-<blockquote><p><a href="https://github.com/rendrjs/rendr" target="_blank">Rendr</a> boosts the perceived performance of Backbone applications by rendering them in the server-side. This allows us to display the rendered page before JavaScript code &#x2026;</p></blockquote>
-
 <div><kbd>isomorphic</kbd> <kbd>backbone</kbd> <kbd>rendr</kbd> <kbd>mustache</kbd></div>
+
+<blockquote><p><a href="https://github.com/rendrjs/rendr" target="_blank">Rendr</a> boosts the perceived performance of Backbone applications by rendering them in the server-side. This allows us to display the rendered page before JavaScript code &#x2026;</p></blockquote>
 
 <div><p><a href="https://github.com/rendrjs/rendr" target="_blank">Rendr</a> boosts the perceived performance of Backbone applications by rendering them in the server-side. This allows us to display the rendered page before JavaScript code is executed in the browser and Backbone kicks in. In other words, it means that, the first time the page gets loaded, the human will get to see the content earlier. After that first load, Backbone will have taken over and handle routing in the client-side. However, the first load is extremely important, and having the ability to render the application on the server before the human gets any content is better than having them wait for Backbone to pull your data, fill your views, and render your templates. Search engine optimization is another reason why you might want to render your views in the server-side as well. That&#x2019;s why server-side rendering is still vital to the web application development process.</p></div>
 

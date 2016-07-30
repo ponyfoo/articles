@@ -1,8 +1,8 @@
 <h1>Fast-forwarding the Web Platform</h1>
 
-<blockquote><p>Peter-Paul Koch &#x2013; or <a href="https://twitter.com/ppk" target="_blank">@ppk</a> &#x2013; has once again <a href="http://www.quirksmode.org/blog/archives/2015/07/stop_pushing_th.html" target="_blank">published a rupturing article titled &#x201C;Stop pushing the web forward&#x201D;</a> that is surely going to <em>set &#x2026;</em></p></blockquote>
-
 <div><kbd>web</kbd> <kbd>standards</kbd> <kbd>native</kbd> <kbd>performance</kbd></div>
+
+<blockquote><p>Peter-Paul Koch &#x2013; or <a href="https://twitter.com/ppk" target="_blank">@ppk</a> &#x2013; has once again <a href="http://www.quirksmode.org/blog/archives/2015/07/stop_pushing_th.html" target="_blank">published a rupturing article titled &#x201C;Stop pushing the web forward&#x201D;</a> that is surely going to <em>set &#x2026;</em></p></blockquote>
 
 <div><p>Peter-Paul Koch &#x2013; or <a href="https://twitter.com/ppk" target="_blank">@ppk</a> &#x2013; has once again <a href="http://www.quirksmode.org/blog/archives/2015/07/stop_pushing_th.html" target="_blank">published a rupturing article titled &#x201C;Stop pushing the web forward&#x201D;</a> that is surely going to <em>set the agenda for this week</em> in terms of blog posts and twitter traffic. Already, Christian Heilmann &#x2013; or <a href="https://twitter.com/codepo8" target="_blank">@codepo8</a> &#x2013; wrote a brief article mentioning how the conversation can get lost in the Twittersphere and how it&#x2019;s better to <strong>lay out your thoughts in your own blog</strong>, particularly if you&#x2019;re trying to make a thoughtful argument against something that&#x2019;s not just going to <em>meaninglessly spread like wildfire</em> &#x2013; but <strong>without any real substance</strong> to it.</p></div>
 

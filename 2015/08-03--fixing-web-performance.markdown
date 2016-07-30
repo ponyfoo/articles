@@ -1,8 +1,8 @@
 <h1>Fixing Performance in the Web Stack</h1>
 
-<blockquote><p>There&#x2019;s plenty of performance optimization techniques in web development. Particularly, if you look into each portion of the web stack in detail. In <a href="https://speakerdeck.com/bevacqua/high-performance-in-the-critical-path" target="_blank">the &#x2026;</a></p></blockquote>
-
 <div><kbd>performance</kbd> <kbd>talks</kbd> <kbd>automation</kbd> <kbd>tips</kbd> <kbd>budgets</kbd></div>
+
+<blockquote><p>There&#x2019;s plenty of performance optimization techniques in web development. Particularly, if you look into each portion of the web stack in detail. In <a href="https://speakerdeck.com/bevacqua/high-performance-in-the-critical-path" target="_blank">the &#x2026;</a></p></blockquote>
 
 <div><p>There&#x2019;s plenty of performance optimization techniques in web development. Particularly, if you look into each portion of the web stack in detail. In <a href="https://speakerdeck.com/bevacqua/high-performance-in-the-critical-path" target="_blank">the presentation</a> I covered <mark class="md-mark"><strong>TCP, HTTP, HTML, CSS, Fonts, Images, and JavaScript</strong></mark>. Let&#x2019;s go over the <em>potential improvements</em> on each of those fronts.</p></div>
 

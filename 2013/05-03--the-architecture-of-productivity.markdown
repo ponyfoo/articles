@@ -1,8 +1,8 @@
 <h1>The Architecture of Productivity</h1>
 
-<blockquote><p>It&#x2019;s been a while since I last blogged. I went on vacation, switched jobs, and have been generally busy. I&#x2019;m now working <em>full-time remote</em>, which will <em>&#x2026;</em></p></blockquote>
-
 <div><kbd>software-development</kbd> <kbd>productivity</kbd> <kbd>architecture</kbd> <kbd>quotes</kbd></div>
+
+<blockquote><p>It&#x2019;s been a while since I last blogged. I went on vacation, switched jobs, and have been generally busy. I&#x2019;m now working <em>full-time remote</em>, which will <em>&#x2026;</em></p></blockquote>
 
 <div><p>It&#x2019;s been a while since I last blogged. I went on vacation, switched jobs, and have been generally busy. I&#x2019;m now working <em>full-time remote</em>, which will <em>hopefully</em> give me some more time to dedicate to this blog.</p></div>
 

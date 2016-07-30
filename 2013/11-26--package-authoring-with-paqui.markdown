@@ -1,8 +1,8 @@
 <h1>Package Authoring with Paqui</h1>
 
-<blockquote><p>Creating client-side JavaScript packages is increasingly becoming a painful endeavor. We need to publish our package to different repositories such as <a href="http://bower.io/" target="_blank">bower</a>, <a href="http://component.io/" target="_blank">component</a>, &#x2026;</p></blockquote>
-
 <div><kbd>paqui</kbd> <kbd>js</kbd> <kbd>front-end</kbd> <kbd>npm</kbd> <kbd>bower</kbd></div>
+
+<blockquote><p>Creating client-side JavaScript packages is increasingly becoming a painful endeavor. We need to publish our package to different repositories such as <a href="http://bower.io/" target="_blank">bower</a>, <a href="http://component.io/" target="_blank">component</a>, &#x2026;</p></blockquote>
 
 <div><p>Creating client-side JavaScript packages is increasingly becoming a painful endeavor. We need to publish our package to different repositories such as <a href="http://bower.io/" target="_blank">bower</a>, <a href="http://component.io/" target="_blank">component</a>, and <a href="https://npmjs.org/" target="_blank">npm</a>, and there are others! Crazy. People might be using <a href="http://volojs.org/" target="_blank">volo</a>, <a href="http://jamjs.org/" target="_blank">jam</a>, or <a href="http://ender.jit.su/" target="_blank">Ender</a>&#x2026; <em>Have I named enough yet?</em></p></div>
 

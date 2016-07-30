@@ -1,8 +1,8 @@
 <h1>Lean Development Principles</h1>
 
-<blockquote><p>I just finished reading <a href="http://www.amazon.com/dp/0307887898" target="_blank">The Lean Startup</a>, an immersive, ground-breaking take on entrepreneurship and startup management, with views heavily rooted in the Toyota &#x2026;</p></blockquote>
-
 <div><kbd>lean-startup</kbd> <kbd>book-review</kbd> <kbd>recommended-reading</kbd></div>
+
+<blockquote><p>I just finished reading <a href="http://www.amazon.com/dp/0307887898" target="_blank">The Lean Startup</a>, an immersive, ground-breaking take on entrepreneurship and startup management, with views heavily rooted in the Toyota &#x2026;</p></blockquote>
 
 <div><p>I just finished reading <a href="http://www.amazon.com/dp/0307887898" target="_blank">The Lean Startup</a>, an immersive, ground-breaking take on entrepreneurship and startup management, with views heavily rooted in the Toyota Production System. There are quite a few take-aways for us, the <strong>web work-force</strong>, to learn.</p></div>
 

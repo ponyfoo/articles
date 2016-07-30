@@ -1,8 +1,8 @@
 <h1>Taming Asynchronous JavaScript</h1>
 
-<blockquote><p>Last month, a series of <em>very</em> interesting articles regarding <strong>async coding style</strong>, in Node, popped up. The discussion spanned a few more subjects than <em>just coding style</em>, it &#x2026;</p></blockquote>
-
 <div><kbd>async</kbd> <kbd>callback-hell</kbd> <kbd>js</kbd> <kbd>best-practices</kbd> <kbd>quotes</kbd></div>
+
+<blockquote><p>Last month, a series of <em>very</em> interesting articles regarding <strong>async coding style</strong>, in Node, popped up. The discussion spanned a few more subjects than <em>just coding style</em>, it &#x2026;</p></blockquote>
 
 <div><p>Last month, a series of <em>very</em> interesting articles regarding <strong>async coding style</strong>, in Node, popped up. The discussion spanned a few more subjects than <em>just coding style</em>, it was analyzed in a more <em>theoretical level</em>, as well as a <em>deep technical level</em>, obviously on the <em>practical level</em>, and <em>even politics</em> saw the limelight in this <em>fascinating</em> argument.</p></div>
 

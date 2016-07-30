@@ -1,8 +1,8 @@
 <h1>Learn Regular Expressions</h1>
 
-<blockquote><p><strong>Regular Expressions</strong> are a fundamental tool <strong><em>every</em></strong> programmer should understand, at the very least on a basic level. I might not make an expert in regex out of you, but at &#x2026;</p></blockquote>
-
 <div><kbd>regex</kbd> <kbd>learning</kbd></div>
+
+<blockquote><p><strong>Regular Expressions</strong> are a fundamental tool <strong><em>every</em></strong> programmer should understand, at the very least on a basic level. I might not make an expert in regex out of you, but at &#x2026;</p></blockquote>
 
 <div><p><strong>Regular Expressions</strong> are a fundamental tool <strong><em>every</em></strong> programmer should understand, at the very least on a basic level. I might not make an expert in regex out of you, but at least, you should be able to comprehend what they do, and create simple ones yourself.</p></div>
 

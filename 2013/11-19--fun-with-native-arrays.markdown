@@ -1,8 +1,8 @@
 <h1>Fun with Native Arrays</h1>
 
-<blockquote><p>In JavaScript, arrays can be created with the <code>Array</code> constructor, or using the <code>[]</code> convenience shortcut, which is also the preferred approach. Arrays inherit from the <code>&#x2026;</code></p></blockquote>
-
 <div><kbd>js</kbd> <kbd>js-native</kbd> <kbd>array</kbd></div>
+
+<blockquote><p>In JavaScript, arrays can be created with the <code>Array</code> constructor, or using the <code>[]</code> convenience shortcut, which is also the preferred approach. Arrays inherit from the <code>&#x2026;</code></p></blockquote>
 
 <div><p>In JavaScript, arrays can be created with the <code class="md-code md-code-inline">Array</code> constructor, or using the <code class="md-code md-code-inline">[]</code> convenience shortcut, which is also the preferred approach. Arrays inherit from the <code class="md-code md-code-inline">Object</code> prototype and they haven&#x2019;t a special value for <code class="md-code md-code-inline">typeof</code>, they return <code class="md-code md-code-inline">&apos;object&apos;</code> too. Using <code class="md-code md-code-inline">[] instanceof Array</code>, however, returns true. That being said, there are also <em>Array-like objects</em> which complicate matters, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments" target="_blank">such as strings, or the <code class="md-code md-code-inline">arguments</code> object</a>. The <code class="md-code md-code-inline">arguments</code> object is not an instance of <code class="md-code md-code-inline">Array</code>, but it still has a <code class="md-code md-code-inline">length</code> property, and its values are indexed, so it can be looped like any Array.</p></div>
 

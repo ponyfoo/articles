@@ -1,8 +1,8 @@
 <h1>We don&#x2019;t want your Coffee</h1>
 
-<blockquote><p><em>An open letter to the <a href="http://coffeescript.org/" target="_blank">CoffeeScript</a> community.</em></p><p>You can follow the discussion on <a href="https://news.ycombinator.com/item?id=6461166" target="_blank">Hacker News</a>.</p> <p>This rant probably also holds true for <a href="http://www.typescriptlang.org/" target="_blank">TypeScript</a>, and similar. Heck, even <a href="http://kripken.github.io/mloc_emscripten_talk" target="_blank">&#x2026;</a></p></blockquote>
-
 <div><kbd>controversial</kbd> <kbd>politics</kbd> <kbd>coffeescript</kbd> <kbd>asmjs</kbd></div>
+
+<blockquote><p><em>An open letter to the <a href="http://coffeescript.org/" target="_blank">CoffeeScript</a> community.</em></p><p>You can follow the discussion on <a href="https://news.ycombinator.com/item?id=6461166" target="_blank">Hacker News</a>.</p> <p>This rant probably also holds true for <a href="http://www.typescriptlang.org/" target="_blank">TypeScript</a>, and similar. Heck, even <a href="http://kripken.github.io/mloc_emscripten_talk" target="_blank">&#x2026;</a></p></blockquote>
 
 <div><p><em>An open letter to the <a href="http://coffeescript.org/" target="_blank">CoffeeScript</a> community.</em></p></div>
 

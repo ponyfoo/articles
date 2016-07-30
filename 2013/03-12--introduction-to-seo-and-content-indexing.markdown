@@ -1,8 +1,8 @@
 <h1>Introduction to SEO and Content Indexing</h1>
 
-<blockquote><p>Just a few days ago, <a href="http://google.com/" target="_blank">Google</a> started indexing <a href="http://blog.ponyfoo.com/" target="_blank">this blog</a>, and it&#x2019;s <em>just starting to show up</em> in their search results. I wanted to go over the steps I took to make a <em>&#x2026;</em></p></blockquote>
-
 <div><kbd>seo</kbd> <kbd>ajax</kbd></div>
+
+<blockquote><p>Just a few days ago, <a href="http://google.com/" target="_blank">Google</a> started indexing <a href="http://blog.ponyfoo.com/" target="_blank">this blog</a>, and it&#x2019;s <em>just starting to show up</em> in their search results. I wanted to go over the steps I took to make a <em>&#x2026;</em></p></blockquote>
 
 <div><p>Just a few days ago, <a href="http://google.com/" target="_blank">Google</a> started indexing <a href="http://blog.ponyfoo.com/" target="_blank">this blog</a>, and it&#x2019;s <em>just starting to show up</em> in their search results. I wanted to go over the steps I took to make a <em>good impression</em> on them.</p></div>
 

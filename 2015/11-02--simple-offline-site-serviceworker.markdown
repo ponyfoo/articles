@@ -1,8 +1,8 @@
 <h1>Making a Simple Site Work Offline with ServiceWorker</h1>
 
-<blockquote><p>I&#x2019;ve been playing around with ServiceWorker a lot recently, so when Chris asked me to write an article about it I couldn&#x2019;t have been more thrilled. &#x2026;</p></blockquote>
-
 <div><kbd>serviceworker</kbd> <kbd>tutorial</kbd></div>
+
+<blockquote><p>I&#x2019;ve been playing around with ServiceWorker a lot recently, so when Chris asked me to write an article about it I couldn&#x2019;t have been more thrilled. &#x2026;</p></blockquote>
 
 <div><p>I&#x2019;ve been playing around with ServiceWorker a lot recently, so when Chris asked me to write an article about it I couldn&#x2019;t have been more thrilled. ServiceWorker is the most impactful modern web technology since AJAX. It lives inside the browser and it sits between your web pages and your application servers. Once installed and activated, a ServiceWorker can programmatically determine how to respond to requests for resources from your origin, even when the browser is offline. ServiceWorker can be used to power the so-called &#x201C;Offline-First&#x201D; web.</p></div>
 

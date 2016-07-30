@@ -1,8 +1,8 @@
 <h1>ES6 Arrow Functions in Depth</h1>
 
-<blockquote><p>The daily saga of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">es6-in-depth</a> articles continues. Today we&#x2019;ll be discussing Arrow Functions. In previous articles we&#x2019;ve covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a> and <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template &#x2026;</a></p></blockquote>
-
 <div><kbd>es6</kbd> <kbd>arrow-functions</kbd> <kbd>es6-in-depth</kbd></div>
+
+<blockquote><p>The daily saga of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">es6-in-depth</a> articles continues. Today we&#x2019;ll be discussing Arrow Functions. In previous articles we&#x2019;ve covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a> and <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template &#x2026;</a></p></blockquote>
 
 <div><p>The daily saga of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">es6-in-depth</a> articles continues. Today we&#x2019;ll be discussing Arrow Functions. In previous articles we&#x2019;ve covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a> and <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>. I strive to cover <em>all the things</em> when it comes to the ES6 feature-set &#x2013; and eventually we&#x2019;ll move onto ES7. I find that writing about these features makes it way easier for them to become <strong>engraved in my skull</strong> as well.</p></div>
 

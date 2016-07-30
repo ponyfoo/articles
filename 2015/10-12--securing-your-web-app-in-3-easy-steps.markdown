@@ -1,8 +1,8 @@
 <h1>Securing Your Web App in 3 Easy Steps</h1>
 
-<blockquote><p>I&#x2019;ve recently upgraded Pony Foo to use the <code>https</code> protocol, something I&#x2019;ve been meaning to do for a while. It&#x2019;s super easy to do so, and &#x2026;</p></blockquote>
-
 <div><kbd>https</kbd> <kbd>security</kbd> <kbd>web-apps</kbd> <kbd>cloudflare</kbd></div>
+
+<blockquote><p>I&#x2019;ve recently upgraded Pony Foo to use the <code>https</code> protocol, something I&#x2019;ve been meaning to do for a while. It&#x2019;s super easy to do so, and &#x2026;</p></blockquote>
 
 <div><p>I&#x2019;ve recently upgraded Pony Foo to use the <code class="md-code md-code-inline">https</code> protocol, something I&#x2019;ve been meaning to do for a while. It&#x2019;s super easy to do so, and here&#x2019;s a few simple steps you can take to secure your own apps. The procedure is quite agnostic when it comes to your hosting stack, and you should definitely implement <code class="md-code md-code-inline">https</code> on your own services as well!</p></div>
 

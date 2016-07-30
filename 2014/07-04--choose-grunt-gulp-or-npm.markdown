@@ -1,8 +1,8 @@
 <h1>Choose: Grunt, Gulp, or npm?</h1>
 
-<blockquote><p>Deciding on a technology is <em>always</em> hard. You don&#x2019;t want to make commitments you won&#x2019;t be able to back out of, but eventually you&#x2019;ll have to make a &#x2026;</p></blockquote>
-
 <div><kbd>gulp</kbd> <kbd>grunt</kbd> <kbd>npm</kbd> <kbd>npm-run</kbd></div>
+
+<blockquote><p>Deciding on a technology is <em>always</em> hard. You don&#x2019;t want to make commitments you won&#x2019;t be able to back out of, but eventually you&#x2019;ll have to make a &#x2026;</p></blockquote>
 
 <div><p>Deciding on a technology is <em>always</em> hard. You don&#x2019;t want to make commitments you won&#x2019;t be able to back out of, but eventually you&#x2019;ll have to make a choice and go for something that does what you need it to do. Committing to a build technology is no different in this regard: it&#x2019;s an important choice and you should treat it as such. Let&#x2019;s take <a href="http://gruntjs.com/" target="_blank">Grunt</a> for example.</p></div>
 

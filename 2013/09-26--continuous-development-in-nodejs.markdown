@@ -1,8 +1,8 @@
 <h1>Continuous Development in Node.js</h1>
 
-<blockquote><p>With <a href="http://gruntjs.com/" target="_blank">Grunt</a>, the JavaScript task runner, it&#x2019;s becoming <em>increasingly easy to tackle continuous development</em>. The goal is being able to work uninterruptedly in our &#x2026;</p></blockquote>
-
 <div><kbd>build</kbd> <kbd>nodejs</kbd> <kbd>grunt</kbd> <kbd>continuous-development</kbd> <kbd>unbox</kbd> <kbd>grunt-ec2</kbd></div>
+
+<blockquote><p>With <a href="http://gruntjs.com/" target="_blank">Grunt</a>, the JavaScript task runner, it&#x2019;s becoming <em>increasingly easy to tackle continuous development</em>. The goal is being able to work uninterruptedly in our &#x2026;</p></blockquote>
 
 <div><p>With <a href="http://gruntjs.com/" target="_blank">Grunt</a>, the JavaScript task runner, it&#x2019;s becoming <em>increasingly easy to tackle continuous development</em>. The goal is being able to work uninterruptedly in our code-base while developing. To this effect, there&#x2019;s quite a few things you could do.</p></div>
 

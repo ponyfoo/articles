@@ -1,8 +1,8 @@
 <h1>Taunus: Micro Isomorphic MVC Framework</h1>
 
-<blockquote><p>I&#x2019;ve mentioned <a href="https://github.com/bevacqua/taunus" target="_blank">Taunus</a> in <a href="https://ponyfoo.com/2014/05/16/modularizing-your-front-end">one of my latest articles</a>. I believe Taunus <em>is interesting</em>, not because it introduces innovative paradigm shifts or the like, but rather, &#x2026;</p></blockquote>
-
 <div><kbd>isomorphic</kbd> <kbd>taunus</kbd> <kbd>browserify</kbd> <kbd>npm-run</kbd></div>
+
+<blockquote><p>I&#x2019;ve mentioned <a href="https://github.com/bevacqua/taunus" target="_blank">Taunus</a> in <a href="https://ponyfoo.com/2014/05/16/modularizing-your-front-end">one of my latest articles</a>. I believe Taunus <em>is interesting</em>, not because it introduces innovative paradigm shifts or the like, but rather, &#x2026;</p></blockquote>
 
 <div><p>I&#x2019;ve mentioned <a href="https://github.com/bevacqua/taunus" target="_blank">Taunus</a> in <a href="https://ponyfoo.com/2014/05/16/modularizing-your-front-end">one of my latest articles</a>. I believe Taunus <em>is interesting</em>, not because it introduces innovative paradigm shifts or the like, but rather, because it takes a proven concept, and iterates upon it. Bluntly put, Taunus builds upon the design of <a href="https://github.com/rendrjs/rendr" target="_blank">Rendr</a>. By all accounts, Rendr was amazing. I read a lot about Rendr before even trying it out. I was really excited about it. What could be wrong? I mean, you had convention over configuration, shared rendering, and reused modules. If you tried either Ruby on Rails or <em><a href="http://asp.net/" target="_blank">ASP.NET</a> MVC 3+</em>, both of those are pretty conventional as well. Eventually, I had to use Rendr in order to determine if it was <em>&#x201C;good enough&#x201D;</em> to recommend it in <a href="http://bevacqua.io/buildfirst" target="_blank">JavaScript Application Design</a>, as the &#x201C;go-to&#x201D; approach for shared-rendering in large scale applications.</p></div>
 

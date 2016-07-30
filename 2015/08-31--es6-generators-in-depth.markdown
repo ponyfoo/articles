@@ -1,8 +1,8 @@
 <h1>ES6 Generators in Depth</h1>
 
-<blockquote><p>This is <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>, the longest-running article series in the history of Pony Foo! Trapped in the ES5 bubble? Welcome! Let me get you started with <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">&#x2026;</a></p></blockquote>
-
 <div><kbd>es6</kbd> <kbd>generators</kbd> <kbd>iterators</kbd> <kbd>es6-in-depth</kbd></div>
+
+<blockquote><p>This is <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>, the longest-running article series in the history of Pony Foo! Trapped in the ES5 bubble? Welcome! Let me get you started with <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">&#x2026;</a></p></blockquote>
 
 <div><p>This is <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>, the longest-running article series in the history of Pony Foo! Trapped in the ES5 bubble? Welcome! Let me get you started with <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, the <a href="https://ponyfoo.com/articles/es6-spread-and-butter-in-depth">spread operator and rest parameters</a>, improvements coming to <a href="https://ponyfoo.com/articles/es6-object-literal-features-in-depth">object literals</a>, the new <a href="https://ponyfoo.com/articles/es6-classes-in-depth"><em>classes</em></a> sugar on top of prototypes, <a href="https://ponyfoo.com/articles/es6-let-const-and-temporal-dead-zone-in-depth"><code class="md-code md-code-inline">let</code>, <code class="md-code md-code-inline">const</code>, and the <em>&#x201C;Temporal Dead Zone&#x201D;</em></a>, and <a href="https://ponyfoo.com/articles/es6-iterators-in-depth">Iterators</a>.</p></div>
 

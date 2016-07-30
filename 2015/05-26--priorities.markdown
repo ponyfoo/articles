@@ -1,8 +1,8 @@
 <h1>Priorities</h1>
 
-<blockquote><p>Peter-Paul Koch <a href="https://twitter.com/ppk" target="_blank">(@ppk)</a> recently wrote <a href="http://www.quirksmode.org/blog/archives/2015/05/tools_dont_solv.html" target="_blank">an article</a> that generated noticeable turmoil. One of the best responses was Jeremy Keith <a href="https://twitter.com/adactio" target="_blank">(@adactio)</a>&apos;s article, <a href="https://adactio.com/journal/8956" target="_blank">&#x2026;</a></p></blockquote>
-
 <div><kbd>performance</kbd> <kbd>rant</kbd> <kbd>perfschool</kbd></div>
+
+<blockquote><p>Peter-Paul Koch <a href="https://twitter.com/ppk" target="_blank">(@ppk)</a> recently wrote <a href="http://www.quirksmode.org/blog/archives/2015/05/tools_dont_solv.html" target="_blank">an article</a> that generated noticeable turmoil. One of the best responses was Jeremy Keith <a href="https://twitter.com/adactio" target="_blank">(@adactio)</a>&apos;s article, <a href="https://adactio.com/journal/8956" target="_blank">&#x2026;</a></p></blockquote>
 
 <div><p>Peter-Paul Koch <a href="https://twitter.com/ppk" target="_blank">(@ppk)</a> recently wrote <a href="http://www.quirksmode.org/blog/archives/2015/05/tools_dont_solv.html" target="_blank">an article</a> that generated noticeable turmoil. One of the best responses was Jeremy Keith <a href="https://twitter.com/adactio" target="_blank">(@adactio)</a>&apos;s article, <a href="https://adactio.com/journal/8956" target="_blank">&#x201C;Instantiation&#x201D;</a>, where he graced us with a flurry of responses from different bloggers, as well as a timeline and his analysis of the situation as a whole.</p></div>
 

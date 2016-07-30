@@ -1,8 +1,8 @@
 <h1>Where does this keyword come from?</h1>
 
-<blockquote><p>Working on the latest chapter for my upcoming book on <a href="http://bevacqua.io/buildfirst" target="_blank">JavaScript Application Design</a>, I&#x2019;m writing about how scoping works. I want to share a particular code sample &#x2026;</p></blockquote>
-
 <div><kbd>js</kbd> <kbd>scoping</kbd> <kbd>best-practices</kbd> <kbd>this</kbd></div>
+
+<blockquote><p>Working on the latest chapter for my upcoming book on <a href="http://bevacqua.io/buildfirst" target="_blank">JavaScript Application Design</a>, I&#x2019;m writing about how scoping works. I want to share a particular code sample &#x2026;</p></blockquote>
 
 <div><p>Working on the latest chapter for my upcoming book on <a href="http://bevacqua.io/buildfirst" target="_blank">JavaScript Application Design</a>, I&#x2019;m writing about how scoping works. I want to share a particular code sample which I hope will bring some clarity to how <code class="md-code md-code-inline">this</code> works. It&#x2019;s not all dark magic, learning about <code class="md-code md-code-inline">this</code> can be <em>tremendously helpful</em> to your development as a JavaScript programmer.</p></div>
 

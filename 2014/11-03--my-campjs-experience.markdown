@@ -1,8 +1,8 @@
 <h1>My CampJS Experience</h1>
 
-<blockquote><p>I was <em>never really the camping kind of guy</em>. Sounds like the perfect opportunity to collect kindling, start a bonfire, set up a tent, sleep in a bedroll, <strong>not have &#x2026;</strong></p></blockquote>
-
 <div><kbd>campjs</kbd> <kbd>speaking</kbd></div>
+
+<blockquote><p>I was <em>never really the camping kind of guy</em>. Sounds like the perfect opportunity to collect kindling, start a bonfire, set up a tent, sleep in a bedroll, <strong>not have &#x2026;</strong></p></blockquote>
 
 <div><p>I was <em>never really the camping kind of guy</em>. Sounds like the perfect opportunity to collect kindling, start a bonfire, set up a tent, sleep in a bedroll, <strong>not have Internet access</strong>, eat hot dogs day and night, feel cold and miserable and get bitten by all sorts of bugs, right? &#x2014; overall not my mental picture for <em>&#x201C;having fun&#x201D;</em>. Last weekend, though, I attended <a href="http://campjs.com/" target="_blank">CampJS</a>, and it changed my perspective on this kind of things.</p></div>
 

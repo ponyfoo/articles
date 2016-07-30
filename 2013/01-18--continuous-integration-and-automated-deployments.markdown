@@ -1,8 +1,8 @@
 <h1>Continuous Integration, and Automated Deployments</h1>
 
-<blockquote><p>In the <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">next post</a> I&#x2019;ll get back to the meat of how I&#x2019;m making progress with the blog application. This time however, I wanted to deviate a little, and talk &#x2026;</p></blockquote>
-
 <div><kbd>build</kbd></div>
+
+<blockquote><p>In the <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">next post</a> I&#x2019;ll get back to the meat of how I&#x2019;m making progress with the blog application. This time however, I wanted to deviate a little, and talk &#x2026;</p></blockquote>
 
 <div><p>In the <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">next post</a> I&#x2019;ll get back to the meat of how I&#x2019;m making progress with the blog application. This time however, I wanted to deviate a little, and talk about <a href="https://travis-ci.org/" target="_blank">Continuous Integration</a>, and <strong>automated build processes</strong>, the like of which you can achieve with <strong>PaaS services</strong> (also known as <a href="http://en.wikipedia.org/wiki/Platform_as_a_service" target="_blank">Platform as a Service</a>), such as <a href="https://appharbor.com/" target="_blank">AppHarbor</a>, <a href="http://www.heroku.com/" target="_blank">Heroku</a>, and many others.</p></div>
 

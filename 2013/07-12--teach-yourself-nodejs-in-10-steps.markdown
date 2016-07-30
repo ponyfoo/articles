@@ -1,8 +1,8 @@
 <h1>Teach Yourself Node.JS in 10 Steps</h1>
 
-<blockquote><p>I&#x2019;m not sure anyone needs convincing that <strong>Node.JS is freaking awesome</strong>, little has been said otherwise. Many of the people reading this blog are <em>already &#x2026;</em></p></blockquote>
-
 <div><kbd>nodejs</kbd> <kbd>learning</kbd></div>
+
+<blockquote><p>I&#x2019;m not sure anyone needs convincing that <strong>Node.JS is freaking awesome</strong>, little has been said otherwise. Many of the people reading this blog are <em>already &#x2026;</em></p></blockquote>
 
 <div><p>I&#x2019;m not sure anyone needs convincing that <strong>Node.JS is freaking awesome</strong>, little has been said otherwise. Many of the people reading this blog are <em>already experienced Node developers</em>, but maybe we could help newcomers ramp up as fast as the technology itself is ramping up.</p></div>
 

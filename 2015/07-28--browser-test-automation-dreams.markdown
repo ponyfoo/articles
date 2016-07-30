@@ -1,8 +1,8 @@
 <h1>Dream of Browser Test Automation?</h1>
 
-<blockquote><p>Browser testing has been a pain for a decade now. The landscape is showing a lot of promise nowadays, and I wanted to share the approach to client-side testing &#x2026;</p></blockquote>
-
 <div><kbd>tape</kbd> <kbd>automation</kbd> <kbd>browser-testing</kbd> <kbd>build</kbd></div>
+
+<blockquote><p>Browser testing has been a pain for a decade now. The landscape is showing a lot of promise nowadays, and I wanted to share the approach to client-side testing &#x2026;</p></blockquote>
 
 <div><p>Browser testing has been a pain for a decade now. The landscape is showing a lot of promise nowadays, and I wanted to share the approach to client-side testing I&#x2019;ve taken with <a href="https://github.com/bevacqua/dragula" target="_blank"><code class="md-code md-code-inline">dragula</code></a>. In this article, you&#x2019;ll see <em>what&#x2019;s so wonderful about Tape</em>, why TAP is the future of browser testing, and how you can leverage it to the fullest in both development flows and continuous integration environments such as <a href="https://travis-ci.org/bevacqua/dragula" target="_blank">Travis CI</a>.</p></div>
 

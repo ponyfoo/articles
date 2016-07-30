@@ -1,8 +1,8 @@
 <h1>ES6 Classes in Depth</h1>
 
-<blockquote><p>Welcome to <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>. Are you new here? You might want to learn about <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, the <a href="https://ponyfoo.com/articles/es6-spread-and-butter-in-depth">spread operator and rest parameters</a>, or <a href="https://ponyfoo.com/articles/es6-object-literal-features-in-depth">&#x2026;</a></p></blockquote>
-
 <div><kbd>es6</kbd> <kbd>classes</kbd> <kbd>es6-in-depth</kbd></div>
+
+<blockquote><p>Welcome to <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>. Are you new here? You might want to learn about <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, the <a href="https://ponyfoo.com/articles/es6-spread-and-butter-in-depth">spread operator and rest parameters</a>, or <a href="https://ponyfoo.com/articles/es6-object-literal-features-in-depth">&#x2026;</a></p></blockquote>
 
 <div><p>Welcome to <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>. Are you new here? You might want to learn about <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, the <a href="https://ponyfoo.com/articles/es6-spread-and-butter-in-depth">spread operator and rest parameters</a>, or <a href="https://ponyfoo.com/articles/es6-object-literal-features-in-depth">object literal features in ES6</a>. Today is going to be about <em>&#x201C;classes&#x201D;</em> in ES6.</p></div>
 

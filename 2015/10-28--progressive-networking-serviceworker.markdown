@@ -1,8 +1,8 @@
 <h1>ServiceWorker and Progressive Networking</h1>
 
-<blockquote><p>I&#x2019;ve been toying with <a href="https://ponyfoo.com/articles/serviceworker-revolution" aria-label="ServiceWorker: Revolution of the Web Platform on Pony Foo"><code>ServiceWorker</code></a> for a while. The single most complicated issue when it comes to <code>ServiceWorker</code> has been dealing with caching in a &#x2026;</p></blockquote>
-
 <div><kbd>serviceworker</kbd> <kbd>progressive-networking</kbd></div>
+
+<blockquote><p>I&#x2019;ve been toying with <a href="https://ponyfoo.com/articles/serviceworker-revolution" aria-label="ServiceWorker: Revolution of the Web Platform on Pony Foo"><code>ServiceWorker</code></a> for a while. The single most complicated issue when it comes to <code>ServiceWorker</code> has been dealing with caching in a &#x2026;</p></blockquote>
 
 <div><p>I&#x2019;ve been toying with <a href="https://ponyfoo.com/articles/serviceworker-revolution" aria-label="ServiceWorker: Revolution of the Web Platform on Pony Foo"><code class="md-code md-code-inline">ServiceWorker</code></a> for a while. The single most complicated issue when it comes to <code class="md-code md-code-inline">ServiceWorker</code> has been dealing with caching in a straightforward way. In <a href="https://ponyfoo.com/articles/serviceworker-revolution" aria-label="ServiceWorker: Revolution of the Web Platform on Pony Foo">my previous article</a> &#x2013; an introduction to <code class="md-code md-code-inline">ServiceWorker</code> &#x2013; I wrote about a few different strategies: hitting the network first, hitting the cache first, and hitting the cache but going to the network nevertheless to get <em>&#x201C;eventually fresh&#x201D;</em> content. The last one I mentioned was hitting the cache, going to the network nevertheless, and somehow using <code class="md-code md-code-inline">postMessage</code> to relay updates back to web pages showing stale content. In this article, we&#x2019;ll explore how to communicate from a <code class="md-code md-code-inline">ServiceWorker</code> to a web page and back.</p></div>
 

@@ -1,8 +1,8 @@
 <h1>Understanding JavaScript&#x2019;s async await</h1>
 
-<blockquote><p>Earlier this week we took a look at new <a href="https://ponyfoo.com/articles/es2016-features-and-ecmascript-as-a-living-standard" aria-label="ES2016 Features &amp; ECMAScript as a Living Standard">features coming in ES2016</a>. Today we&#x2019;ll learn about <code>async</code> / <code>await</code>.</p><p>The <code>async</code> / <code>await</code> feature didn&#x2019;t make the cut for &#x2026;</p></blockquote>
-
 <div><kbd>async-await</kbd> <kbd>generators</kbd> <kbd>promises</kbd> <kbd>es2017</kbd></div>
+
+<blockquote><p>Earlier this week we took a look at new <a href="https://ponyfoo.com/articles/es2016-features-and-ecmascript-as-a-living-standard" aria-label="ES2016 Features &amp; ECMAScript as a Living Standard">features coming in ES2016</a>. Today we&#x2019;ll learn about <code>async</code> / <code>await</code>.</p><p>The <code>async</code> / <code>await</code> feature didn&#x2019;t make the cut for &#x2026;</p></blockquote>
 
 <div><p>Earlier this week we took a look at new <a href="https://ponyfoo.com/articles/es2016-features-and-ecmascript-as-a-living-standard" aria-label="ES2016 Features &amp; ECMAScript as a Living Standard">features coming in ES2016</a>. Today we&#x2019;ll learn about <code class="md-code md-code-inline">async</code> / <code class="md-code md-code-inline">await</code>.</p></div>
 

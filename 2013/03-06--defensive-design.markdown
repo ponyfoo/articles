@@ -1,8 +1,8 @@
 <h1>Defensive Design</h1>
 
-<blockquote><p>I&#x2019;ve recently read the book <a href="http://www.amazon.com/dp/073571410X" target="_blank">Defensive Design for the Web</a>, and I felt compelled to write about it here. I guess it&#x2019;s a good starting point for writing my &#x2026;</p></blockquote>
-
 <div><kbd>ux</kbd> <kbd>front-end</kbd> <kbd>book-review</kbd></div>
+
+<blockquote><p>I&#x2019;ve recently read the book <a href="http://www.amazon.com/dp/073571410X" target="_blank">Defensive Design for the Web</a>, and I felt compelled to write about it here. I guess it&#x2019;s a good starting point for writing my &#x2026;</p></blockquote>
 
 <div><p>I&#x2019;ve recently read the book <a href="http://www.amazon.com/dp/073571410X" target="_blank">Defensive Design for the Web</a>, and I felt compelled to write about it here. I guess it&#x2019;s a good starting point for writing my thoughts about <em>designing a reasonable user experience</em>.</p></div>
 

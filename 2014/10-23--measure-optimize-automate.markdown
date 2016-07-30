@@ -1,8 +1,8 @@
 <h1>Measure, Optimize, Automate</h1>
 
-<blockquote><p>We&#x2019;ve already covered the different techniques you could use to <a href="https://ponyfoo.com/articles/critical-path-performance-optimization">vastly improve the performance of your front-end applications</a>, their page load time, and the &#x2026;</p></blockquote>
-
 <div><kbd>measure</kbd> <kbd>performance</kbd> <kbd>build</kbd> <kbd>automation</kbd></div>
+
+<blockquote><p>We&#x2019;ve already covered the different techniques you could use to <a href="https://ponyfoo.com/articles/critical-path-performance-optimization">vastly improve the performance of your front-end applications</a>, their page load time, and the &#x2026;</p></blockquote>
 
 <div><p>We&#x2019;ve already covered the different techniques you could use to <a href="https://ponyfoo.com/articles/critical-path-performance-optimization">vastly improve the performance of your front-end applications</a>, their page load time, and the perceived performance <em>(determined by the moment when the human can start interacting with your site)</em>. Although slightly off topic, we&#x2019;ve also discussed <a href="https://ponyfoo.com/articles/adjusting-ux-for-humans">how performance impacts UX</a>. In this article, we&#x2019;ll focus on <strong>measuring performance, understanding those measurements, and automating the process</strong>.</p></div>
 

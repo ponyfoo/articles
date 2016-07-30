@@ -1,8 +1,8 @@
 <h1>How To Avoid Object.prototype Pollution</h1>
 
-<blockquote><p>Some times you just need to extend <code>Array</code> objects. Think of the possibilities. Dream of how <strong>much</strong> <strong>more</strong> <strong>awesome</strong> jQuery would&#x2019;ve been if it provided all of the <code>Array</code> &#x2026;</p></blockquote>
-
 <div><kbd>open-source</kbd> <kbd>poser</kbd> <kbd>iframe</kbd> <kbd>browserify</kbd></div>
+
+<blockquote><p>Some times you just need to extend <code>Array</code> objects. Think of the possibilities. Dream of how <strong>much</strong> <strong>more</strong> <strong>awesome</strong> jQuery would&#x2019;ve been if it provided all of the <code>Array</code> &#x2026;</p></blockquote>
 
 <div><p>Some times you just need to extend <code class="md-code md-code-inline">Array</code> objects. Think of the possibilities. Dream of how <strong>much</strong> <strong>more</strong> <strong>awesome</strong> jQuery would&#x2019;ve been if it provided all of the <code class="md-code md-code-inline">Array</code> methods in its <strong>god-object</strong>, instead of re-inventing the wheel. Think how awesome it&#x2019;d be if the DOM itself provided <code class="md-code md-code-inline">Array</code> objects everywhere, and not just in some places, and not weird <code class="md-code md-code-inline">NodeList</code> objects.</p></div>
 

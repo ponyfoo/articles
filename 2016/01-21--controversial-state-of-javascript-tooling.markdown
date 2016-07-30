@@ -1,8 +1,8 @@
 <h1>The Controversial State of JavaScript Tooling</h1>
 
-<blockquote><p>There have been many different blog posts on the <em>&#x201C;State of the Web&#x201D;</em>, problems people face around tooling, and similar-style musings of late. This article &#x2026;</p></blockquote>
-
 <div><kbd>state-of-the-web</kbd> <kbd>hypermodularity</kbd></div>
+
+<blockquote><p>There have been many different blog posts on the <em>&#x201C;State of the Web&#x201D;</em>, problems people face around tooling, and similar-style musings of late. This article &#x2026;</p></blockquote>
 
 <div><p>There have been many different blog posts on the <em>&#x201C;State of the Web&#x201D;</em>, problems people face around tooling, and similar-style musings of late. This article is about summarizing my thoughts on recent events. Rather than yet another rant about the state of web development, this piece aims to pour some thought into what we can do to fix the situation we find ourselves in.</p></div>
 

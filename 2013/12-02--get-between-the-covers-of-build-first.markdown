@@ -1,8 +1,8 @@
 <h1>Get Between the Covers of Build First</h1>
 
-<blockquote><p>A couple of weeks ago, my book on <a href="http://bevacqua.io/buildfirst" target="_blank">JavaScript Application Design</a> and front-end processes <em>(which I began writing a few months ago)</em> finally went into the first review &#x2026;</p></blockquote>
-
 <div><kbd>buildfirst</kbd> <kbd>book</kbd> <kbd>recommended-reading</kbd> <kbd>build</kbd> <kbd>front-end</kbd></div>
+
+<blockquote><p>A couple of weeks ago, my book on <a href="http://bevacqua.io/buildfirst" target="_blank">JavaScript Application Design</a> and front-end processes <em>(which I began writing a few months ago)</em> finally went into the first review &#x2026;</p></blockquote>
 
 <div><p>A couple of weeks ago, my book on <a href="http://bevacqua.io/buildfirst" target="_blank">JavaScript Application Design</a> and front-end processes <em>(which I began writing a few months ago)</em> finally went into the first review stage. Yesterday, <a href="http://bevacqua.io/bf/book" target="_blank">an early access edition</a> was made available by <a href="http://manning.com/" target="_blank">Manning</a>, this version contains the first 3 chapters, and gives you access to the entire book, which you&#x2019;ll be able to download chapter by chapter, as they get released. Feedback <a href="https://news.ycombinator.com/item?id=6808229" target="_blank">has been pretty good so far</a>.</p></div>
 

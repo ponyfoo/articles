@@ -1,8 +1,8 @@
 <h1>Monitoring Production Grade Node Applications</h1>
 
-<blockquote><p>Catching, or even <em>tracing</em> errors in Node applications can be <em>tricky sometimes</em>. I wanted to share a few practices that can help you <strong>keep your application up in most &#x2026;</strong></p></blockquote>
-
 <div><kbd>nodejs</kbd> <kbd>monitor</kbd> <kbd>performance</kbd></div>
+
+<blockquote><p>Catching, or even <em>tracing</em> errors in Node applications can be <em>tricky sometimes</em>. I wanted to share a few practices that can help you <strong>keep your application up in most &#x2026;</strong></p></blockquote>
 
 <div><p>Catching, or even <em>tracing</em> errors in Node applications can be <em>tricky sometimes</em>. I wanted to share a few practices that can help you <strong>keep your application up in most scenarios</strong>.</p></div>
 

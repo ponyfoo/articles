@@ -1,8 +1,8 @@
 <h1>A Less Convoluted Event Emitter Implementation</h1>
 
-<blockquote><p>I believe that the event emitter implementation in Node could be made way better by providing a way to access the functionality directly without using prototypes. This &#x2026;</p></blockquote>
-
 <div><kbd>js</kbd> <kbd>nodejs</kbd> <kbd>event-emitter</kbd> <kbd>pattern</kbd></div>
+
+<blockquote><p>I believe that the event emitter implementation in Node could be made way better by providing a way to access the functionality directly without using prototypes. This &#x2026;</p></blockquote>
 
 <div><p>I believe that the event emitter implementation in Node could be made way better by providing a way to access the functionality directly without using prototypes. This would allow to simply extend any object, such as <code class="md-code md-code-inline">{}</code>, or <code class="md-code md-code-inline">{ pony: &apos;foo&apos; }</code>, with event emitting capabilities. Prototypes enforce limitations for little gain, and that&#x2019;s what we avoid by going around it and merely adding methods on existing objects, without any prototypal inheritance going on.</p></div>
 

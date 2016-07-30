@@ -1,8 +1,8 @@
 <h1>The Progressive Web</h1>
 
-<blockquote><p>I&#x2019;ve blogged very little about <a href="https://github.com/taunus/taunus" target="_blank">Taunus</a> since I first released it, <a href="https://ponyfoo.com/articles/taunus-micro-isomorphic-mvc-framework">roughly a year ago</a>. Back then, <em>it only powered <a href="https://ponyfoo.com/">ponyfoo.com</a></em>, but now there&#x2019;s a few cases in &#x2026;</p></blockquote>
-
 <div><kbd>progressive-enhancement</kbd> <kbd>taunus</kbd> <kbd>server-first</kbd> <kbd>browserify</kbd></div>
+
+<blockquote><p>I&#x2019;ve blogged very little about <a href="https://github.com/taunus/taunus" target="_blank">Taunus</a> since I first released it, <a href="https://ponyfoo.com/articles/taunus-micro-isomorphic-mvc-framework">roughly a year ago</a>. Back then, <em>it only powered <a href="https://ponyfoo.com/">ponyfoo.com</a></em>, but now there&#x2019;s a few cases in &#x2026;</p></blockquote>
 
 <div><p>I&#x2019;ve blogged very little about <a href="https://github.com/taunus/taunus" target="_blank">Taunus</a> since I first released it, <a href="https://ponyfoo.com/articles/taunus-micro-isomorphic-mvc-framework">roughly a year ago</a>. Back then, <em>it only powered <a href="https://ponyfoo.com/">ponyfoo.com</a></em>, but now there&#x2019;s a few cases in the wild where it&#x2019;s being used, and I even got to do some consulting in a project where they&#x2019;re using Taunus! In the year since its release, it has had <a href="https://www.npmjs.com/package/taunus" target="_blank">a whooping 174 releases</a>, but not a whole lot has changed, and its API has remained stable for the most part. Its feature-set grew quite a bit, although it remains fairly light-weight at <code class="md-code md-code-inline">18.8kB</code> after gzip and minification. Today, it&#x2019;s able to figure out how to <a href="https://github.com/taunus/formium" target="_blank">submit forms via AJAX automatically</a>, as long as they already work as plain HTML, and it has support for <em>WebSockets</em> <a href="https://github.com/taunus/skyrocket" target="_blank">via a plugin</a>.</p></div>
 

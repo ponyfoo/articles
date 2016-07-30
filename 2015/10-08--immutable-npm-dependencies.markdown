@@ -1,8 +1,8 @@
 <h1>Keeping Your npm Dependencies Immutable</h1>
 
-<blockquote><p>I&#x2019;ve been bitten a few times by dependencies using semver ranges such as <code>^1.0.1</code> where the dependency introduced a &#x201C;non-breaking&#x201D; change that ended &#x2026;</p></blockquote>
-
 <div><kbd>semver</kbd> <kbd>immutability</kbd> <kbd>npm</kbd></div>
+
+<blockquote><p>I&#x2019;ve been bitten a few times by dependencies using semver ranges such as <code>^1.0.1</code> where the dependency introduced a &#x201C;non-breaking&#x201D; change that ended &#x2026;</p></blockquote>
 
 <div><p>I&#x2019;ve been bitten a few times by dependencies using semver ranges such as <code class="md-code md-code-inline">^1.0.1</code> where the dependency introduced a &#x201C;non-breaking&#x201D; change that ended up actually breaking somewhere in the dependency chain because an undocumented feature was being used, a workaround stopped working, and similar undesirable situations.</p></div>
 

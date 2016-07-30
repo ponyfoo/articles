@@ -1,8 +1,8 @@
 <h1>NodeConf hits the ground running in Latin America</h1>
 
-<blockquote><p>NodeConf Argentina is one of the first international Node.js conferences taking place in Latin American territory, and a not-for-profit community effort to push Node.js &#x2026;</p></blockquote>
-
 <div><kbd>nodeconf</kbd> <kbd>conference</kbd> <kbd>announcement</kbd></div>
+
+<blockquote><p>NodeConf Argentina is one of the first international Node.js conferences taking place in Latin American territory, and a not-for-profit community effort to push Node.js &#x2026;</p></blockquote>
 
 <div><p>NodeConf Argentina is one of the first international Node.js conferences taking place in Latin American territory, and a not-for-profit community effort to push Node.js forward in Argentina and Latin America as a whole.</p></div>
 

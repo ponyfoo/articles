@@ -1,8 +1,8 @@
 <h1>CSS For Dummies</h1>
 
-<blockquote><p>Web design today is hard to get right. I&#x2019;ve been meaning to talk about front-end design for a while, but I couldn&#x2019;t get the subject <em>quite right</em>. Seeing how &#x2026;</p></blockquote>
-
 <div><kbd>css</kbd> <kbd>front-end</kbd> <kbd>learning</kbd></div>
+
+<blockquote><p>Web design today is hard to get right. I&#x2019;ve been meaning to talk about front-end design for a while, but I couldn&#x2019;t get the subject <em>quite right</em>. Seeing how &#x2026;</p></blockquote>
 
 <div><p>Web design today is hard to get right. I&#x2019;ve been meaning to talk about front-end design for a while, but I couldn&#x2019;t get the subject <em>quite right</em>. Seeing how detailing the <a href="https://ponyfoo.com/2013/06/10/uncovering-the-native-dom-api">underlying browser technology</a> in JavaScript, I figured I&#x2019;d do the same for <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank">CSS</a>.</p></div>
 

@@ -1,8 +1,8 @@
 <h1>Asset Management in Node</h1>
 
-<blockquote><p>Client-side asset management reveals a series of issues with <strong>Node.JS</strong> and <strong>npm</strong> today:</p><ul> <li>Node.JS is just a few years old (it was born in <em>2009</em>)</li> <li>Some areas, such as client-side &#x2026;</li></ul></blockquote>
-
 <div><kbd>ponyfoo</kbd> <kbd>nodejs</kbd> <kbd>npm</kbd> <kbd>assetify</kbd></div>
+
+<blockquote><p>Client-side asset management reveals a series of issues with <strong>Node.JS</strong> and <strong>npm</strong> today:</p><ul> <li>Node.JS is just a few years old (it was born in <em>2009</em>)</li> <li>Some areas, such as client-side &#x2026;</li></ul></blockquote>
 
 <div><p>Client-side asset management reveals a series of issues with <strong>Node.JS</strong> and <strong>npm</strong> today:</p></div>
 

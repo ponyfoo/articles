@@ -1,8 +1,8 @@
 <h1>Blogging and OSS &#x2014; Food for Thought</h1>
 
-<blockquote><p>I&#x2019;ve been toying with the idea of releasing short-form &#x201C;thoughts&#x201D;, in addition to the usual longer-form articles in the blog. The <strong>goal is to publish &#x2026;</strong></p></blockquote>
-
 <div><kbd>food-for-thought</kbd> <kbd>productivity</kbd> <kbd>community</kbd> <kbd>ask-me-anything</kbd></div>
+
+<blockquote><p>I&#x2019;ve been toying with the idea of releasing short-form &#x201C;thoughts&#x201D;, in addition to the usual longer-form articles in the blog. The <strong>goal is to publish &#x2026;</strong></p></blockquote>
 
 <div><p>I&#x2019;ve been toying with the idea of releasing short-form &#x201C;thoughts&#x201D;, in addition to the usual longer-form articles in the blog. The <strong>goal is to publish one of these every weekday</strong>. I&#x2019;d love to know what you think. You may send your questions to <a href="mailto:thoughts@ponyfoo.com">thoughts@ponyfoo.com</a>. I&#x2019;ll try to answer them over email and I <em>may publish them here, with your approval</em>. I&#x2019;m also going to be writing thoughts about the <mark class="md-mark">current state of front-end development</mark>, and maybe commenting on other people&#x2019;s articles. You can use the form to the right <em>(near the bottom in mobile)</em> to <mark class="md-mark">subscribe via email</mark>.</p></div>
 

@@ -1,9 +1,9 @@
 <h1>ECMAScript String Padding</h1>
 
+<div><kbd>ecmascript</kbd> <kbd>string</kbd> <kbd>proposal-draft</kbd></div>
+
 <blockquote><p>A first look into <code>.padStart</code> and <code>.padEnd</code> string methods drafted as proposals for implementation in ECMAScript.</p>
 </blockquote>
-
-<div><kbd>ecmascript</kbd> <kbd>string</kbd> <kbd>proposal-draft</kbd></div>
 
 <div><p>A string padding proposal for ECMAScript is <a href="https://github.com/tc39/ecma262" target="_blank" aria-label="tc39/ecma262 on GitHub">at stage 3</a>. Let&#x2019;s dig into what it entails.</p></div>
 

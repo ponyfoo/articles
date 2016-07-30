@@ -1,8 +1,8 @@
 <h1>Server-First Apps are a Good Idea</h1>
 
-<blockquote><p>Earlier today, <a href="http://tomdale.net/2015/02/youre-missing-the-point-of-server-side-rendered-javascript-apps/" target="_blank">Tom Dale published an article</a> sharing his views on the whole &#x201C;server-side vs client-side rendered apps&#x201D; debacle. I was tempted to call this &#x2026;</p></blockquote>
-
 <div><kbd>server-first</kbd> <kbd>taunus</kbd> <kbd>ember</kbd> <kbd>react</kbd> <kbd>angular</kbd> <kbd>progressive-enhancement</kbd></div>
+
+<blockquote><p>Earlier today, <a href="http://tomdale.net/2015/02/youre-missing-the-point-of-server-side-rendered-javascript-apps/" target="_blank">Tom Dale published an article</a> sharing his views on the whole &#x201C;server-side vs client-side rendered apps&#x201D; debacle. I was tempted to call this &#x2026;</p></blockquote>
 
 <div><p>Earlier today, <a href="http://tomdale.net/2015/02/youre-missing-the-point-of-server-side-rendered-javascript-apps/" target="_blank">Tom Dale published an article</a> sharing his views on the whole &#x201C;server-side vs client-side rendered apps&#x201D; debacle. I was tempted to call this article <strong>No. You&#x2019;re Missing the Point of Server-Side Rendered JavaScript Apps!</strong>, but that would&#x2019;ve been way too long, <em>and kind of childish</em>. I agree with the first sentence in his article, where he states that there&#x2019;s a lot of confusion about <em>&#x201C;the push to rendering JavaScript apps on the server-side&#x201D;</em>. There were many other parts of the article I agreed with, and a few I didn&#x2019;t agree so much with. There&#x2019;s also some points which weren&#x2019;t discussed but I&#x2019;d like to raise myself.</p></div>
 
