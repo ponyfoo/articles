@@ -1,0 +1,11 @@
+{
+  "id": "56c1368277b23f2d0335cee8",
+  "author": "543d222f4683586910034197",
+  "title": "Proposal: \"Statements as Expressions\" using `do`",
+  "slug": "proposal-statements-as-expressions-using-do",
+  "tags": [
+    "ecmascript",
+    "do-expressions",
+    "proposal-draft"
+  ]
+}

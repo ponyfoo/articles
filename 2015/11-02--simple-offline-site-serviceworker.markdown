@@ -1,0 +1,187 @@
+<div><blockquote>
+  <h1>Making a Simple Site Work Offline with ServiceWorker</h1>
+  <div><p>I&#x2019;ve been playing around with ServiceWorker a lot recently, so when Chris asked me to write an article about it I couldn&#x2019;t have been more thrilled. &#x2026;</p></div>
+</blockquote></div>
+
+<div><p>I&#x2019;ve been playing around with ServiceWorker a lot recently, so when Chris asked me to write an article about it I couldn&#x2019;t have been more thrilled. ServiceWorker is the most impactful modern web technology since AJAX. It lives inside the browser and it sits between your web pages and your application servers. Once installed and activated, a ServiceWorker can programmatically determine how to respond to requests for resources from your origin, even when the browser is offline. ServiceWorker can be used to power the so-called &#x201C;Offline-First&#x201D; web.</p></div>
+
+<div></div>
+
+<div><blockquote> <p>This article was originally published on <a href="https://css-tricks.com/serviceworker-for-offline/" target="_blank" aria-label="Making a Simple Site Work Offline with ServiceWorker">CSS-Tricks.com</a>. Content below presents minor editorial improvements.</p> </blockquote> <p>ServiceWorker is a progressive technology, and in this article I&#x2019;ll show you how to take a website and make it available offline for humans who are using a modern browser while leaving humans with unsupported browsers unaffected.</p> <p>Today, ServiceWorker has browser support in Google Chrome, Opera, and in Firefox behind a configuration flag. Microsoft is <a href="https://twitter.com/jacobrossi/status/608291251121618944" target="_blank" aria-label="@jacobrossi on Twitter">likely to work on it</a> soon, and there&#x2019;s no official word from Apple&#x2019;s Safari yet. Given that the <a href="https://jakearchibald.github.io/isserviceworkerready/#navigator.serviceworker" target="_blank" aria-label="Is ServiceWorker Ready?">implementation status for ServiceWorker across browsers</a> is not great yet, it&#x2019;s a great opportunity to get ahead of the pack. You won&#x2019;t affect unsupported users and the ones that are supported are going to greatly appreciate it.<br> The effectiveness of implementing ServiceWorker depends on your user-base as well, given that if most of your users are on Chrome then you won&#x2019;t have to worry about support that much.</p> <p>Before getting started, I should point out a couple of things for you to take into account.</p></div>
+
+<div><h1 id="secure-connections-only">Secure Connections Only</h1> <p>You should know that there&#x2019;s a few hard requirements when it comes to ServiceWorker. First and foremost, your <strong>site needs to be served over a secure connection</strong>. If you&#x2019;re still serving your site over HTTP, it might be a good excuse to implement HTTPS.</p> <p><a href="https://ponyfoo.com/articles/securing-your-web-app-in-3-easy-steps" aria-label="Securing Your Web App in 3 Easy Steps on Pony Foo"><img alt="ponyfoo.com, being served over HTTPS" class="" src="https://i.imgur.com/aliSqdF.png"></a></p> <p>You could use a CDN proxy like CloudFlare to serve traffic securely. Remember to find and fix mixed content warnings as some browsers may warn your customers about your site being unsafe, otherwise.</p> <ul> <li>I wrote a tutorial that may help you <a href="https://ponyfoo.com/articles/securing-your-web-app-in-3-easy-steps" aria-label="Securing Your Web App in 3 Easy Steps on Pony Foo">set up CloudFlare for your site</a></li> <li>You might want to leverage <a href="https://letsencrypt.org/" target="_blank" aria-label="Let&#x2019;s Encrypt is a new Certificate Authority: It&#x2019;s free, automated, and open.">LetsEncrypt.org</a> to get a free TLS certificate</li> </ul> <p>While the spec for HTTP/2 doesn&#x2019;t inherently enforce encrypted connections, browsers intend to implement HTTP/2 and similar technologies only over TLS. The ServiceWorker specification, on the other hand, <a href="http://www.w3.org/TR/service-workers/#security-considerations" target="_blank" aria-label="Security Considerations in ServiceWorker specification">recommends browser implementation over TLS</a>. Browsers have also hinted at marking sites served over unencrypted connections as insecure. Search engines penalize unencrypted results.</p> <p>In any case, the &#x201C;HTTPS only&#x201D; is the implementors way of saying <em>&#x201C;this is important, you should do this&#x201D;</em>.</p> <h1 id="a-promise-based-api">A <code class="md-code md-code-inline">Promise</code> Based API</h1> <p>The future of web browser API implementations is <code class="md-code md-code-inline">Promise</code>-heavy. The <code class="md-code md-code-inline">fetch</code> API, for example, sprinkles sweet <code class="md-code md-code-inline">Promise</code>-based sugar on top of <code class="md-code md-code-inline">XMLHttpRequest</code>. ServiceWorker makes occasional use of <code class="md-code md-code-inline">fetch</code>, but there&#x2019;s also worker registration, caching, and message passing <em>&#x2013; all promise based.</em></p> <ul> <li>I wrote a tutorial that may help you <a href="https://ponyfoo.com/articles/es6-promises-in-depth" aria-label="ES6 Promises in Depth on Pony Foo">get started with Promises</a></li> <li>There&#x2019;s also an <a href="https://ponyfoo.com/articles/es6" aria-label="ES6 Overview in 350 Bullet Points on Pony Foo">ES6 overview in bullet points</a></li> <li>There&#x2019;s also this tool I wrote that <a href="http://bevacqua.github.io/promisees/" target="_blank" aria-label="Promisees Visualization Playground">helps you visualize promises</a> if you&#x2019;re more of a visual learner</li> </ul> <p><a href="http://bevacqua.github.io/promisees/" target="_blank" aria-label="Promisees Visualization Playground"><img alt="A screenshot of the Promisees playground" class="" src="https://i.imgur.com/rbpKYUR.png"></a></p> <p>You may not be a fan of promises, but they&#x2019;re here to stay, so you better get used to them.</p> <h1 id="registering-your-first-serviceworker">Registering Your First ServiceWorker</h1> <p>I worked together with Chris on the simplest possible practical demonstration of how to use ServiceWorker. He implemented a fancy website and asked me to add offline support. I felt like that&#x2019;d be a great opportunity to display how easy and unobtrusive it is to add offline capabilities to an existing website.</p> <blockquote> <p>If you&#x2019;d like to skip to the end, take a look at the <a href="https://github.com/chriscoyier/Simple-Offline-Site/pull/1" target="_blank" aria-label="Added ServiceWorker support #1 on GitHub">Pull Request to Chris&#x2019;s site</a> on GitHub.</p> </blockquote> <p>The first step is to register the ServiceWorker. Instead of blindly attempting the registration, we feature-detect that ServiceWorker is indeed available. The following piece of code demonstrates how we would install a ServiceWorker. The JavaScript resource passed to <code class="md-code md-code-inline">.register</code> will be executed in the context of a ServiceWorker. Note how registration returns a <code class="md-code md-code-inline">Promise</code> so that you can track whether or not the ServiceWorker registration was successful. I preceded logging statements with <code class="md-code md-code-inline">CLIENT:</code> to make it visually easier for me to figure out whether a logging statement was coming from a web page or the ServiceWorker script.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// ServiceWorker is a progressive technology. Ignore unsupported browsers</span>
+<span class="md-code-keyword">if</span>(<mark class="md-mark md-code-mark"><span class="md-code-string">&apos;serviceWorker&apos;</span> <span class="md-code-keyword">in</span> navigator</mark>) {
+  <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;CLIENT: service worker registration in progress.&apos;</span>);
+  navigator.serviceWorker<mark class="md-mark md-code-mark">.register(<span class="md-code-string">&apos;/service-worker.js&apos;</span>).then</mark>(<span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span> </span>{
+    <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;CLIENT: service worker registration complete.&apos;</span>);
+  }, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span> </span>{
+    <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;CLIENT: service worker registration failure.&apos;</span>);
+  });
+} <span class="md-code-keyword">else</span> {
+  <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;CLIENT: service worker is not supported.&apos;</span>);
+}
+</code></pre> <p>The endpoint to the <code class="md-code md-code-inline">service-worker.js</code> file is quite important. If the script were served from, say, <code class="md-code md-code-inline">/js/service-worker.js</code> then the ServiceWorker would only be able to intercept requests in the <code class="md-code md-code-inline">/js/</code> context, but it&#x2019;d be blind to resources like <code class="md-code md-code-inline">/other</code>. This is typically an issue because you usually scope your JavaScript files in a <code class="md-code md-code-inline">/js/</code>, <code class="md-code md-code-inline">/public/</code>, <code class="md-code md-code-inline">/assets/</code>, or similar &#x201C;directory&#x201D;, whereas you&#x2019;ll want to serve the ServiceWorker script from the domain root in most cases.</p> <p>That was, in fact, the only necessary change to your web application code, provided that you had already implemented HTTPS. At this point, supporting browsers will issue a request for <code class="md-code md-code-inline">/service-worker.js</code> and attempt to install the worker.</p> <p>How should you structure the <code class="md-code md-code-inline">service-worker.js</code> file, then?</p> <h1 id="putting-together-a-serviceworker">Putting Together A ServiceWorker</h1> <p>ServiceWorker is event-driven and <strong>your code should aim to be stateless</strong>. That&#x2019;s because when a ServiceWorker isn&#x2019;t being used it&#x2019;s shut down, losing all state. You have no control over that, so it&#x2019;s best to avoid any long-term dependance on in-memory state.</p> <p>Below, I listed the most notable events you&#x2019;ll have to handle in a ServiceWorker.</p> <ul> <li>The <code class="md-code md-code-inline">install</code> event fires when a ServiceWorker is first fetched. Here is your chance to prime the ServiceWorker cache with the fundamental resources that should be available even while users are offline</li> <li>The <code class="md-code md-code-inline">fetch</code> event fires whenever a request originates from your ServiceWorker scope, and you&#x2019;ll get a chance to intercept the request and respond immediately, without going to the network</li> <li>The <code class="md-code md-code-inline">activate</code> event fires after a successful installation. You can use it to phase out older versions of the worker &#x2013; we&#x2019;ll look at a basic example where we deleted stale cache entries</li> </ul> <p>Let&#x2019;s go over each event and look at examples of how they could be handled.</p> <h1 id="installing-your-serviceworker">Installing Your ServiceWorker</h1> <p>A version number is useful when updating the worker logic, allowing you to remove outdated cache entries <a href="https://ponyfoo.com/#phasing-out-older-serviceworker-versions" aria-label="Phasing Out Older ServiceWorker Versions">during the activation step</a>, as we&#x2019;ll see a bit later. We&#x2019;ll use the following version number as a prefix when creating cache stores.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> version = <span class="md-code-string">&apos;v1::&apos;</span>;
+</code></pre> <p>You can use <code class="md-code md-code-inline">addEventListener</code> to register an event handler for the <code class="md-code md-code-inline">install</code> event. Using <code class="md-code md-code-inline">event.waitUntil</code> blocks the installation process on the provided <code class="md-code md-code-inline">p</code> promise. If the promise is rejected because, for instance, one of the resources failed to be downloaded, the service worker won&#x2019;t be installed. Here, you can leverage the promise returned from opening a cache with <code class="md-code md-code-inline">caches.open(name)</code> and then mapping that into <code class="md-code md-code-inline">cache.addAll(resources)</code>, which downloads and stores responses for the provided resources.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">self.addEventListener(<span class="md-code-string">&quot;install&quot;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(event)</span> </span>{
+  <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;WORKER: install event in progress.&apos;</span>);
+  event.waitUntil(
+    <span class="md-code-comment">/* The caches built-in is a promise-based API that helps you cache responses,
+       as well as finding and deleting them.
+    */</span>
+    caches
+      <span class="md-code-comment">/* You can open a cache by name, and this method returns a promise. We use
+         a versioned cache name here so that we can remove old cache entries in
+         one fell swoop later, when phasing out an older service worker.
+      */</span>
+      .open(version + <span class="md-code-string">&apos;fundamentals&apos;</span>)
+      .then(<span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(cache)</span> </span>{
+        <span class="md-code-comment">/* After the cache is opened, we can fill it with the offline fundamentals.
+           The method below will add all resources we&apos;ve indicated to the cache,
+           after making HTTP requests for each of them.
+        */</span>
+        <span class="md-code-keyword">return</span> cache.addAll([
+          <span class="md-code-string">&apos;/&apos;</span>,
+          <span class="md-code-string">&apos;/css/global.css&apos;</span>,
+          <span class="md-code-string">&apos;/js/global.js&apos;</span>
+        ]);
+      })
+      .then(<span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span> </span>{
+        <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;WORKER: install completed&apos;</span>);
+      })
+  );
+});
+</code></pre> <p>Once the <code class="md-code md-code-inline">install</code> step succeeds, the <code class="md-code md-code-inline">activate</code> event fires. This helps us <a href="https://ponyfoo.com/#phasing-out-older-serviceworker-versions" aria-label="Phasing Out Older ServiceWorker Versions">phase out an older ServiceWorker</a>, and we&#x2019;ll look at it later. For now, let&#x2019;s focus on the <code class="md-code md-code-inline">fetch</code> event, which is a bit more interesting.</p> <h1 id="intercepting-fetch-requests">Intercepting Fetch Requests</h1> <p>The <code class="md-code md-code-inline">fetch</code> event fires whenever a page controlled by this service worker requests a resource. This isn&#x2019;t limited to <code class="md-code md-code-inline">fetch</code> or even <code class="md-code md-code-inline">XMLHttpRequest</code>. Instead, it comprehends even the request for the HTML page on first load, as well as JS and CSS resources, fonts, any images, etc. Note also that requests made against other origins will <em>also</em> be caught by the <code class="md-code md-code-inline">fetch</code> handler of the ServiceWorker. For instance, requests made against <code class="md-code md-code-inline">i.imgur.com</code> &#x2013; the CDN for a popular image hosting site &#x2013; would also be caught by our service worker as long as the request originated on one of the clients <em>(e.g browser tabs)</em> controlled by the worker.</p> <p>Just like <code class="md-code md-code-inline">install</code>, we can block the <code class="md-code md-code-inline">fetch</code> event by passing a promise to <code class="md-code md-code-inline">event.respondWith(p)</code>, and when the promise fulfills the worker will respond with that instead of the default action of going to the network. We can use <code class="md-code md-code-inline">caches.match</code> to look for cached responses, and return those responses instead of going to the network.</p> <p>As described in the comments, here we&#x2019;re using an &#x201C;eventually fresh&#x201D; caching pattern where we return whatever is stored on the cache but always try to fetch a resource again from the network regardless, to keep the cache updated. If the response we served to the user is stale, they&#x2019;ll get a fresh response the next time they request the resource. If the network request fails, it&#x2019;ll try to recover by attempting to serve a hardcoded <code class="md-code md-code-inline">Response</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">self.addEventListener(<span class="md-code-string">&quot;fetch&quot;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(event)</span> </span>{
+  <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;WORKER: fetch event in progress.&apos;</span>);
+
+  <span class="md-code-comment">/* We should only cache GET requests, and deal with the rest of method in the
+     client-side, by handling failed POST,PUT,PATCH,etc. requests.
+  */</span>
+  <span class="md-code-keyword">if</span> (event.request.method !== <span class="md-code-string">&apos;GET&apos;</span>) {
+    <span class="md-code-comment">/* If we don&apos;t block the event as shown below, then the request will go to
+       the network as usual.
+    */</span>
+    <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;WORKER: fetch event ignored.&apos;</span>, event.request.method, event.request.url);
+    <span class="md-code-keyword">return</span>;
+  }
+  <span class="md-code-comment">/* Similar to event.waitUntil in that it blocks the fetch event on a promise.
+     Fulfillment result will be used as the response, and rejection will end in a
+     HTTP response indicating failure.
+  */</span>
+  event.respondWith(
+    caches
+      <span class="md-code-comment">/* This method returns a promise that resolves to a cache entry matching
+         the request. Once the promise is settled, we can then provide a response
+         to the fetch request.
+      */</span>
+      .match(event.request)
+      .then(<span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(cached)</span> </span>{
+        <span class="md-code-comment">/* Even if the response is in our cache, we go to the network as well.
+           This pattern is known for producing &quot;eventually fresh&quot; responses,
+           where we return cached responses immediately, and meanwhile pull
+           a network response and store that in the cache.
+           Read more:
+           https://ponyfoo.com/articles/progressive-networking-serviceworker
+        */</span>
+        <span class="md-code-keyword">var</span> networked = fetch(event.request)
+          <span class="md-code-comment">// We handle the network request with success and failure scenarios.</span>
+          .then(fetchedFromNetwork, unableToResolve)
+          <span class="md-code-comment">// We should catch errors on the fetchedFromNetwork handler as well.</span>
+          .catch(unableToResolve);
+
+        <span class="md-code-comment">/* We return the cached response immediately if there is one, and fall
+           back to waiting on the network as usual.
+        */</span>
+        <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;WORKER: fetch event&apos;</span>, cached ? <span class="md-code-string">&apos;(cached)&apos;</span> : <span class="md-code-string">&apos;(network)&apos;</span>, event.request.url);
+        <span class="md-code-keyword">return</span> cached || networked;
+
+        <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">fetchedFromNetwork</span><span class="md-code-params">(response)</span> </span>{
+          <span class="md-code-comment">/* We copy the response before replying to the network request.
+             This is the response that will be stored on the ServiceWorker cache.
+          */</span>
+          <span class="md-code-keyword">var</span> cacheCopy = response.clone();
+
+          <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;WORKER: fetch response from network.&apos;</span>, event.request.url);
+
+          caches
+            <span class="md-code-comment">// We open a cache to store the response for this request.</span>
+            .open(version + <span class="md-code-string">&apos;pages&apos;</span>)
+            .then(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">add</span><span class="md-code-params">(cache)</span> </span>{
+              <span class="md-code-comment">/* We store the response for this request. It&apos;ll later become
+                 available to caches.match(event.request) calls, when looking
+                 for cached responses.
+              */</span>
+              cache.put(event.request, cacheCopy);
+            })
+            .then(<span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span> </span>{
+              <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;WORKER: fetch response stored in cache.&apos;</span>, event.request.url);
+            });
+
+          <span class="md-code-comment">// Return the response so that the promise is settled in fulfillment.</span>
+          <span class="md-code-keyword">return</span> response;
+        }
+
+        <span class="md-code-comment">/* When this method is called, it means we were unable to produce a response
+           from either the cache or the network. This is our opportunity to produce
+           a meaningful response even when all else fails. It&apos;s the last chance, so
+           you probably want to display a &quot;Service Unavailable&quot; view or a generic
+           error response.
+        */</span>
+        <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">unableToResolve</span> <span class="md-code-params">()</span> </span>{
+          <span class="md-code-comment">/* There&apos;s a couple of things we can do here.
+             - Test the Accept header and then return one of the `offlineFundamentals`
+               e.g: `return caches.match(&apos;/some/cached/image.png&apos;)`
+             - You should also consider the origin. It&apos;s easier to decide what
+               &quot;unavailable&quot; means for requests against your origins than for requests
+               against a third party, such as an ad provider
+             - Generate a Response programmaticaly, as shown below, and return that
+          */</span>
+
+          <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;WORKER: fetch request failed in both cache and network.&apos;</span>);
+
+          <span class="md-code-comment">/* Here we&apos;re creating a response programmatically. The first parameter is the
+             response body, and the second one defines the options for the response.
+          */</span>
+          <span class="md-code-keyword">return</span> <span class="md-code-keyword">new</span> Response(<span class="md-code-string">&apos;&lt;h1&gt;Service Unavailable&lt;/h1&gt;&apos;</span>, {
+            status: <span class="md-code-number">503</span>,
+            statusText: <span class="md-code-string">&apos;Service Unavailable&apos;</span>,
+            headers: <span class="md-code-keyword">new</span> Headers({
+              <span class="md-code-string">&apos;Content-Type&apos;</span>: <span class="md-code-string">&apos;text/html&apos;</span>
+            })
+          });
+        }
+      })
+  );
+});
+</code></pre> <p>There&#x2019;s several more strategies, some of which I discuss in <a href="https://ponyfoo.com/articles/serviceworker-revolution" aria-label="ServiceWorker: Revolution of the Web Platform on Pony Foo">an article I wrote about ServiceWorker strategies</a>.<br> As promised, let&#x2019;s look at the code you can use to phase out older versions of your ServiceWorker script.</p> <h1 id="phasing-out-older-serviceworker-versions">Phasing Out Older ServiceWorker Versions</h1> <p>The <code class="md-code md-code-inline">activate</code> event fires after a service worker has been successfully installed. It is most useful when phasing out an older version of a service worker, as at this point you know that the new worker was installed correctly. In this example, we delete old caches that don&#x2019;t match the <code class="md-code md-code-inline">version</code> for the worker we just finished installing.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">self.addEventListener(<span class="md-code-string">&quot;activate&quot;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(event)</span> </span>{
+  <span class="md-code-comment">/* Just like with the install event, event.waitUntil blocks activate on a promise.
+     Activation will fail unless the promise is fulfilled.
+  */</span>
+  <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;WORKER: activate event in progress.&apos;</span>);
+
+  event.waitUntil(
+    caches
+      <span class="md-code-comment">/* This method returns a promise which will resolve to an array of available
+         cache keys.
+      */</span>
+      .keys()
+      .then(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(keys)</span> </span>{
+        <span class="md-code-comment">// We return a promise that settles when all outdated caches are deleted.</span>
+        <span class="md-code-keyword">return</span> Promise.all(
+          keys
+            .filter(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(key)</span> </span>{
+              <span class="md-code-comment">// Filter by keys that don&apos;t start with the latest version prefix.</span>
+              <span class="md-code-keyword">return</span> !key.startsWith(version);
+            })
+            .map(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(key)</span> </span>{
+              <span class="md-code-comment">/* Return a promise that&apos;s fulfilled
+                 when each outdated cache is deleted.
+              */</span>
+              <span class="md-code-keyword">return</span> caches.delete(key);
+            })
+        );
+      })
+      .then(<span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span> </span>{
+        <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;WORKER: activate completed.&apos;</span>);
+      })
+  );
+});
+</code></pre> <p>You should look at the <a href="https://github.com/chriscoyier/Simple-Offline-Site" target="_blank" aria-label="chriscoyier/Simple-Offline-Site on GitHub">full code on the GitHub repository</a>!</p></div>

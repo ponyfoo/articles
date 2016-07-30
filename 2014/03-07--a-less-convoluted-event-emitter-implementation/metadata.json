@@ -1,0 +1,12 @@
+{
+  "id": "543d226e46835869100341d3",
+  "author": "543d222f4683586910034197",
+  "title": "A Less Convoluted Event Emitter Implementation",
+  "slug": "a-less-convoluted-event-emitter-implementation",
+  "tags": [
+    "js",
+    "nodejs",
+    "event-emitter",
+    "pattern"
+  ]
+}

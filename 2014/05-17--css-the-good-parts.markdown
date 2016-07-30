@@ -1,0 +1,281 @@
+<div><blockquote>
+  <h1>CSS: The Good Parts</h1>
+  <div><p>I&#x2019;ve decided to pour my thoughts of <strong>how the CSS of an application should be modelled</strong> into a formal style guide. I&#x2019;ve been using this approach for over a &#x2026;</p></div>
+</blockquote></div>
+
+<div><p>I&#x2019;ve decided to pour my thoughts of <strong>how the CSS of an application should be modelled</strong> into a formal style guide. I&#x2019;ve been using this approach for over a year, and now I&#x2019;m also moving to implement it on the job, as well.</p></div>
+
+<div></div>
+
+<div><p>You can find the <em>latest version</em> at <a href="https://github.com/bevacqua/css" target="_blank">css</a> on GitHub. <a href="https://github.com/bevacqua/css/issues" target="_blank">Pull requests</a>, suggestions, ideas, and critique are all welcome!</p></div>
+
+<div><h1 id="bc-style-guide">.bc-style-guide {</h1> <blockquote> <p>The so-called <code class="md-code md-code-inline">&quot;nico-style&quot;</code> brought to markdown. <strong>Because Style Guide</strong>.</p> </blockquote> <p>This style guide is a jab at solving collisions between CSS class names, and issues that ultimately lead to confusion, having to use <code class="md-code md-code-inline">!important</code> rules, copying and pasting style declarations, and other awful aspects of CSS developments.</p> <p>Astonishignly, this style guide won&#x2019;t do anything for you that you&#x2019;re not able to figure out for yourself. That means you won&#x2019;t see the benefits unless you try and follow most of the conventions laid out next.</p> <p><sub>The recommendations found in this style guide are generally <strong>just guidelines</strong> and aren&#x2019;t set in stone. Even if they&#x2019;re refered to as &#x201C;rules&#x201D;. Disregard them at your own discretion.</sub></p> <p>Feel free to fork this style guide, or better yet, send <a href="https://github.com/bevacqua/css/issues" target="_blank" aria-label="bevacqua/css Issues on GitHub">Pull Requests</a> this way!</p> <h2 id="namespaces">Namespaces</h2> <p>Components should <em>always</em> be assigned a unique namespace prefix.</p> <ul> <li>The namespace can be as short as a single character, or as long as 5 characters</li> <li>Where possible, the namespace should be a meaningful shorthand</li> <li>In class names, the namespace must be followed by a single dash</li> <li>Views should be treated as individual components</li> </ul> <p>Consider the following example, where we assigned <code class="md-code md-code-inline">ddl</code> to a <strong>drop down list</strong> component. Take note of the class names.</p> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-css">.ddl-container {
+  // ...
+}
+
+.ddl-item-list {
+  // ...
+}
+
+.ddl-item {
+  // ...
+}
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-css">.item-list {
+  // ...
+}
+
+.dropdown-item-list {
+  // ...
+}
+
+.xyz-item-list {
+  // ...
+}
+</code></pre> <p>Classes that are meant to be shared among a large set of elements, or provide reusable styles, should be grouped under a universal namespace, such as <code class="md-code md-code-inline">uv</code>.</p> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-css">.uv-clearfix {
+  // ...
+}
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-css">.clearfix {
+  // ...
+}
+</code></pre> <p>See <a href="https://ponyfoo.com/#nesting">Nesting</a> for information in regard to how styles should be overridden</p> <h2 id="classes">Classes</h2> <p>Class names must follow a few rules.</p> <ul> <li>Must be all-lowercase</li> <li>Words must be separated by single dashes</li> <li>As short as possible, but as long as necessary <ul> <li><em>Don&#x2019;t abbreviate words carelessly</em></li> </ul> </li> <li>Name things consistently</li> <li>Meaningful description of the elements that should use it</li> <li>Keep your non-prefix word count below 4</li> </ul> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-css">.ddl-item {
+  // ...
+}
+
+.ddl-selected {
+  // ...
+}
+
+.ddl-item-selected {
+  // ...
+}
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-css">.ddlItem {
+  // ...
+}
+
+.ddl-item-container-text {
+  // ...
+}
+
+.ddl-foo-bar-baz {
+  // ...
+}
+</code></pre> <h2 id="attributes">Attributes</h2> <p>Attributes make decent selectors from time to time. Some ground rules apply.</p> <ul> <li>If the &#x201C;exists&#x201D; check suffices, use that</li> <li>Don&#x2019;t overqualify using a tag name</li> </ul> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-css">[href] {
+  // ...
+}
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-css">a[href] {
+  // ...
+}
+
+[href^=&apos;http&apos;] {
+  // ...
+}
+</code></pre> <h2 id="id-attribute"><code class="md-code md-code-inline">id</code> attribute</h2> <p>While the <code class="md-code md-code-inline">id</code> attribute might be fine in HTML and JavaScript, it should be <strong>avoided entirely</strong> inside stylesheets. Few reasons.</p> <ul> <li>ID selectors are not reusable</li> <li>Priority nightmares</li> <li><a href="http://css-tricks.com/bad-code-dogmatism-etc/" target="_blank" aria-label="Bad Code, Dogmatism, etc">&#x201C;Bad Code&#x201D;, Dogmatism, etc.</a></li> </ul> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-css">.ur-name {
+  // ...
+}
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-css">#ur-name {
+  // ...
+}
+</code></pre> <p>Just assign a class name to the element.</p> <h2 id="tag-names">Tag Names</h2> <p>Tag names in selectors follow a few rules.</p> <ul> <li>Application level styles that are only overridden in a few places are okay to use tag name selectors</li> <li><a href="http://smacss.com/" target="_blank" aria-label="SMACSS modular CSS architecture">Not semantic</a>. <strong>Avoid where possible</strong>, use class names instead</li> <li>Fine to use when there&#x2019;s a ton of elements under the same namespace that need a small tweak</li> <li><strong>Don&#x2019;t overqualify</strong> <em>(<code class="md-code md-code-inline">a.foo</code>)</em></li> </ul> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-tag">button</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">padding</span>:<span class="md-code-value"> <span class="md-code-number">5px</span></span></span>;
+  <span><span class="md-code-attribute">margin-right</span>:<span class="md-code-value"> <span class="md-code-number">3px</span></span></span>;
+<span>}</span></span>
+
+<span class="md-code-class">.ddl-button</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">background-color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+<span>}</span></span>
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.ddl-container</span> <span class="md-code-tag">button</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">background-color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+<span>}</span></span>
+</code></pre> <h2 id="selectors-and-nesting">Selectors and Nesting</h2> <p>Styles shouldn&#x2019;t need to be nested more than three <em>(four at worst)</em> levels deep. This includes pseudo-selectors. If you find yourself going further, think about re-organizing your rules <em>(either the specificity needed, or the layout of the nesting)</em>.</p> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-css">.sg-title-icon:before {
+  // ...
+}
+
+.dg-container .sg-title {
+  font-size: 1.1em; // larger segment title inside dialogs
+}
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-css">.dg-container .sg-container .sg-title {
+  font-size: 1.1em;
+}
+
+.dg-container .sg-title span:before {
+  // ...
+}
+</code></pre> <p>If a component needs to be different within another component, these rules apply.</p> <ul> <li>Where possible, give a class name using the parent namespace to the child component</li> <li>If that&#x2019;s not possible, then use a nested selector</li> </ul> <p>Suppose you have a User List component <code class="md-code md-code-inline">.ul-*</code> and a User Card component <code class="md-code md-code-inline">.uc-*</code>.</p> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-xml"><span class="md-code-tag">&lt;<span class="md-code-title">div</span> <span class="md-code-attribute">class</span>=<span class="md-code-value">&apos;ul-container&apos;</span>&gt;</span>
+  <span class="md-code-tag">&lt;<span class="md-code-title">div</span> <span class="md-code-attribute">class</span>=<span class="md-code-value">&apos;uc-container&apos;</span>&gt;</span>
+    <span class="md-code-tag">&lt;<span class="md-code-title">span</span> <span class="md-code-attribute">class</span>=<span class="md-code-value">&apos;uc-name ul-card-name&apos;</span>&gt;</span>John Doe<span class="md-code-tag">&lt;/<span class="md-code-title">span</span>&gt;</span>
+  <span class="md-code-tag">&lt;/<span class="md-code-title">div</span>&gt;</span>
+<span class="md-code-tag">&lt;/<span class="md-code-title">div</span>&gt;</span>
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-css">.ul-card-name {
+  // ...
+}
+</code></pre> <h5 id="okay">Okay</h5> <pre class="md-code-block"><code class="md-code md-lang-xml"><span class="md-code-tag">&lt;<span class="md-code-title">div</span> <span class="md-code-attribute">class</span>=<span class="md-code-value">&apos;ul-container&apos;</span>&gt;</span>
+  <span class="md-code-tag">&lt;<span class="md-code-title">div</span> <span class="md-code-attribute">class</span>=<span class="md-code-value">&apos;uc-container&apos;</span>&gt;</span>
+    <span class="md-code-tag">&lt;<span class="md-code-title">span</span> <span class="md-code-attribute">class</span>=<span class="md-code-value">&apos;uc-name&apos;</span>&gt;</span>John Doe<span class="md-code-tag">&lt;/<span class="md-code-title">span</span>&gt;</span>
+  <span class="md-code-tag">&lt;/<span class="md-code-title">div</span>&gt;</span>
+<span class="md-code-tag">&lt;/<span class="md-code-title">div</span>&gt;</span>
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-css">.ul-container .uc-name {
+  // ...
+}
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-xml"><span class="md-code-tag">&lt;<span class="md-code-title">div</span> <span class="md-code-attribute">class</span>=<span class="md-code-value">&apos;ul-container&apos;</span>&gt;</span>
+  <span class="md-code-tag">&lt;<span class="md-code-title">div</span> <span class="md-code-attribute">class</span>=<span class="md-code-value">&apos;uc-container&apos;</span>&gt;</span>
+    <span class="md-code-tag">&lt;<span class="md-code-title">span</span> <span class="md-code-attribute">class</span>=<span class="md-code-value">&apos;uc-name uc-name-in-ul&apos;</span>&gt;</span>John Doe<span class="md-code-tag">&lt;/<span class="md-code-title">span</span>&gt;</span>
+  <span class="md-code-tag">&lt;/<span class="md-code-title">div</span>&gt;</span>
+<span class="md-code-tag">&lt;/<span class="md-code-title">div</span>&gt;</span>
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-css">.uc-name-in-ul {
+  // ...
+}
+</code></pre> <h2 id="organization">Organization</h2> <p>Ideally, you should keep your stylesheets separated in different files. Either of the approaches below is fine. The former is prefered.</p> <ul> <li>Use a single <code class="md-code md-code-inline">all.{styl,less,scss}</code> file and have it <code class="md-code md-code-inline">@import</code> every other file</li> <li>Use a build tool to glob the styles directory</li> </ul> <p>A few rules apply.</p> <ul> <li>Each component should take up its own file</li> <li>Styles applied globally to tag names, see <a href="https://ponyfoo.com/#tag-names">Tag Names</a>, should be kept in a single file</li> <li>Where possible split <strong>presentation-specific</strong> styles from <strong>layout-specific</strong> styles. See below</li> </ul> <h2 id="presentation-specific-vs-layout-specific-styles">Presentation-Specific vs Layout-Specific Styles</h2> <p>Presentation-Specific styles are those that <strong>only alter the visual design</strong> of the element, but don&#x2019;t change its dimensions or position in a meaningful way. The examples below are presentation-specific.</p> <ul> <li>Rules such as <code class="md-code md-code-inline">color</code>, <code class="md-code md-code-inline">font-weight</code>, or <code class="md-code md-code-inline">font-variant</code></li> <li>Rules that animate other properties</li> <li><code class="md-code md-code-inline">font-size</code> is not considered a meaningful dimension change</li> <li><code class="md-code md-code-inline">padding</code> may fit this category <em>(loosely)</em>, but only if <code class="md-code md-code-inline">box-sizing: border-box;</code> is in effect</li> <li><code class="md-code md-code-inline">max-width</code> and <code class="md-code md-code-inline">max-height</code> may fit either category, but it&#x2019;s generally reasonable to consider them presentation-specific</li> </ul> <p>Layout-Specific Styles are those that change the dimensions or positioning of DOM elements. These are mostly layout-specific.</p> <ul> <li>Rules such as <code class="md-code md-code-inline">margin</code> or <code class="md-code md-code-inline">padding</code></li> <li><code class="md-code md-code-inline">width</code>, and <code class="md-code md-code-inline">height</code></li> <li>The element&#x2019;s <code class="md-code md-code-inline">position</code></li> <li><code class="md-code md-code-inline">z-index</code>, definitely</li> </ul> <p>Where possible, it&#x2019;s suggested to explicitly split styles into these two categories. The explicit differentiation could be made in a few different ways.</p> <ul> <li><em>(bad)</em> No differentiation</li> <li><em>(decent)</em> Layout-specific first, presentation-specific later</li> <li><em>(good)</em> A line-break between both categories</li> <li><em>(better)</em> Split in subsequent style declarations using the same selector</li> <li><em>(best)</em> Declaring the rules in different files altogether</li> </ul> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.foo</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">position</span>:<span class="md-code-value"> fixed</span></span>;
+  <span><span class="md-code-attribute">top</span>:<span class="md-code-value"> <span class="md-code-number">8px</span></span></span>;
+  <span><span class="md-code-attribute">right</span>:<span class="md-code-value"> <span class="md-code-number">8px</span></span></span>;
+  <span><span class="md-code-attribute">padding</span>:<span class="md-code-value"> <span class="md-code-number">2px</span></span></span>;
+  <span><span class="md-code-attribute">font-weight</span>:<span class="md-code-value"> bold</span></span>;
+  <span><span class="md-code-attribute">background-color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#333</span></span></span>;
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+<span>}</span></span>
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.foo</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">position</span>:<span class="md-code-value"> fixed</span></span>;
+  <span><span class="md-code-attribute">top</span>:<span class="md-code-value"> <span class="md-code-number">8px</span></span></span>;
+  <span><span class="md-code-attribute">right</span>:<span class="md-code-value"> <span class="md-code-number">8px</span></span></span>;
+  <span><span class="md-code-attribute">padding</span>:<span class="md-code-value"> <span class="md-code-number">2px</span></span></span>;
+
+  <span><span class="md-code-attribute">font-weight</span>:<span class="md-code-value"> bold</span></span>;
+  <span><span class="md-code-attribute">background-color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#333</span></span></span>;
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+<span>}</span></span>
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.foo</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">position</span>:<span class="md-code-value"> fixed</span></span>;
+  <span><span class="md-code-attribute">top</span>:<span class="md-code-value"> <span class="md-code-number">8px</span></span></span>;
+  <span><span class="md-code-attribute">right</span>:<span class="md-code-value"> <span class="md-code-number">8px</span></span></span>;
+  <span><span class="md-code-attribute">padding</span>:<span class="md-code-value"> <span class="md-code-number">2px</span></span></span>;
+<span>}</span></span>
+
+<span class="md-code-class">.foo</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">font-weight</span>:<span class="md-code-value"> bold</span></span>;
+  <span><span class="md-code-attribute">background-color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#333</span></span></span>;
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+<span>}</span></span>
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.foo</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">font-weight</span>:<span class="md-code-value"> bold</span></span>;
+  <span><span class="md-code-attribute">background-color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#333</span></span></span>;
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+  <span><span class="md-code-attribute">position</span>:<span class="md-code-value"> fixed</span></span>;
+  <span><span class="md-code-attribute">top</span>:<span class="md-code-value"> <span class="md-code-number">8px</span></span></span>;
+  <span><span class="md-code-attribute">right</span>:<span class="md-code-value"> <span class="md-code-number">8px</span></span></span>;
+  <span><span class="md-code-attribute">padding</span>:<span class="md-code-value"> <span class="md-code-number">2px</span></span></span>;
+<span>}</span></span>
+
+<span class="md-code-class">.foo</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">right</span>:<span class="md-code-value"> <span class="md-code-number">8px</span></span></span>;
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+  <span><span class="md-code-attribute">padding</span>:<span class="md-code-value"> <span class="md-code-number">2px</span></span></span>;
+  <span><span class="md-code-attribute">top</span>:<span class="md-code-value"> <span class="md-code-number">8px</span></span></span>;
+  <span><span class="md-code-attribute">background-color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#333</span></span></span>;
+  <span><span class="md-code-attribute">font-weight</span>:<span class="md-code-value"> bold</span></span>;
+  <span><span class="md-code-attribute">position</span>:<span class="md-code-value"> fixed</span></span>;
+<span>}</span></span>
+</code></pre> <h2 id="styles">Styles</h2> <p>These rules apply to your CSS property values</p> <ul> <li>If the value of a property is <code class="md-code md-code-inline">0</code>, do not specify units</li> <li>The <code class="md-code md-code-inline">!important</code> rule should be aggressively avoided. <ul> <li>Keep style rules in a sensible order</li> <li>Compose styles to dissipate the need for an <code class="md-code md-code-inline">!important</code> rule</li> <li>Fine to use in limited cases <ul> <li>Overlays</li> <li>Declarations of the <code class="md-code md-code-inline">display: none !important;</code> type</li> </ul> </li> </ul> </li> <li>Keep <code class="md-code md-code-inline">z-index</code> levels in variables in a single file. <strong>Avoids confusion</strong> about what level should be given to an element, and arbitrarily-high ``999`-style values</li> <li>Use hex color codes <code class="md-code md-code-inline">#000</code> unless there&#x2019;s an explicit need for an <code class="md-code md-code-inline">rgba</code> declaration</li> <li>Dislike magic numbers</li> <li>Avoid mixing units</li> <li>Unit-less <code class="md-code md-code-inline">line-height</code> is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the <code class="md-code md-code-inline">font-size</code>.</li> </ul> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.btn-red</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span>
+</span></span></span>}
+
+<span class="md-code-class">.btn</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#222</span></span></span>;
+<span>}</span></span>
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.btn</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#222</span></span></span>;
+<span>}</span></span>
+
+<span class="md-code-class">.btn-red</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span> <span class="md-code-important">!important</span></span></span>;
+<span>}</span></span>
+</code></pre> <h2 id="media-queries">Media Queries</h2> <blockquote> <p>If you are reading this, I salute you. You&#x2019;re <em>almost as boring</em> as I am. I&#x2019;m more boring because <strong>I actually wrote the damn thing</strong>. It&#x2019;s not a contest, though.</p> </blockquote> <p>A few rules apply to media queries.</p> <ul> <li>Settle for a few <em>(2-3)</em> breakpoints and use those only</li> <li>Don&#x2019;t wrap entire stylesheets in media queries</li> <li>Instead, modularize media queries wherever possible, keep them relevant to the components</li> <li>Approach your styles in a <a href="http://bradfrostweb.com/blog/mobile/the-many-faces-of-mobile-first/" target="_blank" aria-label="The Many Faces of Mobile First">Mobile First</a> manner. Generally you add more things as you get more real state. <strong>Mobile First</strong> logically follows</li> </ul> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.co-field</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">width</span>:<span class="md-code-value"> <span class="md-code-number">120px</span></span></span>;
+<span>}</span></span>
+
+<span class="md-code-at_rule">@<span class="md-code-keyword">media</span> only screen and (min-width: <span class="md-code-number">768px</span>) </span>{
+  <span class="md-code-class">.co-field</span> <span class="md-code-rules">{
+    <span><span class="md-code-attribute">width</span>:<span class="md-code-value"> <span class="md-code-number">400px</span></span></span>;
+    <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+  <span>}</span></span>
+}
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.co-field</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">width</span>:<span class="md-code-value"> <span class="md-code-number">400px</span></span></span>;
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+<span>}</span></span>
+
+<span class="md-code-at_rule">@<span class="md-code-keyword">media</span> only screen and (max-width: <span class="md-code-number">768px</span>) </span>{
+  <span class="md-code-class">.co-field</span> <span class="md-code-rules">{
+    <span><span class="md-code-attribute">width</span>:<span class="md-code-value"> <span class="md-code-number">120px</span></span></span>;
+    <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> initial</span></span>;
+  <span>}</span></span>
+}
+</code></pre> <h2 id="frameworks-and-vendor-styles">Frameworks and Vendor Styles</h2> <p>You should shy away from all of these. A few rules apply.</p> <ul> <li><strong>Stay away from frameworks</strong></li> <li>Use <a href="http://necolas.github.io/normalize.css/" target="_blank" aria-label="A modern, HTML5-ready alternative to CSS resets"><code class="md-code md-code-inline">normalize.css</code></a> if you want</li> <li>Vendor styles, such as those required by external components are okay, and they should come before you define any of your own styles</li> </ul> <h2 id="languages">Languages</h2> <p>Some rules apply to stylesheet, regardless of language.</p> <ul> <li>Use a pre-processor language where possible</li> <li>Use soft-tabs with a two space indent</li> <li>One line per selector</li> <li>One <em>(or more)</em> line(s) per property declaration <ul> <li>Long, comma-separated property values <em>(such as collections of gradients or shadows)</em> can be arranged across multiple lines in an effort to improve readability and produce more useful diffs.</li> </ul> </li> <li>Comments that refer to selector blocks should be on a separate line immediately before the block to which they refer</li> <li>Use a plugin such as <strong>TrailingSpaces</strong> in Sublime Text to get rid of trailing spaces</li> </ul> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.foo</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+<span>}</span></span>
+
+<span class="md-code-class">.foo</span>,
+<span class="md-code-class">.bar</span>,
+<span class="md-code-class">.baz</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+<span>}</span></span>
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.foo</span> <span class="md-code-rules">{
+    <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f</span>oo</span></span>;
+<span>}</span></span>
+
+<span class="md-code-class">.foo</span>, <span class="md-code-class">.bar</span>, <span class="md-code-class">.baz</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+<span>}</span></span>
+
+<span class="md-code-class">.foo</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> red</span></span>;
+<span>}</span></span>
+</code></pre> <h3 id="not-stylus">Not Stylus</h3> <p>These rules apply to every language except Stylus.</p> <ul> <li>Use a single space after the colon</li> <li>Always end property declarations with a semicolon</li> <li>Put spaces after <code class="md-code md-code-inline">:</code> in property declarations</li> <li>Put spaces before <code class="md-code md-code-inline">{</code> in rule declarations</li> </ul> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.foo</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span></span></span>;
+<span>}</span></span>
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-css"><span class="md-code-class">.foo</span><span class="md-code-rules">{
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f</span>oo</span></span>;
+<span>}</span></span>
+
+<span class="md-code-class">.foo</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"><span class="md-code-hexcolor">#f00</span></span></span>;
+<span>}</span></span>
+
+<span class="md-code-class">.foo</span> <span class="md-code-rules">{
+  <span><span class="md-code-attribute">color</span>:<span class="md-code-value"> <span class="md-code-hexcolor">#f00</span>
+</span></span></span>}
+</code></pre> <h3 id="not-css">Not CSS</h3> <p>Rules applicable to most pre-processor languages.</p> <ul> <li>Put comments in <code class="md-code md-code-inline">//</code> statements</li> <li>Prefer nested selectors <code class="md-code md-code-inline">.foo { .bar {} }</code> vs <code class="md-code md-code-inline">.foo .bar {}</code> <ul> <li><em>Only if both <code class="md-code md-code-inline">.foo</code> and <code class="md-code md-code-inline">.foo .bar</code> need styling</em></li> </ul> </li> <li>Use <code class="md-code md-code-inline">&amp;{selector}</code> to concatenate selectors</li> <li>Don&#x2019;t blindly over-nest</li> <li><strong>Keep <code class="md-code md-code-inline">z-index</code> levels in a single file, using variables</strong></li> </ul> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-less"><span class="md-code-comment">// foo</span>
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-less"><span class="md-code-class">.bar</span> {
+  <span class="md-code-comment">// ...</span>
+
+  <span class="md-code-class">.baz</span> {
+    <span class="md-code-comment">///...</span>
+  }
+}
+</code></pre> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-less"><span class="md-code-comment">/* foo */</span>
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-less"><span class="md-code-class">.bar</span> {
+  <span class="md-code-comment">// ...</span>
+}
+
+<span class="md-code-class">.bar</span> <span class="md-code-class">.baz</span> {
+  <span class="md-code-comment">// ...</span>
+}
+</code></pre> <h3 id="stylus">Stylus</h3> <p>Rules specific to Stylus.</p> <ul> <li>Omit brackets <code class="md-code md-code-inline">{}</code> in rule declarations</li> <li>Omit <code class="md-code md-code-inline">:</code> and <code class="md-code md-code-inline">;</code> in property declarations</li> <li>Use transparent mix-ins</li> <li>Use <code class="md-code md-code-inline">nib</code></li> </ul> <h5 id="good-stylus">Good <em>(Stylus)</em></h5> <pre class="md-code-block"><code class="md-code md-lang-stylus"><span class="md-code-comment">// foo</span>
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-stylus"><span class="md-code-class">.foo</span>
+  <span class="md-code-attribute">color</span> <span class="md-code-hexcolor">#f00</span>
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-stylus"><span class="md-code-class">.foo</span>
+  <span class="md-code-attribute">color</span> <span class="md-code-hexcolor">#f00</span>
+
+  <span class="md-code-class">.bar</span>
+    <span class="md-code-attribute">padding</span> <span class="md-code-number">2px</span>
+</code></pre> <h5 id="bad-stylus">Bad <em>(Stylus)</em></h5> <pre class="md-code-block"><code class="md-code md-lang-stylus"><span class="md-code-comment">/* foo */</span>
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-stylus">.foo {
+  color: #f00;
+}
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-stylus">.foo {
+  color: #f00;
+}
+
+.foo .bar {
+  padding: 2px;
+}
+</code></pre> <h2 id="license">License</h2> <p>MIT</p> <blockquote> <p>Fork away!</p> </blockquote> <h1>}</h1></div>

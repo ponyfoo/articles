@@ -1,0 +1,12 @@
+{
+  "id": "56bee60a11b8262c032027fb",
+  "author": "543d222f4683586910034197",
+  "title": "Proposal Draft for `.flatten` and `.flatMap`",
+  "slug": "proposal-draft-for-flatten-and-flatmap",
+  "tags": [
+    "ecmascript",
+    "flatten",
+    "array",
+    "proposal-draft"
+  ]
+}

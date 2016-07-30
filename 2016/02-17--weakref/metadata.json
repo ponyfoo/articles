@@ -1,0 +1,11 @@
+{
+  "id": "56c3e46da93bea2603f9bd6b",
+  "author": "543d222f4683586910034197",
+  "title": "JavaScript Proposal for weak references: `WeakRef`",
+  "slug": "weakref",
+  "tags": [
+    "ecmascript",
+    "weakref",
+    "proposal-draft"
+  ]
+}

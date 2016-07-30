@@ -1,0 +1,12 @@
+{
+  "id": "56aff355dfe5c4230378ddb6",
+  "author": "543d222f4683586910034197",
+  "title": "Understanding JavaScript's async await",
+  "slug": "understanding-javascript-async-await",
+  "tags": [
+    "async-await",
+    "generators",
+    "promises",
+    "es2017"
+  ]
+}

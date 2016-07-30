@@ -1,0 +1,23 @@
+<div><blockquote>
+  <h1>Continuous Integration, and Automated Deployments</h1>
+  <div><p>In the <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">next post</a> I&#x2019;ll get back to the meat of how I&#x2019;m making progress with the blog application. This time however, I wanted to deviate a little, and talk &#x2026;</p></div>
+</blockquote></div>
+
+<div><p>In the <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">next post</a> I&#x2019;ll get back to the meat of how I&#x2019;m making progress with the blog application. This time however, I wanted to deviate a little, and talk about <a href="https://travis-ci.org/" target="_blank">Continuous Integration</a>, and <strong>automated build processes</strong>, the like of which you can achieve with <strong>PaaS services</strong> (also known as <a href="http://en.wikipedia.org/wiki/Platform_as_a_service" target="_blank">Platform as a Service</a>), such as <a href="https://appharbor.com/" target="_blank">AppHarbor</a>, <a href="http://www.heroku.com/" target="_blank">Heroku</a>, and many others.</p></div>
+
+<div></div>
+
+<div></div>
+
+<div><h2 id="continuous-integration">Continuous Integration</h2> <p>Configuring <a href="https://travis-ci.org/bevacqua/ponyfoo" target="_blank" aria-label="ponyfoo build status on Travis CI">Travis CI</a> was tricky to get right. I configured my <a href="http://about.travis-ci.org/docs/user/build-configuration/" target="_blank" aria-label="Configuring your Travis CI build">.travis.yml</a> file like this:</p> <pre class="md-code-block"><code class="md-code">language: node_js
+
+node_js:
+  - 0.8
+
+script:
+  - &quot;npm install&quot;
+  - &quot;cd src&quot;
+  - &quot;make test&quot;
+</code></pre> <p>This simple configuration just makes sure the server runs on <strong>Node.JS 0.8.x</strong>, and then it runs a little script, where all <a href="https://npmjs.org/" target="_blank" aria-label="Node Packaged Modules">npm</a> packages are installed, and then it runs any unit tests I might have written, making use of a <em>Makefile</em>.</p> <p><em>I didn&#x2019;t actually write any tests just yet</em>, but I will once I get more comfortable with <strong>Node.JS</strong>, and until then, this will come in handy anyways when I forget to include a package in my JSON config.</p> <h2 id="automated-deployments">Automated Deployments</h2> <p><a href="http://www.heroku.com/" target="_blank" aria-label="Heroku Cloud Application Platform">Heroku</a> is an scalable web platform. You can get set up in <em>a few seconds</em>, and all you really need to do to configure your application is create what they call a <a href="https://devcenter.heroku.com/articles/procfile" target="_blank" aria-label="Heroku Documentation">Procfile</a>, mine is simply:</p> <pre class="md-code-block"><code class="md-code">web: node src/server.js
+</code></pre> <p>This configures my <strong>Heroku</strong> application to host a <em>web process</em> and employ <code class="md-code md-code-inline">src/server.js</code> as the <strong>Node.JS</strong> web server. I followed <a href="https://devcenter.heroku.com/articles/nodejs" target="_blank" aria-label="Getting Started with Node.JS on Heroku">this guide</a> to great success. And now, <em>whenever I want to deploy</em>, I can just issue the following <em>git command</em>:</p> <pre class="md-code-block"><code class="md-code md-lang-bash">$ git push heroku master
+</code></pre> <p>That&#x2019;s it. I might even configure a <em>staging environment</em>, which would be an exact replica of my production environment (hey, <strong>it&#x2019;s <em>free</em>!</strong>), except it would have dummy data, and it would be useful to prevent deploying faulty builds directly into production.</p> <p>To manage multiple environments, <a href="https://devcenter.heroku.com/articles/config-vars" target="_blank" aria-label="Heroku Configuration">environment configuration variables</a> come in handy, to store secret values such as your session secret, your database connection string, and particularly, the environment name (such as development, staging, or production).</p> <p>Having a one-step build process is crucial to minimizing room for mistakes during manual deploys, and mandatory if you are serious about protecting your production environment from development bugs. Manual deploys <em>can lead to mistakes</em> like forgetting to copy a file, or replace a configuration value, or many other mistakes, reasons why you should be doing automated builds if you aren&#x2019;t already.</p></div>

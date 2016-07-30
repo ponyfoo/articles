@@ -1,0 +1,14 @@
+{
+  "id": "543d227946835869100341dc",
+  "author": "543d222f4683586910034197",
+  "title": "A BrowserSync Primer",
+  "slug": "a-browsersync-primer",
+  "tags": [
+    "build",
+    "browsersync",
+    "grunt",
+    "gulp",
+    "npm",
+    "nodemon"
+  ]
+}

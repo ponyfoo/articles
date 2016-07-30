@@ -1,0 +1,12 @@
+{
+  "id": "5524239f832e312c09099c98",
+  "author": "543d222f4683586910034197",
+  "title": "Immutable Deployments and Packer",
+  "slug": "immutable-deployments-packer",
+  "tags": [
+    "packer",
+    "aws",
+    "ami",
+    "immutable-deployments"
+  ]
+}

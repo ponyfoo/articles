@@ -1,0 +1,12 @@
+{
+  "id": "578510092e5faa81036fcdd5",
+  "author": "57850f072e5faa81036fcdd4",
+  "title": "ServiceWorker: A Basic Guide to BackgroundSync",
+  "slug": "backgroundsync",
+  "tags": [
+    "performance",
+    "backgroundsync",
+    "serviceworker",
+    "offline"
+  ]
+}

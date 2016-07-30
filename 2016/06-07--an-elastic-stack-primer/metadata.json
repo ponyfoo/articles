@@ -1,0 +1,11 @@
+{
+  "id": "57573af8687d1d7f0300b2b5",
+  "author": "543d222f4683586910034197",
+  "title": "An Elastic Stack Primer",
+  "slug": "an-elastic-stack-primer",
+  "tags": [
+    "elasticsearch",
+    "logstash",
+    "kibana"
+  ]
+}

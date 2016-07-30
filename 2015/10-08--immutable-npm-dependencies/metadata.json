@@ -1,0 +1,11 @@
+{
+  "id": "5616f25f5f4134d9034bd35e",
+  "author": "543d222f4683586910034197",
+  "title": "Keeping Your npm Dependencies Immutable",
+  "slug": "immutable-npm-dependencies",
+  "tags": [
+    "semver",
+    "immutability",
+    "npm"
+  ]
+}

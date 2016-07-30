@@ -1,0 +1,12 @@
+{
+  "id": "543d227546835869100341d9",
+  "author": "543d222f4683586910034197",
+  "title": "How To Avoid Object.prototype Pollution",
+  "slug": "how-to-avoid-objectprototype-pollution",
+  "tags": [
+    "open-source",
+    "poser",
+    "iframe",
+    "browserify"
+  ]
+}

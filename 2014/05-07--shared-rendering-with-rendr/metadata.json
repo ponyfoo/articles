@@ -1,0 +1,12 @@
+{
+  "id": "543d227046835869100341d5",
+  "author": "543d222f4683586910034197",
+  "title": "Shared Rendering with Rendr",
+  "slug": "shared-rendering-with-rendr",
+  "tags": [
+    "isomorphic",
+    "backbone",
+    "rendr",
+    "mustache"
+  ]
+}

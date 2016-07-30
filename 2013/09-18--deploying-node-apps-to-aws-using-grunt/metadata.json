@@ -1,0 +1,13 @@
+{
+  "id": "543d225346835869100341b9",
+  "author": "543d222f4683586910034197",
+  "title": "Deploying Node apps to AWS using Grunt",
+  "slug": "deploying-node-apps-to-aws-using-grunt",
+  "tags": [
+    "aws",
+    "ec2",
+    "grunt",
+    "nodejs",
+    "grunt-ec2"
+  ]
+}

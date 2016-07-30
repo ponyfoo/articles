@@ -1,0 +1,14 @@
+{
+  "id": "543d227246835869100341d6",
+  "author": "543d222f4683586910034197",
+  "title": "Modularizing Your Front-End",
+  "slug": "modularizing-your-front-end",
+  "tags": [
+    "ponyfoo",
+    "front-end",
+    "modules",
+    "browserify",
+    "npm-run",
+    "gulp"
+  ]
+}

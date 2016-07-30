@@ -1,0 +1,12 @@
+{
+  "id": "5693d117d7cd09a063701567",
+  "author": "543d222f4683586910034197",
+  "title": "Asynchronous I/O with Generators & Promises",
+  "slug": "asynchronous-i-o-with-generators-and-promises",
+  "tags": [
+    "generators",
+    "promises",
+    "javascript",
+    "patterns"
+  ]
+}

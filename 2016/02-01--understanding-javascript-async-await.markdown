@@ -1,0 +1,168 @@
+<div><blockquote>
+  <h1>Understanding JavaScript&#x2019;s async await</h1>
+  <div><p>Earlier this week we took a look at new <a href="https://ponyfoo.com/articles/es2016-features-and-ecmascript-as-a-living-standard" aria-label="ES2016 Features &amp; ECMAScript as a Living Standard">features coming in ES2016</a>. Today we&#x2019;ll learn about <code>async</code> / <code>await</code>.</p><p>The <code>async</code> / <code>await</code> feature didn&#x2019;t make the cut for &#x2026;</p></div>
+</blockquote></div>
+
+<div><p>Earlier this week we took a look at new <a href="https://ponyfoo.com/articles/es2016-features-and-ecmascript-as-a-living-standard" aria-label="ES2016 Features &amp; ECMAScript as a Living Standard">features coming in ES2016</a>. Today we&#x2019;ll learn about <code class="md-code md-code-inline">async</code> / <code class="md-code md-code-inline">await</code>.</p></div>
+
+<div></div>
+
+<div><p>The <code class="md-code md-code-inline">async</code> / <code class="md-code md-code-inline">await</code> feature didn&#x2019;t make the cut for ES2016, but that doesn&#x2019;t mean it won&#x2019;t be coming to JavaScript. At the time of this writing, it&#x2019;s <a href="https://github.com/tc39/ecma262/tree/82bebe057c9fca355cfbfeb36be8e42f18c61e94" target="_blank" aria-label="tc39/ecma262 on GitHub">a <em>Stage 3</em> proposal</a>, and actively being worked on. The feature is <a href="https://blogs.windows.com/msedgedev/2015/09/30/asynchronous-code-gets-easier-with-es2016-async-function-support-in-chakra-and-microsoft-edge/" target="_blank" aria-label="Asynchronous code gets easier with ES2016 Async Function support in Chakra and Microsoft Edge">already in Edge</a>, and <em>should it land in another browser</em> <a href="https://twitter.com/bterlson/status/692464374842290176" target="_blank" aria-label="@bterlson on Twitter">it&#x2019;ll reach Stage 4</a> <em>&#x2013; paving its way for inclusion in the next Edition of the language <a href="https://tc39.github.io/process-document/" target="_blank" aria-label="The TC39 Process Document">(see also: TC39 Process)</a>.</em></p> <p>We&#x2019;ve heard about this feature for a while, but let&#x2019;s drill down into it and see how it works. To be able to grasp the contents of this article, you&#x2019;ll need a solid understanding of promises and generators. These resources should help you out.</p> <ul> <li><a href="https://ponyfoo.com/articles/es6">ES6 Overview in 350 Bullet Points</a></li> <li><a href="https://ponyfoo.com/articles/es6-promises-in-depth">ES6 Promises in Depth</a></li> <li><a href="https://ponyfoo.com/articles/es6-generators-in-depth">ES6 Generators in Depth</a></li> <li><a href="https://ponyfoo.com/articles/asynchronous-i-o-with-generators-and-promises">Asynchronous I/O with Generators &amp; Promises</a></li> <li><a href="http://bevacqua.github.io/promisees/" target="_blank">Promisees Visualization Tool</a></li> </ul></div>
+
+<div><h1 id="using-promises">Using Promises</h1> <p>Let&#x2019;s suppose we had code like the following. Here I&#x2019;m wrapping an HTTP request in a <code class="md-code md-code-inline">Promise</code>. The promise fulfills with the <code class="md-code md-code-inline">body</code> when successful, and is rejected with an <code class="md-code md-code-inline">err</code> reason otherwise. It pulls the HTML for a random article from this blog every time.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> request = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;request&apos;</span>);
+
+<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">getRandomPonyFooArticle</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">return</span> <span class="md-code-keyword">new</span> Promise((resolve, reject) =&gt; {
+    request(<span class="md-code-string">&apos;https://ponyfoo.com/articles/random&apos;</span>, (err, res, body) =&gt; {
+      <span class="md-code-keyword">if</span> (err) {
+        reject(err); <span class="md-code-keyword">return</span>;
+      }
+      resolve(body);
+    });
+  });
+}
+</code></pre> <p>Typical usage of the promised code shown above is below. There, we build a promise chain transforming the HTML page into Markdown of a subset of its DOM, and then into Terminal-friendly output, to finally print it using <code class="md-code md-code-inline">console.log</code>. Always remember to add <code class="md-code md-code-inline">.catch</code> handlers to your promises.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> hget = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;hget&apos;</span>);
+<span class="md-code-keyword">var</span> marked = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;marked&apos;</span>);
+<span class="md-code-keyword">var</span> Term = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;marked-terminal&apos;</span>);
+
+printRandomArticle();
+
+<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">printRandomArticle</span> <span class="md-code-params">()</span> </span>{
+  getRandomPonyFooArticle()
+    .then(html =&gt; hget(html, {
+      markdown: <span class="md-code-literal">true</span>,
+      root: <span class="md-code-string">&apos;main&apos;</span>,
+      ignore: <span class="md-code-string">&apos;.at-subscribe,.mm-comments,.de-sidebar&apos;</span>
+    }))
+    .then(md =&gt; marked(md, {
+      renderer: <span class="md-code-keyword">new</span> Term()
+    }))
+    .then(txt =&gt; <span class="md-code-built_in">console</span>.log(txt))
+    .catch(reason =&gt; <span class="md-code-built_in">console</span>.error(reason));
+}
+</code></pre> <p>When ran, that snippet of code produces output as shown in the following screenshot.</p> <p><a href="https://github.com/bevacqua/read-ponyfoo/blob/966b4ce513250561826871b52cea436e0edbce09/cli" target="_blank" aria-label="bevacqua/read-ponyfoo on GitHub"><img alt="Screenshot" class="" src="https://i.imgur.com/ArxlARC.png"></a></p> <p>That code was <em>&#x201C;better than using callbacks&#x201D;</em>, when it comes to how sequential it feels to read the code.</p> <h1 id="using-generators">Using Generators</h1> <p>We&#x2019;ve already explored generators as a way of making the <code class="md-code md-code-inline">html</code> available in a synthetic <em>&#x201C;synchronous&#x201D;</em> manner <a href="https://ponyfoo.com/articles/es6-generators-in-depth" aria-label="ES6 Generators in Depth on Pony Foo">in the past</a>. Even though the code is now somewhat synchronous, there&#x2019;s quite a bit of wrapping involved, and generators may not be the most straightforward way of accomplishing the results that we want, so we might end up sticking to Promises anyways.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title"><mark class="md-mark md-code-mark">getRandomPonyFooArticle</mark></span> <span class="md-code-params">(gen)</span> </span>{
+  <span class="md-code-keyword">var</span> g = gen();
+  request(<span class="md-code-string">&apos;https://ponyfoo.com/articles/random&apos;</span>, (err, res, body) =&gt; {
+    <span class="md-code-keyword">if</span> (err) {
+      g.throw(err); <span class="md-code-keyword">return</span>;
+    }
+    g.next(body);
+  });
+}
+
+getRandomPonyFooArticle(<span class="md-code-function"><span class="md-code-keyword">function</span>* <span class="md-code-title">printRandomArticle</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">var</span> html = <span class="md-code-keyword">yield</span>;
+  <span class="md-code-keyword">var</span> md = hget(html, {
+    markdown: <span class="md-code-literal">true</span>,
+    root: <span class="md-code-string">&apos;main&apos;</span>,
+    ignore: <span class="md-code-string">&apos;.at-subscribe,.mm-comments,.de-sidebar&apos;</span>
+  });
+  <span class="md-code-keyword">var</span> txt = marked(md, {
+    renderer: <span class="md-code-keyword">new</span> Term()
+  });
+  <span class="md-code-built_in">console</span>.log(txt);
+});
+</code></pre> <blockquote> <p>Keep in mind you should wrap the <code class="md-code md-code-inline">yield</code> call in a <code class="md-code md-code-inline">try</code> / <code class="md-code md-code-inline">catch</code> block to preserve the error handling we had added when using promises.</p> </blockquote> <p>Needless to say, using generators like this <em>doesn&#x2019;t scale well</em>. Besides involving an unintuitive syntax into the mix, your iterator code will be highly coupled to the generator function that&#x2019;s being consumed. That means you&#x2019;ll have to change it often as you add new <code class="md-code md-code-inline">await</code> expressions to the generator. A better alternative is to use the upcoming <strong>Async Function</strong>.</p> <h1 id="using-async-await">Using <code class="md-code md-code-inline">async</code> / <code class="md-code md-code-inline">await</code></h1> <p>When <em>Async Functions</em> finally hit the road, we&#x2019;ll be able to take our <code class="md-code md-code-inline">Promise</code>-based implementation and have it take advantage of the synchronous-looking generator style. Another benefit in this approach is that you won&#x2019;t have to change <code class="md-code md-code-inline">getRandomPonyFooArticle</code> at all, as long as it returns a promise, it can be awaited.</p> <p><strong>Note that <code class="md-code md-code-inline">await</code> may only be used in functions marked with the <code class="md-code md-code-inline">async</code> keyword.</strong> It works similarly to generators, suspending execution in your context until the promise settles. If the awaited expression isn&#x2019;t a promise, its casted into a promise.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">read();
+
+<mark class="md-mark md-code-mark">async</mark> <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">read</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">var</span> html = <mark class="md-mark md-code-mark">await getRandomPonyFooArticle()</mark>;
+  <span class="md-code-keyword">var</span> md = hget(html, {
+    markdown: <span class="md-code-literal">true</span>,
+    root: <span class="md-code-string">&apos;main&apos;</span>,
+    ignore: <span class="md-code-string">&apos;.at-subscribe,.mm-comments,.de-sidebar&apos;</span>
+  });
+  <span class="md-code-keyword">var</span> txt = marked(md, {
+    renderer: <span class="md-code-keyword">new</span> Term()
+  });
+  <span class="md-code-built_in">console</span>.log(txt);
+}
+</code></pre> <blockquote> <p>Again, &#x2013; and just like with generators &#x2013; keep in mind that you should wrap <code class="md-code md-code-inline">await</code> in <code class="md-code md-code-inline">try</code> / <code class="md-code md-code-inline">catch</code> so that you can capture and handle errors in awaited promises from within the <code class="md-code md-code-inline">async</code> function.</p> </blockquote> <p>Furthermore, an <em>Async Function</em> always returns a <code class="md-code md-code-inline">Promise</code>. That promise is rejected in the case of uncaught exceptions, and it&#x2019;s otherwise resolved to the return value of the <code class="md-code md-code-inline">async</code> function. This enables us to invoke an <code class="md-code md-code-inline">async</code> function and mix that with regular promise-based continuation as well. The following example shows how the two may be combined <em><a href="https://t.co/QgSKcLpww9" target="_blank" aria-label="The following code snippet in the Babel REPL">(see Babel REPL)</a></em>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">async <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">asyncFun</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">var</span> value = await Promise
+    .resolve(<span class="md-code-number">1</span>)
+    .then(x =&gt; x * <span class="md-code-number">3</span>)
+    .then(x =&gt; x + <span class="md-code-number">5</span>)
+    .then(x =&gt; x / <span class="md-code-number">2</span>);
+  <span class="md-code-keyword">return</span> value;
+}
+asyncFun().then(x =&gt; <span class="md-code-built_in">console</span>.log(`x: ${x}`));
+<span class="md-code-comment">// &lt;- &apos;x: 4&apos;</span>
+</code></pre> <p>Going back to the previous example, that&#x2019;d mean we could <code class="md-code md-code-inline">return txt</code> from our <code class="md-code md-code-inline">async read</code> function, and allow consumers to do continuation using promises or yet another <em>Async Function</em>. That way, your <code class="md-code md-code-inline">read</code> function becomes only concerned with pulling terminal-readable Markdown from a random article on Pony Foo.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">async <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">read</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">var</span> html = await getRandomPonyFooArticle();
+  <span class="md-code-keyword">var</span> md = hget(html, {
+    markdown: <span class="md-code-literal">true</span>,
+    root: <span class="md-code-string">&apos;main&apos;</span>,
+    ignore: <span class="md-code-string">&apos;.at-subscribe,.mm-comments,.de-sidebar&apos;</span>
+  });
+  <span class="md-code-keyword">var</span> txt = marked(md, {
+    renderer: <span class="md-code-keyword">new</span> Term()
+  });
+  <mark class="md-mark md-code-mark">return</mark> txt;
+}
+</code></pre> <p>Then, you could further <code class="md-code md-code-inline">await read()</code> in another <em>Async Function</em>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">async <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">write</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">var</span> txt = await read();
+  <span class="md-code-built_in">console</span>.log(txt);
+}
+</code></pre> <p>Or you could just use promises for further continuation.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">read().then(txt =&gt; <span class="md-code-built_in">console</span>.log(txt));
+</code></pre> <h1 id="fork-in-the-road">Fork in the Road</h1> <p>In asynchronous code flows, it is commonplace to execute two or more tasks concurrently. While <strong>Async Functions</strong> make it easier to write asynchronous code, they also lend themselves to code that is <em>serial</em>. That is to say: code that executes <strong>one operation at a time</strong>. A function with multiple <code class="md-code md-code-inline">await</code> expressions in it will be suspended once at a time on each <code class="md-code md-code-inline">await</code> expression until that <code class="md-code md-code-inline">Promise</code> is settled, before unsuspending execution and moving onto the next <code class="md-code md-code-inline">await</code> expression <em>&#x2013; not unlike the case we observe with generators and <code class="md-code md-code-inline">yield</code>.</em></p> <p>To work around that you can use <a href="https://ponyfoo.com/articles/es6-promises-in-depth#leveraging-promiseall-and-promiserace" target="_blank" aria-label="Leveraging Promise.all and Promise.race on Pony Foo"><code class="md-code md-code-inline">Promise.all</code></a> to create a single promise that you can <code class="md-code md-code-inline">await</code> on. Of course, the biggest problem is getting in the habit of using <code class="md-code md-code-inline">Promise.all</code> instead of leaving everything to run in a series, as it&#x2019;ll otherwise make a dent in your code&#x2019;s performance.</p> <p>The following example shows how you could <code class="md-code md-code-inline">await</code> on three different promises that could be resolved concurrently. Given that <code class="md-code md-code-inline">await</code> suspends your <code class="md-code md-code-inline">async</code> function and the <code class="md-code md-code-inline">await Promise.all</code> expression ultimately resolves into a <code class="md-code md-code-inline">results</code> array, we can use destructuring to pull individual results out of that array.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">async <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">concurrent</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">var</span> [r1, r2, r3] = <mark class="md-mark md-code-mark">await Promise.all([p1, p2, p3])</mark>;
+}
+</code></pre> <p>At some point, there was an <code class="md-code md-code-inline">await*</code> alternative to the piece of code above, where you didn&#x2019;t have to wrap your promises with <code class="md-code md-code-inline">Promise.all</code>. <em>Babel 5</em> still supports it, but <strong>it was dropped from the spec</strong> (and from Babel 6) <em><a href="https://github.com/rwaldron/tc39-notes/blob/aad8937063ab32eb33ec2a5b40325b1d9f171180/es6/2014-04/apr-10.md#preview-of-asnycawait" target="_blank" aria-label="TC39 Meeting Notes on GitHub">&#x2013; because reasons</a></em>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">async <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">concurrent</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">var</span> [r1, r2, r3] = <mark class="md-mark md-code-mark">await* [p1, p2, p3]</mark>;
+}
+</code></pre> <p>You could still do something like <code class="md-code md-code-inline">all = Promise.all.bind(Promise)</code> to obtain a terse alternative to using <code class="md-code md-code-inline">Promise.all</code>. An upside of this is that you could do the same for <code class="md-code md-code-inline">Promise.race</code>, which didn&#x2019;t have an equivalent to <code class="md-code md-code-inline">await*</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">const</span> all = Promise.all.bind(Promise);
+async <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">concurrent</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">var</span> [r1, r2, r3] = <mark class="md-mark md-code-mark">await all([p1, p2, p3])</mark>;
+}
+</code></pre> <h1 id="error-handling">Error Handling</h1> <p>Note that <strong>errors are swallowed <em>&quot;silently&quot;</em></strong> within an <code class="md-code md-code-inline">async</code> function <em>&#x2013; just like inside normal Promises.</em> Unless we add <code class="md-code md-code-inline">try</code> / <code class="md-code md-code-inline">catch</code> blocks around <code class="md-code md-code-inline">await</code> expressions, uncaught exceptions &#x2013; regardless of whether they were raised in the body of your <code class="md-code md-code-inline">async</code> function or while its suspended during <code class="md-code md-code-inline">await</code> &#x2013; will reject the promise returned by the <code class="md-code md-code-inline">async</code> function.</p> <p>Naturally, this can be seen as a strength: you&#x2019;re able to leverage <code class="md-code md-code-inline">try</code> / <code class="md-code md-code-inline">catch</code> conventions, something you were unable to do with callbacks &#x2013; and <em>somewhat</em> able to with Promises. In this sense, <em>Async Functions</em> are akin to <a href="https://ponyfoo.com/articles/es6-generators-in-depth" aria-label="ES6 Generators in Depth on Pony Foo">generators</a>, where you&#x2019;re also able to leverage <code class="md-code md-code-inline">try</code> / <code class="md-code md-code-inline">catch</code> thanks to function execution suspension turning asynchronous flows into synchronous code.</p> <p>Furthermore, you&#x2019;re able to catch these exceptions from outside the <code class="md-code md-code-inline">async</code> function, simply by adding a <code class="md-code md-code-inline">.catch</code> clause to the promise they return. While this is a flexible way of combining the <code class="md-code md-code-inline">try</code> / <code class="md-code md-code-inline">catch</code> error handling flavor with <code class="md-code md-code-inline">.catch</code> clauses in <em>Promises</em>, it can also lead to confusion and ultimately cause to errors going unhandled.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">read()
+  .then(txt =&gt; <span class="md-code-built_in">console</span>.log(txt))
+  .catch(reason =&gt; <span class="md-code-built_in">console</span>.error(reason));
+</code></pre> <p>We need to be careful and educate ourselves as to the different ways in which we can notice exceptions and then handle, log, or prevent them.</p> <h1 id="using-async-await-today">Using <code class="md-code md-code-inline">async</code> / <code class="md-code md-code-inline">await</code> Today</h1> <p>One way of using <em>Async Functions</em> in your code today is through Babel. This involves a series of modules, but <a href="https://ponyfoo.com/articles/controversial-state-of-javascript-tooling" aria-label="The Controversial State of JavaScript Tooling on Pony Foo">you could always come up with a module</a> that wraps all of these in a single one if you prefer that. I included <a href="https://github.com/timoxley/npm-run" target="_blank" aria-label="timoxley/npm-run on GitHub"><code class="md-code md-code-inline">npm-run</code></a> as a helpful way of keeping everything in locally installed packages.</p> <pre class="md-code-block"><code class="md-code md-lang-bash">npm i -g npm-run
+npm i -D \
+  browserify \
+  babelify \
+  babel-preset-es2015 \
+  babel-preset-stage-<span class="md-code-number">3</span> \
+  babel-runtime \
+  babel-plugin-transform-runtime
+
+<span class="md-code-built_in">echo</span> <span class="md-code-string">&apos;{
+  &quot;presets&quot;: [&quot;es2015&quot;, &quot;stage-3&quot;],
+  &quot;plugins&quot;: [&quot;transform-runtime&quot;]
+}&apos;</span> &gt; .babelrc
+</code></pre> <p>The following command will compile <code class="md-code md-code-inline">example.js</code> through <code class="md-code md-code-inline">browserify</code> while using <code class="md-code md-code-inline">babelify</code> to enable support for <strong>Async Functions</strong>. You can then pipe the script to <code class="md-code md-code-inline">node</code> or save it to disk.</p> <pre class="md-code-block"><code class="md-code md-lang-bash">npm-run browserify -t babelify example.js | node
+</code></pre> <h1 id="further-reading">Further Reading</h1> <p>The <a href="https://tc39.github.io/ecmascript-asyncawait/" target="_blank" aria-label="Async Functions Specification Draft">specification draft for <strong>Async Functions</strong></a> is surprisingly short, and should make up for an interesting read if you&#x2019;re keen on learning more about this upcoming feature.</p> <p>I&#x2019;ve pasted a piece of code below that&#x2019;s meant to help you understand how <code class="md-code md-code-inline">async</code> functions will work internally. Even though we can&#x2019;t polyfill new keywords, its helpful in terms of understanding what goes on behind the curtains of <code class="md-code md-code-inline">async</code> / <code class="md-code md-code-inline">await</code>.</p> <blockquote> <p>Namely, it should be useful to learn that <em>Async Functions</em> internally leverage both <strong>generators and promises</strong>.</p> </blockquote> <p>First off, then, the following bit shows how an <code class="md-code md-code-inline">async function</code> declaration could be dumbed down into a regular <code class="md-code md-code-inline">function</code> that returns the result of feeding <code class="md-code md-code-inline">spawn</code> with a generator function <em>&#x2013; where we&#x2019;ll consider <code class="md-code md-code-inline">await</code> as the syntactic equivalent for <code class="md-code md-code-inline">yield</code>.</em></p> <pre class="md-code-block"><code class="md-code md-lang-javascript">async <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">example</span> <span class="md-code-params">(a, b, c)</span> </span>{
+  <mark class="md-mark md-code-mark">example <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">body</span></span></mark>
+}
+
+<span class="md-code-title">function</span> <span class="md-code-title">example</span> <span class="md-code-params">(a, b, c)</span> {
+  <span class="md-code-keyword">return</span> spawn(<span class="md-code-function"><span class="md-code-keyword">function</span>* <span class="md-code-params">()</span> </span>{
+    <mark class="md-mark md-code-mark">example <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">body</span></span></mark>
+  }, <span class="md-code-title">this</span>);
+}
+</code></pre> <p>In <code class="md-code md-code-inline">spawn</code>, a promise is wrapped around code that will step through the generator function <em>&#x2013; made out of user code &#x2013;</em> in series, forwarding values to your <em>&#x201C;generator&#x201D; code</em> (the <code class="md-code md-code-inline">async</code> function&#x2019;s body). In this sense, we can observe that <em>Async Functions</em> really <strong>are syntactic sugar</strong> on top of generators and promises, which makes it important that you understand how each of these things work in order to get a better understanding into how you can mix, match, and combine these different flavors of asynchronous code flows together.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">spawn</span> <span class="md-code-params">(genF, self)</span> </span>{
+  <span class="md-code-keyword">return</span> <span class="md-code-keyword">new</span> Promise(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(resolve, reject)</span> </span>{
+    <span class="md-code-keyword">var</span> gen = genF.call(self);
+    step(() =&gt; <mark class="md-mark md-code-mark">gen.next(<span class="md-code-literal">undefined</span>)</mark>);
+    <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">step</span> <span class="md-code-params">(nextF)</span> </span>{
+      <span class="md-code-keyword">var</span> next;
+      <span class="md-code-keyword">try</span> {
+        next = nextF();
+      } <span class="md-code-keyword">catch</span>(e) {
+        <span class="md-code-comment">// finished with failure, reject the promise</span>
+        <mark class="md-mark md-code-mark">reject(e);</mark>
+        <span class="md-code-keyword">return</span>;
+      }
+      <span class="md-code-keyword">if</span> (next.done) {
+        <span class="md-code-comment">// finished with success, resolve the promise</span>
+        <mark class="md-mark md-code-mark">resolve(next.value);</mark>
+        <span class="md-code-keyword">return</span>;
+      }
+      <span class="md-code-comment">// not finished, chain off the yielded promise and `step` again</span>
+      Promise.resolve(next.value).then(
+        <mark class="md-mark md-code-mark">v</mark> =&gt; step(() =&gt; <mark class="md-mark md-code-mark">gen.next(v)</mark>),
+        <mark class="md-mark md-code-mark">e</mark> =&gt; step(() =&gt; <mark class="md-mark md-code-mark">gen.throw(e)</mark>)
+      );
+    }
+  });
+}
+</code></pre> <blockquote> <p>The highlighted bits of code should aid you in understanding how the <code class="md-code md-code-inline">async</code> / <code class="md-code md-code-inline">await</code> algorithm iterates over the generator sequence <em>(of <code class="md-code md-code-inline">await</code> expressions)</em>, wrapping each item in the sequence in a promise and then chaining that with the next step in the sequence. When the <strong>sequence is over or one of the promises is rejected</strong>, the promise returned by the <em>underlying generator function</em> is settled.</p> </blockquote> <p><em>Special thanks to <a href="https://twitter.com/ljharb" target="_blank">@ljharb</a>, <a href="https://twitter.com/jaydson" target="_blank">@jaydson</a>, <a href="https://twitter.com/calvinf" target="_blank">@calvinf</a>, <a href="https://twitter.com/ericclemmons" target="_blank">@ericclemmons</a>, <a href="https://twitter.com/sherman3ero" target="_blank">@sherman3ero</a>, <a href="https://twitter.com/matthewmolnar3" target="_blank">@matthewmolnar3</a>, and <a href="https://twitter.com/rauschma" target="_blank">@rauschma</a> for reviewing drafts of this article.</em></p></div>

@@ -1,0 +1,11 @@
+{
+  "id": "559d8a357b52d4ca34d066be",
+  "author": "543d222f4683586910034197",
+  "title": "Testing JavaScript Modules with Tape",
+  "slug": "testing-javascript-modules-with-tape",
+  "tags": [
+    "tape",
+    "proxyquire",
+    "sinon"
+  ]
+}

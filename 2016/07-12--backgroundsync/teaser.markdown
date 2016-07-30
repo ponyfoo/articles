@@ -1,0 +1,1 @@
+Picture the scene. You're using your mobile device to browse a website and book some important concert tickets. You've have been eagerly awaiting this concert for months. You get right through to the checkout screen, enter your card details and hit submit. And then your flaky 3G connection drops. Screaming and pain ensues.

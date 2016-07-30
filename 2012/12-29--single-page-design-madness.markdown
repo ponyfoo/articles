@@ -1,0 +1,149 @@
+<div><blockquote>
+  <h1>Single Page Design Madness</h1>
+  <div><p>A few days passed, a couple lessons learned. I promised myself not to spend too much time trying to make something perfect, but rather keep a <em>lean approach</em> and moving &#x2026;</p></div>
+</blockquote></div>
+
+<div><p>A few days passed, a couple lessons learned. I promised myself not to spend too much time trying to make something perfect, but rather keep a <em>lean approach</em> and moving forward.</p></div>
+
+<div></div>
+
+<div><p>So far, and <em>as expected</em>, I&#x2019;ve implemented markdown in the client-side, but while implementing this I also spent a good deal of time fine-tuning the site&#x2019;s design. What I changed is the way in which I was going to <em>constraint browser support</em>.</p></div>
+
+<div><h1 id="not-so-progressively-enhanced"><em>Not so progressively</em> enhanced</h1> <blockquote> <p>Hey, this is a technical blog, I don&#x2019;t need no stinkin&#x2019; IE.</p> </blockquote> <p>I&#x2019;ll support <strong>IE 10</strong>, but that&#x2019;s as far as I&#x2019;m willing to go <strong>right off the bat</strong>. Things like <code class="md-code md-code-inline">localStorage</code> and <code class="md-code md-code-inline">history</code> are supported by <a href="http://caniuse.com/#search=localStorage" target="_blank" aria-label="Can I Use localStorage?"><em>IE8+</em></a> and <a href="http://caniuse.com/#search=history" target="_blank" aria-label="Can I Use history?"><em>IE10+</em></a> respectively, and I didn&#x2019;t want to spend my time patching behavior in earlier versions of <em>IE</em> just yet.</p> <p>When I first though about this project I wanted it to be <a href="http://www.amazon.com/dp/1937557022" target="_blank" aria-label="Mobile First">mobile first</a>, but in order to publish a working version early in 2013 rather than later, I&#x2019;ll be dedicating myself to the <a href="http://phonegap.com/" target="_blank" aria-label="Phone Gap">mobile aspect</a> later on, though I&#x2019;m build the site with mobile in mind.</p> <p>As I went along this past couple of days, I focused on two things.</p> <ul> <li>Front-end <strong>design</strong>, which got to a point where I&#x2019;m pretty comfortable at</li> <li>The way in which I&#x2019;m going to handle the fact that the page is going to behave (given that the idea is to use a <strong>single-page</strong> approach)</li> </ul> <h2 id="front-end-design">Front-end design</h2> <p>On the HTML side of things, I&#x2019;m really enjoying <a href="http://jade-lang.com/" target="_blank" aria-label="Jade Template Language">jade</a>, it definitely sped up my productivity, and thirty minutes into development I felt really comfortable about it. I feel it&#x2019;s the perfect fit for <em>Node</em>. The single thing I like the most is how I write my classes and IDs in the same way I write CSS selectors. If you haven&#x2019;t yet, don&#x2019;t be as skeptical as I was about giving a try. It&#x2019;s <em>awesome</em>.</p> <p>I thought about trying out <a href="http://sass-lang.com/" target="_blank" aria-label="SASS CSS">SASS</a>, but I&#x2019;m not really a fan of their propietary syntax, and <a href="http://lesscss.org/" target="_blank" aria-label="LESS CSS">LESS</a> was so much easier to install. So <a href="http://lesscss.org/" target="_blank" aria-label="LESS CSS"><strong>LESS</strong></a> it is.</p> <p>Other than that, <em>I&#x2019;m not really a fan of using CSS frameworks</em>, so I did most of it by hand, or copying from older projects, which always comes in handy.</p> <p>I tried to keep my CSS as reusable as posible, so I implemented common styles for my buttons, headings, and inputs, which will definitely help in any upcoming additions to the site.</p> <p>Since I suck so much at picking color schemes, and the <a href="http://www.mongodb.org/" target="_blank" aria-label="MongoDB">MongoDB site</a> is pretty, I took their color scheme for simplicity.</p> <p>I didn&#x2019;t pick a code <a href="http://code.google.com/p/google-code-prettify/" target="_blank" aria-label="prettify syntax highlighting">prettify</a> scheme yet for <code class="md-code md-code-inline">code</code> blocks, mostly because I couldn&#x2019;t find a decent one.</p> <blockquote> <p>I&#x2019;ll settle on implementing a color scheme for code blocks by myself, once I get around to it though. It&#x2019;s not an immediate concern anyways.</p> </blockquote> <h1 id="client-side-templates">Client-side templates</h1> <p>In the beginning I was certain I wanted some sort of lightweight templating engine to handle my single-page design requirements. I&#x2019;m liking the solution at which I&#x2019;ve arrived a lot, so I figured I&#x2019;d write about it.</p> <p>The entire site is laid out in a single page, which contains the layout and includes every <em>view template</em> that can be rendered, but initially hidden.</p> <p>For example, lets talk about the template to post a new blog entry. <strong>entry.jade</strong></p> <p>In the page, I include the template as such:</p> <pre class="md-code-block"><code class="md-code md-lang-css">include templates/entry
+
+script(src=&apos;/js/entry.js&apos;)
+</code></pre> <p>This is of course, not as scalable as I&#x2019;d like it to be, but I didn&#x2019;t take the time, <em>yet</em>, to search for and implement a proper <em>asset management system</em>, which would be the appropriate solution to keep view templates <em>self contained</em>.</p> <p>I&#x2019;m not exactly sure going forward how I&#x2019;m going to handle templates that actually require a view model, but for now, a <strong>jade</strong> template will do just fine.</p> <p>This is, as of right now, <strong>entry.jade</strong>:</p> <pre class="md-code-block"><code class="md-code md-lang-css">section#entry-template.template(data-class=&apos;entry-writing&apos;)
+  form#entry-editor(method=&apos;POST&apos;,action=&apos;/write-entry&apos;)
+    div#entry-title-editor
+      label(for=&apos;entry-title&apos;)=&apos;Title&apos;
+      input#entry-title(type=&apos;text&apos;,name=&apos;entry.title&apos;)
+
+    div#wmd-button-bar-brief.wmd-button-bar
+    div
+      textarea#wmd-input-brief.wmd-input.entry-brief(name=&apos;entry.brief&apos;)
+
+    div#wmd-button-bar-text.wmd-button-bar
+    div
+      textarea#wmd-input-text.wmd-input.entry-text(name=&apos;entry.text&apos;)
+
+    article.blog-entry
+      header.blog-entry-title
+      section#wmd-preview-brief.blog-entry-brief
+      section#wmd-preview-text.blog-entry-text
+
+    div#entry-editor-buttons
+      input(type=&apos;submit&apos;,value=&apos;Post&apos;)
+</code></pre> <p>My templating engine will have to deal with <em>displaying</em> or <em>hiding</em> the template as required, through a simple yet powerful system I defined.</p> <p>The client-side <strong>markdown</strong> implementation is not the topic in discussion, so I&#x2019;ll refrain from posting the entire <strong>entry.js</strong> for now, this is the snippet that registers the template with the templating engine.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">nbrut.tt.add({
+    key: <span class="md-code-string">&apos;entry-editor&apos;</span>,
+    alias: <span class="md-code-string">&apos;/write-entry&apos;</span>,
+    trigger: <span class="md-code-string">&apos;#write-entry&apos;</span>,
+    source: <span class="md-code-string">&apos;#entry-template&apos;</span>,
+    title: { value: <span class="md-code-string">&apos;New Post&apos;</span>, formatted: <span class="md-code-literal">true</span> },
+    onAfterActivate: onAfterActivate
+});
+</code></pre> <p>This seemingly innocent function call does a few things. The most important of them are parsing the <strong>DOM</strong> for the template and storing it in a key value dictionary, alongside the provided settings.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">read</span><span class="md-code-params">(template)</span> </span>{
+    <span class="md-code-keyword">var</span> s = $(template.source);
+    <span class="md-code-keyword">if</span> (s.length !== <span class="md-code-number">1</span>){
+        <span class="md-code-keyword">throw</span> <span class="md-code-keyword">new</span> <span class="md-code-built_in">Error</span>(<span class="md-code-string">&apos;template source not unique.&apos;</span>);
+    }
+    <span class="md-code-keyword">var</span> css = s.data(<span class="md-code-string">&apos;class&apos;</span>);
+    <span class="md-code-keyword">var</span> html = s.remove().html();
+
+    template.dom = {
+        html: html,
+        css: css
+    };
+}
+</code></pre> <p>Then it&#x2019;s simply stored in the dictionary:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">templates[settings.key] = settings;
+</code></pre> <p>And now we can <em>activate</em> the template at any time, making it visible:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">nbrut.tt.activate(<span class="md-code-string">&apos;entry-editor&apos;</span>);
+</code></pre> <p>Forcing people to use the <em>Javascript</em> console isn&#x2019;t what I had in mind, so I naturally added a click handler to <em>activate</em> the template:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">trigger.on(<span class="md-code-string">&apos;click&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(e)</span></span>{
+    <span class="md-code-keyword">if</span> (e.which === <span class="md-code-number">1</span>){ <span class="md-code-comment">// left-click</span>
+        activate(settings.key);
+        <span class="md-code-keyword">return</span> <span class="md-code-literal">false</span>;
+    }
+});
+</code></pre> <p>The point of using the <code class="md-code md-code-inline">which</code> property is that I&#x2019;m a <em>huge</em> fan of opening new tabs for just about anything using my mouse wheel, and it infuriates me when I can&#x2019;t do that.</p> <p>Ultimately, when you click on the button, and a template is to be <em>activated</em>, a few things happen.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">activate</span><span class="md-code-params">(key)</span> </span>{
+    <span class="md-code-keyword">var</span> template = templates[key];
+    <span class="md-code-keyword">if</span> (template === <span class="md-code-literal">undefined</span>) {
+        template = templates[<span class="md-code-string">&apos;404&apos;</span>]; <span class="md-code-comment">// fall back to 404.</span>
+    }
+
+    <span class="md-code-keyword">if</span>(!template.initialized){
+        template.initialized = <span class="md-code-literal">true</span>;
+        template.initialize();
+    }
+
+    <span class="md-code-keyword">if</span>(template.container <span class="md-code-keyword">in</span> active) {
+        <span class="md-code-keyword">if</span>(active[template.container] === template &amp;&amp; !template.selfCleanup) {
+            <span class="md-code-keyword">return</span>; <span class="md-code-comment">// already active.</span>
+        } <span class="md-code-keyword">else</span> {
+            deactivateContainer(template.container); <span class="md-code-comment">// clean-up.</span>
+        }
+    }
+
+    activateTemplate(template); <span class="md-code-comment">// set-up.</span>
+
+    template.onAfterActivate();
+}
+</code></pre> <p>We&#x2019;ll come back to the first if clause later. The template initialization is going to prove useful when some sort of one-time preparation for a particular template is required.</p> <p>The third if clause introduces a new dictionary, the <code class="md-code md-code-inline">active</code> dictionary. This one keeps track of which template is <em>active</em> in each container managed by the templating engine. If the container is <em>active</em>, then it gets deactivated, which is a glorified way of saying the container is emptied.</p> <p>If the template doesn&#x2019;t need to refresh itself when it&#x2019;s already active, we don&#x2019;t need to do anything.</p> <p>Once the template is defined, initialized, and the container is ready, the template is set up in <code class="md-code md-code-inline">activateTemplate</code>, and then any <em>post-activation callback</em> that has been provided, executes.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">activateTemplate</span><span class="md-code-params">(template)</span></span>{
+    <span class="md-code-keyword">var</span> c = $(template.container);
+    <span class="md-code-keyword">if</span> (c.length !== <span class="md-code-number">1</span>){
+        <span class="md-code-keyword">throw</span> <span class="md-code-keyword">new</span> <span class="md-code-built_in">Error</span>(<span class="md-code-string">&apos;template container not unique.&apos;</span>);
+    }
+    c.html(template.dom.html);
+    c.attr(<span class="md-code-string">&apos;class&apos;</span>,template.dom.css);
+    active[template.container] = template;
+
+    <span class="md-code-keyword">if</span> (template.container === defaults.container){
+        <span class="md-code-keyword">var</span> title = setTitle(template.title);
+    }
+}
+</code></pre> <p>There isn&#x2019;t a lot to mention about <code class="md-code md-code-inline">activateTemplate</code>, except perhaps that the document title is only updated if <code class="md-code md-code-inline">template.container === defaults.container</code>, which means a full <em>view render</em> took place, instead of just a <em>partial render</em>.</p> <h2 id="what-now-history-navigation">What now? History navigation</h2> <p>Now we have a <em>templating system</em> to go back and forth between our different view templates, which is awesome (and incredibly <em>fast</em>), but this wouldn&#x2019;t be as fancy if it didn&#x2019;t let users navigate like they&#x2019;re used to, through the back and forward buttons in their browsers, so we need to implement <strong>history navigation</strong>.</p> <p>There are a couple of aspects to this. First of all, since we are already <em>switching views</em> on the <em>client side</em>, rather on the <em>server side</em>, we might as well do the routing on the client side:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">server.get(<span class="md-code-string">&apos;/*&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(req,res)</span></span>{
+    res.render(<span class="md-code-string">&apos;index.jade&apos;</span>);
+});
+</code></pre> <blockquote> <p>It&#x2019;s not like I&#x2019;m going to get to <a href="http://theoatmeal.com/" target="_blank" aria-label="The Oatmeal">20 million monthly page views</a> anytime soon, but that&#x2019;s <strong>no excuse</strong> for not improving the experience of the few adventuring ones that <em>dare navigate</em> my site.</p> </blockquote> <p>So now every single <code class="md-code md-code-inline">GET</code> request that hits my site receives the same response. A single page containing templates that enable me to render any of my views. We have three things to take care of now:</p> <ul> <li>Dealing with <strong>404</strong> errors appropriately</li> <li>Keeping track of the user&#x2019;s <strong>navigation history</strong></li> <li><strong>Landing page</strong> that corresponds to the navigation history</li> </ul> <p>To keep track of a user&#x2019;s navigation history, lets go back to the way in which we registered a view template:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">nbrut.tt.add({
+    key: <span class="md-code-string">&apos;entry-editor&apos;</span>,
+    alias: <span class="md-code-string">&apos;/write-entry&apos;</span>,
+    trigger: <span class="md-code-string">&apos;#write-entry&apos;</span>,
+    source: <span class="md-code-string">&apos;#entry-template&apos;</span>,
+    title: { value: <span class="md-code-string">&apos;New Post&apos;</span>, formatted: <span class="md-code-literal">true</span> },
+    onAfterActivate: onAfterActivate
+});
+</code></pre> <p>I explained all of those properties, except for the <em>alias</em>. The alias would be the <em>route</em> that we register with the HTML 5 <a href="https://developer.mozilla.org/en-US/docs/DOM/Manipulating_the_browser_history" target="_blank" aria-label="Manipulating the browser history">history</a> API.</p> <p>So now we&#x2019;ll need to make a couple of subtle changes to the <code class="md-code md-code-inline">activateTemplate</code> function. The first is adding an optional parameter I called <code class="md-code md-code-inline">soft</code>. The second is:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">if</span> (template.container === defaults.container){
+    <span class="md-code-keyword">var</span> title = setTitle(template.title);
+
+    <span class="md-code-keyword">if</span>(!soft){
+        history.pushState(template.key, title, template.alias);
+    }
+}
+</code></pre> <p>We didn&#x2019;t change anything else, thus <code class="md-code md-code-inline">!soft</code> will always be <em>truthy</em>. Each template activation will change the <em>navigation history</em> with the <em>route sugar</em> defined in <code class="md-code md-code-inline">template.alias</code>.</p> <p>In order to <strong>preserve navigation</strong>, since we&#x2019;re manipulating <code class="md-code md-code-inline">history</code> with <code class="md-code md-code-inline">history.pushState</code> we need to handle the <code class="md-code md-code-inline">popstate</code> event, this encompasses two steps. The first is to handle <code class="md-code md-code-inline">popstate</code>, so we&#x2019;ll go ahead and do that:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">$(<span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span></span>{
+    $(<span class="md-code-built_in">window</span>).on(<span class="md-code-string">&apos;popstate&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(e)</span></span>{
+        <span class="md-code-keyword">if</span> (e.originalEvent === <span class="md-code-literal">undefined</span> || e.originalEvent.state === <span class="md-code-literal">null</span>){
+            key = keys[<span class="md-code-built_in">document</span>.location.pathname];
+        } <span class="md-code-keyword">else</span> {
+            key = e.originalEvent.state;
+        }
+        activate(key, <span class="md-code-literal">true</span>);
+    });
+
+    $(<span class="md-code-built_in">window</span>).trigger(<span class="md-code-string">&apos;popstate&apos;</span>); <span class="md-code-comment">// manual trigger fixes an issue in Firefox.</span>
+});
+</code></pre> <p>Here we simply take the key from data passed to the <code class="md-code md-code-inline">state</code>, or from the <code class="md-code md-code-inline">document.location</code>, and pass that along to <code class="md-code md-code-inline">activate</code>, with <code class="md-code md-code-inline">soft = true</code>, meaning we won&#x2019;t be <em>pushing</em> a new <code class="md-code md-code-inline">state</code> this time.</p> <p>The manual trigger fixes an <a href="http://hacks.mozilla.org/2011/03/history-api-changes-in-firefox-4/" target="_blank" aria-label="history API in Firefox">issue in Firefox</a> where it wouldn&#x2019;t <code class="md-code md-code-inline">popstate</code> on document load.</p> <p>The second and last step was to add the <code class="md-code md-code-inline">soft</code> parameter to <code class="md-code md-code-inline">activate</code> as well, and to <em>prevent identical</em> <code class="md-code md-code-inline">state</code> objects to be pushed.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// ...</span>
+
+<span class="md-code-keyword">if</span>(template.container <span class="md-code-keyword">in</span> active) {
+    <span class="md-code-keyword">if</span>(active[template.container] === template) {
+        <span class="md-code-keyword">if</span>(!template.selfCleanup){
+            <span class="md-code-keyword">return</span>;
+        }
+        soft = <span class="md-code-literal">true</span>;
+    } <span class="md-code-keyword">else</span> {
+
+<span class="md-code-comment">// ...</span>
+</code></pre> <p>And regarding the <strong>HTTP 404</strong> status error code won&#x2019;t really be ever happening in our application. That&#x2019;s fine, but we do need to <em>alert our users</em> of the fact that a particular endpoint doesn&#x2019;t match any of the view templates that we can render. For this purpose, I created a very minimal <strong>404</strong> template:</p> <pre class="md-code-block"><code class="md-code">section#not-found-template.template
+    h1=&apos;Not Found&apos;
+    div=&apos;Sorry, the page you are looking for does not exist in the Matrix.&apos;
+</code></pre> <p>Now I just need to <em>register</em> this template in my engine, like so:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">nbrut.tt.add({
+    key: <span class="md-code-string">&apos;404&apos;</span>,
+    source: <span class="md-code-string">&apos;#not-found-template&apos;</span>
+});
+</code></pre> <p>And <em>that&#x2019;s it</em>. Remember there was a <em>fallback</em> to <code class="md-code md-code-inline">template = templates[&apos;404&apos;];</code>, that&#x2019;s all we&#x2019;ll ever need to deal with <strong>404</strong> issues.</p> <h1 id="coming-up">Coming Up</h1> <p>In the <a href="https://ponyfoo.com/2013/01/01/javascript-javascript-javascript" aria-label="Javascript Javascript Javascript">next post</a> I&#x2019;ll delve into <strong>MongoDB</strong>, how to pair it with <strong>Node</strong>, and figuring out <em>how to communicate</em> across all the application layers.</p></div>

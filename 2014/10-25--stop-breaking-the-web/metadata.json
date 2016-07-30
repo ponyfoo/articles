@@ -1,0 +1,13 @@
+{
+  "id": "544baa6b7cb4b7596d5a7216",
+  "author": "543d222f4683586910034197",
+  "title": "Stop Breaking the Web",
+  "slug": "stop-breaking-the-web",
+  "tags": [
+    "performance",
+    "rant",
+    "progressive-enhancement",
+    "graceful-degradation",
+    "polyfill"
+  ]
+}

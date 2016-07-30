@@ -1,0 +1,94 @@
+<div><blockquote>
+  <h1>Server-side React Layout &amp; Side Effects</h1>
+  <div><p>We&#x2019;ve been hard at work last week analyzing how to build a <a href="https://ponyfoo.com/articles/tagged/universal">universal</a> app using React. First we <a href="https://ponyfoo.com/articles/universal-react-babel">looked at the bare minimum needed</a> to run <em>Babel through Browserify &#x2026;</em></p></div>
+</blockquote></div>
+
+<div><p>We&#x2019;ve been hard at work last week analyzing how to build a <a href="https://ponyfoo.com/articles/tagged/universal">universal</a> app using React. First we <a href="https://ponyfoo.com/articles/universal-react-babel">looked at the bare minimum needed</a> to run <em>Babel through Browserify for ES6 and JSX support</em>, as well as how to render a basic app seamlessly in the server and the browser. On friday <a href="https://ponyfoo.com/articles/universal-routing-react-es6">we added <code class="md-code md-code-inline">react-router</code></a> so that <em>view routing is handled for us</em> on both the server-side as well as the client-side &#x2013; universally. Today we&#x2019;ll be <strong>making some tweaks</strong> to what we have so far.</p></div>
+
+<div></div>
+
+<div><p>Particularly, we&#x2019;ll be moving the server-side layout rendering out of <code class="md-code md-code-inline">express-hbs</code> and into another React component, <em>the <code class="md-code md-code-inline">&lt;Layout /&gt;</code> component</em>, which will only be rendered on the server. The reason for that change is one of consistency &#x2013; instead of having to understand <em>(and deal with)</em> two different templating languages in Handlebars and JSX, we&#x2019;ll only be dealing with JSX.</p> <p>After making that change we&#x2019;ll be looking at a couple of <a href="https://github.com/gaearon/react-side-effect" target="_blank"><code class="md-code md-code-inline">react-side-effect</code></a>-powered libraries. One of these will enable us to set the <code class="md-code md-code-inline">document.title</code> declaratively in our views from anywhere in our JSX templates. The other allows us to define <code class="md-code md-code-inline">&lt;meta&gt;</code> tags anywhere in the document as well.</p> <blockquote> <p>Let&#x2019;s get on with it!</p> </blockquote></div>
+
+<div><h2 id="modularizing-the-router">Modularizing the router</h2> <p>The first order of business will be turning our router into an individual module. So far it was just another method in <code class="md-code md-code-inline">app.js</code>, but it&#x2019;d be a bit neater to place it in a file of its own, reducing complexity and finally decoupling <code class="md-code md-code-inline">app.js</code> from the knowledge of how views are rendered, <em>or even routed</em>.</p> <p>You should add this line to <code class="md-code md-code-inline">app.js</code>, after cutting the <code class="md-code md-code-inline">router</code> method from that module.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">import router from <span class="md-code-string">&apos;./router&apos;</span>;
+</code></pre> <p>Now we can move the <code class="md-code md-code-inline">router</code> to a module of its own, the only addition would be a <code class="md-code md-code-inline">export default</code> prefix so that the module <em>exports an API</em> &#x2013; that&#x2019;s exactly the <code class="md-code md-code-inline">router</code> method.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">import React from <span class="md-code-string">&apos;react&apos;</span>;
+import Router from <span class="md-code-string">&apos;react-router&apos;</span>;
+import routes from <span class="md-code-string">&apos;./routes&apos;</span>;
+
+export <span class="md-code-keyword">default</span> <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">router</span> <span class="md-code-params">(req, res, next)</span> </span>{
+  <span class="md-code-keyword">var</span> context = {
+    routes: routes, location: req.url
+  };
+  Router.create(context).run(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">ran</span> <span class="md-code-params">(Handler, state)</span> </span>{
+    res.render(<span class="md-code-string">&apos;layout&apos;</span>, {
+      reactHtml: React.renderToString(<span><span class="md-code-tag">&lt;<span class="md-code-title">Handler</span> /&gt;</span>)
+    });
+  });
+}
+</span></code></pre> <p>What was bugging me at this point was rendering the layout in Handlebars while every view component was using JSX.</p> <h2 id="rendering-the-layout-with-jsx">Rendering the Layout with JSX</h2> <p>I decided to give a shot to a React component for the layout as well. That way I&#x2019;d get more cohesiveness across the codebase <em>(by sticking to a single template engine)</em>, as well as . This component would only be used on the server-side, and we would still render the contents of each individual view separately, as we did before. The distinction is useful for the client-side rendering part, as the layout itself won&#x2019;t be changing &#x2013; for the most part.</p> <p>In the snippet below I introduced an <code class="md-code md-code-inline">import</code> statement that&#x2019;ll get us the <code class="md-code md-code-inline">&lt;Layout /&gt;</code> component, and changed the rendering mechanism to render the layout via React instead of Handlebars. Note how I&#x2019;m passing the <code class="md-code md-code-inline">main</code> HTML for the partial to the layout.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">import React from <span class="md-code-string">&apos;react&apos;</span>;
+import Router from <span class="md-code-string">&apos;react-router&apos;</span>;
+<mark class="md-mark md-code-mark">import Layout from <span class="md-code-string">&apos;./components/Layout&apos;</span>;</mark>
+import routes from <span class="md-code-string">&apos;./routes&apos;</span>;
+
+export <span class="md-code-keyword">default</span> <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">router</span> <span class="md-code-params">(req, res, next)</span> </span>{
+  <span class="md-code-keyword">var</span> context = {
+    routes: routes, location: req.url
+  };
+  Router.create(context).run(ran);
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">ran</span> <span class="md-code-params">(Handler, state)</span> </span>{
+    <span class="md-code-keyword">var</span> doctype = <mark class="md-mark md-code-mark"><span class="md-code-string">&apos;&lt;!doctype html&gt;&apos;</span></mark>;
+    <span class="md-code-keyword">var</span> main = React.renderToString(<span><span class="md-code-tag">&lt;<span class="md-code-title">Handler</span> /&gt;</span>);
+    var full = React.renderToString(<mark class="md-mark md-code-mark"><span class="md-code-tag">&lt;<span class="md-code-title">Layout</span> <span class="md-code-attribute">main</span>=<span class="md-code-value">{main}</span> /&gt;</span></mark>);
+    res.writeHead(200, { &apos;Content-Type&apos;: &apos;text/html&apos; });
+    res.write(doctype + full);
+    res.end();
+  }
+};
+</span></code></pre> <blockquote> <p><strong>JSX is Awkward</strong></p> <p>Keeping the <code class="md-code md-code-inline">&lt;!doctype&gt;</code> out of the JSX template is kind of awkward, but I couldn&#x2019;t figure out a way to include it in the JSX. The problem is that <strong>JSX has an XML style</strong> to its templates &#x2013; meaning you have to use self-closing <code class="md-code md-code-inline">&lt;meta /&gt;</code> and <code class="md-code md-code-inline">&lt;link /&gt;</code> tags. This also makes it hard for you to render HTML comments <code class="md-code md-code-inline">&lt;!-- foo --&gt;</code> &#x2013; I haven&#x2019;t figured out a way how to render those either! Of course, most of the time, you don&#x2019;t want to declare a <code class="md-code md-code-inline">&lt;!doctype&gt;</code> nor to add HTML comments (as opposed to comments in the template itself, which are easy to add).</p> </blockquote> <p>An important portion of the equation is how the <code class="md-code md-code-inline">Layout</code> file should look like. Here&#x2019;s a first version of the layout based on what we used to do in Handlebars. It leverages the <code class="md-code md-code-inline">main</code> partial, which you can access as <code class="md-code md-code-inline">this.props.main</code> in the React component.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">import React from <span class="md-code-string">&apos;react&apos;</span>;
+
+export <span class="md-code-keyword">default</span> <span class="md-code-keyword">class</span> Layout extends React.Component {
+  render () {
+    <span class="md-code-keyword">const</span> { main } = <span class="md-code-keyword">this</span>.props;
+
+    <span class="md-code-keyword">return</span> (
+      <span><span class="md-code-tag">&lt;<span class="md-code-title">html</span>&gt;</span>
+        <span class="md-code-tag">&lt;<span class="md-code-title">body</span>&gt;</span>
+          <span class="md-code-tag">&lt;<span class="md-code-title">main</span> <span class="md-code-attribute"><mark class="md-mark md-code-mark">dangerouslySetInnerHTML</mark></span>=<span class="md-code-value">{{__html:</span> <span class="md-code-attribute">main</span>}} /&gt;</span>
+          <span class="md-code-tag">&lt;<span class="md-code-title">script</span> <span class="md-code-attribute">src</span>=<span class="md-code-value">&apos;/bundle.js&apos;</span>&gt;</span><span></span><span class="md-code-tag">&lt;/<span class="md-code-title">script</span>&gt;</span>
+        <span class="md-code-tag">&lt;/<span class="md-code-title">body</span>&gt;</span>
+      <span class="md-code-tag">&lt;/<span class="md-code-title">html</span>&gt;</span>
+    );
+  }
+};
+</span></code></pre> <p>The <code class="md-code md-code-inline">dangerouslySetInnerHTML</code> property has the noble intention to warn you against injecting unsanitized user input into your site, it&#x2019;s <a href="https://facebook.github.io/react/tips/dangerously-set-inner-html.html" target="_blank" aria-label="&apos;Dangerously Set innerHTML&apos; documentation on React&apos;s website">documentation is very pompous</a> in a <em>&#x201C;you&#x2019;ll probably get it wrong, so we made it a very weird API&#x201D;</em> way. Imagine if everything you could possibly get wrong had a shitty API just so you double check. Wouldn&#x2019;t it be better to <em>just educate developers</em> about <a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet" target="_blank" aria-label="XSS Prevention Cheat Sheet">XSS</a> and <a href="http://www.smashingmagazine.com/2011/01/keeping-web-users-safe-by-sanitizing-input-data/" target="_blank" aria-label="Keeping Web Users Safe By Sanitizing Input Data">user-input sanitization</a>? <code class="md-code md-code-inline">&lt;/rant&gt;</code></p> <h2 id="setting-the-title">Setting the <code class="md-code md-code-inline">&lt;title&gt;</code></h2> <p>When it comes to universal rendering sometimes even the simplest things can become annoying to deal with. One of those things is setting the title of your web pages. Your engine of choice has to be able to set the title on the layout on the server-side directly and then be also able to change <code class="md-code md-code-inline">document.title</code> dynamically on the client-side whenever the view changes. In the case of React I came across a small module that helps me achieve universal view titles with little effort.</p> <p>First off, we&#x2019;ll be installing <a href="https://github.com/gaearon/react-document-title" target="_blank" aria-label="gaearon/react-document-title"><code class="md-code md-code-inline">react-document-title</code></a>. This is a React component you can include in your JSX templates to set the title.</p> <pre class="md-code-block"><code class="md-code md-lang-bash">npm i react-document-title -S
+</code></pre> <p>A nice aspect of how it works is that you can add as many <code class="md-code md-code-inline">&lt;DocumentTitle title=&apos;foo&apos; /&gt;</code> tags in your component, and nest them as deep as you want. The <code class="md-code md-code-inline">react-side-effect</code> library underlying <code class="md-code md-code-inline">react-document-title</code> then figures out what tag was added last, and returns that when <code class="md-code md-code-inline">DocumentTitle.rewind()</code> gets called.</p> <p>Given that this works across all components, we are able to pull the <code class="md-code md-code-inline">title</code> that was defined within one of the partial views, and then we can apply it to the document directly on the server-side.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">import React from <span class="md-code-string">&apos;react&apos;</span>;
+<mark class="md-mark md-code-mark">import DocumentTitle from <span class="md-code-string">&apos;react-document-title&apos;</span>;</mark>
+
+export <span class="md-code-keyword">default</span> <span class="md-code-keyword">class</span> Layout extends React.Component {
+  render () {
+    <span class="md-code-keyword">const</span> { main } = <span class="md-code-keyword">this</span>.props;
+
+    <span class="md-code-keyword">return</span> (
+      <span><span class="md-code-tag">&lt;<span class="md-code-title">html</span>&gt;</span>
+        <span class="md-code-tag">&lt;<span class="md-code-title">head</span>&gt;</span>
+          <span class="md-code-tag">&lt;<span class="md-code-title">title</span>&gt;</span><mark class="md-mark md-code-mark">{DocumentTitle.rewind()}</mark><span class="md-code-tag">&lt;/<span class="md-code-title">title</span>&gt;</span>
+        <span class="md-code-tag">&lt;/<span class="md-code-title">head</span>&gt;</span>
+        <span class="md-code-tag">&lt;<span class="md-code-title">body</span>&gt;</span>
+          <span class="md-code-tag">&lt;<span class="md-code-title">main</span> <span class="md-code-attribute">dangerouslySetInnerHTML</span>=<span class="md-code-value">{{__html:</span> <span class="md-code-attribute">main</span>}} /&gt;</span>
+          <span class="md-code-tag">&lt;<span class="md-code-title">script</span> <span class="md-code-attribute">src</span>=<span class="md-code-value">&apos;/bundle.js&apos;</span>&gt;</span><span></span><span class="md-code-tag">&lt;/<span class="md-code-title">script</span>&gt;</span>
+        <span class="md-code-tag">&lt;/<span class="md-code-title">body</span>&gt;</span>
+      <span class="md-code-tag">&lt;/<span class="md-code-title">html</span>&gt;</span>
+    );
+  }
+};
+</span></code></pre> <p>When it comes to client-side rendering, <a href="https://github.com/gaearon/react-document-title" target="_blank" aria-label="gaearon/react-document-title"><code class="md-code md-code-inline">react-document-title</code></a> will just change <code class="md-code md-code-inline">document.title</code>. If you wanted to add a default title to the pages in case no other component defines a title, you could do it at the <code class="md-code md-code-inline">&lt;App /&gt;</code> level, changing that component as follows:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">import React from <span class="md-code-string">&apos;react&apos;</span>;
+import {RouteHandler} from <span class="md-code-string">&apos;react-router&apos;</span>;
+import DocumentTitle from <span class="md-code-string">&apos;react-document-title&apos;</span>;
+
+export <span class="md-code-keyword">default</span> <span class="md-code-keyword">class</span> App extends React.Component {
+  render () {
+    <span class="md-code-keyword">return</span> <mark class="md-mark md-code-mark">&lt;DocumentTitle title=<span class="md-code-string">&apos;Pony Foo&apos;</span>&gt;</mark>
+      &lt;RouteHandler /&gt;
+    <span><span class="md-code-tag">&lt;/<span class="md-code-title">DocumentTitle</span>&gt;</span>
+  }
+}
+</span></code></pre> <p><em>Ta-da!</em> That was pretty easy. You could also use <a href="https://github.com/geekyme/react-doc-meta" target="_blank" aria-label="geekyme/react-doc-meta"><code class="md-code md-code-inline">react-doc-meta</code></a> to do the same about <code class="md-code md-code-inline">&lt;meta&gt;</code> tags.</p></div>

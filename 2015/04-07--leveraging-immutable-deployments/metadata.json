@@ -1,0 +1,12 @@
+{
+  "id": "55245131ad76b22b098db903",
+  "author": "543d222f4683586910034197",
+  "title": "Leveraging Immutable Deployments",
+  "slug": "leveraging-immutable-deployments",
+  "tags": [
+    "bash",
+    "aws",
+    "ami",
+    "immutable-deployments"
+  ]
+}
