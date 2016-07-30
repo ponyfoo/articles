@@ -5,7 +5,7 @@
 <blockquote><p>A simple guide to getting up and running using Background Sync and Service Workers. Background Sync is a new web API that lets you defer actions until the user has stable connectivity. This makes it great for ensuring that whatever the user wants to send, is actually sent.</p>
 </blockquote>
 
-<div><p>Picture the scene. You&#x2019;re using your mobile device to browse a website and book some important concert tickets. You&#x2019;ve have been eagerly awaiting this concert for months. You get right through to the checkout screen, enter your card details and hit submit. And then your flaky 3G connection drops. Screaming and pain ensues.</p></div>
+<div><p>Picture the scene. You&#x2019;re using your mobile device to browse a website and book some important concert tickets. You&#x2019;ve have been eagerly awaiting this concert for months. You get right through to the checkout screen, enter your card details and hit submit. And then your flaky 3G connection drops. Screaming and pain ensues!</p></div>
 
 <div><em>I&#x2019;m super eager to share the first of many guest posts that will be featured on Pony Foo! <img class="tj-emoji" draggable="false" alt="&#x1F389;" src="https://twemoji.maxcdn.com/2/72x72/1f389.png"></em><p></p> <p>When Dean came to me with the idea of writing an article on ServiceWorker, I was immediately thrilled with his proposal to write about BackgroundSync. I hadn&#x2019;t quite covered that area in previous <a href="https://ponyfoo.com/articles/tagged/serviceworker" target="_blank"><code class="md-code md-code-inline">serviceworker</code></a> articles, and he&#x2019;s put together a piece on what BackgroundSync is, how it works, and why it&#x2019;s useful.</p></div>
 

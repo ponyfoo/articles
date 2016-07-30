@@ -1,25 +1,6 @@
 {
   "id": "578510092e5faa81036fcdd5",
-  "author": {
-    "_id": "57850f072e5faa81036fcdd4",
-    "email": "dean@ponyfoo.com",
-    "password": "$2a$10$1ifWtkfN3Gtgu.WFvnZODep5T8yoTY59y94ws7.4GKPAT2bYVcnO2",
-    "displayName": "Dean Hume",
-    "slug": "dean",
-    "twitter": "DeanoHume",
-    "website": "http://www.deanhume.com/",
-    "avatar": "https://i.imgur.com/y162VUw.png",
-    "bio": "Dean Hume is an Author, Blogger and Google Developer Expert. He is passionate about web performance and regularly writes articles based on all things software development on his blog at http://deanhume.com. His previous speaking engagements include conferences such as Velocity Conference, OSCON, Apps World, and UpFront Conference.",
-    "bioHtml": "<p>Dean Hume is an Author, Blogger and Google Developer Expert. He is passionate about web performance and regularly writes articles based on all things software development on his blog at <a href=\"http://deanhume.com\" target=\"_blank\">http://deanhume.com</a>. His previous speaking engagements include conferences such as Velocity Conference, OSCON, Apps World, and UpFront Conference.</p>",
-    "bioText": "Dean Hume is an Author, Blogger and Google Developer Expert. He is passionate about web performance and regularly writes articles based on all things software development on his blog at …",
-    "__v": 0,
-    "roles": [
-      "articles"
-    ],
-    "created": "2016-07-12T15:38:47.524Z",
-    "bypassEncryption": false,
-    "gravatar": "https://www.gravatar.com/avatar/fcc2f98b3308fe4368829429dae5cfad?d=identicon&r=PG"
-  },
+  "author": "57850f072e5faa81036fcdd4",
   "title": "ServiceWorker: A Basic Guide to BackgroundSync",
   "slug": "backgroundsync",
   "tags": [
