@@ -1,0 +1,65 @@
+<div><blockquote>
+  <h1>A Less Convoluted Event Emitter Implementation</h1>
+  <div><p>I believe that the event emitter implementation in Node could be made way better by providing a way to access the functionality directly without using prototypes. This &#x2026;</p></div>
+</blockquote></div>
+
+<div><p>I believe that the event emitter implementation in Node could be made way better by providing a way to access the functionality directly without using prototypes. This would allow to simply extend any object, such as <code class="md-code md-code-inline">{}</code>, or <code class="md-code md-code-inline">{ pony: &apos;foo&apos; }</code>, with event emitting capabilities. Prototypes enforce limitations for little gain, and that&#x2019;s what we avoid by going around it and merely adding methods on existing objects, without any prototypal inheritance going on.</p></div>
+
+<div></div>
+
+<div><p>In this article I&#x2019;ll explore the implementation that made its way into <a href="https://github.com/bevacqua/contra" target="_blank">contra</a>, an asynchronous flow control library I designed.</p></div>
+
+<div><p>Event emitters usually support multiple types of events, rather than a single one. Let&#x2019;s implement, step by step, our own function to create event emitters, or improve existing objects as event emitters. In a first step, I&#x2019;ll either return the object unchanged, or create a new object if one wasn&#x2019;t provided.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">emitter</span> <span class="md-code-params">(thing)</span> </span>{
+  <span class="md-code-keyword">if</span> (!thing) {
+    thing = {};
+  }
+  <span class="md-code-keyword">return</span> thing;
+}
+</code></pre> <p>Being able to use multiple event types is powerful and only costs us an object to store the mapping of event types to event listeners. Similarly, we&#x2019;ll use an array for each event type, so that we can bind multiple event listeners to each event type. I&#x2019;ll also add a simple function which registers event listeners while I&#x2019;m at it.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">emitter</span> <span class="md-code-params">(thing)</span> </span>{
+  <span class="md-code-keyword">var</span> events = {};
+
+  <span class="md-code-keyword">if</span> (!thing) {
+    thing = {};
+  }
+
+  thing.on = <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(type, listener)</span> </span>{
+    <span class="md-code-keyword">if</span> (!events[type]) {
+      events[type] = [listener];
+    } <span class="md-code-keyword">else</span> {
+      events[type].push(listener);
+    }
+  };
+
+  <span class="md-code-keyword">return</span> thing;
+}
+</code></pre> <p>So far so good, now you can add event listeners, once an emitter is created. This is how it&#x2019;d work. Keep in mind that listeners can be provided with an arbitrary number of arguments, when an event is fired, and we&#x2019;ll implement the method to fire events next.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> thing = emitter();
+
+thing.on(<span class="md-code-string">&apos;change&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;thing changed!&apos;</span>);
+});
+</code></pre> <p>Naturally, that works just like a DOM event listener. All we need to do now is implement the method which fires the events. Without it, there wouldn&#x2019;t be an event emitter. I&#x2019;ll implement an <code class="md-code md-code-inline">emit</code> method which allows you to fire the event listeners for a particular event type, passing in an arbitrary number of arguments. Here is how it&#x2019;d look like.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">thing.emit = <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(type)</span> </span>{
+  <span class="md-code-keyword">var</span> evt = events[type];
+  <span class="md-code-keyword">if</span> (!evt) {
+    <span class="md-code-keyword">return</span>;
+  }
+  <span class="md-code-keyword">var</span> args = <span class="md-code-built_in">Array</span>.prototype.slice.call(<span class="md-code-built_in">arguments</span>, <span class="md-code-number">1</span>);
+  <span class="md-code-keyword">for</span> (<span class="md-code-keyword">var</span> i = <span class="md-code-number">0</span>; i &lt; evt.length; i++) {
+    evt[i].apply(thing, args);
+  }
+};
+</code></pre> <p>The <code class="md-code md-code-inline">Array.prototype.slice.call(arguments, 1)</code> statement is an interesting one. Here I&#x2019;m apply <code class="md-code md-code-inline">Array.prototype.slice</code> on the <code class="md-code md-code-inline">arguments</code> object, and telling it to start at index 1. This does two things for me. It casts the arguments object into a true array, and it gives me a nice array with all of the arguments that were passed into <code class="md-code md-code-inline">emit</code>, except for the event type, which I don&#x2019;t need to invoke the event listeners.</p> <p>There&#x2019;s one last tweak I&#x2019;d like to do, which is executing the listeners asynchronously, so that they don&#x2019;t halt execution of the main loop if one of them blows up. You could also use a try catch block here, but I&#x2019;d rather not get involved with exceptions in event listeners, let the consumer handle that. To achieve this, I&#x2019;ll just use a <code class="md-code md-code-inline">setTimeout</code> call, as shown below.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">thing.emit = <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(type)</span> </span>{
+  <span class="md-code-keyword">var</span> evt = events[type];
+  <span class="md-code-keyword">if</span> (!evt) {
+    <span class="md-code-keyword">return</span>;
+  }
+  <span class="md-code-keyword">var</span> args = <span class="md-code-built_in">Array</span>.prototype.slice.call(<span class="md-code-built_in">arguments</span>, <span class="md-code-number">1</span>);
+  <span class="md-code-keyword">for</span> (<span class="md-code-keyword">var</span> i = <span class="md-code-number">0</span>; i &lt; evt.length; i++) {
+    debounce(evt[i]);
+  }
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">debounce</span> <span class="md-code-params">(e)</span> </span>{
+    setTimeout(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
+      e.apply(thing, args);
+    }, <span class="md-code-number">0</span>);
+  }
+};
+</code></pre> <p>You should now be able to create emitter objects, or you can also turn existing objects into event emitters. Note that, because I&#x2019;m debouncing the event listeners, if an event throws the rest <em>will still run to completion</em>. This is not always the case in other implementations of events.</p> <h4 id="emitters-inside-contra">Emitters inside <code class="md-code md-code-inline">contra</code></h4> <p>If you check out the documentation for <a href="https://github.com/bevacqua/contra" target="_blank" aria-label="Contra: Asynchronous flow control with a functional taste to it">contra</a> you&#x2019;ll find out that the interface to interact with <code class="md-code md-code-inline">&#x3BB;.emitter</code> is basically the same as what I&#x2019;ve just explained. In addition to the <code class="md-code md-code-inline">on()</code> and <code class="md-code md-code-inline">emit()</code> methods, the implementation in <code class="md-code md-code-inline">contra</code> offers a <code class="md-code md-code-inline">once()</code> method which would register an event handler that should only trigger once, and an <code class="md-code md-code-inline">off()</code> method which can turn off any listener, including those registered by <code class="md-code md-code-inline">once()</code>, all while staying <a href="https://github.com/bevacqua/contra/blob/master/src/contra.js#L140-L171" target="_blank" aria-label="Contra&apos;s implementation of Event Emitters">around 30 lines</a> of code!</p></div>

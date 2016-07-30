@@ -1,0 +1,3 @@
+Earlier today, [Tom Dale published an article][1] sharing his views on the whole "server-side vs client-side rendered apps" debacle. I was tempted to call this article **No. You're Missing the Point of Server-Side Rendered JavaScript Apps!**, but that would've been way too long, _and kind of childish_. I agree with the first sentence in his article, where he states that there's a lot of confusion about _"the push to rendering JavaScript apps on the server-side"_. There were many other parts of the article I agreed with, and a few I didn't agree so much with. There's also some points which weren't discussed but I'd like to raise myself.
+
+[1]: http://tomdale.net/2015/02/youre-missing-the-point-of-server-side-rendered-javascript-apps/

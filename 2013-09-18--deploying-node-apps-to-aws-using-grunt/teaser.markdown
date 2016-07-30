@@ -1,0 +1,1 @@
+I've been toying with **AWS** for a few days now, and I wanted to share my experience and my approach with you. My goal was to set up a deploy flow in Grunt to enable me to spin up new [EC2][3] instances in the AWS cloud and deploy to them easily.

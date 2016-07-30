@@ -1,0 +1,314 @@
+<div><blockquote>
+  <h1>JavaScript Quality Guide</h1>
+  <div><p>I&#x2019;ve recently created a <a href="https://github.com/bevacqua/js" target="_blank">JavaScript Quality Guide</a>, and I wanted to share it on Pony Foo as well. The latest version can be <a href="https://github.com/bevacqua/js" target="_blank">found on GitHub</a>. As <em>&#x2026;</em></p></div>
+</blockquote></div>
+
+<div><p>I&#x2019;ve recently created a <a href="https://github.com/bevacqua/js" target="_blank">JavaScript Quality Guide</a>, and I wanted to share it on Pony Foo as well. The latest version can be <a href="https://github.com/bevacqua/js" target="_blank">found on GitHub</a>. As <em>all-things-style-guides</em> go, it&#x2019;s super opinionated so take it with a pinch of salt.</p></div>
+
+<div></div>
+
+<div></div>
+
+<div><p>This style guide aims to provide the ground rules for an application&#x2019;s JavaScript code, such that it&#x2019;s highly readable and consistent across different developers on a team. The focus is put on quality and coherence across the different pieces of your application.</p> <h2 id="modules">Modules</h2> <p>This style guide assumes you&#x2019;re using a module system such as <a href="http://wiki.commonjs.org/wiki/CommonJS" target="_blank">CommonJS</a>, <a href="http://requirejs.org/docs/whyamd.html" target="_blank">AMD</a>, <a href="http://eviltrout.com/2014/05/03/getting-started-with-es6.html" target="_blank">ES6 Modules</a>, or any other kind of module system. Modules systems provide individual scoping, avoid leaks to the <code class="md-code md-code-inline">global</code> object, and improve code base organization by <strong>automating dependency graph generation</strong>, instead of having to resort to manually creating tens of <code class="md-code md-code-inline">&lt;script&gt;</code> tags.</p> <p>Module systems also provide us with dependency injection patterns, which are crucial when it comes to testing individual components in isolation.</p> <h2 id="strict-mode">Strict Mode</h2> <p><strong>Always</strong> put <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" target="_blank"><code class="md-code md-code-inline">&apos;use strict&apos;;</code></a> at the top of your modules. Strict mode allows you to catch non-sensical behavior, discourages poor practices, and <em>is faster</em> because it allows compilers to make certain assumptions about your code.</p> <h2 id="spacing">Spacing</h2> <p>Spacing must be consistent across every file in the application. To this end, using something like <a href="https://github.com/sindresorhus/editorconfig-sublime" target="_blank"><code class="md-code md-code-inline">.editorconfig</code></a> configuration files is highly encouraged. Here are the defaults I suggest to get started with JavaScript indentation.</p> <pre class="md-code-block"><code class="md-code md-lang-ini"># editorconfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+</code></pre> <p>Settling for either tabs or spaces is up to the particularities of a project, but I recommend using 2 spaces for indentation. The <code class="md-code md-code-inline">.editorconfig</code> file can take care of that for us and everyone would be able to create the correct tabs by pressing the tab key.</p> <p>Spacing doesn&#x2019;t just entail tabbing, but also the spaces before, after, and in between arguments of a function declaration. This kind of spacing is <strong>typically highly irrelevant to get right</strong>, and it&#x2019;ll be hard for most teams to even arrive at a scheme that will satisfy everyone.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{}
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">( a, b )</span></span>{}
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(a, b)</span> </span>{}
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(a,b)</span> </span>{}
+</code></pre> <p>Try to keep these differences to a minimum, but don&#x2019;t put much thought to it either.</p> <p>Where possible, improve readability by keeping lines below the 80-character mark.</p> <h2 id="semicolons">Semicolons<code class="md-code md-code-inline">;</code></h2> <p>Automatic Semicolon Insertion <em>(ASI)</em> is not a feature. <a href="http://benalman.com/news/2013/01/advice-javascript-semicolon-haters/" target="_blank">Don&#x2019;t rely on it</a>. It&#x2019;s <a href="http://www.2ality.com/2011/05/semicolon-insertion.html" target="_blank">super complicated</a> and there&#x2019;s no practical reason to burden all of the developers in a team for not possessing <strong>the frivolous knowledge of how ASI works</strong>. Avoid headaches, avoid ASI.</p> <blockquote> <p><strong>Always add semicolons where needed</strong></p> </blockquote> <h2 id="style-checking">Style Checking</h2> <p><strong>Don&#x2019;t</strong>. Seriously, <a href="https://github.com/mdevils/node-jscs" target="_blank">this is super painful</a> for everyone involved, and no observable gain is attained from enforcing such harsh policies.</p> <h2 id="linting">Linting</h2> <p>On the other hard, linting is sometimes necessary. Again, don&#x2019;t use a linter that&#x2019;s super opinionated about how the code should be styled, like <a href="http://www.jslint.com/" target="_blank"><code class="md-code md-code-inline">jslint</code></a> is. Instead use something more lenient, like <a href="https://github.com/jshint/jshint/" target="_blank"><code class="md-code md-code-inline">jshint</code></a> or <a href="https://github.com/eslint/eslint" target="_blank"><code class="md-code md-code-inline">eslint</code></a>.</p> <p>A few tips when using JSHint.</p> <ul> <li>Declare a <code class="md-code md-code-inline">.jshintignore</code> file and include <code class="md-code md-code-inline">node_modules</code>, <code class="md-code md-code-inline">bower_components</code>, and the like</li> <li>You can use a <code class="md-code md-code-inline">.jshintrc</code> file like the one below to keep your rules together</li> </ul> <pre class="md-code-block"><code class="md-code md-lang-json">{
+  &quot;<span class="md-code-attribute">curly</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">eqeqeq</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">newcap</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">noarg</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">noempty</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">nonew</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">sub</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">undef</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">unused</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">trailing</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">boss</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">eqnull</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">strict</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">immed</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">expr</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span></span>,
+  &quot;<span class="md-code-attribute">latedef</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;nofunc&quot;</span></span>,
+  &quot;<span class="md-code-attribute">quotmark</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;single&quot;</span></span>,
+  &quot;<span class="md-code-attribute">indent</span>&quot;: <span class="md-code-value"><span class="md-code-number">2</span></span>,
+  &quot;<span class="md-code-attribute">node</span>&quot;: <span class="md-code-value"><span class="md-code-literal">true</span>
+</span>}
+</code></pre> <p>By no means are these rules the ones you should stick to, but <strong>it&#x2019;s important to find the sweet spot between not linting at all and not being super obnoxious about coding style</strong>.</p> <h2 id="strings">Strings</h2> <p>Strings should always be quoted using the same quotation mark. Use <code class="md-code md-code-inline">&apos;</code> or <code class="md-code md-code-inline">&quot;</code> consistently throughout your codebase. Ensure the team is using the same quotation mark in every portion of JavaScript that&#x2019;s authored.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> message = <span class="md-code-string">&apos;oh hai &apos;</span> + name + <span class="md-code-string">&quot;!&quot;</span>;
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> message = <span class="md-code-string">&apos;oh hai &apos;</span> + name + <span class="md-code-string">&apos;!&apos;</span>;
+</code></pre> <p>Usually you&#x2019;ll be a happier JavaScript developer if you hack together a parameter-replacing method like <a href="http://nodejs.org/api/util.html#util_util_format_format" target="_blank"><code class="md-code md-code-inline">util.format</code> in Node</a>. That way it&#x2019;ll be far easier to format your strings, and the code looks a lot cleaner too.</p> <h5 id="better">Better</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> message = util.format(<span class="md-code-string">&apos;oh hai %s!&apos;</span>, name);
+</code></pre> <p>You could implement something similar using the piece of code below.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">format</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">var</span> args = [].slice.call(<span class="md-code-built_in">arguments</span>);
+  <span class="md-code-keyword">var</span> initial = args.shift();
+
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">replacer</span> <span class="md-code-params">(text, replacement)</span> </span>{
+    <span class="md-code-keyword">return</span> text.replace(<span class="md-code-string">&apos;%s&apos;</span>, replacement);
+  }
+  <span class="md-code-keyword">return</span> args.reduce(replacer, initial);
+}
+</code></pre> <p>To declare multi-line strings, particularly when talking about HTML snippets, it&#x2019;s sometimes best to use an array as a buffer and then join its parts. The string concatenating style may be faster but it&#x2019;s also much harder to keep track of.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> html = [
+  <span class="md-code-string">&apos;&lt;div&gt;&apos;</span>,
+    format(<span class="md-code-string">&apos;&lt;span class=&quot;monster&quot;&gt;%s&lt;/span&gt;&apos;</span>, name),
+  <span class="md-code-string">&apos;&lt;/div&gt;&apos;</span>
+].join(<span class="md-code-string">&apos;&apos;</span>);
+</code></pre> <p>With the array builder style, you can also push parts of the snippet and then join everything together at the end. This is in fact what some <a href="https://github.com/visionmedia/jade" target="_blank">string templating engines like Jade</a> prefer to do.</p> <h2 id="variable-declaration">Variable Declaration</h2> <p>Always declare variables in <strong>a consistent manner</strong>, and at the top of their scope. Keeping variable declarations to <em>one per line is encouraged</em>. Comma-first, a single <code class="md-code md-code-inline">var</code> statement, multiple <code class="md-code md-code-inline">var</code> statements, it&#x2019;s all fine, just be consistent across the project, and ensure the team is on the same page.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> foo = <span class="md-code-number">1</span>,
+    bar = <span class="md-code-number">2</span>;
+
+<span class="md-code-keyword">var</span> baz;
+<span class="md-code-keyword">var</span> pony;
+
+<span class="md-code-keyword">var</span> a
+  , b;
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> foo = <span class="md-code-number">1</span>;
+
+<span class="md-code-keyword">if</span> (foo &gt; <span class="md-code-number">1</span>) {
+  <span class="md-code-keyword">var</span> bar = <span class="md-code-number">2</span>;
+}
+</code></pre> <h5 id="good">Good</h5> <p><sub>Just because they&#x2019;re consistent with each other, not because of the style</sub></p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> foo = <span class="md-code-number">1</span>;
+<span class="md-code-keyword">var</span> bar = <span class="md-code-number">2</span>;
+
+<span class="md-code-keyword">var</span> baz;
+<span class="md-code-keyword">var</span> pony;
+
+<span class="md-code-keyword">var</span> a;
+<span class="md-code-keyword">var</span> b;
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> foo = <span class="md-code-number">1</span>;
+<span class="md-code-keyword">var</span> bar;
+
+<span class="md-code-keyword">if</span> (foo &gt; <span class="md-code-number">1</span>) {
+  bar = <span class="md-code-number">2</span>;
+}
+</code></pre> <p>Variable declarations that aren&#x2019;t immediately assigned a value are acceptable to share the same line of code.</p> <h5 id="acceptable">Acceptable</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> a = <span class="md-code-string">&apos;a&apos;</span>;
+<span class="md-code-keyword">var</span> b = <span class="md-code-number">2</span>;
+<span class="md-code-keyword">var</span> i, j;
+</code></pre> <h2 id="conditionals">Conditionals</h2> <p><strong>Brackets are enforced</strong>. This, together with a reasonable spacing strategy will help you avoid mistakes such as <a href="https://www.imperialviolet.org/2014/02/22/applebug.html" target="_blank">Apple&#x2019;s SSL/TLS bug</a>.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">if</span> (err) <span class="md-code-keyword">throw</span> err;
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">if</span> (err) { <span class="md-code-keyword">throw</span> err; }
+</code></pre> <p>Avoid using <code class="md-code md-code-inline">==</code> and <code class="md-code md-code-inline">!=</code> operators, always favor <code class="md-code md-code-inline">===</code> and <code class="md-code md-code-inline">!==</code>. These operators are called the &#x201C;strict equality operators&#x201D;, while <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" target="_blank">their counterparts will attempt to cast the operands</a> into the same value type.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">isEmptyString</span> <span class="md-code-params">(text)</span> </span>{
+  <span class="md-code-keyword">return</span> text == <span class="md-code-string">&apos;&apos;</span>;
+}
+
+isEmptyString(<span class="md-code-number">0</span>);
+<span class="md-code-comment">// &lt;- true</span>
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">isEmptyString</span> <span class="md-code-params">(text)</span> </span>{
+  <span class="md-code-keyword">return</span> text === <span class="md-code-string">&apos;&apos;</span>;
+}
+
+isEmptyString(<span class="md-code-number">0</span>);
+<span class="md-code-comment">// &lt;- false</span>
+</code></pre> <h2 id="ternary-operators">Ternary Operators</h2> <p>Ternary operators are fine for clear-cut conditionals, but unacceptable for confusing choices. As a rule, if you can&#x2019;t eye-parse it as fast as your brain can interpret the text that declares the ternary operator, chances are it&#x2019;s probably too complicated for its own good.</p> <p>jQuery is a prime example of a codebase that&#x2019;s <a href="https://github.com/jquery/jquery/blob/c869a1ef8a031342e817a2c063179a787ff57239/src/ajax.js#L117" target="_blank"><strong>filled with nasty ternary operators</strong></a>.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">calculate</span> <span class="md-code-params">(a, b)</span> </span>{
+  <span class="md-code-keyword">return</span> a &amp;&amp; b ? <span class="md-code-number">11</span> : a ? <span class="md-code-number">10</span> : b ? <span class="md-code-number">1</span> : <span class="md-code-number">0</span>;
+}
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">getName</span> <span class="md-code-params">(mobile)</span> </span>{
+  <span class="md-code-keyword">return</span> mobile ? mobile.name : <span class="md-code-string">&apos;Generic Player&apos;</span>;
+}
+</code></pre> <p>In cases that may prove confusing just use <code class="md-code md-code-inline">if</code> and <code class="md-code md-code-inline">else</code> statements instead.</p> <h2 id="functions">Functions</h2> <p>When declaring a function, always use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function" target="_blank">function expression form</a> instead of <a href="http://stackoverflow.com/q/336859/389745" target="_blank">function declarations</a>.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> sum = <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(x, y)</span> </span>{
+  <span class="md-code-keyword">return</span> x + y;
+};
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">sum</span> <span class="md-code-params">(x, y)</span> </span>{
+  <span class="md-code-keyword">return</span> x + y;
+}
+</code></pre> <p>That being said, there&#x2019;s nothing wrong with function declarations that are just <a href="http://ejohn.org/blog/partial-functions-in-javascript/" target="_blank">currying another function</a>.</p> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> plusThree = sum.bind(<span class="md-code-literal">null</span>, <span class="md-code-number">3</span>);
+</code></pre> <p>Keep in mind that <a href="https://github.com/buildfirst/buildfirst/tree/master/ch05/04_hoisting" target="_blank">function expressions will be hoisted</a> to the top of the scope so it doesn&#x2019;t matter the order they are declared in. That being said, you should always keep functions at the top level in a scope, and avoid placing them inside conditional statements.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">if</span> (<span class="md-code-built_in">Math</span>.random() &gt; <span class="md-code-number">0.5</span>) {
+  sum(<span class="md-code-number">1</span>, <span class="md-code-number">3</span>);
+  
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">sum</span> <span class="md-code-params">(x, y)</span> </span>{
+    <span class="md-code-keyword">return</span> x + y;
+  }
+}
+
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">if</span> (<span class="md-code-built_in">Math</span>.random() &gt; <span class="md-code-number">0.5</span>) {
+  sum(<span class="md-code-number">1</span>, <span class="md-code-number">3</span>);
+}
+
+<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">sum</span> <span class="md-code-params">(x, y)</span> </span>{
+  <span class="md-code-keyword">return</span> x + y;
+}
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">sum</span> <span class="md-code-params">(x, y)</span> </span>{
+  <span class="md-code-keyword">return</span> x + y;
+}
+
+<span class="md-code-keyword">if</span> (<span class="md-code-built_in">Math</span>.random() &gt; <span class="md-code-number">0.5</span>) {
+  sum(<span class="md-code-number">1</span>, <span class="md-code-number">3</span>);
+}
+</code></pre> <p>If you need a <em>&#x201C;no-op&#x201D;</em> method you can use either <code class="md-code md-code-inline">Function.prototype</code>, or <code class="md-code md-code-inline">function noop () {}</code>. Ideally a single reference to <code class="md-code md-code-inline">noop</code> is used throughout the application.</p> <p>Whenever you have to manipulate the <code class="md-code md-code-inline">arguments</code> object, or other array-likes, cast them to an array.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> i;
+
+<span class="md-code-keyword">for</span> (i = <span class="md-code-number">0</span>; i &lt; <span class="md-code-built_in">arguments</span>.length; i++) {
+  <span class="md-code-built_in">console</span>.log(<span class="md-code-built_in">arguments</span>(i));
+}
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript">[].slice.call(<span class="md-code-built_in">arguments</span>).forEach(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(value)</span> </span>{
+  <span class="md-code-built_in">console</span>.log(value);
+});
+</code></pre> <p>Don&#x2019;t declare functions inside of loops.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> values = [<span class="md-code-number">1</span>, <span class="md-code-number">2</span>, <span class="md-code-number">3</span>];
+<span class="md-code-keyword">var</span> i;
+
+<span class="md-code-keyword">for</span> (i = <span class="md-code-number">0</span>; i &lt; values.length; i++) {
+  setTimeout(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
+    <span class="md-code-built_in">console</span>.log(values[i]);
+  }, <span class="md-code-number">1000</span> * i);
+}
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> values = [<span class="md-code-number">1</span>, <span class="md-code-number">2</span>, <span class="md-code-number">3</span>];
+<span class="md-code-keyword">var</span> i;
+
+<span class="md-code-keyword">for</span> (i = <span class="md-code-number">0</span>; i &lt; values.length; i++) {
+  setTimeout(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(i)</span> </span>{
+    <span class="md-code-keyword">return</span> <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
+      <span class="md-code-built_in">console</span>.log(values[i]);
+    };
+  }(i), <span class="md-code-number">1000</span> * i);
+}
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> values = [<span class="md-code-number">1</span>, <span class="md-code-number">2</span>, <span class="md-code-number">3</span>];
+<span class="md-code-keyword">var</span> i;
+
+<span class="md-code-keyword">for</span> (i = <span class="md-code-number">0</span>; i &lt; values.length; i++) {
+  wait(i);
+}
+
+<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">wait</span> <span class="md-code-params">(i)</span> </span>{
+  setTimeout(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
+    <span class="md-code-built_in">console</span>.log(values[i]);
+  }, <span class="md-code-number">1000</span> * i);
+}
+</code></pre> <p>Or even better, just use <code class="md-code md-code-inline">.forEach</code> which doesn&#x2019;t have the same caveats as declaring functions in <code class="md-code md-code-inline">for</code> loops.</p> <h5 id="better">Better</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript">[<span class="md-code-number">1</span>, <span class="md-code-number">2</span>, <span class="md-code-number">3</span>].forEach(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(value, i)</span> </span>{
+  setTimeout(<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
+    <span class="md-code-built_in">console</span>.log(value);
+  }, <span class="md-code-number">1000</span> * i);
+});
+</code></pre> <p>Whenever a method is non-trivial, make the effort to <strong>use a named function expression rather than an anonymous function</strong>. This will make it easier to pinpoint the root cause of an exception when analyzing stack traces.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">once</span> <span class="md-code-params">(fn)</span> </span>{
+  <span class="md-code-keyword">var</span> ran = <span class="md-code-literal">false</span>;
+  <span class="md-code-keyword">return</span> <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
+    <span class="md-code-keyword">if</span> (ran) { <span class="md-code-keyword">return</span> };
+    ran = <span class="md-code-literal">true</span>;
+    fn.apply(<span class="md-code-keyword">this</span>, <span class="md-code-built_in">arguments</span>);
+  };
+}
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">once</span> <span class="md-code-params">(fn)</span> </span>{
+  <span class="md-code-keyword">var</span> ran = <span class="md-code-literal">false</span>;
+  <span class="md-code-keyword">return</span> <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">run</span> <span class="md-code-params">()</span> </span>{
+    <span class="md-code-keyword">if</span> (ran) { <span class="md-code-keyword">return</span> };
+    ran = <span class="md-code-literal">true</span>;
+    fn.apply(<span class="md-code-keyword">this</span>, <span class="md-code-built_in">arguments</span>);
+  };
+}
+</code></pre> <p>Avoid keeping indentation levels from raising more than necessary by using guard clauses instead of flowing <code class="md-code md-code-inline">if</code> statements.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">if</span> (car) {
+  <span class="md-code-keyword">if</span> (black) {
+    <span class="md-code-keyword">if</span> (turbine) {
+      <span class="md-code-keyword">return</span> <span class="md-code-string">&apos;batman!&apos;</span>;
+    }
+  }
+}
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">if</span> (condition) {
+  <span class="md-code-comment">// 10+ lines of code</span>
+}
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">if</span> (!car) {
+  <span class="md-code-keyword">return</span>;
+}
+<span class="md-code-keyword">if</span> (!black) {
+  <span class="md-code-keyword">return</span>;
+}
+<span class="md-code-keyword">if</span> (!turbine) {
+  <span class="md-code-keyword">return</span>;
+}
+<span class="md-code-keyword">return</span> <span class="md-code-string">&apos;batman!&apos;</span>;
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">if</span> (!condition) {
+  <span class="md-code-keyword">return</span>;
+}
+<span class="md-code-comment">// 10+ lines of code</span>
+</code></pre> <h2 id="prototypes">Prototypes</h2> <p>Hacking native prototypes should be avoided at all costs, use a method instead. If you must extend the functionality in a native type, try using something like <a href="https://github.com/bevacqua/poser" target="_blank">poser</a> instead.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-built_in">String</span>.prototype.half = <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">return</span> <span class="md-code-keyword">this</span>.substr(<span class="md-code-number">0</span>, <span class="md-code-keyword">this</span>.length / <span class="md-code-number">2</span>);
+};
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">half</span> <span class="md-code-params">(text)</span> </span>{
+  <span class="md-code-keyword">return</span> text.substr(<span class="md-code-number">0</span>, text.length / <span class="md-code-number">2</span>);
+}
+</code></pre> <p><strong>Avoid prototypical inheritance models</strong> unless you have a very good <em>performance reason</em> to justify yourself.</p> <ul> <li>Prototypical inheritance boosts puts need for <code class="md-code md-code-inline">this</code> through the roof</li> <li>It&#x2019;s way more verbose than using plain objects</li> <li>It causes headaches when creating <code class="md-code md-code-inline">new</code> objects</li> <li>Needs a closure to hide valuable private state of instances</li> <li>Just use plain objects instead</li> </ul> <h2 id="object-literals">Object Literals</h2> <p>Instantiate using the egyptian notation <code class="md-code md-code-inline">{}</code>. Use factories instead of constructors, here&#x2019;s a proposed pattern for you to implement objects in general.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">util</span> <span class="md-code-params">(options)</span> </span>{
+  <span class="md-code-comment">// private methods and state go here</span>
+  <span class="md-code-keyword">var</span> foo;
+  
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">add</span> <span class="md-code-params">()</span> </span>{
+    <span class="md-code-keyword">return</span> foo++;
+  }
+  
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">reset</span> <span class="md-code-params">()</span> </span>{ <span class="md-code-comment">// note that this method isn&apos;t publicly exposed</span>
+    foo = options.start || <span class="md-code-number">0</span>;
+  }
+  
+  reset();
+  
+  <span class="md-code-keyword">return</span> {
+    <span class="md-code-comment">// public interface methods go here</span>
+    uuid: add
+  };
+}
+</code></pre> <h2 id="array-literals">Array Literals</h2> <p>Instantiate using the square bracketed notation <code class="md-code md-code-inline">[]</code>. If you have to declare a fixed-dimension array for performance reasons then it&#x2019;s fine to use the <code class="md-code md-code-inline">new Array(length)</code> notation instead.</p> <p>It&#x2019;s about time you master array manipulation! <a href="http://blog.ponyfoo.com/2013/11/19/fun-with-native-arrays" target="_blank">Learn about the basics</a>. It&#x2019;s way easier than you might think.</p> <ul> <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank"><code class="md-code md-code-inline">.forEach</code></a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" target="_blank"><code class="md-code md-code-inline">.slice</code></a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank"><code class="md-code md-code-inline">.splice</code></a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join" target="_blank"><code class="md-code md-code-inline">.join</code></a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat" target="_blank"><code class="md-code md-code-inline">.concat</code></a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift" target="_blank"><code class="md-code md-code-inline">.unshift</code></a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift" target="_blank"><code class="md-code md-code-inline">.shift</code></a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push" target="_blank"><code class="md-code md-code-inline">.push</code></a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" target="_blank"><code class="md-code md-code-inline">.pop</code></a></li> </ul> <p>Learn and abuse the functional collection manipulation methods. These are <strong>so</strong> worth the trouble.</p> <ul> <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"><code class="md-code md-code-inline">.filter</code></a></li> <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank"><code class="md-code md-code-inline">.map</code></a></li> <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce" target="_blank"><code class="md-code md-code-inline">.reduce</code></a></li> <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight" target="_blank"><code class="md-code md-code-inline">.reduceRight</code></a></li> <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some" target="_blank"><code class="md-code md-code-inline">.some</code></a></li> <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/every" target="_blank"><code class="md-code md-code-inline">.every</code></a></li> <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank"><code class="md-code md-code-inline">.sort</code></a></li> <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse" target="_blank"><code class="md-code md-code-inline">.reverse</code></a></li> </ul> <h2 id="regular-expressions">Regular Expressions</h2> <p>Keep regular expressions in variables, don&#x2019;t use them inline. This will vastly improve readability.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">if</span> (<span class="md-code-regexp">/\d+/</span>.test(text)) {
+  <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;so many numbers!&apos;</span>);
+}
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> numeric = <span class="md-code-regexp">/\d+/</span>;
+<span class="md-code-keyword">if</span> (numeric.test(text)) {
+  <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;so many numbers!&apos;</span>);
+}
+</code></pre> <p>Also <a href="http://blog.ponyfoo.com/2013/05/27/learn-regular-expressions" target="_blank">learn how to write regular expressions</a>, and what they actually do. Then you can also <a href="http://www.regexper.com/#%2F%5Cd%2B%2F" target="_blank">visualize them online</a>.</p> <h2 id="console-statements"><code class="md-code md-code-inline">console</code> statements</h2> <p>Preferrably bake <code class="md-code md-code-inline">console</code> statements into a service that can easily be disabled in production. Alternatively, don&#x2019;t ship any <code class="md-code md-code-inline">console.log</code> printing statements to production distributions.</p> <h2 id="comments">Comments</h2> <p>Comments <strong>aren&#x2019;t meant to explain what</strong> the code does. Good <strong>code is supposed to be self-explanatory</strong>. If you&#x2019;re thinking of writing a comment to explain what a piece of code does, chances are you need to change the code itself. The exception to that rule is explaining what a regular expression does. Good comments are supposed to <strong>explain why</strong> code does something that may not seem to have a clear-cut purpose.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// create the centered container</span>
+<span class="md-code-keyword">var</span> p = $(<span class="md-code-string">&apos;&lt;p/&gt;&apos;</span>);
+p.center(div);
+p.text(<span class="md-code-string">&apos;foo&apos;</span>);
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> container = $(<span class="md-code-string">&apos;&lt;p/&gt;&apos;</span>);
+<span class="md-code-keyword">var</span> contents = <span class="md-code-string">&apos;foo&apos;</span>;
+container.center(parent);
+container.text(contents);
+megaphone.on(<span class="md-code-string">&apos;data&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(value)</span> </span>{
+  container.text(value); <span class="md-code-comment">// the megaphone periodically emits updates for container</span>
+});
+</code></pre> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> numeric = <span class="md-code-regexp">/\d+/</span>; <span class="md-code-comment">// one or more digits somewhere in the string</span>
+<span class="md-code-keyword">if</span> (numeric.test(text)) {
+  <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;so many numbers!&apos;</span>);
+}
+</code></pre> <p>Commenting out entire blocks of code <em>should be avoided entirely</em>, that&#x2019;s why you have version control systems in place!</p> <h2 id="variable-naming">Variable Naming</h2> <p>Variables must have meaningful names so that you don&#x2019;t have to resort to commenting what a piece of functionality does. Instead, try to be expressive while succint, and use meaningful variable names.</p> <h5 id="bad">Bad</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">a</span> <span class="md-code-params">(x, y, z)</span> </span>{
+  <span class="md-code-keyword">return</span> z * y / x;
+}
+a(<span class="md-code-number">4</span>, <span class="md-code-number">2</span>, <span class="md-code-number">6</span>);
+<span class="md-code-comment">// &lt;- 3</span>
+</code></pre> <h5 id="good">Good</h5> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">ruleOfThree</span> <span class="md-code-params">(had, got, have)</span> </span>{
+  <span class="md-code-keyword">return</span> have * got / had;
+}
+ruleOfThree(<span class="md-code-number">4</span>, <span class="md-code-number">2</span>, <span class="md-code-number">6</span>);
+<span class="md-code-comment">// &lt;- 3</span>
+</code></pre> <h2 id="polyfills">Polyfills</h2> <p>Where possible use the native browser implementation and include <a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/" target="_blank">a polyfill that provides that behavior</a> for unsupported browsers. This makes the code easier to work with and less involved in hackery to make things just work.</p> <p>If you can&#x2019;t patch a piece of functionality with a polyfill, then <a href="http://blog.ponyfoo.com/2014/08/05/building-high-quality-front-end-modules" target="_blank">wrap all uses of the patching code</a> in a globally available method that is accessible from everywhere in the application.</p> <h2 id="everyday-tricks">Everyday Tricks</h2> <p>Use <code class="md-code md-code-inline">||</code> to define a default value. If the left-hand value is <a href="http://james.padolsey.com/javascript/truthy-falsey/" target="_blank">falsy</a> then the right-hand value will be used.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">a</span> <span class="md-code-params">(value)</span> </span>{
+  <span class="md-code-keyword">var</span> defaultValue = <span class="md-code-number">33</span>;
+  <span class="md-code-keyword">var</span> used = value || defaultValue;
+}
+</code></pre> <p>Use <code class="md-code md-code-inline">.bind</code> to <a href="http://ejohn.org/blog/partial-functions-in-javascript/" target="_blank">partially-apply</a> functions.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">sum</span> <span class="md-code-params">(a, b)</span> </span>{
+  <span class="md-code-keyword">return</span> a + b;
+}
+
+<span class="md-code-keyword">var</span> addSeven = sum.bind(<span class="md-code-literal">null</span>, <span class="md-code-number">7</span>);
+
+addSeven(<span class="md-code-number">6</span>);
+<span class="md-code-comment">// &lt;- 13</span>
+</code></pre> <p>Use <code class="md-code md-code-inline">Array.prototype.slice.call</code> to cast array-like objects to true arrays.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> args = <span class="md-code-built_in">Array</span>.prototype.slice.call(<span class="md-code-built_in">arguments</span>);
+</code></pre> <p>Use <a href="https://github.com/bevacqua/contra#%CE%BBemitterthing-options" target="_blank">event emitters</a> on all the things!</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> emitter = contra.emitter();
+
+body.addEventListener(<span class="md-code-string">&apos;click&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
+  emitter.emit(<span class="md-code-string">&apos;click&apos;</span>, e.target);
+});
+
+emitter.on(<span class="md-code-string">&apos;click&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(elem)</span> </span>{
+  <span class="md-code-built_in">console</span>.log(elem);
+});
+
+<span class="md-code-comment">// simulate click</span>
+emitter.emit(<span class="md-code-string">&apos;click&apos;</span>, <span class="md-code-built_in">document</span>.body);
+</code></pre> <p>Use <code class="md-code md-code-inline">Function.prototype</code> as a <em>&#x201C;no-op&#x201D;</em>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(cb)</span> </span>{
+  setTimeout(cb || <span class="md-code-built_in">Function</span>.prototype, <span class="md-code-number">2000</span>);
+}
+</code></pre></div>

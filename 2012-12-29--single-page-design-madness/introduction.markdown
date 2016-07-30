@@ -1,0 +1,1 @@
+So far, and _as expected_, I've implemented markdown in the client-side, but while implementing this I also spent a good deal of time fine-tuning the site's design. What I changed is the way in which I was going to _constraint browser support_.

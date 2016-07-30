@@ -1,0 +1,38 @@
+<div><blockquote>
+  <h1>How To Avoid Object.prototype Pollution</h1>
+  <div><p>Some times you just need to extend <code>Array</code> objects. Think of the possibilities. Dream of how <strong>much</strong> <strong>more</strong> <strong>awesome</strong> jQuery would&#x2019;ve been if it provided all of the <code>Array</code> &#x2026;</p></div>
+</blockquote></div>
+
+<div><p>Some times you just need to extend <code class="md-code md-code-inline">Array</code> objects. Think of the possibilities. Dream of how <strong>much</strong> <strong>more</strong> <strong>awesome</strong> jQuery would&#x2019;ve been if it provided all of the <code class="md-code md-code-inline">Array</code> methods in its <strong>god-object</strong>, instead of re-inventing the wheel. Think how awesome it&#x2019;d be if the DOM itself provided <code class="md-code md-code-inline">Array</code> objects everywhere, and not just in some places, and not weird <code class="md-code md-code-inline">NodeList</code> objects.</p></div>
+
+<div></div>
+
+<div><p>It&#x2019;d also be pretty great if you could extend Arrays by yourself in a meaningful way. We all know how preposterous it is to extend the almighty <code class="md-code md-code-inline">Array</code> object. There&#x2019;s whole slew of issues that can arise from doing that, and that&#x2019;s the reason why most of the community has shied away from polluting the global namespace, and more importantly, from polluting the <code class="md-code md-code-inline">Object</code>, <code class="md-code md-code-inline">Array</code>, and <code class="md-code md-code-inline">Function</code> prototypes.</p> <blockquote> <p>There is a way to have it both ways. You can extend <code class="md-code md-code-inline">Array</code> all you want, and you can also not touch the <code class="md-code md-code-inline">Array</code> object. <strong>Curious?</strong></p> </blockquote> <p>All you need is a bag of tricks, a magic wand, and <strong>another execution context</strong>. Or just ignore my blog post and <a href="https://github.com/bevacqua/poser" target="_blank">run to the source</a>, Luke.</p></div>
+
+<div><p>Really it&#x2019;s not as complicated as it sounds. In Node, it involves <strong>just 5 lines of code</strong>. The <a href="http://nodejs.org/api/vm.html" target="_blank" aria-label="Node.js API Documentation"><code class="md-code md-code-inline">vm</code> module</a> allows you to run code in a new execution context, meaning you get a brand new <code class="md-code md-code-inline">Array.prototype</code>. Turns out, it&#x2019;s quite simple to grab a reference to any of that context&#x2019;s globals, and run with it. In this case, I&#x2019;ll be stealing the <code class="md-code md-code-inline">Array</code> global.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> vm = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;vm&apos;</span>);
+
+<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">poser</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">var</span> sandbox = {};
+  vm.runInNewContext(<span class="md-code-string">&apos;stolen=Array;&apos;</span>, sandbox, <span class="md-code-string">&apos;poser.vm&apos;</span>);
+  <span class="md-code-keyword">return</span> sandbox.stolen;
+}
+</code></pre> <p>Now every time I run <code class="md-code md-code-inline">poser()</code> I&#x2019;ll get a brand new <code class="md-code md-code-inline">Array</code> that I can extend at will, without affecting the <code class="md-code md-code-inline">Array</code> everyone else uses. Modularity much? Of course, this isn&#x2019;t just limited to <code class="md-code md-code-inline">Array</code>. You could do this with <code class="md-code md-code-inline">Object</code>, <code class="md-code md-code-inline">Function</code>, or just about anything that is accessible from the global namespace.</p> <blockquote> <p>You may be thinking, <em>&#x201C;well, the browser doesn&#x2019;t have no stinking <code class="md-code md-code-inline">vm</code> module!&#x201D;</em>. It&#x2019;s a bit trickier, but it can be done too.</p> </blockquote> <p>In the browser, the <code class="md-code md-code-inline">&lt;iframe&gt;</code> tag is the go-to sandbox-provider. It provides an accessible execution context, and we can use that to steal their coveted prototypes away. Running a tiny bit of global-stealing JavaScript will do just fine. I&#x2019;m only hiding the <code class="md-code md-code-inline">&lt;iframe&gt;</code> rather than removing it, because I suspect removing it would make older browsers think it&#x2019;s okay to garbage collect the execution context for that <code class="md-code md-code-inline">&lt;iframe&gt;</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> frames = global.frames;
+<span class="md-code-keyword">var</span> key = <span class="md-code-string">&apos;stolen, but no problem, just a poser&apos;</span>;
+
+<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">poser</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">var</span> iframe = <span class="md-code-built_in">document</span>.createElement(<span class="md-code-string">&apos;iframe&apos;</span>);
+  <span class="md-code-keyword">var</span> altdom;
+  <span class="md-code-keyword">var</span> stolen;
+
+  iframe.style.display = <span class="md-code-string">&apos;none&apos;</span>;
+  <span class="md-code-built_in">document</span>.body.appendChild(iframe);
+
+  altdom = frames[frames.length - <span class="md-code-number">1</span>].document;
+  altdom.write(<span class="md-code-string">&apos;&lt;script&gt;parent[&quot;&apos;</span> + key + <span class="md-code-string">&apos;&quot;]=Array;&lt;\/script&gt;&apos;</span>);
+
+  stolen = global[key];
+  <span class="md-code-keyword">delete</span> global[key]; <span class="md-code-comment">// pollution-free environment!</span>
+
+  <span class="md-code-keyword">return</span> stolen;
+}
+</code></pre> <p>You&#x2019;ll have to <strong>momentarily pollute the global namespace</strong>, so that the parent frame can access the out-of-context variable, but you can safely vanquish the global afterwards. Using an inspired global variable name, or checking that the property didn&#x2019;t exist before, is enough. The only issue that I can think of is security mad men doing things like <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze" target="_blank" aria-label="Object.freeze - MDN"><code class="md-code md-code-inline">Object.freeze(window)</code></a>.</p> <p>I&#x2019;m <strong>curious about the performance implications</strong> in doing this, any comments on that will be thoroughly appreciated!</p> <p>I, for one, will definitely be using <a href="https://github.com/bevacqua/poser" target="_blank" aria-label="poser on GitHub"><code class="md-code md-code-inline">poser</code></a>, and I&#x2019;ll make sure to comment on whether it&#x2019;s reasonable to go down that road.</p></div>

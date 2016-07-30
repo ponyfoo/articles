@@ -1,0 +1,1 @@
+A couple of weeks ago I had some time in my hands and decided to fix cross-browser rendering issues for Pony Foo. The ensuing bug hunt was a good reminder of just how obnoxious web development can get.

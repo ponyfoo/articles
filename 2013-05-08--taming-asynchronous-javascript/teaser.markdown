@@ -1,0 +1,1 @@
+Last month, a series of _very_ interesting articles regarding **async coding style**, in Node, popped up. The discussion spanned a few more subjects than _just coding style_, it was analyzed in a more _theoretical level_, as well as a _deep technical level_, obviously on the _practical level_, and _even politics_ saw the limelight in this _fascinating_ argument.

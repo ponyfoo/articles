@@ -1,0 +1,1 @@
+More often than not, companies completely (and _irresponsibly_) disregard JavaScript as code that _should be unit tested_. They might test their back-end code, it may be in C#, Ruby, Java, or even PHP, or _just about any other language_. But there's a good chance that the front-end code is **thoroughly untested**.

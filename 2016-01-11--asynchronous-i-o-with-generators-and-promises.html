@@ -1,0 +1,115 @@
+<div><blockquote>
+  <h1>Asynchronous I/O with Generators &amp; Promises</h1>
+  <div><p>The article covers designing a JavaScript API to deal with <strong>asynchronous data inputs and outputs</strong> using generators to <em>succinctly</em> describe a set of operations. Promises can &#x2026;</p></div>
+</blockquote></div>
+
+<div><p>The article covers designing a JavaScript API to deal with <strong>asynchronous data inputs and outputs</strong> using generators to <em>succinctly</em> describe a set of operations. Promises can also be used to <em>chain</em> other operations after the output has been registered.</p></div>
+
+<div></div>
+
+<div><p>Coming up with practical code examples to keep a book interesting is &#x2013; for me &#x2013; one of the hardest aspects of writing engaging material. I find that the best examples are the ones that get you thinking about API design and coding practices, beyond just explaining what a specific language feature does. That way, if you already understand the language feature at hand, you might still find the practical thought exercise interesting.</p> <p>The example in question involved finding a use case for <code class="md-code md-code-inline">return</code> in a generator function. <a href="http://localhost:3000/articles/es6-generators-in-depth" aria-label="ES6 Generators in Depth on Pony Foo">As we know</a>, generators treat <code class="md-code md-code-inline">return</code> statements differently from <code class="md-code md-code-inline">yield</code> expressions. Take for example the following generator.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span>* <span class="md-code-title">numbers</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">yield</span> <span class="md-code-number">1</span>;
+  <span class="md-code-keyword">yield</span> <span class="md-code-number">2</span>;
+  <span class="md-code-keyword">return</span> <span class="md-code-number">3</span>;
+  <span class="md-code-keyword">yield</span> <span class="md-code-number">4</span>;
+}
+</code></pre> <p>If we use <code class="md-code md-code-inline">Array.from(numbers())</code>, <code class="md-code md-code-inline">[...numbers()]</code>, or even a <code class="md-code md-code-inline">for..of</code> loop, we&#x2019;ll only ever see <code class="md-code md-code-inline">1</code> and <code class="md-code md-code-inline">2</code>. However, if we went ahead and used the generator object, we&#x2019;d see the <code class="md-code md-code-inline">3</code> as well &#x2013; although the iterator result would indicate <code class="md-code md-code-inline">done: true</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> g = numbers();
+<span class="md-code-built_in">console</span>.log(g.next());
+<span class="md-code-comment">// &lt;- { done: false, value: 1 }</span>
+<span class="md-code-built_in">console</span>.log(g.next());
+<span class="md-code-comment">// &lt;- { done: false, value: 2 }</span>
+<span class="md-code-built_in">console</span>.log(g.next());
+<span class="md-code-comment">// &lt;- { <mark class="md-mark md-code-mark">done: true</mark>, value: 3 }</span>
+</code></pre> <p>The example I came up with involved a function call passing in a generator, where you <code class="md-code md-code-inline">yield</code> resources that should be persisted, and then you <code class="md-code md-code-inline">return</code> the endpoint where you&#x2019;d like to persist those resources. The iterator would then pull each resource at a time, and finally push the data for each resource to another endpoint, which would presumably save all that data in an object.</p></div>
+
+<div><h1 id="the-api">The API</h1> <p>The API in question can be found below. The <code class="md-code md-code-inline">saveProducts</code> method would <code class="md-code md-code-inline">GET</code> the JSON description for both products in series, and then <code class="md-code md-code-inline">POST</code> data about the products to a user&#x2019;s shopping cart.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">saveProducts(<span class="md-code-function"><span class="md-code-keyword">function</span>* <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">yield</span> <span class="md-code-string">&apos;/products/javascript-application-design&apos;</span>;
+  <span class="md-code-keyword">yield</span> <span class="md-code-string">&apos;/products/barbie-doll&apos;</span>;
+  <span class="md-code-keyword">return</span> <span class="md-code-string">&apos;/cart&apos;</span>;
+});
+</code></pre> <p>In addition, I thought it&#x2019;d be nice if <code class="md-code md-code-inline">saveProducts</code> also returned a <code class="md-code md-code-inline">Promise</code>, meaning you could <a href="http://localhost:3000/articles/es6-promises-in-depth" aria-label="ES6 Promises in Depth on Pony Foo">chain some other operations</a> to be executed after the products had been saved to the cart.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">saveProducts(productList)
+  .then(data =&gt; <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;Saved&apos;</span>, data));
+</code></pre> <p>Naturally, some conditional logic would allow this hypothetical method to save the products to a wish list instead of onto the shopping cart.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">saveProducts(<span class="md-code-function"><span class="md-code-keyword">function</span>* <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">yield</span> <span class="md-code-string">&apos;/products/javascript-application-design&apos;</span>;
+  <span class="md-code-keyword">yield</span> <span class="md-code-string">&apos;/products/barbie-doll&apos;</span>;
+  <span class="md-code-keyword">if</span> (addToCart) {
+    <span class="md-code-keyword">return</span> <span class="md-code-string">&apos;/cart&apos;</span>;
+  }
+  <span class="md-code-keyword">return</span> <span class="md-code-string">&apos;/wishlists/nerd-items&apos;</span>;
+});
+</code></pre> <p>This example could also apply to the server side, where each yielded value could result in a database query and the returned value could also indicate what kind of object we want to save back to the database. Similarly, the iterator can decide the pace at which yielded inputs are processed: it could be as simple as a synchronous queue, process all queries in parallel, or maybe use a concurrent queue with limited concurrency. Regardless, the API can stay more or less the same <em>(depending on whether consumers expect to be able to use the product data in the generator itself or not)</em>.</p> <h1 id="implementing-saveproducts">Implementing <code class="md-code md-code-inline">saveProducts</code></h1> <p>First off, the method in question takes in a generator and initializes a generator object to iterate over the values produced by the generator function.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">saveProducts</span> <span class="md-code-params">(productList)</span> </span>{
+  <span class="md-code-keyword">var</span> g = productList();
+}
+</code></pre> <p>In a na&#xEF;ve implementation, we could pull each product one by one in an asynchronous series pattern. In the piece of code below, I&#x2019;m using <code class="md-code md-code-inline">fetch</code> to pull the resources yielded by the user-provided generator <em>&#x2013; as JSON</em>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">saveProducts</span> <span class="md-code-params">(productList)</span> </span>{
+  <span class="md-code-keyword">var</span> g = productList();
+  <span class="md-code-keyword">var</span> <mark class="md-mark md-code-mark">item = g.next()</mark>;
+  <mark class="md-mark md-code-mark">more()</mark>;
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">more</span> <span class="md-code-params">()</span> </span>{
+    <span class="md-code-keyword">if</span> (item.done) {
+      <span class="md-code-keyword">return</span>;
+    }
+    fetch(item.value)
+      .then(res =&gt; res.json())
+      .then(product =&gt; {
+        <mark class="md-mark md-code-mark">item = g.next(product)</mark>;
+        <mark class="md-mark md-code-mark">more()</mark>;
+      });
+  }
+}
+</code></pre> <blockquote> <p>By calling <code class="md-code md-code-inline">g.next(<mark class="md-mark md-code-mark">product</mark>)</code> we&#x2019;re allowing the consumer to read product data by doing <code class="md-code md-code-inline">data = yield &apos;/resource&apos;</code>.</p> </blockquote> <p>So far we&#x2019;re pulling all data and passing it back, an item at a time to the generator, which has a synchronous feel to it. In order to leverage the <code class="md-code md-code-inline">return</code> statement, we&#x2019;ll save the products in a temporary array and then <code class="md-code md-code-inline">POST</code> them back when we&#x2019;re done iterating.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">saveProducts</span> <span class="md-code-params">(productList)</span> </span>{
+  <span class="md-code-keyword">var</span> <mark class="md-mark md-code-mark">products = []</mark>;
+  <span class="md-code-keyword">var</span> g = productList();
+  <span class="md-code-keyword">var</span> item = g.next();
+  more();
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">more</span> <span class="md-code-params">()</span> </span>{
+    <span class="md-code-keyword">if</span> (item.done) {
+      <mark class="md-mark md-code-mark">save(item.value)</mark>;
+    } <span class="md-code-keyword">else</span> {
+      details(item.value);
+    }
+  }
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">details</span> <span class="md-code-params">(endpoint)</span> </span>{
+    fetch(endpoint)
+      .then(res =&gt; res.json())
+      .then(product =&gt; {
+        <mark class="md-mark md-code-mark">products.push(product)</mark>;
+        item = g.next(product);
+        more();
+      });
+  }
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">save</span> <span class="md-code-params">(endpoint)</span> </span>{
+    fetch(endpoint, {
+      method: <span class="md-code-string">&apos;<mark class="md-mark md-code-mark">POST</mark>&apos;</span>,
+      body: <span class="md-code-built_in">JSON</span>.stringify({ products })
+    });
+  }
+}
+</code></pre> <p>At this point product descriptions are being pulled down, cached in the <code class="md-code md-code-inline">products</code> array, forwarded to the generator body, and eventually saved in one fell swoop using the endpoint provided by the <code class="md-code md-code-inline">return</code> statement. Where are the promises? Those are very simple to add: <code class="md-code md-code-inline">fetch</code> returns a <code class="md-code md-code-inline">Promise</code>, and it&#x2019;s <code class="md-code md-code-inline">return</code> all the way down.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">saveProducts</span> <span class="md-code-params">(productList)</span> </span>{
+  <span class="md-code-keyword">var</span> products = [];
+  <span class="md-code-keyword">var</span> g = productList();
+  <span class="md-code-keyword">var</span> item = g.next();
+  <mark class="md-mark md-code-mark">return</mark> more();
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">more</span> <span class="md-code-params">()</span> </span>{
+    <span class="md-code-keyword">if</span> (item.done) {
+      <mark class="md-mark md-code-mark">return</mark> save(item.value);
+    }
+    <mark class="md-mark md-code-mark">return</mark> details(item.value);
+  }
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">details</span> <span class="md-code-params">(endpoint)</span> </span>{
+    <mark class="md-mark md-code-mark">return</mark> fetch(endpoint)
+      .then(res =&gt; res.json())
+      .then(product =&gt; {
+        products.push(product);
+        item = g.next(product);
+        <span class="md-code-keyword">return</span> more();
+      });
+  }
+  <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">save</span> <span class="md-code-params">(endpoint)</span> </span>{
+    <mark class="md-mark md-code-mark">return</mark> fetch(endpoint, {
+        method: <span class="md-code-string">&apos;POST&apos;</span>,
+        body: <span class="md-code-built_in">JSON</span>.stringify({ products })
+      })
+      <mark class="md-mark md-code-mark">.then(res =&gt; res.json())</mark>;
+  }
+}
+</code></pre> <blockquote> <p>We&#x2019;re also casting the <code class="md-code md-code-inline">save</code> operation&#x2019;s response as JSON, so that promises chained onto <code class="md-code md-code-inline">saveProducts</code> can leverage response <code class="md-code md-code-inline">data</code>.</p> </blockquote> <p>As you may notice the implementation doesn&#x2019;t hardcode any important aspects of the operation, which means you could use something like this pretty generically, as long as you have zero or more inputs you want to pipe into one output. The consumer ends up with an elegant-looking method that&#x2019;s easy to understand &#x2013; they <code class="md-code md-code-inline">yield</code> input stores and <code class="md-code md-code-inline">return</code> an output store. Furthermore, our use of promises makes it easy to concatenate this operation with others. This way, we&#x2019;re keeping a potential tangle of conditional statements and flow control mechanisms in check, by abstracting away flow control into the iteration mechanism under the <code class="md-code md-code-inline">saveProducts</code> method.</p></div>

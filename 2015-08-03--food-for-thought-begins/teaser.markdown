@@ -1,0 +1,3 @@
+I've been toying with the idea of releasing short-form "thoughts", in addition to the usual longer-form articles in the blog. The **goal is to publish one of these every weekday**. I'd love to know what you think. You may send your questions to [thoughts@ponyfoo.com][1]. I'll try to answer them over email and I _may publish them here, with your approval_. I'm also going to be writing thoughts about the <mark>current state of front-end development</mark>, and maybe commenting on other people's articles. You can use the form to the right _(near the bottom in mobile)_ to <mark>subscribe via email</mark>.
+
+[1]: mailto:thoughts@ponyfoo.com

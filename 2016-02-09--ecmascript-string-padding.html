@@ -1,0 +1,84 @@
+<div><blockquote>
+  <h1>ECMAScript String Padding</h1>
+  <div><p>A first look into <code>.padStart</code> and <code>.padEnd</code> string methods drafted as proposals for implementation in ECMAScript.</p>
+</div>
+</blockquote></div>
+
+<div><p>A string padding proposal for ECMAScript is <a href="https://github.com/tc39/ecma262" target="_blank" aria-label="tc39/ecma262 on GitHub">at stage 3</a>. Let&#x2019;s dig into what it entails.</p></div>
+
+<div></div>
+
+<div><p>There&#x2019;s an ECMAScript proposal to standarize <code class="md-code md-code-inline">String.prototype.padStart</code> and <code class="md-code md-code-inline">String.prototype.padEnd</code>. String padding is something that we&#x2019;ve always had come across or implement ourselves one way or another.</p> <p>Care to take a look?</p> <p><img src="https://i.imgur.com/4obNc9t.jpg" alt="Cat pads"></p> <p><em>(No, that&#x2019;s not the kind of pads I was referring to. Yes, that&#x2019;s my cat. Yes, she&#x2019;s on top of my fridge. No, I never question her authority. Fine, I&#x2019;ll get back on topic.)</em></p></div>
+
+<div><h1 id="rationale">Rationale</h1> <p>Before getting into the implementation, it might be useful to read about the <a href="https://github.com/tc39/proposal-string-pad-start-end/tree/8606ec6ae00e442cb2fa7e9504dcab1c77360aa5#rationale" target="_blank" aria-label="Rationale behind String.prototype.padStart / String.prototype.padEnd">rationale behind this addition</a> to the language, which was put together by the people who drafted the proposal.</p> <blockquote> <p>Without a reasonable way to pad a string using native methods, working with JavaScript strings today is more painful than it should be. Without these functions, the language feels incomplete, and is a paper cut to what could be a very polished experience.</p> <p>Due to common use, string padding functions exist in a majority of websites and frameworks. For example, nearly every app in FirefoxOS had implemented a left pad function, because they all needed some generic string padding operation.</p> <p>It is highly probable that the majority of current string padding implementations are inefficient. Bringing this into the platform will improve performance of the web, and developer productivity as they no longer have to implement these common functions.</p> </blockquote> <p>Let&#x2019;s look into <code class="md-code md-code-inline">.padStart</code> first.</p> <h1 id="stringprototypepadstart-max-fillstring"><code class="md-code md-code-inline">String.prototype.padStart(max, fillString)</code></h1> <p>In its simplest incarnation, <code class="md-code md-code-inline">.padStart</code> will add enough spaces to the start of a string so that it arrives at the requested <mark class="md-mark">length</mark>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-string">&apos;abc&apos;</span>.padStart(<mark class="md-mark md-code-mark">6</mark>);
+<span class="md-code-comment">// &lt;- &apos;   abc&apos;</span>
+</code></pre> <p>When a string&#x2019;s length is at &#x2013; or over &#x2013; the specified <code class="md-code md-code-inline">max</code> length, no padding characters will be inserted.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-string">&apos;abc&apos;</span>.padStart(<span class="md-code-number">3</span>);
+<span class="md-code-comment">// &lt;- &apos;abc&apos;</span>
+<span class="md-code-string">&apos;abc&apos;</span>.padStart(<span class="md-code-number">2</span>);
+<span class="md-code-comment">// &lt;- &apos;abc&apos;</span>
+</code></pre> <p>Naturally you can change the padding character to something that&#x2019;s not an space.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-string">&apos;abc&apos;</span>.padStart(<span class="md-code-number">5</span>, <span class="md-code-string">&apos;x&apos;</span>);
+<span class="md-code-comment">// &lt;- &apos;xxabc&apos;</span>
+</code></pre> <p>The padding doesn&#x2019;t need to be a single character either. The padding string is repeated as long as needed but it will be sliced to meet the character length requirement.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-string">&apos;abc&apos;</span>.padStart(<span class="md-code-number">7</span>, <span class="md-code-string">&apos;xo&apos;</span>);
+<span class="md-code-comment">// &lt;- &apos;xoxoabc&apos;</span>
+<span class="md-code-string">&apos;abc&apos;</span>.padStart(<mark class="md-mark md-code-mark">6</mark>, <span class="md-code-string">&apos;xo&apos;</span>);
+<span class="md-code-comment">// &lt;- &apos;<mark class="md-mark md-code-mark">xox</mark>abc&apos;</span>
+</code></pre> <p>An interesting use case for <code class="md-code md-code-inline">padStart</code> might be for providing input masks. The example below shows how you could implement such an input mask for ten-digit strings.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-string">&apos;1&apos;</span>.padStart(<span class="md-code-number">10</span>, <span class="md-code-string">&apos;0&apos;</span>);
+<span class="md-code-comment">// &lt;- &apos;0000000001&apos;</span>
+<span class="md-code-string">&apos;12&apos;</span>.padStart(<span class="md-code-number">10</span>, <span class="md-code-string">&apos;0&apos;</span>);
+<span class="md-code-comment">// &lt;- &apos;0000000012&apos;</span>
+<span class="md-code-string">&apos;123456&apos;</span>.padStart(<span class="md-code-number">10</span>, <span class="md-code-string">&apos;0&apos;</span>);
+<span class="md-code-comment">// &lt;- &apos;0000123456&apos;</span>
+</code></pre> <p>How about dates?</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-string">&apos;12&apos;</span>.padStart(<span class="md-code-number">10</span>, <span class="md-code-string">&apos;YYYY-MM-DD&apos;</span>);
+<span class="md-code-comment">// &lt;- &apos;YYYY-MM-12&apos;</span>
+<span class="md-code-string">&apos;09-12&apos;</span>.padStart(<span class="md-code-number">10</span>, <span class="md-code-string">&apos;YYYY-MM-DD&apos;</span>);
+<span class="md-code-comment">// &lt;- &apos;YYYY-09-12&apos;</span>
+</code></pre> <p>Here&#x2019;s an adaptation of the <a href="https://github.com/tc39/proposal-string-pad-start-end/blob/8606ec6ae00e442cb2fa7e9504dcab1c77360aa5/polyfill.js#L15-L37" target="_blank" aria-label="String.prototype.padStart polyfill on GitHub">reference polyfill</a> stripped off sanity checks and all the usual spec-babble that makes these code snippets harder to read. If you want to use the method in an application today, I suggest you install the <a href="https://github.com/es-shims/String.prototype.padStart" target="_blank" aria-label="es-shims/String.prototype.padStart on GitHub"><code class="md-code md-code-inline">string.prototype.padstart</code></a> module, <em>instead of copying and pasting the polyfill.</em></p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">if</span> (!<span class="md-code-built_in">String</span>.prototype.padStart) {
+  <span class="md-code-built_in">String</span>.prototype.padStart = <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(max, fillString)</span> </span>{
+    <span class="md-code-keyword">return</span> padStart(<span class="md-code-keyword">this</span>, max, fillString);
+  };
+}
+
+<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">padStart</span> <span class="md-code-params">(text, max, mask)</span> </span>{
+  <span class="md-code-keyword">const</span> cur = text.length;
+  <span class="md-code-keyword">if</span> (max &lt;= cur) {
+    <span class="md-code-keyword">return</span> text;
+  }
+  <span class="md-code-keyword">const</span> masked = max - cur;
+  <span class="md-code-keyword">let</span> filler = <span class="md-code-built_in">String</span>(mask) || <span class="md-code-string">&apos; &apos;</span>;
+  <span class="md-code-keyword">while</span> (filler.length &lt; masked) {
+    filler += filler;
+  }
+  <span class="md-code-keyword">const</span> fillerSlice = filler.slice(<span class="md-code-number">0</span>, masked);
+  <span class="md-code-keyword">return</span> fillerSlice + text;
+}
+</code></pre> <p>Time to move onto <code class="md-code md-code-inline">.padEnd</code>.</p> <h1 id="stringprototypepadend-max-fillstring"><code class="md-code md-code-inline">String.prototype.padEnd(max, fillString)</code></h1> <p>This method is equivalent to <code class="md-code md-code-inline">.padStart</code> except for the fact that padding is appended to the string rather than prepended to it.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-string">&apos;123&apos;</span>.padEnd(<span class="md-code-number">6</span>);
+<span class="md-code-comment">// &lt;- &apos;123   &apos;</span>
+</code></pre> <p>You can specify the padding character with <code class="md-code md-code-inline">.padEnd</code> as well.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-string">&apos;123&apos;</span>.padEnd(<span class="md-code-number">6</span>, <span class="md-code-string">&apos;x&apos;</span>);
+<span class="md-code-comment">// &lt;- &apos;123xxx&apos;</span>
+</code></pre> <p>Note that masking preserves the original padding, which may lead to confusion. For example, you may expect the following to produce <code class="md-code md-code-inline">&apos;123456&apos;</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-string">&apos;123&apos;</span>.padEnd(<span class="md-code-number">6</span>, <span class="md-code-string">&apos;123456&apos;</span>);
+<span class="md-code-comment">// &lt;- &apos;123123&apos;</span>
+</code></pre> <p>Similarly, you may want the following to produce <code class="md-code md-code-inline">&apos;2016-MM-DD&apos;</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-string">&apos;2016&apos;</span>.padEnd(<span class="md-code-number">10</span>, <span class="md-code-string">&apos;YYYY-MM-DD&apos;</span>);
+<span class="md-code-comment">// &lt;- &apos;2016YYYY-M&apos;</span>
+</code></pre> <p>One work-around to get the desired result in these cases could be to just <code class="md-code md-code-inline">.slice</code> the mask against the length of the original string.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">const</span> year = <span class="md-code-string">&apos;2016&apos;</span>;
+year.padEnd(<span class="md-code-number">10</span>, <span class="md-code-string">&apos;YYYY-MM-DD&apos;</span><mark class="md-mark md-code-mark">.slice(year.length)</mark>);
+<span class="md-code-comment">// &lt;- &apos;2016-MM-DD&apos;</span>
+</code></pre> <p>Here&#x2019;s an adaptation of the <a href="https://github.com/tc39/proposal-string-pad-start-end/blob/8606ec6ae00e442cb2fa7e9504dcab1c77360aa5/polyfill.js#L39-L61" target="_blank" aria-label="String.prototype.padEnd polyfill on GitHub">reference polyfill</a> stripped off sanity checks and all the usual spec-babble that makes these code snippets harder to read. If you want to use the method in an application today, I suggest you install the <a href="https://github.com/es-shims/String.prototype.padEnd" target="_blank" aria-label="es-shims/String.prototype.padEnd on GitHub"><code class="md-code md-code-inline">string.prototype.padend</code></a> module, <em>instead of copying and pasting the polyfill.</em></p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">if</span> (!<span class="md-code-built_in">String</span>.prototype.padEnd) {
+  <span class="md-code-built_in">String</span>.prototype.padEnd = <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(max, fillString)</span> </span>{
+    <span class="md-code-keyword">return</span> padEnd(<span class="md-code-keyword">this</span>, max, fillString);
+  };
+}
+
+<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">padEnd</span> <span class="md-code-params">(text, max, mask)</span> </span>{
+  <span class="md-code-keyword">const</span> cur = text.length;
+  <span class="md-code-keyword">if</span> (max &lt;= cur) {
+    <span class="md-code-keyword">return</span> text;
+  }
+  <span class="md-code-keyword">const</span> masked = max - cur;
+  <span class="md-code-keyword">let</span> filler = <span class="md-code-built_in">String</span>(mask) || <span class="md-code-string">&apos; &apos;</span>;
+  <span class="md-code-keyword">while</span> (filler.length &lt; masked) {
+    filler += filler;
+  }
+  <span class="md-code-keyword">const</span> fillerSlice = filler.slice(<span class="md-code-number">0</span>, masked);
+  <span class="md-code-keyword">return</span> text + fillerSlice;
+}
+</code></pre> <blockquote> <p>As you can see above, the only difference between the polyfill for <code class="md-code md-code-inline">.padStart</code> and the one for <code class="md-code md-code-inline">.padEnd</code> is what side of <code class="md-code md-code-inline">text</code> the <code class="md-code md-code-inline">fillerSlice</code> portion of padded fill mask gets concatenated.</p> </blockquote> <p>If you like this kind of article let me know and I&#x2019;ll see what I can do to write more like it! <img class="tj-emoji" draggable="false" alt="&#x1F609;" src="https://twemoji.maxcdn.com/2/72x72/1f609.png"></p></div>

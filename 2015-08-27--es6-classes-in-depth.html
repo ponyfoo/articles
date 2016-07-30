@@ -1,0 +1,90 @@
+<div><blockquote>
+  <h1>ES6 Classes in Depth</h1>
+  <div><p>Welcome to <a href="http://localhost:3000/articles/tagged/es6-in-depth">ES6 in Depth</a>. Are you new here? You might want to learn about <a href="http://localhost:3000/articles/es6-destructuring-in-depth">destructuring</a>, <a href="http://localhost:3000/articles/es6-template-strings-in-depth">template literals</a>, <a href="http://localhost:3000/articles/es6-arrow-functions-in-depth">arrow functions</a>, the <a href="http://localhost:3000/articles/es6-spread-and-butter-in-depth">spread operator and rest parameters</a>, or <a href="http://localhost:3000/articles/es6-object-literal-features-in-depth">&#x2026;</a></p></div>
+</blockquote></div>
+
+<div><p>Welcome to <a href="http://localhost:3000/articles/tagged/es6-in-depth">ES6 in Depth</a>. Are you new here? You might want to learn about <a href="http://localhost:3000/articles/es6-destructuring-in-depth">destructuring</a>, <a href="http://localhost:3000/articles/es6-template-strings-in-depth">template literals</a>, <a href="http://localhost:3000/articles/es6-arrow-functions-in-depth">arrow functions</a>, the <a href="http://localhost:3000/articles/es6-spread-and-butter-in-depth">spread operator and rest parameters</a>, or <a href="http://localhost:3000/articles/es6-object-literal-features-in-depth">object literal features in ES6</a>. Today is going to be about <em>&#x201C;classes&#x201D;</em> in ES6.</p></div>
+
+<div></div>
+
+<div><blockquote> <p>Like I did in previous articles on the series, I would love to point out that you should probably <a href="http://localhost:3000/articles/universal-react-babel#setting-up-babel">set up Babel</a> and follow along the examples with either a REPL or the <code class="md-code md-code-inline">babel-node</code> CLI and a file. That&#x2019;ll make it so much easier for you to <strong>internalize the concepts</strong> discussed in the series. If you aren&#x2019;t the <em>&#x201C;install things on my computer&#x201D;</em> kind of human, you might prefer to hop on <a href="http://codepen.io/" target="_blank">CodePen</a> and then click on the gear icon for JavaScript &#x2013; <em>they have a Babel preprocessor which makes trying out ES6 a breeze.</em></p> </blockquote> <p>Onwards!</p></div>
+
+<div><h2 id="what-do-you-mean-1-classes-in-javascript"><a href="https://www.youtube.com/watch?v=fCEo2wfudqk" target="_blank" aria-label="Peace Sells - Megadeth">What do you mean</a>; classes in JavaScript?</h2> <p>JavaScript is a prototype-based language, so what are ES6 classes really? They&#x2019;re syntactic sugar on top of prototypical inheritance &#x2013; a device to make the language more inviting to programmers coming from other paradigms who might not be all that familiar with prototype chains. Many features in ES6 <em>(such as <a href="http://localhost:3000/articles/es6-destructuring-in-depth" aria-label="ES6 JavaScript Destructuring in Depth on Pony Foo">destructuring</a>)</em> are, in fact, syntactic sugar &#x2013; and classes are no exception. I like to clarify this because it makes it much easier to understand the underlying technology behind ES6 classes. There is no huge restructuring of the language, they just made it easier for people used to classes to leverage prototypal inheritance.</p> <blockquote> <p>While I may dislike the term <em>&#x201C;classes&#x201D;</em> for this particular feature, I have to say that the syntax is in fact much easier to work with than regular prototypal inheritance syntax in ES5, and that&#x2019;s a win for everyone &#x2013; regardless of them being called classes or not.</p> </blockquote> <p>Now that that&#x2019;s out of the way, I&#x2019;ll assume you understand prototypal inheritance &#x2013; just because you&#x2019;re reading a blog about JavaScript. Here&#x2019;s how you would describe a <code class="md-code md-code-inline">Car</code> that can be instantiated, fueled up, and move.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">Car</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">this</span>.fuel = <span class="md-code-number">0</span>;
+  <span class="md-code-keyword">this</span>.distance = <span class="md-code-number">0</span>;
+}
+
+Car.prototype.move = <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">if</span> (<span class="md-code-keyword">this</span>.fuel &lt; <span class="md-code-number">1</span>) {
+    <span class="md-code-keyword">throw</span> <span class="md-code-keyword">new</span> <span class="md-code-built_in">RangeError</span>(<span class="md-code-string">&apos;Fuel tank is depleted&apos;</span>)
+  }
+  <span class="md-code-keyword">this</span>.fuel--
+  <span class="md-code-keyword">this</span>.distance += <span class="md-code-number">2</span>
+}
+
+Car.prototype.addFuel = <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">if</span> (<span class="md-code-keyword">this</span>.fuel &gt;= <span class="md-code-number">60</span>) {
+    <span class="md-code-keyword">throw</span> <span class="md-code-keyword">new</span> <span class="md-code-built_in">RangeError</span>(<span class="md-code-string">&apos;Fuel tank is full&apos;</span>)
+  }
+  <span class="md-code-keyword">this</span>.fuel++
+}
+</code></pre> <p>To move the car, you could use the following piece of code.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> car = <span class="md-code-keyword">new</span> Car()
+car.addFuel()
+car.move()
+car.move()
+<span class="md-code-comment">// &lt;- RangeError: &apos;Fuel tank is depleted&apos;</span>
+</code></pre> <p>Neat. What about with ES6 classes? The syntax is very similar to declaring an object, except we precede it with <code class="md-code md-code-inline">class Name</code>, where <code class="md-code md-code-inline">Name</code> is the name for our class. Here we are leveraging the <a href="http://localhost:3000/articles/es6-object-literal-features-in-depth#method-signatures" aria-label="ES6 Object Literal Features in Depth on Pony Foo">method signature notation</a> we covered yesterday to declare the methods using a shorter syntax. The <code class="md-code md-code-inline">constructor</code> is just like the constructor method in ES5, so you can use that to initialize any variables your instances may have.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">class</span> Car {
+  constructor () {
+    <span class="md-code-keyword">this</span>.fuel = <span class="md-code-number">0</span>
+    <span class="md-code-keyword">this</span>.distance = <span class="md-code-number">0</span>
+  }
+  move () {
+    <span class="md-code-keyword">if</span> (<span class="md-code-keyword">this</span>.fuel &lt; <span class="md-code-number">1</span>) {
+      <span class="md-code-keyword">throw</span> <span class="md-code-keyword">new</span> <span class="md-code-built_in">RangeError</span>(<span class="md-code-string">&apos;Fuel tank is depleted&apos;</span>)
+    }
+    <span class="md-code-keyword">this</span>.fuel--
+    <span class="md-code-keyword">this</span>.distance += <span class="md-code-number">2</span>
+  }
+  addFuel () {
+    <span class="md-code-keyword">if</span> (<span class="md-code-keyword">this</span>.fuel &gt;= <span class="md-code-number">60</span>) {
+      <span class="md-code-keyword">throw</span> <span class="md-code-keyword">new</span> <span class="md-code-built_in">RangeError</span>(<span class="md-code-string">&apos;Fuel tank is full&apos;</span>)
+    }
+    <span class="md-code-keyword">this</span>.fuel++
+  }
+}
+</code></pre> <p>In case you haven&#x2019;t noticed, and for some obscure reason that escapes me, <strong>commas are invalid</strong> in-between properties or methods in a class, as opposed to object literals where commas are <em>(still)</em> mandatory. That discrepancy is bound to cause headaches to people trying to decide whether they want a plain object literal or a class instead, but the code <em>does</em> look sort of cleaner without the commas here.</p> <p>Many times <em>&#x201C;classes&#x201D;</em> have static methods. Think of your friend the <code class="md-code md-code-inline">Array</code> for example. Arrays have instance methods like <code class="md-code md-code-inline">.filter</code>, <code class="md-code md-code-inline">.reduce</code>, and <code class="md-code md-code-inline">.map</code>. The <code class="md-code md-code-inline">Array</code> <em>&#x201C;class&#x201D;</em> itself has static methods as well, like <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" aria-label="Array.isArray() - MDN"><code class="md-code md-code-inline">Array.isArray</code></a>. In ES5 code, it&#x2019;s pretty easy to add these kind of methods to our <code class="md-code md-code-inline">Car</code> <em>&#x201C;class&#x201D;</em>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">Car</span> <span class="md-code-params">()</span> </span>{
+  <span class="md-code-keyword">this</span>.topSpeed = <span class="md-code-built_in">Math</span>.random()
+}
+Car.isFaster = <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(left, right)</span> </span>{
+  <span class="md-code-keyword">return</span> left.topSpeed &gt; right.topSpeed
+}
+</code></pre> <p>In ES6 <code class="md-code md-code-inline">class</code> notation, we can use precede our method with <code class="md-code md-code-inline">static</code>, following a similar syntax as that of <code class="md-code md-code-inline">get</code> and <code class="md-code md-code-inline">set</code>. Again, just sugar on top of ES5, as it&#x2019;s quite trivial to transpile this down into ES5 notation.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">class</span> Car {
+  constructor () {
+    <span class="md-code-keyword">this</span>.topSpeed = <span class="md-code-built_in">Math</span>.random()
+  }
+  static isFaster (left, right) {
+    <span class="md-code-keyword">return</span> left.topSpeed &gt; right.topSpeed
+  }
+}
+</code></pre> <p>One sweet aspect of ES6 <code class="md-code md-code-inline">class</code> sugar is that you also get an <code class="md-code md-code-inline">extends</code> keyword that enables you to easily <em>&#x201C;inherit&#x201D;</em> from other <em>&#x201C;classes&#x201D;</em>. We all know Tesla cars move further while using the same amount of fuel, thus the code below shows how <code class="md-code md-code-inline">Tesla extends Car</code> and &#x201C;overrides&#x201D; <em>(a concept you might be familiar with if you&#x2019;ve ever <a href="https://msdn.microsoft.com/en-us/library/aa645768(v=vs.71).aspx" target="_blank" aria-label="Overriding methods in C# - MSDN">played around with C#</a>)</em> the <code class="md-code md-code-inline">move</code> method to cover a larger distance.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">class</span> Tesla extends Car {
+  move () {
+    super.move()
+    <span class="md-code-keyword">this</span>.distance += <span class="md-code-number">4</span>
+  }
+}
+</code></pre> <p>The special <code class="md-code md-code-inline">super</code> keyword identifies the <code class="md-code md-code-inline">Car</code> class we&#x2019;ve inherited from &#x2013; and since we&#x2019;re speaking about C#, it&#x2019;s akin to <a href="https://msdn.microsoft.com/en-us/library/hfw7t1ce.aspx" target="_blank" aria-label="The base keyword ok MSDN"><code class="md-code md-code-inline">base</code></a>. It&#x2019;s <em>raison d&#x2019;&#xEA;tre</em> is that most of the time we <em>override</em> a method by re-implementing it in the inheriting class, &#x2013; <code class="md-code md-code-inline">Tesla</code> in our example &#x2013; we&#x2019;re supposed to call the method on the base class as well. This way we don&#x2019;t have to copy logic over to the inheriting class whenever we re-implement a method. That&#x2019;d be particularly lousy since whenever a base class changes we&#x2019;d have to paste their logic into every inheriting class, turning our codebase into a maintainability nightmare.</p> <p>If you now did the following, you&#x2019;ll notice the Tesla car moves two places because of <code class="md-code md-code-inline">base.move()</code>, which is what every regular car does as well, and it moves an additional four places because <code class="md-code md-code-inline">Tesla</code> is just that good.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> car = <span class="md-code-keyword">new</span> Tesla()
+car.addFuel()
+car.move()
+<span class="md-code-built_in">console</span>.log(car.distance)
+<span class="md-code-comment">// &lt;- 6</span>
+</code></pre> <p>The most common thing you&#x2019;ll have to override is the <code class="md-code md-code-inline">constructor</code> method. Here you can just call <code class="md-code md-code-inline">super()</code>, passing any arguments that the base class needs. Tesla cars are twice as fast, so we just call the base <code class="md-code md-code-inline">Car</code> constructor with twice the advertised <code class="md-code md-code-inline">speed</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">class</span> Car {
+  constructor (speed) {
+    <span class="md-code-keyword">this</span>.speed = speed
+  }
+}
+<span class="md-code-keyword">class</span> Tesla extends Car {
+  constructor (speed) {
+    super(speed * <span class="md-code-number">2</span>)
+  }
+}
+</code></pre> <p>Tomorrow, we&#x2019;ll go over the syntax for <code class="md-code md-code-inline">let</code>, <code class="md-code md-code-inline">const</code>, and <code class="md-code md-code-inline">for ... of ...</code>. Until then!</p></div>

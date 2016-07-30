@@ -1,0 +1,1 @@
+I've been bitten a few times by dependencies using semver ranges such as `^1.0.1` where the dependency introduced a "non-breaking" change that ended up actually breaking somewhere in the dependency chain because an undocumented feature was being used, a workaround stopped working, and similar undesirable situations.

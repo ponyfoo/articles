@@ -1,0 +1,1 @@
+I've decided to pour my thoughts of **how the CSS of an application should be modelled** into a formal style guide. I've been using this approach for over a year, and now I'm also moving to implement it on the job, as well.

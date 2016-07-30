@@ -1,0 +1,1 @@
+We can learn a lot about usability just by _observing everyday objects_, applications and interfaces. This morning I was flying to London from Buenos Aires, when I realized _something awkward_ about the UI on the plane's in flight system, which allows you to track the progress and duration of the flight, or occasionally watch a movie.

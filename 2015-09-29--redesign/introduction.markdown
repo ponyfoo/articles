@@ -1,0 +1,7 @@
+I was never _really_ **happy** about how the site looked. Sure, I did choose a couple of custom fonts and settled for a few colors that you can still see on Pony Foo prominently today: pink for most links, the green in the pony's eye, JavaScript's yellow, etc. The "paper-bag look" never really stuck with me, even though I was mostly aiming to make the content itself highly readable.
+
+When I decided to redesign the site _(around a week ago)_, the first thing I tackled was "making the logo look cooler". I had no idea what that meant at the time, but -- soon afterwards -- it set the stage for the entire redesign. Before getting on with the logo I just knew I wanted a redesign, but I soon realized what I needed to do once I got to play with the logo. See, the idea I came up with was that the logo should "flash in pink" on mouse over. That sounded cool, so I did that, and I thought it looked pretty nice, so I translated the concepts into the entire redesign.
+
+> I've prepared a different post that focuses entirely on the logo and some problems I had with it for tomorrow, so let's move onto other parts of the design.
+
+When I say "concepts" I really mean _"colorful as hell"_. I thought, this looks nice and cheerful, I wonder if I could make the entire site look as much of a happy place as the logo does. And that's what I tried. I started with the most important part of the site -- an article.

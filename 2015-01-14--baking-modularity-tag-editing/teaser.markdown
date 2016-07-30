@@ -1,0 +1,1 @@
+For quite some time I've been wanting some sort of input that dealt with user-submitted tags in a reasonable way. I wanted this input to still be half-decent when JavaScript was out of the picture, so this meant starting with the basic building blocks of HTML.

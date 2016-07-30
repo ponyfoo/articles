@@ -1,0 +1,1 @@
+NodeConf Argentina is one of the first international Node.js conferences taking place in Latin American territory, and a not-for-profit community effort to push Node.js forward in Argentina and Latin America as a whole.

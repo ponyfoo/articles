@@ -1,0 +1,1 @@
+Any decently-sized codebase, even CSS, needs some sort of organization in order to keep us from going insane. Pre-processing, and a few ground rules for style writing, will help us achieve the _level of organization **required** in higher level applications_.

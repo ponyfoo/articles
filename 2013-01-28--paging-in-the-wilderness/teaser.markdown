@@ -1,0 +1,1 @@
+Traditionally, lists on websites have been paged to allow data to be _chunked_ rather than sent out all at once, when the user might not need all of it _right away_, improving both _overall performance_ and _perceived speed_, both of which are very important to **web usability**.

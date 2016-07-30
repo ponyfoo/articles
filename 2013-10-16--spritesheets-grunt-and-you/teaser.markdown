@@ -1,0 +1,1 @@
+If you are using Grunt, you really have **no excuse** not to be using CSS spritesheets. If you aren't using Grunt _yet_, then you should know that a well thought-out workflow with Grunt will allow you to _seamlessly integrate icons together_ into a spritesheet during your builds.

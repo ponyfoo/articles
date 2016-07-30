@@ -1,0 +1,1 @@
+Almost since [day one](/articles/first "Pony Foo Begins") you could follow Pony Foo using the [RSS feed](/articles/feed). Now there's quite a few more options. I'd love to know what's your favorite and also maybe help me make your reading experience better.

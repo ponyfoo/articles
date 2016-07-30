@@ -1,0 +1,1 @@
+I've recently upgraded Pony Foo to use the `https` protocol, something I've been meaning to do for a while. It's super easy to do so, and here's a few simple steps you can take to secure your own apps. The procedure is quite agnostic when it comes to your hosting stack, and you should definitely implement `https` on your own services as well!

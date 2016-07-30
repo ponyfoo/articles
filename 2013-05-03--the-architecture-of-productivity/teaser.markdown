@@ -1,0 +1,1 @@
+It's been a while since I last blogged. I went on vacation, switched jobs, and have been generally busy. I'm now working _full-time remote_, which will _hopefully_ give me some more time to dedicate to this blog.

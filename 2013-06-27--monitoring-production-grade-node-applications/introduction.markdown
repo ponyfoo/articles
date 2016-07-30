@@ -1,0 +1,1 @@
+We shouldn't ever rely on the luxury of _hoping for the best_ when it comes to _production application uptime_. There are a series of steps we can take to _prevent and minimize fatal exceptions_, while **maximizing uptime and improving monitoring**.

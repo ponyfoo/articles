@@ -1,0 +1,270 @@
+<div><blockquote>
+  <h1>Shared Rendering with Rendr</h1>
+  <div><p><a href="https://github.com/rendrjs/rendr" target="_blank">Rendr</a> boosts the perceived performance of Backbone applications by rendering them in the server-side. This allows us to display the rendered page before JavaScript code &#x2026;</p></div>
+</blockquote></div>
+
+<div><p><a href="https://github.com/rendrjs/rendr" target="_blank">Rendr</a> boosts the perceived performance of Backbone applications by rendering them in the server-side. This allows us to display the rendered page before JavaScript code is executed in the browser and Backbone kicks in. In other words, it means that, the first time the page gets loaded, the human will get to see the content earlier. After that first load, Backbone will have taken over and handle routing in the client-side. However, the first load is extremely important, and having the ability to render the application on the server before the human gets any content is better than having them wait for Backbone to pull your data, fill your views, and render your templates. Search engine optimization is another reason why you might want to render your views in the server-side as well. That&#x2019;s why server-side rendering is still vital to the web application development process.</p></div>
+
+<div></div>
+
+<div><p><a href="https://github.com/rendrjs/rendr" target="_blank"><img src="https://i.imgur.com/88hPdca.png" alt="rendr.png"></a></p> <p>Let&#x2019;s take a quick dive into the world of <a href="https://github.com/rendrjs/rendr" target="_blank">Rendr</a>.</p></div>
+
+<div><h1 id="swimming-into-rendr">Swimming Into Rendr</h1> <p>Rendr uses a conventional approach to application building. That means it expects you to name your modules in a certain way, and place them in certain directories. Rendr also has some opinions as to the kinds of templates you should use, and how your application is to access its data. By default, this means Rendr expects you to have a REST API to access the application data.</p> <p>Rendr runs on Node, acting as a middleware in your HTTP stack. It works by intercepting requests and rendering views server-side, before handing the pre-rendered results to the client. In its conventional approach, it helps you to separate concerns by defining controllers, where you can fetch data, render views, or perform redirects. Rather than having to reference your templates in your views, Rendr uses well-defined naming policies that abstract away dependencies, which are mostly managed by the Rendr engine. This will become clearer once we start looking at code.</p> <h3 id="problems-in-paradise">Problems in Paradise</h3> <p>Not all is peaches and cream. Rendr includes some &#x201C;peculiar&#x201D; design choices that ultimately make me wonder if it&#x2019;s worth pursuing. However, it&#x2019;s worth it to play around with it and get your own feel for how well it works for you. For instance, Rendr uses Browserify to bring the modules you write into the browser, but it has three distinct hacks in the way it compiles your Common.JS modules using Browserify.</p> <ul> <li>jQuery needs to be shimmed through <code class="md-code md-code-inline">browserify-shim</code>. This is problematic because the server-side version of Rendr uses its own version of jQuery, and there could be versioning discrepancies. If you try to use the Common.JS version, obtained through <code class="md-code md-code-inline">npm</code>, it won&#x2019;t work.</li> <li>It requires aliases for some of its <code class="md-code md-code-inline">require</code> calls to work as expected, which is also an issue because it translates into the next deficiency, as well.</li> <li>You won&#x2019;t be able to use the <code class="md-code md-code-inline">brfs</code> transform to read files at build time because Rendr doesn&#x2019;t play nice with it.</li> </ul> <h3 id="diving-in">Diving In</h3> <p>To show-case Rendr, I&#x2019;ve settled for a slightly modified version of an example AirBnB (the company behind Rendr) uses to teach how Rendr works. You can find the code at <code class="md-code md-code-inline">ch07/11_entourage</code> in the accompanying code samples.</p> <p>First off, let me talk about the templates. Rendr encourages us to use a superset of Mustache, called Handlebars. Handlebars provides extra features, mostly in the form of helper methods you can use, such as an <code class="md-code md-code-inline">if</code> convenience method. Rendr expects us to compile the Handlebars templates and place the bundled result in <code class="md-code md-code-inline">app/templates/compiledTemplates.js</code>. To do that, we&#x2019;ll start by installing the Grunt plugin for Handlebars.</p> <pre class="md-code-block"><code class="md-code">npm install --save-dev grunt-contrib-handlebars
+</code></pre> <p>To configure the Handlebars Grunt plugin, we&#x2019;ll have to add the following snippet to the <code class="md-code md-code-inline">Gruntfile</code>. The <code class="md-code md-code-inline">options</code> passed to the <code class="md-code md-code-inline">handlebars:compile</code> task target are needed by Rendr, which expects the templates to be named in a certain way.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">handlebars: {
+  compile: {
+    options: {
+      namespace: <span class="md-code-literal">false</span>,
+      commonjs: <span class="md-code-literal">true</span>,
+      processName: <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(filename)</span> </span>{
+        <span class="md-code-keyword">return</span> filename.replace(<span class="md-code-string">&apos;app/templates/&apos;</span>, <span class="md-code-string">&apos;&apos;</span>).replace(<span class="md-code-string">&apos;.hbs&apos;</span>, <span class="md-code-string">&apos;&apos;</span>);
+      }
+    },
+    src: <span class="md-code-string">&apos;app/templates/**/*.hbs&apos;</span>,
+    dest: <span class="md-code-string">&apos;app/templates/compiledTemplates.js&apos;</span>
+  }
+}
+</code></pre> <p>The Browserify configuration is, at the moment, also tied to Rendr&#x2019;s expectations. You&#x2019;ll need to shim jQuery, rather than just installing it from <code class="md-code md-code-inline">npm</code>. You are expected to provide an alias so that Rendr can access <code class="md-code md-code-inline">rendr-handlebars</code>, the Handlebars adapter used by Rendr. Lastly, Rendr needs you to provide a few mappings to be able to access your application&#x2019;s modules. The code to configure Browserify to play nice with Rendr can be found below.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">browserify: {
+  options: {
+    debug: <span class="md-code-literal">true</span>,
+    alias: [<span class="md-code-string">&apos;node_modules/rendr-handlebars/index.js:rendr-handlebars&apos;</span>],
+    aliasMappings: [{
+      cwd: <span class="md-code-string">&apos;app/&apos;</span>,
+      src: [<span class="md-code-string">&apos;**/*.js&apos;</span>],
+      dest: <span class="md-code-string">&apos;app/&apos;</span>
+    }],
+    shim: {
+      jquery: {
+        path: <span class="md-code-string">&apos;assets/vendor/jquery-1.9.1.min.js&apos;</span>,
+        exports: <span class="md-code-string">&apos;$&apos;</span>
+      }
+    }
+  },
+  app: {
+    src: [<span class="md-code-string">&apos;app/**/*.js&apos;</span>],
+    dest: <span class="md-code-string">&apos;public/bundle.js&apos;</span>
+  }
+}
+</code></pre> <p>That&#x2019;s it, as far as build configuration goes. It might not be ideal, but once it&#x2019;s in there you can forget about it. Let&#x2019;s go into the sample application code, and how it works.</p> <h1 id="understanding-boilerplate-in-rendr">Understanding Boilerplate in Rendr</h1> <p>The first step we&#x2019;ll take in putting together our Rendr application is creating the entry point for the Node program. We&#x2019;ll name this file <code class="md-code md-code-inline">app.js</code> and place it in our application root. As I mentioned earlier, Rendr works as a middleware in our HTTP stack, sitting inside Express.</p> <h3 id="express-middleware-for-rendr">Express Middleware for Rendr</h3> <p>Express is a popular Node.js framework that wraps the native <code class="md-code md-code-inline">http</code> module providing a bit more of functionality, allowing you to perform routing, and a few more things. Past this section, most of what we&#x2019;ll discuss is inherent to Rendr, and not part of Express. Rendr enhances Express to make its conventions work, though.</p> <pre class="md-code-block"><code class="md-code md-lang-bash">npm install express --save
+</code></pre> <p>Have a look at the piece of code below. Here I&#x2019;m using the <code class="md-code md-code-inline">express</code> package to set up an HTTP server in Node. Calling <code class="md-code md-code-inline">express()</code> will create a new Express application instance, and we can add middleware to that instance with <code class="md-code md-code-inline">app.use</code>. Invoking <code class="md-code md-code-inline">app.listen(port)</code> will keep the application running and react on incoming HTTP requests on the chosen port. Best practice dictates that the listening port for our application should be configurable as an environment variable, and have a sensible default value.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> express = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;express&apos;</span>);
+<span class="md-code-keyword">var</span> app = express();
+<span class="md-code-keyword">var</span> port = process.env.PORT || <span class="md-code-number">3000</span>;
+
+app.use(express.static(__dirname + <span class="md-code-string">&apos;/public&apos;</span>));
+app.use(express.bodyParser());
+app.listen(port);
+
+<span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;listening on port %s&apos;</span>, port);
+</code></pre> <p>The <code class="md-code md-code-inline">static</code> middleware tells Express to serve all of the content in the specified directory as static assets. This means that if a human requests <code class="md-code md-code-inline">http://localhost:3000/js/foo.js</code>, and the <code class="md-code md-code-inline">public/js/foo.js</code> file exists, that&#x2019;s what Express will respond with. The <code class="md-code md-code-inline">bodyParser</code> middleware is a utility that will parse request bodies that are detected to be in JSON, or form data format.</p> <p>The following piece of code configures Rendr for our example. The middleware will take care of everything else, as we&#x2019;ll see next. The data adapter configuration tells Rendr what API it should be querying. The beauty of Rendr lies in that, both in the client-side as well as the server-side, it&#x2019;ll just query the API whenever it needs to fetch data.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> rendr = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;rendr&apos;</span>);
+<span class="md-code-keyword">var</span> rendrServer = rendr.createServer({
+  dataAdapterConfig: {
+    <span class="md-code-keyword">default</span>: {
+      host: <span class="md-code-string">&apos;api.github.com&apos;</span>,
+      protocol: <span class="md-code-string">&apos;https&apos;</span>
+    }
+  }
+});
+
+app.use(rendrServer);
+</code></pre> <h3 id="setting-up-rendr">Setting Up Rendr</h3> <p>Rendr provides a series of base objects you are expected to extend when building your application. The <code class="md-code md-code-inline">BaseApp</code> object, which extends from <code class="md-code md-code-inline">BaseView</code> should be extended, and placed in <code class="md-code md-code-inline">app/app.js</code> in order to create a Rendr app. In this file you could add app initialization code that runs in both the client and the server, and it&#x2019;s used to maintain the application&#x2019;s global state. The snippet of code below will suffice.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> BaseApp = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;rendr/shared/app&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = BaseApp.extend({
+});
+</code></pre> <p>We also need to create a router module, which we could be using to track page views whenever there&#x2019;s a route change, although for now we&#x2019;ll merely create an instance of the base router. The router module should be placed at <code class="md-code md-code-inline">app/router.js</code>, and it should look like the piece of code shown below.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> BaseClientRouter = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;rendr/client/router&apos;</span>);
+
+<span class="md-code-keyword">var</span> Router = <span class="md-code-built_in">module</span>.exports = <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">Router</span> <span class="md-code-params">(options)</span> </span>{
+  BaseClientRouter.call(<span class="md-code-keyword">this</span>, options);
+};
+
+Router.prototype = <span class="md-code-built_in">Object</span>.create(BaseClientRouter.prototype);
+Router.prototype.constructor = BaseClientRouter;
+</code></pre> <p>Let&#x2019;s turn our attention to how the meat of your Rendr application should look like.</p> <h1 id="a-simple-rendr-application">A Simple Rendr Application</h1> <p>So far, we&#x2019;ve configured Grunt and Express to comply with Rendr&#x2019;s needs. Now it&#x2019;s time to develop the application itself. To make this example easier to grok, I&#x2019;ll show you the code in the logical order Rendr uses to serve its responses.</p> <p>In order to keep our example self-contained, yet interesting, we&#x2019;ll create three different views.</p> <ul> <li>Home is the welcome screen for our app</li> <li>Users keeps a list of GitHub users</li> <li>User contains the details of an specific user</li> </ul> <p>These views will have a 1-to-1 relationship with routes. The home view will sit at the application root, <code class="md-code md-code-inline">/</code>; the user list will be at <code class="md-code md-code-inline">/users</code>; and the user details view will be at <code class="md-code md-code-inline">/users/:login</code>, where <code class="md-code md-code-inline">:login</code> is the user login on GitHub (<a href="https://github.com/bevacqua" target="_blank"><code class="md-code md-code-inline">bevacqua</code></a> in my case). Views are rendered by controllers. Let&#x2019;s start with routing, and then learn how controllers operate.</p> <h4 id="routes-and-controllers">Routes and Controllers</h4> <p>The code below matches routes to controller actions. The controller actions should be defined as the controller name, followed by a hash, and then the action name. This module goes into <code class="md-code md-code-inline">app/routes.js</code>, and you&#x2019;ll find the code below.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-built_in">module</span>.exports = <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(match)</span> </span>{
+  match(<span class="md-code-string">&apos;&apos;</span>,                   <span class="md-code-string">&apos;home#index&apos;</span>);
+  match(<span class="md-code-string">&apos;users&apos;</span>       ,       <span class="md-code-string">&apos;users#index&apos;</span>);
+  match(<span class="md-code-string">&apos;users/:login&apos;</span>,       <span class="md-code-string">&apos;users#show&apos;</span>);
+};
+</code></pre> <p>Controllers are used to fetch any data that&#x2019;s required to render a view. You&#x2019;ll have to define each action that is expected by the routes. Let&#x2019;s put the two controllers together. By convention, controllers should be placed in <code class="md-code md-code-inline">app/controllers/:name_controller.js</code>. The snippet below is our Home controller, and should be placed at <code class="md-code md-code-inline">app/controllers/home_controller.js</code>. It should expose an <code class="md-code md-code-inline">index</code> function, matching the <code class="md-code md-code-inline">index</code> route. This function takes a parameters object and a callback, that once called will render the view.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-built_in">module</span>.exports = {
+  index: <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(params, callback)</span> </span>{
+    callback();
+  }
+};
+</code></pre> <p>The <code class="md-code md-code-inline">user_controller.js</code> module is a bit different. It has an <code class="md-code md-code-inline">index</code> action as well, but it also has a <code class="md-code md-code-inline">show</code> action. In both cases, we need to call <code class="md-code md-code-inline">this.app.fetch</code> with some parameters, in order to get the model data, and then invoke the callback once we&#x2019;re done.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-built_in">module</span>.exports = {
+  index: <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(params, callback)</span> </span>{
+    <span class="md-code-keyword">var</span> spec = {
+      collection: {
+        collection: <span class="md-code-string">&apos;Users&apos;</span>,
+        params: params
+      }
+    };
+    <span class="md-code-keyword">this</span>.app.fetch(spec, <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(err, result)</span> </span>{
+      callback(err, result);
+    });
+  },
+  show: <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(params, callback)</span> </span>{
+    <span class="md-code-keyword">var</span> spec = {
+      model: {
+        model: <span class="md-code-string">&apos;User&apos;</span>,
+        params: params
+      },
+      repos: {
+        collection: <span class="md-code-string">&apos;Repos&apos;</span>,
+        params: { user: params.login }
+      }
+    };
+    <span class="md-code-keyword">this</span>.app.fetch(spec, <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">(err, result)</span> </span>{
+      callback(err, result);
+    });
+  }
+};
+</code></pre> <p>Fetching this data wouldn&#x2019;t be possible if we didn&#x2019;t have matching models and collections. Let&#x2019;s flesh those out next.</p> <h3 id="models-and-collections">Models and Collections</h3> <p>Models and collections need to extend the base objects provided by Rendr, so let&#x2019;s create those. Below is the code for our base model, placed at <code class="md-code md-code-inline">app/models/base.js</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> RendrBase = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;rendr/shared/base/model&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = RendrBase.extend({});
+</code></pre> <p>The base collection is similarly thin. Having your own base objects, though, is necessary to easily share functionality across your models.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> RendrBase = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;rendr/shared/base/collection&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = RendrBase.extend({});
+</code></pre> <p>We&#x2019;ll have to define our models using the endpoint we want to use to fetch the models, in this case from the GitHub API. Our models should also export a unique identifier that&#x2019;s what we used when calling <code class="md-code md-code-inline">app.fetch</code> in our User controller. Below is how the User model looks like. This should be placed at <code class="md-code md-code-inline">app/models/user.js</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> Base = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./base&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = Base.extend({
+  url: <span class="md-code-string">&apos;/users/:login&apos;</span>,
+  idAttribute: <span class="md-code-string">&apos;login&apos;</span>
+});
+<span class="md-code-built_in">module</span>.exports.id = <span class="md-code-string">&apos;User&apos;</span>;
+</code></pre> <p>As long as your models don&#x2019;t have any validation or computed data functions, they&#x2019;ll look quite similar. A <code class="md-code md-code-inline">url</code> endpoint, the unique identifier, and the name of the parameter that&#x2019;s used to look up a single model instance. Here&#x2019;s how the Repo model looks like.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> Base = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./base&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = Base.extend({
+  url: <span class="md-code-string">&apos;/repos/:owner/:name&apos;</span>,
+  idAttribute: <span class="md-code-string">&apos;name&apos;</span>
+});
+<span class="md-code-built_in">module</span>.exports.id = <span class="md-code-string">&apos;Repo&apos;</span>;
+</code></pre> <p>Backbone collections need to reference a model to learn what kind of data they&#x2019;re dealing with. Collections are similar to models, using a unique identifier to teach Rendr what kind of collection they are, and having a URL where we can fetch that data from. Below, you&#x2019;ll find the Users collection in code. It should be placed in <code class="md-code md-code-inline">app/collections/users.js</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> User = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;../models/user&apos;</span>);
+<span class="md-code-keyword">var</span> Base = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./base&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = Base.extend({
+  model: User,
+  url: <span class="md-code-string">&apos;/users&apos;</span>
+});
+<span class="md-code-built_in">module</span>.exports.id = <span class="md-code-string">&apos;Users&apos;</span>;
+</code></pre> <p>The Repos collection is almost identical, except it uses the Repo model, and it has a different URL for fetching the data from the REST API. The code is as below, and it should go in <code class="md-code md-code-inline">app/collections/repos.js</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> Repo = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;../models/repo&apos;</span>);
+<span class="md-code-keyword">var</span> Base = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./base&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = Base.extend({
+  model: Repo,
+  url: <span class="md-code-string">&apos;/users/:user/repos&apos;</span>
+});
+<span class="md-code-built_in">module</span>.exports.id = <span class="md-code-string">&apos;Repos&apos;</span>;
+</code></pre> <p>At this point, the user requested a URL, and the router decided which controller action that should direct them to. The action method probably fetched some data from the API, and then it invoked its callback. At last, let&#x2019;s learn how views behave to render the HTML.</p> <h3 id="views-and-templates">Views and Templates</h3> <p>As with most things Rendr, the first step in defining our views is creating our own base view, which is an extension of Rendr&#x2019;s base view. The base view should go in <code class="md-code md-code-inline">app/views/base.js</code>, and look like the piece of code below.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> RendrBase = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;rendr/shared/base/view&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = RendrBase.extend({});
+</code></pre> <p>Our first view is the Home view. It should be placed at <code class="md-code md-code-inline">app/views/home/index.js</code>, and look like below. As you can see, views also need to export an identifier.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> BaseView = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;../base&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = BaseView.extend({
+});
+<span class="md-code-built_in">module</span>.exports.id = <span class="md-code-string">&apos;home/index&apos;</span>;
+</code></pre> <p>Given that our views consist mostly of links to each other, but not a lot of functionality, they&#x2019;re mostly empty. The Users view is almost identical to the Home view. It goes in <code class="md-code md-code-inline">app/views/users/index.js</code>, and its code is below.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> BaseView = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;../base&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = BaseView.extend({
+});
+<span class="md-code-built_in">module</span>.exports.id = <span class="md-code-string">&apos;users/index&apos;</span>;
+</code></pre> <p>There is also the User Details view, which goes in <code class="md-code md-code-inline">app/views/users/show.js</code>. This view has to tamper with the template data, which is what I&#x2019;ve been referring to as view model, in order to make the <code class="md-code md-code-inline">repos</code> object available to the template as well.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> BaseView = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;../base&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = BaseView.extend({
+  getTemplateData: <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
+    <span class="md-code-keyword">var</span> data = BaseView.prototype.getTemplateData.call(<span class="md-code-keyword">this</span>);
+    data.repos = <span class="md-code-keyword">this</span>.options.repos;
+    <span class="md-code-keyword">return</span> data;
+  }
+});
+<span class="md-code-built_in">module</span>.exports.id = <span class="md-code-string">&apos;users/show&apos;</span>;
+</code></pre> <p>The last view we&#x2019;ll put together is a partial to render a list of repositories. It should be placed in <code class="md-code md-code-inline">app/views/user_repos_view.js</code>, and as you can see, partials barely differ from other views, and they need a view controller just like any other view.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> BaseView = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./base&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = BaseView.extend({
+});
+<span class="md-code-built_in">module</span>.exports.id = <span class="md-code-string">&apos;user_repos_view&apos;</span>;
+</code></pre> <p>Lastly, there&#x2019;s the view templates. The first view template we&#x2019;ll take a look at is the <code class="md-code md-code-inline">__layout.hbs</code> file. This is the HTML that will serve as a container for all of your templates. You can find the code below. Note how I&#x2019;m bootstrapping the application data, and initializing it, using JavaScript. This is required by Rendr. The <code class="md-code md-code-inline">{{{body}}}</code> expression will be replaced by the views dynamically as the route changes.</p> <pre class="md-code-block"><code class="md-code md-lang-xml"><span class="md-code-doctype">&lt;!doctype html&gt;</span>
+<span class="md-code-tag">&lt;<span class="md-code-title">html</span>&gt;</span>
+
+  <span class="md-code-tag">&lt;<span class="md-code-title">head</span>&gt;</span>
+    <span class="md-code-tag">&lt;<span class="md-code-title">title</span>&gt;</span>Entourage<span class="md-code-tag">&lt;/<span class="md-code-title">title</span>&gt;</span>
+  <span class="md-code-tag">&lt;/<span class="md-code-title">head</span>&gt;</span>
+
+  <span class="md-code-tag">&lt;<span class="md-code-title">body</span>&gt;</span>
+    <span class="md-code-tag">&lt;<span class="md-code-title">div</span>&gt;</span>
+      <span class="md-code-tag">&lt;<span class="md-code-title">a</span> <span class="md-code-attribute">href</span>=<span class="md-code-value">&apos;/&apos;</span>&gt;</span>GitHub Browser<span class="md-code-tag">&lt;/<span class="md-code-title">a</span>&gt;</span>
+    <span class="md-code-tag">&lt;/<span class="md-code-title">div</span>&gt;</span>
+    <span class="md-code-tag">&lt;<span class="md-code-title">ul</span>&gt;</span>
+      <span class="md-code-tag">&lt;<span class="md-code-title">li</span>&gt;</span><span class="md-code-tag">&lt;<span class="md-code-title">a</span> <span class="md-code-attribute">href</span>=<span class="md-code-value">&apos;/&apos;</span>&gt;</span>Home<span class="md-code-tag">&lt;/<span class="md-code-title">a</span>&gt;</span><span class="md-code-tag">&lt;/<span class="md-code-title">li</span>&gt;</span>
+      <span class="md-code-tag">&lt;<span class="md-code-title">li</span>&gt;</span><span class="md-code-tag">&lt;<span class="md-code-title">a</span> <span class="md-code-attribute">href</span>=<span class="md-code-value">&apos;/users&apos;</span>&gt;</span>Users<span class="md-code-tag">&lt;/<span class="md-code-title">a</span>&gt;</span><span class="md-code-tag">&lt;/<span class="md-code-title">li</span>&gt;</span>
+    <span class="md-code-tag">&lt;/<span class="md-code-title">ul</span>&gt;</span>
+
+    <span class="md-code-tag">&lt;<span class="md-code-title">section</span> <span class="md-code-attribute">id</span>=<span class="md-code-value">&apos;content&apos;</span> <span class="md-code-attribute">class</span>=<span class="md-code-value">&apos;container&apos;</span>&gt;</span>
+      {{{body}}}
+    <span class="md-code-tag">&lt;/<span class="md-code-title">section</span>&gt;</span>
+
+    <span class="md-code-tag">&lt;<span class="md-code-title">script</span> <span class="md-code-attribute">src</span>=<span class="md-code-value">&apos;/bundle.js&apos;</span>&gt;</span><span></span><span class="md-code-tag">&lt;/<span class="md-code-title">script</span>&gt;</span>
+    <span class="md-code-tag">&lt;<span class="md-code-title">script</span>&gt;</span><span>
+    (<span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span> </span>{
+      <span class="md-code-keyword">var</span> App = <span class="md-code-built_in">window</span>.App = <span class="md-code-keyword">new</span> (<span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;app/app&apos;</span>))({{json appData}});
+      App.bootstrapData({{json bootstrappedData}});
+      App.start();
+    })();
+    </span><span class="md-code-tag">&lt;/<span class="md-code-title">script</span>&gt;</span>
+  <span class="md-code-tag">&lt;/<span class="md-code-title">body</span>&gt;</span>
+<span class="md-code-tag">&lt;/<span class="md-code-title">html</span>&gt;</span>
+</code></pre> <p>Next up we have the Home view template. Here I just have a few links and there&#x2019;s no view model data access going on. This template goes in <code class="md-code md-code-inline">app/templates/home/index.hbs</code>. Note that Backbone will capture navigation to any links in your application that match one of its routes, and behave as a single page application. Rather than reloading the entire page whenever a link is clicked, Backbone will just load the corresponding view.</p> <pre class="md-code-block"><code class="md-code md-lang-xml"><span class="md-code-tag">&lt;<span class="md-code-title">h1</span>&gt;</span>Entourage<span class="md-code-tag">&lt;/<span class="md-code-title">h1</span>&gt;</span>
+<span class="md-code-tag">&lt;<span class="md-code-title">p</span>&gt;</span>This little app demonstrates how to use Rendr by consuming GitHub&apos;s public API.<span class="md-code-tag">&lt;/<span class="md-code-title">p</span>&gt;</span>
+<span class="md-code-tag">&lt;<span class="md-code-title">p</span>&gt;</span>Check out <span class="md-code-tag">&lt;<span class="md-code-title">a</span> <span class="md-code-attribute">href</span>=<span class="md-code-value">&apos;/repos&apos;</span>&gt;</span>Repos<span class="md-code-tag">&lt;/<span class="md-code-title">a</span>&gt;</span> or <span class="md-code-tag">&lt;<span class="md-code-title">a</span> <span class="md-code-attribute">href</span>=<span class="md-code-value">&apos;/users&apos;</span>&gt;</span>Users<span class="md-code-tag">&lt;/<span class="md-code-title">a</span>&gt;</span>.<span class="md-code-tag">&lt;/<span class="md-code-title">p</span>&gt;</span>
+<span class="md-code-tag">&lt;<span class="md-code-title">p</span>&gt;</span>
+  <span class="md-code-tag">&lt;<span class="md-code-title">i</span>&gt;</span><span class="md-code-tag">&lt;<span class="md-code-title">a</span> <span class="md-code-attribute">href</span>=<span class="md-code-value">&apos;https://github.com/rendrjs/rendr&apos;</span>&gt;</span>Rendr<span class="md-code-tag">&lt;/<span class="md-code-title">a</span>&gt;</span> is built by AirBnB<span class="md-code-tag">&lt;/<span class="md-code-title">i</span>&gt;</span>
+<span class="md-code-tag">&lt;/<span class="md-code-title">p</span>&gt;</span>
+</code></pre> <p>Now things get a bit more interesting. Here we are looping through the list of models that were fetched in the controller action, and render a list of users and links to their account details. This template goes in <code class="md-code md-code-inline">app/templates/users/index.hbs</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-xml"><span class="md-code-tag">&lt;<span class="md-code-title">h1</span>&gt;</span>Users<span class="md-code-tag">&lt;/<span class="md-code-title">h1</span>&gt;</span>
+
+<span class="md-code-tag">&lt;<span class="md-code-title">ul</span>&gt;</span>
+{{#each models}}
+  <span class="md-code-tag">&lt;<span class="md-code-title">li</span>&gt;</span>
+    <span class="md-code-tag">&lt;<span class="md-code-title">a</span> <span class="md-code-attribute">href</span>=<span class="md-code-value">&apos;/users/{{login}}&apos;</span>&gt;</span>{{login}}<span class="md-code-tag">&lt;/<span class="md-code-title">a</span>&gt;</span>
+  <span class="md-code-tag">&lt;/<span class="md-code-title">li</span>&gt;</span>
+{{/each}}
+<span class="md-code-tag">&lt;/<span class="md-code-title">ul</span>&gt;</span>
+</code></pre> <p>Next up we have the user details template, which goes in <code class="md-code md-code-inline">app/templates/users/show.hbs</code>. You can find the template code below. Take into account how I&#x2019;m telling Handlebars to load the <code class="md-code md-code-inline">user_repos_view</code> partial, and how that name matches exactly the identifier that was defined in its view.</p> <pre class="md-code-block"><code class="md-code md-lang-xml"><span class="md-code-tag">&lt;<span class="md-code-title">img</span> <span class="md-code-attribute">src</span>=<span class="md-code-value">&apos;{{avatar_url}}&apos;</span> <span class="md-code-attribute">width</span>=<span class="md-code-value">&apos;80&apos;</span> <span class="md-code-attribute">height</span>=<span class="md-code-value">&apos;80&apos;</span>&gt;</span> {{login}} ({{public_repos}} public repos)
+
+<span class="md-code-tag">&lt;<span class="md-code-title">br</span>&gt;</span>
+
+<span class="md-code-tag">&lt;<span class="md-code-title">div</span>&gt;</span>
+  <span class="md-code-tag">&lt;<span class="md-code-title">div</span>&gt;</span>
+    {{view &apos;user_repos_view&apos; collection=repos}}
+  <span class="md-code-tag">&lt;/<span class="md-code-title">div</span>&gt;</span>
+
+  <span class="md-code-tag">&lt;<span class="md-code-title">div</span>&gt;</span>
+    <span class="md-code-tag">&lt;<span class="md-code-title">h3</span>&gt;</span>Info<span class="md-code-tag">&lt;/<span class="md-code-title">h3</span>&gt;</span>
+    <span class="md-code-tag">&lt;<span class="md-code-title">br</span>&gt;</span>
+    <span class="md-code-tag">&lt;<span class="md-code-title">table</span>&gt;</span>
+      <span class="md-code-tag">&lt;<span class="md-code-title">tr</span>&gt;</span>
+        <span class="md-code-tag">&lt;<span class="md-code-title">th</span>&gt;</span>Location<span class="md-code-tag">&lt;/<span class="md-code-title">th</span>&gt;</span>
+        <span class="md-code-tag">&lt;<span class="md-code-title">td</span>&gt;</span>{{location}}<span class="md-code-tag">&lt;/<span class="md-code-title">td</span>&gt;</span>
+      <span class="md-code-tag">&lt;/<span class="md-code-title">tr</span>&gt;</span>
+      <span class="md-code-tag">&lt;<span class="md-code-title">tr</span>&gt;</span>
+        <span class="md-code-tag">&lt;<span class="md-code-title">th</span>&gt;</span>Blog<span class="md-code-tag">&lt;/<span class="md-code-title">th</span>&gt;</span>
+        <span class="md-code-tag">&lt;<span class="md-code-title">td</span>&gt;</span>{{blog}}<span class="md-code-tag">&lt;/<span class="md-code-title">td</span>&gt;</span>
+      <span class="md-code-tag">&lt;/<span class="md-code-title">tr</span>&gt;</span>
+    <span class="md-code-tag">&lt;/<span class="md-code-title">table</span>&gt;</span>
+  <span class="md-code-tag">&lt;/<span class="md-code-title">div</span>&gt;</span>
+<span class="md-code-tag">&lt;/<span class="md-code-title">div</span>&gt;</span>
+</code></pre> <p>The User Repos view is our last view template, a partial in this case. It has to be located at <code class="md-code md-code-inline">app/templates/user_repos_view.hbs</code>, and it&#x2019;s used to iterate through a collection of repositories, displaying interesting metrics about each repository.</p> <pre class="md-code-block"><code class="md-code md-lang-xml"><span class="md-code-tag">&lt;<span class="md-code-title">h3</span>&gt;</span>Repos<span class="md-code-tag">&lt;/<span class="md-code-title">h3</span>&gt;</span>
+<span class="md-code-tag">&lt;<span class="md-code-title">table</span>&gt;</span>
+  <span class="md-code-tag">&lt;<span class="md-code-title">thead</span>&gt;</span>
+    <span class="md-code-tag">&lt;<span class="md-code-title">tr</span>&gt;</span>
+      <span class="md-code-tag">&lt;<span class="md-code-title">th</span>&gt;</span>Name<span class="md-code-tag">&lt;/<span class="md-code-title">th</span>&gt;</span>
+      <span class="md-code-tag">&lt;<span class="md-code-title">th</span>&gt;</span>Watchers<span class="md-code-tag">&lt;/<span class="md-code-title">th</span>&gt;</span>
+      <span class="md-code-tag">&lt;<span class="md-code-title">th</span>&gt;</span>Forks<span class="md-code-tag">&lt;/<span class="md-code-title">th</span>&gt;</span>
+    <span class="md-code-tag">&lt;/<span class="md-code-title">tr</span>&gt;</span>
+  <span class="md-code-tag">&lt;/<span class="md-code-title">thead</span>&gt;</span>
+  <span class="md-code-tag">&lt;<span class="md-code-title">tbody</span>&gt;</span>
+  {{#each models}}
+    <span class="md-code-tag">&lt;<span class="md-code-title">tr</span>&gt;</span>
+      <span class="md-code-tag">&lt;<span class="md-code-title">td</span>&gt;</span>{{name}}<span class="md-code-tag">&lt;/<span class="md-code-title">td</span>&gt;</span>
+      <span class="md-code-tag">&lt;<span class="md-code-title">td</span>&gt;</span>{{watchers_count}}<span class="md-code-tag">&lt;/<span class="md-code-title">td</span>&gt;</span>
+      <span class="md-code-tag">&lt;<span class="md-code-title">td</span>&gt;</span>{{forks_count}}<span class="md-code-tag">&lt;/<span class="md-code-title">td</span>&gt;</span>
+    <span class="md-code-tag">&lt;/<span class="md-code-title">tr</span>&gt;</span>
+  {{/each}}
+  <span class="md-code-tag">&lt;/<span class="md-code-title">tbody</span>&gt;</span>
+<span class="md-code-tag">&lt;/<span class="md-code-title">table</span>&gt;</span>
+</code></pre> <p>That&#x2019;s it! Phew. You can find all of this code, in a <a href="https://github.com/bevacqua/buildfirst/tree/master/ch07/11_entourage" target="_blank">working code sample here</a>. The resulting code looks sort of like the screenshot below, after some styling.</p> <p><img alt="rendr-entourage.png" class="" src="https://i.imgur.com/ujaxhze.png"></p> <p>Note that there are alternatives to Rendr. If you are concerned about the issues I raised earlier, here are some resources you might want to take a look at.</p> <ul> <li><a href="http://artsy.github.io/blog/2013/11/30/rendering-on-the-server-and-client-in-node-dot-js/" target="_blank" aria-label="Rendering on the Server and Client in Node.js - Artsy">Rendering on the Server and Client in Node.js</a></li> <li><a href="http://ezeljs.com/" target="_blank">Ezel.js</a></li> <li><a href="http://substack.net/shared_rendering_in_node_and_the_browser" target="_blank" aria-label="Shared Rendering in Node and the Browser - substack">Shared Rendering in Node and the Browser</a></li> </ul> <p><em>Until the next time!</em></p></div>

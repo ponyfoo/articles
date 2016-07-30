@@ -1,0 +1,212 @@
+<div><blockquote>
+  <h1>Teach Yourself Node.JS in 10 Steps</h1>
+  <div><p>I&#x2019;m not sure anyone needs convincing that <strong>Node.JS is freaking awesome</strong>, little has been said otherwise. Many of the people reading this blog are <em>already &#x2026;</em></p></div>
+</blockquote></div>
+
+<div><p>I&#x2019;m not sure anyone needs convincing that <strong>Node.JS is freaking awesome</strong>, little has been said otherwise. Many of the people reading this blog are <em>already experienced Node developers</em>, but maybe we could help newcomers ramp up as fast as the technology itself is ramping up.</p></div>
+
+<div></div>
+
+<div><blockquote> <p>If you are on the verge of <a href="http://localhost:3000/2012/12/29/single-page-design-madness">trying something new</a>, though, then this article has high hopes of you. I can <em>personally guarantee</em> you won&#x2019;t regret giving <strong>Node.JS</strong> a test drive.</p> </blockquote> <p>I&#x2019;ll try to cover as much as possible, but this is meant to be just <em>an overview</em>. You have to <strong>explore by yourself</strong>; I&#x2019;ll give you the tools to do just that, forking off of what I&#x2019;ve learned <em>over the last year</em>. JavaScript <a href="http://localhost:3000/2013/02/15/javascript-is-awesome">might be awesome</a>, but <strong>Node is even more so</strong>. That rhymes.</p></div>
+
+<div><p>To kick things off, here are <em>a couple of infographics</em>. Because who doesn&#x2019;t <strong>love infographics</strong>, right? I generally just embed pictures here, but these are way too large, so I&#x2019;ll just link to them.</p> <p>The <a href="http://i.imgur.com/KCkIkcY.jpg" target="_blank" aria-label="Infographic - Getting to know Node">first infographic</a> I want to show you is about the earlier days of Node. It depicts its strengths, such as its growing community and <em>the reasons it appeals to developers</em>. A second, <a href="http://i.imgur.com/qrhh5Xk.jpg" target="_blank" aria-label="Infographic - Node Growth Trends">more recent infographic</a>, reveals the steady rise in popularity <a href="http://nodejs.org/" target="_blank" aria-label="Node.JS by Joyent">Node.JS</a> is trending towards.</p> <p>Those are pretty. You get it, <em>Node is popular, and awesome</em>. What is it? Where does it come from?</p> <h2 id="history-lesson">History Lesson</h2> <p>Node.JS was released <em>four years ago</em>, in 2009. Just a year after Google open-sourced <a href="https://code.google.com/p/v8/" target="_blank" aria-label="Google V8 Engine">V8</a>, the JavaScript engine that powers <em>Chrome and Node.JS</em> alike. You might want to learn more about V8 if the deep technical internals are your thing, you can watch this video in that case. It is <em>entirely optional</em> to the purpose of this article, though, so you keep the link around for later.</p> <p><a href="http://www.youtube.com/watch?v=FrufJFBSoQY" target="_blank" aria-label="V8 Talk - High Performance JavaScript Engine - Google I/O"><img alt="V8 Talk" class="" src="https://i.imgur.com/CAe1GHl.jpg"></a></p> <blockquote> <p>Here&#x2019;s something <em>a bit more in the wheelhouse</em> of what we&#x2019;re going to be talking about, an <strong>introduction to Node.JS with Ryan Dahl</strong>, the <em>huge nerd</em> who invented Node. This is a <em>very entertaining, fast-paced talk</em>, where you&#x2019;ll learn the basics, <em>spoken by the original author</em> himself. What&#x2019;s not to like? Go ahead, <strong>watch the full thing!</strong></p> </blockquote> <blockquote> <p><a href="http://www.youtube.com/watch?v=jo_B4LTHi3I" target="_blank" aria-label="Introduction to Node.JS with Ryan Dahl"><img alt="Intro to Node.JS" class="" src="https://i.imgur.com/AMuw2vF.jpg"></a></p> </blockquote> <p>Good stuff. Please note the talk is <strong>two years old</strong>, and <em>some of the statements Ryan makes are now outdated</em>.</p> <p>Lets start talking about modularity, to grasp the differences between Node and code in the browser. I prepared a special something you can use as you read this article. You can find every example in this article <a href="https://github.com/ponyfoo/learn-nodejs" target="_blank" aria-label="Learn NodeJS on GitHub">on GitHub</a> nicely packed for you to <em>start playing right away</em>.</p> <h2 id="modularity-in-node">Modularity in Node</h2> <p>Node implements <a href="http://wiki.commonjs.org/wiki/Modules/1.1" target="_blank" aria-label="Modules/1.1 - CommonJS Spec">CommonJS Modules/1.1</a>, which allow you to keep files self-contained. You can learn all about <a href="http://nodejs.org/api/modules.html" target="_blank" aria-label="Modules API">Node Modules</a> from their <em>increasingly useful documentation</em>.</p> <p>Modules can expose an API through the <code class="md-code md-code-inline">module.exports</code> convention.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// modules/math.js</span>
+
+<span class="md-code-keyword">var</span> api = {
+    sum: <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(a, b)</span></span>{
+        <span class="md-code-keyword">return</span> a + b;
+    }
+};
+
+<span class="md-code-built_in">module</span>.exports = api;
+</code></pre> <p>Note the variable <code class="md-code md-code-inline">api</code> won&#x2019;t make it&#x2019;s way to the <code class="md-code md-code-inline">global</code> object. You can <a href="http://nodejs.org/api/globals.html" target="_blank" aria-label="Global Objects in Node.JS">learn why</a> from the docs. Globals work differently in Node. The top-level scope of a module is local to that module, but you can still access a few globals on your own, such as <code class="md-code md-code-inline">process</code>, and <code class="md-code md-code-inline">console</code>. Setting up your own globals on the <code class="md-code md-code-inline">global</code> object is discouraged.</p> <p>Consequently, <code class="md-code md-code-inline">module</code> isn&#x2019;t a global, but rather a <em>local variable</em>, private to the module we are currently working on.</p> <p>Modules can be referenced using the <code class="md-code md-code-inline">require</code> function. You can provide a package name <em>(more on that later)</em>, or a <em>physical path</em> relative to the file you are invoking <code class="md-code md-code-inline">require</code> from.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// modules/app.js</span>
+
+<span class="md-code-keyword">var</span> math = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./math.js&apos;</span>);
+<span class="md-code-keyword">var</span> result = math.sum(<span class="md-code-number">1</span>, <span class="md-code-number">2</span>);
+
+<span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;I can\&apos;t believe the result is:&apos;</span>, result, <span class="md-code-string">&apos;!&apos;</span>);
+</code></pre> <p>Both files being on the same directory is assumed. The <code class="md-code md-code-inline">math</code> variable will now equal the value of <code class="md-code md-code-inline">module.exports</code> in <code class="md-code md-code-inline">math.js</code>.</p> <blockquote> <p>What does <code class="md-code md-code-inline">console.log</code> do? It&#x2019;s actually <strong>just syntactic sugar</strong> for <code class="md-code md-code-inline">process.stdout.write</code>, and it will append a new line <code class="md-code md-code-inline">\n</code> at the end. This is <strong>deliberately done all over Node</strong> to <em>help ease your on-boarding</em> onto the platform by leveraging the conventions and objects you are already used to from your experience in writing client-side JavaScript.</p> </blockquote> <blockquote> <p>Sidebar. You might want to read the actual <a href="http://nodejs.org/api/stdio.html" target="_blank" aria-label="console API documentation">console API</a> documentation.</p> </blockquote> <p>Note that requiring a file multiple times in the same process will only execute the code in the module once. So if you were to <code class="md-code md-code-inline">require</code> the <code class="md-code md-code-inline">app.js</code> module several times, it would still be executed a single time. As a result, the output would only be buffered once.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// modules/several.js</span>
+
+<span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./app.js&apos;</span>);
+<span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./app.js&apos;</span>);
+<span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./app.js&apos;</span>);
+</code></pre> <p>Those are modules all right, but where&#x2019;s the asynchronicity Node is supposedly so popular for?</p> <h2 id="asynchronous-convention">Asynchronous Convention</h2> <p>Node is an <strong>event-based language</strong>, and most of the code written for Node follows a really simple convention that helps modules look inspiringly similar to each other, as far as coding conventions go.</p> <p>Our math module would probably look more like this if we wanted to play nice with the Node community at large.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// async/math.js</span>
+
+<span class="md-code-keyword">var</span> api = {
+    sum: <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(a, b, done)</span></span>{
+        process.nextTick(<span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span></span>{
+            done(<span class="md-code-literal">null</span>, a + b);
+        });
+    }
+};
+
+<span class="md-code-built_in">module</span>.exports = api;
+</code></pre> <p><code class="md-code md-code-inline">process.nextTick</code> is kind of hard to wrap our head around at first, but lets just imagine it&#x2019;s <code class="md-code md-code-inline">setTimeout(fn,0)</code>, which we might have used while trying hacky fixes in the browser.</p> <p>I&#x2019;ve used <code class="md-code md-code-inline">process.nextTick</code> to turn an otherwise synchronous function into an asynchronous one. When we are done processing, we&#x2019;re going to pass the result as <em>the second parameter</em> of the <code class="md-code md-code-inline">done</code> callback. The first parameter should <strong>always</strong> be <code class="md-code md-code-inline">err</code>, if an error occurs, we are passing that as the first parameter, rather than throwing an exception. If no error occurs, we are fine passing any falsy value.</p> <p>Consuming this module is still really easy.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// async/app.js</span>
+
+<span class="md-code-keyword">var</span> math = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./math.js&apos;</span>);
+
+math.sum(<span class="md-code-number">1</span>, <span class="md-code-number">2</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(err, result)</span></span>{
+    <span class="md-code-keyword">if</span>(err){
+        <span class="md-code-keyword">throw</span> err;
+    }
+    
+    <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;I can\&apos;t believe the result is:&apos;</span>, result, <span class="md-code-string">&apos;!&apos;</span>);
+});
+</code></pre> <p>We are now <em>waiting reactively</em> for the <code class="md-code md-code-inline">sum</code> function to let us know when it&#x2019;s done. This is the <em>basest of asynchronous</em> examples in <strong>Node.JS</strong>. Note how we <em>changed modes</em>, and use <code class="md-code md-code-inline">throw</code> here; this is fine as long as we are in a synchronous path, <code class="md-code md-code-inline">throw</code>ing errors should always have the end result of <strong>process termination</strong>, so keep that in mind when you are dealing with this type of situations. This is <em>acceptable for our console application</em>, however in a web application we probably would prefer to just return an HTTP status code 500, <em>internal server error</em>, for the current request.</p> <p>You&#x2019;ll also have to consider the option of <strong>bubbling errors</strong> through <em>multiple asynchronous calls</em>. This, for example, might not be the best error-handling approach:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// async/wrong.js</span>
+
+<span class="md-code-keyword">var</span> math = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./math.js&apos;</span>);
+
+math.sum(<span class="md-code-number">1</span>, <span class="md-code-number">2</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(err, result)</span></span>{
+    <span class="md-code-keyword">if</span>(err){
+        <span class="md-code-keyword">throw</span> err;
+    }
+
+    math.sum(result, <span class="md-code-number">3</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(err, result)</span></span>{
+        <span class="md-code-keyword">if</span>(err){
+            <span class="md-code-keyword">throw</span> err;
+        }
+
+        <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;I can\&apos;t believe the result is:&apos;</span>, result, <span class="md-code-string">&apos;!&apos;</span>);
+    });
+});
+</code></pre> <p>A more sensible approach might be to avoid throwing errors all over the place, but handle those in a centralized location.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// async/better.js</span>
+
+<span class="md-code-keyword">var</span> math = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./math.js&apos;</span>);
+
+math.sum(<span class="md-code-number">1</span>, <span class="md-code-number">2</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(err, result)</span></span>{
+    <span class="md-code-keyword">if</span>(err){
+        <span class="md-code-keyword">return</span> then(err);
+    }
+
+    math.sum(result, <span class="md-code-number">3</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(err, result)</span></span>{
+        <span class="md-code-keyword">if</span>(err){
+            <span class="md-code-keyword">return</span> then(err);
+        }
+
+        then(err, result);
+    });
+});
+
+<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">then</span><span class="md-code-params">(err, result)</span></span>{
+    <span class="md-code-keyword">if</span>(err){
+        <span class="md-code-keyword">throw</span> err;
+    }
+
+    <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;I can\&apos;t believe the result is:&apos;</span>, result, <span class="md-code-string">&apos;!&apos;</span>);
+}
+</code></pre> <p>This is however, getting pretty verbose. Let me skip to a module for a bit, and then come back and explain what&#x2019;s going on. We&#x2019;re going to use the control flow module called <a href="https://github.com/caolan/async" target="_blank" aria-label="caolan/async on GitHub">async</a>, to improve the readability of our code.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// async/right.js</span>
+
+<span class="md-code-keyword">var</span> async = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;async&apos;</span>);
+<span class="md-code-keyword">var</span> math = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./math.js&apos;</span>);
+
+async.waterfall([
+    <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(next)</span></span>{
+        math.sum(<span class="md-code-number">1</span>, <span class="md-code-number">2</span>, next);
+    },
+    <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(result, next)</span></span>{
+        math.sum(result, <span class="md-code-number">3</span>, next);
+    }
+], then);
+
+<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">then</span><span class="md-code-params">(err, result)</span></span>{
+    <span class="md-code-keyword">if</span>(err){
+        <span class="md-code-keyword">throw</span> err;
+    }
+
+    <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;I can\&apos;t believe the result is:&apos;</span>, result, <span class="md-code-string">&apos;!&apos;</span>);
+}
+</code></pre> <p>That&#x2019;s a little better. Since we&#x2019;ve been following the right conventions, we can use <code class="md-code md-code-inline">async</code>, which allows us to get rid of all those pesky <code class="md-code md-code-inline">if(err)</code> statements, and <strong>flatten our callback hell</strong> while we&#x2019;re at it. <code class="md-code md-code-inline">waterfall</code>&apos;s API is pretty simple, we give it an array of functions, and these will be called <em>in series</em>, when our first <code class="md-code md-code-inline">math.sum</code> completes, it will invoke the <code class="md-code md-code-inline">next</code> callback with the <code class="md-code md-code-inline">(null, 3)</code> arguments. If a function returns a <em>truthy value</em> in the first parameter, this will <strong>shortcut the waterfall</strong> and immediatly jumping to the <code class="md-code md-code-inline">then</code> function, passing the error argument, still in the first position. If no error occurs, then the next function in the sequence is executed, passing any resulting arguments to it (in this case, just the <code class="md-code md-code-inline">3</code>).</p> <p>This is the recommended way of doing things because it flattens the structure of our code, turning our codebase into something more readable, while at the same time following the same conventions and using the same API that is used everywhere else. You must check out the async module and its <a href="https://github.com/caolan/async#documentation" target="_blank" aria-label="async documentation on GitHub">comprehensive API</a>, toy with it for a while.</p> <blockquote> <p>That&#x2019;s great and all, but where did <code class="md-code md-code-inline">async</code> come from? It sure as hell isn&#x2019;t part of Node.</p> </blockquote> <p>I&#x2019;m glad you asked.</p> <h2 id="node-packaged-modules">Node Packaged Modules</h2> <p><code class="md-code md-code-inline">npm</code> is <em>a small treasure</em> that comes bundled with Node, and helps you <em>manage dependencies</em> in your projects. There is a <a href="http://npmjs.org/" target="_blank" aria-label="npm repository">huge repository</a> you can search, and most people include installation instructions in their GitHub repositories. Ultimately, <code class="md-code md-code-inline">npm</code> is a CLI <em>(command-line interface)</em> tool.</p> <p>If you have been following the instructions of the <a href="https://github.com/ponyfoo/learn-nodejs" target="_blank" aria-label="learn-nodejs on GitHub">learn-nodejs</a> repository I provided, then you already have dependencies installed in your project folder. If not, just run the following command in your terminal.</p> <pre class="md-code-block"><code class="md-code md-lang-bash">$ npm install
+</code></pre> <p>That&#x2019;s it, now you have everything you need. How does that work? Some weird magic? No, just <a href="https://github.com/ponyfoo/learn-nodejs/blob/master/package.json" target="_blank" aria-label="package.json for learn-nodejs">package.json</a>. This file helps us define the dependencies in our project. When you ran <code class="md-code md-code-inline">npm install</code> in your terminal, all it did was install the dependencies listed in the <code class="md-code md-code-inline">package.json</code> file.</p> <pre class="md-code-block"><code class="md-code md-lang-json">{
+  &quot;<span class="md-code-attribute">name</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;learn-nodejs&quot;</span></span>,
+  &quot;<span class="md-code-attribute">description</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;Simple NodeJS Application Examples&quot;</span></span>,
+  &quot;<span class="md-code-attribute">homepage</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;https://github.com/ponyfoo/learn-nodejs&quot;</span></span>,
+  &quot;<span class="md-code-attribute">author</span>&quot;: <span class="md-code-value">{
+    &quot;<span class="md-code-attribute">name</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;Nicolas Bevacqua&quot;</span></span>,
+    &quot;<span class="md-code-attribute">email</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;nicolasbevacqua@gmail.com&quot;</span></span>,
+    &quot;<span class="md-code-attribute">url</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;http://www.ponyfoo.com&quot;</span>
+  </span>}</span>,
+  &quot;<span class="md-code-attribute">version</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;0.0.1&quot;</span></span>,
+  &quot;<span class="md-code-attribute">repository</span>&quot;: <span class="md-code-value">{
+    &quot;<span class="md-code-attribute">type</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;git&quot;</span></span>,
+    &quot;<span class="md-code-attribute">url</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;https://github.com/ponyfoo/learn-nodejs.gitt&quot;</span>
+  </span>}</span>,
+  &quot;<span class="md-code-attribute">dependencies</span>&quot;: <span class="md-code-value">{
+    &quot;<span class="md-code-attribute">async</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;~0.2.9&quot;</span>
+  </span>}
+</span>}
+</code></pre> <p>I rarely add dependencies manually to this definition file, in the case of <code class="md-code md-code-inline">async</code>, for example, all I did was run the following command:</p> <pre class="md-code-block"><code class="md-code md-lang-bash">$ npm install async --save
+</code></pre> <p>That&#x2019;s it. <code class="md-code md-code-inline">async</code> has been added it to the <code class="md-code md-code-inline">dependencies</code> object. Installing a module basically just fetches it, and adds it to a <code class="md-code md-code-inline">node_modules</code> folder, which you should always exclude in your <code class="md-code md-code-inline">.gitignore</code> settings.</p> <p>If you are interested in developing your own <code class="md-code md-code-inline">npm</code> module, you&#x2019;ll be shocked to learn <a href="http://localhost:3000/2013/01/23/publishing-nodejs-packages-with-npm" aria-label="Publishing Node.JS Packages with npm">how simple that is</a>.</p> <p>Before we jump into building a decent application, lets look at one of the most powerful constructs in Node.</p> <h2 id="events-api">Events API</h2> <p>Yes! Of course, I was talking about the <a href="http://nodejs.org/api/events.html" target="_blank" aria-label="Events in Node">event emitter API</a>. What are events? Well, the documentation explains it like this:</p> <blockquote> <p>Many objects in Node emit events: a <code class="md-code md-code-inline">net.Server</code> emits an event each time a peer connects to it, a <code class="md-code md-code-inline">fs.readStream</code> emits an event when the file is opened. All objects which emit events are instances of <code class="md-code md-code-inline">events.EventEmitter</code>. You can access this module by doing: <code class="md-code md-code-inline">require(&apos;events&apos;);</code></p> </blockquote> <blockquote> <p>Functions can then be attached to objects, to be executed when an event is emitted. These functions are called listeners. Inside a listener function, <code class="md-code md-code-inline">this</code> refers to the <code class="md-code md-code-inline">EventEmitter</code> that the listener was attached to.</p> </blockquote> <p>Lets write <strong>our own event emitter</strong> and explain a few things along the way. Then, we&#x2019;ll see how it can be used.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// events/implementation.js</span>
+
+<span class="md-code-keyword">var</span> util = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;util&apos;</span>);
+<span class="md-code-keyword">var</span> EventEmitter = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;events&apos;</span>).EventEmitter;
+
+<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">Heartbeat</span><span class="md-code-params">(interval)</span></span>{
+    EventEmitter.call(<span class="md-code-keyword">this</span>);
+
+    <span class="md-code-keyword">var</span> emitter = <span class="md-code-keyword">this</span>;
+    <span class="md-code-keyword">var</span> beats = <span class="md-code-number">0</span>;
+
+    setInterval(<span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span></span>{
+        emitter.emit(<span class="md-code-string">&apos;beat&apos;</span>, ++beats);
+    }, interval);
+}
+
+util.inherits(Heartbeat, EventEmitter);
+
+<span class="md-code-built_in">module</span>.exports = Heartbeat;
+</code></pre> <p>Don&#x2019;t laugh, that&#x2019;s the best I could come up with. Here I&#x2019;m simply creating a constructor function for my custom <code class="md-code md-code-inline">EventEmitter</code> implementation. I&#x2019;m using <a href="http://nodejs.org/docs/latest/api/util.html#util_util_inherits_constructor_superconstructor" target="_blank" aria-label="Documentation on util.inherits">util.inherits</a>, as it&#x2019;s the recommended way of performing <strong>prototypal inheritance</strong> in Node applications.</p> <p>Whenever our emitter <code class="md-code md-code-inline">.emit</code>s an event, all subscribers to that event will be notified, and receive the arguments which where provided when the event was emitted.</p> <p>Remember what I mentioned about <em>leveraging your API knowledge</em> about the browser with that in Node? <code class="md-code md-code-inline">setInterval</code> is one of those cases.</p> <p>Fine, how do we use our newly born event emitter? It&#x2019;s simple, really:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// events/usage.js</span>
+
+<span class="md-code-keyword">var</span> Heartbeat = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./implementation.js&apos;</span>);
+<span class="md-code-keyword">var</span> a = <span class="md-code-keyword">new</span> Heartbeat(<span class="md-code-number">400</span>);
+<span class="md-code-keyword">var</span> b = <span class="md-code-keyword">new</span> Heartbeat(<span class="md-code-number">1000</span>);
+
+a.on(<span class="md-code-string">&apos;beat&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(beats)</span></span>{
+    <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;Heart A beat n times:&apos;</span>, beats);
+});
+
+b.on(<span class="md-code-string">&apos;beat&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(beats)</span></span>{
+    <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;Heart B beat n times:&apos;</span>, beats);
+});
+</code></pre> <p>I&#x2019;m not even sure I need to explain this, but whenever the emitter invokes <code class="md-code md-code-inline">.emit</code>, every listener for that event, added by <code class="md-code md-code-inline">.on</code>, will have its callback triggered. This <em>seemingly innocent API</em> powers a lot of what Node does.</p> <p>One last thing, read this quote from the documentation:</p> <blockquote> <p>When an <code class="md-code md-code-inline">EventEmitter</code> instance experiences an error, the typical action is to emit an <code class="md-code md-code-inline">&apos;error&apos;</code> event. Error events are treated as a special case in node. If there is no listener for it, then the default action is to print a stack trace and exit the program.</p> </blockquote> <p>What this means is that if there is no <code class="md-code md-code-inline">.on(&apos;error&apos;, fn)</code> listener, and your emitter emits an <code class="md-code md-code-inline">&apos;error&apos;</code> event, then your application will die a tragic death.</p> <h2 id="http-server">HTTP Server</h2> <p>Enough blabbering, here is an <strong>HTTP server in Node</strong>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// http/server.js</span>
+
+<span class="md-code-keyword">var</span> http = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;http&apos;</span>);
+
+http.createServer(<span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(req, res)</span> </span>{
+    res.end(<span class="md-code-string">&apos;Hello Node&apos;</span>, <span class="md-code-number">200</span>);
+    <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;I think I\&apos;ve heard something!&apos;</span>);
+}).listen(<span class="md-code-number">8000</span>);
+
+<span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;Listening!&apos;</span>);
+</code></pre> <p>That wasn&#x2019;t so amusing, it was very <em>simple and self-describing</em>, though! Lets try something different, <strong>serving an HTML file from disk</strong>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// http/html.js</span>
+
+<span class="md-code-keyword">var</span> http = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;http&apos;</span>);
+<span class="md-code-keyword">var</span> fs = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;fs&apos;</span>);
+<span class="md-code-keyword">var</span> path = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;path&apos;</span>);
+<span class="md-code-keyword">var</span> index = path.resolve(__dirname, <span class="md-code-string">&apos;./index.html&apos;</span>);
+
+http.createServer(<span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(req, res)</span> </span>{
+    <span class="md-code-keyword">var</span> stream = fs.createReadStream(index);
+
+    stream.on(<span class="md-code-string">&apos;open&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span></span>{
+        res.writeHead(<span class="md-code-number">200</span>, { <span class="md-code-string">&apos;Content-Type&apos;</span>: <span class="md-code-string">&apos;text/html&apos;</span> });
+    });
+
+    stream.on(<span class="md-code-string">&apos;error&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span></span>{
+        res.writeHead(<span class="md-code-number">404</span>);
+        res.end();
+    });
+
+    stream.pipe(res);
+}).listen(<span class="md-code-number">8000</span>);
+
+<span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;Listening!&apos;</span>);
+</code></pre> <p>Couple of things. First of all, <code class="md-code md-code-inline">__dirname</code> is a <em>special local variable</em> that contains the absolute path to the directory for our currently executing module. We just learned what events are, the <a href="http://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options" target="_blank" aria-label="File System API - Node Documentation">fs.createReadStream</a> method will provide us with an event emitter we can use to stream data to the response. The file will be piped straight into a <a href="http://en.wikipedia.org/wiki/Chunked_transfer_encoding" target="_blank" aria-label="HTTP Chunked Transfer Encoding">chunked</a> response, this can be achieved using the <a href="http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options" target="_blank" aria-label="Node Readable Streams">readable.pipe method</a>. If the file isn&#x2019;t found, the stream will emit an <code class="md-code md-code-inline">&apos;error&apos;</code> event; we can take advantage of that and respond with a <em>404 status code</em> instead.</p> <p>This is, however, a very convoluted thing to do to just serve a file. Enter <a href="http://expressjs.com/" target="_blank" aria-label="Express Web Application Framework">Express.JS</a>.</p> <h2 id="express-application-framework">Express Application Framework</h2> <p>Express is built on <a href="http://www.senchalabs.org/connect/" target="_blank" aria-label="Connect">Connect</a>, which expands on Node&#x2019;s HTTP server. There&#x2019;s also <a href="http://socket.io/" target="_blank" aria-label="Socket.IO realtime application framework">Socket.IO</a> for implementing web socket communications, but I won&#x2019;t be getting into realtime for now.</p> <p>Connect just provides <em>middleware</em>, a nice abstraction over what the native HTTP module offers. Express builds on that, adding a lot of awesome features, and <strong>making your life more bearable</strong>. Here is a small sample application built on Express:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-comment">// http/express.js</span>
+
+<span class="md-code-keyword">var</span> express = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;express&apos;</span>);
+<span class="md-code-keyword">var</span> app = express();
+
+app.get(<span class="md-code-string">&apos;/&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(req, res)</span></span>{
+    res.send(<span class="md-code-string">&apos;hello world&apos;</span>);
+});
+
+app.listen(<span class="md-code-number">8000</span>);
+</code></pre> <p>The <a href="http://expressjs.com/api.html" target="_blank" aria-label="Express.JS API Documentation">API</a> is <strong>incredibly self-documenting</strong>, I wish more projects had an API as clean as Express does.</p> <p>Enough already. You are mean for laughing at <em>all of my stupid examples</em>. You know what else is mean?</p> <h2 id="mongodb-expressjs-angularjs-and-nodejs">MongoDB, ExpressJS, AngularJS and NodeJS</h2> <p>The <a href="http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb-expressjs-angularjs-and" target="_blank" aria-label="The MEAN Stack: MongoDB, ExpressJS, AngularJS and NodeJS">MEAN Stack</a> is not a hipster thing, as delusional people try to assertain with no real reasoning behind their empty statements. The MEAN stack is a very real thing. Here&#x2019;s a <a href="http://www.slideshare.net/mongodb/mongodb2-21677032" target="_blank" aria-label="The MEAN Stack Explained - Slideshare">slideshare</a> for you to look at.</p> <ul> <li><a href="http://www.mongodb.org/" target="_blank" aria-label="MongoDB NoSQL Database Server">MongoDB</a> as a database</li> <li><a href="http://expressjs.com/" target="_blank" aria-label="Express Web Application Framework">ExpressJS</a> as your web framework</li> <li><a href="http://angularjs.org/" target="_blank" aria-label="AngularJS MV* Framework">AngularJS</a> as your client-side framework</li> <li><a href="http://nodejs.org/" target="_blank" aria-label="Node.JS Platform">NodeJS</a> as the platform</li> </ul> <p>The glaring benefit of using a stack such as this is the ease with which you can transfer objects through your application without having to resort to different interfaces, data presentation alternatives, and programming languages. You can really get away with just using JavaScript everywhere.</p> <blockquote> <p>I have fun thinking of <em>JavaScript detractors melting in hell, as the rising tide that is JS continues to plow through and outclass everything in its wake</em>. People can&#x2019;t get away with hating JavaScript like they did a few years ago anymore. <strong>Embrace it or fall behind.</strong> That&#x2019;s simply all the truth there is.</p> </blockquote> <blockquote> <p>You might not like <em>cross-browser issues</em>, but those are <a href="http://localhost:3000/2013/07/09/getting-over-jquery" aria-label="Getting Over jQuery">pretty much gone</a>, and you don&#x2019;t have to face any of that in the fancy world of <strong>Node.JS</strong>.</p> </blockquote> <p>Fine, enough ranting, there are a couple more things for you to look at.</p> <h2 id="jade-and-stylus">Jade and Stylus</h2> <p>Writing plain old HTML is boring, and the same goes for CSS. We have been using templates for a while, but these two really shine when paired with Node.</p> <p><a href="http://jade-lang.com/" target="_blank" aria-label="Jade Template Engine">Jade</a> is an HTML templating language which is pretty popular in the Node community (there are other options, such as <a href="https://github.com/visionmedia/ejs" target="_blank" aria-label="Embedded JavaScript Templates">EJS</a>). With Jade, you can worry less about syntax and more about content. It also supports partials, inheritance, and everything you&#x2019;d expect from a server-side templating language.</p> <p>Except it also supports JavaScript, you can drop plain JavaScript in your Jade templates, and it will interpret that as well. You most definitely should take a look at Jade if you haven&#x2019;t yet.</p> <p><a href="http://learnboost.github.io/stylus/" target="_blank" aria-label="Stylus Expressive CSS">Stylus</a> allows you to pretty much pick your own adventure, and figure out on your own how you want to be styling the style in which you write your CSS style sheets.</p> <p><img alt="styling-styles.jpg" title="Yo Dawg!" class="" src="https://i.imgur.com/vgQYVRu.jpg"></p> <p>Alternatively, though, you could just keep on using <a href="http://lesscss.org/" target="_blank" aria-label="LESS CSS Pre-processor">LESS</a>. Stylus just seems more flexible. I&#x2019;d be interested to hear opinions from people who actually used it.</p> <h5 id="web-hosting">Web Hosting</h5> <p>There are quite a few hosting alternatives, and picking one mostly depends on <em>how fine grained</em> you want your control over the server configuration be.</p> <p>If you are just starting out, then I might recommend you try out <a href="https://www.heroku.com/" target="_blank" aria-label="Heroku Cloud Application Platform">Heroku</a>, mostly because of <em>how easy it is</em> to get set up. You&#x2019;ll want to check out this <a href="http://www.rdegges.com/heroku-isnt-for-idiots/" target="_blank" aria-label="Heroku Isn&apos;t for Idiots">excellent article</a>, too.</p> <h5 id="where-next">Where Next?</h5> <p>Whoa, try and <strong>digest everything you just learned</strong>, first! Once you&#x2019;re done <em>researching on your own</em>, you can start thinking about <a href="http://localhost:3000/search/tagged/build" aria-label="Posts tagged &apos;build&apos;">build processes</a>.</p> <p>Take the <strong>MEAN</strong> stack for a ride, seriously. You won&#x2019;t be disappointed!</p></div>

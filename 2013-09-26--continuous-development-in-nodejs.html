@@ -1,0 +1,107 @@
+<div><blockquote>
+  <h1>Continuous Development in Node.js</h1>
+  <div><p>With <a href="http://gruntjs.com/" target="_blank">Grunt</a>, the JavaScript task runner, it&#x2019;s becoming <em>increasingly easy to tackle continuous development</em>. The goal is being able to work uninterruptedly in our &#x2026;</p></div>
+</blockquote></div>
+
+<div><p>With <a href="http://gruntjs.com/" target="_blank">Grunt</a>, the JavaScript task runner, it&#x2019;s becoming <em>increasingly easy to tackle continuous development</em>. The goal is being able to work uninterruptedly in our code-base while developing. To this effect, there&#x2019;s quite a few things you could do.</p></div>
+
+<div></div>
+
+<div><ul> <li>Replace <code class="md-code md-code-inline">node</code> with <code class="md-code md-code-inline">nodemon</code> (for <em>development</em>), which restarts the <code class="md-code md-code-inline">node</code> process whenever relevant files change</li> <li>Use the <a href="https://github.com/gruntjs/grunt-contrib-watch" target="_blank">watch</a> task in Grunt to re-execute relevant tasks when files change</li> <li>You <em>should</em> invest in a text editor <a href="http://superuser.com/q/366132/48116" target="_blank">that saves files for you</a>!</li> <li>Using <a href="http://livereload.com/" target="_blank">livereload</a>, so that you don&#x2019;t even have to refresh the browser</li> </ul> <p>How the hell do we make sense of all of that, and combine them in such a way that they don&#x2019;t collide into each other and die? Well, <strong>read on</strong>.</p></div>
+
+<div><p><img alt="grunt.png" title="Grunt! JavaScript Task Runner" class="" src="https://i.imgur.com/EyXjS8r.png"></p> <h4 id="nobody-has-time-for-a-full-grunt-build-every-2s">Nobody has time for a full <code class="md-code md-code-inline">grunt build</code> every <em>2s</em></h4> <p>Does <code class="md-code md-code-inline">grunt build</code> automates your builds? Awesome! Who automates <code class="md-code md-code-inline">grunt build</code>? <code class="md-code md-code-inline">grunt watch</code> will! If you&#x2019;re like me, you hit save, or change tabs every few seconds. You can&#x2019;t afford to run a full build every time you change a comment or a comma, because that&#x2019;d be a tremendous waste of your time. Yet, a lot of people do this, because they haven&#x2019;t found a better way to go about it yet. You&#x2019;re reading this, so you&#x2019;re one foot ahead. Kudos. Let&#x2019;s start off by installing <code class="md-code md-code-inline">grunt-watch</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-bash">npm install grunt-contrib-watch --save-dev
+</code></pre> <p>If you haven&#x2019;t already, also install <code class="md-code md-code-inline">load-grunt-tasks</code>. Then replace all your <code class="md-code md-code-inline">grunt.loadNpmTasks</code> calls with:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;load-grunt-tasks&apos;</span>)(grunt);
+</code></pre> <p>That will save you some time in the long run. Now, <code class="md-code md-code-inline">grunt-contrib-watch</code> is fairly easy to set up. Here&#x2019;s a sample:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">{
+  <span class="md-code-string">&quot;watch&quot;</span>: {
+    <span class="md-code-string">&quot;rebuild&quot;</span>: {
+      <span class="md-code-string">&quot;tasks&quot;</span>: [
+        <span class="md-code-string">&quot;build:rebuild&quot;</span>
+      ],
+      <span class="md-code-string">&quot;files&quot;</span>: [
+        <span class="md-code-string">&quot;Gruntfile.js&quot;</span>,
+        <span class="md-code-string">&quot;build/**/*.js&quot;</span>
+      ]
+    },
+    <span class="md-code-string">&quot;jshint_client&quot;</span>: {
+      <span class="md-code-string">&quot;tasks&quot;</span>: [
+        <span class="md-code-string">&quot;jshint:client&quot;</span>
+      ],
+      <span class="md-code-string">&quot;files&quot;</span>: [
+        <span class="md-code-string">&quot;src/client/js/**/*.js&quot;</span>
+      ]
+    },
+    <span class="md-code-string">&quot;jshint_server&quot;</span>: {
+      <span class="md-code-string">&quot;tasks&quot;</span>: [
+        <span class="md-code-string">&quot;jshint:server&quot;</span>
+      ],
+      <span class="md-code-string">&quot;files&quot;</span>: [
+        <span class="md-code-string">&quot;src/srv/**/*.js&quot;</span>,
+        <span class="md-code-string">&quot;app.js&quot;</span>
+      ]
+    },
+    <span class="md-code-string">&quot;css&quot;</span>: {
+      <span class="md-code-string">&quot;tasks&quot;</span>: [
+        <span class="md-code-string">&quot;css:debug&quot;</span>
+      ],
+      <span class="md-code-string">&quot;files&quot;</span>: [
+        <span class="md-code-string">&quot;src/client/css/**/*.styl&quot;</span>
+      ]
+    }
+  }
+}
+</code></pre> <p>This will run <code class="md-code md-code-inline">jshint</code> on my client-side code when it changes, on the server-side code when that changes, it will run the <code class="md-code md-code-inline">css:debug</code> task whenever one of my Stylus stylesheets changes, and it will run the entire build process if it <em>itself</em> changes. The list of tasks goes on, but I didn&#x2019;t want to cloud you with lists of tasks and files, you get the idea.</p> <blockquote> <p>Watch only for the files that <em>directly affect a build task</em>, and run that particular task <em>(or set of tasks)</em> when one or more of those files change. Repeat this for every build task you perform.</p> </blockquote> <p>This helps you to avoid running the build process by yourself whenever something changes, and at the same time it&#x2019;ll be way faster, because only the necessary tasks will run at each point. Remember to clean up before running tasks, using <code class="md-code md-code-inline">grunt-contrib-clean</code>.</p> <p>Now all you need to do is set up a <code class="md-code md-code-inline">dev</code> alias or similar, and make it look like this:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">grunt.registerTask(<span class="md-code-string">&apos;dev&apos;</span>, [<span class="md-code-string">&apos;build:debug&apos;</span>, <span class="md-code-string">&apos;watch&apos;</span>]);
+</code></pre> <p>Awesome, you&#x2019;re halfway there.</p> <h4 id="ain-t-nobody-got-time-fo-dat-kbd-ctrl-kbd-kbd-c-kbd-kbd-kbd-kbd-kbd">Ain&#x2019;t nobody got time fo&#x2019; dat! <kbd>ctrl</kbd><kbd>c</kbd>,<kbd>&#x2191;</kbd>,<kbd>&#x21B5;</kbd></h4> <p><img alt="aint-nobody-got-time.jpg" title="Ain&apos;t nobody got time fo dat!" class="" src="https://i.imgur.com/LkMiobQ.jpg"></p> <p>That&#x2019;s the sequence of keys you often find yourself typing when you&#x2019;re not using <code class="md-code md-code-inline">nodemon</code>, and you should be embarrased. We won&#x2019;t be using <a href="https://github.com/remy/nodemon" target="_blank" aria-label="nodemon on GitHub">nodemon</a> directly, because that&#x2019;s too cumbersome. Instead, we want to integrate it with the bunch of <code class="md-code md-code-inline">watch</code> task targets we&#x2019;re using. The problem is, both <a href="https://github.com/gruntjs/grunt-contrib-watch" target="_blank" aria-label="grunt-contrib-watch on GitHub">grunt-contrib-watch</a> and <a href="https://github.com/ChrisWren/grunt-nodemon" target="_blank" aria-label="grunt-nodemon">grunt-nodemon</a> are <em>blocking</em>. Meaning: these tasks are never supposed to end. That represents a problem when attempting to run them serially, like <strong>Grunt</strong> is used to do. We want them to run <em>side-by-side</em>, like the best friends in the world they are. Enter <a href="https://github.com/sindresorhus/grunt-concurrent" target="_blank" aria-label="grunt-concurrent on GitHub">grunt-concurrent</a>. <code class="md-code md-code-inline">grunt-concurrent</code> solves that problem by spawning new processes for each task it&#x2019;s required to run. Something like this will do the trick, parallelizing <code class="md-code md-code-inline">watch</code> and <code class="md-code md-code-inline">nodemon</code>:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">concurrent: {
+  dev: {
+    options: {
+      logConcurrentOutput: <span class="md-code-literal">true</span>
+    },
+    tasks: [<span class="md-code-string">&apos;watch&apos;</span>, <span class="md-code-string">&apos;nodemon:dev&apos;</span>]
+  }
+}
+</code></pre> <p>That&#x2019;ll do it. but how should we configure the <code class="md-code md-code-inline">nodemon</code> task? Glad you asked.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">nodemon: {
+  dev: {
+    options: {
+      file: <span class="md-code-string">&apos;app.js&apos;</span>
+    }
+  }
+}
+</code></pre> <p>There&#x2019;s a little thing, too. <code class="md-code md-code-inline">nodemon</code> is kind of silly, in that it watches for almost everything. Well, it defaults to <code class="md-code md-code-inline">.js</code>, and <code class="md-code md-code-inline">.coffee</code> files, but that includes stuff in <code class="md-code md-code-inline">node_modules</code>, too. If we use a <code class="md-code md-code-inline">.nodemonignore</code> file, such as the one below, we can ignore stuff that doesn&#x2019;t really affect <code class="md-code md-code-inline">node</code> itself.</p> <pre class="md-code-block"><code class="md-code"># seriously? ignore git changes
+./.git/*
+
+# package control
+./node_modules/*
+./bower_components/*
+
+# logs
+./npm_debug.log
+
+# build artifacts
+./bin/*
+
+# deployment artifacts
+./deploy/*
+
+# os artifacts
+.DS_Store
+
+# ignore client-side js
+./src/client/*
+
+# ignore tests
+./test/*
+</code></pre> <p>Oh, and remember to update your <code class="md-code md-code-inline">dev</code> alias, too.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">grunt.registerTask(<span class="md-code-string">&apos;dev&apos;</span>, [<span class="md-code-string">&apos;build:debug&apos;</span>, <span class="md-code-string">&apos;concurrent:dev&apos;</span>]);
+</code></pre> <p>Done! <em>Next!</em></p> <h4 id="automate-all-the-things-drop-kbd-ctrl-kbd-kbd-s-kbd-forever">Automate all the things! Drop <kbd>ctrl</kbd><kbd>s</kbd> forever</h4> <p><img alt="automate-all-the-things.jpg" title="Automate all the things!" class="" src="https://i.imgur.com/AAQ9riH.jpg"></p> <p>Simple, use a text editor that is dilligent enough that it&#x2019;ll do the saving for you. End the <kbd>ctrl</kbd><kbd>s</kbd> non-sense!</p> <ul> <li>Using <strong>WebStorm</strong>? You&#x2019;re <a href="http://www.jetbrains.com/webstorm/webhelp/saving-and-reverting-changes.html#3" target="_blank">golden</a>!</li> <li><strong>vim</strong> is your peanut butter? then you could <a href="http://stackoverflow.com/q/4637575/389745" target="_blank" aria-label="How can I make Vim autosave files when it loses focus?">use this link</a>.</li> <li><strong>Sublime Text</strong> and its many cursors make you the happiest assembly line worker? <a href="http://superuser.com/q/366132/48116" target="_blank" aria-label="Possible for Sublime Text to save on lost focus?">Here you go!</a></li> <li>Your text editor doesn&#x2019;t auto-save? <em><strong>Ditch it!</strong></em></li> </ul> <p>It will feel kind of weird at first, but as you get used to it, you&#x2019;ll fall in love and never look back.</p> <h2 id="refreshing-the-browser-by-hand-no-way-forget-kbd-ctrl-kbd-kbd-r-kbd">Refreshing the browser by hand? No way! Forget <kbd>ctrl</kbd><kbd>r</kbd></h2> <p>Almost! Okay, we&#x2019;ve now fully automated everything. Pretty much. We could throw-in <code class="md-code md-code-inline">livereload</code>, since it&#x2019;s even bundled together in <code class="md-code md-code-inline">grunt-contrib-watch</code> now. First and foremost, <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-" target="_blank" aria-label="How do I install and use the browser extensions?">install the browser extension</a> for <strong>livereload</strong>.</p> <p>Then, it&#x2019;s just a matter of adding a target to the <code class="md-code md-code-inline">watch</code> task.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">watch: {
+  livereload: {
+    options: {
+      livereload: <span class="md-code-literal">true</span>
+    },
+    files: [
+      <span class="md-code-string">&apos;public/**/*.{css,js}&apos;</span>,
+      <span class="md-code-string">&apos;views/**/*.html&apos;</span>
+    ]
+  }
+}
+</code></pre> <p>No more <kbd>F5</kbd>? Sign me up!</p> <h1 id="unbox-it">Unbox it</h1> <p><img alt="unbox-256.png" title="unbox-256.png" class="" src="https://i.imgur.com/5EwdJvU.png"></p> <p>I iterate over my build processes a lot, and now I finally put it together in a project that&#x2019;s ready to clone and work on. I didn&#x2019;t want to spend a bunch of time copying and pasting every time, and I figured it&#x2019;d be useful to you too. Without further ado, I present <a href="https://github.com/bevacqua/unbox" target="_blank" aria-label="unbox on GitHub">unbox</a> to you. Clone using the command below:</p> <pre class="md-code-block"><code class="md-code md-lang-bash">git <span class="md-code-built_in">clone</span> https://github.com/bevacqua/unbox my-repo
+<span class="md-code-built_in">cd</span> my-repo
+cat unbox.sh | sh
+</code></pre> <p>Doing that will:</p> <ul> <li><code class="md-code md-code-inline">git clone</code> the latest version of <code class="md-code md-code-inline">unbox</code></li> <li>Remove the <code class="md-code md-code-inline">.git</code> folder to avoid confusion</li> <li><code class="md-code md-code-inline">npm install</code></li> <li><code class="md-code md-code-inline">bower install</code></li> <li><strong>Profit!</strong></li> </ul> <blockquote> <p>It doesn&#x2019;t just provide a build process, but an opinionated way to lay out the architecture, build process, and folder structure of any new application you want to develop with Node.</p> </blockquote> <p>Let me know if you find this kind of module to be <em>useful</em>, I sure do!</p> <h1 id="updated-grunt-ec2">Updated <code class="md-code md-code-inline">grunt-ec2</code>!</h1> <p>By the way, I&#x2019;ve updated <a href="https://github.com/bevacqua/grunt-ec2" target="_blank" aria-label="grunt-ec2 on GitHub">grunt-ec2</a>, introduced <a href="http://blog.ponyfoo.com/2013/09/19/deploying-node-apps-to-aws-using-grunt" target="_blank">in this post</a> if you haven&#x2019;t read that yet, and it now has more features!</p> <ul> <li>Port forwarding</li> <li><code class="md-code md-code-inline">nginx</code>! This one made me a really happy pony</li> <li>Proper configuration, setting <code class="md-code md-code-inline">NODE_ENV</code> to the name tag we&#x2019;re using</li> <li>Hard reboots of the EC2 instance, <code class="md-code md-code-inline">pm2</code>, or <code class="md-code md-code-inline">nginx</code></li> <li>Fine grained control over your deployed application without having to <code class="md-code md-code-inline">ssh</code> into the EC2 instance by yourself</li> </ul> <p>You can look at <a href="https://github.com/bevacqua/grunt-ec2/blob/master/CHANGELOG.markdown" target="_blank" aria-label="grunt-ec2 change log on GitHub">the complete change log</a> on GitHub.</p> <p>Oh, I didn&#x2019;t see you there! You see, I&#x2019;m <em>writing a book</em> on this kind of things. If <strong>build processes, application architecture, and JavaScript</strong> are things that warm your noodles, then <em>stay tuned for updates</em> about my book!</p></div>

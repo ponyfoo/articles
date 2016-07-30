@@ -1,0 +1,1 @@
+**Regular Expressions** are a fundamental tool **_every_** programmer should understand, at the very least on a basic level. I might not make an expert in regex out of you, but at least, you should be able to comprehend what they do, and create simple ones yourself.

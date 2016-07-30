@@ -1,0 +1,1 @@
+I'm not sure anyone needs convincing that **Node.JS is freaking awesome**, little has been said otherwise. Many of the people reading this blog are _already experienced Node developers_, but maybe we could help newcomers ramp up as fast as the technology itself is ramping up.

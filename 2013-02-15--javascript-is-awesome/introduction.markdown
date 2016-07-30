@@ -1,0 +1,1 @@
+Behold: the **"hate speech"**.

@@ -1,0 +1,1 @@
+This article is a recollection of common-sense application design practices I usually follow when building things. I felt like grouping them together in a blog post, for future reference. I'll talk not so much about implementation, but more about **program design theory**.

@@ -1,0 +1,1 @@
+Why do we _really_ use jQuery? Sure, it simplifies things. But do we really need _all those abstractions_? Can't we get away with just a few of _the most basic of them_? In this article I'll examine the most frequently used portions of its API, and look at the different ways we can _rewrite_ those everyday utilities _using **plain JavaScript**_.

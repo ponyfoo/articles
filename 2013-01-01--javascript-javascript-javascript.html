@@ -1,0 +1,99 @@
+<div><blockquote>
+  <h1>JavaScript JavaScript JavaScript</h1>
+  <div><p>In my <a href="http://localhost:3000/2012/12/29/single-page-design-madness">previous installment</a>, I <em>prognosticated</em> the discussion topic for this post.</p><blockquote> <p>In the next post I&#x2019;ll delve into <strong>MongoDB</strong>, how to pair it with <strong>Node</strong>, and figuring &#x2026;</p></blockquote></div>
+</blockquote></div>
+
+<div><p>In my <a href="http://localhost:3000/2012/12/29/single-page-design-madness">previous installment</a>, I <em>prognosticated</em> the discussion topic for this post.</p></div>
+
+<div></div>
+
+<div><blockquote> <p>In the next post I&#x2019;ll delve into <strong>MongoDB</strong>, how to pair it with <strong>Node</strong>, and figuring out <em>how to communicate</em> across all the application layers.</p> </blockquote> <p>When it finally came to receiving the user input <em>Markdown</em> produced on the client-side, and persisting it in the database, I realized I knew nothing about <em>Node.JS</em>. As I start writing this down, I realize I&#x2019;m going to need to address some <strong>more fundamental issues</strong> before diving into <em>Node</em>.</p></div>
+
+<div><p>I&#x2019;ve read a few articles about <em>Node</em> and <em>MongoDB</em>, but I hadn&#x2019;t really had any <strong>practical experience</strong> yet. I asked myself a few questions, and I feel like <em>I need to answer at least some of them before going forward</em>.</p> <ul> <li>How I would prevent or mitigate <em>over-posting</em> issues?</li> <li>How am I going to perform <strong>model validation</strong>?</li> <li>How am I going to <strong>separate concerns</strong>?</li> <li>How am I going to <strong>structure the application</strong>? I probably should refer to a framework such as <a href="http://backbonejs.org/" target="_blank" aria-label="Backbone.JS">Backbone.JS</a>, <a href="http://knockoutjs.com/" target="_blank" aria-label="Knockout.JS">Knockout.JS</a>, or the like.</li> <li>Am I going to use the native <em>MongoDB</em> <a href="http://www.mongodb.org/display/DOCS/Drivers" target="_blank">driver</a>? Am I going to find <a href="http://mongoosejs.com/" target="_blank" aria-label="Mongoose Object Document Mapper">Mongoose ODM</a> useful at all?</li> <li>Lastly, <em>how the <strong>heck</strong> am I going to render views that require a model</em>? Will I pair my templating engine with some other <a href="http://mustache.github.com/" target="_blank" aria-label="Mustache">templating</a> <a href="http://handlebarsjs.com/" target="_blank" aria-label="Handlebars">language</a>? Will my implementation do <em>just fine</em> on its own?</li> </ul> <blockquote> <p>I sifted through <a href="http://www.amazon.com/dp/1449323073" target="_blank" aria-label="Learning Node, O&apos;Reiley, Aug 2012">Learning Node</a>, it serves as a pretty decent <strong>introductory crash-course</strong> and it answered the most basic questions I had.</p> </blockquote> <h1 id="refactoring-nodejs">Refactoring Node.JS</h1> <p>The template I started off with had just a <code class="md-code md-code-inline">server.js</code> file that contained everything server-side: http server configuration, error handling, routing, route behavior, etc. I want a more <strong>robust separation of concerns</strong> going forward.</p> <p>After going through the book, I formed a good idea of how I wanted to structure the server application.</p> <p>The first thing I&#x2019;m going to do is to <strong>modularize</strong> the application, I&#x2019;ll <em>separate concerns</em> by having routing modules, controllers, and models, all in <em>separate logical files</em>.</p> <h2 id="moduleexports-http-nodejsorg-api-moduleshtml-nodejs-docs-in-nodejs"><a href="http://nodejs.org/api/modules.html" target="_blank" aria-label="Node.JS docs">module.exports</a> in Node.JS</h2> <p>Node.JS has a cute way of separating concerns in what&#x2019;s called <em>modules</em>. A module is <strong>self-contained</strong> and exposes an API providing access to explicitly defined methods.</p> <p>Here&#x2019;s an example <strong>dependency.js</strong>:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> uid = <span class="md-code-number">0</span>; <span class="md-code-comment">// local</span>
+
+<span class="md-code-built_in">module</span>.exports.startsWith = <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(str, text)</span></span>{
+    <span class="md-code-keyword">return</span> str.indexOf(text) === <span class="md-code-number">0</span>;
+};
+
+<span class="md-code-built_in">module</span>.exports.uid = <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span></span>{
+    <span class="md-code-keyword">return</span> ++uid;
+};
+</code></pre> <p>In your <strong>server.js</strong>, you would reference it like this:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> dep = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./dependency.js&apos;</span>),
+    model = {
+        sn: dep.uid();
+        text: <span class="md-code-string">&apos;dependency flavored model&apos;</span>
+    };
+
+<span class="md-code-comment">// ...</span>
+</code></pre> <p>Not the best of examples, but you get the idea.</p> <h2 id="routing-and-controller-actions">Routing and Controller Actions</h2> <p>Lets examine a more practical example, I want to have my routing defined somewhere else, rather than directly on <strong>server.js</strong>, so I&#x2019;ll replace my routes declaration with the following call, and <em>defer</em> the implementation to another file:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;/routing/core.js&apos;</span>)(server);
+</code></pre> <p>With that simple statement I can pass the <code class="md-code md-code-inline">server</code> object, and handle any routing directly in my self-contained module.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-built_in">module</span>.exports = <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(server)</span></span>{
+    server.get(<span class="md-code-string">&apos;/*&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(req,res)</span></span>{
+        res.render(<span class="md-code-string">&apos;site.jade&apos;</span>);
+    });
+
+    server.post(<span class="md-code-string">&apos;/write-entry&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(req,res)</span></span>{
+        <span class="md-code-built_in">console</span>.log(req.body.entry);
+        res.end();
+    });
+};
+</code></pre> <p>This is pretty awesome, but all I really want from my routes is to <em>juggle request parameters around</em>, and I&#x2019;ll leave any real processing to the <em>controllers</em>. The <code class="md-code md-code-inline">main</code> controller will be a really thin one:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-built_in">module</span>.exports = {
+    get: <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(req,res)</span></span>{
+        res.render(<span class="md-code-string">&apos;site.jade&apos;</span>);
+    }
+};
+</code></pre> <p>For the endpoint previously referred to as <code class="md-code md-code-inline">POST /write-entry</code>, I&#x2019;ll favor a more <a href="http://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank" aria-label="REST API definition">RESTful</a> approach this time. The controller pretty much will remain unchanged:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-built_in">module</span>.exports = {
+    put: <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(req,res)</span></span>{
+        <span class="md-code-built_in">console</span>.log(req.body.entry);
+        res.end();
+    }
+};
+</code></pre> <p>The routing module ends up being:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> main = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;../controllers/main.js&apos;</span>);
+<span class="md-code-keyword">var</span> entry = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;../controllers/entry.js&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(server)</span></span>{
+    server.get(<span class="md-code-string">&apos;/*&apos;</span>, main.get);
+
+    server.put(<span class="md-code-string">&apos;/entry&apos;</span>, entry.put);
+};
+</code></pre> <p>All this code might seem redundant at first, but it will gain value as our application grows.</p> <blockquote> <p>As you might have noticed, my attempt at being RESTful is hindered by the rich application structure where all <code class="md-code md-code-inline">GET</code> requests serve the same <code class="md-code md-code-inline">text/html</code> response. This could be easily be mitigated in the future by considering some other endpoint for any <strong>non-static</strong> resource, such as:</p> </blockquote> <ul> <li><strong>GET</strong> <a href="http://ponyfoo.com/api/1.0/entry" target="_blank">http://ponyfoo.com/api/1.0/entry</a> <em>fetch</em></li> <li><strong>PUT</strong> <a href="http://ponyfoo.com/api/1.0/entry" target="_blank">http://ponyfoo.com/api/1.0/entry</a> <em>upsert</em></li> <li><strong>DELETE</strong> <a href="http://ponyfoo.com/api/1.0/entry/:id" target="_blank">http://ponyfoo.com/api/1.0/entry/:id</a> <em>delete</em></li> </ul> <blockquote> <p>I&#x2019;ll get to this later, but before release.</p> </blockquote> <h2 id="models-in-mongodb-introducing-mongoose-http-mongoosejscom-mongoose-odm">Models in MongoDB, introducing <a href="http://mongoosejs.com/" target="_blank" aria-label="Mongoose ODM">Mongoose</a></h2> <p>So far we&#x2019;ve covered <em>views</em>, <em>controllers</em>, <em>routes</em>, but we haven&#x2019;t actually done anything worthwhile in the server-side. Now we&#x2019;ll plunge into <strong>MongoDB</strong>. I decided to use <strong>Mongoose</strong> after exploring my options a little and realizing how <em>much simpler</em> my development would be having it around.</p> <h3 id="setting-up-the-database-environment">Setting up the database environment</h3> <p>Install the mongoose package through <a href="https://npmjs.org/" target="_blank">npm</a>.</p> <pre class="md-code-block"><code class="md-code md-lang-bash">$ npm install mongoose
+</code></pre> <p>Then we need a little initialization code to get things going:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> mongoose = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;mongoose&apos;</span>);
+
+mongoose.connect(config.db.uri); <span class="md-code-comment">// configured in config.json</span>
+mongoose.connection.on(<span class="md-code-string">&apos;open&apos;</span>, <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">()</span> </span>{
+    <span class="md-code-built_in">console</span>.log(<span class="md-code-string">&apos;Connected to Mongoose&apos;</span>);
+});
+</code></pre> <p>I set up a tentative <code class="md-code md-code-inline">config.db.uri = mongodb://localhost/ponyfoo</code>. This code will <em>blatantly fail upon execution</em>, due to the simple fact that <em>we didn&#x2019;t fire up MongoDB yet</em>, so we&#x2019;ll go ahead and do that now.</p> <p><a href="http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/" target="_blank" aria-label="MongoDB setup instructions on Windows">Download and install MongoDB</a>.</p> <blockquote> <p>I set up <strong>MongoDB</strong> on my development hard drive, sitting at <code class="md-code md-code-inline">f:\mongodb</code>, I configured the data folder within in a <code class="md-code md-code-inline">\data</code> sub-directory, and I also created a succint batch file to fire up <strong>MongoDB</strong> from my project root:</p> </blockquote> <pre class="md-code-block"><code class="md-code md-lang-bash">$ f:\mongodb\bin\mongod.exe --config f:\mongodb\mongod.conf
+</code></pre> <p>The batch file just starts the <em>MongoDB</em> database server the configuration file I created for specifying the <code class="md-code md-code-inline">data</code> folder directly in the <em>MongoDB</em> installation folder. It specifies a <code class="md-code md-code-inline">data</code> folder:</p> <pre class="md-code-block"><code class="md-code">dbpath = f:\mongodb\data
+</code></pre> <p>That&#x2019;s <strong>it</strong>, you should be able to establish a connection through <strong>mongoose</strong>. Try it now.</p> <p>Coming from the <em>Microsoft stack</em> and particularly <strong>SQL Server</strong>, I must admit I feel incredibly good about <em>MongoDB</em>, and I really appreciate being <em>this easy</em> to set up.</p> <h3 id="our-first-database-schema">Our first database schema</h3> <p>I will <strong>maintain a modular approach</strong> to models as well, thus, anywhere I need them, I&#x2019;ll just <code class="md-code md-code-inline">require</code> my models module:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> models = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./models/all.js&apos;</span>);
+</code></pre> <p>This module will, in turn, provide a list of <em>MongoDB</em> <strong>document</strong> models we can use:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> entry = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;./entry.js&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = {
+  entry: entry.model
+};
+</code></pre> <p>And lastly, each model should expose its schema:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> mongoose = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;mongoose&apos;</span>),
+    schema = <span class="md-code-keyword">new</span> mongoose.Schema({
+        title: <span class="md-code-built_in">String</span>,
+        brief: <span class="md-code-built_in">String</span>,
+        text: <span class="md-code-built_in">String</span>,
+        date: <span class="md-code-built_in">Date</span>
+    });
+
+<span class="md-code-built_in">module</span>.exports.model = mongoose.model(<span class="md-code-string">&apos;entry&apos;</span>, schema);
+</code></pre> <h3 id="upsert-world">Upsert world</h3> <p>This <a href="http://mongoosejs.com/docs/api.html" target="_blank">upsert command</a> is all that&#x2019;s left between our UI and the <em>MongoDB</em> database:</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> mongoose = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;mongoose&apos;</span>),
+    models = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;../models/all.js&apos;</span>);
+
+<span class="md-code-built_in">module</span>.exports = {
+    put: <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(req,res)</span></span>{
+        <span class="md-code-keyword">var</span> collection = models.entry,
+            <span class="md-code-built_in">document</span> = req.body.entry,
+            query = { date: <span class="md-code-built_in">document</span>.date },
+            opts = { upsert: <span class="md-code-literal">true</span> },
+            done = <span class="md-code-function"><span class="md-code-keyword">function</span><span class="md-code-params">(err)</span></span>{
+                res.end();
+            };
+
+        collection.findOneAndUpdate(query, <span class="md-code-built_in">document</span>, opts, done);
+        collection.save();
+    }
+};
+</code></pre> <p>The last little detail would be updating the UI to actually provide a <code class="md-code md-code-inline">date</code> for our <em>entries</em>. We&#x2019;ll deal with that soon enough.</p> <p>Thus far, this will create an <em>entry</em> the first time, and overwrite it in every subsequent request. This makes the method <em>ideal</em> for easily editing our blog post <em>entries</em>, we would just need to wire the UI to provide the identifier we&#x2019;re using for the <strong>upserts</strong>.</p> <h3 id="mongodb-document-identifiers">MongoDB document identifiers</h3> <p>At a glance, you better have a <a href="http://docs.mongodb.org/manual/tutorial/create-an-auto-incrementing-field/" target="_blank">damn good reason</a> for having an auto-increment _id field. Every single blog post or <a href="http://stackoverflow.com/" target="_blank" aria-label="Stack Overflow">Stack Overflow</a> <a href="http://stackoverflow.com/q/8384029/389745" target="_blank" aria-label="Auto increment in MongoDB">answer</a> that tells you how to implement an auto-incrementing field <em>also tries to persuade you <strong>not to do it</strong></em>.</p> <p>I only wanted to have an incremental _id for <em>routing purposes</em>.</p> <p>However, considering all the <strong>evidence against this kind of fields</strong>, I came up with a simple solution, which collaterally produces <em>better urls</em>.</p> <p>I&#x2019;ll simplify it to be:</p> <blockquote> <p><a href="http://localhost:3000/2013/01/01/javascript-javascript-javascript">/2013/01/01/javascript-javascript-javascript</a></p> </blockquote> <p>Now my only constraint is not writing two separate entries with the exact same title and assign them the exact same date.</p> <blockquote> <p><strong><code class="md-code md-code-inline">/:yyyy[/:mm[/:dd[/:slug]]]</code></strong></p> </blockquote> <p>This approach makes <em>url hacking</em> so easy even a zombie could try to do it.</p> <p>So there we have a drastically basic <em>Node.JS</em> application that allows us to <code class="md-code md-code-inline">PUT</code> a <em>MongoDB</em> document, and does nothing much besides that, but we did set up a <em>solid working base</em> for code to come.</p></div>

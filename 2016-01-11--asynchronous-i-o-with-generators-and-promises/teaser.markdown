@@ -1,0 +1,1 @@
+The article covers designing a JavaScript API to deal with **asynchronous data inputs and outputs** using generators to _succinctly_ describe a set of operations. Promises can also be used to *chain* other operations after the output has been registered.

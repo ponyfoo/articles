@@ -1,0 +1,1 @@
+In this article we'll discuss the **pitfalls of resorting to jQuery UI** and its ilk, and then compare it with an approach that _doesn't even involve any JavaScript_, but merely some lateral thinking and a couple of CSS tricks.

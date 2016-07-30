@@ -1,0 +1,1 @@
+_JavaScript_ is one of the most **loved and hated** languages out there. Some, can't stand the stench of how obtuse it _appears_ to be. Some appreciate the "anything goes" virtues of an interpreted language, and would marry _JavaScript_ given the chance.

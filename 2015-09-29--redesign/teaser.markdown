@@ -1,0 +1,1 @@
+Pony Foo's design remained largely the same throughout its [history](/articles/history "Repository of articles published on Pony Foo") so far, as I never really spent a lot of time on its design. Today I'm thrilled to announce that I've redesigned Pony Foo. I couldn't be any more excited about how cheerful and colorful the site now is.

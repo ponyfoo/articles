@@ -1,0 +1,1 @@
+I seem to have stumbled across a bug regarding regular expressions using the `g` modifier, where they seem to preserve internal state across calls to `RegExp.prototype.test`. I'm looking for confirmation or a _"you're stupid, this is what is going on"_ dismissal.

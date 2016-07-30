@@ -1,0 +1,1 @@
+Building modules for the front-end has become an increasingly easy problem to solve. Back in the nineties we had our Java applets, our `<MARQUEE>` and `<BLINK>` tag combinations, and those beloved `<CENTER>` tags. Oh and we were mostly developing on Front Page. Anyways, time to **wean off the nostalgia**. Let's focus.

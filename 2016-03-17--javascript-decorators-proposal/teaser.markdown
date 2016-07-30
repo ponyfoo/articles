@@ -1,0 +1,1 @@
+Decorators are, as most things programming, definitely *not a new concept*. That being said, they may be coming to JavaScript. There's a JavaScript decorators proposal in the works. It is currently sitting at stage 1 of the ECMASCript process, but may soon advance to stage 2. We take a look at how it works and why it's useful.

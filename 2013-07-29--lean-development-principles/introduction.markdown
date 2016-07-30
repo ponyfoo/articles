@@ -1,0 +1,1 @@
+The Lean Startup introduces us to a series of practices we can follow in order to build products faster, get feedback earlier and more often, and most importantly, **develop features customers actually want**. In this article, I'll go over the fundamentals, focusing on how Lean Development affects software development, not just startup management.

@@ -1,0 +1,1 @@
+There have been many different blog posts on the _"State of the Web"_, problems people face around tooling, and similar-style musings of late. This article is about summarizing my thoughts on recent events. Rather than yet another rant about the state of web development, this piece aims to pour some thought into what we can do to fix the situation we find ourselves in.

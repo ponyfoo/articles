@@ -1,0 +1,1 @@
+The sixth ECMAScript specification has been **finalized last june**, and there's a flurry of JavaScript features coming our way. You can start using these features today, provided that you know the right set of tools for the job. Today I'll be covering the most exciting new features as well as a couple of different ways how you can get started using them right away.
