@@ -1,6 +1,6 @@
 <h1>How To Avoid Object.prototype Pollution</h1>
 
-<div><kbd>open-source</kbd> <kbd>poser</kbd> <kbd>iframe</kbd> <kbd>browserify</kbd></div>
+<p><kbd>open-source</kbd> <kbd>poser</kbd> <kbd>iframe</kbd> <kbd>browserify</kbd></p>
 
 <blockquote><p>Some times you just need to extend <code>Array</code> objects. Think of the possibilities. Dream of how <strong>much</strong> <strong>more</strong> <strong>awesome</strong> jQuery would&#x2019;ve been if it provided all of the <code>Array</code> &#x2026;</p></blockquote>
 

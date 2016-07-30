@@ -1,6 +1,6 @@
 <h1>Universal React with Babel, Browserify</h1>
 
-<div><kbd>universal</kbd> <kbd>react</kbd> <kbd>babel</kbd> <kbd>es6</kbd> <kbd>browserify</kbd> <kbd>jsx</kbd></div>
+<p><kbd>universal</kbd> <kbd>react</kbd> <kbd>babel</kbd> <kbd>es6</kbd> <kbd>browserify</kbd> <kbd>jsx</kbd></p>
 
 <blockquote><p>I finally got around to trying out React, and this blog post will detail my initial impressions as well as a tutorial on how to make your React apps universal from the &#x2026;</p></blockquote>
 

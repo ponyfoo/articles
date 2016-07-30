@@ -1,6 +1,6 @@
 <h1>ES6 Object Changes in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>object</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>object</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>Howdy. You&#x2019;re reading <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 &#x2013; <em>&#x201C;I vehemently <code>Object</code> to come up with a better tagline&#x201D;</em> &#x2013; in Depth</a> series. If you&#x2019;ve never been &#x2026;</p></blockquote>
 

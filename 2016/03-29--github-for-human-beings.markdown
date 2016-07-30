@@ -1,6 +1,6 @@
 <h1>GitHub for Human Beings <img class="tj-emoji" draggable="false" alt="&#x1F575;" src="https://twemoji.maxcdn.com/2/72x72/1f575.png"></h1>
 
-<div><kbd>github</kbd> <kbd>tips</kbd></div>
+<p><kbd>github</kbd> <kbd>tips</kbd></p>
 
 <blockquote><p>GitHub <em>&#x2013; and GitHub users &#x2013;</em> can be kind of annoying sometimes. Here are a few tips to improve your day-to-day experience.</p>
 </blockquote>

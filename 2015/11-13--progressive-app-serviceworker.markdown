@@ -1,6 +1,6 @@
 <h1>Making a Progressive App with ServiceWorker</h1>
 
-<div><kbd>serviceworker</kbd> <kbd>progressive-enhancement</kbd> <kbd>progressive-apps</kbd></div>
+<p><kbd>serviceworker</kbd> <kbd>progressive-enhancement</kbd> <kbd>progressive-apps</kbd></p>
 
 <blockquote><p>In previous articles, you&#x2019;ve learned about <a href="https://ponyfoo.com/articles/serviceworker-revolution" aria-label="ServiceWorker: Revolution of the Web Platform on Pony Foo">how to use <code>ServiceWorker</code></a>, the different strategies that you can leverage to <a href="https://ponyfoo.com/articles/progressive-networking-serviceworker" aria-label="ServiceWorker and Progressive Networking">serve content offline and faster</a>, and all &#x2026;</p></blockquote>
 

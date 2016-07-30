@@ -1,6 +1,6 @@
 <h1>A Note on Everyday Usability</h1>
 
-<div><kbd>ux</kbd></div>
+<p><kbd>ux</kbd></p>
 
 <blockquote><p>We can learn a lot about usability just by <em>observing everyday objects</em>, applications and interfaces. This morning I was flying to London from Buenos Aires, when I &#x2026;</p></blockquote>
 

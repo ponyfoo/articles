@@ -1,6 +1,6 @@
 <h1>Let&#x2019;s talk about Web Performance</h1>
 
-<div><kbd>performance</kbd> <kbd>talks</kbd> <kbd>automation</kbd> <kbd>tips</kbd> <kbd>budgets</kbd></div>
+<p><kbd>performance</kbd> <kbd>talks</kbd> <kbd>automation</kbd> <kbd>tips</kbd> <kbd>budgets</kbd></p>
 
 <blockquote><p>For the <a href="http://lanyrd.com/profile/bevacqua/past/speaking/" target="_blank">past few months</a> I&#x2019;ve been speaking at conferences about web performance. Unfortunately, none of those awesome conferences have published their talk videos </p></blockquote>
 

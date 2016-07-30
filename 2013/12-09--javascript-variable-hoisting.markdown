@@ -1,6 +1,6 @@
 <h1>JavaScript Variable Hoisting</h1>
 
-<div><kbd>js</kbd> <kbd>hoisting</kbd></div>
+<p><kbd>js</kbd> <kbd>hoisting</kbd></p>
 
 <blockquote><p>A large number of JavaScript interview questions, if not most of them, can be answered with an understanding of scoping, <a href="https://ponyfoo.com/2013/12/04/where-does-this-keyword-come-from">how <code>this</code> works</a>, and hoisting.</p><p>You might be &#x2026;</p></blockquote>
 

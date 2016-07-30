@@ -1,6 +1,6 @@
 <h1>Shared Rendering with Rendr</h1>
 
-<div><kbd>isomorphic</kbd> <kbd>backbone</kbd> <kbd>rendr</kbd> <kbd>mustache</kbd></div>
+<p><kbd>isomorphic</kbd> <kbd>backbone</kbd> <kbd>rendr</kbd> <kbd>mustache</kbd></p>
 
 <blockquote><p><a href="https://github.com/rendrjs/rendr" target="_blank">Rendr</a> boosts the perceived performance of Backbone applications by rendering them in the server-side. This allows us to display the rendered page before JavaScript code &#x2026;</p></blockquote>
 

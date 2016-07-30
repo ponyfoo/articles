@@ -1,6 +1,6 @@
 <h1>The Web Wars</h1>
 
-<div><kbd>js</kbd> <kbd>async</kbd> <kbd>architecture</kbd> <kbd>lazyjs</kbd> <kbd>politics</kbd></div>
+<p><kbd>js</kbd> <kbd>async</kbd> <kbd>architecture</kbd> <kbd>lazyjs</kbd> <kbd>politics</kbd></p>
 
 <blockquote><p>There have always been wars in browser-land. Browsers, specs, politics, <em>lots</em> of politics. Even <em>libraries</em> had theirs.</p><p>What once was the browser <em>utility library</em> war, has &#x2026;</p></blockquote>
 

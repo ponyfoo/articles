@@ -1,6 +1,6 @@
 <h1>Designing Front-End Components</h1>
 
-<div><kbd>front-end</kbd> <kbd>modularity</kbd> <kbd>rome</kbd> <kbd>insignia</kbd> <kbd>dragula</kbd> <kbd>horsey</kbd></div>
+<p><kbd>front-end</kbd> <kbd>modularity</kbd> <kbd>rome</kbd> <kbd>insignia</kbd> <kbd>dragula</kbd> <kbd>horsey</kbd></p>
 
 <blockquote><p>Last monday I published an open-source library to easily take control of <em>drag &amp; drop</em> in the front-end, <a href="https://github.com/bevacqua/dragula" target="_blank">dragula</a>, and it has amassed over 2000 stars on GitHub in under &#x2026;</p></blockquote>
 

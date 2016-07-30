@@ -1,6 +1,6 @@
 <h1>Pony Foo begins</h1>
 
-<div><kbd>ponyfoo</kbd></div>
+<p><kbd>ponyfoo</kbd></p>
 
 <blockquote><p>As I start writing this post, I set out with a purpose. To write a micro-blogging engine. The language of choice is <em>Node.JS</em>. I chose this language because I want to see &#x2026;</p></blockquote>
 

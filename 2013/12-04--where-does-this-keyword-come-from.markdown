@@ -1,6 +1,6 @@
 <h1>Where does this keyword come from?</h1>
 
-<div><kbd>js</kbd> <kbd>scoping</kbd> <kbd>best-practices</kbd> <kbd>this</kbd></div>
+<p><kbd>js</kbd> <kbd>scoping</kbd> <kbd>best-practices</kbd> <kbd>this</kbd></p>
 
 <blockquote><p>Working on the latest chapter for my upcoming book on <a href="http://bevacqua.io/buildfirst" target="_blank">JavaScript Application Design</a>, I&#x2019;m writing about how scoping works. I want to share a particular code sample &#x2026;</p></blockquote>
 

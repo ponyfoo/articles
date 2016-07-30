@@ -1,6 +1,6 @@
 <h1>React, JSX and ES6: The Weird Parts</h1>
 
-<div><kbd>react</kbd> <kbd>jsx</kbd> <kbd>es6</kbd> <kbd>rant</kbd></div>
+<p><kbd>react</kbd> <kbd>jsx</kbd> <kbd>es6</kbd> <kbd>rant</kbd></p>
 
 <blockquote><p>I&#x2019;ve spent a few days working with JSX and React and I have <strong>mixed feelings</strong> about them. React is pretty neat, but I find that they made some very unusual choices &#x2026;</p></blockquote>
 

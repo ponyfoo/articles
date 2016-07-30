@@ -1,6 +1,6 @@
 <h1>Implementing OpenSearch</h1>
 
-<div><kbd>seo</kbd> <kbd>opensearch</kbd></div>
+<p><kbd>seo</kbd> <kbd>opensearch</kbd></p>
 
 <blockquote><p><a href="http://www.opensearch.org/" target="_blank">OpenSearch</a> is an specification that allows websites to improve <em>usability</em>. When implemented, it allows consumers to search your site <em>the way you intended them to</em>. All &#x2026;</p></blockquote>
 

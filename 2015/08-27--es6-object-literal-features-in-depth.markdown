@@ -1,6 +1,6 @@
 <h1>ES6 Object Literal Features in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>object-literals</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>object-literals</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>Once again, this is <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>. If you haven&#x2019;t set foot on this series before, you might want to learn about <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, &#x2026;</p></blockquote>
 

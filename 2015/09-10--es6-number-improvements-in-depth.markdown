@@ -1,6 +1,6 @@
 <h1>ES6 Number Improvements in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>number</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>number</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>Hey there! Glad you&#x2019;re here in time for <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 &#x2013; <em>&#x201C;Back to School&#x201D;</em> &#x2013; in Depth</a>. Never heard of it? Refer to <a href="https://ponyfoo.com/articles/a-brief-history-of-es6-tooling">A Brief History of ES6 Tooling</a>. &#x2026;</p></blockquote>
 

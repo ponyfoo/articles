@@ -1,6 +1,6 @@
 <h1>Subscribing to Pony Foo</h1>
 
-<div><kbd>ponyfoo</kbd></div>
+<p><kbd>ponyfoo</kbd></p>
 
 <blockquote><p>There&#x2019;s a few different ways you can subscribe to read Pony Foo. What&#x2019;s your favorite?</p><p>Almost since <a href="https://ponyfoo.com/articles/first" aria-label="Pony Foo Begins">day one</a> you could follow Pony Foo using the <a href="https://ponyfoo.com/articles/feed">RSS feed</a>. &#x2026;</p></blockquote>
 

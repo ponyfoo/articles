@@ -1,6 +1,6 @@
 <h1>ES6 Proxies in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>proxies</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>proxies</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>Cheers, <strong>please come in</strong>. This is <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 &#x2013; <em>&#x201C;Elaine, you gotta have a baby!&#x201D;</em> &#x2013; in Depth</a>. What? Never heard of it? Check out <a href="https://ponyfoo.com/articles/a-brief-history-of-es6-tooling">A Brief History of ES6 &#x2026;</a></p></blockquote>
 

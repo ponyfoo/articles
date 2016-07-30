@@ -1,6 +1,6 @@
 <h1>Stop Breaking the Web</h1>
 
-<div><kbd>performance</kbd> <kbd>rant</kbd> <kbd>progressive-enhancement</kbd> <kbd>graceful-degradation</kbd> <kbd>polyfill</kbd></div>
+<p><kbd>performance</kbd> <kbd>rant</kbd> <kbd>progressive-enhancement</kbd> <kbd>graceful-degradation</kbd> <kbd>polyfill</kbd></p>
 
 <blockquote><p>The year is 2014, a ninja rockstar band goes up against the now long-forgotten <a href="http://alistapart.com/article/understandingprogressiveenhancement" target="_blank">progressive enhancement</a> technique, forsaking the origins of the web and everything they &#x2026;</p></blockquote>
 

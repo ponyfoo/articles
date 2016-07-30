@@ -1,6 +1,6 @@
 <h1>Blogging and OSS &#x2014; Food for Thought</h1>
 
-<div><kbd>food-for-thought</kbd> <kbd>productivity</kbd> <kbd>community</kbd> <kbd>ask-me-anything</kbd></div>
+<p><kbd>food-for-thought</kbd> <kbd>productivity</kbd> <kbd>community</kbd> <kbd>ask-me-anything</kbd></p>
 
 <blockquote><p>I&#x2019;ve been toying with the idea of releasing short-form &#x201C;thoughts&#x201D;, in addition to the usual longer-form articles in the blog. The <strong>goal is to publish &#x2026;</strong></p></blockquote>
 

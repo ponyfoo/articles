@@ -1,6 +1,6 @@
 <h1>ES6 Promises in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>promise</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>promise</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>Welcome back to <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 &#x2013; <em>&#x201C;Dude, we already had those!&#x201D;</em> &#x2013; in Depth</a> series. If you&#x2019;ve never been around here before, start with <a href="https://ponyfoo.com/articles/a-brief-history-of-es6-tooling">A Brief &#x2026;</a></p></blockquote>
 

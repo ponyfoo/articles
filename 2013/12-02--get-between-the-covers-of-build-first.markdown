@@ -1,6 +1,6 @@
 <h1>Get Between the Covers of Build First</h1>
 
-<div><kbd>buildfirst</kbd> <kbd>book</kbd> <kbd>recommended-reading</kbd> <kbd>build</kbd> <kbd>front-end</kbd></div>
+<p><kbd>buildfirst</kbd> <kbd>book</kbd> <kbd>recommended-reading</kbd> <kbd>build</kbd> <kbd>front-end</kbd></p>
 
 <blockquote><p>A couple of weeks ago, my book on <a href="http://bevacqua.io/buildfirst" target="_blank">JavaScript Application Design</a> and front-end processes <em>(which I began writing a few months ago)</em> finally went into the first review &#x2026;</p></blockquote>
 

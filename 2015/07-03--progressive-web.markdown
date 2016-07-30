@@ -1,6 +1,6 @@
 <h1>The Progressive Web</h1>
 
-<div><kbd>progressive-enhancement</kbd> <kbd>taunus</kbd> <kbd>server-first</kbd> <kbd>browserify</kbd></div>
+<p><kbd>progressive-enhancement</kbd> <kbd>taunus</kbd> <kbd>server-first</kbd> <kbd>browserify</kbd></p>
 
 <blockquote><p>I&#x2019;ve blogged very little about <a href="https://github.com/taunus/taunus" target="_blank">Taunus</a> since I first released it, <a href="https://ponyfoo.com/articles/taunus-micro-isomorphic-mvc-framework">roughly a year ago</a>. Back then, <em>it only powered <a href="https://ponyfoo.com/">ponyfoo.com</a></em>, but now there&#x2019;s a few cases in &#x2026;</p></blockquote>
 

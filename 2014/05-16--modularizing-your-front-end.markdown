@@ -1,6 +1,6 @@
 <h1>Modularizing Your Front-End</h1>
 
-<div><kbd>ponyfoo</kbd> <kbd>front-end</kbd> <kbd>modules</kbd> <kbd>browserify</kbd> <kbd>npm-run</kbd> <kbd>gulp</kbd></div>
+<p><kbd>ponyfoo</kbd> <kbd>front-end</kbd> <kbd>modules</kbd> <kbd>browserify</kbd> <kbd>npm-run</kbd> <kbd>gulp</kbd></p>
 
 <blockquote><p>In the past <a href="https://ponyfoo.com/2014/03/07/a-less-convoluted-event-emitter-implementation">I&#x2019;ve wrote</a> about a small alternative to <a href="https://github.com/caolan/async" target="_blank"><code>async</code></a>, named <a href="https://github.com/bevacqua/contra" target="_blank"><code>contra</code></a>, which is <em>barely over 2kb</em>, and has the browser at its heart. It comes with the usual &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>Taming Asynchronous JavaScript</h1>
 
-<div><kbd>async</kbd> <kbd>callback-hell</kbd> <kbd>js</kbd> <kbd>best-practices</kbd> <kbd>quotes</kbd></div>
+<p><kbd>async</kbd> <kbd>callback-hell</kbd> <kbd>js</kbd> <kbd>best-practices</kbd> <kbd>quotes</kbd></p>
 
 <blockquote><p>Last month, a series of <em>very</em> interesting articles regarding <strong>async coding style</strong>, in Node, popped up. The discussion spanned a few more subjects than <em>just coding style</em>, it &#x2026;</p></blockquote>
 

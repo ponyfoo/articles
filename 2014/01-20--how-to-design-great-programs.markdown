@@ -1,6 +1,6 @@
 <h1>How to Design Great Programs</h1>
 
-<div><kbd>best-practices</kbd> <kbd>api</kbd> <kbd>open-source</kbd> <kbd>program-design</kbd></div>
+<p><kbd>best-practices</kbd> <kbd>api</kbd> <kbd>open-source</kbd> <kbd>program-design</kbd></p>
 
 <blockquote><p>This article is a recollection of common-sense application design practices I usually follow when building things. I felt like grouping them together in a blog post, for &#x2026;</p></blockquote>
 

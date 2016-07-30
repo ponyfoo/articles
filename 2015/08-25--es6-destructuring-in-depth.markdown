@@ -1,6 +1,6 @@
 <h1>ES6 JavaScript Destructuring in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>destructuring</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>destructuring</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>I&#x2019;ve briefly mentioned a few ES6 features <em>(and how to <a href="https://ponyfoo.com/articles/universal-react-babel#setting-up-babel">get started with Babel</a>)</em> in the React article series I&#x2019;ve been writing about, and now I want to <strong>focus &#x2026;</strong></p></blockquote>
 

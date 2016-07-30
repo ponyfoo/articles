@@ -1,6 +1,6 @@
 <h1>The Double-Edged Sword of the Web</h1>
 
-<div><kbd>opinion</kbd> <kbd>web</kbd> <kbd>state-of-the-web</kbd> <kbd>bugs</kbd></div>
+<p><kbd>opinion</kbd> <kbd>web</kbd> <kbd>state-of-the-web</kbd> <kbd>bugs</kbd></p>
 
 <blockquote><p>A couple of weeks ago I had some time in my hands and decided to fix cross-browser rendering issues for Pony Foo. The ensuing bug hunt was a good reminder of just how obnoxious web development can get.</p>
 </blockquote>

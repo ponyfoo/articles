@@ -1,6 +1,6 @@
 <h1>ES6 Arrow Functions in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>arrow-functions</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>arrow-functions</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>The daily saga of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">es6-in-depth</a> articles continues. Today we&#x2019;ll be discussing Arrow Functions. In previous articles we&#x2019;ve covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a> and <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template &#x2026;</a></p></blockquote>
 

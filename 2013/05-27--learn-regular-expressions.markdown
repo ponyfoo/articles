@@ -1,6 +1,6 @@
 <h1>Learn Regular Expressions</h1>
 
-<div><kbd>regex</kbd> <kbd>learning</kbd></div>
+<p><kbd>regex</kbd> <kbd>learning</kbd></p>
 
 <blockquote><p><strong>Regular Expressions</strong> are a fundamental tool <strong><em>every</em></strong> programmer should understand, at the very least on a basic level. I might not make an expert in regex out of you, but at &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>The Conventional Front-End</h1>
 
-<div><kbd>conventional</kbd> <kbd>front-end</kbd> <kbd>javascript</kbd> <kbd>measly</kbd> <kbd>xhr</kbd></div>
+<p><kbd>conventional</kbd> <kbd>front-end</kbd> <kbd>javascript</kbd> <kbd>measly</kbd> <kbd>xhr</kbd></p>
 
 <blockquote><p>Conventions are a great thing. Frameworks such as Ruby on Rails and <a href="http://asp.net/" target="_blank">ASP.NET</a> MVC are good examples of conventional MVC implementations. Conventions are essentially &#x2026;</p></blockquote>
 

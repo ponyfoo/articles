@@ -1,6 +1,6 @@
 <h1>ES6 Proxy Traps in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>proxies</kbd> <kbd>traps</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>proxies</kbd> <kbd>traps</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>Welcome to <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 &#x2013; <em>&#x201C;Please, not again&#x201D;</em> &#x2013; in Depth</a>. Looking for other ES6 goodness? Refer to <a href="https://ponyfoo.com/articles/a-brief-history-of-es6-tooling">A Brief History of ES6 Tooling</a>. Then, make your way &#x2026;</p></blockquote>
 

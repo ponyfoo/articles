@@ -1,6 +1,6 @@
 <h1>Asynchronous I/O with Generators &amp; Promises</h1>
 
-<div><kbd>generators</kbd> <kbd>promises</kbd> <kbd>javascript</kbd> <kbd>patterns</kbd></div>
+<p><kbd>generators</kbd> <kbd>promises</kbd> <kbd>javascript</kbd> <kbd>patterns</kbd></p>
 
 <blockquote><p>The article covers designing a JavaScript API to deal with <strong>asynchronous data inputs and outputs</strong> using generators to <em>succinctly</em> describe a set of operations. Promises can &#x2026;</p></blockquote>
 

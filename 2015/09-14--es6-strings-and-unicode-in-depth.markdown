@@ -1,6 +1,6 @@
 <h1>ES6 Strings (and Unicode, <img class="tj-emoji" draggable="false" alt="&#x2764;" src="https://twemoji.maxcdn.com/2/72x72/2764.png">) in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>string</kbd> <kbd>unicode</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>string</kbd> <kbd>unicode</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>Yo. Here&#x2019;s another edition of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 &#x2013; <em>&#x201C;I can&#x2019;t believe they killed off Stringer Bell&#x201D;</em> &#x2013; in Depth</a> series. If you&#x2019;ve never &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>ES6 Template Literals in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>template-literals</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>template-literals</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>Yesterday we&#x2019;ve covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">ES6 destructuring in depth</a>, as well as some of its most common use cases. Today we&#x2019;ll be moving to <strong>template literals</strong>. What they &#x2026;</p></blockquote>
 

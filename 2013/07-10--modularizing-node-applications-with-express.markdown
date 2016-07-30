@@ -1,6 +1,6 @@
 <h1>Modularizing Node Applications with Express</h1>
 
-<div><kbd>expressjs</kbd> <kbd>nodejs</kbd> <kbd>architecture</kbd></div>
+<p><kbd>expressjs</kbd> <kbd>nodejs</kbd> <kbd>architecture</kbd></p>
 
 <blockquote><p>I&#x2019;ve spent a few articles talking about <a href="https://ponyfoo.com/search/tagged/build">build processes</a>; now I want to spend a few words on <a href="https://ponyfoo.com/search/tagged/architecture">application architecture</a>, particularly in <em>Node.JS web applications &#x2026;</em></p></blockquote>
 

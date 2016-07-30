@@ -1,6 +1,6 @@
 <h1>SVG and the DOM, or &#x201C;The Weirdest Bug I&#x2019;ve Ever Encountered&#x201D;</h1>
 
-<div><kbd>svg</kbd> <kbd>bug</kbd></div>
+<p><kbd>svg</kbd> <kbd>bug</kbd></p>
 
 <blockquote><p>I wanted to take a step back from all of the ES6 articles that have been popping up on Pony Foo lately to talk about a bug I came across last week. As I mentioned &#x2026;</p></blockquote>
 

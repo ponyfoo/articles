@@ -1,6 +1,6 @@
 <h1>Teach Yourself Node.JS in 10 Steps</h1>
 
-<div><kbd>nodejs</kbd> <kbd>learning</kbd></div>
+<p><kbd>nodejs</kbd> <kbd>learning</kbd></p>
 
 <blockquote><p>I&#x2019;m not sure anyone needs convincing that <strong>Node.JS is freaking awesome</strong>, little has been said otherwise. Many of the people reading this blog are <em>already &#x2026;</em></p></blockquote>
 

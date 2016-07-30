@@ -1,6 +1,6 @@
 <h1>Angular WYSIWYG</h1>
 
-<div><kbd>angularjs</kbd> <kbd>wysiwyg</kbd> <kbd>ponyedit</kbd></div>
+<p><kbd>angularjs</kbd> <kbd>wysiwyg</kbd> <kbd>ponyedit</kbd></p>
 
 <blockquote><p>Building on the blocks laid out <a href="https://ponyfoo.com/2013/10/25/event-emitter-obey-and-report">in my previous article</a>, I open-sourced a <a href="http://en.wikipedia.org/wiki/WYSIWYG" target="_blank">WYSIWYG</a> editing library <em>which doesn&#x2019;t provide an UI</em>. You can <a href="https://github.com/bevacqua/ponyedit" target="_blank">find the source code here</a>.</p><p><code>&#x2026;</code></p></blockquote>
 

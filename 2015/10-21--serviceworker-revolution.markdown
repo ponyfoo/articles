@@ -1,6 +1,6 @@
 <h1>ServiceWorker: Revolution of the Web Platform</h1>
 
-<div><kbd>serviceworker</kbd> <kbd>offline-first</kbd></div>
+<p><kbd>serviceworker</kbd> <kbd>offline-first</kbd></p>
 
 <blockquote><p>While not the most amusingly named feature of the web platform, everything seems to point at ServiceWorker being the <strong>most significant addition</strong> to the web platform since &#x2026;</p></blockquote>
 

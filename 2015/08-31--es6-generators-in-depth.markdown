@@ -1,6 +1,6 @@
 <h1>ES6 Generators in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>generators</kbd> <kbd>iterators</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>generators</kbd> <kbd>iterators</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>This is <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>, the longest-running article series in the history of Pony Foo! Trapped in the ES5 bubble? Welcome! Let me get you started with <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">&#x2026;</a></p></blockquote>
 

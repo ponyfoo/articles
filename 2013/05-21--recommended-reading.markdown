@@ -1,6 +1,6 @@
 <h1>Recommended Reading</h1>
 
-<div><kbd>recommended-reading</kbd> <kbd>software-development</kbd></div>
+<p><kbd>recommended-reading</kbd> <kbd>software-development</kbd></p>
 
 <blockquote><p>I haven&#x2019;t gotten around to recommending any books yet, and I wanted to <em>break some words</em> about a few reads. I&#x2019;m excited about a batch of books I&#x2019;ve &#x2026;</p></blockquote>
 

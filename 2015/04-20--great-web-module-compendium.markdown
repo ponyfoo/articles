@@ -1,6 +1,6 @@
 <h1>The Great Web Module Compendium</h1>
 
-<div><kbd>front-end</kbd> <kbd>modularity</kbd> <kbd>javascript</kbd> <kbd>components</kbd></div>
+<p><kbd>front-end</kbd> <kbd>modularity</kbd> <kbd>javascript</kbd> <kbd>components</kbd></p>
 
 <blockquote><p>For the past few months I&#x2019;ve developed quite the number of front-end modules. These range from UI components to utility libraries, silly games, and everything in &#x2026;</p></blockquote>
 

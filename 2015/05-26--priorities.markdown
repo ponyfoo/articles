@@ -1,6 +1,6 @@
 <h1>Priorities</h1>
 
-<div><kbd>performance</kbd> <kbd>rant</kbd> <kbd>perfschool</kbd></div>
+<p><kbd>performance</kbd> <kbd>rant</kbd> <kbd>perfschool</kbd></p>
 
 <blockquote><p>Peter-Paul Koch <a href="https://twitter.com/ppk" target="_blank">(@ppk)</a> recently wrote <a href="http://www.quirksmode.org/blog/archives/2015/05/tools_dont_solv.html" target="_blank">an article</a> that generated noticeable turmoil. One of the best responses was Jeremy Keith <a href="https://twitter.com/adactio" target="_blank">(@adactio)</a>&apos;s article, <a href="https://adactio.com/journal/8956" target="_blank">&#x2026;</a></p></blockquote>
 

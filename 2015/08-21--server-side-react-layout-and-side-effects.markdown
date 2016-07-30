@@ -1,6 +1,6 @@
 <h1>Server-side React Layout &amp; Side Effects</h1>
 
-<div><kbd>universal</kbd> <kbd>react</kbd> <kbd>es6</kbd> <kbd>react-side-effect</kbd></div>
+<p><kbd>universal</kbd> <kbd>react</kbd> <kbd>es6</kbd> <kbd>react-side-effect</kbd></p>
 
 <blockquote><p>We&#x2019;ve been hard at work last week analyzing how to build a <a href="https://ponyfoo.com/articles/tagged/universal">universal</a> app using React. First we <a href="https://ponyfoo.com/articles/universal-react-babel">looked at the bare minimum needed</a> to run <em>Babel through Browserify &#x2026;</em></p></blockquote>
 

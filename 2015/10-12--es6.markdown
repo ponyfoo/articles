@@ -1,6 +1,6 @@
 <h1>ES6 Overview in 350 Bullet Points</h1>
 
-<div><kbd>es6</kbd> <kbd>javascript</kbd> <kbd>babel</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>javascript</kbd> <kbd>babel</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>My <a href="https://ponyfoo.com/articles/tagged/es6-in-depth" aria-label="ES6 in Depth on Pony Foo">ES6 in Depth</a> series consists of 24 articles covering most syntax changes and features coming in ES6. This article aims to summarize all of those, providing you with &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>Architecture of ECMAScript 6 Modules</h1>
 
-<div><kbd>es6</kbd> <kbd>modules</kbd> <kbd>harmony</kbd></div>
+<p><kbd>es6</kbd> <kbd>modules</kbd> <kbd>harmony</kbd></p>
 
 <blockquote><p>This blog post contains useful information if you&#x2019;re interested in the latest developments on ECMAScript 6 Harmony modules and they current state of their &#x2026;</p></blockquote>
 

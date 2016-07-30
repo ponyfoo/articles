@@ -1,6 +1,6 @@
 <h1>An Elastic Stack Primer</h1>
 
-<div><kbd>elasticsearch</kbd> <kbd>logstash</kbd> <kbd>kibana</kbd></div>
+<p><kbd>elasticsearch</kbd> <kbd>logstash</kbd> <kbd>kibana</kbd></p>
 
 <blockquote><p>This article describes my adventures while getting initiated into the Elastic Stack. We&#x2019;ll be building upon the <code>elasticsearch</code> index I&#x2019;ve set up for search &#x2026;</p></blockquote>
 

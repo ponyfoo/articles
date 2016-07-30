@@ -1,6 +1,6 @@
 <h1>The Angular Way</h1>
 
-<div><kbd>angularjs</kbd> <kbd>front-end</kbd> <kbd>best-practices</kbd> <kbd>app-press</kbd></div>
+<p><kbd>angularjs</kbd> <kbd>front-end</kbd> <kbd>best-practices</kbd> <kbd>app-press</kbd></p>
 
 <blockquote><p>For the past few months I&#x2019;ve been sailing around the world of Angular. Today I can hardly imagine myself doing day to day coding on a large front-end web &#x2026;</p></blockquote>
 

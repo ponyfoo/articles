@@ -1,6 +1,6 @@
 <h1>JavaScript Quality Guide</h1>
 
-<div><kbd>javascript</kbd> <kbd>style-guide</kbd> <kbd>quality</kbd> <kbd>best-practices</kbd></div>
+<p><kbd>javascript</kbd> <kbd>style-guide</kbd> <kbd>quality</kbd> <kbd>best-practices</kbd></p>
 
 <blockquote><p>I&#x2019;ve recently created a <a href="https://github.com/bevacqua/js" target="_blank">JavaScript Quality Guide</a>, and I wanted to share it on Pony Foo as well. The latest version can be <a href="https://github.com/bevacqua/js" target="_blank">found on GitHub</a>. As <em>&#x2026;</em></p></blockquote>
 

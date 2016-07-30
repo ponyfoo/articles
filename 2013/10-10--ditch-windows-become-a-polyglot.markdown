@@ -1,6 +1,6 @@
 <h1>Ditch Windows, Become a Polyglot</h1>
 
-<div><kbd>windows</kbd> <kbd>ubuntu</kbd> <kbd>os</kbd> <kbd>terminal</kbd> <kbd>polyglot</kbd> <kbd>bio</kbd></div>
+<p><kbd>windows</kbd> <kbd>ubuntu</kbd> <kbd>os</kbd> <kbd>terminal</kbd> <kbd>polyglot</kbd> <kbd>bio</kbd></p>
 
 <blockquote><p>It took me a while to realize it, but Windows has been a <em>disease</em> to me, or perhaps more analogously a <em>drug addiction</em>. Ever since I was a kid I used Windows. Well, I &#x2026;</p></blockquote>
 

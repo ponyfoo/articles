@@ -1,6 +1,6 @@
 <h1>Single Page Design Madness</h1>
 
-<div><kbd>ponyfoo</kbd> <kbd>js</kbd> <kbd>css</kbd> <kbd>front-end</kbd></div>
+<p><kbd>ponyfoo</kbd> <kbd>js</kbd> <kbd>css</kbd> <kbd>front-end</kbd></p>
 
 <blockquote><p>A few days passed, a couple lessons learned. I promised myself not to spend too much time trying to make something perfect, but rather keep a <em>lean approach</em> and moving &#x2026;</p></blockquote>
 

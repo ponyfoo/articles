@@ -1,6 +1,6 @@
 <h1>The Controversial State of JavaScript Tooling</h1>
 
-<div><kbd>state-of-the-web</kbd> <kbd>hypermodularity</kbd></div>
+<p><kbd>state-of-the-web</kbd> <kbd>hypermodularity</kbd></p>
 
 <blockquote><p>There have been many different blog posts on the <em>&#x201C;State of the Web&#x201D;</em>, problems people face around tooling, and similar-style musings of late. This article &#x2026;</p></blockquote>
 

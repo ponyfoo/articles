@@ -1,6 +1,6 @@
 <h1>Email Sending Done Right</h1>
 
-<div><kbd>ponyfoo</kbd> <kbd>modules</kbd> <kbd>campaign</kbd></div>
+<p><kbd>ponyfoo</kbd> <kbd>modules</kbd> <kbd>campaign</kbd></p>
 
 <blockquote><p><a href="https://ponyfoo.com/2014/01/01/a-year-in-review">A week ago I wrote</a> about a few goals I&#x2019;ve set for myself in 2014. In particular, I alluded to writing code that&#x2019;s more modular than what I&#x2019;ve been &#x2026;</p></blockquote>
 

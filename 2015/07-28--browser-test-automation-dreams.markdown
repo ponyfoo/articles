@@ -1,6 +1,6 @@
 <h1>Dream of Browser Test Automation?</h1>
 
-<div><kbd>tape</kbd> <kbd>automation</kbd> <kbd>browser-testing</kbd> <kbd>build</kbd></div>
+<p><kbd>tape</kbd> <kbd>automation</kbd> <kbd>browser-testing</kbd> <kbd>build</kbd></p>
 
 <blockquote><p>Browser testing has been a pain for a decade now. The landscape is showing a lot of promise nowadays, and I wanted to share the approach to client-side testing &#x2026;</p></blockquote>
 

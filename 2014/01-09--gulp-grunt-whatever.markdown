@@ -1,6 +1,6 @@
 <h1>Gulp, Grunt, Whatever</h1>
 
-<div><kbd>build</kbd> <kbd>grunt</kbd> <kbd>gulp</kbd> <kbd>npm</kbd></div>
+<p><kbd>build</kbd> <kbd>grunt</kbd> <kbd>gulp</kbd> <kbd>npm</kbd></p>
 
 <blockquote><p><a href="http://gulpjs.com/" target="_blank">Gulp</a> is a recently spawned streaming build system which shows a lot of promise. It brings <a href="https://github.com/gulpjs/gulp/" target="_blank">a really terse code-base</a> to the table, which you can actually walk through <em>in &#x2026;</em></p></blockquote>
 

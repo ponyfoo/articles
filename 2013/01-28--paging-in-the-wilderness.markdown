@@ -1,6 +1,6 @@
 <h1>Paging in the Wilderness</h1>
 
-<div><kbd>ux</kbd> <kbd>front-end</kbd></div>
+<p><kbd>ux</kbd> <kbd>front-end</kbd></p>
 
 <blockquote><p>Traditionally, lists on websites have been paged to allow data to be <em>chunked</em> rather than sent out all at once, when the user might not need all of it <em>right away</em>, &#x2026;</p></blockquote>
 

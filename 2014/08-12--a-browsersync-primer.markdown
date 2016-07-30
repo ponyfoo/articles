@@ -1,6 +1,6 @@
 <h1>A BrowserSync Primer</h1>
 
-<div><kbd>build</kbd> <kbd>browsersync</kbd> <kbd>grunt</kbd> <kbd>gulp</kbd> <kbd>npm</kbd> <kbd>nodemon</kbd></div>
+<p><kbd>build</kbd> <kbd>browsersync</kbd> <kbd>grunt</kbd> <kbd>gulp</kbd> <kbd>npm</kbd> <kbd>nodemon</kbd></p>
 
 <blockquote><p><a href="http://www.browsersync.io/" target="_blank">BrowserSync</a> is a browser testing tool, similar to <a href="http://livereload.com/" target="_blank">LiveReload</a>. It also synchronizes across browsers and is going to provide <a href="https://twitter.com/BrowserSync/status/498161493418840064" target="_blank">HTML injection</a> in the very near future, &#x2026;</p></blockquote>
 

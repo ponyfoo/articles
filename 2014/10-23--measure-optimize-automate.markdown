@@ -1,6 +1,6 @@
 <h1>Measure, Optimize, Automate</h1>
 
-<div><kbd>measure</kbd> <kbd>performance</kbd> <kbd>build</kbd> <kbd>automation</kbd></div>
+<p><kbd>measure</kbd> <kbd>performance</kbd> <kbd>build</kbd> <kbd>automation</kbd></p>
 
 <blockquote><p>We&#x2019;ve already covered the different techniques you could use to <a href="https://ponyfoo.com/articles/critical-path-performance-optimization">vastly improve the performance of your front-end applications</a>, their page load time, and the &#x2026;</p></blockquote>
 

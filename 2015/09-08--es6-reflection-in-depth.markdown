@@ -1,6 +1,6 @@
 <h1>ES6 Reflection in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>reflect</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>reflect</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>Oh hey &#x2013; I was just casually getting ready, didn&#x2019;t see you there! Welcome to another edition of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 &#x2013; <em>&#x201C;Oh. Good. We survived traps&#x201D;</em> &#x2026;</a></p></blockquote>
 

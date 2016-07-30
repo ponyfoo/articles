@@ -1,6 +1,6 @@
 <h1>Grunt Tips and Tricks</h1>
 
-<div><kbd>grunt</kbd> <kbd>tips</kbd></div>
+<p><kbd>grunt</kbd> <kbd>tips</kbd></p>
 
 <blockquote><p>I&#x2019;ve been meaning to compile a list of tips and tricks to improve you Grunt workflows, so here it is!</p><h6>In a Pinch</h6> <ul> <li>Always <code>--save-dev</code></li> <li>Heroku Custom Buildpack</li> <li>Forget <code>&#x2026;</code></li></ul></blockquote>
 

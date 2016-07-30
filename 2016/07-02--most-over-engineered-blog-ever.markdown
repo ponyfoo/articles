@@ -1,6 +1,6 @@
 <h1><div>How Pony Foo is ridiculously over-engineered</div><div><em>&#x2014; and why that is awesome</em></div></h1>
 
-<div><kbd>side-projects</kbd> <kbd>ponyfoo</kbd></div>
+<p><kbd>side-projects</kbd> <kbd>ponyfoo</kbd></p>
 
 <blockquote><p>With almost 3000 <a href="https://github.com/ponyfoo/ponyfoo" target="_blank" aria-label="ponyfoo/ponyfoo on GitHub">commits</a> on record, I&#x2019;m pretty sure that Pony Foo is one of the most, <em>if not the most</em>, over-engineered blogs ever. This article goes over how it all began as a learning experience&#x2026;</p></blockquote>
 

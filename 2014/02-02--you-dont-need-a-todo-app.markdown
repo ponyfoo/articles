@@ -1,6 +1,6 @@
 <h1>You don&#x2019;t need a TODO app</h1>
 
-<div><kbd>productivity</kbd> <kbd>tips</kbd> <kbd>gmail</kbd> <kbd>todo</kbd> <kbd>bash</kbd></div>
+<p><kbd>productivity</kbd> <kbd>tips</kbd> <kbd>gmail</kbd> <kbd>todo</kbd> <kbd>bash</kbd></p>
 
 <blockquote><p>Recently, <a href="https://coderwall.com/p/kpd7ra" target="_blank">a tip on Coderwall</a>, about how to organize your TODO list, brought about <a href="https://news.ycombinator.com/item?id=7162131" target="_blank">a discussion on Hacker News</a>. In this brief post, I&#x2019;d like to provide my take on &#x2026;</p></blockquote>
 

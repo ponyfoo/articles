@@ -1,6 +1,6 @@
 <h1>A Brief History of ES6 Tooling</h1>
 
-<div><kbd>es6</kbd> <kbd>history-lesson</kbd> <kbd>traceur</kbd> <kbd>babel</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>history-lesson</kbd> <kbd>traceur</kbd> <kbd>babel</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>I wrote a few articles about React and ES6 these last few days, and today I wanted to add a bit more of context as to why I seem to be super into ES6 all of sudden. &#x2026;</p></blockquote>
 

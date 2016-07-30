@@ -1,6 +1,6 @@
 <h1>Are Regular Expressions Stateful?</h1>
 
-<div><kbd>regex</kbd> <kbd>bug</kbd> <kbd>chrome</kbd></div>
+<p><kbd>regex</kbd> <kbd>bug</kbd> <kbd>chrome</kbd></p>
 
 <blockquote><p>I seem to have stumbled across a bug regarding regular expressions using the <code>g</code> modifier, where they seem to preserve internal state across calls to <code>RegExp.prototype.test</code>&#x2026;</p></blockquote>
 

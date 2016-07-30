@@ -1,6 +1,6 @@
 <h1>ES6 WeakMaps, Sets, and WeakSets in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>maps</kbd> <kbd>weakmaps</kbd> <kbd>sets</kbd> <kbd>weaksets</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>maps</kbd> <kbd>weakmaps</kbd> <kbd>sets</kbd> <kbd>weaksets</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>Welcome once again to <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 &#x2013; <em>&#x201C;I can&#x2019;t take this anymore&#x201D;</em> &#x2013; in Depth</a>. New here? Start with <a href="https://ponyfoo.com/articles/a-brief-history-of-es6-tooling">A Brief History of ES6 Tooling</a>. Then, make &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>My CampJS Experience</h1>
 
-<div><kbd>campjs</kbd> <kbd>speaking</kbd></div>
+<p><kbd>campjs</kbd> <kbd>speaking</kbd></p>
 
 <blockquote><p>I was <em>never really the camping kind of guy</em>. Sounds like the perfect opportunity to collect kindling, start a bonfire, set up a tent, sleep in a bedroll, <strong>not have &#x2026;</strong></p></blockquote>
 

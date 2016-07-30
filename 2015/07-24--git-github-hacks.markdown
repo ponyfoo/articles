@@ -1,6 +1,6 @@
 <h1>Git and GitHub Hacks</h1>
 
-<div><kbd>food-for-thought</kbd> <kbd>git</kbd> <kbd>github</kbd> <kbd>hacks</kbd></div>
+<p><kbd>food-for-thought</kbd> <kbd>git</kbd> <kbd>github</kbd> <kbd>hacks</kbd></p>
 
 <blockquote><p>These are short-form <mark class="md-mark">&#x201C;thoughts&#x201D;</mark>, in addition to the usual longer-form articles in the blog. The <a href="https://ponyfoo.com/articles/food-for-thought-begins">goal</a> is to publish <a href="https://ponyfoo.com/articles/tagged/food-for-thought">one of these</a> every weekday. I&#x2019;d &#x2026;</p></blockquote>
 

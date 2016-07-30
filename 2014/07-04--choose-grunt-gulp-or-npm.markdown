@@ -1,6 +1,6 @@
 <h1>Choose: Grunt, Gulp, or npm?</h1>
 
-<div><kbd>gulp</kbd> <kbd>grunt</kbd> <kbd>npm</kbd> <kbd>npm-run</kbd></div>
+<p><kbd>gulp</kbd> <kbd>grunt</kbd> <kbd>npm</kbd> <kbd>npm-run</kbd></p>
 
 <blockquote><p>Deciding on a technology is <em>always</em> hard. You don&#x2019;t want to make commitments you won&#x2019;t be able to back out of, but eventually you&#x2019;ll have to make a &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>Organizing your CSS with Bootstrap</h1>
 
-<div><kbd>css</kbd> <kbd>front-end</kbd> <kbd>bootstrap</kbd></div>
+<p><kbd>css</kbd> <kbd>front-end</kbd> <kbd>bootstrap</kbd></p>
 
 <blockquote><p>Now that we&#x2019;ve laid <a href="https://ponyfoo.com/2013/06/24/css-for-dummies">the basics</a> in the cascading land of awesomeness that is CSS, it&#x2019;s time to move forward and take a deeper look at <em>organization and &#x2026;</em></p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>README Driven Development</h1>
 
-<div><kbd>food-for-thought</kbd> <kbd>documentation</kbd> <kbd>pragmatism</kbd> <kbd>readme-first</kbd> <kbd>api-first</kbd></div>
+<p><kbd>food-for-thought</kbd> <kbd>documentation</kbd> <kbd>pragmatism</kbd> <kbd>readme-first</kbd> <kbd>api-first</kbd></p>
 
 <blockquote><p>These are short-form <mark class="md-mark">&#x201C;thoughts&#x201D;</mark>, in addition to the usual longer-form articles in the blog. The <a href="https://ponyfoo.com/articles/food-for-thought-begins">goal</a> is to publish <a href="https://ponyfoo.com/articles/tagged/food-for-thought">one of these</a> every weekday. I&#x2019;d &#x2026;</p></blockquote>
 

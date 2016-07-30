@@ -1,6 +1,6 @@
 <h1>Head First Public Speaking</h1>
 
-<div><kbd>public-speaking</kbd> <kbd>jsconf</kbd> <kbd>qcon</kbd> <kbd>buildfirst</kbd></div>
+<p><kbd>public-speaking</kbd> <kbd>jsconf</kbd> <kbd>qcon</kbd> <kbd>buildfirst</kbd></p>
 
 <blockquote><p>I&#x2019;m thrilled to announce that next month <strong>I&#x2019;ll make my public speaking debut</strong>, at <a href="http://2014.jsconf.us/" target="_blank">JSConf US</a> no less! I have also been invited to <a href="https://qconnewyork.com/" target="_blank">QCon NY</a>, which is happening &#x2026;</p></blockquote>
 

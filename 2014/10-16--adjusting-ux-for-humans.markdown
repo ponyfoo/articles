@@ -1,6 +1,6 @@
 <h1>Adjusting UX for human visitors</h1>
 
-<div><kbd>ponyfoo</kbd> <kbd>case-study</kbd> <kbd>ux</kbd> <kbd>css</kbd></div>
+<p><kbd>ponyfoo</kbd> <kbd>case-study</kbd> <kbd>ux</kbd> <kbd>css</kbd></p>
 
 <blockquote><p>In this article I&#x2019;ll analyze the <strong>past and present of UX</strong> in Pony Foo. In doing so, we&#x2019;ll go over the features that were introduced to improve the lives of &#x2026;</p></blockquote>
 

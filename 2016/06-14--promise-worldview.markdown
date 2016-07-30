@@ -1,6 +1,6 @@
 <h1>A Promise-Based Worldview</h1>
 
-<div><kbd>es6</kbd> <kbd>promise</kbd> <kbd>async-await</kbd> <kbd>food-for-thought</kbd></div>
+<p><kbd>es6</kbd> <kbd>promise</kbd> <kbd>async-await</kbd> <kbd>food-for-thought</kbd></p>
 
 <blockquote><p>Once the Node.js developer&#x2019;s victim of choice, <code>Promise</code> now enjoys healthy adoption on both sides of the stack, with prominent open-source contributors like <a href="https://github.com/sindresorhus" target="_blank">@sindresorhus</a> visibly leveraging them.<br>
 <em>What&#x2019;s changed?</em></p>

@@ -1,6 +1,6 @@
 <h1>Immutable Deployments and Packer</h1>
 
-<div><kbd>packer</kbd> <kbd>aws</kbd> <kbd>ami</kbd> <kbd>immutable-deployments</kbd></div>
+<p><kbd>packer</kbd> <kbd>aws</kbd> <kbd>ami</kbd> <kbd>immutable-deployments</kbd></p>
 
 <blockquote><p>A correct<em>er</em> title for this series would be something along the lines of <strong>&#x201C;Automating autoscaled zero-downtime immutable deployments using plain old bash, <a href="http://packer.io/" target="_blank">Packer</a>, &#x2026;</strong></p></blockquote>
 

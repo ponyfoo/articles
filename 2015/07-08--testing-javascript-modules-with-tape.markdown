@@ -1,6 +1,6 @@
 <h1>Testing JavaScript Modules with Tape</h1>
 
-<div><kbd>tape</kbd> <kbd>proxyquire</kbd> <kbd>sinon</kbd></div>
+<p><kbd>tape</kbd> <kbd>proxyquire</kbd> <kbd>sinon</kbd></p>
 
 <blockquote><p>I held a survey last monday where I asked for feedback about the kinds of things you want me to write about. It was quite useful, and one of the topics that seem to &#x2026;</p></blockquote>
 

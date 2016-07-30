@@ -1,6 +1,6 @@
 <h1>Information Hiding in JavaScript</h1>
 
-<div><kbd>js</kbd> <kbd>js-native</kbd> <kbd>best-practices</kbd></div>
+<p><kbd>js</kbd> <kbd>js-native</kbd> <kbd>best-practices</kbd></p>
 
 <blockquote><p>Even though it&#x2019;s tricky at first, if you are used to <em>classical</em> object-oriented languages, it&#x2019;s easy (and <em>highly encouraged</em>) to perform <strong>information hiding</strong> &#x2026;</p></blockquote>
 

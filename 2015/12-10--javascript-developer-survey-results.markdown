@@ -1,6 +1,6 @@
 <h1>JavaScript Developer Survey Results</h1>
 
-<div><kbd>survey</kbd> <kbd>survey-results</kbd></div>
+<p><kbd>survey</kbd> <kbd>survey-results</kbd></p>
 
 <blockquote><p>The end of year is drawing close and the JavaScript Developer Survey has now ended. The survey received an unimagined amount of replies and I&#x2019;m excited to share &#x2026;</p></blockquote>
 

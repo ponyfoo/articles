@@ -1,6 +1,6 @@
 <h1>ECMAScript Proposal for JavaScript Decorators <br><em>(and protocols)</em></h1>
 
-<div><kbd>ecmascript</kbd> <kbd>decorators</kbd> <kbd>proposal-draft</kbd></div>
+<p><kbd>ecmascript</kbd> <kbd>decorators</kbd> <kbd>proposal-draft</kbd></p>
 
 <blockquote><p>There&#x2019;s a JavaScript decorators proposal in the works.<br>
 We take a look at how it works and why it&#x2019;s useful.</p>

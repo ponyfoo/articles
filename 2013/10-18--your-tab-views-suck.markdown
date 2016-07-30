@@ -1,6 +1,6 @@
 <h1>Your Tab Views Suck</h1>
 
-<div><kbd>front-end</kbd> <kbd>css</kbd> <kbd>jquery</kbd> <kbd>no-js</kbd> <kbd>tutorial</kbd></div>
+<p><kbd>front-end</kbd> <kbd>css</kbd> <kbd>jquery</kbd> <kbd>no-js</kbd> <kbd>tutorial</kbd></p>
 
 <blockquote><p>What if I told you&#x2026; we can write a <strong>tabbed UI view</strong> without <em>using JavaScript</em>, which works in every modern browser, and even clocks around 20 <em>total</em> lines of code?</p><p>In &#x2026;</p></blockquote>
 

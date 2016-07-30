@@ -1,6 +1,6 @@
 <h1>ECMAScript String Padding</h1>
 
-<div><kbd>ecmascript</kbd> <kbd>string</kbd> <kbd>proposal-draft</kbd></div>
+<p><kbd>ecmascript</kbd> <kbd>string</kbd> <kbd>proposal-draft</kbd></p>
 
 <blockquote><p>A first look into <code>.padStart</code> and <code>.padEnd</code> string methods drafted as proposals for implementation in ECMAScript.</p>
 </blockquote>

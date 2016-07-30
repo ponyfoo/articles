@@ -1,6 +1,6 @@
 <h1>Lean Development Principles</h1>
 
-<div><kbd>lean-startup</kbd> <kbd>book-review</kbd> <kbd>recommended-reading</kbd></div>
+<p><kbd>lean-startup</kbd> <kbd>book-review</kbd> <kbd>recommended-reading</kbd></p>
 
 <blockquote><p>I just finished reading <a href="http://www.amazon.com/dp/0307887898" target="_blank">The Lean Startup</a>, an immersive, ground-breaking take on entrepreneurship and startup management, with views heavily rooted in the Toyota &#x2026;</p></blockquote>
 

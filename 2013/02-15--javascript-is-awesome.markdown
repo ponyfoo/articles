@@ -1,6 +1,6 @@
 <h1>JavaScript Is Awesome</h1>
 
-<div><kbd>js</kbd> <kbd>coffeescript</kbd></div>
+<p><kbd>js</kbd> <kbd>coffeescript</kbd></p>
 
 <blockquote><p><em>JavaScript</em> is one of the most <strong>loved and hated</strong> languages out there. Some, can&#x2019;t stand the stench of how obtuse it <em>appears</em> to be. Some appreciate the &#x2026;</p></blockquote>
 

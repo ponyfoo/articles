@@ -1,6 +1,6 @@
 <h1>Deploying Node apps to AWS using Grunt</h1>
 
-<div><kbd>aws</kbd> <kbd>ec2</kbd> <kbd>grunt</kbd> <kbd>nodejs</kbd> <kbd>grunt-ec2</kbd></div>
+<p><kbd>aws</kbd> <kbd>ec2</kbd> <kbd>grunt</kbd> <kbd>nodejs</kbd> <kbd>grunt-ec2</kbd></p>
 
 <blockquote><p>I&#x2019;ve been toying with <strong>AWS</strong> for a few days now, and I wanted to share my experience and my approach with you. My goal was to set up a deploy flow in Grunt to enable &#x2026;</p></blockquote>
 

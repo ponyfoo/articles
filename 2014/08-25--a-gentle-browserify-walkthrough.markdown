@@ -1,6 +1,6 @@
 <h1>A Gentle Browserify Walkthrough</h1>
 
-<div><kbd>browserify</kbd> <kbd>modules</kbd> <kbd>front-end</kbd> <kbd>tutorial</kbd></div>
+<p><kbd>browserify</kbd> <kbd>modules</kbd> <kbd>front-end</kbd> <kbd>tutorial</kbd></p>
 
 <blockquote><p>Building modules for the front-end has become an increasingly easy problem to solve. Back in the nineties we had our Java applets, our <code>&lt;MARQUEE&gt;</code> and <code>&lt;BLINK&gt;</code> &#x2026;</p></blockquote>
 

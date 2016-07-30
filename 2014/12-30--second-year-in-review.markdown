@@ -1,6 +1,6 @@
 <h1>Second Year in Review</h1>
 
-<div><kbd>yearly-review</kbd> <kbd>recommended-reading</kbd></div>
+<p><kbd>yearly-review</kbd> <kbd>recommended-reading</kbd></p>
 
 <blockquote><p>I started this blog <a href="https://ponyfoo.com/articles/pony-foo-begins">two years ago</a>, at a time when nobody seemed to care about blogging anymore. It turned out to be one of the best decisions I took back then, and it &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>A Year In Review</h1>
 
-<div><kbd>yearly-review</kbd> <kbd>recommended-reading</kbd></div>
+<p><kbd>yearly-review</kbd> <kbd>recommended-reading</kbd></p>
 
 <blockquote><p>It&#x2019;s been almost a year since <a href="https://ponyfoo.com/2012/12/25/pony-foo-begins">I launched this blog</a>, although I had started writing blog posts before I finished coding the web application, as a way to &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>The <code class="md-code md-code-inline">npm</code> Meltdown Uncovers Serious Security Risks</h1>
 
-<div><kbd>npm</kbd></div>
+<p><kbd>npm</kbd></p>
 
 <blockquote><p>Earlier this week, as almost everyone reading this article knows, <code>npm</code> experienced a brief service interruption where <code>npm install</code> would fail for heaps of popular packages &#x2026;</p></blockquote>
 

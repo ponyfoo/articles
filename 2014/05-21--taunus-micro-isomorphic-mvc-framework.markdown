@@ -1,6 +1,6 @@
 <h1>Taunus: Micro Isomorphic MVC Framework</h1>
 
-<div><kbd>isomorphic</kbd> <kbd>taunus</kbd> <kbd>browserify</kbd> <kbd>npm-run</kbd></div>
+<p><kbd>isomorphic</kbd> <kbd>taunus</kbd> <kbd>browserify</kbd> <kbd>npm-run</kbd></p>
 
 <blockquote><p>I&#x2019;ve mentioned <a href="https://github.com/bevacqua/taunus" target="_blank">Taunus</a> in <a href="https://ponyfoo.com/2014/05/16/modularizing-your-front-end">one of my latest articles</a>. I believe Taunus <em>is interesting</em>, not because it introduces innovative paradigm shifts or the like, but rather, &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>Rehearsal: Record program output</h1>
 
-<div><kbd>rehearsal</kbd> <kbd>utility</kbd> <kbd>presentations</kbd></div>
+<p><kbd>rehearsal</kbd> <kbd>utility</kbd> <kbd>presentations</kbd></p>
 
 <blockquote><p>Persist standard input to a file, then simulate real-time program execution.</p><blockquote></blockquote> <p>Ever needed to give a talk on a program and show exactly how the output is going to look &#x2026;</p></blockquote>
 

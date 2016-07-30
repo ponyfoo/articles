@@ -1,6 +1,6 @@
 <h1>Angle Brackets, Synergistic Directives</h1>
 
-<div><kbd>angle-brackets</kbd> <kbd>angularjs</kbd> <kbd>directives</kbd> <kbd>front-end</kbd> <kbd>mvc</kbd></div>
+<p><kbd>angle-brackets</kbd> <kbd>angularjs</kbd> <kbd>directives</kbd> <kbd>front-end</kbd> <kbd>mvc</kbd></p>
 
 <blockquote><p>In <a href="https://ponyfoo.com/2014/02/14/angle-brackets-rifle-scopes">the previous part of this article</a>, I discussed scope events and the behavior of the digest cycle. This time around, I&#x2019;ll talk about directives. Just as &#x2026;</p></blockquote>
 

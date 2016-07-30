@@ -1,6 +1,6 @@
 <h1>Composable UI</h1>
 
-<div><kbd>javascript</kbd> <kbd>composition</kbd> <kbd>modules</kbd> <kbd>architecture</kbd></div>
+<p><kbd>javascript</kbd> <kbd>composition</kbd> <kbd>modules</kbd> <kbd>architecture</kbd></p>
 
 <blockquote><p>Most often, web UI libraries fall under one of two categories. They may be part of a <em>&#x201C;framework&#x201D;</em>, or a grouping of UI components that <strong>share an appearance, &#x2026;</strong></p></blockquote>
 

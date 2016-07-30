@@ -1,6 +1,6 @@
 <h1>Fun with Native Arrays</h1>
 
-<div><kbd>js</kbd> <kbd>js-native</kbd> <kbd>array</kbd></div>
+<p><kbd>js</kbd> <kbd>js-native</kbd> <kbd>array</kbd></p>
 
 <blockquote><p>In JavaScript, arrays can be created with the <code>Array</code> constructor, or using the <code>[]</code> convenience shortcut, which is also the preferred approach. Arrays inherit from the <code>&#x2026;</code></p></blockquote>
 

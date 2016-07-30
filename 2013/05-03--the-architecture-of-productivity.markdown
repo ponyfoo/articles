@@ -1,6 +1,6 @@
 <h1>The Architecture of Productivity</h1>
 
-<div><kbd>software-development</kbd> <kbd>productivity</kbd> <kbd>architecture</kbd> <kbd>quotes</kbd></div>
+<p><kbd>software-development</kbd> <kbd>productivity</kbd> <kbd>architecture</kbd> <kbd>quotes</kbd></p>
 
 <blockquote><p>It&#x2019;s been a while since I last blogged. I went on vacation, switched jobs, and have been generally busy. I&#x2019;m now working <em>full-time remote</em>, which will <em>&#x2026;</em></p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>CSS For Dummies</h1>
 
-<div><kbd>css</kbd> <kbd>front-end</kbd> <kbd>learning</kbd></div>
+<p><kbd>css</kbd> <kbd>front-end</kbd> <kbd>learning</kbd></p>
 
 <blockquote><p>Web design today is hard to get right. I&#x2019;ve been meaning to talk about front-end design for a while, but I couldn&#x2019;t get the subject <em>quite right</em>. Seeing how &#x2026;</p></blockquote>
 

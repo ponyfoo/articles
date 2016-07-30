@@ -1,6 +1,6 @@
 <h1>Using the JavaScript Charting Library</h1>
 
-<div><kbd>jscharting</kbd> <kbd>visualizations</kbd> <kbd>product-review</kbd></div>
+<p><kbd>jscharting</kbd> <kbd>visualizations</kbd> <kbd>product-review</kbd></p>
 
 <blockquote><p>I&#x2019;ve been asked to review the <a href="http://jscharting.com/" target="_blank">JSCharting</a> enterprise charting library, and given that I&#x2019;ve <a href="http://bevacqua.github.io/promisees" target="_blank">recently dabbled in visualizations</a> I felt like this was a great &#x2026;</p></blockquote>
 

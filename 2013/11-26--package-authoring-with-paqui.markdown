@@ -1,6 +1,6 @@
 <h1>Package Authoring with Paqui</h1>
 
-<div><kbd>paqui</kbd> <kbd>js</kbd> <kbd>front-end</kbd> <kbd>npm</kbd> <kbd>bower</kbd></div>
+<p><kbd>paqui</kbd> <kbd>js</kbd> <kbd>front-end</kbd> <kbd>npm</kbd> <kbd>bower</kbd></p>
 
 <blockquote><p>Creating client-side JavaScript packages is increasingly becoming a painful endeavor. We need to publish our package to different repositories such as <a href="http://bower.io/" target="_blank">bower</a>, <a href="http://component.io/" target="_blank">component</a>, &#x2026;</p></blockquote>
 

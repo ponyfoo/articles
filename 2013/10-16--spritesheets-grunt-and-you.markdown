@@ -1,6 +1,6 @@
 <h1>Spritesheets, Grunt, and You</h1>
 
-<div><kbd>grunt</kbd> <kbd>build</kbd> <kbd>sprites</kbd></div>
+<p><kbd>grunt</kbd> <kbd>build</kbd> <kbd>sprites</kbd></p>
 
 <blockquote><p>If you are using Grunt, you really have <strong>no excuse</strong> not to be using CSS spritesheets. If you aren&#x2019;t using Grunt <em>yet</em>, then you should know that a well thought-out &#x2026;</p></blockquote>
 

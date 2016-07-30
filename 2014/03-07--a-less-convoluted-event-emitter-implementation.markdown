@@ -1,6 +1,6 @@
 <h1>A Less Convoluted Event Emitter Implementation</h1>
 
-<div><kbd>js</kbd> <kbd>nodejs</kbd> <kbd>event-emitter</kbd> <kbd>pattern</kbd></div>
+<p><kbd>js</kbd> <kbd>nodejs</kbd> <kbd>event-emitter</kbd> <kbd>pattern</kbd></p>
 
 <blockquote><p>I believe that the event emitter implementation in Node could be made way better by providing a way to access the functionality directly without using prototypes. This &#x2026;</p></blockquote>
 

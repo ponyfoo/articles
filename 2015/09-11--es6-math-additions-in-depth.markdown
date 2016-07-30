@@ -1,6 +1,6 @@
 <h1>ES6 Math Additions in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>math</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>math</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>You&#x2019;ve made it! Here&#x2019;s another article in the <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 &#x2013; <em>&#x201C;What? I&#x2019;d rather develop for IE6&#x201D;</em> &#x2013; in Depth</a> series. If &#x2026;</p></blockquote>
 

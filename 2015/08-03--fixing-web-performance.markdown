@@ -1,6 +1,6 @@
 <h1>Fixing Performance in the Web Stack</h1>
 
-<div><kbd>performance</kbd> <kbd>talks</kbd> <kbd>automation</kbd> <kbd>tips</kbd> <kbd>budgets</kbd></div>
+<p><kbd>performance</kbd> <kbd>talks</kbd> <kbd>automation</kbd> <kbd>tips</kbd> <kbd>budgets</kbd></p>
 
 <blockquote><p>There&#x2019;s plenty of performance optimization techniques in web development. Particularly, if you look into each portion of the web stack in detail. In <a href="https://speakerdeck.com/bevacqua/high-performance-in-the-critical-path" target="_blank">the &#x2026;</a></p></blockquote>
 

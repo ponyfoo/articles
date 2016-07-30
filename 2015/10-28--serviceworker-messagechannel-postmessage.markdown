@@ -1,6 +1,6 @@
 <h1>ServiceWorker, MessageChannel, &amp; postMessage</h1>
 
-<div><kbd>serviceworker</kbd> <kbd>swivel</kbd> <kbd>messagechannel</kbd> <kbd>postmessage</kbd></div>
+<p><kbd>serviceworker</kbd> <kbd>swivel</kbd> <kbd>messagechannel</kbd> <kbd>postmessage</kbd></p>
 
 <blockquote><p>Last week I wrote an article about <a href="https://ponyfoo.com/articles/progressive-networking-serviceworker" aria-label="ServiceWorker and Progressive Networking on Pony Foo">a caching strategy for progressive networking</a> that uses a cache first and then goes to the networking, sharing messages between web &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>Universal Routing in React with ES6</h1>
 
-<div><kbd>babel</kbd> <kbd>react</kbd> <kbd>react-router</kbd> <kbd>es6</kbd> <kbd>universal</kbd></div>
+<p><kbd>babel</kbd> <kbd>react</kbd> <kbd>react-router</kbd> <kbd>es6</kbd> <kbd>universal</kbd></p>
 
 <blockquote><p>Yesterday, we learned about how to set up a build process for an universal ES6 React app using Babel, and <a href="https://ponyfoo.com/articles/universal-react-babel">how to have that React app render &#x201C;universally&#x201D;</a> &#x2026;</p></blockquote>
 

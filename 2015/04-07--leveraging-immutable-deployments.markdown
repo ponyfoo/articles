@@ -1,6 +1,6 @@
 <h1>Leveraging Immutable Deployments</h1>
 
-<div><kbd>bash</kbd> <kbd>aws</kbd> <kbd>ami</kbd> <kbd>immutable-deployments</kbd></div>
+<p><kbd>bash</kbd> <kbd>aws</kbd> <kbd>ami</kbd> <kbd>immutable-deployments</kbd></p>
 
 <blockquote><p>Last time around, we discussed <a href="https://ponyfoo.com/articles/immutable-deployments-packer">how to create an AMI for every deployment</a>: a crucial step in enabling you to leverage deployment immutability. This time around &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>My First Gulp Adventure</h1>
 
-<div><kbd>gulp</kbd> <kbd>tutorial</kbd> <kbd>build</kbd></div>
+<p><kbd>gulp</kbd> <kbd>tutorial</kbd> <kbd>build</kbd></p>
 
 <blockquote><p>I decided to take a gulp of Gulp and use it in one of my latest projects, to help me with releases. I wrote a Gulpfile, which lets me write some code to define the tasks &#x2026;</p></blockquote>
 

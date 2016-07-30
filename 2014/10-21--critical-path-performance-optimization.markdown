@@ -1,6 +1,6 @@
 <h1>Critical Path Performance Optimization at Pony Foo</h1>
 
-<div><kbd>ponyfoo</kbd> <kbd>critical-path</kbd> <kbd>performance</kbd> <kbd>nginx</kbd> <kbd>pagespeed</kbd></div>
+<p><kbd>ponyfoo</kbd> <kbd>critical-path</kbd> <kbd>performance</kbd> <kbd>nginx</kbd> <kbd>pagespeed</kbd></p>
 
 <blockquote><p>This article aims to cover the performance gains I&#x2019;ve attained in the redesign of Pony Foo, <em>deployed last week</em> to production. I&#x2019;ll be covering a few &#x2026;</p></blockquote>
 

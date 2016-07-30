@@ -1,6 +1,6 @@
 <h1>Fast-forwarding the Web Platform</h1>
 
-<div><kbd>web</kbd> <kbd>standards</kbd> <kbd>native</kbd> <kbd>performance</kbd></div>
+<p><kbd>web</kbd> <kbd>standards</kbd> <kbd>native</kbd> <kbd>performance</kbd></p>
 
 <blockquote><p>Peter-Paul Koch &#x2013; or <a href="https://twitter.com/ppk" target="_blank">@ppk</a> &#x2013; has once again <a href="http://www.quirksmode.org/blog/archives/2015/07/stop_pushing_th.html" target="_blank">published a rupturing article titled &#x201C;Stop pushing the web forward&#x201D;</a> that is surely going to <em>set &#x2026;</em></p></blockquote>
 

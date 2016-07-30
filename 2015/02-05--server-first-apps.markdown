@@ -1,6 +1,6 @@
 <h1>Server-First Apps are a Good Idea</h1>
 
-<div><kbd>server-first</kbd> <kbd>taunus</kbd> <kbd>ember</kbd> <kbd>react</kbd> <kbd>angular</kbd> <kbd>progressive-enhancement</kbd></div>
+<p><kbd>server-first</kbd> <kbd>taunus</kbd> <kbd>ember</kbd> <kbd>react</kbd> <kbd>angular</kbd> <kbd>progressive-enhancement</kbd></p>
 
 <blockquote><p>Earlier today, <a href="http://tomdale.net/2015/02/youre-missing-the-point-of-server-side-rendered-javascript-apps/" target="_blank">Tom Dale published an article</a> sharing his views on the whole &#x201C;server-side vs client-side rendered apps&#x201D; debacle. I was tempted to call this &#x2026;</p></blockquote>
 

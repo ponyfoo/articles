@@ -1,6 +1,6 @@
 <h1>Securing Your Web App in 3 Easy Steps</h1>
 
-<div><kbd>https</kbd> <kbd>security</kbd> <kbd>web-apps</kbd> <kbd>cloudflare</kbd></div>
+<p><kbd>https</kbd> <kbd>security</kbd> <kbd>web-apps</kbd> <kbd>cloudflare</kbd></p>
 
 <blockquote><p>I&#x2019;ve recently upgraded Pony Foo to use the <code>https</code> protocol, something I&#x2019;ve been meaning to do for a while. It&#x2019;s super easy to do so, and &#x2026;</p></blockquote>
 

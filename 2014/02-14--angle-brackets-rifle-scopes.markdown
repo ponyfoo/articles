@@ -1,6 +1,6 @@
 <h1>Angle Brackets, Rifle Scopes</h1>
 
-<div><kbd>angle-brackets</kbd> <kbd>angularjs</kbd> <kbd>scope</kbd> <kbd>internals</kbd> <kbd>front-end</kbd> <kbd>mvc</kbd></div>
+<p><kbd>angle-brackets</kbd> <kbd>angularjs</kbd> <kbd>scope</kbd> <kbd>internals</kbd> <kbd>front-end</kbd> <kbd>mvc</kbd></p>
 
 <blockquote><p><strong>Angular.js</strong> presents a remarkable number of interesting design choices in its code-base. Two particularly interesting cases are the way in which scopes work, and how &#x2026;</p></blockquote>
 

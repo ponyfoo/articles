@@ -1,6 +1,6 @@
 <h1>Making a Simple Site Work Offline with ServiceWorker</h1>
 
-<div><kbd>serviceworker</kbd> <kbd>tutorial</kbd></div>
+<p><kbd>serviceworker</kbd> <kbd>tutorial</kbd></p>
 
 <blockquote><p>I&#x2019;ve been playing around with ServiceWorker a lot recently, so when Chris asked me to write an article about it I couldn&#x2019;t have been more thrilled. &#x2026;</p></blockquote>
 

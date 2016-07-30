@@ -1,6 +1,6 @@
 <h1>Getting Over jQuery</h1>
 
-<div><kbd>js</kbd> <kbd>js-native</kbd> <kbd>jquery</kbd> <kbd>front-end</kbd> <kbd>best-practices</kbd> <kbd>dom</kbd></div>
+<p><kbd>js</kbd> <kbd>js-native</kbd> <kbd>jquery</kbd> <kbd>front-end</kbd> <kbd>best-practices</kbd> <kbd>dom</kbd></p>
 
 <blockquote><p>We&#x2019;ve looked at doing some of the things that you can do in native code. So far, we&#x2019;ve covered AJAX, event handling, event delegation, DOM querying, and &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>All Aboard the ES6 JavaScript Train</h1>
 
-<div><kbd>es6</kbd> <kbd>tutorial</kbd></div>
+<p><kbd>es6</kbd> <kbd>tutorial</kbd></p>
 
 <blockquote><p>The sixth ECMAScript specification has been <strong>finalized last june</strong>, and there&#x2019;s a flurry of JavaScript features coming our way.</p>
 <p>I&#x2019;ll be covering the most exciting new features.</p>

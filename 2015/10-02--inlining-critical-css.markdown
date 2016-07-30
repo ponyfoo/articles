@@ -1,6 +1,6 @@
 <h1>Inlining Critical CSS for Dynamic Web Apps</h1>
 
-<div><kbd>performance</kbd> <kbd>penthouse</kbd> <kbd>critical-css</kbd> <kbd>bash</kbd></div>
+<p><kbd>performance</kbd> <kbd>penthouse</kbd> <kbd>critical-css</kbd> <kbd>bash</kbd></p>
 
 <blockquote><p>During the <a href="https://ponyfoo.com/articles/redesign" aria-label="Pony Foo Gets a Face Lift">redesign</a> I was faced with a problem and I had to rethink the way I inline CSS in my blog, so I figured it&#x2019;d be a good time to write about it in more &#x2026;</p></blockquote>
 

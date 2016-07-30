@@ -1,6 +1,6 @@
 <h1>Pragmatic Unit Testing in JavaScript</h1>
 
-<div><kbd>unit-testing</kbd> <kbd>js</kbd> <kbd>best-practices</kbd></div>
+<p><kbd>unit-testing</kbd> <kbd>js</kbd> <kbd>best-practices</kbd></p>
 
 <blockquote><p>More often than not, companies completely (and <em>irresponsibly</em>) disregard JavaScript as code that <em>should be unit tested</em>. They might test their back-end code, it may be in &#x2026;</p></blockquote>
 

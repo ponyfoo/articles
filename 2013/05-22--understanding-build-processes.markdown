@@ -1,6 +1,6 @@
 <h1>Understanding Build Processes</h1>
 
-<div><kbd>build</kbd> <kbd>productivity</kbd> <kbd>best-practices</kbd></div>
+<p><kbd>build</kbd> <kbd>productivity</kbd> <kbd>best-practices</kbd></p>
 
 <blockquote><p>A <em>task runner</em> helps you automate everything you need to get an environment functional. Configure, build, run tests, and execute your web server. But there&#x2019;s more &#x2026;</p></blockquote>
 

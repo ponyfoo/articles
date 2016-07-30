@@ -1,6 +1,6 @@
 <h1>JavaScript JavaScript JavaScript</h1>
 
-<div><kbd>ponyfoo</kbd> <kbd>js</kbd> <kbd>nodejs</kbd> <kbd>mongodb</kbd></div>
+<p><kbd>ponyfoo</kbd> <kbd>js</kbd> <kbd>nodejs</kbd> <kbd>mongodb</kbd></p>
 
 <blockquote><p>In my <a href="https://ponyfoo.com/2012/12/29/single-page-design-madness">previous installment</a>, I <em>prognosticated</em> the discussion topic for this post.</p><blockquote> <p>In the next post I&#x2019;ll delve into <strong>MongoDB</strong>, how to pair it with <strong>Node</strong>, and figuring &#x2026;</p></blockquote></blockquote>
 

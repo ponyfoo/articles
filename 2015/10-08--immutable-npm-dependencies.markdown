@@ -1,6 +1,6 @@
 <h1>Keeping Your npm Dependencies Immutable</h1>
 
-<div><kbd>semver</kbd> <kbd>immutability</kbd> <kbd>npm</kbd></div>
+<p><kbd>semver</kbd> <kbd>immutability</kbd> <kbd>npm</kbd></p>
 
 <blockquote><p>I&#x2019;ve been bitten a few times by dependencies using semver ranges such as <code>^1.0.1</code> where the dependency introduced a &#x201C;non-breaking&#x201D; change that ended &#x2026;</p></blockquote>
 

@@ -1,6 +1,6 @@
 <h1>Uncovering the Native DOM API</h1>
 
-<div><kbd>js</kbd> <kbd>js-native</kbd> <kbd>dom</kbd> <kbd>best-practices</kbd></div>
+<p><kbd>js</kbd> <kbd>js-native</kbd> <kbd>dom</kbd> <kbd>best-practices</kbd></p>
 
 <blockquote><p>JavaScript libraries such as <strong>jQuery</strong> serve a great purpose in enabling and <em>normalizing cross-browser behaviors</em> of the <a href="https://developer.mozilla.org/en/docs/DOM" target="_blank">DOM</a> in such a way that it&#x2019;s possible to use &#x2026;</p></blockquote>
 

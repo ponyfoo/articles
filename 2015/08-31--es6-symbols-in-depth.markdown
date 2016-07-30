@@ -1,6 +1,6 @@
 <h1>ES6 Symbols in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>symbols</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>symbols</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>Buon giorno! Willkommen to <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 &#x2013; <em>&#x201C;I can&#x2019;t believe this is yet another installment&#x201D;</em> &#x2013; in Depth</a>. If you have no idea how you got here or &#x2026;</p></blockquote>
 

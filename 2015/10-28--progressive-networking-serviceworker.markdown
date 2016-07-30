@@ -1,6 +1,6 @@
 <h1>ServiceWorker and Progressive Networking</h1>
 
-<div><kbd>serviceworker</kbd> <kbd>progressive-networking</kbd></div>
+<p><kbd>serviceworker</kbd> <kbd>progressive-networking</kbd></p>
 
 <blockquote><p>I&#x2019;ve been toying with <a href="https://ponyfoo.com/articles/serviceworker-revolution" aria-label="ServiceWorker: Revolution of the Web Platform on Pony Foo"><code>ServiceWorker</code></a> for a while. The single most complicated issue when it comes to <code>ServiceWorker</code> has been dealing with caching in a &#x2026;</p></blockquote>
 

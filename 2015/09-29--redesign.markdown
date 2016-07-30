@@ -1,6 +1,6 @@
 <h1>Pony Foo Gets a Face Lift</h1>
 
-<div><kbd>ponyfoo</kbd> <kbd>redesign</kbd> <kbd>rainbows</kbd> <kbd>performance</kbd></div>
+<p><kbd>ponyfoo</kbd> <kbd>redesign</kbd> <kbd>rainbows</kbd> <kbd>performance</kbd></p>
 
 <blockquote><p>Pony Foo&#x2019;s design remained largely the same throughout its <a href="https://ponyfoo.com/articles/history" aria-label="Repository of articles published on Pony Foo">history</a> so far, as I never really spent a lot of time on its design. Today I&#x2019;m thrilled to &#x2026;</p></blockquote>
 

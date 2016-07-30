@@ -1,6 +1,6 @@
 <h1>Event Emitter: Obey and Report</h1>
 
-<div><kbd>js</kbd> <kbd>pattern</kbd> <kbd>event-emitter</kbd></div>
+<p><kbd>js</kbd> <kbd>pattern</kbd> <kbd>event-emitter</kbd></p>
 
 <blockquote><p>The <em>event emitter pattern</em> was popularized by Node, and is made available in the browser by libraries such as <a href="https://github.com/hij1nx/EventEmitter2" target="_blank">EventEmitter2</a>. In practice, I haven&#x2019;t seen a lot of &#x2026;</p></blockquote>
 

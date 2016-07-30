@@ -1,6 +1,6 @@
 <h1>ES6 Let, Const and the &#x201C;Temporal Dead Zone&#x201D; (TDZ) in Depth</h1>
 
-<div><kbd>es6</kbd> <kbd>let</kbd> <kbd>const</kbd> <kbd>temporal-dead-zone</kbd> <kbd>es6-in-depth</kbd></div>
+<p><kbd>es6</kbd> <kbd>let</kbd> <kbd>const</kbd> <kbd>temporal-dead-zone</kbd> <kbd>es6-in-depth</kbd></p>
 
 <blockquote><p>This is yet another edition of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>. First time here? Welcome! So far we covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, the <a href="https://ponyfoo.com/articles/es6-spread-and-butter-in-depth">spread operator and rest &#x2026;</a></p></blockquote>
 
