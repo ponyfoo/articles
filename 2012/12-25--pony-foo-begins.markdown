@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Pony Foo begins</h1>
-  <div><p>As I start writing this post, I set out with a purpose. To write a micro-blogging engine. The language of choice is <em>Node.JS</em>. I chose this language because I want to see &#x2026;</p></div>
-</blockquote></div>
+<h1>Pony Foo begins</h1>
+
+<blockquote><p>As I start writing this post, I set out with a purpose. To write a micro-blogging engine. The language of choice is <em>Node.JS</em>. I chose this language because I want to see &#x2026;</p></blockquote>
+
+<div><kbd>ponyfoo</kbd></div>
 
 <div><p>As I start writing this post, I set out with a purpose. To write a micro-blogging engine. The language of choice is <em>Node.JS</em>. I chose this language because I want to see how I fare in light of new horizons&#x2026;</p></div>
 

@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Paging in the Wilderness</h1>
-  <div><p>Traditionally, lists on websites have been paged to allow data to be <em>chunked</em> rather than sent out all at once, when the user might not need all of it <em>right away</em>, &#x2026;</p></div>
-</blockquote></div>
+<h1>Paging in the Wilderness</h1>
+
+<blockquote><p>Traditionally, lists on websites have been paged to allow data to be <em>chunked</em> rather than sent out all at once, when the user might not need all of it <em>right away</em>, &#x2026;</p></blockquote>
+
+<div><kbd>ux</kbd> <kbd>front-end</kbd></div>
 
 <div><p>Traditionally, lists on websites have been paged to allow data to be <em>chunked</em> rather than sent out all at once, when the user might not need all of it <em>right away</em>, improving both <em>overall performance</em> and <em>perceived speed</em>, both of which are very important to <strong>web usability</strong>.</p></div>
 

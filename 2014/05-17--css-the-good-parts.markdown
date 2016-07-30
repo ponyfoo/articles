@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>CSS: The Good Parts</h1>
-  <div><p>I&#x2019;ve decided to pour my thoughts of <strong>how the CSS of an application should be modelled</strong> into a formal style guide. I&#x2019;ve been using this approach for over a &#x2026;</p></div>
-</blockquote></div>
+<h1>CSS: The Good Parts</h1>
+
+<blockquote><p>I&#x2019;ve decided to pour my thoughts of <strong>how the CSS of an application should be modelled</strong> into a formal style guide. I&#x2019;ve been using this approach for over a &#x2026;</p></blockquote>
+
+<div><kbd>css</kbd> <kbd>modules</kbd> <kbd>architecture</kbd> <kbd>style-guide</kbd> <kbd>best-practices</kbd></div>
 
 <div><p>I&#x2019;ve decided to pour my thoughts of <strong>how the CSS of an application should be modelled</strong> into a formal style guide. I&#x2019;ve been using this approach for over a year, and now I&#x2019;m also moving to implement it on the job, as well.</p></div>
 

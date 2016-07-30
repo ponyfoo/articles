@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>The <code class="md-code md-code-inline">npm</code> Meltdown Uncovers Serious Security Risks</h1>
-  <div><p>Earlier this week, as almost everyone reading this article knows, <code>npm</code> experienced a brief service interruption where <code>npm install</code> would fail for heaps of popular packages &#x2026;</p></div>
-</blockquote></div>
+<h1>The <code class="md-code md-code-inline">npm</code> Meltdown Uncovers Serious Security Risks</h1>
+
+<blockquote><p>Earlier this week, as almost everyone reading this article knows, <code>npm</code> experienced a brief service interruption where <code>npm install</code> would fail for heaps of popular packages &#x2026;</p></blockquote>
+
+<div><kbd>npm</kbd></div>
 
 <div><p>Earlier this week, as almost everyone reading this article knows, <code class="md-code md-code-inline">npm</code> experienced a brief service interruption where <code class="md-code md-code-inline">npm install</code> would fail for heaps of popular packages such as Babel and React Native, because somewhere deep in their dependency chains there was <code class="md-code md-code-inline">left-pad</code>, a popular package that became unpublished. This event <strong>raises serious security concerns</strong> about how we&#x2019;re handling dependencies in the JavaScript world.</p></div>
 

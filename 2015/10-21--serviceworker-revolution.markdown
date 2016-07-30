@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>ServiceWorker: Revolution of the Web Platform</h1>
-  <div><p>While not the most amusingly named feature of the web platform, everything seems to point at ServiceWorker being the <strong>most significant addition</strong> to the web platform since &#x2026;</p></div>
-</blockquote></div>
+<h1>ServiceWorker: Revolution of the Web Platform</h1>
+
+<blockquote><p>While not the most amusingly named feature of the web platform, everything seems to point at ServiceWorker being the <strong>most significant addition</strong> to the web platform since &#x2026;</p></blockquote>
+
+<div><kbd>serviceworker</kbd> <kbd>offline-first</kbd></div>
 
 <div><p>While not the most amusingly named feature of the web platform, everything seems to point at ServiceWorker being the <strong>most significant addition</strong> to the web platform since the introduction of <em>AJAX</em> &#x2013; over 10 years ago. Not to be confused with WebWorker <em>(used to offload intense compute operations onto another execution thread)</em>, ServiceWorker allows you to intercept <em>(and hijack)</em> network requests originating from your site before they&#x2019;re even dispatched. This article explores how it works, what it means and what it enables, and how you can implement it by following a case study.</p></div>
 

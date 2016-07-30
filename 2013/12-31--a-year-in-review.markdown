@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>A Year In Review</h1>
-  <div><p>It&#x2019;s been almost a year since <a href="https://ponyfoo.com/2012/12/25/pony-foo-begins">I launched this blog</a>, although I had started writing blog posts before I finished coding the web application, as a way to &#x2026;</p></div>
-</blockquote></div>
+<h1>A Year In Review</h1>
+
+<blockquote><p>It&#x2019;s been almost a year since <a href="https://ponyfoo.com/2012/12/25/pony-foo-begins">I launched this blog</a>, although I had started writing blog posts before I finished coding the web application, as a way to &#x2026;</p></blockquote>
+
+<div><kbd>yearly-review</kbd> <kbd>recommended-reading</kbd></div>
 
 <div><p>It&#x2019;s been almost a year since <a href="https://ponyfoo.com/2012/12/25/pony-foo-begins">I launched this blog</a>, although I had started writing blog posts before I finished coding the web application, as a way to &#x201C;force me&#x201D; to finish coding it, instead of fooling around with meaningless &#x201C;features&#x201D;.</p></div>
 

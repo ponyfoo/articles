@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Cross-tab Communication</h1>
-  <div><p>The upcoming <a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker" target="_blank">SharedWorker</a> API allows to transmit data across iframes and even browser tabs or windows. It landed in Chrome years ago, and not so long ago in Firefox, but &#x2026;</p></div>
-</blockquote></div>
+<h1>Cross-tab Communication</h1>
+
+<blockquote><p>The upcoming <a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker" target="_blank">SharedWorker</a> API allows to transmit data across iframes and even browser tabs or windows. It landed in Chrome years ago, and not so long ago in Firefox, but &#x2026;</p></blockquote>
+
+<div><kbd>sharedworker</kbd> <kbd>localstorage</kbd></div>
 
 <div><p>The upcoming <a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker" target="_blank">SharedWorker</a> API allows to transmit data across iframes and even browser tabs or windows. It landed in Chrome years ago, and not so long ago in Firefox, but it&#x2019;s <a href="http://caniuse.com/#feat=sharedworkers" target="_blank">nowhere to be seen</a> in IE or Safari. A wildly supported alternative exists that can be used today, but it&#x2019;s largely unknown. Let&#x2019;s explore it!</p></div>
 

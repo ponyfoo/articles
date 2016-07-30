@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>ServiceWorker, MessageChannel, &amp; postMessage</h1>
-  <div><p>Last week I wrote an article about <a href="https://ponyfoo.com/articles/progressive-networking-serviceworker" aria-label="ServiceWorker and Progressive Networking on Pony Foo">a caching strategy for progressive networking</a> that uses a cache first and then goes to the networking, sharing messages between web &#x2026;</p></div>
-</blockquote></div>
+<h1>ServiceWorker, MessageChannel, &amp; postMessage</h1>
+
+<blockquote><p>Last week I wrote an article about <a href="https://ponyfoo.com/articles/progressive-networking-serviceworker" aria-label="ServiceWorker and Progressive Networking on Pony Foo">a caching strategy for progressive networking</a> that uses a cache first and then goes to the networking, sharing messages between web &#x2026;</p></blockquote>
+
+<div><kbd>serviceworker</kbd> <kbd>swivel</kbd> <kbd>messagechannel</kbd> <kbd>postmessage</kbd></div>
 
 <div><p>Last week I wrote an article about <a href="https://ponyfoo.com/articles/progressive-networking-serviceworker" aria-label="ServiceWorker and Progressive Networking on Pony Foo">a caching strategy for progressive networking</a> that uses a cache first and then goes to the networking, sharing messages between web pages and a <code class="md-code md-code-inline">ServiceWorker</code> to coordinate updates to cached content. Today I&#x2019;ll describe the inner workings of the <a href="https://github.com/bevacqua/swivel" target="_blank" aria-label="bevacqua/swivel on GitHub"><code class="md-code md-code-inline">swivel</code></a> library that&#x2019;s used to simplify message passing for ServiceWorkers.</p></div>
 

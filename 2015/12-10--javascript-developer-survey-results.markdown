@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>JavaScript Developer Survey Results</h1>
-  <div><p>The end of year is drawing close and the JavaScript Developer Survey has now ended. The survey received an unimagined amount of replies and I&#x2019;m excited to share &#x2026;</p></div>
-</blockquote></div>
+<h1>JavaScript Developer Survey Results</h1>
+
+<blockquote><p>The end of year is drawing close and the JavaScript Developer Survey has now ended. The survey received an unimagined amount of replies and I&#x2019;m excited to share &#x2026;</p></blockquote>
+
+<div><kbd>survey</kbd> <kbd>survey-results</kbd></div>
 
 <div><p>The end of year is drawing close and the JavaScript Developer Survey has now ended. The survey received an unimagined amount of replies and I&#x2019;m excited to share the results with you!</p></div>
 

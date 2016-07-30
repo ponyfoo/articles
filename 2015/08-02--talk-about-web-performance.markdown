@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Let&#x2019;s talk about Web Performance</h1>
-  <div><p>For the <a href="http://lanyrd.com/profile/bevacqua/past/speaking/" target="_blank">past few months</a> I&#x2019;ve been speaking at conferences about web performance. Unfortunately, none of those awesome conferences have published their talk videos </p></div>
-</blockquote></div>
+<h1>Let&#x2019;s talk about Web Performance</h1>
+
+<blockquote><p>For the <a href="http://lanyrd.com/profile/bevacqua/past/speaking/" target="_blank">past few months</a> I&#x2019;ve been speaking at conferences about web performance. Unfortunately, none of those awesome conferences have published their talk videos </p></blockquote>
+
+<div><kbd>performance</kbd> <kbd>talks</kbd> <kbd>automation</kbd> <kbd>tips</kbd> <kbd>budgets</kbd></div>
 
 <div><p>For the <a href="http://lanyrd.com/profile/bevacqua/past/speaking/" target="_blank">past few months</a> I&#x2019;ve been speaking at conferences about web performance. Unfortunately, none of those awesome conferences have published their talk videos <em>just yet</em>. I figured I&#x2019;d publish a write up about the talk, the things I&#x2019;ve learned since I started speaking about these things, and the key take-aways from my talk. The presentation <a href="https://speakerdeck.com/bevacqua/high-performance-in-the-critical-path" target="_blank"><em>(you can find the slides online here)</em></a> is split into three parts. The <strong>first part</strong> covers <mark class="md-mark">measuring performance</mark>, or <strong>understanding what is going on</strong> with your site; the <strong>second part</strong> goes over the <mark class="md-mark">improvements you can make</mark> to your site, such as shrinking images or <em>inlining critical CSS</em>; and the <strong>last part</strong> is <mark class="md-mark">dedicated to the implementation</mark> explaining how you can actually <strong>implement those improvements</strong>, for example using <a href="https://github.com/imagemin/imagemin" target="_blank"><code class="md-code md-code-inline">imagemin</code></a> or <a href="https://github.com/pocketjoso/penthouse" target="_blank"><code class="md-code md-code-inline">penthouse</code></a>. The presentation also introduces you to <a href="https://github.com/bevacqua/perfschool" target="_blank"><code class="md-code md-code-inline">perfschool</code></a>, a NodeSchool workshopper that walks you through <strong>detailed web performance optimization scenarios</strong>, and also shows you cat pictures while you&#x2019;re at it.</p></div>
 

@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>SVG and the DOM, or &#x201C;The Weirdest Bug I&#x2019;ve Ever Encountered&#x201D;</h1>
-  <div><p>I wanted to take a step back from all of the ES6 articles that have been popping up on Pony Foo lately to talk about a bug I came across last week. As I mentioned &#x2026;</p></div>
-</blockquote></div>
+<h1>SVG and the DOM, or &#x201C;The Weirdest Bug I&#x2019;ve Ever Encountered&#x201D;</h1>
+
+<blockquote><p>I wanted to take a step back from all of the ES6 articles that have been popping up on Pony Foo lately to talk about a bug I came across last week. As I mentioned &#x2026;</p></blockquote>
+
+<div><kbd>svg</kbd> <kbd>bug</kbd></div>
 
 <div><p>I wanted to take a step back from all of the ES6 articles that have been popping up on Pony Foo lately to talk about a bug I came across last week. As I mentioned yesterday, the first thing I did during the <a href="https://ponyfoo.com/articles/redesign" aria-label="Pony Foo Gets a Face Lift">redesign</a> was to come up with an animated version of the logo, but some fringe events started to occur when I tried to embed it into the site.</p></div>
 

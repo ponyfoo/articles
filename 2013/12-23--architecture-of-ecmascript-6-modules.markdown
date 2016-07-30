@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Architecture of ECMAScript 6 Modules</h1>
-  <div><p>This blog post contains useful information if you&#x2019;re interested in the latest developments on ECMAScript 6 Harmony modules and they current state of their &#x2026;</p></div>
-</blockquote></div>
+<h1>Architecture of ECMAScript 6 Modules</h1>
+
+<blockquote><p>This blog post contains useful information if you&#x2019;re interested in the latest developments on ECMAScript 6 Harmony modules and they current state of their &#x2026;</p></blockquote>
+
+<div><kbd>es6</kbd> <kbd>modules</kbd> <kbd>harmony</kbd></div>
 
 <div><p>This blog post contains useful information if you&#x2019;re interested in the latest developments on ECMAScript 6 Harmony modules and they current state of their implementation. The original post <a href="https://gist.github.com/wycats/51c96e3adcdb3a68cbc3" target="_blank">can be found here</a>.</p></div>
 

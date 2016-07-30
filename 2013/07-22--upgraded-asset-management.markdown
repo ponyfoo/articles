@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Upgraded Asset Management</h1>
-  <div><p>Recently, I&#x2019;ve updated the documentation for <a href="https://github.com/bevacqua/node-assetify" target="_blank">assetify</a>, and <a href="https://github.com/bevacqua/grunt-assetify" target="_blank">grunt-assetify</a>. I wanted to share the usage patterns as well as my reasons for developing, and &#x2026;</p></div>
-</blockquote></div>
+<h1>Upgraded Asset Management</h1>
+
+<blockquote><p>Recently, I&#x2019;ve updated the documentation for <a href="https://github.com/bevacqua/node-assetify" target="_blank">assetify</a>, and <a href="https://github.com/bevacqua/grunt-assetify" target="_blank">grunt-assetify</a>. I wanted to share the usage patterns as well as my reasons for developing, and &#x2026;</p></blockquote>
+
+<div><kbd>nodejs</kbd> <kbd>assetify</kbd> <kbd>grunt</kbd> <kbd>build</kbd></div>
 
 <div><p>Recently, I&#x2019;ve updated the documentation for <a href="https://github.com/bevacqua/node-assetify" target="_blank">assetify</a>, and <a href="https://github.com/bevacqua/grunt-assetify" target="_blank">grunt-assetify</a>. I wanted to share the usage patterns as well as my reasons for developing, and maintaining <strong>assetify</strong>.</p></div>
 

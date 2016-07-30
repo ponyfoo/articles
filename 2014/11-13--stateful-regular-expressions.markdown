@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Are Regular Expressions Stateful?</h1>
-  <div><p>I seem to have stumbled across a bug regarding regular expressions using the <code>g</code> modifier, where they seem to preserve internal state across calls to <code>RegExp.prototype.test</code>&#x2026;</p></div>
-</blockquote></div>
+<h1>Are Regular Expressions Stateful?</h1>
+
+<blockquote><p>I seem to have stumbled across a bug regarding regular expressions using the <code>g</code> modifier, where they seem to preserve internal state across calls to <code>RegExp.prototype.test</code>&#x2026;</p></blockquote>
+
+<div><kbd>regex</kbd> <kbd>bug</kbd> <kbd>chrome</kbd></div>
 
 <div><p>I seem to have stumbled across a bug regarding regular expressions using the <code class="md-code md-code-inline">g</code> modifier, where they seem to preserve internal state across calls to <code class="md-code md-code-inline">RegExp.prototype.test</code>. I&#x2019;m looking for confirmation or a <em>&#x201C;you&#x2019;re stupid, this is what is going on&#x201D;</em> dismissal.</p></div>
 

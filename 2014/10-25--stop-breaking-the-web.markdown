@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Stop Breaking the Web</h1>
-  <div><p>The year is 2014, a ninja rockstar band goes up against the now long-forgotten <a href="http://alistapart.com/article/understandingprogressiveenhancement" target="_blank">progressive enhancement</a> technique, forsaking the origins of the web and everything they &#x2026;</p></div>
-</blockquote></div>
+<h1>Stop Breaking the Web</h1>
+
+<blockquote><p>The year is 2014, a ninja rockstar band goes up against the now long-forgotten <a href="http://alistapart.com/article/understandingprogressiveenhancement" target="_blank">progressive enhancement</a> technique, forsaking the origins of the web and everything they &#x2026;</p></blockquote>
+
+<div><kbd>performance</kbd> <kbd>rant</kbd> <kbd>progressive-enhancement</kbd> <kbd>graceful-degradation</kbd> <kbd>polyfill</kbd></div>
 
 <div><p>The year is 2014, a ninja rockstar band goes up against the now long-forgotten <a href="http://alistapart.com/article/understandingprogressiveenhancement" target="_blank">progressive enhancement</a> technique, forsaking the origins of the web and everything they once stood for. This article is where I rant about how <strong>we are breaking the web</strong>, the not-immediately-obvious reasons why we should stop doing this, and how <em>not breaking the web would be a great thing</em>.</p></div>
 

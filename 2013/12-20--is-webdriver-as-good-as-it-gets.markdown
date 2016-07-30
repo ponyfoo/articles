@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Is WebDriver as good as it gets?</h1>
-  <div><p>This blog post is part <em>rant</em>, part <em>learning experience</em>, and part <em>solutions and conclusions</em> I&#x2019;ve arrived at, while struggling with <a href="http://docs.seleniumhq.org/projects/webdriver/" target="_blank">WebDriver</a> implementations in Node.</p></div>
-</blockquote></div>
+<h1>Is WebDriver as good as it gets?</h1>
+
+<blockquote><p>This blog post is part <em>rant</em>, part <em>learning experience</em>, and part <em>solutions and conclusions</em> I&#x2019;ve arrived at, while struggling with <a href="http://docs.seleniumhq.org/projects/webdriver/" target="_blank">WebDriver</a> implementations in Node.</p></blockquote>
+
+<div><kbd>integration-testing</kbd> <kbd>selenium</kbd> <kbd>webdriver</kbd> <kbd>grunt</kbd> <kbd>rant</kbd></div>
 
 <div><p>This blog post is part <em>rant</em>, part <em>learning experience</em>, and part <em>solutions and conclusions</em> I&#x2019;ve arrived at, while struggling with <a href="http://docs.seleniumhq.org/projects/webdriver/" target="_blank">WebDriver</a> implementations in Node.</p></div>
 

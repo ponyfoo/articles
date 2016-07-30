@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>JavaScript Developer Survey</h1>
-  <div><p>Following the footsteps of <a href="https://twitter.com/alex_young" target="_blank" aria-label="@alex_young on Twitter">Alex R. Young</a> and his retired <a href="http://dailyjs.com/" target="_blank">dailyjs.com</a> blog, I&#x2019;ve put together a survey about JavaScript usage similar to those he used to host on &#x2026;</p></div>
-</blockquote></div>
+<h1>JavaScript Developer Survey</h1>
+
+<blockquote><p>Following the footsteps of <a href="https://twitter.com/alex_young" target="_blank" aria-label="@alex_young on Twitter">Alex R. Young</a> and his retired <a href="http://dailyjs.com/" target="_blank">dailyjs.com</a> blog, I&#x2019;ve put together a survey about JavaScript usage similar to those he used to host on &#x2026;</p></blockquote>
+
+<div><kbd>survey</kbd></div>
 
 <div><p>Following the footsteps of <a href="https://twitter.com/alex_young" target="_blank" aria-label="@alex_young on Twitter">Alex R. Young</a> and his retired <a href="http://dailyjs.com/" target="_blank">dailyjs.com</a> blog, I&#x2019;ve put together a survey about JavaScript usage similar to those he used to host on his blog. I&#x2019;ll be publishing the results in three weeks.</p></div>
 

@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>9 Quick Tips About npm</h1>
-  <div><p><strong>23-12-13 Update: Now with an extra bonus tip</strong></p><p>Inspired by the now-outdated post <a href="http://blog.izs.me/post/1675072029/10-cool-things-you-probably-didnt-realize-npm-could-do" target="_blank">10 Cool Things You Probably Didn&#x2019;t Realize npm Could Do</a> from Isaacs, the creator of <a href="https://npmjs.org/" target="_blank"><code>&#x2026;</code></a></p></div>
-</blockquote></div>
+<h1>9 Quick Tips About npm</h1>
+
+<blockquote><p><strong>23-12-13 Update: Now with an extra bonus tip</strong></p><p>Inspired by the now-outdated post <a href="http://blog.izs.me/post/1675072029/10-cool-things-you-probably-didnt-realize-npm-could-do" target="_blank">10 Cool Things You Probably Didn&#x2019;t Realize npm Could Do</a> from Isaacs, the creator of <a href="https://npmjs.org/" target="_blank"><code>&#x2026;</code></a></p></blockquote>
+
+<div><kbd>npm</kbd> <kbd>tips</kbd> <kbd>browserify</kbd></div>
 
 <div><p><strong>23-12-13 Update: Now with an extra bonus tip</strong></p></div>
 

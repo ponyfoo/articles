@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Implementing OpenSearch</h1>
-  <div><p><a href="http://www.opensearch.org/" target="_blank">OpenSearch</a> is an specification that allows websites to improve <em>usability</em>. When implemented, it allows consumers to search your site <em>the way you intended them to</em>. All &#x2026;</p></div>
-</blockquote></div>
+<h1>Implementing OpenSearch</h1>
+
+<blockquote><p><a href="http://www.opensearch.org/" target="_blank">OpenSearch</a> is an specification that allows websites to improve <em>usability</em>. When implemented, it allows consumers to search your site <em>the way you intended them to</em>. All &#x2026;</p></blockquote>
+
+<div><kbd>seo</kbd> <kbd>opensearch</kbd></div>
 
 <div><p><a href="http://www.opensearch.org/" target="_blank">OpenSearch</a> is an specification that allows websites to improve <em>usability</em>. When implemented, it allows consumers to search your site <em>the way you intended them to</em>. All major browsers support OpenSearch. <strong>Google Chrome</strong> for instance, allows users to search <em>OpenSearch-enabled</em> websites by using tab in the search bar.</p></div>
 

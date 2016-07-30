@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Leveraging Immutable Deployments</h1>
-  <div><p>Last time around, we discussed <a href="https://ponyfoo.com/articles/immutable-deployments-packer">how to create an AMI for every deployment</a>: a crucial step in enabling you to leverage deployment immutability. This time around &#x2026;</p></div>
-</blockquote></div>
+<h1>Leveraging Immutable Deployments</h1>
+
+<blockquote><p>Last time around, we discussed <a href="https://ponyfoo.com/articles/immutable-deployments-packer">how to create an AMI for every deployment</a>: a crucial step in enabling you to leverage deployment immutability. This time around &#x2026;</p></blockquote>
+
+<div><kbd>bash</kbd> <kbd>aws</kbd> <kbd>ami</kbd> <kbd>immutable-deployments</kbd></div>
 
 <div><p>Last time around, we discussed <a href="https://ponyfoo.com/articles/immutable-deployments-packer">how to create an AMI for every deployment</a>: a crucial step in enabling you to leverage deployment immutability. This time around we&#x2019;ll learn what it takes to automate autoscaling immutable deployments with zero-downtime, while sitting behind a load balancer and using Route 53 for DNS.</p></div>
 

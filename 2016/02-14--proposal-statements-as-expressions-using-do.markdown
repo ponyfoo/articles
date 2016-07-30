@@ -1,8 +1,9 @@
-<div><blockquote>
-  <h1>Proposal: &#x201C;Statements as Expressions&#x201D; using <code class="md-code md-code-inline">do</code></h1>
-  <div><p>A proposal for <code>do</code> statements has been classified as <strong>Stage 0</strong> for a while, and it might be an interesting solution for some problems we can find in JavaScript.</p>
-</div>
-</blockquote></div>
+<h1>Proposal: &#x201C;Statements as Expressions&#x201D; using <code class="md-code md-code-inline">do</code></h1>
+
+<blockquote><p>A proposal for <code>do</code> statements has been classified as <strong>Stage 0</strong> for a while, and it might be an interesting solution for some problems we can find in JavaScript.</p>
+</blockquote>
+
+<div><kbd>ecmascript</kbd> <kbd>do-expressions</kbd> <kbd>proposal-draft</kbd></div>
 
 <div><p>A proposal for <code class="md-code md-code-inline">do</code> statements has been classified as <strong>Stage 0</strong> for a while, and it might be an interesting solution for some problems we can find in JavaScript.</p></div>
 

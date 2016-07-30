@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Designing Front-End Components</h1>
-  <div><p>Last monday I published an open-source library to easily take control of <em>drag &amp; drop</em> in the front-end, <a href="https://github.com/bevacqua/dragula" target="_blank">dragula</a>, and it has amassed over 2000 stars on GitHub in under &#x2026;</p></div>
-</blockquote></div>
+<h1>Designing Front-End Components</h1>
+
+<blockquote><p>Last monday I published an open-source library to easily take control of <em>drag &amp; drop</em> in the front-end, <a href="https://github.com/bevacqua/dragula" target="_blank">dragula</a>, and it has amassed over 2000 stars on GitHub in under &#x2026;</p></blockquote>
+
+<div><kbd>front-end</kbd> <kbd>modularity</kbd> <kbd>rome</kbd> <kbd>insignia</kbd> <kbd>dragula</kbd> <kbd>horsey</kbd></div>
 
 <div><p>Last monday I published an open-source library to easily take control of <em>drag &amp; drop</em> in the front-end, <a href="https://github.com/bevacqua/dragula" target="_blank">dragula</a>, and it has amassed over 2000 stars on GitHub in under a week. Previously I had published <em>a date picker component</em>, <a href="https://github.com/bevacqua/rome" target="_blank">Rome</a>, that&#x2019;s somewhat popular among the nerds. In this article we&#x2019;ll discuss how you can build and isolate components that have a simple API.</p></div>
 

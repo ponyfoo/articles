@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Asynchronous I/O with Generators &amp; Promises</h1>
-  <div><p>The article covers designing a JavaScript API to deal with <strong>asynchronous data inputs and outputs</strong> using generators to <em>succinctly</em> describe a set of operations. Promises can &#x2026;</p></div>
-</blockquote></div>
+<h1>Asynchronous I/O with Generators &amp; Promises</h1>
+
+<blockquote><p>The article covers designing a JavaScript API to deal with <strong>asynchronous data inputs and outputs</strong> using generators to <em>succinctly</em> describe a set of operations. Promises can &#x2026;</p></blockquote>
+
+<div><kbd>generators</kbd> <kbd>promises</kbd> <kbd>javascript</kbd> <kbd>patterns</kbd></div>
 
 <div><p>The article covers designing a JavaScript API to deal with <strong>asynchronous data inputs and outputs</strong> using generators to <em>succinctly</em> describe a set of operations. Promises can also be used to <em>chain</em> other operations after the output has been registered.</p></div>
 

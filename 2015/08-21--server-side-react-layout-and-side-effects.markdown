@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Server-side React Layout &amp; Side Effects</h1>
-  <div><p>We&#x2019;ve been hard at work last week analyzing how to build a <a href="https://ponyfoo.com/articles/tagged/universal">universal</a> app using React. First we <a href="https://ponyfoo.com/articles/universal-react-babel">looked at the bare minimum needed</a> to run <em>Babel through Browserify &#x2026;</em></p></div>
-</blockquote></div>
+<h1>Server-side React Layout &amp; Side Effects</h1>
+
+<blockquote><p>We&#x2019;ve been hard at work last week analyzing how to build a <a href="https://ponyfoo.com/articles/tagged/universal">universal</a> app using React. First we <a href="https://ponyfoo.com/articles/universal-react-babel">looked at the bare minimum needed</a> to run <em>Babel through Browserify &#x2026;</em></p></blockquote>
+
+<div><kbd>universal</kbd> <kbd>react</kbd> <kbd>es6</kbd> <kbd>react-side-effect</kbd></div>
 
 <div><p>We&#x2019;ve been hard at work last week analyzing how to build a <a href="https://ponyfoo.com/articles/tagged/universal">universal</a> app using React. First we <a href="https://ponyfoo.com/articles/universal-react-babel">looked at the bare minimum needed</a> to run <em>Babel through Browserify for ES6 and JSX support</em>, as well as how to render a basic app seamlessly in the server and the browser. On friday <a href="https://ponyfoo.com/articles/universal-routing-react-es6">we added <code class="md-code md-code-inline">react-router</code></a> so that <em>view routing is handled for us</em> on both the server-side as well as the client-side &#x2013; universally. Today we&#x2019;ll be <strong>making some tweaks</strong> to what we have so far.</p></div>
 

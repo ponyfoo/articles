@@ -1,9 +1,10 @@
-<div><blockquote>
-  <h1>All Aboard the ES6 JavaScript Train</h1>
-  <div><p>The sixth ECMAScript specification has been <strong>finalized last june</strong>, and there&#x2019;s a flurry of JavaScript features coming our way.</p>
+<h1>All Aboard the ES6 JavaScript Train</h1>
+
+<blockquote><p>The sixth ECMAScript specification has been <strong>finalized last june</strong>, and there&#x2019;s a flurry of JavaScript features coming our way.</p>
 <p>I&#x2019;ll be covering the most exciting new features.</p>
-</div>
-</blockquote></div>
+</blockquote>
+
+<div><kbd>es6</kbd> <kbd>tutorial</kbd></div>
 
 <div><p>The sixth ECMAScript specification has been <strong>finalized last june</strong>, and there&#x2019;s a flurry of JavaScript features coming our way. You can start using these features today, provided that you know the right set of tools for the job. Today I&#x2019;ll be covering the most exciting new features as well as a couple of different ways how you can get started using them right away.</p></div>
 

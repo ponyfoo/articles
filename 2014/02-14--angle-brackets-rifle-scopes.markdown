@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Angle Brackets, Rifle Scopes</h1>
-  <div><p><strong>Angular.js</strong> presents a remarkable number of interesting design choices in its code-base. Two particularly interesting cases are the way in which scopes work, and how &#x2026;</p></div>
-</blockquote></div>
+<h1>Angle Brackets, Rifle Scopes</h1>
+
+<blockquote><p><strong>Angular.js</strong> presents a remarkable number of interesting design choices in its code-base. Two particularly interesting cases are the way in which scopes work, and how &#x2026;</p></blockquote>
+
+<div><kbd>angle-brackets</kbd> <kbd>angularjs</kbd> <kbd>scope</kbd> <kbd>internals</kbd> <kbd>front-end</kbd> <kbd>mvc</kbd></div>
 
 <div><p><strong>Angular.js</strong> presents a remarkable number of interesting design choices in its code-base. Two particularly interesting cases are the way in which scopes work, and how directives behave.</p></div>
 

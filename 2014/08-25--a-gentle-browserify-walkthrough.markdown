@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>A Gentle Browserify Walkthrough</h1>
-  <div><p>Building modules for the front-end has become an increasingly easy problem to solve. Back in the nineties we had our Java applets, our <code>&lt;MARQUEE&gt;</code> and <code>&lt;BLINK&gt;</code> &#x2026;</p></div>
-</blockquote></div>
+<h1>A Gentle Browserify Walkthrough</h1>
+
+<blockquote><p>Building modules for the front-end has become an increasingly easy problem to solve. Back in the nineties we had our Java applets, our <code>&lt;MARQUEE&gt;</code> and <code>&lt;BLINK&gt;</code> &#x2026;</p></blockquote>
+
+<div><kbd>browserify</kbd> <kbd>modules</kbd> <kbd>front-end</kbd> <kbd>tutorial</kbd></div>
 
 <div><p>Building modules for the front-end has become an increasingly easy problem to solve. Back in the nineties we had our Java applets, our <code class="md-code md-code-inline">&lt;MARQUEE&gt;</code> and <code class="md-code md-code-inline">&lt;BLINK&gt;</code> tag combinations, and those beloved <code class="md-code md-code-inline">&lt;CENTER&gt;</code> tags. Oh and we were mostly developing on Front Page. Anyways, time to <strong>wean off the nostalgia</strong>. Let&#x2019;s focus.</p></div>
 

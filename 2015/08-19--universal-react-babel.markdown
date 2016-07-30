@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Universal React with Babel, Browserify</h1>
-  <div><p>I finally got around to trying out React, and this blog post will detail my initial impressions as well as a tutorial on how to make your React apps universal from the &#x2026;</p></div>
-</blockquote></div>
+<h1>Universal React with Babel, Browserify</h1>
+
+<blockquote><p>I finally got around to trying out React, and this blog post will detail my initial impressions as well as a tutorial on how to make your React apps universal from the &#x2026;</p></blockquote>
+
+<div><kbd>universal</kbd> <kbd>react</kbd> <kbd>babel</kbd> <kbd>es6</kbd> <kbd>browserify</kbd> <kbd>jsx</kbd></div>
 
 <div><p>I finally got around to trying out React, and this blog post will detail my initial impressions as well as a tutorial on how to make your React apps universal from the get-go. As usual, I have a long-standing need to refactor <a href="http://bevacqua.io/" target="_blank">bevacqua.io</a>, as well as a long-standing desire to finally try out ES6 through <a href="https://babeljs.io/" target="_blank">Babel</a>, React, and JSX. I&#x2019;ve passively read a lot on the subject but hadn&#x2019;t actually dipped my toes on any of it, so I figured I&#x2019;d put my fingertips where my eyeballs were at &#x2013; hoping not to poke myself. I came across a bit of free time and decided this was the perfect moment to put Babel and ES6 in practice.</p></div>
 

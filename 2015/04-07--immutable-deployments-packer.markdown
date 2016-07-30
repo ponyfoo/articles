@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Immutable Deployments and Packer</h1>
-  <div><p>A correct<em>er</em> title for this series would be something along the lines of <strong>&#x201C;Automating autoscaled zero-downtime immutable deployments using plain old bash, <a href="http://packer.io/" target="_blank">Packer</a>, &#x2026;</strong></p></div>
-</blockquote></div>
+<h1>Immutable Deployments and Packer</h1>
+
+<blockquote><p>A correct<em>er</em> title for this series would be something along the lines of <strong>&#x201C;Automating autoscaled zero-downtime immutable deployments using plain old bash, <a href="http://packer.io/" target="_blank">Packer</a>, &#x2026;</strong></p></blockquote>
+
+<div><kbd>packer</kbd> <kbd>aws</kbd> <kbd>ami</kbd> <kbd>immutable-deployments</kbd></div>
 
 <div><p>A correct<em>er</em> title for this series would be something along the lines of <strong>&#x201C;Automating autoscaled zero-downtime immutable deployments using plain old bash, <a href="http://packer.io/" target="_blank">Packer</a>, nginx, Node.js, and AWS&#x201D;</strong>, but that would&#x2019;ve been kind of long <em>(although it does fit on a tweet)</em>. My last article on the subject was two years ago, when I wrote about <a href="https://ponyfoo.com/articles/deploying-node-apps-to-aws-using-grunt">Deploying Node apps to AWS using Grunt</a>. Here&#x2019;s a <em>long overdue</em> update, containing everything I&#x2019;ve learned about deployments in the time since then.</p></div>
 

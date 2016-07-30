@@ -1,9 +1,10 @@
-<div><blockquote>
-  <h1>Just Married! <img class="tj-emoji" draggable="false" alt="&#x1F389;" src="https://twemoji.maxcdn.com/2/72x72/1f389.png"></h1>
-  <div><p>I got married last friday, and then we threw a party on saturday.</p>
+<h1>Just Married! <img class="tj-emoji" draggable="false" alt="&#x1F389;" src="https://twemoji.maxcdn.com/2/72x72/1f389.png"></h1>
+
+<blockquote><p>I got married last friday, and then we threw a party on saturday.</p>
 <p>I wanted to extend the celebration a little bit longer by sharing a few pictures on my blog.</p>
-</div>
-</blockquote></div>
+</blockquote>
+
+<div><kbd>ponyfoo</kbd></div>
 
 <div><p>I got married last friday, and then we threw a party on saturday. I wanted to extend the celebration a little bit longer by sharing a few pictures on my blog, so here we are.</p></div>
 

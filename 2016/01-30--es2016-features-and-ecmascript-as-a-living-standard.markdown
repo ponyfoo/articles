@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>ES2016 Features &amp; ECMAScript as a Living Standard</h1>
-  <div><p>As it turns out, ES2016 <em>&#x2013; also known colloquially as ES7 &#x2013;</em> will be comprised of a very small feature set. This article explains the new features in ES2016.</p><p>&#x2026;</p></div>
-</blockquote></div>
+<h1>ES2016 Features &amp; ECMAScript as a Living Standard</h1>
+
+<blockquote><p>As it turns out, ES2016 <em>&#x2013; also known colloquially as ES7 &#x2013;</em> will be comprised of a very small feature set. This article explains the new features in ES2016.</p><p>&#x2026;</p></blockquote>
+
+<div><kbd>es2016</kbd> <kbd>living-standard</kbd> <kbd>ecmascript</kbd></div>
 
 <div><p>As it turns out, ES2016 <em>&#x2013; also known colloquially as ES7 &#x2013;</em> will be comprised of a very small feature set. This article explains the new features in ES2016.</p></div>
 

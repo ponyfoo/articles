@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>An Elastic Stack Primer</h1>
-  <div><p>This article describes my adventures while getting initiated into the Elastic Stack. We&#x2019;ll be building upon the <code>elasticsearch</code> index I&#x2019;ve set up for search &#x2026;</p></div>
-</blockquote></div>
+<h1>An Elastic Stack Primer</h1>
+
+<blockquote><p>This article describes my adventures while getting initiated into the Elastic Stack. We&#x2019;ll be building upon the <code>elasticsearch</code> index I&#x2019;ve set up for search &#x2026;</p></blockquote>
+
+<div><kbd>elasticsearch</kbd> <kbd>logstash</kbd> <kbd>kibana</kbd></div>
 
 <div><p>This article describes my adventures while getting initiated into the Elastic Stack. We&#x2019;ll be building upon the <code class="md-code md-code-inline">elasticsearch</code> index I&#x2019;ve set up for search in an earlier post. We&#x2019;ll upgrade our stack to <code class="md-code md-code-inline">5.x</code>, incorporate <code class="md-code md-code-inline">logstash</code> and <code class="md-code md-code-inline">kibana</code>, so we can <strong>consume and visualize data</strong> <em>&#x2013; besides what our search interface allows</em>; and we&#x2019;ll also hone and troubleshoot our understanding of the Elastic Stack along the way.</p></div>
 

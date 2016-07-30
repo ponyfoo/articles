@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Publishing Node.JS Packages with npm</h1>
-  <div><p>Back when I <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">introduced assetify</a>, I mentioned publishing packages on <a href="https://npmjs.org/" target="_blank">npm</a> is <em>very</em> easy.</p></div>
-</blockquote></div>
+<h1>Publishing Node.JS Packages with npm</h1>
+
+<blockquote><p>Back when I <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">introduced assetify</a>, I mentioned publishing packages on <a href="https://npmjs.org/" target="_blank">npm</a> is <em>very</em> easy.</p></blockquote>
+
+<div><kbd>nodejs</kbd> <kbd>npm</kbd></div>
 
 <div><p>Back when I <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">introduced assetify</a>, I mentioned publishing packages on <a href="https://npmjs.org/" target="_blank">npm</a> is <em>very</em> easy.</p></div>
 

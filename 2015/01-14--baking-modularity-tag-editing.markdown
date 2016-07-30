@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Baking Modularity into Tag Editing</h1>
-  <div><p>For quite some time I&#x2019;ve been wanting some sort of input that dealt with user-submitted tags in a reasonable way. I wanted this input to still be half-decent when &#x2026;</p></div>
-</blockquote></div>
+<h1>Baking Modularity into Tag Editing</h1>
+
+<blockquote><p>For quite some time I&#x2019;ve been wanting some sort of input that dealt with user-submitted tags in a reasonable way. I wanted this input to still be half-decent when &#x2026;</p></blockquote>
+
+<div><kbd>modularity</kbd> <kbd>insignia</kbd> <kbd>rome</kbd></div>
 
 <div><p>For quite some time I&#x2019;ve been wanting some sort of input that dealt with user-submitted tags in a reasonable way. I wanted this input to still be half-decent when JavaScript was out of the picture, so this meant starting with the basic building blocks of HTML.</p></div>
 

@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Universal Routing in React with ES6</h1>
-  <div><p>Yesterday, we learned about how to set up a build process for an universal ES6 React app using Babel, and <a href="https://ponyfoo.com/articles/universal-react-babel">how to have that React app render &#x201C;universally&#x201D;</a> &#x2026;</p></div>
-</blockquote></div>
+<h1>Universal Routing in React with ES6</h1>
+
+<blockquote><p>Yesterday, we learned about how to set up a build process for an universal ES6 React app using Babel, and <a href="https://ponyfoo.com/articles/universal-react-babel">how to have that React app render &#x201C;universally&#x201D;</a> &#x2026;</p></blockquote>
+
+<div><kbd>babel</kbd> <kbd>react</kbd> <kbd>react-router</kbd> <kbd>es6</kbd> <kbd>universal</kbd></div>
 
 <div><p>Yesterday, we learned about how to set up a build process for an universal ES6 React app using Babel, and <a href="https://ponyfoo.com/articles/universal-react-babel">how to have that React app render &#x201C;universally&#x201D;</a> &#x2013; on both the server-side and the client-side. Today we&#x2019;ll add <em>routing capabilities</em> to the application so that it isn&#x2019;t <strong><em>literally</em> a &#x201C;single-page app&#x201D;</strong> anymore.</p></div>
 

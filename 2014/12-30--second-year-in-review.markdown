@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Second Year in Review</h1>
-  <div><p>I started this blog <a href="https://ponyfoo.com/articles/pony-foo-begins">two years ago</a>, at a time when nobody seemed to care about blogging anymore. It turned out to be one of the best decisions I took back then, and it &#x2026;</p></div>
-</blockquote></div>
+<h1>Second Year in Review</h1>
+
+<blockquote><p>I started this blog <a href="https://ponyfoo.com/articles/pony-foo-begins">two years ago</a>, at a time when nobody seemed to care about blogging anymore. It turned out to be one of the best decisions I took back then, and it &#x2026;</p></blockquote>
+
+<div><kbd>yearly-review</kbd> <kbd>recommended-reading</kbd></div>
 
 <div><p>I started this blog <a href="https://ponyfoo.com/articles/pony-foo-begins">two years ago</a>, at a time when nobody seemed to care about blogging anymore. It turned out to be one of the best decisions I took back then, and it has helped me develop an online presence that&#x2019;s now the cornerstone of my business. Roughly <em>a year ago</em> I posted <a href="https://ponyfoo.com/articles/a-year-in-review">&#x201C;A Year In Review&#x201D;</a> as I looked back on my first year of sustained blogging. Today I want to expand on that review, compare this year to the last one, and see how I did!</p></div>
 

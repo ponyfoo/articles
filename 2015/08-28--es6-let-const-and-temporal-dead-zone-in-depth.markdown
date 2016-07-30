@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>ES6 Let, Const and the &#x201C;Temporal Dead Zone&#x201D; (TDZ) in Depth</h1>
-  <div><p>This is yet another edition of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>. First time here? Welcome! So far we covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, the <a href="https://ponyfoo.com/articles/es6-spread-and-butter-in-depth">spread operator and rest &#x2026;</a></p></div>
-</blockquote></div>
+<h1>ES6 Let, Const and the &#x201C;Temporal Dead Zone&#x201D; (TDZ) in Depth</h1>
+
+<blockquote><p>This is yet another edition of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>. First time here? Welcome! So far we covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, the <a href="https://ponyfoo.com/articles/es6-spread-and-butter-in-depth">spread operator and rest &#x2026;</a></p></blockquote>
+
+<div><kbd>es6</kbd> <kbd>let</kbd> <kbd>const</kbd> <kbd>temporal-dead-zone</kbd> <kbd>es6-in-depth</kbd></div>
 
 <div><p>This is yet another edition of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>. First time here? Welcome! So far we covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, the <a href="https://ponyfoo.com/articles/es6-spread-and-butter-in-depth">spread operator and rest parameters</a>, <a href="https://ponyfoo.com/articles/es6-object-literal-features-in-depth">object literal features in ES6</a>, and last but not least: <a href="https://ponyfoo.com/articles/es6-classes-in-depth">what <em>&#x201C;classes&#x201D;</em> really mean in ES6</a>. Today is going to be about an assortment of simple language features coming our way in ES6 &#x2013; <code class="md-code md-code-inline">let</code>, <code class="md-code md-code-inline">const</code>, and the scary-sounding <em>&#x201C;Temporal Dead Zone&#x201D;</em>.</p></div>
 

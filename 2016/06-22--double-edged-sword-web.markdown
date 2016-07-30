@@ -1,8 +1,9 @@
-<div><blockquote>
-  <h1>The Double-Edged Sword of the Web</h1>
-  <div><p>A couple of weeks ago I had some time in my hands and decided to fix cross-browser rendering issues for Pony Foo. The ensuing bug hunt was a good reminder of just how obnoxious web development can get.</p>
-</div>
-</blockquote></div>
+<h1>The Double-Edged Sword of the Web</h1>
+
+<blockquote><p>A couple of weeks ago I had some time in my hands and decided to fix cross-browser rendering issues for Pony Foo. The ensuing bug hunt was a good reminder of just how obnoxious web development can get.</p>
+</blockquote>
+
+<div><kbd>opinion</kbd> <kbd>web</kbd> <kbd>state-of-the-web</kbd> <kbd>bugs</kbd></div>
 
 <div><p>A couple of weeks ago I had some time in my hands and decided to fix cross-browser rendering issues for Pony Foo. The ensuing bug hunt was a good reminder of how just obnoxious web development can get, in spite of that same obnoxiousness being the main driver of the web&#x2019;s success as <strong>the greatest platform that is</strong>, as <em>Xaro Xhoan Daxos</em> <a href="http://gameofthrones.wikia.com/wiki/Qarth_(Histories_%26_Lore)" target="_blank" aria-label="Qarth (Game of Thrones: Histories &amp; Lore)">would put it</a>.</p></div>
 

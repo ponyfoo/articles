@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Critical Path Performance Optimization at Pony Foo</h1>
-  <div><p>This article aims to cover the performance gains I&#x2019;ve attained in the redesign of Pony Foo, <em>deployed last week</em> to production. I&#x2019;ll be covering a few &#x2026;</p></div>
-</blockquote></div>
+<h1>Critical Path Performance Optimization at Pony Foo</h1>
+
+<blockquote><p>This article aims to cover the performance gains I&#x2019;ve attained in the redesign of Pony Foo, <em>deployed last week</em> to production. I&#x2019;ll be covering a few &#x2026;</p></blockquote>
+
+<div><kbd>ponyfoo</kbd> <kbd>critical-path</kbd> <kbd>performance</kbd> <kbd>nginx</kbd> <kbd>pagespeed</kbd></div>
 
 <div><p>This article aims to cover the performance gains I&#x2019;ve attained in the redesign of Pony Foo, <em>deployed last week</em> to production. I&#x2019;ll be covering a few different topics throughout the article. <strong>I&#x2019;ll explain what each optimization entails, the reasoning behind these choices, how to implement the solution, and the observed improvements</strong>. We&#x2019;ll cover the approaches listed below. Note that these are sorted in terms of <em>potential gains</em>.</p></div>
 

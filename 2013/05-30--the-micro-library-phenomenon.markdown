@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>The Micro Library Phenomenon</h1>
-  <div><p>As of late, there seems to be a <em>steady trend</em> towards minimalist <a href="https://developer.mozilla.org/en/docs/DOM" target="_blank">DOM</a> (and <strong>BOM</strong>) abstractions, these micro-libraries generally trade <em>functionality and flexibility</em> for <em>&#x2026;</em></p></div>
-</blockquote></div>
+<h1>The Micro Library Phenomenon</h1>
+
+<blockquote><p>As of late, there seems to be a <em>steady trend</em> towards minimalist <a href="https://developer.mozilla.org/en/docs/DOM" target="_blank">DOM</a> (and <strong>BOM</strong>) abstractions, these micro-libraries generally trade <em>functionality and flexibility</em> for <em>&#x2026;</em></p></blockquote>
+
+<div><kbd>js</kbd> <kbd>nodejs</kbd> <kbd>politics</kbd> <kbd>micro-library</kbd></div>
 
 <div><p>As of late, there seems to be a <em>steady trend</em> towards minimalist <a href="https://developer.mozilla.org/en/docs/DOM" target="_blank">DOM</a> (and <strong>BOM</strong>) abstractions, these micro-libraries generally trade <em>functionality and flexibility</em> for <em>performance boosts.</em></p></div>
 

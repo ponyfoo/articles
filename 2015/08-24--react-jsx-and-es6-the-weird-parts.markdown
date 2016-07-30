@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>React, JSX and ES6: The Weird Parts</h1>
-  <div><p>I&#x2019;ve spent a few days working with JSX and React and I have <strong>mixed feelings</strong> about them. React is pretty neat, but I find that they made some very unusual choices &#x2026;</p></div>
-</blockquote></div>
+<h1>React, JSX and ES6: The Weird Parts</h1>
+
+<blockquote><p>I&#x2019;ve spent a few days working with JSX and React and I have <strong>mixed feelings</strong> about them. React is pretty neat, but I find that they made some very unusual choices &#x2026;</p></blockquote>
+
+<div><kbd>react</kbd> <kbd>jsx</kbd> <kbd>es6</kbd> <kbd>rant</kbd></div>
 
 <div><p>I&#x2019;ve spent a few days working with JSX and React and I have <strong>mixed feelings</strong> about them. React is pretty neat, but I find that they made some very unusual choices when it comes to their API design. Then there&#x2019;s JSX, definitely the weirdest aspect of React &#x2013; we&#x2019;ll look into it as well. I&#x2019;ve really enjoyed the ES6 and Babel experience, although I&#x2019;ve noticed that there&#x2019;s a learning curve where you start to decide whether using an ES6 feature is better than its ES5 equivalent or not, something we&#x2019;ll explore towards the end of the article.</p></div>
 

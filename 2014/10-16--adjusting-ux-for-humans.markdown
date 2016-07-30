@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Adjusting UX for human visitors</h1>
-  <div><p>In this article I&#x2019;ll analyze the <strong>past and present of UX</strong> in Pony Foo. In doing so, we&#x2019;ll go over the features that were introduced to improve the lives of &#x2026;</p></div>
-</blockquote></div>
+<h1>Adjusting UX for human visitors</h1>
+
+<blockquote><p>In this article I&#x2019;ll analyze the <strong>past and present of UX</strong> in Pony Foo. In doing so, we&#x2019;ll go over the features that were introduced to improve the lives of &#x2026;</p></blockquote>
+
+<div><kbd>ponyfoo</kbd> <kbd>case-study</kbd> <kbd>ux</kbd> <kbd>css</kbd></div>
 
 <div><p>In this article I&#x2019;ll analyze the <strong>past and present of UX</strong> in Pony Foo. In doing so, we&#x2019;ll go over the features that were introduced to improve the lives of human beings visiting the site, as well as the features that changed <em>(or were removed entirely)</em> in order to simplify UX. Of course, the single most important UX improvement that came out of the redesign was the <strong>huge performance boost</strong>.</p></div>
 

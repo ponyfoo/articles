@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Event Emitter: Obey and Report</h1>
-  <div><p>The <em>event emitter pattern</em> was popularized by Node, and is made available in the browser by libraries such as <a href="https://github.com/hij1nx/EventEmitter2" target="_blank">EventEmitter2</a>. In practice, I haven&#x2019;t seen a lot of &#x2026;</p></div>
-</blockquote></div>
+<h1>Event Emitter: Obey and Report</h1>
+
+<blockquote><p>The <em>event emitter pattern</em> was popularized by Node, and is made available in the browser by libraries such as <a href="https://github.com/hij1nx/EventEmitter2" target="_blank">EventEmitter2</a>. In practice, I haven&#x2019;t seen a lot of &#x2026;</p></blockquote>
+
+<div><kbd>js</kbd> <kbd>pattern</kbd> <kbd>event-emitter</kbd></div>
 
 <div><p>The <em>event emitter pattern</em> was popularized by Node, and is made available in the browser by libraries such as <a href="https://github.com/hij1nx/EventEmitter2" target="_blank">EventEmitter2</a>. In practice, I haven&#x2019;t seen a lot of use of event emitters in client-side applications, but lately I&#x2019;ve been applying it more and more in my code. Here, I&#x2019;ll introduce a modular approach to client-side development I didn&#x2019;t invent, but which I decided to name, anyways.</p></div>
 

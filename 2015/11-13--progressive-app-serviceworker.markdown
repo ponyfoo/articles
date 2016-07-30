@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Making a Progressive App with ServiceWorker</h1>
-  <div><p>In previous articles, you&#x2019;ve learned about <a href="https://ponyfoo.com/articles/serviceworker-revolution" aria-label="ServiceWorker: Revolution of the Web Platform on Pony Foo">how to use <code>ServiceWorker</code></a>, the different strategies that you can leverage to <a href="https://ponyfoo.com/articles/progressive-networking-serviceworker" aria-label="ServiceWorker and Progressive Networking">serve content offline and faster</a>, and all &#x2026;</p></div>
-</blockquote></div>
+<h1>Making a Progressive App with ServiceWorker</h1>
+
+<blockquote><p>In previous articles, you&#x2019;ve learned about <a href="https://ponyfoo.com/articles/serviceworker-revolution" aria-label="ServiceWorker: Revolution of the Web Platform on Pony Foo">how to use <code>ServiceWorker</code></a>, the different strategies that you can leverage to <a href="https://ponyfoo.com/articles/progressive-networking-serviceworker" aria-label="ServiceWorker and Progressive Networking">serve content offline and faster</a>, and all &#x2026;</p></blockquote>
+
+<div><kbd>serviceworker</kbd> <kbd>progressive-enhancement</kbd> <kbd>progressive-apps</kbd></div>
 
 <div><p>In previous articles, you&#x2019;ve learned about <a href="https://ponyfoo.com/articles/serviceworker-revolution" aria-label="ServiceWorker: Revolution of the Web Platform on Pony Foo">how to use <code class="md-code md-code-inline">ServiceWorker</code></a>, the different strategies that you can leverage to <a href="https://ponyfoo.com/articles/progressive-networking-serviceworker" aria-label="ServiceWorker and Progressive Networking">serve content offline and faster</a>, and all the ways in which you can <a href="https://ponyfoo.com/articles/serviceworker-messagechannel-postmessage" aria-label="ServiceWorker, MessageChannel, &amp; postMessage">communicate between a <code class="md-code md-code-inline">ServiceWorker</code> and web pages</a>, let&#x2019;s see how we can leverage <code class="md-code md-code-inline">ServiceWorker</code> for the greater good.</p></div>
 

@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Single Page Design Madness</h1>
-  <div><p>A few days passed, a couple lessons learned. I promised myself not to spend too much time trying to make something perfect, but rather keep a <em>lean approach</em> and moving &#x2026;</p></div>
-</blockquote></div>
+<h1>Single Page Design Madness</h1>
+
+<blockquote><p>A few days passed, a couple lessons learned. I promised myself not to spend too much time trying to make something perfect, but rather keep a <em>lean approach</em> and moving &#x2026;</p></blockquote>
+
+<div><kbd>ponyfoo</kbd> <kbd>js</kbd> <kbd>css</kbd> <kbd>front-end</kbd></div>
 
 <div><p>A few days passed, a couple lessons learned. I promised myself not to spend too much time trying to make something perfect, but rather keep a <em>lean approach</em> and moving forward.</p></div>
 

@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Composable UI</h1>
-  <div><p>Most often, web UI libraries fall under one of two categories. They may be part of a <em>&#x201C;framework&#x201D;</em>, or a grouping of UI components that <strong>share an appearance, &#x2026;</strong></p></div>
-</blockquote></div>
+<h1>Composable UI</h1>
+
+<blockquote><p>Most often, web UI libraries fall under one of two categories. They may be part of a <em>&#x201C;framework&#x201D;</em>, or a grouping of UI components that <strong>share an appearance, &#x2026;</strong></p></blockquote>
+
+<div><kbd>javascript</kbd> <kbd>composition</kbd> <kbd>modules</kbd> <kbd>architecture</kbd></div>
 
 <div><p>Most often, web UI libraries fall under one of two categories. They may be part of a <em>&#x201C;framework&#x201D;</em>, or a grouping of UI components that <strong>share an appearance, a similar API, or are otherwise cohesive</strong>. Another category is usually the <em>standalone</em> library. Regardless of whether a standalone library depends on jQuery <em>(I&#x2019;m singling out this scenario because of its prevalence)</em>, they aren&#x2019;t directly related to other UI components, which means <strong>they set their own terms</strong> with regard to API, appearance, and other conventions. Components that are part of a framework are <em>usually hard to integrate</em> with anything that&#x2019;s not part of said framework, resulting in vendor lock-in. Components that aren&#x2019;t part of a framework tend to be easier to integrate with other things, but most often they&#x2019;re <em>not designed</em> to that effect. <mark class="md-mark"><strong>Composability</strong> is a much better alternative, and something we&#x2019;ll explore in depth in this article</mark>.</p></div>
 

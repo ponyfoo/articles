@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>ES6 Spread and Butter in Depth</h1>
-  <div><p>Welcome to yet another installment of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a> on Pony Foo. Previous ones covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, and most recently, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>. Today &#x2026;</p></div>
-</blockquote></div>
+<h1>ES6 Spread and Butter in Depth</h1>
+
+<blockquote><p>Welcome to yet another installment of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a> on Pony Foo. Previous ones covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, and most recently, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>. Today &#x2026;</p></blockquote>
+
+<div><kbd>es6</kbd> <kbd>spread</kbd> <kbd>rest</kbd> <kbd>es6-in-depth</kbd></div>
 
 <div><p>Welcome to yet another installment of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a> on Pony Foo. Previous ones covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, and most recently, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>. Today we&#x2019;ll cover a few more features coming in ES6. Those features are <em>rest parameters, the spread operator, and default parameters.</em></p></div>
 

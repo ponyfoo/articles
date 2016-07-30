@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Managing Code Quality in NodeJS</h1>
-  <div><p>I&#x2019;ve mentioned <a href="https://ponyfoo.com/2013/01/18/continuous-integration-and-automated-deployments">CI</a> and <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">static asset management</a> in the past. Now I want to talk about code quality.</p><p>This article is mostly a follow up on the <a href="https://ponyfoo.com/2013/01/18/continuous-integration-and-automated-deployments">CI</a> post. I&#x2019;ll &#x2026;</p></div>
-</blockquote></div>
+<h1>Managing Code Quality in NodeJS</h1>
+
+<blockquote><p>I&#x2019;ve mentioned <a href="https://ponyfoo.com/2013/01/18/continuous-integration-and-automated-deployments">CI</a> and <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">static asset management</a> in the past. Now I want to talk about code quality.</p><p>This article is mostly a follow up on the <a href="https://ponyfoo.com/2013/01/18/continuous-integration-and-automated-deployments">CI</a> post. I&#x2019;ll &#x2026;</p></blockquote>
+
+<div><kbd>build</kbd> <kbd>nodejs</kbd> <kbd>grunt</kbd> <kbd>assetify</kbd> <kbd>unit-testing</kbd></div>
 
 <div><p>I&#x2019;ve mentioned <a href="https://ponyfoo.com/2013/01/18/continuous-integration-and-automated-deployments">CI</a> and <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">static asset management</a> in the past. Now I want to talk about code quality.</p></div>
 

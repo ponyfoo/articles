@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Third Year in Review</h1>
-  <div><p>In what has now become <a href="https://ponyfoo.com/articles/tagged/yearly-review" aria-label="Articles tagged yearly-review on Pony Foo">somewhat of a tradition</a> for me, I&#x2019;m looking back on the past year and digging up stats about the blog and my career. <em>This was definitely an &#x2026;</em></p></div>
-</blockquote></div>
+<h1>Third Year in Review</h1>
+
+<blockquote><p>In what has now become <a href="https://ponyfoo.com/articles/tagged/yearly-review" aria-label="Articles tagged yearly-review on Pony Foo">somewhat of a tradition</a> for me, I&#x2019;m looking back on the past year and digging up stats about the blog and my career. <em>This was definitely an &#x2026;</em></p></blockquote>
+
+<div><kbd>yearly-review</kbd></div>
 
 <div><p>In what has now become <a href="https://ponyfoo.com/articles/tagged/yearly-review" aria-label="Articles tagged yearly-review on Pony Foo">somewhat of a tradition</a> for me, I&#x2019;m looking back on the past year and digging up stats about the blog and my career. <em>This was definitely an interesting year in Pony Foo&#x2019;s history!</em></p></div>
 

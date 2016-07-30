@@ -1,8 +1,9 @@
-<div><blockquote>
-  <h1>Proposal Draft for <code class="md-code md-code-inline">.flatten</code> and <code class="md-code md-code-inline">.flatMap</code></h1>
-  <div><p><code>Array</code> prototype may be getting <code>.flatten</code> and <code>.flatMap</code> methods may be coming to ECMAScript in a distant future. This article describes what the proposal holds in store.</p>
-</div>
-</blockquote></div>
+<h1>Proposal Draft for <code class="md-code md-code-inline">.flatten</code> and <code class="md-code md-code-inline">.flatMap</code></h1>
+
+<blockquote><p><code>Array</code> prototype may be getting <code>.flatten</code> and <code>.flatMap</code> methods may be coming to ECMAScript in a distant future. This article describes what the proposal holds in store.</p>
+</blockquote>
+
+<div><kbd>ecmascript</kbd> <kbd>flatten</kbd> <kbd>array</kbd> <kbd>proposal-draft</kbd></div>
 
 <div><p><code class="md-code md-code-inline">Array</code> prototype may be getting <code class="md-code md-code-inline">.flatten</code> and <code class="md-code md-code-inline">.flatMap</code> methods may be coming to ECMAScript in a distant future. This article describes what the proposal holds in store.</p></div>
 

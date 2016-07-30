@@ -1,8 +1,9 @@
-<div><blockquote>
-  <h1>Setting Up Elasticsearch for a Blog</h1>
-  <div><p>I&#x2019;ve been experimenting with <code>elasticsearch</code> <em>&#x2013; and working at the company behind it for a while &#x2013;</em> so it only made sense to incorporate it as Pony Foo&#x2019;s search provider.</p>
-</div>
-</blockquote></div>
+<h1>Setting Up Elasticsearch for a Blog</h1>
+
+<blockquote><p>I&#x2019;ve been experimenting with <code>elasticsearch</code> <em>&#x2013; and working at the company behind it for a while &#x2013;</em> so it only made sense to incorporate it as Pony Foo&#x2019;s search provider.</p>
+</blockquote>
+
+<div><kbd>ponyfoo</kbd> <kbd>elastic</kbd> <kbd>elasticsearch</kbd></div>
 
 <div><p>I&#x2019;ve been experimenting with <code class="md-code md-code-inline">elasticsearch</code> &#x2013; and working at the company behind it for a while &#x2013; so it only made sense to incorporate it as Pony Foo&#x2019;s search provider.</p></div>
 

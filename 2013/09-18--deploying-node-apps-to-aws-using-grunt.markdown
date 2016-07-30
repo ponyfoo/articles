@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Deploying Node apps to AWS using Grunt</h1>
-  <div><p>I&#x2019;ve been toying with <strong>AWS</strong> for a few days now, and I wanted to share my experience and my approach with you. My goal was to set up a deploy flow in Grunt to enable &#x2026;</p></div>
-</blockquote></div>
+<h1>Deploying Node apps to AWS using Grunt</h1>
+
+<blockquote><p>I&#x2019;ve been toying with <strong>AWS</strong> for a few days now, and I wanted to share my experience and my approach with you. My goal was to set up a deploy flow in Grunt to enable &#x2026;</p></blockquote>
+
+<div><kbd>aws</kbd> <kbd>ec2</kbd> <kbd>grunt</kbd> <kbd>nodejs</kbd> <kbd>grunt-ec2</kbd></div>
 
 <div><p>I&#x2019;ve been toying with <strong>AWS</strong> for a few days now, and I wanted to share my experience and my approach with you. My goal was to set up a deploy flow in Grunt to enable me to spin up new [EC2][3] instances in the AWS cloud and deploy to them easily.</p></div>
 

@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>JavaScript Quality Guide</h1>
-  <div><p>I&#x2019;ve recently created a <a href="https://github.com/bevacqua/js" target="_blank">JavaScript Quality Guide</a>, and I wanted to share it on Pony Foo as well. The latest version can be <a href="https://github.com/bevacqua/js" target="_blank">found on GitHub</a>. As <em>&#x2026;</em></p></div>
-</blockquote></div>
+<h1>JavaScript Quality Guide</h1>
+
+<blockquote><p>I&#x2019;ve recently created a <a href="https://github.com/bevacqua/js" target="_blank">JavaScript Quality Guide</a>, and I wanted to share it on Pony Foo as well. The latest version can be <a href="https://github.com/bevacqua/js" target="_blank">found on GitHub</a>. As <em>&#x2026;</em></p></blockquote>
+
+<div><kbd>javascript</kbd> <kbd>style-guide</kbd> <kbd>quality</kbd> <kbd>best-practices</kbd></div>
 
 <div><p>I&#x2019;ve recently created a <a href="https://github.com/bevacqua/js" target="_blank">JavaScript Quality Guide</a>, and I wanted to share it on Pony Foo as well. The latest version can be <a href="https://github.com/bevacqua/js" target="_blank">found on GitHub</a>. As <em>all-things-style-guides</em> go, it&#x2019;s super opinionated so take it with a pinch of salt.</p></div>
 

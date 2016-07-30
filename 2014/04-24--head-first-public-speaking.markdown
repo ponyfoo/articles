@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Head First Public Speaking</h1>
-  <div><p>I&#x2019;m thrilled to announce that next month <strong>I&#x2019;ll make my public speaking debut</strong>, at <a href="http://2014.jsconf.us/" target="_blank">JSConf US</a> no less! I have also been invited to <a href="https://qconnewyork.com/" target="_blank">QCon NY</a>, which is happening &#x2026;</p></div>
-</blockquote></div>
+<h1>Head First Public Speaking</h1>
+
+<blockquote><p>I&#x2019;m thrilled to announce that next month <strong>I&#x2019;ll make my public speaking debut</strong>, at <a href="http://2014.jsconf.us/" target="_blank">JSConf US</a> no less! I have also been invited to <a href="https://qconnewyork.com/" target="_blank">QCon NY</a>, which is happening &#x2026;</p></blockquote>
+
+<div><kbd>public-speaking</kbd> <kbd>jsconf</kbd> <kbd>qcon</kbd> <kbd>buildfirst</kbd></div>
 
 <div><p>I&#x2019;m thrilled to announce that next month <strong>I&#x2019;ll make my public speaking debut</strong>, at <a href="http://2014.jsconf.us/" target="_blank">JSConf US</a> no less! I have also been invited to <a href="https://qconnewyork.com/" target="_blank">QCon NY</a>, which is happening mid-June, and another conference which hasn&#x2019;t announced their speaker line-up yet. I&#x2019;m super-excited about all of this! I haven&#x2019;t given a talk before, and it&#x2019;ll be really interesting to give a few this year.</p></div>
 

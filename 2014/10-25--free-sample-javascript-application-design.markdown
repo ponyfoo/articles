@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>Free sample: JavaScript Application Design</h1>
-  <div><p>My first book, <a href="http://bevacqua.io/bf/book" target="_blank">JavaScript Application Design</a> is in the final stretch and due to come out very soon! The code samples are finalized and <a href="https://github.com/buildfirst/buildfirst" target="_blank">publicly available on GitHub</a>. &#x2026;</p></div>
-</blockquote></div>
+<h1>Free sample: JavaScript Application Design</h1>
+
+<blockquote><p>My first book, <a href="http://bevacqua.io/bf/book" target="_blank">JavaScript Application Design</a> is in the final stretch and due to come out very soon! The code samples are finalized and <a href="https://github.com/buildfirst/buildfirst" target="_blank">publicly available on GitHub</a>. &#x2026;</p></blockquote>
+
+<div><kbd>buildfirst</kbd> <kbd>book</kbd> <kbd>free-sample</kbd></div>
 
 <div><p>My first book, <a href="http://bevacqua.io/bf/book" target="_blank">JavaScript Application Design</a> is in the final stretch and due to come out very soon! The code samples are finalized and <a href="https://github.com/buildfirst/buildfirst" target="_blank">publicly available on GitHub</a>. Here&#x2019;s some free content in anticipation for the book launch.</p></div>
 

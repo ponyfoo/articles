@@ -1,7 +1,8 @@
-<div><blockquote>
-  <h1>ES6 Overview in 350 Bullet Points</h1>
-  <div><p>My <a href="https://ponyfoo.com/articles/tagged/es6-in-depth" aria-label="ES6 in Depth on Pony Foo">ES6 in Depth</a> series consists of 24 articles covering most syntax changes and features coming in ES6. This article aims to summarize all of those, providing you with &#x2026;</p></div>
-</blockquote></div>
+<h1>ES6 Overview in 350 Bullet Points</h1>
+
+<blockquote><p>My <a href="https://ponyfoo.com/articles/tagged/es6-in-depth" aria-label="ES6 in Depth on Pony Foo">ES6 in Depth</a> series consists of 24 articles covering most syntax changes and features coming in ES6. This article aims to summarize all of those, providing you with &#x2026;</p></blockquote>
+
+<div><kbd>es6</kbd> <kbd>javascript</kbd> <kbd>babel</kbd> <kbd>es6-in-depth</kbd></div>
 
 <div><p>My <a href="https://ponyfoo.com/articles/tagged/es6-in-depth" aria-label="ES6 in Depth on Pony Foo">ES6 in Depth</a> series consists of 24 articles covering most syntax changes and features coming in ES6. This article aims to summarize all of those, providing you with practical insight into most of ES6, so that you can quickly get started. I&#x2019;ve also linked to the articles in ES6 in Depth so that you can easily go deeper on any topic you&#x2019;re interested in.</p></div>
 
