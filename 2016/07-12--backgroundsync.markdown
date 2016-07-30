@@ -1,6 +1,6 @@
 <h1>ServiceWorker: A Basic Guide to BackgroundSync</h1>
 
-<p><kbd>performance</kbd> <kbd>backgroundsync</kbd> <kbd>serviceworker</kbd> <kbd>offline</kbd></p>
+<p><kbd>serviceworker</kbd> <kbd>offline</kbd> <kbd>backgroundsync</kbd></p>
 
 <blockquote><p>A simple guide to getting up and running using Background Sync and Service Workers. Background Sync is a new web API that lets you defer actions until the user has stable connectivity. This makes it great for ensuring that whatever the user wants to send, is actually sent.</p>
 </blockquote>
