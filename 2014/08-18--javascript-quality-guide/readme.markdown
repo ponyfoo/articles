@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>JavaScript Quality Guide</h1>
 
 <p><kbd>javascript</kbd> <kbd>style-guide</kbd> <kbd>quality</kbd> <kbd>best-practices</kbd></p>

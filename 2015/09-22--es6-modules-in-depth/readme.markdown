@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ES6 Modules in Depth</h1>
 
 <p><kbd>es6</kbd> <kbd>modules</kbd> <kbd>commonjs</kbd> <kbd>es6-in-depth</kbd></p>

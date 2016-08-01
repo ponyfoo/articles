@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ES6 Arrow Functions in Depth</h1>
 
 <p><kbd>es6</kbd> <kbd>arrow-functions</kbd> <kbd>es6-in-depth</kbd></p>

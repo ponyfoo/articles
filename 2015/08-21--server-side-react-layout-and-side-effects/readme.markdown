@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Server-side React Layout &amp; Side Effects</h1>
 
 <p><kbd>universal</kbd> <kbd>react</kbd> <kbd>es6</kbd> <kbd>react-side-effect</kbd></p>

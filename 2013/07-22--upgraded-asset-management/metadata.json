@@ -8,5 +8,6 @@
     "assetify",
     "grunt",
     "build"
-  ]
+  ],
+  "heroImage": null
 }

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ES6 Let, Const and the &#x201C;Temporal Dead Zone&#x201D; (TDZ) in Depth</h1>
 
 <p><kbd>es6</kbd> <kbd>let</kbd> <kbd>const</kbd> <kbd>temporal-dead-zone</kbd> <kbd>es6-in-depth</kbd></p>

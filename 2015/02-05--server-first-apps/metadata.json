@@ -10,5 +10,6 @@
     "react",
     "angular",
     "progressive-enhancement"
-  ]
+  ],
+  "heroImage": null
 }

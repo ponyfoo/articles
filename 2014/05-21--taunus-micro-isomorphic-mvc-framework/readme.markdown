@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Taunus: Micro Isomorphic MVC Framework</h1>
 
 <p><kbd>isomorphic</kbd> <kbd>taunus</kbd> <kbd>browserify</kbd> <kbd>npm-run</kbd></p>

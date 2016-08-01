@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ES6 JavaScript Destructuring in Depth</h1>
 
 <p><kbd>es6</kbd> <kbd>destructuring</kbd> <kbd>es6-in-depth</kbd></p>

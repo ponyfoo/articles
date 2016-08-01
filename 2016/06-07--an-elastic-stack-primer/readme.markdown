@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>An Elastic Stack Primer</h1>
 
 <p><kbd>elasticsearch</kbd> <kbd>logstash</kbd> <kbd>kibana</kbd></p>

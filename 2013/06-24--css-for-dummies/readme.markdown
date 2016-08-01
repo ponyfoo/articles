@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>CSS For Dummies</h1>
 
 <p><kbd>css</kbd> <kbd>front-end</kbd> <kbd>learning</kbd></p>

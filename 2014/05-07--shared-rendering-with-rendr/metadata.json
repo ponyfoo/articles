@@ -8,5 +8,6 @@
     "backbone",
     "rendr",
     "mustache"
-  ]
+  ],
+  "heroImage": null
 }

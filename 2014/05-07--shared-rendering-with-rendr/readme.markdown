@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Shared Rendering with Rendr</h1>
 
 <p><kbd>isomorphic</kbd> <kbd>backbone</kbd> <kbd>rendr</kbd> <kbd>mustache</kbd></p>

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Organizing your CSS with Bootstrap</h1>
 
 <p><kbd>css</kbd> <kbd>front-end</kbd> <kbd>bootstrap</kbd></p>

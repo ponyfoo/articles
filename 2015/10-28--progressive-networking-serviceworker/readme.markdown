@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ServiceWorker and Progressive Networking</h1>
 
 <p><kbd>serviceworker</kbd> <kbd>progressive-networking</kbd></p>

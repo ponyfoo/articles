@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>The Great Web Module Compendium</h1>
 
 <p><kbd>front-end</kbd> <kbd>modularity</kbd> <kbd>javascript</kbd> <kbd>components</kbd></p>

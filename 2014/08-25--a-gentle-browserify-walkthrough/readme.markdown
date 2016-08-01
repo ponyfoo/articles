@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>A Gentle Browserify Walkthrough</h1>
 
 <p><kbd>browserify</kbd> <kbd>modules</kbd> <kbd>front-end</kbd> <kbd>tutorial</kbd></p>

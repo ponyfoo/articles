@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Building High-Quality Front-End Modules</h1>
 
 <p><kbd>front-end</kbd> <kbd>open-source</kbd> <kbd>javascript</kbd> <kbd>jquery</kbd> <kbd>gulp</kbd> <kbd>modularity</kbd></p>

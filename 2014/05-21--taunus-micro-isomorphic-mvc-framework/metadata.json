@@ -8,5 +8,6 @@
     "taunus",
     "browserify",
     "npm-run"
-  ]
+  ],
+  "heroImage": null
 }

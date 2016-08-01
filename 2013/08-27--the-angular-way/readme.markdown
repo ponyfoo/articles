@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>The Angular Way</h1>
 
 <p><kbd>angularjs</kbd> <kbd>front-end</kbd> <kbd>best-practices</kbd> <kbd>app-press</kbd></p>

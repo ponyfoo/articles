@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>The Conventional Front-End</h1>
 
 <p><kbd>conventional</kbd> <kbd>front-end</kbd> <kbd>javascript</kbd> <kbd>measly</kbd> <kbd>xhr</kbd></p>

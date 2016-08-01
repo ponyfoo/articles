@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Angle Brackets, Rifle Scopes</h1>
 
 <p><kbd>angle-brackets</kbd> <kbd>angularjs</kbd> <kbd>scope</kbd> <kbd>internals</kbd> <kbd>front-end</kbd> <kbd>mvc</kbd></p>

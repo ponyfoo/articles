@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Single Page Design Madness</h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>js</kbd> <kbd>css</kbd> <kbd>front-end</kbd></p>

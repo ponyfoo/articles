@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Event Emitter: Obey and Report</h1>
 
 <p><kbd>js</kbd> <kbd>pattern</kbd> <kbd>event-emitter</kbd></p>

@@ -10,5 +10,6 @@
     "browserify",
     "npm-run",
     "gulp"
-  ]
+  ],
+  "heroImage": null
 }

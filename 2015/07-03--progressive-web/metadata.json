@@ -8,5 +8,6 @@
     "taunus",
     "server-first",
     "browserify"
-  ]
+  ],
+  "heroImage": null
 }

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ServiceWorker: A Basic Guide to BackgroundSync</h1>
 
 <p><kbd>serviceworker</kbd> <kbd>offline</kbd> <kbd>backgroundsync</kbd></p>

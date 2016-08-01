@@ -8,5 +8,6 @@
     "nodejs",
     "event-emitter",
     "pattern"
-  ]
+  ],
+  "heroImage": null
 }

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Fast-forwarding the Web Platform</h1>
 
 <p><kbd>web</kbd> <kbd>standards</kbd> <kbd>native</kbd> <kbd>performance</kbd></p>

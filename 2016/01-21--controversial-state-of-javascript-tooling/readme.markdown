@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>The Controversial State of JavaScript Tooling</h1>
 
 <p><kbd>state-of-the-web</kbd> <kbd>hypermodularity</kbd></p>

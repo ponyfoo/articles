@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Publishing Node.JS Packages with npm</h1>
 
 <p><kbd>nodejs</kbd> <kbd>npm</kbd></p>

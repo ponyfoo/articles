@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Angle Brackets, Synergistic Directives</h1>
 
 <p><kbd>angle-brackets</kbd> <kbd>angularjs</kbd> <kbd>directives</kbd> <kbd>front-end</kbd> <kbd>mvc</kbd></p>

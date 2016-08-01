@@ -8,5 +8,6 @@
     "aws",
     "ami",
     "immutable-deployments"
-  ]
+  ],
+  "heroImage": null
 }

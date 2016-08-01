@@ -8,5 +8,6 @@
     "promise",
     "async-await",
     "food-for-thought"
-  ]
+  ],
+  "heroImage": null
 }

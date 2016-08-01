@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Understanding JavaScript&#x2019;s async await</h1>
 
 <p><kbd>async-await</kbd> <kbd>generators</kbd> <kbd>promises</kbd> <kbd>es2017</kbd></p>

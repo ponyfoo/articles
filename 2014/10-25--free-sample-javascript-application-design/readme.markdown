@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Free sample: JavaScript Application Design</h1>
 
 <p><kbd>buildfirst</kbd> <kbd>book</kbd> <kbd>free-sample</kbd></p>

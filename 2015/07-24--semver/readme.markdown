@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Pragmatic Semantic Versioning</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>semver</kbd> <kbd>npm</kbd> <kbd>pragmatism</kbd></p>

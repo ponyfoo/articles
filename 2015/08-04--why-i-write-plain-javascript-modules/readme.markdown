@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Why I Write Plain JavaScript Modules</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>modularity</kbd> <kbd>dragula</kbd> <kbd>design</kbd></p>

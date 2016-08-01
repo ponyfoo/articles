@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Using the JavaScript Charting Library</h1>
 
 <p><kbd>jscharting</kbd> <kbd>visualizations</kbd> <kbd>product-review</kbd></p>

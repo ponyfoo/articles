@@ -9,5 +9,6 @@
     "progressive-enhancement",
     "graceful-degradation",
     "polyfill"
-  ]
+  ],
+  "heroImage": null
 }

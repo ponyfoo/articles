@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Package Authoring with Paqui</h1>
 
 <p><kbd>paqui</kbd> <kbd>js</kbd> <kbd>front-end</kbd> <kbd>npm</kbd> <kbd>bower</kbd></p>

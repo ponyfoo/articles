@@ -10,5 +10,6 @@
     "gulp",
     "npm",
     "nodemon"
-  ]
+  ],
+  "heroImage": null
 }

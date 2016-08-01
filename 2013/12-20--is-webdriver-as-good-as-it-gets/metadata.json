@@ -9,5 +9,6 @@
     "webdriver",
     "grunt",
     "rant"
-  ]
+  ],
+  "heroImage": null
 }

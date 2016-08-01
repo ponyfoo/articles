@@ -7,5 +7,6 @@
     "elasticsearch",
     "logstash",
     "kibana"
-  ]
+  ],
+  "heroImage": null
 }

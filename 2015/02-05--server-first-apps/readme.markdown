@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Server-First Apps are a Good Idea</h1>
 
 <p><kbd>server-first</kbd> <kbd>taunus</kbd> <kbd>ember</kbd> <kbd>react</kbd> <kbd>angular</kbd> <kbd>progressive-enhancement</kbd></p>

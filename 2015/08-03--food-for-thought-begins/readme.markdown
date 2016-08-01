@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Blogging and OSS &#x2014; Food for Thought</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>productivity</kbd> <kbd>community</kbd> <kbd>ask-me-anything</kbd></p>

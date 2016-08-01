@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>The Progressive Web</h1>
 
 <p><kbd>progressive-enhancement</kbd> <kbd>taunus</kbd> <kbd>server-first</kbd> <kbd>browserify</kbd></p>

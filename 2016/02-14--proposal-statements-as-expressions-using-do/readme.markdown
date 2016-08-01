@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Proposal: &#x201C;Statements as Expressions&#x201D; using <code class="md-code md-code-inline">do</code></h1>
 
 <p><kbd>ecmascript</kbd> <kbd>do-expressions</kbd> <kbd>proposal-draft</kbd></p>

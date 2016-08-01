@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>JavaScript Proposal for weak references: <code class="md-code md-code-inline">WeakRef</code></h1>
 
 <p><kbd>ecmascript</kbd> <kbd>weakref</kbd> <kbd>proposal-draft</kbd></p>

@@ -10,5 +10,6 @@
     "jquery",
     "gulp",
     "modularity"
-  ]
+  ],
+  "heroImage": null
 }

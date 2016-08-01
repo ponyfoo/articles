@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ES2016 Features &amp; ECMAScript as a Living Standard</h1>
 
 <p><kbd>es2016</kbd> <kbd>living-standard</kbd> <kbd>ecmascript</kbd></p>

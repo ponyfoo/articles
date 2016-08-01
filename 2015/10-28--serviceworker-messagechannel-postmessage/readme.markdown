@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ServiceWorker, MessageChannel, &amp; postMessage</h1>
 
 <p><kbd>serviceworker</kbd> <kbd>swivel</kbd> <kbd>messagechannel</kbd> <kbd>postmessage</kbd></p>

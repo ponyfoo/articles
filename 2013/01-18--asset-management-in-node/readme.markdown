@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Asset Management in Node</h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>nodejs</kbd> <kbd>npm</kbd> <kbd>assetify</kbd></p>

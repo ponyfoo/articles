@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Where does this keyword come from?</h1>
 
 <p><kbd>js</kbd> <kbd>scoping</kbd> <kbd>best-practices</kbd> <kbd>this</kbd></p>

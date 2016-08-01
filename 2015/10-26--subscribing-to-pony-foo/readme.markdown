@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Subscribing to Pony Foo</h1>
 
 <p><kbd>ponyfoo</kbd></p>

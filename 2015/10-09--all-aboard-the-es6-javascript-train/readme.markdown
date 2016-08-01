@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>All Aboard the ES6 JavaScript Train</h1>
 
 <p><kbd>es6</kbd> <kbd>tutorial</kbd></p>

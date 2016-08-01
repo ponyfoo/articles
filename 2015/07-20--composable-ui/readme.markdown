@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Composable UI</h1>
 
 <p><kbd>javascript</kbd> <kbd>composition</kbd> <kbd>modules</kbd> <kbd>architecture</kbd></p>

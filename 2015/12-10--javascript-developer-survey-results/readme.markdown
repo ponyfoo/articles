@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>JavaScript Developer Survey Results</h1>
 
 <p><kbd>survey</kbd> <kbd>survey-results</kbd></p>

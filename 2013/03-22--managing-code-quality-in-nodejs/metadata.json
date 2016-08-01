@@ -9,5 +9,6 @@
     "grunt",
     "assetify",
     "unit-testing"
-  ]
+  ],
+  "heroImage": null
 }

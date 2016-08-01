@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>React, JSX and ES6: The Weird Parts</h1>
 
 <p><kbd>react</kbd> <kbd>jsx</kbd> <kbd>es6</kbd> <kbd>rant</kbd></p>

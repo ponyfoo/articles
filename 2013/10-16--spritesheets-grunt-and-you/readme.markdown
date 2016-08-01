@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Spritesheets, Grunt, and You</h1>
 
 <p><kbd>grunt</kbd> <kbd>build</kbd> <kbd>sprites</kbd></p>

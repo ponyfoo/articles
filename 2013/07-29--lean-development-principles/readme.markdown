@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Lean Development Principles</h1>
 
 <p><kbd>lean-startup</kbd> <kbd>book-review</kbd> <kbd>recommended-reading</kbd></p>

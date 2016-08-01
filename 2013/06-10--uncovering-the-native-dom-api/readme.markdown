@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Uncovering the Native DOM API</h1>
 
 <p><kbd>js</kbd> <kbd>js-native</kbd> <kbd>dom</kbd> <kbd>best-practices</kbd></p>

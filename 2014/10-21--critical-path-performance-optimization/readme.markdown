@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Critical Path Performance Optimization at Pony Foo</h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>critical-path</kbd> <kbd>performance</kbd> <kbd>nginx</kbd> <kbd>pagespeed</kbd></p>

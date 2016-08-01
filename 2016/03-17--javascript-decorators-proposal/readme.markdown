@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ECMAScript Proposal for JavaScript Decorators <br><em>(and protocols)</em></h1>
 
 <p><kbd>ecmascript</kbd> <kbd>decorators</kbd> <kbd>proposal-draft</kbd></p>

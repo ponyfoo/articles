@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>JavaScript Developer Survey</h1>
 
 <p><kbd>survey</kbd></p>

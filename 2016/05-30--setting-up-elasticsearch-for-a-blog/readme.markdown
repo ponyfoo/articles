@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Setting Up Elasticsearch for a Blog</h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>elastic</kbd> <kbd>elasticsearch</kbd></p>

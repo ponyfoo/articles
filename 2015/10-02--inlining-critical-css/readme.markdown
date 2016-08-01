@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Inlining Critical CSS for Dynamic Web Apps</h1>
 
 <p><kbd>performance</kbd> <kbd>penthouse</kbd> <kbd>critical-css</kbd> <kbd>bash</kbd></p>

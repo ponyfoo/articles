@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Pony Foo Gets a Face Lift</h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>redesign</kbd> <kbd>rainbows</kbd> <kbd>performance</kbd></p>

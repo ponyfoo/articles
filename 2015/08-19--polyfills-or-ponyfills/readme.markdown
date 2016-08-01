@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Polyfills or Ponyfills?</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>polyfill</kbd> <kbd>ponyfill</kbd></p>

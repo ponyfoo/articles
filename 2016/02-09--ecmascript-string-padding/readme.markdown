@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ECMAScript String Padding</h1>
 
 <p><kbd>ecmascript</kbd> <kbd>string</kbd> <kbd>proposal-draft</kbd></p>

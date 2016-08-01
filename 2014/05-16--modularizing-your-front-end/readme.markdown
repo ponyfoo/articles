@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Modularizing Your Front-End</h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>front-end</kbd> <kbd>modules</kbd> <kbd>browserify</kbd> <kbd>npm-run</kbd> <kbd>gulp</kbd></p>

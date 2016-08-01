@@ -9,5 +9,6 @@
     "front-end",
     "npm",
     "bower"
-  ]
+  ],
+  "heroImage": null
 }

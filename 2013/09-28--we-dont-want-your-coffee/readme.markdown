@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>We don&#x2019;t want your Coffee</h1>
 
 <p><kbd>controversial</kbd> <kbd>politics</kbd> <kbd>coffeescript</kbd> <kbd>asmjs</kbd></p>

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Are Regular Expressions Stateful?</h1>
 
 <p><kbd>regex</kbd> <kbd>bug</kbd> <kbd>chrome</kbd></p>

@@ -10,5 +10,6 @@
     "es6",
     "browserify",
     "jsx"
-  ]
+  ],
+  "heroImage": null
 }

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>NodeConf hits the ground running in Latin America</h1>
 
 <p><kbd>nodeconf</kbd> <kbd>conference</kbd> <kbd>announcement</kbd></p>

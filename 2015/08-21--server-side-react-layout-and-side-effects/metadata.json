@@ -8,5 +8,6 @@
     "react",
     "es6",
     "react-side-effect"
-  ]
+  ],
+  "heroImage": null
 }

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Universal Routing in React with ES6</h1>
 
 <p><kbd>babel</kbd> <kbd>react</kbd> <kbd>react-router</kbd> <kbd>es6</kbd> <kbd>universal</kbd></p>

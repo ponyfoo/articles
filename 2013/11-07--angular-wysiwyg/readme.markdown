@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Angular WYSIWYG</h1>
 
 <p><kbd>angularjs</kbd> <kbd>wysiwyg</kbd> <kbd>ponyedit</kbd></p>

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Fixing Performance in the Web Stack</h1>
 
 <p><kbd>performance</kbd> <kbd>talks</kbd> <kbd>automation</kbd> <kbd>tips</kbd> <kbd>budgets</kbd></p>

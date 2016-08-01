@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Making a Simple Site Work Offline with ServiceWorker</h1>
 
 <p><kbd>serviceworker</kbd> <kbd>tutorial</kbd></p>

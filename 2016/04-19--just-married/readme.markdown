@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Just Married! &#x1F389;</h1>
 
 <p><kbd>ponyfoo</kbd></p>

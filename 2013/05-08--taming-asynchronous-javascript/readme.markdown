@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Taming Asynchronous JavaScript</h1>
 
 <p><kbd>async</kbd> <kbd>callback-hell</kbd> <kbd>js</kbd> <kbd>best-practices</kbd> <kbd>quotes</kbd></p>

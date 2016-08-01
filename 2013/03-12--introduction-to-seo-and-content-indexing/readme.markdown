@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Introduction to SEO and Content Indexing</h1>
 
 <p><kbd>seo</kbd> <kbd>ajax</kbd></p>

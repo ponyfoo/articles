@@ -7,5 +7,6 @@
     "grunt",
     "build",
     "sprites"
-  ]
+  ],
+  "heroImage": null
 }

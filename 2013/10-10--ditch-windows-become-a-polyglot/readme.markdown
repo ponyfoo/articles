@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Ditch Windows, Become a Polyglot</h1>
 
 <p><kbd>windows</kbd> <kbd>ubuntu</kbd> <kbd>os</kbd> <kbd>terminal</kbd> <kbd>polyglot</kbd> <kbd>bio</kbd></p>

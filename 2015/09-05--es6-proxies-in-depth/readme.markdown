@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ES6 Proxies in Depth</h1>
 
 <p><kbd>es6</kbd> <kbd>proxies</kbd> <kbd>es6-in-depth</kbd></p>

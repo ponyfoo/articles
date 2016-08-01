@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Testing JavaScript Modules with Tape</h1>
 
 <p><kbd>tape</kbd> <kbd>proxyquire</kbd> <kbd>sinon</kbd></p>

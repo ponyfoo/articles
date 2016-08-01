@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ServiceWorker: Revolution of the Web Platform</h1>
 
 <p><kbd>serviceworker</kbd> <kbd>offline-first</kbd></p>

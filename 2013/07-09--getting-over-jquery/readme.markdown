@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Getting Over jQuery</h1>
 
 <p><kbd>js</kbd> <kbd>js-native</kbd> <kbd>jquery</kbd> <kbd>front-end</kbd> <kbd>best-practices</kbd> <kbd>dom</kbd></p>

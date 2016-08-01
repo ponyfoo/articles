@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>A Less Convoluted Event Emitter Implementation</h1>
 
 <p><kbd>js</kbd> <kbd>nodejs</kbd> <kbd>event-emitter</kbd> <kbd>pattern</kbd></p>

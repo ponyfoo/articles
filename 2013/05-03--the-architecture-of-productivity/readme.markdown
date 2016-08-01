@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>The Architecture of Productivity</h1>
 
 <p><kbd>software-development</kbd> <kbd>productivity</kbd> <kbd>architecture</kbd> <kbd>quotes</kbd></p>

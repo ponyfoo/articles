@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Managing Code Quality in NodeJS</h1>
 
 <p><kbd>build</kbd> <kbd>nodejs</kbd> <kbd>grunt</kbd> <kbd>assetify</kbd> <kbd>unit-testing</kbd></p>

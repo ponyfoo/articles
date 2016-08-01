@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Cross-tab Communication</h1>
 
 <p><kbd>sharedworker</kbd> <kbd>localstorage</kbd></p>

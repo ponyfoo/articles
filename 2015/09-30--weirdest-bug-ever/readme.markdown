@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>SVG and the DOM, or &#x201C;The Weirdest Bug I&#x2019;ve Ever Encountered&#x201D;</h1>
 
 <p><kbd>svg</kbd> <kbd>bug</kbd></p>

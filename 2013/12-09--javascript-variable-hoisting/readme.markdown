@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>JavaScript Variable Hoisting</h1>
 
 <p><kbd>js</kbd> <kbd>hoisting</kbd></p>

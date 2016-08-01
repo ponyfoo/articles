@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Implementing OpenSearch</h1>
 
 <p><kbd>seo</kbd> <kbd>opensearch</kbd></p>

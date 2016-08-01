@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Fun with Native Arrays</h1>
 
 <p><kbd>js</kbd> <kbd>js-native</kbd> <kbd>array</kbd></p>

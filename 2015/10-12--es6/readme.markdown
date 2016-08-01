@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ES6 Overview in 350 Bullet Points</h1>
 
 <p><kbd>es6</kbd> <kbd>javascript</kbd> <kbd>babel</kbd> <kbd>es6-in-depth</kbd></p>

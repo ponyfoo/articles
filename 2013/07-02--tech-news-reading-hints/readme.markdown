@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Tech News Reading Hints</h1>
 
 <p><kbd>recommended-reading</kbd> <kbd>rss</kbd> <kbd>link-dump</kbd></p>

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Grunt Tips and Tricks</h1>
 
 <p><kbd>grunt</kbd> <kbd>tips</kbd></p>

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>More ES6 Proxy Traps in Depth</h1>
 
 <p><kbd>es6</kbd> <kbd>proxies</kbd> <kbd>traps</kbd> <kbd>es6-in-depth</kbd></p>

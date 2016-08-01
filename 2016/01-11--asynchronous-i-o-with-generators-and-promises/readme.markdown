@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Asynchronous I/O with Generators &amp; Promises</h1>
 
 <p><kbd>generators</kbd> <kbd>promises</kbd> <kbd>javascript</kbd> <kbd>patterns</kbd></p>

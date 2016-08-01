@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Things you can do with native DOM</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>javascript</kbd> <kbd>native</kbd> <kbd>dom</kbd></p>

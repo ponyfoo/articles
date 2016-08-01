@@ -9,5 +9,6 @@
     "jquery",
     "no-js",
     "tutorial"
-  ]
+  ],
+  "heroImage": null
 }

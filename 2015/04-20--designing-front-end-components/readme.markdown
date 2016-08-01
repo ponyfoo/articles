@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Designing Front-End Components</h1>
 
 <p><kbd>front-end</kbd> <kbd>modularity</kbd> <kbd>rome</kbd> <kbd>insignia</kbd> <kbd>dragula</kbd> <kbd>horsey</kbd></p>

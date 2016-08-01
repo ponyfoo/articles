@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>How to Design Great Programs</h1>
 
 <p><kbd>best-practices</kbd> <kbd>api</kbd> <kbd>open-source</kbd> <kbd>program-design</kbd></p>

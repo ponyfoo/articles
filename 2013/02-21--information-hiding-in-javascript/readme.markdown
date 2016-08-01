@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Information Hiding in JavaScript</h1>
 
 <p><kbd>js</kbd> <kbd>js-native</kbd> <kbd>best-practices</kbd></p>

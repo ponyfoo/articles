@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Teach Yourself Node.JS in 10 Steps</h1>
 
 <p><kbd>nodejs</kbd> <kbd>learning</kbd></p>

@@ -8,5 +8,6 @@
     "grunt",
     "npm",
     "npm-run"
-  ]
+  ],
+  "heroImage": null
 }

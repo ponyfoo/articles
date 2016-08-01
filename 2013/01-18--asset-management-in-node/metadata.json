@@ -8,5 +8,6 @@
     "nodejs",
     "npm",
     "assetify"
-  ]
+  ],
+  "heroImage": null
 }

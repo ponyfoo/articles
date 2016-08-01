@@ -9,5 +9,6 @@
     "grunt",
     "nodejs",
     "grunt-ec2"
-  ]
+  ],
+  "heroImage": null
 }

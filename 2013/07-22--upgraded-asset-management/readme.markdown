@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Upgraded Asset Management</h1>
 
 <p><kbd>nodejs</kbd> <kbd>assetify</kbd> <kbd>grunt</kbd> <kbd>build</kbd></p>

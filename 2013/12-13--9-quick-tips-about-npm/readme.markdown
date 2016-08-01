@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>9 Quick Tips About npm</h1>
 
 <p><kbd>npm</kbd> <kbd>tips</kbd> <kbd>browserify</kbd></p>

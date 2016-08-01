@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>JavaScript Is Awesome</h1>
 
 <p><kbd>js</kbd> <kbd>coffeescript</kbd></p>

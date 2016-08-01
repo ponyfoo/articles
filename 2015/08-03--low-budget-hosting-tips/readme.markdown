@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Low-Budget Hosting Tips</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>low-budget</kbd> <kbd>aws</kbd> <kbd>hosting</kbd> <kbd>tips</kbd></p>

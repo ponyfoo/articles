@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Get Between the Covers of Build First</h1>
 
 <p><kbd>buildfirst</kbd> <kbd>book</kbd> <kbd>recommended-reading</kbd> <kbd>build</kbd> <kbd>front-end</kbd></p>

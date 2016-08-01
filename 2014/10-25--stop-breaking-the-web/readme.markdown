@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Stop Breaking the Web</h1>
 
 <p><kbd>performance</kbd> <kbd>rant</kbd> <kbd>progressive-enhancement</kbd> <kbd>graceful-degradation</kbd> <kbd>polyfill</kbd></p>

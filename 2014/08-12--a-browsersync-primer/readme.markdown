@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>A BrowserSync Primer</h1>
 
 <p><kbd>build</kbd> <kbd>browsersync</kbd> <kbd>grunt</kbd> <kbd>gulp</kbd> <kbd>npm</kbd> <kbd>nodemon</kbd></p>

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Immutable Deployments and Packer</h1>
 
 <p><kbd>packer</kbd> <kbd>aws</kbd> <kbd>ami</kbd> <kbd>immutable-deployments</kbd></p>

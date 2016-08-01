@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>A Promise-Based Worldview</h1>
 
 <p><kbd>es6</kbd> <kbd>promise</kbd> <kbd>async-await</kbd> <kbd>food-for-thought</kbd></p>

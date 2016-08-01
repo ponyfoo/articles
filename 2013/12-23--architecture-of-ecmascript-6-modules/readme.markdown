@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Architecture of ECMAScript 6 Modules</h1>
 
 <p><kbd>es6</kbd> <kbd>modules</kbd> <kbd>harmony</kbd></p>

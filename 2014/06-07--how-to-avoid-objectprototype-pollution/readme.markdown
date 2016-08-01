@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>How To Avoid Object.prototype Pollution</h1>
 
 <p><kbd>open-source</kbd> <kbd>poser</kbd> <kbd>iframe</kbd> <kbd>browserify</kbd></p>

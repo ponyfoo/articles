@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Pony Foo begins</h1>
 
 <p><kbd>ponyfoo</kbd></p>

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Git and GitHub Hacks</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>git</kbd> <kbd>github</kbd> <kbd>hacks</kbd></p>

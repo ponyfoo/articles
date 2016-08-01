@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>A Year In Review</h1>
 
 <p><kbd>yearly-review</kbd> <kbd>recommended-reading</kbd></p>

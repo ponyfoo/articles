@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>JavaScript JavaScript JavaScript</h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>js</kbd> <kbd>nodejs</kbd> <kbd>mongodb</kbd></p>

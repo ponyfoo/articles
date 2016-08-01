@@ -8,5 +8,6 @@
     "poser",
     "iframe",
     "browserify"
-  ]
+  ],
+  "heroImage": null
 }

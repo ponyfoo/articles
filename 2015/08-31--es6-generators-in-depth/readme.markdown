@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ES6 Generators in Depth</h1>
 
 <p><kbd>es6</kbd> <kbd>generators</kbd> <kbd>iterators</kbd> <kbd>es6-in-depth</kbd></p>

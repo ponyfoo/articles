@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>ES6 Array Extensions in Depth</h1>
 
 <p><kbd>es6</kbd> <kbd>array</kbd> <kbd>es6-in-depth</kbd></p>

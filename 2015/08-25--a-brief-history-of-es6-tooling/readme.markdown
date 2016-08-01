@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>A Brief History of ES6 Tooling</h1>
 
 <p><kbd>es6</kbd> <kbd>history-lesson</kbd> <kbd>traceur</kbd> <kbd>babel</kbd> <kbd>es6-in-depth</kbd></p>

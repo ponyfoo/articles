@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>The Double-Edged Sword of the Web</h1>
 
 <p><kbd>opinion</kbd> <kbd>web</kbd> <kbd>state-of-the-web</kbd> <kbd>bugs</kbd></p>

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>CSS: The Good Parts</h1>
 
 <p><kbd>css</kbd> <kbd>modules</kbd> <kbd>architecture</kbd> <kbd>style-guide</kbd> <kbd>best-practices</kbd></p>

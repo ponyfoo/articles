@@ -10,5 +10,6 @@
     "continuous-development",
     "unbox",
     "grunt-ec2"
-  ]
+  ],
+  "heroImage": null
 }

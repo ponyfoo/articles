@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Making a Progressive App with ServiceWorker</h1>
 
 <p><kbd>serviceworker</kbd> <kbd>progressive-enhancement</kbd> <kbd>progressive-apps</kbd></p>

@@ -1,3 +1,5 @@
+<div></div>
+
 <h1>Rehearsal: Record program output</h1>
 
 <p><kbd>rehearsal</kbd> <kbd>utility</kbd> <kbd>presentations</kbd></p>

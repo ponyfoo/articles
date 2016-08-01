@@ -7,5 +7,6 @@
     "tape",
     "proxyquire",
     "sinon"
-  ]
+  ],
+  "heroImage": null
 }
