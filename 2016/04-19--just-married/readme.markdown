@@ -1,4 +1,4 @@
-<div></div>
+<div><img src="https://i.imgur.com/WHZGRXu.jpg" alt="Just Married! &#x1F389;"></div>
 
 <h1>Just Married! &#x1F389;</h1>
 
