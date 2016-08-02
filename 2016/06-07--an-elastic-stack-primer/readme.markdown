@@ -1,4 +1,4 @@
-<div></div>
+<div><img src="https://i.imgur.com/Ej7olDZ.jpg" alt="An Elastic Stack Primer"></div>
 
 <h1>An Elastic Stack Primer</h1>
 
