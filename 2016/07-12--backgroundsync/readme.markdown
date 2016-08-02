@@ -1,4 +1,4 @@
-<div></div>
+<div><img src="https://i.imgur.com/I51DTgu.jpg" alt="ServiceWorker: A Basic Guide to BackgroundSync"></div>
 
 <h1>ServiceWorker: A Basic Guide to BackgroundSync</h1>
 
