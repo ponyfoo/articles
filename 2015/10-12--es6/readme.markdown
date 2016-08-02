@@ -1,4 +1,4 @@
-<div></div>
+<div><img src="https://i.imgur.com/EtMSvOX.jpg" alt="ES6 Overview in 350 Bullet Points"></div>
 
 <h1>ES6 Overview in 350 Bullet Points</h1>
 

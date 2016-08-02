@@ -1,4 +1,4 @@
-<div></div>
+<div><img src="https://i.imgur.com/IF2aFsB.jpg" alt="How Pony Foo is ridiculously over-engineered &#x2014; and why that is awesome"></div>
 
 <h1><div>How Pony Foo is ridiculously over-engineered</div><div><em>&#x2014; and why that is awesome</em></div></h1>
 
