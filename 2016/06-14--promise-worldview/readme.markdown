@@ -8,7 +8,7 @@
 <em>What&#x2019;s changed?</em></p>
 </blockquote>
 
-<div><p>Once the Node.js developer&#x2019;s victim of choice, <code class="md-code md-code-inline">Promise</code> now enjoys healthy adoption on both sides of the stack, with prominent open-source contributors like <a href="https://github.com/sindresorhus" target="_blank">@sindresorhus</a> visibly leveraging them.<br> <em>What has changed?</em></p></div>
+<div><p>Once the Node.js developer&#x2019;s victim of choice, <code class="md-code md-code-inline">Promise</code> now enjoys healthy adoption on both sides of the stack, with prominent open-source contributors like <a href="https://github.com/sindresorhus" target="_blank">@sindresorhus</a> visibly leveraging them.<br> <em>What&#x2019;s changed?</em></p></div>
 
 <div></div>
 
