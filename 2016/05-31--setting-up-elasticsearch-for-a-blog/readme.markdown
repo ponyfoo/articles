@@ -1,4 +1,4 @@
-<div></div>
+<div><img src="https://i.imgur.com/ytDmMbK.jpg" alt="Setting Up Elasticsearch for a Blog"></div>
 
 <h1>Setting Up Elasticsearch for a Blog</h1>
 

@@ -1,4 +1,4 @@
-<div></div>
+<div><img src="https://i.imgur.com/9yBxDU3.jpg" alt="The Double-Edged Sword of the Web"></div>
 
 <h1>The Double-Edged Sword of the Web</h1>
 

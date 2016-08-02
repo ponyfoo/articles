@@ -1,4 +1,4 @@
-<div></div>
+<div><img src="https://i.imgur.com/5EA3byF.jpg" alt="GitHub for Human Beings &#x1F575;"></div>
 
 <h1>GitHub for Human Beings &#x1F575;</h1>
 

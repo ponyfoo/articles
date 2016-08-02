@@ -1,4 +1,4 @@
-<div></div>
+<div><img src="https://i.imgur.com/xDa9vVY.jpg" alt="NodeConf hits the ground running in Latin America"></div>
 
 <h1>NodeConf hits the ground running in Latin America</h1>
 

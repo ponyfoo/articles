@@ -1,4 +1,4 @@
-<div></div>
+<div><img src="https://i.imgur.com/lWjlif4.jpg" alt="ECMAScript Proposal for JavaScript Decorators (and protocols)"></div>
 
 <h1>ECMAScript Proposal for JavaScript Decorators <br><em>(and protocols)</em></h1>
 

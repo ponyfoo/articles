@@ -1,4 +1,4 @@
-<div></div>
+<div><img src="https://i.imgur.com/cGYqoxv.jpg" alt="Why I Write Plain JavaScript Modules"></div>
 
 <h1>Why I Write Plain JavaScript Modules</h1>
 

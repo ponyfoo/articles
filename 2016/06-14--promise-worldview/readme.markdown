@@ -1,4 +1,4 @@
-<div></div>
+<div><img src="https://i.imgur.com/lrg9mQr.jpg" alt="A Promise-Based Worldview"></div>
 
 <h1>A Promise-Based Worldview</h1>
 
