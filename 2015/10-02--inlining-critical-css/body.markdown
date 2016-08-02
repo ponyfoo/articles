@@ -1,3 +1,4 @@
+
 Now that we've identified the critical content of a page we can move onto the next step: identifying the bare minimum set of CSS rules that allow visible content to be rendered exactly as seen on the screenshot. There's tools that can help automate that away _(as we'll see in a minute)_, so let's move on. What's next?
 
 Well, once the critical CSS has been identified, it should be placed inline inside a `<style>` tag, as shown below _(see also the source code for this web page)_.

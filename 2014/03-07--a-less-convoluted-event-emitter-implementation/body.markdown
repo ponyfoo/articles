@@ -1,3 +1,4 @@
+
 Event emitters usually support multiple types of events, rather than a single one. Let's implement, step by step, our own function to create event emitters, or improve existing objects as event emitters. In a first step, I'll either return the object unchanged, or create a new object if one wasn't provided.
 
 ```js
