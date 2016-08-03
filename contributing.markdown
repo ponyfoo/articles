@@ -53,5 +53,5 @@ The first part of the article. Also used in emails sent when the article is firs
 The main body of the article. Doesn't get included in emails, but it's displayed in RSS readers, the article page, and the rendered previews on this repository.
 
 [pf]: https://ponyfoo.com
-[readme-example]: https://github.com/ponyfoo/articles/blob/master/2016/07-02--most-over-engineered-blog-ever/readme.markdown
+[readme-example]: https://github.com/ponyfoo/articles/blob/noindex/2016/07-02--most-over-engineered-blog-ever/readme.markdown
 [web-example]: https://ponyfoo.com/articles/most-over-engineered-blog-ever
