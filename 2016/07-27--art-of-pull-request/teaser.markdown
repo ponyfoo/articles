@@ -1,0 +1,1 @@
+Writing a great Pull Request takes *time*. It can be *a scary proposition* going in. Did I **implement something relevant**? Will they *like* my changes? Will the PR meet their *expectations*? How much *scrutiny* can I expect?
