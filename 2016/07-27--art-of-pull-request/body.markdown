@@ -100,7 +100,7 @@ It pays to be nice! 😅
 
 Generally speaking, you can always start contributing to a code base right away by reading through and improving their documentation. Once you feel a bit more comfortable with the repository, you can start picking away at issues. 
 
-In the case of Kibana, you could grab a [<kbd>low fruit</kbd>][low] or [<kbd>P5</kbd>][p5] issue. Another effective way of detecting high-yield issues is sorting by "Most commented" or "Most 👍 reactions".
+In the case of Kibana, you could grab a [<kbd>low fruit</kbd>][low] or [<kbd>P3</kbd>][p3] issue. Another effective way of detecting high-yield issues is sorting by "Most commented" or "Most 👍 reactions". Once you feel comfortable with our Pull Request and Code Review processes, nothing should stop you from grabbing a [<kbd>P1</kbd>][p1]. Keep in mind, though, to check that nobody else is working on those same issues yet!
 
 Happy Pull Requesting!
 
@@ -109,4 +109,5 @@ Happy Pull Requesting!
 [kb]: https://github.com/elastic/kibana/commit/27ea119a9c6b4a0331ac78a56c5166e012c465cc "Sample commit for Kibana"
 [es]: https://github.com/elastic/elasticsearch/commit/119026b4fb645a7cccd0df64ccd9e91b8285827b "Sample commit for Elasticsearch"
 [low]: https://github.com/elastic/kibana/issues?q=is%3Aopen+is%3Aissue+label%3A%22low+fruit%22 "Low hanging fruit issues on Kibana"
-[p5]: https://github.com/elastic/kibana/issues?q=is%3Aopen+is%3Aissue+label%3AP5 "P5 issues on Kibana"
+[p3]: https://github.com/elastic/kibana/issues?q=is%3Aopen+is%3Aissue+label%3AP3 "P3 issues on Kibana"
+[p1]: https://github.com/elastic/kibana/issues?q=is%3Aopen+is%3Aissue+label%3AP1 "P1 issues on Kibana"
