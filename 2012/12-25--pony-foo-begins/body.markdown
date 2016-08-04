@@ -13,7 +13,7 @@ _Javascript_ on the client-side is therefore a no-brainer, and I'll drift away f
 
 _Markdown_ is a simple yet powerful presentation language, and one I feel really comfortable with. Besides there are [open-source distributions](http://code.google.com/p/pagedown/ "pagedown by StackOverflow") that make developing around _Markdown_ a breeze.
 
-The mere notion of having [Javascript](/2013/01/01/javascript-javascript-javascript "Javascript Javascript Javascript") on the server-side, [Javascript](/2013/01/01/javascript-javascript-javascript "Javascript Javascript Javascript") on the client-side, and [Javascript](/2013/01/01/javascript-javascript-javascript "Javascript Javascript Javascript") on the database, makes me extremely enthusiastic about this project going forward. Time will tell how _wondrous_ this actually is, if _at all_.
+The mere notion of having [JavaScript](/articles/javascript-javascript-javascript "JavaScript JavaScript JavaScript") on the server-side, [JavaScript](/articles/javascript-javascript-javascript "Javascript Javascript Javascript") on the client-side, and [JavaScript](/articles/javascript-javascript-javascript "Javascript Javascript Javascript") on the database, makes me extremely enthusiastic about this project going forward. Time will tell how _wondrous_ this actually is, if _at all_.
 
 # Where do we go from here?
 
