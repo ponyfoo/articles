@@ -290,4 +290,4 @@ And _that's it_. Remember there was a _fallback_ to `template = templates['404']
 
 # Coming Up #
 
-In the [next post](/2013/01/01/javascript-javascript-javascript "Javascript Javascript Javascript") I'll delve into **MongoDB**, how to pair it with **Node**, and figuring out _how to communicate_ across all the application layers.
+In the [next post](/articles/javascript-javascript-javascript "Javascript Javascript Javascript") I'll delve into **MongoDB**, how to pair it with **Node**, and figuring out _how to communicate_ across all the application layers.
