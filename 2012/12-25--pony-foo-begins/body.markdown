@@ -1,12 +1,4 @@
-## Past Lives ##
-
-Keep in mind this idea springed in my mind just yesterday, but I'll try to keep my development cycles **as _lean_ as possible**, in order to entertain myself. In the past most of my self-driven projects lead to nowhere because **I kept focusing on _non-functional aspects_** like performance, code-tuning, including but not limited to implementing wild and new sparkly technologies.
-
-That approach often lead to projects where I would spend a whole year implementing and code-tuning an _MVC_ application in _ASP.NET 3_, which did all the error handling, real-time logging, corner-case handling that you could imagine, but barely consisted of a couple of forms.
-
-This time instead, I'm eager to launch a **minimal version** of the site online _as soon as humanly possible_, and then build on it, adding features on the go. This will also give me the feel of how working with **Node.JS** on a production environment feels like.
-
-## Expectations ##
+# Expectations
 
 I come from a strong _C#_ background, although I consider myself to have a pretty decent front-end skillset as well; I figure this will help immensely as I delve into _Node.JS_. I already took care of a few fundamental decisions, which I expect to be able to fulfill:
 
@@ -23,7 +15,7 @@ _Markdown_ is a simple yet powerful presentation language, and one I feel really
 
 The mere notion of having [Javascript](/2013/01/01/javascript-javascript-javascript "Javascript Javascript Javascript") on the server-side, [Javascript](/2013/01/01/javascript-javascript-javascript "Javascript Javascript Javascript") on the client-side, and [Javascript](/2013/01/01/javascript-javascript-javascript "Javascript Javascript Javascript") on the database, makes me extremely enthusiastic about this project going forward. Time will tell how _wondrous_ this actually is, if _at all_.
 
-## Where do we go from here? ##
+# Where do we go from here?
 
 Right now, I'm writing this post on [_Notepad++_](http://notepad-plus-plus.org/ "Notepad++") and I haven't even begun working on the blog application. Even though I've already allocated a public GitHub repository to the task, and I'm code-naming the project [NBrut](https://github.com/bevacqua/ponyfoo "GitHub repository").
 
