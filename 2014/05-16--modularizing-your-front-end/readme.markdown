@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/modularizing-your-front-end"><div><img src="https://i.imgur.com/bJYpes0.jpg" alt="Modularizing Your Front-End"></div></a>
 
-<h1>Modularizing Your Front-End</h1>
+<h1><p>Modularizing Your Front-End</p></h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>front-end</kbd> <kbd>modules</kbd> <kbd>browserify</kbd> <kbd>npm-run</kbd> <kbd>gulp</kbd></p>
 

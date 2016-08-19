@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/why-i-write-plain-javascript-modules"><div><img src="https://i.imgur.com/cGYqoxv.jpg" alt="Why I Write Plain JavaScript Modules"></div></a>
 
-<h1>Why I Write Plain JavaScript Modules</h1>
+<h1><p>Why I Write Plain JavaScript Modules</p></h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>modularity</kbd> <kbd>dragula</kbd> <kbd>design</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/understanding-javascript-async-await"><div><img src="https://i.imgur.com/tMLNbZx.jpg" alt="Understanding JavaScript&#x2019;s async await"></div></a>
 
-<h1>Understanding JavaScript&#x2019;s async await</h1>
+<h1><p>Understanding JavaScript&#x2019;s async await</p></h1>
 
 <p><kbd>async-await</kbd> <kbd>generators</kbd> <kbd>promises</kbd> <kbd>es2017</kbd></p>
 

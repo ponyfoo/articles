@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/proposal-statements-as-expressions-using-do"><div><img src="https://i.imgur.com/g0FSmfB.jpg" alt="Proposal: &#x201C;Statements as Expressions&#x201D; using do"></div></a>
 
-<h1>Proposal: &#x201C;Statements as Expressions&#x201D; using <code class="md-code md-code-inline">do</code></h1>
+<h1><p>Proposal: &#x201C;Statements as Expressions&#x201D; using <code class="md-code md-code-inline">do</code></p></h1>
 
 <p><kbd>ecmascript</kbd> <kbd>do-expressions</kbd> <kbd>proposal-draft</kbd></p>
 

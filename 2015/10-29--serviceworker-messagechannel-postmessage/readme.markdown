@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/serviceworker-messagechannel-postmessage"><div></div></a>
 
-<h1>ServiceWorker, MessageChannel, &amp; postMessage</h1>
+<h1><p>ServiceWorker, MessageChannel, &amp; postMessage</p></h1>
 
 <p><kbd>serviceworker</kbd> <kbd>swivel</kbd> <kbd>messagechannel</kbd> <kbd>postmessage</kbd></p>
 

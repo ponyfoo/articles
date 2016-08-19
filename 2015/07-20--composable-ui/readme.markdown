@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/composable-ui"><div></div></a>
 
-<h1>Composable UI</h1>
+<h1><p>Composable UI</p></h1>
 
 <p><kbd>javascript</kbd> <kbd>composition</kbd> <kbd>modules</kbd> <kbd>architecture</kbd></p>
 

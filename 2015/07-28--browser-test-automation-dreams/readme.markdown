@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/browser-test-automation-dreams"><div></div></a>
 
-<h1>Dream of Browser Test Automation?</h1>
+<h1><p>Dream of Browser Test Automation?</p></h1>
 
 <p><kbd>tape</kbd> <kbd>automation</kbd> <kbd>browser-testing</kbd> <kbd>build</kbd></p>
 

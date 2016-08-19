@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/weirdest-bug-ever"><div><img src="https://i.imgur.com/V812QXi.jpg" alt="SVG and the DOM, or &#x201C;The Weirdest Bug I&#x2019;ve Ever Encountered&#x201D;"></div></a>
 
-<h1>SVG and the DOM, or &#x201C;The Weirdest Bug I&#x2019;ve Ever Encountered&#x201D;</h1>
+<h1><p>SVG and the DOM, or &#x201C;The Weirdest Bug I&#x2019;ve Ever Encountered&#x201D;</p></h1>
 
 <p><kbd>svg</kbd> <kbd>bug</kbd></p>
 

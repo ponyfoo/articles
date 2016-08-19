@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/the-angular-way"><div></div></a>
 
-<h1>The Angular Way</h1>
+<h1><p>The Angular Way</p></h1>
 
 <p><kbd>angularjs</kbd> <kbd>front-end</kbd> <kbd>best-practices</kbd> <kbd>app-press</kbd></p>
 

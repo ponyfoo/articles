@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/react-jsx-and-es6-the-weird-parts"><div><img src="https://i.imgur.com/48TcoiZ.jpg" alt="React, JSX and ES6: The Weird Parts"></div></a>
 
-<h1>React, JSX and ES6: The Weird Parts</h1>
+<h1><p>React, JSX and ES6: The Weird Parts</p></h1>
 
 <p><kbd>react</kbd> <kbd>jsx</kbd> <kbd>es6</kbd> <kbd>rant</kbd></p>
 

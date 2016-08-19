@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/an-elastic-stack-primer"><div><img src="https://i.imgur.com/Ej7olDZ.jpg" alt="An Elastic Stack Primer"></div></a>
 
-<h1>An Elastic Stack Primer</h1>
+<h1><p>An Elastic Stack Primer</p></h1>
 
 <p><kbd>elasticsearch</kbd> <kbd>logstash</kbd> <kbd>kibana</kbd></p>
 

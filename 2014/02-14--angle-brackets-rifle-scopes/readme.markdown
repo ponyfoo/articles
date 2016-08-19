@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/angle-brackets-rifle-scopes"><div></div></a>
 
-<h1>Angle Brackets, Rifle Scopes</h1>
+<h1><p>Angle Brackets, Rifle Scopes</p></h1>
 
 <p><kbd>angle-brackets</kbd> <kbd>angularjs</kbd> <kbd>scope</kbd> <kbd>internals</kbd> <kbd>front-end</kbd> <kbd>mvc</kbd></p>
 

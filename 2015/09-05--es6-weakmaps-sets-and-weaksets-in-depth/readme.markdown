@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/es6-weakmaps-sets-and-weaksets-in-depth"><div><img src="https://i.imgur.com/S4OKmzM.jpg" alt="ES6 WeakMaps, Sets, and WeakSets in Depth"></div></a>
 
-<h1>ES6 WeakMaps, Sets, and WeakSets in Depth</h1>
+<h1><p>ES6 WeakMaps, Sets, and WeakSets in Depth</p></h1>
 
 <p><kbd>es6</kbd> <kbd>maps</kbd> <kbd>weakmaps</kbd> <kbd>sets</kbd> <kbd>weaksets</kbd> <kbd>es6-in-depth</kbd></p>
 

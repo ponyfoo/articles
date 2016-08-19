@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/low-budget-hosting-tips"><div></div></a>
 
-<h1>Low-Budget Hosting Tips</h1>
+<h1><p>Low-Budget Hosting Tips</p></h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>low-budget</kbd> <kbd>aws</kbd> <kbd>hosting</kbd> <kbd>tips</kbd></p>
 

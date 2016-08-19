@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/a-note-on-everyday-usability"><div></div></a>
 
-<h1>A Note on Everyday Usability</h1>
+<h1><p>A Note on Everyday Usability</p></h1>
 
 <p><kbd>ux</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/fixing-web-performance"><div></div></a>
 
-<h1>Fixing Performance in the Web Stack</h1>
+<h1><p>Fixing Performance in the Web Stack</p></h1>
 
 <p><kbd>performance</kbd> <kbd>talks</kbd> <kbd>automation</kbd> <kbd>tips</kbd> <kbd>budgets</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/readme-driven-development"><div></div></a>
 
-<h1>README Driven Development</h1>
+<h1><p>README Driven Development</p></h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>documentation</kbd> <kbd>pragmatism</kbd> <kbd>readme-first</kbd> <kbd>api-first</kbd></p>
 

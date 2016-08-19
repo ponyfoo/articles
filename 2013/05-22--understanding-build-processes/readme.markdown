@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/understanding-build-processes"><div></div></a>
 
-<h1>Understanding Build Processes</h1>
+<h1><p>Understanding Build Processes</p></h1>
 
 <p><kbd>build</kbd> <kbd>productivity</kbd> <kbd>best-practices</kbd></p>
 

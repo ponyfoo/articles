@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/priorities"><div></div></a>
 
-<h1>Priorities</h1>
+<h1><p>Priorities</p></h1>
 
 <p><kbd>performance</kbd> <kbd>rant</kbd> <kbd>perfschool</kbd></p>
 

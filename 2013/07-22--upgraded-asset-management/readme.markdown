@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/upgraded-asset-management"><div></div></a>
 
-<h1>Upgraded Asset Management</h1>
+<h1><p>Upgraded Asset Management</p></h1>
 
 <p><kbd>nodejs</kbd> <kbd>assetify</kbd> <kbd>grunt</kbd> <kbd>build</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/asynchronous-i-o-with-generators-and-promises"><div></div></a>
 
-<h1>Asynchronous I/O with Generators &amp; Promises</h1>
+<h1><p>Asynchronous I/O with Generators &amp; Promises</p></h1>
 
 <p><kbd>generators</kbd> <kbd>promises</kbd> <kbd>javascript</kbd> <kbd>patterns</kbd></p>
 

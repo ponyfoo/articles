@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/we-dont-want-your-coffee"><div></div></a>
 
-<h1>We don&#x2019;t want your Coffee</h1>
+<h1><p>We don&#x2019;t want your Coffee</p></h1>
 
 <p><kbd>controversial</kbd> <kbd>politics</kbd> <kbd>coffeescript</kbd> <kbd>asmjs</kbd></p>
 

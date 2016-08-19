@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/my-campjs-experience"><div><img src="https://i.imgur.com/lYz2xms.jpg" alt="My CampJS Experience"></div></a>
 
-<h1>My CampJS Experience</h1>
+<h1><p>My CampJS Experience</p></h1>
 
 <p><kbd>campjs</kbd> <kbd>speaking</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/publishing-nodejs-packages-with-npm"><div><img src="https://i.imgur.com/CgFlNMu.jpg" alt="Publishing Node.js Packages with npm"></div></a>
 
-<h1>Publishing Node.js Packages with npm</h1>
+<h1><p>Publishing Node.js Packages with npm</p></h1>
 
 <p><kbd>nodejs</kbd> <kbd>npm</kbd></p>
 

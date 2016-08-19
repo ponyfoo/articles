@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/modularizing-node-applications-with-express"><div></div></a>
 
-<h1>Modularizing Node Applications with Express</h1>
+<h1><p>Modularizing Node Applications with Express</p></h1>
 
 <p><kbd>expressjs</kbd> <kbd>nodejs</kbd> <kbd>architecture</kbd></p>
 

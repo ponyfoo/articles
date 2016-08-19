@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/es2016-features-and-ecmascript-as-a-living-standard"><div><img src="https://i.imgur.com/o8Iibqx.jpg" alt="ES2016 Features &amp; ECMAScript as a Living Standard"></div></a>
 
-<h1>ES2016 Features &amp; ECMAScript as a Living Standard</h1>
+<h1><p>ES2016 Features &amp; ECMAScript as a Living Standard</p></h1>
 
 <p><kbd>es2016</kbd> <kbd>living-standard</kbd> <kbd>ecmascript</kbd></p>
 

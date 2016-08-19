@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/a-gentle-browserify-walkthrough"><div></div></a>
 
-<h1>A Gentle Browserify Walkthrough</h1>
+<h1><p>A Gentle Browserify Walkthrough</p></h1>
 
 <p><kbd>browserify</kbd> <kbd>modules</kbd> <kbd>front-end</kbd> <kbd>tutorial</kbd></p>
 

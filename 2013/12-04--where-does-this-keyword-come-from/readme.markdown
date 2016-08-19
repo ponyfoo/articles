@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/where-does-this-keyword-come-from"><div></div></a>
 
-<h1>Where does this keyword come from?</h1>
+<h1><p>Where does this keyword come from?</p></h1>
 
 <p><kbd>js</kbd> <kbd>scoping</kbd> <kbd>best-practices</kbd> <kbd>this</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/designing-front-end-components"><div><img src="https://i.imgur.com/axExsYK.jpg" alt="Designing Front-End Components"></div></a>
 
-<h1>Designing Front-End Components</h1>
+<h1><p>Designing Front-End Components</p></h1>
 
 <p><kbd>front-end</kbd> <kbd>modularity</kbd> <kbd>rome</kbd> <kbd>insignia</kbd> <kbd>dragula</kbd> <kbd>horsey</kbd></p>
 

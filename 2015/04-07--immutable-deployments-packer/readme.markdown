@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/immutable-deployments-packer"><div></div></a>
 
-<h1>Immutable Deployments and Packer</h1>
+<h1><p>Immutable Deployments and Packer</p></h1>
 
 <p><kbd>packer</kbd> <kbd>aws</kbd> <kbd>ami</kbd> <kbd>immutable-deployments</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/a-less-convoluted-event-emitter-implementation"><div></div></a>
 
-<h1>A Less Convoluted Event Emitter Implementation</h1>
+<h1><p>A Less Convoluted Event Emitter Implementation</p></h1>
 
 <p><kbd>js</kbd> <kbd>nodejs</kbd> <kbd>event-emitter</kbd> <kbd>pattern</kbd></p>
 

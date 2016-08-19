@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/critical-path-performance-optimization"><div><img src="https://i.imgur.com/1XZDJai.jpg" alt="Critical Path Performance Optimization at Pony Foo"></div></a>
 
-<h1>Critical Path Performance Optimization at Pony Foo</h1>
+<h1><p>Critical Path Performance Optimization at Pony Foo</p></h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>critical-path</kbd> <kbd>performance</kbd> <kbd>nginx</kbd> <kbd>pagespeed</kbd></p>
 

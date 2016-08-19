@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/the-conventional-front-end"><div></div></a>
 
-<h1>The Conventional Front-End</h1>
+<h1><p>The Conventional Front-End</p></h1>
 
 <p><kbd>conventional</kbd> <kbd>front-end</kbd> <kbd>javascript</kbd> <kbd>measly</kbd> <kbd>xhr</kbd></p>
 

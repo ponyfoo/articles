@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/the-micro-library-phenomenon"><div></div></a>
 
-<h1>The Micro Library Phenomenon</h1>
+<h1><p>The Micro Library Phenomenon</p></h1>
 
 <p><kbd>js</kbd> <kbd>nodejs</kbd> <kbd>politics</kbd> <kbd>micro-library</kbd></p>
 

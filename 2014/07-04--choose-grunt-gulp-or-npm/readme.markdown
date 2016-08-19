@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/choose-grunt-gulp-or-npm"><div><img src="https://i.imgur.com/T5DA45j.jpg" alt="Choose: Grunt, Gulp, or npm?"></div></a>
 
-<h1>Choose: Grunt, Gulp, or npm?</h1>
+<h1><p>Choose: Grunt, Gulp, or npm?</p></h1>
 
 <p><kbd>gulp</kbd> <kbd>grunt</kbd> <kbd>npm</kbd> <kbd>npm-run</kbd></p>
 

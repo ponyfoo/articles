@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/javascript-developer-survey-results"><div></div></a>
 
-<h1>JavaScript Developer Survey Results</h1>
+<h1><p>JavaScript Developer Survey Results</p></h1>
 
 <p><kbd>survey</kbd> <kbd>survey-results</kbd></p>
 

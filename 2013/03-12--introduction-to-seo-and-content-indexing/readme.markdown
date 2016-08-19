@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/introduction-to-seo-and-content-indexing"><div></div></a>
 
-<h1>Introduction to SEO and Content Indexing</h1>
+<h1><p>Introduction to SEO and Content Indexing</p></h1>
 
 <p><kbd>seo</kbd> <kbd>ajax</kbd></p>
 

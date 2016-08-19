@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/universal-routing-react-es6"><div></div></a>
 
-<h1>Universal Routing in React with ES6</h1>
+<h1><p>Universal Routing in React with ES6</p></h1>
 
 <p><kbd>babel</kbd> <kbd>react</kbd> <kbd>react-router</kbd> <kbd>es6</kbd> <kbd>universal</kbd></p>
 

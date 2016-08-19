@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/recommended-reading"><div></div></a>
 
-<h1>Recommended Reading</h1>
+<h1><p>Recommended Reading</p></h1>
 
 <p><kbd>recommended-reading</kbd> <kbd>software-development</kbd></p>
 

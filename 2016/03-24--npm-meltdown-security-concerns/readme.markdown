@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/npm-meltdown-security-concerns"><div><img src="https://i.imgur.com/MW4oAaz.jpg" alt="The npm Meltdown Uncovers Serious Security Risks"></div></a>
 
-<h1>The <code class="md-code md-code-inline">npm</code> Meltdown Uncovers Serious Security Risks</h1>
+<h1><p>The <code class="md-code md-code-inline">npm</code> Meltdown Uncovers Serious Security Risks</p></h1>
 
 <p><kbd>npm</kbd></p>
 

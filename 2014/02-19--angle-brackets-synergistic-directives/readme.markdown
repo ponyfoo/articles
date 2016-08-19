@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/angle-brackets-synergistic-directives"><div></div></a>
 
-<h1>Angle Brackets, Synergistic Directives</h1>
+<h1><p>Angle Brackets, Synergistic Directives</p></h1>
 
 <p><kbd>angle-brackets</kbd> <kbd>angularjs</kbd> <kbd>directives</kbd> <kbd>front-end</kbd> <kbd>mvc</kbd></p>
 

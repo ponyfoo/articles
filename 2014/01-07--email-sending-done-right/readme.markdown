@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/email-sending-done-right"><div></div></a>
 
-<h1>Email Sending Done Right</h1>
+<h1><p>Email Sending Done Right</p></h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>modules</kbd> <kbd>campaign</kbd></p>
 

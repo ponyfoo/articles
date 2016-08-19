@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/es6-spread-and-butter-in-depth"><div><img src="https://i.imgur.com/dMsez7Y.jpg" alt="ES6 Spread and Butter in Depth"></div></a>
 
-<h1>ES6 Spread and Butter in Depth</h1>
+<h1><p>ES6 Spread and Butter in Depth</p></h1>
 
 <p><kbd>es6</kbd> <kbd>spread</kbd> <kbd>rest</kbd> <kbd>es6-in-depth</kbd></p>
 

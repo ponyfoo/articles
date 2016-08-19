@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/progressive-app-serviceworker"><div></div></a>
 
-<h1>Making a Progressive App with ServiceWorker</h1>
+<h1><p>Making a Progressive App with ServiceWorker</p></h1>
 
 <p><kbd>serviceworker</kbd> <kbd>progressive-enhancement</kbd> <kbd>progressive-apps</kbd></p>
 

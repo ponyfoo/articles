@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/es6"><div><img src="https://i.imgur.com/EtMSvOX.jpg" alt="ES6 Overview in 350 Bullet Points"></div></a>
 
-<h1>ES6 Overview in 350 Bullet Points</h1>
+<h1><p>ES6 Overview in 350 Bullet Points</p></h1>
 
 <p><kbd>es6</kbd> <kbd>javascript</kbd> <kbd>babel</kbd> <kbd>es6-in-depth</kbd></p>
 

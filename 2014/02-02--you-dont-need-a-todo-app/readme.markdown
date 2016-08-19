@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/you-dont-need-a-todo-app"><div></div></a>
 
-<h1>You don&#x2019;t need a TODO app</h1>
+<h1><p>You don&#x2019;t need a TODO app</p></h1>
 
 <p><kbd>productivity</kbd> <kbd>tips</kbd> <kbd>gmail</kbd> <kbd>todo</kbd> <kbd>bash</kbd></p>
 

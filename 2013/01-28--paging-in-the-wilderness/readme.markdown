@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/paging-in-the-wilderness"><div><img src="https://i.imgur.com/BKhw4VW.jpg" alt="Paging in the Wilderness"></div></a>
 
-<h1>Paging in the Wilderness</h1>
+<h1><p>Paging in the Wilderness</p></h1>
 
 <p><kbd>ux</kbd> <kbd>front-end</kbd></p>
 

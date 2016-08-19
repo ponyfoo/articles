@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/taming-asynchronous-javascript"><div></div></a>
 
-<h1>Taming Asynchronous JavaScript</h1>
+<h1><p>Taming Asynchronous JavaScript</p></h1>
 
 <p><kbd>async</kbd> <kbd>callback-hell</kbd> <kbd>js</kbd> <kbd>best-practices</kbd> <kbd>quotes</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/spritesheets-grunt-and-you"><div></div></a>
 
-<h1>Spritesheets, Grunt, and You</h1>
+<h1><p>Spritesheets, Grunt, and You</p></h1>
 
 <p><kbd>grunt</kbd> <kbd>build</kbd> <kbd>sprites</kbd></p>
 

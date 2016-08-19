@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/tech-news-reading-hints"><div></div></a>
 
-<h1>Tech News Reading Hints</h1>
+<h1><p>Tech News Reading Hints</p></h1>
 
 <p><kbd>recommended-reading</kbd> <kbd>rss</kbd> <kbd>link-dump</kbd></p>
 

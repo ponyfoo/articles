@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/learn-regular-expressions"><div></div></a>
 
-<h1>Learn Regular Expressions</h1>
+<h1><p>Learn Regular Expressions</p></h1>
 
 <p><kbd>regex</kbd> <kbd>learning</kbd></p>
 

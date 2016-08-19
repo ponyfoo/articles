@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/javascript-javascript-javascript"><div><img src="https://i.imgur.com/rQ3x6Fu.jpg" alt="JavaScript JavaScript JavaScript"></div></a>
 
-<h1>JavaScript JavaScript JavaScript</h1>
+<h1><p>JavaScript JavaScript JavaScript</p></h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>js</kbd> <kbd>nodejs</kbd> <kbd>mongodb</kbd></p>
 

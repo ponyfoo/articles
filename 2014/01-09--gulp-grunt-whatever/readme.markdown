@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/gulp-grunt-whatever"><div></div></a>
 
-<h1>Gulp, Grunt, Whatever</h1>
+<h1><p>Gulp, Grunt, Whatever</p></h1>
 
 <p><kbd>build</kbd> <kbd>grunt</kbd> <kbd>gulp</kbd> <kbd>npm</kbd></p>
 

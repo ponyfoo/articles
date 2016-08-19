@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/organizing-your-css-with-bootstrap"><div></div></a>
 
-<h1>Organizing your CSS with Bootstrap</h1>
+<h1><p>Organizing your CSS with Bootstrap</p></h1>
 
 <p><kbd>css</kbd> <kbd>front-end</kbd> <kbd>bootstrap</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/javascript-variable-hoisting"><div></div></a>
 
-<h1>JavaScript Variable Hoisting</h1>
+<h1><p>JavaScript Variable Hoisting</p></h1>
 
 <p><kbd>js</kbd> <kbd>hoisting</kbd></p>
 

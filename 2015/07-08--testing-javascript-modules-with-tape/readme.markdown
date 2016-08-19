@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/testing-javascript-modules-with-tape"><div></div></a>
 
-<h1>Testing JavaScript Modules with Tape</h1>
+<h1><p>Testing JavaScript Modules with Tape</p></h1>
 
 <p><kbd>tape</kbd> <kbd>proxyquire</kbd> <kbd>sinon</kbd></p>
 

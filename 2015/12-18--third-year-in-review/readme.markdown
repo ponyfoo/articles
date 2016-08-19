@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/third-year-in-review"><div><img src="https://i.imgur.com/UYdqIFW.jpg" alt="Third Year in Review"></div></a>
 
-<h1>Third Year in Review</h1>
+<h1><p>Third Year in Review</p></h1>
 
 <p><kbd>yearly-review</kbd></p>
 

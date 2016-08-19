@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/es6-symbols-in-depth"><div></div></a>
 
-<h1>ES6 Symbols in Depth</h1>
+<h1><p>ES6 Symbols in Depth</p></h1>
 
 <p><kbd>es6</kbd> <kbd>symbols</kbd> <kbd>es6-in-depth</kbd></p>
 

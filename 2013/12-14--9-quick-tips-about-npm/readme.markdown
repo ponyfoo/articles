@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/9-quick-tips-about-npm"><div></div></a>
 
-<h1>9 Quick Tips About npm</h1>
+<h1><p>9 Quick Tips About npm</p></h1>
 
 <p><kbd>npm</kbd> <kbd>tips</kbd> <kbd>browserify</kbd></p>
 

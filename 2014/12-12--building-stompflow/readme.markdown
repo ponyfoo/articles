@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/building-stompflow"><div></div></a>
 
-<h1>I&#x2019;m Building Stompflow!</h1>
+<h1><p>I&#x2019;m Building Stompflow!</p></h1>
 
 <p><kbd>stompflow</kbd> <kbd>announcement</kbd> <kbd>non-technical</kbd></p>
 

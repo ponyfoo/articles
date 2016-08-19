@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/asset-management-in-node"><div><img src="https://i.imgur.com/QjEuYcm.jpg" alt="Asset Management in Node"></div></a>
 
-<h1>Asset Management in Node</h1>
+<h1><p>Asset Management in Node</p></h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>nodejs</kbd> <kbd>npm</kbd> <kbd>assetify</kbd></p>
 

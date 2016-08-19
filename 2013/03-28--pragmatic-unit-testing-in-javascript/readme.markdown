@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/pragmatic-unit-testing-in-javascript"><div></div></a>
 
-<h1>Pragmatic Unit Testing in JavaScript</h1>
+<h1><p>Pragmatic Unit Testing in JavaScript</p></h1>
 
 <p><kbd>unit-testing</kbd> <kbd>js</kbd> <kbd>best-practices</kbd></p>
 

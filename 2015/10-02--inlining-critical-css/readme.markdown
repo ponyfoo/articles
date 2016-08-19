@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/inlining-critical-css"><div><img src="https://i.imgur.com/1aLH31K.png" alt="Inlining Critical CSS for Dynamic Web Apps"></div></a>
 
-<h1>Inlining Critical CSS for Dynamic Web Apps</h1>
+<h1><p>Inlining Critical CSS for Dynamic Web Apps</p></h1>
 
 <p><kbd>performance</kbd> <kbd>penthouse</kbd> <kbd>critical-css</kbd> <kbd>bash</kbd></p>
 

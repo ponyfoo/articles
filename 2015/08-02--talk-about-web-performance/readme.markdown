@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/talk-about-web-performance"><div><img src="https://i.imgur.com/jqsLCpx.jpg" alt="Let&#x2019;s talk about Web Performance"></div></a>
 
-<h1>Let&#x2019;s talk about Web Performance</h1>
+<h1><p>Let&#x2019;s talk about Web Performance</p></h1>
 
 <p><kbd>performance</kbd> <kbd>talks</kbd> <kbd>automation</kbd> <kbd>tips</kbd> <kbd>budgets</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/es6-modules-in-depth"><div><img src="https://i.imgur.com/dW4ytbh.jpg" alt="ES6 Modules in Depth"></div></a>
 
-<h1>ES6 Modules in Depth</h1>
+<h1><p>ES6 Modules in Depth</p></h1>
 
 <p><kbd>es6</kbd> <kbd>modules</kbd> <kbd>commonjs</kbd> <kbd>es6-in-depth</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/shared-rendering-with-rendr"><div></div></a>
 
-<h1>Shared Rendering with Rendr</h1>
+<h1><p>Shared Rendering with Rendr</p></h1>
 
 <p><kbd>isomorphic</kbd> <kbd>backbone</kbd> <kbd>rendr</kbd> <kbd>mustache</kbd></p>
 

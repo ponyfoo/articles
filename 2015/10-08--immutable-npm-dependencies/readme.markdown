@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/immutable-npm-dependencies"><div><img src="https://i.imgur.com/VxABgaq.jpg" alt="Keeping Your npm Dependencies Immutable"></div></a>
 
-<h1>Keeping Your npm Dependencies Immutable</h1>
+<h1><p>Keeping Your npm Dependencies Immutable</p></h1>
 
 <p><kbd>semver</kbd> <kbd>immutability</kbd> <kbd>npm</kbd></p>
 

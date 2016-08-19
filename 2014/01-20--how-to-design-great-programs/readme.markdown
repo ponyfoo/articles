@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/how-to-design-great-programs"><div></div></a>
 
-<h1>How to Design Great Programs</h1>
+<h1><p>How to Design Great Programs</p></h1>
 
 <p><kbd>best-practices</kbd> <kbd>api</kbd> <kbd>open-source</kbd> <kbd>program-design</kbd></p>
 

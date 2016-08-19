@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/es6-array-extensions-in-depth"><div></div></a>
 
-<h1>ES6 Array Extensions in Depth</h1>
+<h1><p>ES6 Array Extensions in Depth</p></h1>
 
 <p><kbd>es6</kbd> <kbd>array</kbd> <kbd>es6-in-depth</kbd></p>
 

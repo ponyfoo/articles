@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/css-for-dummies"><div><img src="https://i.imgur.com/WSy36xI.png" alt="CSS For Dummies"></div></a>
 
-<h1>CSS For Dummies</h1>
+<h1><p>CSS For Dummies</p></h1>
 
 <p><kbd>css</kbd> <kbd>front-end</kbd> <kbd>learning</kbd></p>
 

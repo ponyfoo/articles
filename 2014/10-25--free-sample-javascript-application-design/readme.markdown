@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/free-sample-javascript-application-design"><div></div></a>
 
-<h1>Free sample: JavaScript Application Design</h1>
+<h1><p>Free sample: JavaScript Application Design</p></h1>
 
 <p><kbd>buildfirst</kbd> <kbd>book</kbd> <kbd>free-sample</kbd></p>
 

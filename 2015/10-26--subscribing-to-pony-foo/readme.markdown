@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/subscribing-to-pony-foo"><div><img src="https://i.imgur.com/79QDfRl.jpg" alt="Subscribing to Pony Foo"></div></a>
 
-<h1>Subscribing to Pony Foo</h1>
+<h1><p>Subscribing to Pony Foo</p></h1>
 
 <p><kbd>ponyfoo</kbd></p>
 

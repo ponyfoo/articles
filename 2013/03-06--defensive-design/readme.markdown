@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/defensive-design"><div><img src="https://i.imgur.com/TbOls8D.jpg" alt="Defensive Design"></div></a>
 
-<h1>Defensive Design</h1>
+<h1><p>Defensive Design</p></h1>
 
 <p><kbd>ux</kbd> <kbd>front-end</kbd> <kbd>book-review</kbd></p>
 

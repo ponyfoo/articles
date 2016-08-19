@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/a-brief-history-of-es6-tooling"><div></div></a>
 
-<h1>A Brief History of ES6 Tooling</h1>
+<h1><p>A Brief History of ES6 Tooling</p></h1>
 
 <p><kbd>es6</kbd> <kbd>history-lesson</kbd> <kbd>traceur</kbd> <kbd>babel</kbd> <kbd>es6-in-depth</kbd></p>
 

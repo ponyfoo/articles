@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/more-es6-proxy-traps-in-depth"><div></div></a>
 
-<h1>More ES6 Proxy Traps in Depth</h1>
+<h1><p>More ES6 Proxy Traps in Depth</p></h1>
 
 <p><kbd>es6</kbd> <kbd>proxies</kbd> <kbd>traps</kbd> <kbd>es6-in-depth</kbd></p>
 

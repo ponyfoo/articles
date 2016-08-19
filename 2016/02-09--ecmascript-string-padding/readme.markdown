@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/ecmascript-string-padding"><div></div></a>
 
-<h1>ECMAScript String Padding</h1>
+<h1><p>ECMAScript String Padding</p></h1>
 
 <p><kbd>ecmascript</kbd> <kbd>string</kbd> <kbd>proposal-draft</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/css-the-good-parts"><div></div></a>
 
-<h1>CSS: The Good Parts</h1>
+<h1><p>CSS: The Good Parts</p></h1>
 
 <p><kbd>css</kbd> <kbd>modules</kbd> <kbd>architecture</kbd> <kbd>style-guide</kbd> <kbd>best-practices</kbd></p>
 

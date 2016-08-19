@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/polyfills-or-ponyfills"><div><img src="https://i.imgur.com/IEBEN86.jpg" alt="Polyfills or Ponyfills?"></div></a>
 
-<h1>Polyfills or Ponyfills?</h1>
+<h1><p>Polyfills or Ponyfills?</p></h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>polyfill</kbd> <kbd>ponyfill</kbd></p>
 

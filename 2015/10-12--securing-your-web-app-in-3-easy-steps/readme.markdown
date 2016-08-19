@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/securing-your-web-app-in-3-easy-steps"><div><img src="https://i.imgur.com/UZaWIGA.jpg" alt="Securing Your Web App in 3 Easy Steps"></div></a>
 
-<h1>Securing Your Web App in 3 Easy Steps</h1>
+<h1><p>Securing Your Web App in 3 Easy Steps</p></h1>
 
 <p><kbd>https</kbd> <kbd>security</kbd> <kbd>web-apps</kbd> <kbd>cloudflare</kbd></p>
 

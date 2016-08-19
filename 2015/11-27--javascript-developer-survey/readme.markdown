@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/javascript-developer-survey"><div><img src="https://i.imgur.com/hcRKeXF.jpg" alt="JavaScript Developer Survey"></div></a>
 
-<h1>JavaScript Developer Survey</h1>
+<h1><p>JavaScript Developer Survey</p></h1>
 
 <p><kbd>survey</kbd></p>
 

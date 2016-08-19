@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/redesign"><div><img src="https://i.imgur.com/0TZvZP4.jpg" alt="Pony Foo Gets a Face Lift"></div></a>
 
-<h1>Pony Foo Gets a Face Lift</h1>
+<h1><p>Pony Foo Gets a Face Lift</p></h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>redesign</kbd> <kbd>rainbows</kbd> <kbd>performance</kbd></p>
 
