@@ -1,0 +1,12 @@
+{
+  "id": "57abadae3bb8cd7f0384f40f",
+  "author": "57b12727dca57c960331e383",
+  "title": "JSON Web Tokens vs. Session Cookies: In Practice",
+  "slug": "json-web-tokens-vs-session-cookies",
+  "tags": [
+    "jwt",
+    "sessions",
+    "authentication"
+  ],
+  "heroImage": "https://i.imgur.com/Emo7umQ.jpg"
+}
