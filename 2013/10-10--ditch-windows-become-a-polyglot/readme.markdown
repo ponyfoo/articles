@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/ditch-windows-become-a-polyglot"><div></div></a>
 
-<h1><p>Ditch Windows, Become a Polyglot</p></h1>
+<h1>Ditch Windows, Become a Polyglot</h1>
 
 <p><kbd>windows</kbd> <kbd>ubuntu</kbd> <kbd>os</kbd> <kbd>terminal</kbd> <kbd>polyglot</kbd> <kbd>bio</kbd></p>
 

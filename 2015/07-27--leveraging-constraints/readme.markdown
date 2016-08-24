@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/leveraging-constraints"><div></div></a>
 
-<h1><p>Leveraging Constraints</p></h1>
+<h1>Leveraging Constraints</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>constraints</kbd> <kbd>performance</kbd> <kbd>ux</kbd></p>
 

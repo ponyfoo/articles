@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/food-for-thought-begins"><div></div></a>
 
-<h1><p>Blogging and OSS &#x2014; Food for Thought</p></h1>
+<h1>Blogging and OSS &#x2014; Food for Thought</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>productivity</kbd> <kbd>community</kbd> <kbd>ask-me-anything</kbd></p>
 

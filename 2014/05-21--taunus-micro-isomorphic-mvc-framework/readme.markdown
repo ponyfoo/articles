@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/taunus-micro-isomorphic-mvc-framework"><div></div></a>
 
-<h1><p>Taunus: Micro Isomorphic MVC Framework</p></h1>
+<h1>Taunus: Micro Isomorphic MVC Framework</h1>
 
 <p><kbd>isomorphic</kbd> <kbd>taunus</kbd> <kbd>browserify</kbd> <kbd>npm-run</kbd></p>
 

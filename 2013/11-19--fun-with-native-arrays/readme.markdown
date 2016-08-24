@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/fun-with-native-arrays"><div></div></a>
 
-<h1><p>Fun with Native Arrays</p></h1>
+<h1>Fun with Native Arrays</h1>
 
 <p><kbd>js</kbd> <kbd>js-native</kbd> <kbd>array</kbd></p>
 

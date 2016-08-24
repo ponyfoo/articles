@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/using-the-javascript-charting-library"><div><img src="https://i.imgur.com/1BI5T8V.jpg" alt="Using the JavaScript Charting Library"></div></a>
 
-<h1><p>Using the JavaScript Charting Library</p></h1>
+<h1>Using the JavaScript Charting Library</h1>
 
 <p><kbd>jscharting</kbd> <kbd>visualizations</kbd> <kbd>product-review</kbd></p>
 

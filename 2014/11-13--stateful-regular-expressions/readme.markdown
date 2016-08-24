@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/stateful-regular-expressions"><div></div></a>
 
-<h1><p>Are Regular Expressions Stateful?</p></h1>
+<h1>Are Regular Expressions Stateful?</h1>
 
 <p><kbd>regex</kbd> <kbd>bug</kbd> <kbd>chrome</kbd></p>
 

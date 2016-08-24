@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/information-hiding-in-javascript"><div><img src="https://i.imgur.com/NnDPU3w.jpg" alt="Information Hiding in JavaScript"></div></a>
 
-<h1><p>Information Hiding in JavaScript</p></h1>
+<h1>Information Hiding in JavaScript</h1>
 
 <p><kbd>js</kbd> <kbd>js-native</kbd> <kbd>best-practices</kbd></p>
 

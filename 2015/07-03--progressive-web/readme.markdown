@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/progressive-web"><div></div></a>
 
-<h1><p>The Progressive Web</p></h1>
+<h1>The Progressive Web</h1>
 
 <p><kbd>progressive-enhancement</kbd> <kbd>taunus</kbd> <kbd>server-first</kbd> <kbd>browserify</kbd></p>
 

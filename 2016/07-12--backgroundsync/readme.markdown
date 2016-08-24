@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/backgroundsync"><div><img src="https://i.imgur.com/I51DTgu.jpg" alt="ServiceWorker: A Basic Guide to BackgroundSync"></div></a>
 
-<h1><p>ServiceWorker: A Basic Guide to BackgroundSync</p></h1>
+<h1>ServiceWorker: A Basic Guide to BackgroundSync</h1>
 
 <p><kbd>serviceworker</kbd> <kbd>offline</kbd> <kbd>backgroundsync</kbd></p>
 

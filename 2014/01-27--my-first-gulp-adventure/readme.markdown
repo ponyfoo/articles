@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/my-first-gulp-adventure"><div><img src="https://i.imgur.com/oh34sKD.jpg" alt="My First Gulp Adventure"></div></a>
 
-<h1><p>My First Gulp Adventure</p></h1>
+<h1>My First Gulp Adventure</h1>
 
 <p><kbd>gulp</kbd> <kbd>tutorial</kbd> <kbd>build</kbd></p>
 

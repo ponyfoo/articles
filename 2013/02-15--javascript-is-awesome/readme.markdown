@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/javascript-is-awesome"><div><img src="https://i.imgur.com/iJI9yJ5.jpg" alt="JavaScript Is Awesome"></div></a>
 
-<h1><p>JavaScript Is Awesome</p></h1>
+<h1>JavaScript Is Awesome</h1>
 
 <p><kbd>js</kbd> <kbd>coffeescript</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/things-you-can-do-in-plain-javascript"><div></div></a>
 
-<h1><p>Things you can do with native DOM</p></h1>
+<h1>Things you can do with native DOM</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>javascript</kbd> <kbd>native</kbd> <kbd>dom</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/weakref"><div><img src="https://i.imgur.com/gaku2qj.jpg" alt="JavaScript Proposal for weak references: WeakRef"></div></a>
 
-<h1><p>JavaScript Proposal for weak references: <code class="md-code md-code-inline">WeakRef</code></p></h1>
+<h1>JavaScript Proposal for weak references: <code class="md-code md-code-inline">WeakRef</code></h1>
 
 <p><kbd>ecmascript</kbd> <kbd>weakref</kbd> <kbd>proposal-draft</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/leveraging-immutable-deployments"><div></div></a>
 
-<h1><p>Leveraging Immutable Deployments</p></h1>
+<h1>Leveraging Immutable Deployments</h1>
 
 <p><kbd>bash</kbd> <kbd>aws</kbd> <kbd>ami</kbd> <kbd>immutable-deployments</kbd></p>
 

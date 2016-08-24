@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/proposal-draft-for-flatten-and-flatmap"><div><img src="https://i.imgur.com/JbIRSuN.jpg" alt="Proposal Draft for .flatten and .flatMap"></div></a>
 
-<h1><p>Proposal Draft for <code class="md-code md-code-inline">.flatten</code> and <code class="md-code md-code-inline">.flatMap</code></p></h1>
+<h1>Proposal Draft for <code class="md-code md-code-inline">.flatten</code> and <code class="md-code md-code-inline">.flatMap</code></h1>
 
 <p><kbd>ecmascript</kbd> <kbd>flatten</kbd> <kbd>array</kbd> <kbd>proposal-draft</kbd></p>
 

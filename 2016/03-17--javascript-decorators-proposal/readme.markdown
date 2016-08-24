@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/javascript-decorators-proposal"><div><img src="https://i.imgur.com/lWjlif4.jpg" alt="ECMAScript Proposal for JavaScript Decorators (and protocols)"></div></a>
 
-<h1><p>ECMAScript Proposal for JavaScript Decorators <br><em>(and protocols)</em></p></h1>
+<h1>ECMAScript Proposal for JavaScript Decorators <br><em>(and protocols)</em></h1>
 
 <p><kbd>ecmascript</kbd> <kbd>decorators</kbd> <kbd>proposal-draft</kbd></p>
 

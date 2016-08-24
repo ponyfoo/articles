@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/continuous-integration-and-automated-deployments"><div><img src="https://i.imgur.com/6MT1J6K.jpg" alt="Continuous Integration, and Automated Deployments"></div></a>
 
-<h1><p>Continuous Integration, and Automated Deployments</p></h1>
+<h1>Continuous Integration, and Automated Deployments</h1>
 
 <p><kbd>build</kbd></p>
 

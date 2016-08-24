@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/setting-up-elasticsearch-for-a-blog"><div><img src="https://i.imgur.com/ytDmMbK.jpg" alt="Setting Up Elasticsearch for a Blog"></div></a>
 
-<h1><p>Setting Up Elasticsearch for a Blog</p></h1>
+<h1>Setting Up Elasticsearch for a Blog</h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>elastic</kbd> <kbd>elasticsearch</kbd></p>
 

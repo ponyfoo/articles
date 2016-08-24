@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/simple-offline-site-serviceworker"><div><img src="https://i.imgur.com/CHX3int.jpg" alt="Making a Simple Site Work Offline with ServiceWorker"></div></a>
 
-<h1><p>Making a Simple Site Work Offline with ServiceWorker</p></h1>
+<h1>Making a Simple Site Work Offline with ServiceWorker</h1>
 
 <p><kbd>serviceworker</kbd> <kbd>tutorial</kbd></p>
 

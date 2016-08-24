@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/grunt-tips-and-tricks"><div><img src="https://i.imgur.com/dr8Sb2x.jpg" alt="Grunt Tips and Tricks"></div></a>
 
-<h1><p>Grunt Tips and Tricks</p></h1>
+<h1>Grunt Tips and Tricks</h1>
 
 <p><kbd>grunt</kbd> <kbd>tips</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/a-browsersync-primer"><div></div></a>
 
-<h1><p>A BrowserSync Primer</p></h1>
+<h1>A BrowserSync Primer</h1>
 
 <p><kbd>build</kbd> <kbd>browsersync</kbd> <kbd>grunt</kbd> <kbd>gulp</kbd> <kbd>npm</kbd> <kbd>nodemon</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/git-github-hacks"><div></div></a>
 
-<h1><p>Git and GitHub Hacks</p></h1>
+<h1>Git and GitHub Hacks</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>git</kbd> <kbd>github</kbd> <kbd>hacks</kbd></p>
 

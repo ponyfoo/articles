@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/art-of-pull-request"><div><img src="https://i.imgur.com/6UHgyZj.jpg" alt="The Art of a Pull Request"></div></a>
 
-<h1><p>The Art of a Pull Request</p></h1>
+<h1>The Art of a Pull Request</h1>
 
 <p><kbd>open-source</kbd> <kbd>code-review</kbd></p>
 

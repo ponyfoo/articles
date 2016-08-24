@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/es6-promises-in-depth"><div><img src="https://i.imgur.com/6tpY1FW.jpg" alt="ES6 Promises in Depth"></div></a>
 
-<h1><p>ES6 Promises in Depth</p></h1>
+<h1>ES6 Promises in Depth</h1>
 
 <p><kbd>es6</kbd> <kbd>promise</kbd> <kbd>es6-in-depth</kbd></p>
 

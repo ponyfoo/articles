@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/es6-math-additions-in-depth"><div></div></a>
 
-<h1><p>ES6 Math Additions in Depth</p></h1>
+<h1>ES6 Math Additions in Depth</h1>
 
 <p><kbd>es6</kbd> <kbd>math</kbd> <kbd>es6-in-depth</kbd></p>
 

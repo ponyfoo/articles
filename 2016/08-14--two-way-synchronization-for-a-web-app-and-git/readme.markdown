@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/two-way-synchronization-for-a-web-app-and-git"><div><img src="https://i.imgur.com/P426mA0.jpg" alt="Two-way Synchronization for a Web App and Git"></div></a>
 
-<h1><p>Two-way Synchronization for a Web App and Git</p></h1>
+<h1>Two-way Synchronization for a Web App and Git</h1>
 
 <p><kbd>git</kbd> <kbd>webhooks</kbd></p>
 

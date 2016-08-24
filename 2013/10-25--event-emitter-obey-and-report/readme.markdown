@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/event-emitter-obey-and-report"><div></div></a>
 
-<h1><p>Event Emitter: Obey and Report</p></h1>
+<h1>Event Emitter: Obey and Report</h1>
 
 <p><kbd>js</kbd> <kbd>pattern</kbd> <kbd>event-emitter</kbd></p>
 

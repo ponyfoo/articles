@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/is-webdriver-as-good-as-it-gets"><div></div></a>
 
-<h1><p>Is WebDriver as good as it gets?</p></h1>
+<h1>Is WebDriver as good as it gets?</h1>
 
 <p><kbd>integration-testing</kbd> <kbd>selenium</kbd> <kbd>webdriver</kbd> <kbd>grunt</kbd> <kbd>rant</kbd></p>
 

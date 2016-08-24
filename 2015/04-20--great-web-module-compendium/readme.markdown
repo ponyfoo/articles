@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/great-web-module-compendium"><div></div></a>
 
-<h1><p>The Great Web Module Compendium</p></h1>
+<h1>The Great Web Module Compendium</h1>
 
 <p><kbd>front-end</kbd> <kbd>modularity</kbd> <kbd>javascript</kbd> <kbd>components</kbd></p>
 

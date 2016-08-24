@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/pony-foo-begins"><div><img src="https://i.imgur.com/L7OocY3.jpg" alt="Pony Foo begins"></div></a>
 
-<h1><p>Pony Foo begins</p></h1>
+<h1>Pony Foo begins</h1>
 
 <p><kbd>ponyfoo</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/fast-forwarding-the-web-platform"><div></div></a>
 
-<h1><p>Fast-forwarding the Web Platform</p></h1>
+<h1>Fast-forwarding the Web Platform</h1>
 
 <p><kbd>web</kbd> <kbd>standards</kbd> <kbd>native</kbd> <kbd>performance</kbd></p>
 

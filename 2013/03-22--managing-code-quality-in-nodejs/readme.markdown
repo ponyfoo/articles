@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/managing-code-quality-in-nodejs"><div></div></a>
 
-<h1><p>Managing Code Quality in NodeJS</p></h1>
+<h1>Managing Code Quality in NodeJS</h1>
 
 <p><kbd>build</kbd> <kbd>nodejs</kbd> <kbd>grunt</kbd> <kbd>assetify</kbd> <kbd>unit-testing</kbd></p>
 

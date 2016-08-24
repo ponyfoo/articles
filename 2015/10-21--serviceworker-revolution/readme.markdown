@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/serviceworker-revolution"><div><img src="https://i.imgur.com/QZfzKXN.jpg" alt="ServiceWorker: Revolution of the Web Platform"></div></a>
 
-<h1><p>ServiceWorker: Revolution of the Web Platform</p></h1>
+<h1>ServiceWorker: Revolution of the Web Platform</h1>
 
 <p><kbd>serviceworker</kbd> <kbd>offline-first</kbd></p>
 

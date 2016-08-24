@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/package-authoring-with-paqui"><div></div></a>
 
-<h1><p>Package Authoring with Paqui</p></h1>
+<h1>Package Authoring with Paqui</h1>
 
 <p><kbd>paqui</kbd> <kbd>js</kbd> <kbd>front-end</kbd> <kbd>npm</kbd> <kbd>bower</kbd></p>
 

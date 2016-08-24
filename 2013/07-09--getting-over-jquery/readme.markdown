@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/getting-over-jquery"><div><img src="https://i.imgur.com/9NnevKf.jpg" alt="Getting Over jQuery"></div></a>
 
-<h1><p>Getting Over jQuery</p></h1>
+<h1>Getting Over jQuery</h1>
 
 <p><kbd>js</kbd> <kbd>js-native</kbd> <kbd>jquery</kbd> <kbd>front-end</kbd> <kbd>best-practices</kbd> <kbd>dom</kbd></p>
 

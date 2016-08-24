@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/lean-development-principles"><div></div></a>
 
-<h1><p>Lean Development Principles</p></h1>
+<h1>Lean Development Principles</h1>
 
 <p><kbd>lean-startup</kbd> <kbd>book-review</kbd> <kbd>recommended-reading</kbd></p>
 

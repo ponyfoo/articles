@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/promise-worldview"><div><img src="https://i.imgur.com/lrg9mQr.jpg" alt="A Promise-Based Worldview"></div></a>
 
-<h1><p>A Promise-Based Worldview</p></h1>
+<h1>A Promise-Based Worldview</h1>
 
 <p><kbd>es6</kbd> <kbd>promise</kbd> <kbd>async-await</kbd> <kbd>food-for-thought</kbd></p>
 

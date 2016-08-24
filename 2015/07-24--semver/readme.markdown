@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/semver"><div></div></a>
 
-<h1><p>Pragmatic Semantic Versioning</p></h1>
+<h1>Pragmatic Semantic Versioning</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>semver</kbd> <kbd>npm</kbd> <kbd>pragmatism</kbd></p>
 

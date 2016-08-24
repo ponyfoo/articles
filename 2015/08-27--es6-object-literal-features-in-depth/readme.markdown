@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/es6-object-literal-features-in-depth"><div></div></a>
 
-<h1><p>ES6 Object Literal Features in Depth</p></h1>
+<h1>ES6 Object Literal Features in Depth</h1>
 
 <p><kbd>es6</kbd> <kbd>object-literals</kbd> <kbd>es6-in-depth</kbd></p>
 

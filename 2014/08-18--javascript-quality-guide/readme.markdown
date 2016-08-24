@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/javascript-quality-guide"><div></div></a>
 
-<h1><p>JavaScript Quality Guide</p></h1>
+<h1>JavaScript Quality Guide</h1>
 
 <p><kbd>javascript</kbd> <kbd>style-guide</kbd> <kbd>quality</kbd> <kbd>best-practices</kbd></p>
 

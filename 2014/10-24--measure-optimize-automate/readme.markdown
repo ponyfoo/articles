@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/measure-optimize-automate"><div></div></a>
 
-<h1><p>Measure, Optimize, Automate</p></h1>
+<h1>Measure, Optimize, Automate</h1>
 
 <p><kbd>measure</kbd> <kbd>performance</kbd> <kbd>build</kbd> <kbd>automation</kbd></p>
 

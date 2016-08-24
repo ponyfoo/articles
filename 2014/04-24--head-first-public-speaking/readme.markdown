@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/head-first-public-speaking"><div></div></a>
 
-<h1><p>Head First Public Speaking</p></h1>
+<h1>Head First Public Speaking</h1>
 
 <p><kbd>public-speaking</kbd> <kbd>jsconf</kbd> <kbd>qcon</kbd> <kbd>buildfirst</kbd></p>
 

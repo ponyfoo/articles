@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/baking-modularity-tag-editing"><div></div></a>
 
-<h1><p>Baking Modularity into Tag Editing</p></h1>
+<h1>Baking Modularity into Tag Editing</h1>
 
 <p><kbd>modularity</kbd> <kbd>insignia</kbd> <kbd>rome</kbd></p>
 

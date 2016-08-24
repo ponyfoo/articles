@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/single-page-design-madness"><div><img src="https://i.imgur.com/T9zGKon.jpg" alt="Single Page Design Madness"></div></a>
 
-<h1><p>Single Page Design Madness</p></h1>
+<h1>Single Page Design Madness</h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>js</kbd> <kbd>css</kbd> <kbd>front-end</kbd></p>
 

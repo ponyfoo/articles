@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/the-web-wars"><div></div></a>
 
-<h1><p>The Web Wars</p></h1>
+<h1>The Web Wars</h1>
 
 <p><kbd>js</kbd> <kbd>async</kbd> <kbd>architecture</kbd> <kbd>lazyjs</kbd> <kbd>politics</kbd></p>
 

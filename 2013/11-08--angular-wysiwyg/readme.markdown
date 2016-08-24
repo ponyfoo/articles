@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/angular-wysiwyg"><div></div></a>
 
-<h1><p>Angular WYSIWYG</p></h1>
+<h1>Angular WYSIWYG</h1>
 
 <p><kbd>angularjs</kbd> <kbd>wysiwyg</kbd> <kbd>ponyedit</kbd></p>
 

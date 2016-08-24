@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/json-web-tokens-vs-session-cookies"><div><img src="https://i.imgur.com/Emo7umQ.jpg" alt="JSON Web Tokens vs. Session Cookies: In Practice"></div></a>
 
-<h1><p>JSON Web Tokens vs. Session Cookies: In Practice</p></h1>
+<h1>JSON Web Tokens vs. Session Cookies: In Practice</h1>
 
 <p><kbd>jwt</kbd> <kbd>sessions</kbd> <kbd>authentication</kbd></p>
 

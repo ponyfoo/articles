@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/controversial-state-of-javascript-tooling"><div><img src="https://i.imgur.com/aGWZkRg.jpg" alt="The Controversial State of JavaScript Tooling"></div></a>
 
-<h1><p>The Controversial State of JavaScript Tooling</p></h1>
+<h1>The Controversial State of JavaScript Tooling</h1>
 
 <p><kbd>state-of-the-web</kbd> <kbd>hypermodularity</kbd></p>
 

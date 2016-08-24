@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/maintainable-oss"><div></div></a>
 
-<h1><p>Maintaining Open-Source Software</p></h1>
+<h1>Maintaining Open-Source Software</h1>
 
 <p><kbd>food-for-thought</kbd> <kbd>open-source</kbd> <kbd>triaging</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/the-architecture-of-productivity"><div></div></a>
 
-<h1><p>The Architecture of Productivity</p></h1>
+<h1>The Architecture of Productivity</h1>
 
 <p><kbd>software-development</kbd> <kbd>productivity</kbd> <kbd>architecture</kbd> <kbd>quotes</kbd></p>
 

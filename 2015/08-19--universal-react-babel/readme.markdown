@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/universal-react-babel"><div></div></a>
 
-<h1><p>Universal React with Babel, Browserify</p></h1>
+<h1>Universal React with Babel, Browserify</h1>
 
 <p><kbd>universal</kbd> <kbd>react</kbd> <kbd>babel</kbd> <kbd>es6</kbd> <kbd>browserify</kbd> <kbd>jsx</kbd></p>
 

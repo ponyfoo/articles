@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/double-edged-sword-web"><div><img src="https://i.imgur.com/9yBxDU3.jpg" alt="The Double-Edged Sword of the Web"></div></a>
 
-<h1><p>The Double-Edged Sword of the Web</p></h1>
+<h1>The Double-Edged Sword of the Web</h1>
 
 <p><kbd>opinion</kbd> <kbd>web</kbd> <kbd>state-of-the-web</kbd> <kbd>bugs</kbd></p>
 

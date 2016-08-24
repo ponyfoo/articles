@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/implementing-opensearch"><div><img src="https://i.imgur.com/pFKT6CO.jpg" alt="Implementing OpenSearch"></div></a>
 
-<h1><p>Implementing OpenSearch</p></h1>
+<h1>Implementing OpenSearch</h1>
 
 <p><kbd>seo</kbd> <kbd>opensearch</kbd></p>
 

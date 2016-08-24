@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/rehearsal-record-program-output"><div></div></a>
 
-<h1><p>Rehearsal: Record program output</p></h1>
+<h1>Rehearsal: Record program output</h1>
 
 <p><kbd>rehearsal</kbd> <kbd>utility</kbd> <kbd>presentations</kbd></p>
 

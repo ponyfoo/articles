@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/adjusting-ux-for-humans"><div></div></a>
 
-<h1><p>Adjusting UX for human visitors</p></h1>
+<h1>Adjusting UX for human visitors</h1>
 
 <p><kbd>ponyfoo</kbd> <kbd>case-study</kbd> <kbd>ux</kbd> <kbd>css</kbd></p>
 

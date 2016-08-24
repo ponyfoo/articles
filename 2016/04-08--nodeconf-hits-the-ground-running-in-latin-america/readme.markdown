@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/nodeconf-hits-the-ground-running-in-latin-america"><div><img src="https://i.imgur.com/xDa9vVY.jpg" alt="NodeConf hits the ground running in Latin America"></div></a>
 
-<h1><p>NodeConf hits the ground running in Latin America</p></h1>
+<h1>NodeConf hits the ground running in Latin America</h1>
 
 <p><kbd>nodeconf</kbd> <kbd>conference</kbd> <kbd>announcement</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/second-year-in-review"><div></div></a>
 
-<h1><p>Second Year in Review</p></h1>
+<h1>Second Year in Review</h1>
 
 <p><kbd>yearly-review</kbd> <kbd>recommended-reading</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/how-to-avoid-objectprototype-pollution"><div><img src="https://i.imgur.com/ChsBRwT.jpg" alt="How To Avoid Object.prototype Pollution"></div></a>
 
-<h1><p>How To Avoid Object.prototype Pollution</p></h1>
+<h1>How To Avoid Object.prototype Pollution</h1>
 
 <p><kbd>open-source</kbd> <kbd>poser</kbd> <kbd>iframe</kbd> <kbd>browserify</kbd></p>
 

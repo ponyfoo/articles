@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/all-aboard-the-es6-javascript-train"><div><img src="https://i.imgur.com/QWCsOQC.jpg" alt="All Aboard the ES6 JavaScript Train"></div></a>
 
-<h1><p>All Aboard the ES6 JavaScript Train</p></h1>
+<h1>All Aboard the ES6 JavaScript Train</h1>
 
 <p><kbd>es6</kbd> <kbd>tutorial</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/stop-breaking-the-web"><div><img src="https://i.imgur.com/8jT7vKl.jpg" alt="Stop Breaking the Web"></div></a>
 
-<h1><p>Stop Breaking the Web</p></h1>
+<h1>Stop Breaking the Web</h1>
 
 <p><kbd>performance</kbd> <kbd>rant</kbd> <kbd>progressive-enhancement</kbd> <kbd>graceful-degradation</kbd> <kbd>polyfill</kbd></p>
 

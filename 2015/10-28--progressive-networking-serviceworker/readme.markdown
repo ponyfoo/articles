@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/progressive-networking-serviceworker"><div><img src="https://i.imgur.com/NZc3TAI.jpg" alt="ServiceWorker and Progressive Networking"></div></a>
 
-<h1><p>ServiceWorker and Progressive Networking</p></h1>
+<h1>ServiceWorker and Progressive Networking</h1>
 
 <p><kbd>serviceworker</kbd> <kbd>progressive-networking</kbd></p>
 

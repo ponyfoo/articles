@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/deploying-node-apps-to-aws-using-grunt"><div></div></a>
 
-<h1><p>Deploying Node apps to AWS using Grunt</p></h1>
+<h1>Deploying Node apps to AWS using Grunt</h1>
 
 <p><kbd>aws</kbd> <kbd>ec2</kbd> <kbd>grunt</kbd> <kbd>nodejs</kbd> <kbd>grunt-ec2</kbd></p>
 

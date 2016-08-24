@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/server-side-react-layout-and-side-effects"><div></div></a>
 
-<h1><p>Server-side React Layout &amp; Side Effects</p></h1>
+<h1>Server-side React Layout &amp; Side Effects</h1>
 
 <p><kbd>universal</kbd> <kbd>react</kbd> <kbd>es6</kbd> <kbd>react-side-effect</kbd></p>
 

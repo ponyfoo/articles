@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/architecture-of-ecmascript-6-modules"><div></div></a>
 
-<h1><p>Architecture of ECMAScript 6 Modules</p></h1>
+<h1>Architecture of ECMAScript 6 Modules</h1>
 
 <p><kbd>es6</kbd> <kbd>modules</kbd> <kbd>harmony</kbd></p>
 

@@ -2,7 +2,7 @@
 
 <a href="https://ponyfoo.com/articles/cross-tab-communication"><div><img src="https://i.imgur.com/nnElKtk.jpg" alt="Cross-tab Communication"></div></a>
 
-<h1><p>Cross-tab Communication</p></h1>
+<h1>Cross-tab Communication</h1>
 
 <p><kbd>sharedworker</kbd> <kbd>localstorage</kbd></p>
 
