@@ -10,7 +10,7 @@
 
 <div><p><em>JavaScript</em> is one of the most <strong>loved and hated</strong> languages out there. Some, can&#x2019;t stand the stench of how obtuse it <em>appears</em> to be. Some appreciate the &#x201C;anything goes&#x201D; virtues of an interpreted language, and would marry <em>JavaScript</em> given the chance.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Behold: the <strong>&#x201C;hate speech&#x201D;</strong>.</p></div>
 

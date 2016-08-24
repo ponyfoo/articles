@@ -10,7 +10,7 @@
 
 <div><p>My first book, <a href="http://bevacqua.io/bf/book" target="_blank">JavaScript Application Design</a> is in the final stretch and due to come out very soon! The code samples are finalized and <a href="https://github.com/buildfirst/buildfirst" target="_blank">publicly available on GitHub</a>. Here&#x2019;s some free content in anticipation for the book launch.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>You can take a look at the <a href="http://manning.com/bevacqua/JSAD_MEAP_ch1.pdf" target="_blank">first chapter for free</a> which discusses the Build First approach at a high level, and sets the stage for the rest of the book. You can also get <a href="http://manning.com/free/excerpt_bevacqua.html" target="_blank">Appendix D for free</a>, although Manning will ask for your email address in exchange. If anything, you <em>must</em> take a look at the <a href="https://github.com/buildfirst/buildfirst" target="_blank">code samples on GitHub</a>. There&#x2019;s tons of them, and they cover a wild variety of topics!</p> <p><a href="http://bevacqua.io/bf/book" target="_blank"><img src="https://www.gravatar.com/avatar/cee019b251cf09f440b4427541e46cb8.png?s=400" alt="JavaScript Application Design: A Build First Approach"></a></p></div>
 

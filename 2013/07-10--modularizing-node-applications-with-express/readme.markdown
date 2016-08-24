@@ -10,7 +10,7 @@
 
 <div><p>I&#x2019;ve spent a few articles talking about <a href="https://ponyfoo.com/search/tagged/build">build processes</a>; now I want to spend a few words on <a href="https://ponyfoo.com/search/tagged/architecture">application architecture</a>, particularly in <em>Node.JS web applications using Express</em>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>In this article, I want to talk about the big picture: <strong>how to separate concerns of applications on different sub-domains in a clean manner</strong>.</p> <p>Sometimes, you need to deal with requests on two separate sub-domains in your application, say <code class="md-code md-code-inline">www</code> and <code class="md-code md-code-inline">blog</code>, but more often than not, this happens within the <em>same express application</em>. While it&#x2019;s <em>certainly possible</em> to handle the routing using a single module, I&#x2019;ve come to realize <strong>it&#x2019;s best to use a modular approach</strong>, similar to what <a href="http://www.senchalabs.org/connect/vhost.html" target="_blank">connect.vhost</a> does, but taken up a notch!</p></div>
 

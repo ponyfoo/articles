@@ -10,7 +10,7 @@
 
 <div><p>I&#x2019;ve mentioned <a href="https://ponyfoo.com/2013/01/18/continuous-integration-and-automated-deployments">CI</a> and <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">static asset management</a> in the past. Now I want to talk about code quality.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>This article is mostly a follow up on the <a href="https://ponyfoo.com/2013/01/18/continuous-integration-and-automated-deployments">CI</a> post. I&#x2019;ll describe how <a href="https://ponyfoo.com/gruntjs.com">Grunt</a> helped me change the <em>test</em> and <em>build</em> processes used in this blog&#x2019;s <a href="https://github.com/bevacqua/ponyfoo" target="_blank">engine</a>.</p> <blockquote> <p>Before using Grunt, I didn&#x2019;t really have a <strong>real</strong> build process. <em>Sure</em>, <code class="md-code md-code-inline">git push heroku master</code> <em>triggered a build</em> on their end, but I didn&#x2019;t control any of it, all I did was <code class="md-code md-code-inline">node app.js</code>.</p> </blockquote> <p>Similarly, my <a href="https://travis-ci.org/bevacqua/ponyfoo/builds" target="_blank">Travis-CI hook</a> just made sure there weren&#x2019;t any conflicts with my npm packages. I could do <em>better</em>.</p></div>
 

@@ -10,7 +10,7 @@
 
 <div><p>I believe that the event emitter implementation in Node could be made way better by providing a way to access the functionality directly without using prototypes. This would allow to simply extend any object, such as <code class="md-code md-code-inline">{}</code>, or <code class="md-code md-code-inline">{ pony: &apos;foo&apos; }</code>, with event emitting capabilities. Prototypes enforce limitations for little gain, and that&#x2019;s what we avoid by going around it and merely adding methods on existing objects, without any prototypal inheritance going on.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>In this article I&#x2019;ll explore the implementation that made its way into <a href="https://github.com/bevacqua/contra" target="_blank">contra</a>, an asynchronous flow control library I designed.</p></div>
 

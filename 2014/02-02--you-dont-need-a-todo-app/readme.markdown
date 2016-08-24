@@ -10,7 +10,7 @@
 
 <div><p>Recently, <a href="https://coderwall.com/p/kpd7ra" target="_blank">a tip on Coderwall</a>, about how to organize your TODO list, brought about <a href="https://news.ycombinator.com/item?id=7162131" target="_blank">a discussion on Hacker News</a>. In this brief post, I&#x2019;d like to provide my take on the subject.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p><img src="https://i.imgur.com/OvMZBs9.jpg" alt="todo.jpg"></p> <p>I&#x2019;ve never been much of a fan of TODO lists, definitely <em>never used a TODO application</em>, and I&#x2019;m one of those people who have no idea why they even exist, in the first place. Regardless, I&#x2019;ve always kept these kinds of lists laying around in a variety of places, some more effective than others.</p> <p>For instance, I&#x2019;ve tried using <em>Sticky Notes</em> in Windows, and Ubuntu, but these never stick with me (bad pun intended). I usually don&#x2019;t even look at them, or I close them, or hide them, it just doesn&#x2019;t do it for me. They&#x2019;re pretty, but they don&#x2019;t get the job done. I end up ditching them every time. You have to find what works well for you. <strong>What kind of task-tracking is making you actually execute on those tasks?</strong></p></div>
 

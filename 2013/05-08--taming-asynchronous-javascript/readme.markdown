@@ -10,7 +10,7 @@
 
 <div><p>Last month, a series of <em>very</em> interesting articles regarding <strong>async coding style</strong>, in Node, popped up. The discussion spanned a few more subjects than <em>just coding style</em>, it was analyzed in a more <em>theoretical level</em>, as well as a <em>deep technical level</em>, obviously on the <em>practical level</em>, and <em>even politics</em> saw the limelight in this <em>fascinating</em> argument.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>I&#x2019;ll try my best to put together a coherent article on the subject that doesn&#x2019;t put you to sleep. But I wouldn&#x2019;t bet my horse on that.</p> <p>I&#x2019;d bet <em>yours</em>, though.</p></div>
 

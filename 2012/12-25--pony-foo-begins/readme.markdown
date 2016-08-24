@@ -10,7 +10,7 @@
 
 <div><p>As I start writing this post, I set out with a purpose. To write a micro-blogging engine. The language of choice is <em>Node.JS</em>. I chose this language because I want to see how I fare in light of new horizons&#x2026;</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><h1 id="past-lives">Past Lives</h1> <p>Keep in mind this idea springed in my mind just yesterday, but I&#x2019;ll try to keep my development cycles <strong>as <em>lean</em> as possible</strong>, in order to entertain myself. In the past most of my self-driven projects lead to nowhere because <strong>I kept focusing on <em>non-functional aspects</em></strong> like performance, code-tuning, including but not limited to implementing wild and new sparkly technologies.</p> <p>That approach often lead to projects where I would spend a whole year implementing and code-tuning an <em>MVC</em> application in <em><a href="http://asp.net/" target="_blank">ASP.NET</a> 3</em>, which did all the error handling, real-time logging, corner-case handling that you could imagine, but barely consisted of a couple of forms.</p> <p>This time instead, I&#x2019;m eager to launch a <strong>minimal version</strong> of the site online <em>as soon as humanly possible</em>, and then build on it, adding features on the go. This will also give me the feel of how working with <strong>Node.JS</strong> on a production environment feels like.</p></div>
 

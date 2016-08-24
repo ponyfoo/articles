@@ -10,7 +10,7 @@
 
 <div><p>I&#x2019;ve been bitten a few times by dependencies using semver ranges such as <code class="md-code md-code-inline">^1.0.1</code> where the dependency introduced a &#x201C;non-breaking&#x201D; change that ended up actually breaking somewhere in the dependency chain because an undocumented feature was being used, a workaround stopped working, and similar undesirable situations.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>In theory, semantic versioning is a great way of keeping our packages up to date all the time, but in reality it&#x2019;s not all peaches and cream. If you or anyone in the dependency chain is relying on an undocumented feature <em>(we shouldn&#x2019;t do this, but it happens)</em> and the package in question changes their internals, or inadvertently introduces a bug <em>(we shouldn&#x2019;t do this, but it happens)</em>, or mistakenly breaks their API <em>(we shouldn&#x2019;t do this, but it happens)</em>, you&#x2019;re screwed.</p> <blockquote> <p>Even if you follow semver strictly someone somewhere up the chain is going to use your code in a way that you&#x2019;ll break.</p> </blockquote> <p>I wrote about this topic <a href="https://ponyfoo.com/articles/semver" aria-label="Pragmatic Semantic Versioning on Pony Foo">a while back</a>, and then again over the past few days on Twitter, but in this case I&#x2019;m arguing that the current model is broken and we should pin dependencies for all the modules, or find a better way of making <code class="md-code md-code-inline">npm</code> users <code class="md-code md-code-inline">shrinkwrap</code> their &#x201C;final&#x201D; packages <em>(like CLI apps or web apps)</em>.</p></div>
 

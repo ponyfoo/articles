@@ -10,7 +10,7 @@
 
 <div><p>Working on the latest chapter for my upcoming book on <a href="http://bevacqua.io/buildfirst" target="_blank">JavaScript Application Design</a>, I&#x2019;m writing about how scoping works. I want to share a particular code sample which I hope will bring some clarity to how <code class="md-code md-code-inline">this</code> works. It&#x2019;s not all dark magic, learning about <code class="md-code md-code-inline">this</code> can be <em>tremendously helpful</em> to your development as a JavaScript programmer.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Until you <em>&#x201C;get it&#x201D;</em>, this is probably how you feel about <code class="md-code md-code-inline">this</code>.</p> <p><img src="https://raw.github.com/bevacqua/buildfirst/master/images/chaos.gif" alt="chaos.gif"></p> <p>It&#x2019;s madness, right? In this brief article, I aim to demystify <code class="md-code md-code-inline">this</code>.</p></div>
 

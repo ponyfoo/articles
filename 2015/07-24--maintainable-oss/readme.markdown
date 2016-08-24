@@ -10,7 +10,7 @@
 
 <div><p>These are short-form <mark class="md-mark">&#x201C;thoughts&#x201D;</mark>, in addition to the usual longer-form articles in the blog. The <a href="https://ponyfoo.com/articles/food-for-thought-begins">goal</a> is to publish <a href="https://ponyfoo.com/articles/tagged/food-for-thought">one of these</a> every weekday. I&#x2019;d love to know what you think. You may send your questions to <a href="mailto:thoughts@ponyfoo.com">thoughts@ponyfoo.com</a>. I&#x2019;ll try to answer them over email and I <em>may publish them here, with your approval</em>. I also write <em>thoughts</em> about the <mark class="md-mark">current state of front-end development</mark>, and opinions on other people&#x2019;s articles. You can use the form to the right <em>(near the bottom in mobile)</em> to <mark class="md-mark">subscribe via email</mark>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>This morning I thought I&#x2019;d write about maintaining open-source modules. I see a lot of open-source projects online and sometimes they don&#x2019;t get all the issue-triaging love they deserve. It&#x2019;s usually the most popular projects too that end up with <strong>hundreds of open issues</strong> and dozens of in-flight pull requests. I can understand why this happens for individuals who just don&#x2019;t have the time every morning to look at issues and spend maybe 20 minutes a day looking at their issue dashboards on GitHub.</p> <p>For larger projects, it seems like <strong>wasted opportunity</strong>.</p></div>
 

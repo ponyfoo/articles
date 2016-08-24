@@ -11,7 +11,7 @@
 
 <div><p><code class="md-code md-code-inline">Array</code> prototype may be getting <code class="md-code md-code-inline">.flatten</code> and <code class="md-code md-code-inline">.flatMap</code> methods may be coming to ECMAScript in a distant future. This article describes what the proposal holds in store.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>A very early draft was <a href="http://bterlson.github.io/proposal-flatMap/" target="_blank" aria-label="Array.prototype.flatMap &amp; Array.prototype.flatten proposal">published last week</a> by the ECMAScript editor Brian Terlson. When I say very early I mean it&#x2019;s considered a <em>&#x201C;stage -1&#x201D;</em> proposal, meaning it&#x2019;s not even a formal proposal yet, just a very early draft.</p> <p>That being said, I&#x2019;m always excited about new <code class="md-code md-code-inline">Array.prototype</code> methods so I decided to write an article nonetheless. These kinds of methods were popularized in JavaScript by libraries like Underscore and then Lodash &#x2013; and some of them &#x2013; such as <code class="md-code md-code-inline">.includes</code>, have eventually started finding their way into the language.</p> <p>Shall we take a look?</p> <p><img src="https://i.imgur.com/gJJdfyS.jpg" alt="A car compactor"></p></div>
 

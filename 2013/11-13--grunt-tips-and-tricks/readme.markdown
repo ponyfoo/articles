@@ -10,7 +10,7 @@
 
 <div><p>I&#x2019;ve been meaning to compile a list of tips and tricks to improve you Grunt workflows, so here it is!</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><h6 id="in-a-pinch">In a Pinch</h6> <ul> <li>Always <code class="md-code md-code-inline">--save-dev</code></li> <li>Heroku Custom Buildpack</li> <li>Forget <code class="md-code md-code-inline">grunt.loadNpmTasks</code></li> <li>Spread out <code class="md-code md-code-inline">watch</code></li> <li>Use a nice JSHint reporter</li> <li>Keep your Gruntfile organized!</li> <li>Investigate</li> </ul> <p>These are explained and detailed below.</p></div>
 

@@ -10,7 +10,7 @@
 
 <div><p>There have always been wars in browser-land. Browsers, specs, politics, <em>lots</em> of politics. Even <em>libraries</em> had theirs.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>What once was the browser <em>utility library</em> war, has now been settled, <a href="http://jquery.com/" target="_blank">jQuery</a> won that. We are now in the midst of another one, the <em>framework</em> war, with <a href="http://angularjs.org/" target="_blank">AngularJS</a> leading the competition. There are lots to pick from though, and it isn&#x2019;t anywhere near settled. Popular frameworks include <a href="http://backbonejs.org/" target="_blank">BackboneJS</a>, <a href="http://emberjs.com/" target="_blank">EmberJS</a>, <a href="http://sproutcore.com/" target="_blank">SproutCore</a>, <a href="http://knockoutjs.com/" target="_blank">KnockoutJS</a>, just to name a few.</p> <p>Before <strong>Node</strong>, and frameworks like <strong>Angular</strong>, it wasn&#x2019;t all that common opening a web project and finding front-end code <em>organized in a way that scaled</em>. This war will probably drag on for at least a couple more years. Maybe even <em>indefinitely</em>.</p> <p>As we can see on <a href="http://todomvc.com/" target="_blank">TodoMVC</a>, there are <em>a boatload</em> of different <strong>MV</strong>* frameworks out there. I expect that many of those won&#x2019;t make it very far, while a few will gain more traction.</p> <p>I&#x2019;ll also be covering <a href="http://wiki.commonjs.org/wiki/Modules/1.1" target="_blank">CommonJS</a> vs <a href="http://requirejs.org/" target="_blank">RequireJS</a> vs <a href="http://bevacqua.github.io/lazyjs/" target="_blank">LazyJS</a>, an alternative I developed.</p></div>
 

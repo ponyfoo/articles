@@ -11,7 +11,7 @@
 
 <div><p>A proposal to implement weak references in JavaScript <em>&#x2013; which would expose weak references made possible by <a href="https://ponyfoo.com/articles/es6-weakmaps-sets-and-weaksets-in-depth" aria-label="ES6 WeakMaps, Sets, and WeakSets in Depth"><code class="md-code md-code-inline">WeakMap</code> and <code class="md-code md-code-inline">WeakSet</code></a> &#x2013;</em> is currently sitting at <em>stage 0</em>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Time for another ECMAScript proposal draft. This time we&#x2019;ll discuss <code class="md-code md-code-inline">WeakRef</code>. Weak references had their first &#x2013; indirect &#x2013; appearance in ES6, with the arrival of <a href="https://github.com/tc39/proposal-weakrefs/blob/3f0eb80e9fd67ccd1f284ff467e852fb69a364a1/specs/weakrefs.md" target="_blank"><code class="md-code md-code-inline">WeakMap</code> and <code class="md-code md-code-inline">WeakSet</code></a>.</p></div>
 

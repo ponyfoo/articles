@@ -10,7 +10,7 @@
 
 <div><p>More often than not, companies completely (and <em>irresponsibly</em>) disregard JavaScript as code that <em>should be unit tested</em>. They might test their back-end code, it may be in C#, Ruby, Java, or even PHP, or <em>just about any other language</em>. But there&#x2019;s a good chance that the front-end code is <strong>thoroughly untested</strong>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p><em>Integration level testing</em> with tools such as <a href="http://docs.seleniumhq.org/" target="_blank">Selenium</a> is nice in theory, but way too impractical (you have to set up a server), and particularly slow (loading browsers and computing the recorded actions takes its toll). As such it&#x2019;s rarely part of build processes, and it&#x2019;s run manually (with a single command, but manually nonetheless).</p> <p>So why is that JavaScript gets <em>treated so differently</em> from the rest of languages?</p></div>
 

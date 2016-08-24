@@ -10,7 +10,7 @@
 
 <div><p>It&#x2019;s been almost a year since <a href="https://ponyfoo.com/2012/12/25/pony-foo-begins">I launched this blog</a>, although I had started writing blog posts before I finished coding the web application, as a way to &#x201C;force me&#x201D; to finish coding it, instead of fooling around with meaningless &#x201C;features&#x201D;.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>I spent <em>lots</em> of my spare time, learning Node.js and putting together the blogging engine, taking my C# knowledge, and putting it to use in JavaScript. JavaScript in the server, amazing stuff! More importantly, I learned a lot about Unix systems, and <a href="https://ponyfoo.com/2013/10/10/ditch-windows-become-a-polyglot">walked away from Windows-only programs</a> for good, at least when it comes to software development. Node taught me how to write cross-platform code which just works, and that has been a rewarding take away for me. I learned a lot simply because Node was doing less on my behalf.</p> <p>In this brief post I&#x2019;ll talk about some of my experiences throughout 2013.</p></div>
 

@@ -10,7 +10,7 @@
 
 <div><p>This article aims to cover the performance gains I&#x2019;ve attained in the redesign of Pony Foo, <em>deployed last week</em> to production. I&#x2019;ll be covering a few different topics throughout the article. <strong>I&#x2019;ll explain what each optimization entails, the reasoning behind these choices, how to implement the solution, and the observed improvements</strong>. We&#x2019;ll cover the approaches listed below. Note that these are sorted in terms of <em>potential gains</em>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><ul> <li>Moving away from client-side rendering</li> <li>Backing your application front-end servers with <a href="http://nginx.org/en/docs/" target="_blank">nginx</a></li> <li>Optimizing images</li> <li>Deferring non-critical asset loading</li> <li>Inlining critical assets</li> <li>Ditching large libraries and frameworks</li> </ul> <p><img src="https://i.imgur.com/GeyKmn9.jpg" alt="lightning-bolt.jpg" title="Overly dramatic imagery depicting outstanding performance"></p> <p>If this article feels too <em>&#x201C;out of the blue&#x201D;</em> to you, maybe you&#x2019;d like to read the <a href="https://gist.github.com/bevacqua/18768dcc95d5c40434d8" target="_blank">introductory email</a> that was sent out to subscribers a few days ago.</p> <p>Are <strong>blazing fast web applications</strong> of interest to you? Read on!</p></div>
 

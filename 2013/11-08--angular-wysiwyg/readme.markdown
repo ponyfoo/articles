@@ -10,7 +10,7 @@
 
 <div><p>Building on the blocks laid out <a href="https://ponyfoo.com/2013/10/25/event-emitter-obey-and-report">in my previous article</a>, I open-sourced a <a href="http://en.wikipedia.org/wiki/WYSIWYG" target="_blank">WYSIWYG</a> editing library <em>which doesn&#x2019;t provide an UI</em>. You can <a href="https://github.com/bevacqua/ponyedit" target="_blank">find the source code here</a>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p><code class="md-code md-code-inline">ponyedit</code> allows us to interact with a <code class="md-code md-code-inline">contentEditable</code> element by following the <strong>Obey and Report</strong> pattern. It emits events whenever its state changes, and it takes commands that alter this state. This enables us to completely decouple the user interface from the component&#x2019;s functionality. In this article, we&#x2019;ll dig a little deeper into the pattern, analyzing the decisions made in ponyedit, how it came together, its resulting API, and the <a href="https://github.com/bevacqua/ponyedit/blob/master/web/assets/js/example.js" target="_blank">sample <em>bare bones</em> UI implementation</a>.</p></div>
 

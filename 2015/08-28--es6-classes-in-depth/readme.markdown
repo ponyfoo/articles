@@ -10,7 +10,7 @@
 
 <div><p>Welcome to <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a>. Are you new here? You might want to learn about <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>, the <a href="https://ponyfoo.com/articles/es6-spread-and-butter-in-depth">spread operator and rest parameters</a>, or <a href="https://ponyfoo.com/articles/es6-object-literal-features-in-depth">object literal features in ES6</a>. Today is going to be about <em>&#x201C;classes&#x201D;</em> in ES6.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><blockquote> <p>Like I did in previous articles on the series, I would love to point out that you should probably <a href="https://ponyfoo.com/articles/universal-react-babel#setting-up-babel">set up Babel</a> and follow along the examples with either a REPL or the <code class="md-code md-code-inline">babel-node</code> CLI and a file. That&#x2019;ll make it so much easier for you to <strong>internalize the concepts</strong> discussed in the series. If you aren&#x2019;t the <em>&#x201C;install things on my computer&#x201D;</em> kind of human, you might prefer to hop on <a href="http://codepen.io/" target="_blank">CodePen</a> and then click on the gear icon for JavaScript &#x2013; <em>they have a Babel preprocessor which makes trying out ES6 a breeze.</em></p> </blockquote> <p>Onwards!</p></div>
 

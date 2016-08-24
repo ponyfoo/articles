@@ -10,7 +10,7 @@
 
 <div><p>Hey there! Today I have exciting news to share. We&#x2019;ve recently started developing a prototype for a project management service called <a href="http://stompflow.com/" target="_blank">Stompflow</a>, and it has a transparent process that allows everyone to get involved. Keep reading to learn more!</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>A couple of weeks ago I&#x2019;ve started putting together <a href="http://stompflow.com/" target="_blank">Stompflow</a> <em>(although the name only came to life two days ago!)</em>, and it has a blog up. The blog is actually a fork of <a href="https://github.com/ponyfoo/ponyfoo" target="_blank">ponyfoo/ponyfoo</a>, where the styles match the product we&#x2019;re building, but other than that the platform is basically the same as this one.</p> <blockquote> <p>I&#x2019;m really excited about this, and I&#x2019;d appreciate it if you were able to contribute your thoughts and feedback.</p> </blockquote></div>
 

@@ -10,7 +10,7 @@
 
 <div><p><strong>23-12-13 Update: Now with an extra bonus tip</strong></p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Inspired by the now-outdated post <a href="http://blog.izs.me/post/1675072029/10-cool-things-you-probably-didnt-realize-npm-could-do" target="_blank">10 Cool Things You Probably Didn&#x2019;t Realize npm Could Do</a> from Isaacs, the creator of <a href="https://npmjs.org/" target="_blank"><code class="md-code md-code-inline">npm</code></a>, I set out to give you a few more tips on how to take advantage of this ridiculously well executed package manager.</p> <p><img src="https://i.imgur.com/DtHsMG5.png" alt="npm.png"></p></div>
 

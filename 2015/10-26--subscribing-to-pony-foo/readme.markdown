@@ -10,7 +10,7 @@
 
 <div><p>There&#x2019;s a few different ways you can subscribe to read Pony Foo. What&#x2019;s your favorite?</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Almost since <a href="https://ponyfoo.com/articles/first" aria-label="Pony Foo Begins">day one</a> you could follow Pony Foo using the <a href="https://ponyfoo.com/articles/feed">RSS feed</a>. Now there&#x2019;s quite a few more options. I&#x2019;d love to know what&#x2019;s your favorite and also maybe help me make your reading experience better.</p></div>
 

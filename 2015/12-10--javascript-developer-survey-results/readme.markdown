@@ -10,7 +10,7 @@
 
 <div><p>The end of year is drawing close and the JavaScript Developer Survey has now ended. The survey received an unimagined amount of replies and I&#x2019;m excited to share the results with you!</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>There were <strong>over 5000 responses</strong>, 5350 to be exact, and I can&#x2019;t wait to share the details. Before that I want to thank everyone who chipped in. This is a great time to be a part of the JavaScript community, and I&#x2019;m truly excited for things to come!</p> <p>I didn&#x2019;t anticipate such high interest, and next time I&#x2019;ll make some improvements to the format. Namely, I&#x2019;ll put the survey up on GitHub first so that the community can collaborate on the questions and options for a couple of weeks before launching the survey. That way, I&#x2019;ll be able to produce more accurate results and avoid complaints like <em>&#x201C;I am shocked you didn&#x2019;t include Emacs!&#x201D;</em>.</p> <p>Now, onto the survey results. I&#x2019;ll remain impartial in delivering the results, so that you can come to your own unbiased conclusions.</p></div>
 

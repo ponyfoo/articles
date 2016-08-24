@@ -10,7 +10,7 @@
 
 <div><p><a href="http://www.opensearch.org/" target="_blank">OpenSearch</a> is an specification that allows websites to improve <em>usability</em>. When implemented, it allows consumers to search your site <em>the way you intended them to</em>. All major browsers support OpenSearch. <strong>Google Chrome</strong> for instance, allows users to search <em>OpenSearch-enabled</em> websites by using tab in the search bar.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><h1 id="the-standard">The Standard</h1> <p>The first thing you need to do, is compose an XML file that conforms to the <strong>OpenSearch standard</strong>. I&#x2019;ll just provide an example of how I implemented it <em>in this blog</em>.</p> <pre class="md-code-block"><code class="md-code md-lang-xml"><span class="md-code-pi">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="md-code-tag">&lt;<span class="md-code-title">OpenSearchDescription</span> <span class="md-code-attribute">xmlns</span>=<span class="md-code-value">&quot;http://a9.com/-/spec/opensearch/1.1/&quot;</span> <span class="md-code-attribute">xmlns:moz</span>=<span class="md-code-value">&quot;http://www.mozilla.org/2006/browser/search/&quot;</span>&gt;</span>

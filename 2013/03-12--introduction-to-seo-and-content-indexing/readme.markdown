@@ -10,7 +10,7 @@
 
 <div><p>Just a few days ago, <a href="http://google.com/" target="_blank">Google</a> started indexing <a href="http://blog.ponyfoo.com/" target="_blank">this blog</a>, and it&#x2019;s <em>just starting to show up</em> in their search results. I wanted to go over the steps I took to make a <em>good impression</em> on them.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>I must admit that <em>I&#x2019;m no expert on SEO</em>, <strong>I just read a lot</strong>, and I think I&#x2019;ve come to amass a <em>good sense</em> in what makes a site relevant in the eyes of web crawlers such as <a href="http://google.com/" target="_blank">Google</a>.</p></div>
 

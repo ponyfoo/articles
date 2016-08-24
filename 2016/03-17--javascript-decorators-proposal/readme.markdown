@@ -12,7 +12,7 @@ We take a look at how it works and why it&#x2019;s useful.</p>
 
 <div><p>Decorators are, as most things programming, definitely <em>not a new concept</em>. That being said, they may be coming to JavaScript. There&#x2019;s a JavaScript decorators proposal in the works. It is currently sitting at stage 1 of the ECMASCript process, but may soon advance to stage 2. We take a look at how it works and why it&#x2019;s useful.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Decorators are a fairly commonplace in modern programming languages: you have <a href="https://msdn.microsoft.com/en-us/library/z0w1kczw.aspx" target="_blank" aria-label="Attributes (C# and Visual Basic)">attributes in C#</a>, they&#x2019;re called <a href="https://docs.oracle.com/javase/tutorial/java/annotations/basics.html" target="_blank" aria-label="Learning Java Annotations">annotations in Java</a>, there&#x2019;s <a href="http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/" target="_blank" aria-label="Understanding Python Decorators in 12 Steps">decorators in Python</a>, and so on. The syntax for JavaScript decorators is fairly similar to that of Python decorators &#x2013; which is probably the reason why the name decorator was picked out of an assortment of similarly named and equivalent language features.</p></div>
 

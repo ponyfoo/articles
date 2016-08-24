@@ -12,7 +12,7 @@
 
 <div><p>Once the Node.js developer&#x2019;s victim of choice, <code class="md-code md-code-inline">Promise</code> now enjoys healthy adoption on both sides of the stack, with prominent open-source contributors like <a href="https://github.com/sindresorhus" target="_blank">@sindresorhus</a> visibly leveraging them.<br> <em>What&#x2019;s changed?</em></p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><blockquote> <p><em>Just a thought.</em></p> </blockquote> <p>What was once considered a mistake by many &#x2013; inclusion of <code class="md-code md-code-inline">Promise</code> as a native language API &#x2013; is now seeing increasingly high rates of adoption. I&#x2019;d say there&#x2019;s three reasons for this.</p></div>
 

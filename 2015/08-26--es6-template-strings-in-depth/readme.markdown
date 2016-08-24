@@ -10,7 +10,7 @@
 
 <div><p>Yesterday we&#x2019;ve covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">ES6 destructuring in depth</a>, as well as some of its most common use cases. Today we&#x2019;ll be moving to <strong>template literals</strong>. What they are, and how we can use them and what good they&#x2019;re for.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Template literals are a new feature in ES6 to make working with strings and string templates easier. You wrap your text in <code class="md-code md-code-inline">`backticks`</code> and you&#x2019;ll get the features described below.</p> <ul> <li>You can interpolate variables in them</li> <li>You can actually interpolate using <em>any kind of expression</em>, not just variables</li> <li>They can be <strong>multi-line</strong>. <em>Finally!</em></li> <li>You can construct <em>raw templates</em> that don&#x2019;t interpret backslashes</li> </ul> <p>In addition, you can also define <em>a method</em> that will decide what to make of the template, instead of using the default templating behavior. There are some interesting use cases for this one.</p> <blockquote> <p>Let&#x2019;s dig into template literals and see what we can come up with.</p> </blockquote></div>
 

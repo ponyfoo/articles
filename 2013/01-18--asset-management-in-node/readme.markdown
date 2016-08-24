@@ -10,7 +10,7 @@
 
 <div><p>Client-side asset management reveals a series of issues with <strong>Node.JS</strong> and <strong>npm</strong> today:</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><ul> <li>Node.JS is just a few years old (it was born in <em>2009</em>)</li> <li>Some areas, such as client-side asset managers, don&#x2019;t have a well defined <strong>best library</strong></li> <li>Publishing packages on <a href="https://npmjs.org/" target="_blank">npm</a> is astonishingly easy</li> <li>Large amounts of packages are available</li> </ul></div>
 

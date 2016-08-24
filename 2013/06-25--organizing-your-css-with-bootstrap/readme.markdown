@@ -10,7 +10,7 @@
 
 <div><p>Now that we&#x2019;ve laid <a href="https://ponyfoo.com/2013/06/24/css-for-dummies">the basics</a> in the cascading land of awesomeness that is CSS, it&#x2019;s time to move forward and take a deeper look at <em>organization and tooling</em>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Any decently-sized codebase, even CSS, needs some sort of organization in order to keep us from going insane. Pre-processing, and a few ground rules for style writing, will help us achieve the <em>level of organization <strong>required</strong> in higher level applications</em>.</p></div>
 

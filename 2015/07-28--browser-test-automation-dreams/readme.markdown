@@ -10,7 +10,7 @@
 
 <div><p>Browser testing has been a pain for a decade now. The landscape is showing a lot of promise nowadays, and I wanted to share the approach to client-side testing I&#x2019;ve taken with <a href="https://github.com/bevacqua/dragula" target="_blank"><code class="md-code md-code-inline">dragula</code></a>. In this article, you&#x2019;ll see <em>what&#x2019;s so wonderful about Tape</em>, why TAP is the future of browser testing, and how you can leverage it to the fullest in both development flows and continuous integration environments such as <a href="https://travis-ci.org/bevacqua/dragula" target="_blank">Travis CI</a>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>By now you must&#x2019;ve read <a href="https://ponyfoo.com/articles/testing-javascript-modules-with-tape">how I use <code class="md-code md-code-inline">tape</code> for all the things</a>, or how others <a href="https://medium.com/javascript-scene/why-i-use-tape-instead-of-mocha-so-should-you-6aa105d8eaf4" target="_blank">do as well</a>. Am I the only one here amused that we wrote <em>almost identical articles</em> about Tape, and published them <strong>on the same day</strong>? We&#x2019;ve already covered why Tape is better than Mocha et al. It&#x2019;s modular, it&#x2019;s sensical, and it <a href="https://testanything.org/" target="_blank">produces TAP output</a>.</p> <p>When it comes to server-side code, consider a module like this:</p> <pre class="md-code-block"><code class="md-code">function greet (name) {
   return &apos;hi &apos; + name;

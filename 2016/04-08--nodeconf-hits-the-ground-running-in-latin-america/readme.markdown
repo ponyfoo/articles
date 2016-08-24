@@ -10,7 +10,7 @@
 
 <div><p>NodeConf Argentina is one of the first international Node.js conferences taking place in Latin American territory, and a not-for-profit community effort to push Node.js forward in Argentina and Latin America as a whole.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>We&#x2019;ve been working hard to bring NodeConf to latin america and we&#x2019;re super excited to announce the first-ever <a href="https://2016.nodeconf.com.ar/" target="_blank" aria-label="NodeConf Argentina Website">NodeConf Argentina 2016</a>.</p> <p><a href="https://2016.nodeconf.com.ar/" target="_blank" aria-label="NodeConf Argentina Website"><img src="https://i.imgur.com/N2zPQ2q.jpg" alt="A jacaranda tree"></a></p></div>
 

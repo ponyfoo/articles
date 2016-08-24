@@ -10,7 +10,7 @@
 
 <div><p>A correct<em>er</em> title for this series would be something along the lines of <strong>&#x201C;Automating autoscaled zero-downtime immutable deployments using plain old bash, <a href="http://packer.io/" target="_blank">Packer</a>, nginx, Node.js, and AWS&#x201D;</strong>, but that would&#x2019;ve been kind of long <em>(although it does fit on a tweet)</em>. My last article on the subject was two years ago, when I wrote about <a href="https://ponyfoo.com/articles/deploying-node-apps-to-aws-using-grunt">Deploying Node apps to AWS using Grunt</a>. Here&#x2019;s a <em>long overdue</em> update, containing everything I&#x2019;ve learned about deployments in the time since then.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>This detailed article series aims to explain:</p> <ul> <li>How to provision a ready-made image <em>before every deployment</em></li> <li>How to make that image set up <code class="md-code md-code-inline">nginx</code>, <code class="md-code md-code-inline">node</code>, and your web application</li> <li>How to dynamically update DNS record sets</li> <li>How to let AWS handle scaling on your behalf</li> <li>How to <strong>avoid downtime</strong> during deployments</li> <li>How to clean up all this mess</li> <li>How to do all of the above in <strong>plain old bash</strong></li> <li><em>Why any of the above matters</em></li> </ul> <p>In this article <strong>I&#x2019;ll start by explaining why doing any of this matters</strong>, and then move on to <em>creating <a href="http://chadfowler.com/blog/2013/06/23/immutable-deployments/" target="_blank">immutable</a> images</em> ready for deployment using <a href="http://packer.io/" target="_blank">Packer</a>.</p></div>
 

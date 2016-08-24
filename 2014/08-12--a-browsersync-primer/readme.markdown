@@ -10,7 +10,7 @@
 
 <div><p><a href="http://www.browsersync.io/" target="_blank">BrowserSync</a> is a browser testing tool, similar to <a href="http://livereload.com/" target="_blank">LiveReload</a>. It also synchronizes across browsers and is going to provide <a href="https://twitter.com/BrowserSync/status/498161493418840064" target="_blank">HTML injection</a> in the very near future, alongside with the CSS and JavaScript injection it already features.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p><a href="http://www.browsersync.io/" target="_blank"><img src="https://cloud.githubusercontent.com/assets/934293/3879487/18b2f866-2179-11e4-8098-3467f24e5061.png" alt="browsersync.png"></a></p> <p>This tool enables rapid continuous development by saving you the trouble of refreshing the view you are debugging whenever you make changes to the JavaScript or CSS code.</p> <p>You won&#x2019;t really be able to grasp how valuable this is until you give it a try for yourself. This primer aims to encourage you to do just that!</p> <p>In this article I&#x2019;ll show you how to use it with your favorite tools. Grunt, Gulp, <code class="md-code md-code-inline">npm run</code> and <code class="md-code md-code-inline">nodemon</code>.</p></div>
 

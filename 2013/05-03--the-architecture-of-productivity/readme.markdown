@@ -10,7 +10,7 @@
 
 <div><p>It&#x2019;s been a while since I last blogged. I went on vacation, switched jobs, and have been generally busy. I&#x2019;m now working <em>full-time remote</em>, which will <em>hopefully</em> give me some more time to dedicate to this blog.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>A few days ago, I read an <a href="https://plus.google.com/116904230181415286707/posts/DnAMAN5sUR8" target="_blank">interesting rant</a>, written by <a href="https://github.com/ry" target="_blank">Ryan Dahl</a>, about software development. It prompted me to write this blog post about it, and share my thoughts on the matter. You can find his post at the end of this entry.</p> <p><a href="https://github.com/ry" target="_blank">Ryan</a> <strong>boldly</strong> indicates that <em>all that matters in software development is user experience</em>. I disagree with this. And here&#x2019;s <em>why</em>.</p></div>
 

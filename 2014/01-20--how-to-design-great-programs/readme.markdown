@@ -10,7 +10,7 @@
 
 <div><p>This article is a recollection of common-sense application design practices I usually follow when building things. I felt like grouping them together in a blog post, for future reference. I&#x2019;ll talk not so much about implementation, but more about <strong>program design theory</strong>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Below are the central arguments I&#x2019;ll touch on in the article.</p> <ol> <li><strong>Do one thing</strong>, and <em>do it well</em></li> <li>Provide excellent API interfaces</li> <li><code class="md-code md-code-inline">README</code> Driven Development</li> <li>Open-Source</li> <li>Write Tests</li> </ol> <p>Let&#x2019;s go over each of these in turn.</p> <p><img src="https://i.imgur.com/LuHFbbN.jpg" alt="freebeer.jpg" title="No, seriously. There&apos;s no beer. Go away."></p></div>
 

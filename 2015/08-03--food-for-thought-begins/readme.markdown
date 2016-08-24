@@ -10,7 +10,7 @@
 
 <div><p>I&#x2019;ve been toying with the idea of releasing short-form &#x201C;thoughts&#x201D;, in addition to the usual longer-form articles in the blog. The <strong>goal is to publish one of these every weekday</strong>. I&#x2019;d love to know what you think. You may send your questions to <a href="mailto:thoughts@ponyfoo.com">thoughts@ponyfoo.com</a>. I&#x2019;ll try to answer them over email and I <em>may publish them here, with your approval</em>. I&#x2019;m also going to be writing thoughts about the <mark class="md-mark">current state of front-end development</mark>, and maybe commenting on other people&#x2019;s articles. You can use the form to the right <em>(near the bottom in mobile)</em> to <mark class="md-mark">subscribe via email</mark>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p><em>A reader from Manila wrote:</em></p> <blockquote> <p>I hope you&#x2019;re doing well. I&#x2019;ve been following your progress for quite some time and would like to pick your brain about something, if you don&#x2019;t mind.</p> <p>I&#x2019;ve noticed over the last year or so you&#x2019;ve really had, for lack of a better phrase, a meteoric rise within the community. You&#x2019;re publishing articles like crazy, releasing high quality libraries left and right and of course have a great book out. A little over a year or two ago, you were relatively quiet it seems.</p> <p>I&#x2019;m currently trying to become more involved in the community at large and to actually start a group here in Manila. Basically, I&#x2019;m just wondering if you had any tips, or lessons learned, whatever. :)</p> </blockquote></div>
 

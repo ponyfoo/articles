@@ -10,7 +10,7 @@
 
 <div><p>We&#x2019;ve looked at doing some of the things that you can do in native code. So far, we&#x2019;ve covered AJAX, event handling, event delegation, DOM querying, and DOM manipulation. If you haven&#x2019;t <em>already</em> read that, you <a href="https://ponyfoo.com/2013/06/10/uncovering-the-native-dom-api"><em>probably should</em></a>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Why do we <em>really</em> use jQuery? Sure, it simplifies things. But do we really need <em>all those abstractions</em>? Can&#x2019;t we get away with just a few of <em>the most basic of them</em>? In this article I&#x2019;ll examine the most frequently used portions of its API, and look at the different ways we can <em>rewrite</em> those everyday utilities <em>using <strong>plain JavaScript</strong></em>.</p></div>
 

@@ -10,7 +10,7 @@
 
 <div><p>I seem to have stumbled across a bug regarding regular expressions using the <code class="md-code md-code-inline">g</code> modifier, where they seem to preserve internal state across calls to <code class="md-code md-code-inline">RegExp.prototype.test</code>. I&#x2019;m looking for confirmation or a <em>&#x201C;you&#x2019;re stupid, this is what is going on&#x201D;</em> dismissal.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Apparently regular expressions with the <code class="md-code md-code-inline">g</code> modifier are stateful. See for yourself.</p></div>
 

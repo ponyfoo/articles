@@ -10,7 +10,7 @@
 
 <div><p>The King is Dead, Long Live the King.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Google Reader <a href="http://techcrunch.com/2013/07/01/we-were-the-1000-goodbye-google-reader/" target="_blank">died</a> last night. I wanted to make a brief blog post to help you rebuild (or even build from scratch) your news reading experience.</p> <p>I find keeping up with tech news <strong>vital</strong> in my growth as the information devouring sponge I aspire to be, every day.</p> <blockquote> <p>I&#x2019;ll go over some of the tools I use, and then mention <em>useful sites</em>, as well as <em>bootstrapping options</em>.</p> </blockquote></div>
 

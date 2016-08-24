@@ -10,7 +10,7 @@
 
 <div><p>In the <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">next post</a> I&#x2019;ll get back to the meat of how I&#x2019;m making progress with the blog application. This time however, I wanted to deviate a little, and talk about <a href="https://travis-ci.org/" target="_blank">Continuous Integration</a>, and <strong>automated build processes</strong>, the like of which you can achieve with <strong>PaaS services</strong> (also known as <a href="http://en.wikipedia.org/wiki/Platform_as_a_service" target="_blank">Platform as a Service</a>), such as <a href="https://appharbor.com/" target="_blank">AppHarbor</a>, <a href="http://www.heroku.com/" target="_blank">Heroku</a>, and many others.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><h1 id="continuous-integration">Continuous Integration</h1> <p>Configuring <a href="https://travis-ci.org/bevacqua/ponyfoo" target="_blank" aria-label="ponyfoo build status on Travis CI">Travis CI</a> was tricky to get right. I configured my <a href="http://about.travis-ci.org/docs/user/build-configuration/" target="_blank" aria-label="Configuring your Travis CI build">.travis.yml</a> file like this:</p> <pre class="md-code-block"><code class="md-code">language: node_js
 

@@ -10,7 +10,7 @@
 
 <div><p>I&#x2019;ve recently upgraded Pony Foo to use the <code class="md-code md-code-inline">https</code> protocol, something I&#x2019;ve been meaning to do for a while. It&#x2019;s super easy to do so, and here&#x2019;s a few simple steps you can take to secure your own apps. The procedure is quite agnostic when it comes to your hosting stack, and you should definitely implement <code class="md-code md-code-inline">https</code> on your own services as well!</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>There has been a tremendous push lately towards securing the Internet, and there&#x2019;s been even talk about browsers warning users about visiting <code class="md-code md-code-inline">http</code> sites, as an incentive for site owners to upgrade their services to more secure protocols. Initiatives like <a href="https://letsencrypt.org/" target="_blank" aria-label="Let&#x2019;s Encrypt is a new Certificate Authority">Let&#x2019;s Encrypt</a> are spearheading the revolution, and it&#x2019;s about time we start getting more serious about security.</p> <p>While, yes, dealing with certificates is painful and expensive, there&#x2019;s also ways of setting up a secure version of your sites that are free and effortless. I&#x2019;ve recently set up <code class="md-code md-code-inline">https</code> for <code class="md-code md-code-inline">ponyfoo.com</code>, which went live today, and I&#x2019;m glad I get to share the details of how I made that happen.</p></div>
 

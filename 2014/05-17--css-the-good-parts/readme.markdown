@@ -10,7 +10,7 @@
 
 <div><p>I&#x2019;ve decided to pour my thoughts of <strong>how the CSS of an application should be modelled</strong> into a formal style guide. I&#x2019;ve been using this approach for over a year, and now I&#x2019;m also moving to implement it on the job, as well.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>You can find the <em>latest version</em> at <a href="https://github.com/bevacqua/css" target="_blank">css</a> on GitHub. <a href="https://github.com/bevacqua/css/issues" target="_blank">Pull requests</a>, suggestions, ideas, and critique are all welcome!</p></div>
 

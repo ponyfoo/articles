@@ -10,7 +10,7 @@
 
 <div><p>I&#x2019;m not sure anyone needs convincing that <strong>Node.JS is freaking awesome</strong>, little has been said otherwise. Many of the people reading this blog are <em>already experienced Node developers</em>, but maybe we could help newcomers ramp up as fast as the technology itself is ramping up.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><blockquote> <p>If you are on the verge of <a href="https://ponyfoo.com/2012/12/29/single-page-design-madness">trying something new</a>, though, then this article has high hopes of you. I can <em>personally guarantee</em> you won&#x2019;t regret giving <strong>Node.JS</strong> a test drive.</p> </blockquote> <p>I&#x2019;ll try to cover as much as possible, but this is meant to be just <em>an overview</em>. You have to <strong>explore by yourself</strong>; I&#x2019;ll give you the tools to do just that, forking off of what I&#x2019;ve learned <em>over the last year</em>. JavaScript <a href="https://ponyfoo.com/2013/02/15/javascript-is-awesome">might be awesome</a>, but <strong>Node is even more so</strong>. That rhymes.</p></div>
 

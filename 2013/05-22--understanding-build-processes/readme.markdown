@@ -10,7 +10,7 @@
 
 <div><p>A <em>task runner</em> helps you automate everything you need to get an environment functional. Configure, build, run tests, and execute your web server. But there&#x2019;s more than that to a build system. Particularly, in the <em>local environment</em>, there&#x2019;s a lot you could do to improve <em>development productivity</em>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>The single most important aspect of even resorting to a build system is producing a <strong>one-step build process</strong>. This means doing everything with a simple command, such as <code class="md-code md-code-inline">grunt dev</code>. We&#x2019;ll look at ways to make that happen, and how to improve it as your applications grow. I&#x2019;ll also mention some of the most common tasks in the process, as well as some that aren&#x2019;t <em>as widely adopted</em>.</p> <p>Even though I&#x2019;ll be talking about <a href="http://gruntjs.com/" target="_blank">Grunt</a>, I won&#x2019;t get <em>intimate</em> with the tool itself. The concepts I&#x2019;ll describe should apply to any decent build tool you might pick for the job.</p></div>
 

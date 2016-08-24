@@ -10,7 +10,7 @@
 
 <div><p>Conventions are a great thing. Frameworks such as Ruby on Rails and <a href="http://asp.net/" target="_blank">ASP.NET</a> MVC are good examples of conventional MVC implementations. Conventions are essentially sensible defaults. For example, when you call <code class="md-code md-code-inline">return View()</code> without any arguments in <a href="http://asp.net/" target="_blank">ASP.NET</a> MVC, the framework does the reasonable thing: render the default view that maps to the controller action. This type of behavior can be observed throughout the framework.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>When it comes to the front-end, conventions aren&#x2019;t as popular as I&#x2019;d like. In this article we&#x2019;ll take a look at <a href="https://github.com/bevacqua/measly" target="_blank"><code class="md-code md-code-inline">measly</code></a>, a conventional layer on top of <code class="md-code md-code-inline">XMLHttpRequest</code> you can use to get started in the conventional world.</p></div>
 

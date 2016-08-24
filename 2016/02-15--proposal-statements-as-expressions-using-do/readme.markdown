@@ -11,7 +11,7 @@
 
 <div><p>A proposal for <code class="md-code md-code-inline">do</code> statements has been classified as <strong>Stage 0</strong> for a while, and it might be an interesting solution for some problems we can find in JavaScript.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>When JavaScript expressions are evaluated, they produce a single value.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-number">3</span> * <span class="md-code-number">10</span>
 <span class="md-code-comment">// &lt;- 30</span>

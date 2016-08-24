@@ -10,7 +10,7 @@
 
 <div><p>Yesterday, we learned about how to set up a build process for an universal ES6 React app using Babel, and <a href="https://ponyfoo.com/articles/universal-react-babel">how to have that React app render &#x201C;universally&#x201D;</a> &#x2013; on both the server-side and the client-side. Today we&#x2019;ll add <em>routing capabilities</em> to the application so that it isn&#x2019;t <strong><em>literally</em> a &#x201C;single-page app&#x201D;</strong> anymore.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>One thing there&#x2019;s to like about React for sure is that it&#x2019;s only the <strong>V</strong> in <strong>V*</strong> <em>(View, Whatever)</em>. When it comes to routing in your React app, you could implement it yourself by hand or you could use <a href="https://github.com/rackt/react-router" target="_blank"><code class="md-code md-code-inline">react-router</code></a>. Implementing it yourself might sound tempting at first, but <code class="md-code md-code-inline">react-router</code> makes it easy to expand the <em>already-universal</em> app we have with routing capabilities without having to do much different things in either the server or the browser.</p></div>
 

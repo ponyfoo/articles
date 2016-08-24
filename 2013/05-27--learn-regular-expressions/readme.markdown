@@ -10,7 +10,7 @@
 
 <div><p><strong>Regular Expressions</strong> are a fundamental tool <strong><em>every</em></strong> programmer should understand, at the very least on a basic level. I might not make an expert in regex out of you, but at least, you should be able to comprehend what they do, and create simple ones yourself.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p><a href="http://i.imgur.com/UTlGckN.png" target="_blank">TL;WR cheatsheet</a></p> <p>I&#x2019;ll try my best not to drown you in a sea of technical stuff, but regular expressions <strong>are</strong> a complicated matter, and learning them is no easy feat.</p> <p><a href="https://xkcd.com/208/" target="_blank"><img src="https://i.imgur.com/fp19SqK.jpg" alt="stand-back-regex.jpg"></a></p></div>
 

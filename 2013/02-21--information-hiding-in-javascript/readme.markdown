@@ -10,7 +10,7 @@
 
 <div><p>Even though it&#x2019;s tricky at first, if you are used to <em>classical</em> object-oriented languages, it&#x2019;s easy (and <em>highly encouraged</em>) to perform <strong>information hiding</strong> in JavaScript. There are more than a few methods by which you can hide information within <em>privileged scopes</em>. <strong>Closures, properties (getters and setters), and factories</strong>, are all ways in which you can improve your designs by <strong>hiding away the complexity</strong> behind the <em>public interfaces</em> your code exposes.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Information hiding results in <em>cleaner, conciser code, that&#x2019;s easier to read</em>, and therefore, <strong>more maintainable</strong> (and easily <em>testable</em>).</p></div>
 

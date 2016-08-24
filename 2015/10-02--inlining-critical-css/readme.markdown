@@ -10,7 +10,7 @@
 
 <div><p>During the <a href="https://ponyfoo.com/articles/redesign" aria-label="Pony Foo Gets a Face Lift">redesign</a> I was faced with a problem and I had to rethink the way I inline CSS in my blog, so I figured it&#x2019;d be a good time to write about it in more detail. Critical CSS inlining is a technique you can use to speed up the performance of your web apps by, <em>well</em>, inlining the &#x201C;critical&#x201D; CSS in a <code class="md-code md-code-inline">&lt;style&gt;</code> tag, and deferring the rest of your CSS. How does that work?</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>First off, we have to identify the critical content of a page. In my case, what&#x2019;s visible below constitutes the critical content, also known as the content that&#x2019;s <em>&#x201C;above the fold&#x201D;</em>.</p> <p><a href="https://ponyfoo.com/articles/redesign" aria-label="Pony Foo Gets a Face Lift"><img src="https://i.imgur.com/qVWJl7L.png" alt="Redesign article above the fold"></a></p> <p>This is the piece of the site we want to get in the face of humans immediately. That&#x2019;s not just limited to blogs or other content distribution sites, web apps should also strive to serve the content above the fold as fast as possible to their users, and inlining critical CSS is an excellent way of shaving milliseconds from your load time.</p></div>
 

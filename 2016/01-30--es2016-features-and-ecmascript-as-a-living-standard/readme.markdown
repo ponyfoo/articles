@@ -10,7 +10,7 @@
 
 <div><p>As it turns out, ES2016 <em>&#x2013; also known colloquially as ES7 &#x2013;</em> will be comprised of a very small feature set. This article explains the new features in ES2016.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>ECMAScript editor <a href="https://twitter.com/bterlson" target="_blank" aria-label="@bterlson on Twitter">@bterlson</a> reported last week that features in stage 4 were going to make it into ES2016, and there were just two features in that state. You can check out the <a href="https://github.com/tc39/ecma262/blob/master/README.md" target="_blank" aria-label="tc39/ecma262 on GitHub">current state of all ECMAScript proposals</a> on GitHub.</p> <blockquote class="twitter-tweet"><p><a href="https://twitter.com/rauschma">@rauschma</a> Any that are stage 4 by Thursday will make it in, yes.</p>&#x2014; Brian Terlson (@bterlson) <a href="https://twitter.com/bterlson/status/692427832555892736">January 27, 2016</a></blockquote> <p>The features in question are <code class="md-code md-code-inline">Array.prototype.includes</code> and the exponentiation operator. We&#x2019;ll go over both of them explaining what they do and looking at a couple of examples &#x2013; note that these are very simple features, so we&#x2019;ll keep it short!</p> <p>Lastly, we&#x2019;ll talk a little bit about where ES6 is going in the future. Shall we?</p></div>
 

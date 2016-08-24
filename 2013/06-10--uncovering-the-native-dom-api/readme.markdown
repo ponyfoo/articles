@@ -10,7 +10,7 @@
 
 <div><p>JavaScript libraries such as <strong>jQuery</strong> serve a great purpose in enabling and <em>normalizing cross-browser behaviors</em> of the <a href="https://developer.mozilla.org/en/docs/DOM" target="_blank">DOM</a> in such a way that it&#x2019;s possible to use the same interface to interact with many different browsers.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>But they do so at a price. And that price, in the case of some developers, is having no idea what the heck the library is actually doing when we use it.</p> <blockquote> <p>Heck, it works! Right? Well, <em>no</em>. You should know what happens behind the scenes, in order to better <em>understand what you are doing</em>. Otherwise, you would be just <a href="http://pragprog.com/the-pragmatic-programmer/extracts/coincidence" target="_blank">programming by coincidence</a>.</p> </blockquote> <p>I&#x2019;ll help you explore some of the parts of the <strong>DOM API</strong> that are usually abstracted away behind a little neat interface in your library of choice. Lets kick off with AJAX.</p></div>
 

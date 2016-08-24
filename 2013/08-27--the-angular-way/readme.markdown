@@ -10,7 +10,7 @@
 
 <div><p>For the past few months I&#x2019;ve been sailing around the world of Angular. Today I can hardly imagine myself doing day to day coding on a large front-end web application without <em>some kind</em> of data binding framework, such as <a href="http://angularjs.org/" target="_blank">Angular.js</a>, <a href="http://backbonejs.org/" target="_blank">Backbone.js</a>, and <a href="http://underscorejs.org/" target="_blank">friends</a>; and I can&#x2019;t believe I&#x2019;ve done so in the past.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>I might however be <em>a bit biased</em>, considering the application I&#x2019;m working on is a <strong>PhotoShop</strong>esque editor in the browser, which presents the same data in <em>radically different</em> ways.</p> <ul> <li>Layers are presented graphically, taking up large portions of the screen. They are also listed in a panel where you can delete them.</li> <li>When you select a layer it gets the typical dashed line around its edges, and it also gets highlighted in the list view.</li> <li>Similarly, properties like the dimensions of a layer show up both in a panel and define their size upon the canvas.</li> <li>The panels I&#x2019;ve mentioned can be dragged around, collapsed, and closed.</li> </ul></div>
 

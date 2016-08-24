@@ -10,7 +10,7 @@
 
 <div><p>The article covers designing a JavaScript API to deal with <strong>asynchronous data inputs and outputs</strong> using generators to <em>succinctly</em> describe a set of operations. Promises can also be used to <em>chain</em> other operations after the output has been registered.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Coming up with practical code examples to keep a book interesting is &#x2013; for me &#x2013; one of the hardest aspects of writing engaging material. I find that the best examples are the ones that get you thinking about API design and coding practices, beyond just explaining what a specific language feature does. That way, if you already understand the language feature at hand, you might still find the practical thought exercise interesting.</p> <p>The example in question involved finding a use case for <code class="md-code md-code-inline">return</code> in a generator function. <a href="https://ponyfoo.com/articles/es6-generators-in-depth" aria-label="ES6 Generators in Depth on Pony Foo">As we know</a>, generators treat <code class="md-code md-code-inline">return</code> statements differently from <code class="md-code md-code-inline">yield</code> expressions. Take for example the following generator.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span>* <span class="md-code-title">numbers</span> <span class="md-code-params">()</span> </span>{
   <span class="md-code-keyword">yield</span> <span class="md-code-number">1</span>;

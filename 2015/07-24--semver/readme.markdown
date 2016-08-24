@@ -10,7 +10,7 @@
 
 <div><p>These are short-form <mark class="md-mark">&#x201C;thoughts&#x201D;</mark>, in addition to the usual longer-form articles in the blog. The <a href="https://ponyfoo.com/articles/food-for-thought-begins">goal</a> is to publish <a href="https://ponyfoo.com/articles/tagged/food-for-thought">one of these</a> every weekday. I&#x2019;d love to know what you think. You may send your questions to <a href="mailto:thoughts@ponyfoo.com">thoughts@ponyfoo.com</a>. I&#x2019;ll try to answer them over email and I <em>may publish them here, with your approval</em>. I also write <em>thoughts</em> about the <mark class="md-mark">current state of front-end development</mark>, and opinions on other people&#x2019;s articles. You can use the form to the right <em>(near the bottom in mobile)</em> to <mark class="md-mark">subscribe via email</mark>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>When it comes to semantic versioning, the definition usually depends on who you ask. Everyone has their opinion on what constitutes a <code class="md-code md-code-inline">patch</code>, what makes a <code class="md-code md-code-inline">minor</code>, and what warrants a <code class="md-code md-code-inline">major</code> version bump. In this article, I share my views. Keep in mind this is my opinion and it&#x2019;s mostly constrained to the sort of software I release: open-source modules that are usually best served with a web browser.</p></div>
 

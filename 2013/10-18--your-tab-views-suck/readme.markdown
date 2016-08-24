@@ -10,7 +10,7 @@
 
 <div><p>What if I told you&#x2026; we can write a <strong>tabbed UI view</strong> without <em>using JavaScript</em>, which works in every modern browser, and even clocks around 20 <em>total</em> lines of code?</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>In this article we&#x2019;ll discuss the <strong>pitfalls of resorting to jQuery UI</strong> and its ilk, and then compare it with an approach that <em>doesn&#x2019;t even involve any JavaScript</em>, but merely some lateral thinking and a couple of CSS tricks.</p></div>
 

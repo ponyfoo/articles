@@ -10,7 +10,7 @@
 
 <div><p>With <a href="http://gruntjs.com/" target="_blank">Grunt</a>, the JavaScript task runner, it&#x2019;s becoming <em>increasingly easy to tackle continuous development</em>. The goal is being able to work uninterruptedly in our code-base while developing. To this effect, there&#x2019;s quite a few things you could do.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><ul> <li>Replace <code class="md-code md-code-inline">node</code> with <code class="md-code md-code-inline">nodemon</code> (for <em>development</em>), which restarts the <code class="md-code md-code-inline">node</code> process whenever relevant files change</li> <li>Use the <a href="https://github.com/gruntjs/grunt-contrib-watch" target="_blank">watch</a> task in Grunt to re-execute relevant tasks when files change</li> <li>You <em>should</em> invest in a text editor <a href="http://superuser.com/q/366132/48116" target="_blank">that saves files for you</a>!</li> <li>Using <a href="http://livereload.com/" target="_blank">livereload</a>, so that you don&#x2019;t even have to refresh the browser</li> </ul> <p>How the hell do we make sense of all of that, and combine them in such a way that they don&#x2019;t collide into each other and die? Well, <strong>read on</strong>.</p></div>
 

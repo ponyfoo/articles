@@ -11,7 +11,7 @@
 
 <div><p>A string padding proposal for ECMAScript is <a href="https://github.com/tc39/ecma262" target="_blank" aria-label="tc39/ecma262 on GitHub">at stage 3</a>. Let&#x2019;s dig into what it entails.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>There&#x2019;s an ECMAScript proposal to standarize <code class="md-code md-code-inline">String.prototype.padStart</code> and <code class="md-code md-code-inline">String.prototype.padEnd</code>. String padding is something that we&#x2019;ve always had come across or implement ourselves one way or another.</p> <p>Care to take a look?</p> <p><img src="https://i.imgur.com/4obNc9t.jpg" alt="Cat pads"></p> <p><em>(No, that&#x2019;s not the kind of pads I was referring to. Yes, that&#x2019;s my cat. Yes, she&#x2019;s on top of my fridge. No, I never question her authority. Fine, I&#x2019;ll get back on topic.)</em></p></div>
 

@@ -10,7 +10,7 @@
 
 <div><p><a href="http://gulpjs.com/" target="_blank">Gulp</a> is a recently spawned streaming build system which shows a lot of promise. It brings <a href="https://github.com/gulpjs/gulp/" target="_blank">a really terse code-base</a> to the table, which you can actually walk through <em>in under ten minutes</em>. That&#x2019;s a lot to say when pitching it against Grunt, which is <a href="https://github.com/gruntjs/grunt" target="_blank">quite larger</a> than that.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Remember Grunt? I&#x2019;ve <a href="https://ponyfoo.com/search/tagged/grunt">blogged about it extensively</a> in the past, and I&#x2019;m <a href="http://bevacqua.io/buildfirst" target="_blank">even writing a book</a> which features Grunt as its go-to build tool. It&#x2019;s an awesome <em>tool</em>, you should try it some time.</p> <p><a href="http://www.100percentjs.com/just-like-grunt-gulp-browserify-now/" target="_blank">Some people</a> claim that Grunt will eventually be gulped by Gulp, and surely more will follow. I find this to be <a href="http://www.youtube.com/watch?v=kRhW_zMlf0Y" target="_blank">outrageous, egregious, preposterous</a>. It&#x2019;s not as clear cut, Grunt has <em>a lot of benefits</em> over Gulp, and so does Gulp over Grunt.</p> <p>In this article I aim to <strong>introduce Gulp</strong>, as it&#x2019;s fairly new, having been released <em>around 6 months ago</em>. Then, <em>I&#x2019;ll compare it with Grunt</em>, pointing out which tool does what better, and why.</p> <p><a href="http://gulpjs.com/" target="_blank"><img src="https://i.imgur.com/yFeBvMO.png" alt="gulp.png" title="gulp.png"></a></p></div>
 

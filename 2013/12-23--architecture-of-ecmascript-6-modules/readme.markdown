@@ -10,7 +10,7 @@
 
 <div><p>This blog post contains useful information if you&#x2019;re interested in the latest developments on ECMAScript 6 Harmony modules and they current state of their implementation. The original post <a href="https://gist.github.com/wycats/51c96e3adcdb3a68cbc3" target="_blank">can be found here</a>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p><img src="https://i.imgur.com/bky9ghC.png" alt="es6.png"></p> <p>At the bottom you&#x2019;ll find a list of useful <em>related links</em>.</p></div>
 

@@ -10,7 +10,7 @@
 
 <div><p>Web design today is hard to get right. I&#x2019;ve been meaning to talk about front-end design for a while, but I couldn&#x2019;t get the subject <em>quite right</em>. Seeing how detailing the <a href="https://ponyfoo.com/2013/06/10/uncovering-the-native-dom-api">underlying browser technology</a> in JavaScript, I figured I&#x2019;d do the same for <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank">CSS</a>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>I&#x2019;ll be taking a different approach, though. Rather than explain what libraries do, I&#x2019;ll try explaining why a need for them was born, and walk you through the most basic stuff, such as selectors, and follow up by tackling complex topics such as fonts, <a href="http://twitter.github.io/bootstrap/" target="_blank">Bootstrap</a>, pre-processing, and more.</p></div>
 

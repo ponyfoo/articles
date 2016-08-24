@@ -10,7 +10,7 @@
 
 <div><p>If you are using Grunt, you really have <strong>no excuse</strong> not to be using CSS spritesheets. If you aren&#x2019;t using Grunt <em>yet</em>, then you should know that a well thought-out workflow with Grunt will allow you to <em>seamlessly integrate icons together</em> into a spritesheet during your builds.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>In case you&#x2019;ve been living undersea for the last decade, I wonder how you&#x2019;re still breathing. Sprites are <a href="http://en.wikipedia.org/wiki/Sprite_(computer_graphics)" target="_blank">a very old concept</a>, originating in game engines, which were more performant when they just loaded a <em>single graphic</em> containing all the frames needed to render an animation. Today, spritesheets are a well-known improvement over using a single image for each icon in modern websites, but they are still slower to gain ground than they could be.</p> <p>Grunt makes this super-easy for us, and in this article I want to demonstrate exactly how I use it to generate spritesheets.</p></div>
 

@@ -10,7 +10,7 @@
 
 <div><p>We can learn a lot about usability just by <em>observing everyday objects</em>, applications and interfaces. This morning I was flying to London from Buenos Aires, when I realized <em>something awkward</em> about the UI on the plane&#x2019;s in flight system, which allows you to track the progress and duration of the flight, or occasionally watch a movie.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>The UI was <em>mostly in english</em>, except for a couple of views which were bilingual, that is, english with an spanish translation below. Additionally, a portion of the flight map would, in turn, be displayed in either english or spanish. This was <strong>further aggravated</strong> by the fact that you couldn&#x2019;t really pick a language on the console, so it didn&#x2019;t really help much if you weren&#x2019;t capable of reading english, and if you were, the <strong>half-baked</strong> spanish translations just <em>got in your way</em>.</p></div>
 

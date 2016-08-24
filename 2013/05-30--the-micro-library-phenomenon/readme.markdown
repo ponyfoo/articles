@@ -10,7 +10,7 @@
 
 <div><p>As of late, there seems to be a <em>steady trend</em> towards minimalist <a href="https://developer.mozilla.org/en/docs/DOM" target="_blank">DOM</a> (and <strong>BOM</strong>) abstractions, these micro-libraries generally trade <em>functionality and flexibility</em> for <em>performance boosts.</em></p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>The two most <em>common benefits</em> of using this kind of modules are:</p> <ul> <li>Dramatic <strong>performance boosts</strong>, sometimes by <em>a factor of ten</em>, or similar</li> <li><strong>Lightweight</strong> footprints. Less functionality translates into <em>less bandwidth going to waste</em></li> </ul> <p>You can browse for micro libraries <a href="http://microjs.com/" target="_blank">here</a>. I&#x2019;ll examine a couple, and then <em>theorize</em> on the subject.</p></div>
 

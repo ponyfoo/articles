@@ -10,7 +10,7 @@
 
 <div><p>Catching, or even <em>tracing</em> errors in Node applications can be <em>tricky sometimes</em>. I wanted to share a few practices that can help you <strong>keep your application up in most scenarios</strong>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>We shouldn&#x2019;t ever rely on the luxury of <em>hoping for the best</em> when it comes to <em>production application uptime</em>. There are a series of steps we can take to <em>prevent and minimize fatal exceptions</em>, while <strong>maximizing uptime and improving monitoring</strong>.</p></div>
 

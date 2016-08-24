@@ -10,7 +10,7 @@
 
 <div><p><a href="https://ponyfoo.com/2014/01/01/a-year-in-review">A week ago I wrote</a> about a few goals I&#x2019;ve set for myself in 2014. In particular, I alluded to writing code that&#x2019;s more modular than what I&#x2019;ve been writing so far:</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><blockquote> <p>In the future, I&#x2019;ll abstain from tightly coupling major pieces of functionality together, and instead force myself to <strong>write reusable components which are well documented</strong>.</p> </blockquote> <p>The blog repository grew in size considerably <em>while I was actively developing it</em>, but it became clear after a few months that some of the design decisions I had made were wrong, such as not doing any server-side rendering at all. I&#x2019;ve set out to revamp the platform, and in doing so, I started to extract modules from the core repository.</p> <p>One such piece is the emailing functionality. In this article I&#x2019;ll examine the design decisions behind <a href="https://github.com/bevacqua/campaign" target="_blank">campaign</a>, the comprehensive email library I extracted from Pony Foo, and detail what sets it apart from existing emailing packages.</p> <p>Spoiler: <strong>it&#x2019;s modularity</strong>.</p></div>
 

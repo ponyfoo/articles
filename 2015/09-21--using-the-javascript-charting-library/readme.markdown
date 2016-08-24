@@ -10,7 +10,7 @@
 
 <div><p>I&#x2019;ve been asked to review the <a href="http://jscharting.com/" target="_blank">JSCharting</a> enterprise charting library, and given that I&#x2019;ve <a href="http://bevacqua.github.io/promisees" target="_blank">recently dabbled in visualizations</a> I felt like this was a great opportunity to further explore them in JavaScript. JSCharting enables you to make visualizations in JavaScript using a declarative interface that renders SVG graphics.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>JSCharting specializes in rendering all kinds of charts &#x2013; including geographic representations of data like a <a href="http://jscharting.com/Editor/index.htm#name=MapThematicSales.htm" target="_blank"><em>&#x201C;sales by state&#x201D;</em></a> chart. Another cool example is this visualization of the average temperature in Chicago plotted over time.</p> <p><a href="http://jscharting.com/Samples/Javascript_AreaRange_Chart.htm" target="_blank"><img src="https://i.imgur.com/oWjtKUu.png" alt="A visualization of the average temperature in Chicago"></a></p> <p>For a full list of chart types and examples, you should <a href="http://jscharting.com/typeGallery.htm" target="_blank">visit their website</a> &#x2013; it has a comprehensive selection of charts demonstrating the different features in JSCharting. You might want to check out their <a href="http://jscharting.com/timeline.htm" target="_blank">release history visualization</a> for a better understanding of the kinds of features they have. In this article we&#x2019;ll explore the kinds of visualizations that you can perform using JSCharting.</p></div>
 

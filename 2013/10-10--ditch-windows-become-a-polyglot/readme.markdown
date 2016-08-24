@@ -10,7 +10,7 @@
 
 <div><p>It took me a while to realize it, but Windows has been a <em>disease</em> to me, or perhaps more analogously a <em>drug addiction</em>. Ever since I was a kid I used Windows. Well, I guess I played around in Norton Commander, which was <em>nice at the time</em>, as a way to easily navigate the file system in a terminal window, or <a href="http://en.wikipedia.org/wiki/DOS" target="_blank">DOS</a>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p><img src="https://i.imgur.com/PhsIS0G.png" alt="nc.png" title="The grandiose Norton Commander"></p> <p>Early on, like most self-taught developers, I met Pascal, a language designed to teach, and I was stoked. Soon enough I was browsing the web, learning about Java applets, which were crucial to placing those prized visitor counters, tic-tac-toe challenges, and enough calculators for your website.</p> <p>Hosting was fun, we had FTP, <a href="http://en.wikipedia.org/wiki/GeoCities" target="_blank">GeoCities</a>, <a href="http://en.wikipedia.org/wiki/Angelfire" target="_blank">Angelfire</a>, and many other <em>words-that-don&#x2019;t-make-any-sense-next-to-each-other</em> services. Oh, life was so simple back then. A few <code class="md-code md-code-inline">marquee</code> and <code class="md-code md-code-inline">blink</code> tags was all we needed to promote our sites. There was no need for CSS, that&#x2019;s why it didn&#x2019;t exist. A few <code class="md-code md-code-inline">&lt;center&gt;</code> tags here, a few thousand <code class="md-code md-code-inline">&lt;table&gt;</code> elements there and we had a perfectly fine website <em>and nobody complained about it</em>.</p></div>
 

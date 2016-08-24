@@ -10,7 +10,7 @@
 
 <div><p>Persist standard input to a file, then simulate real-time program execution.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><blockquote></blockquote> <p>Ever needed to give a talk on a program and show exactly how the output is going to look like, and such?</p> <p>Maybe you ditched the idea because your program was a bit on the experimental side, and you were afraid it might break, or you were afraid to type the wrong things into the terminal, and boom. <a href="http://net.tutsplus.com/articles/editorials/the-holy-grail-of-conference-talks-live-coding/" target="_blank">Live coding turns into bloodbath</a>, hundreds die.</p></div>
 

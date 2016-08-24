@@ -10,7 +10,7 @@
 
 <div><p>Recently, I&#x2019;ve updated the documentation for <a href="https://github.com/bevacqua/node-assetify" target="_blank">assetify</a>, and <a href="https://github.com/bevacqua/grunt-assetify" target="_blank">grunt-assetify</a>. I wanted to share the usage patterns as well as my reasons for developing, and maintaining <strong>assetify</strong>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>There aren&#x2019;t real contenders when it comes to static asset management solutions for Node, and the solutions out there were either too thin, too opinionated, or too careless.</p></div>
 

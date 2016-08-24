@@ -10,7 +10,7 @@
 
 <div><p>Deciding on a technology is <em>always</em> hard. You don&#x2019;t want to make commitments you won&#x2019;t be able to back out of, but eventually you&#x2019;ll have to make a choice and go for something that does what you need it to do. Committing to a build technology is no different in this regard: it&#x2019;s an important choice and you should treat it as such. Let&#x2019;s take <a href="http://gruntjs.com/" target="_blank">Grunt</a> for example.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><ul> <li><a href="http://gruntjs.com/" target="_blank">Grunt</a> has a healthy community around it, even on Windows</li> <li>It <strong>isn&#x2019;t</strong> used almost exclusively by the Node community</li> <li>It&#x2019;s easy to learn, you just pick plugins and configure them</li> <li>There&#x2019;s no advanced concepts nor lots of prior knowledge needed</li> </ul> <p>These are all good reasons to use <a href="http://gruntjs.com/" target="_blank">Grunt</a> to teach build processes, but I want to make it clear that I don&#x2019;t think <a href="http://gruntjs.com/" target="_blank">Grunt</a> is the single best option out there, and that there are other popular build tools that might fit your needs better than <a href="http://gruntjs.com/" target="_blank">Grunt</a> will.</p> <p>I wrote this brief article to help you understand the differences between <a href="https://ponyfoo.com/2014/01/09/gulp-grunt-whatever">Grunt, Gulp, and npm</a>, which are the three build tools that I use most often in front-end development workflows. While we&#x2019;re at it, I&#x2019;ll lay out the situations in which a particular tool might be better than the others.</p></div>
 

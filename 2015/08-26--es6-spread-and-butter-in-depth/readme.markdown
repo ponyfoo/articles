@@ -10,7 +10,7 @@
 
 <div><p>Welcome to yet another installment of <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a> on Pony Foo. Previous ones covered <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">destructuring</a>, <a href="https://ponyfoo.com/articles/es6-template-strings-in-depth">template literals</a>, and most recently, <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">arrow functions</a>. Today we&#x2019;ll cover a few more features coming in ES6. Those features are <em>rest parameters, the spread operator, and default parameters.</em></p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>We&#x2019;ve already covered some of this when we talked <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth">about destructuring</a>, which supports default values as a nod to the <strong>synergy in ES6 features</strong> I&#x2019;ve <a href="https://ponyfoo.com/articles/es6-arrow-functions-in-depth">mentioned yesterday</a>. This article might end up being a tad shorter than the rest because there&#x2019;s not so much to say about these rather simple features. However, and like I&#x2019;ve mentioned in the first article of the <a href="https://ponyfoo.com/articles/tagged/es6-in-depth">ES6 in Depth</a> series, the simplest features are usually <a href="https://ponyfoo.com/articles/es6-destructuring-in-depth#destructuring">the most useful</a> as well. Let&#x2019;s get on with it!</p></div>
 

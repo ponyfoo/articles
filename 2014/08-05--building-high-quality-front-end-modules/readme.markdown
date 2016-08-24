@@ -10,7 +10,7 @@
 
 <div><p>Lately I&#x2019;ve been developing front-end modules solely based on <a href="http://browserify.org/" target="_blank">Browserify</a>, the latest being <a href="https://github.com/bevacqua/rome" target="_blank">rome</a>. Rome is a calendar component that has an extensive feature-set. I&#x2019;ve compiled a list of highlights below.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><ul> <li>Date <em>and time</em> picker</li> <li><em>Fancy</em> <a href="http://bevacqua.github.io/rome" target="_blank">demo site</a></li> <li>Use it on its own, or dedicated to an input</li> <li>Concise API and sensible defaults</li> <li>Date range just means validating two calendars against each other</li> <li><a href="https://ponyfoo.com/2013/07/09/getting-over-jquery">Doesn&#x2019;t rely on jQuery</a></li> <li>Works on <strong>IE7+</strong></li> </ul> <p>Rome wasn&#x2019;t conceived with all of these features out-of-the-box, though. When I released it for the first time, it was <em>just a native date-time picker</em> with a reasonable API, but it complete lacked IE support, date validation, and the ability to be used without an input field.</p> <p><a href="http://bevacqua.github.io/rome" target="_blank"><img src="https://i.imgur.com/jU8JmSs.jpg" alt="colosseum.png"></a></p> <p><em>Rome wasn&#x2019;t built in a day.</em></p></div>
 

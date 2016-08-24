@@ -10,7 +10,7 @@
 
 <div><p>I just finished reading <a href="http://www.amazon.com/dp/0307887898" target="_blank">The Lean Startup</a>, an immersive, ground-breaking take on entrepreneurship and startup management, with views heavily rooted in the Toyota Production System. There are quite a few take-aways for us, the <strong>web work-force</strong>, to learn.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>The Lean Startup introduces us to a series of practices we can follow in order to build products faster, get feedback earlier and more often, and most importantly, <strong>develop features customers actually want</strong>. In this article, I&#x2019;ll go over the fundamentals, focusing on how Lean Development affects software development, not just startup management.</p></div>
 

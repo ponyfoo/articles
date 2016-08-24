@@ -10,7 +10,7 @@
 
 <div><p>A few days passed, a couple lessons learned. I promised myself not to spend too much time trying to make something perfect, but rather keep a <em>lean approach</em> and moving forward.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>So far, and <em>as expected</em>, I&#x2019;ve implemented markdown in the client-side, but while implementing this I also spent a good deal of time fine-tuning the site&#x2019;s design. What I changed is the way in which I was going to <em>constraint browser support</em>.</p></div>
 

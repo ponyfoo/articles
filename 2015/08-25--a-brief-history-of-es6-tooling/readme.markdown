@@ -10,7 +10,7 @@
 
 <div><p>I wrote a few articles about React and ES6 these last few days, and today I wanted to add a bit more of context as to why I seem to be super into ES6 all of sudden. I&#x2019;ve had an interest in ES6 for a long time, but we weren&#x2019;t always prepared to write code in ES6. In this post I wanted to briefly touch on the history of ES6 tooling and why I believe that today we&#x2019;re in a much better place to adopt ES6 than where we were half a year ago.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>For the most part, we have Browserify, Babel, and the spec being finalized to thank for. But we didn&#x2019;t always have these tools and they weren&#x2019;t born as mature as they are today.</p> <p><a href="http://babeljs.io/" target="_blank"><img src="https://i.imgur.com/DlNQvKS.png" alt="Babel JavaScript Compiler"></a></p></div>
 

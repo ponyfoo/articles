@@ -10,7 +10,7 @@
 
 <div><p>I&#x2019;ve recently created a <a href="https://github.com/bevacqua/js" target="_blank">JavaScript Quality Guide</a>, and I wanted to share it on Pony Foo as well. The latest version can be <a href="https://github.com/bevacqua/js" target="_blank">found on GitHub</a>. As <em>all-things-style-guides</em> go, it&#x2019;s super opinionated so take it with a pinch of salt.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div></div>
 

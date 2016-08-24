@@ -10,7 +10,7 @@
 
 <div><p>In my <a href="https://ponyfoo.com/2012/12/29/single-page-design-madness">previous installment</a>, I <em>prognosticated</em> the discussion topic for this post.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><blockquote> <p>In the next post I&#x2019;ll delve into <strong>MongoDB</strong>, how to pair it with <strong>Node</strong>, and figuring out <em>how to communicate</em> across all the application layers.</p> </blockquote> <p>When it finally came to receiving the user input <em>Markdown</em> produced on the client-side, and persisting it in the database, I realized I knew nothing about <em>Node.JS</em>. As I start writing this down, I realize I&#x2019;m going to need to address some <strong>more fundamental issues</strong> before diving into <em>Node</em>.</p></div>
 

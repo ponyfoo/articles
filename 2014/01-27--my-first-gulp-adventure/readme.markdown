@@ -10,7 +10,7 @@
 
 <div><p>I decided to take a gulp of Gulp and use it in one of my latest projects, to help me with releases. I wrote a Gulpfile, which lets me write some code to define the tasks enumerated below.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><ul> <li>Lint my source code</li> <li>Run unit tests</li> <li>Clean my distribution directory</li> <li>Build the distribution files, minified and otherwise</li> <li>Get the file size of both the regular and minified versions</li> <li>Bump the package version for <code class="md-code md-code-inline">npm</code> and <code class="md-code md-code-inline">bower</code></li> <li>Push a new tag to <code class="md-code md-code-inline">git</code>, to update the Bower version</li> <li>Publish the updated version to <code class="md-code md-code-inline">npm</code></li> </ul> <p>In this article I aim to explain what I did, how I did it, and the reasons why I made some of the choices that I did. The only real problem I had had to do with synchronicity. I felt it would be interesting walking you through the process. It may help you get started with Gulp!</p> <p><img src="https://i.imgur.com/ApIcjlI.png" alt="rocket.png" title="The Gulp Rocket!"></p></div>
 

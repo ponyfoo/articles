@@ -11,7 +11,7 @@
 
 <div><p>Writing a great Pull Request takes <em>time</em>. It can be <em>a scary proposition</em> going in. Did I <strong>implement something relevant</strong>? Will they <em>like</em> my changes? Will the PR meet their <em>expectations</em>? How much <em>scrutiny</em> can I expect?</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Something that we&#x2019;ve been discussing recently in <a href="https://github.com/elastic/kibana" target="_blank" aria-label="elastic/kibana on GitHub">Kibana</a> &#x2013; the open-source analytics dashboard for Elasticsearch I outrageously call my day job &#x2013; is how to improve the process of contributing changes. Kibana is an entirely open-source product that is also a part of the <a href="https://www.elastic.co/v5" target="_blank" aria-label="Say Heya to the Elastic Stack">Elastic Stack</a>, which puts us in a unique position. Contributors work in the open: they chat on IRC, communicate in GitHub issues, work on their own public forks, and create Pull Requests. Core contributors are no different in this regard, and are subject to code reviews just like anyone else who&#x2019;s willing to submit a patch.</p> <p><img src="https://i.imgur.com/lw9x3Dz.jpg" alt="A hypothetical open-source ecosystem"></p> <p>There are a few questions that you need to answer before you open a Pull Request. In this article, we&#x2019;ll cover how to make sure you comply with the maintainer&#x2019;s guidelines, and how to get your changes merged. We&#x2019;ll take the perspective of both the maintainer and the contributor, but mostly discuss the contributor&#x2019;s vantage point.</p> <p>Let&#x2019;s merge! &#x1F389;</p></div>
 

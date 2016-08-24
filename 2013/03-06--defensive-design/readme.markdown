@@ -10,7 +10,7 @@
 
 <div><p>I&#x2019;ve recently read the book <a href="http://amzn.to/2aoGDKr" target="_blank">Defensive Design for the Web</a>, and I felt compelled to write about it here. I guess it&#x2019;s a good starting point for writing my thoughts about <em>designing a reasonable user experience</em>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><h2 id="summary">Summary</h2> <p>To summarize, this is a book about <em>user experience</em>, focused on concisely and consistently displaying error messages, warnings, and validation notices that clearly define the issue at hand.</p> <p>I agree with <strong>most</strong> of what the authors have to say. Some of it, is just common sense. I&#x2019;ll try to highlight the <em>key points</em> about <strong>defensive design</strong> in this article.</p></div>
 

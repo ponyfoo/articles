@@ -10,7 +10,7 @@
 
 <div><p>A couple of weeks ago, my book on <a href="http://bevacqua.io/buildfirst" target="_blank">JavaScript Application Design</a> and front-end processes <em>(which I began writing a few months ago)</em> finally went into the first review stage. Yesterday, <a href="http://bevacqua.io/bf/book" target="_blank">an early access edition</a> was made available by <a href="http://manning.com/" target="_blank">Manning</a>, this version contains the first 3 chapters, and gives you access to the entire book, which you&#x2019;ll be able to download chapter by chapter, as they get released. Feedback <a href="https://news.ycombinator.com/item?id=6808229" target="_blank">has been pretty good so far</a>.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>Here, have <em>an amusing quote</em>:</p> <blockquote> <p><a href="https://twitter.com/nzgb" target="_blank">@nzgb</a> <a href="https://twitter.com/fogus" target="_blank">@fogus</a> Books complimenting each other: &#x201C;Hey, nice assets, I&#x2019;d like to get between your covers&#x2026;&#x201D;&#x2014; Reg Braithwaite (@raganwald) <a href="https://twitter.com/raganwald/statuses/405783532162670592" target="_blank">November 27, 2013</a></p> </blockquote> <p>In this article I&#x2019;ll be describing some of the concepts which I explain in the book, while attempting not to sound <em>as dull</em> as these kind of posts usually are <em>(and probably failing quite miserably at that)</em>.</p> <p><a href="http://bevacqua.io/buildfirst" target="_blank"><img src="https://i.imgur.com/idiCvhM.jpg" alt="buildfirst.jpg"></a></p></div>
 

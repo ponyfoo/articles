@@ -10,7 +10,7 @@
 
 <div><p>A large number of JavaScript interview questions, if not most of them, can be answered with an understanding of scoping, <a href="https://ponyfoo.com/2013/12/04/where-does-this-keyword-come-from">how <code class="md-code md-code-inline">this</code> works</a>, and hoisting.</p></div>
 
-<div></div>
+<blockquote></blockquote>
 
 <div><p>You might be expecting the method to print <code class="md-code md-code-inline">&apos;number&apos;</code> first, and <code class="md-code md-code-inline">2</code> afterwards, or maybe <code class="md-code md-code-inline">3</code>? Try running it! Why does it print <code class="md-code md-code-inline">&apos;undefined&apos;</code> and then <code class="md-code md-code-inline">undefined</code>? Well, hello hoisting! It&#x2019;ll be easier for you to picture it if I re-arrange the code to how it ends up after hoisting takes place. Let&#x2019;s have a look.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> value = <span class="md-code-number">2</span>;
 
