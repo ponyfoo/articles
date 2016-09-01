@@ -1,0 +1,1 @@
+There's a number of different ways we can ensure class methods have access to `this`. After some controversy on Twitter last week, we quickly go over the most common approaches, discussing their advantages and drawbacks.
