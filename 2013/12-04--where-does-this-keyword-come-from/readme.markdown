@@ -12,7 +12,7 @@
 
 <blockquote></blockquote>
 
-<div><p>Until you <em>&#x201C;get it&#x201D;</em>, this is probably how you feel about <code class="md-code md-code-inline">this</code>.</p> <figure><img src="https://raw.github.com/bevacqua/buildfirst/master/images/chaos.gif" alt="chaos.gif"><figcaption>chaos.gif</figcaption></figure> <p>It&#x2019;s madness, right? In this brief article, I aim to demystify <code class="md-code md-code-inline">this</code>.</p></div>
+<div><p>Until you <em>&#x201C;get it&#x201D;</em>, this is probably how you feel about <code class="md-code md-code-inline">this</code>.</p> <figure class="figure-has-loaded"><img src="https://raw.github.com/bevacqua/buildfirst/master/images/chaos.gif" alt="chaos.gif"></figure> <p>It&#x2019;s madness, right? In this brief article, I aim to demystify <code class="md-code md-code-inline">this</code>.</p></div>
 
 <div><h2 id="how-this-works">How <code class="md-code md-code-inline">this</code> works</h2> <p>If the method is invoked on an object, that object will be assigned to <code class="md-code md-code-inline">this</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> parent = {
     method: <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-params">()</span> </span>{
