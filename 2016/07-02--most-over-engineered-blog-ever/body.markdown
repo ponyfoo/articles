@@ -24,7 +24,7 @@ I had a fully-functioning blog with articles and comments, running on Heroku. My
 
 Still, I was in the middle of a rewrite, and the client-side rendering thing was so bad, I completely rewrote that. Taunus -- a shared-rendering MVC engine -- was born. It's not my greatest creation, but it has noble intentions at heart. I was able to reuse Jade views and server-side controllers, which blew my mind. As the comments indicate in [the blog post announcing Taunus][taunuspost], the blog became way faster now that it was rendering views server-side. I had been experimenting with `grunt`, `gulp` and `npm run` for a long time. My musings on the build tools became quite popular articles, one of which spawned the first talk I ever gave *-- at [JSConf US 2014][jsconf]*.
 
-While enumerating technologies may be a trite endeavor, explaining how some aspects of the blog were developed may be more informational. **Let's fast-forward to where Pony Foo is today** _-- feature-wise --_ to get a better glimpse into why I say its the most overengineered blogging website ever.
+While enumerating technologies may be a trite endeavor, explaining how some aspects of the blog were developed may be more informational. **Let's fast-forward to where Pony Foo is today** _-- feature-wise --_ to get a better glimpse into why I say its the most over-engineered blogging website ever.
 
 # Text, Markdown, and HTML
 
