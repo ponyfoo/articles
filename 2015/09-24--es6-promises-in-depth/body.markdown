@@ -255,7 +255,7 @@ p2.catch(error => console.log(error))
 // <- Error: fail
 ```
 
-In the [animation](http://buff.ly/1KxtpIM) shown below we can observe how `p2` becomes blocked _-- marked in yellow --_ waiting for a settlement in `p`.
+In the [animation](http://bit.ly/2c2n5hx) shown below we can observe how `p2` becomes blocked _-- marked in yellow --_ waiting for a settlement in `p`.
 
 [![Animation of a promise blocking another one.](https://i.imgur.com/dIdrAcK.gif)](http://buff.ly/1KxtpIM)
 
