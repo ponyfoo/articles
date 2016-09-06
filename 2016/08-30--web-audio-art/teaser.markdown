@@ -1,0 +1,1 @@
+The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) is a very powerful feature available in modern browsers today, boasting a rich set of functionality. In this exploration, we'll be looking at ways to analyse audio data and produce some visual output, ranging from the rudimentary to the ridiculous. Let's get started!
