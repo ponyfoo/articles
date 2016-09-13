@@ -1,0 +1,3 @@
+The majority of the community has implicitly agreed on using `const` as the default over `var`. The `const` statement makes your code more clear, by describing a read-only value at declaration time. It also makes it clear that the variable isn't meant to be used before its declaration, avoiding silly mistakes that could occur when using `var`. For these reasons, `const` also improves interaction with static analysis tools such as `eslint`.
+
+This article explores how template literals are strictly better than strings, and how they too should become the new default of a post-ES6 era _-- over single and double quoted strings._
