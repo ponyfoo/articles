@@ -2,7 +2,7 @@
 
 Assuming an ES6 codebase, there are several ways to do interpolation in strings.
 
-You could use string concatenation, involving `+` signs. and an string for each piece of the template you're working on. Using concatenation can quickly get out of hand when dealing with longer templates, not to mention reusability is hard unless you abstract away your template in a small function.
+You could use string concatenation, involving `+` signs and a string for each piece of the template you're working on. Using concatenation can quickly get out of hand when dealing with longer templates, not to mention reusability is hard unless you abstract away your template in a small function.
 
 ```js
 'Hello ' + name + '! It\'s a pleasure to greet you.'
