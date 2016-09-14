@@ -51,7 +51,7 @@ In template literals, we need to escape backticks using `` \` ``.
 `Hey, programmers use backticks to render code, like \`this\`.`
 ```
 
-You're far less likely to need backticks in your everyday strings than single or double quotes, which are commonplace in english and language in general. Using template literals, then, translates into less escape codes that can pollute your otherwise beautiful strings.
+You're far less likely to need backticks in your everyday strings than single or double quotes, which are commonplace in English and language in general. Using template literals, then, translates into less escape codes that can pollute your otherwise beautiful strings.
 
 # Multiline Strings
 
