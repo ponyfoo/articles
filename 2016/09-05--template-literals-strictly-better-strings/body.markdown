@@ -233,6 +233,10 @@ You may find your code base now has bits like the following, instead of the sing
 
 You can gradually upgrade code like the above into interpolated expressions over time, getting to a more consistent code base. There's no excuse, _however_, to get away with not using template literals!
 
+> #### **Quick Disclaimer: `'use strict'` Directives**
+>
+> *Note the `'use strict'` directive won't be executed if wrapped in backticks instead of single or double quotes. While `eslint --fix` doesn't break `'use strict'` statements, you could mistakenly do that by hand, so please avoid doing so! 😨*
+
 Now go evangelize the use of template literals everywhere, so that I can sleep better at night. 🌒
 
 _<sub>This article is sponsored by the backtick conglomerate holding commonly referred to as "best practices".</sub>_
