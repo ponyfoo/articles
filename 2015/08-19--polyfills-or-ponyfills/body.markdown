@@ -1,6 +1,6 @@
 Christian Heilmann argues that, sometimes, developers probe feature support by [testing for some other feature][1] that's implemented most of the time alongside the feature we actually want to use. Under those circumstances, and considering you already have tools like [Babel][2] if you'd like to play around with ES6, I suggest you strongly avoid polyfills for any ES6 features, out of the ones that could be polyfilled.
 
-As an alternative, you could use _ponyfills_ instead.
+As an alternative, you could use [_ponyfills_][pony] instead.
 
 ## Ponyfills
 
@@ -42,3 +42,4 @@ In that situation it's better to use a ponyfill, because that way you won't be p
 [2]: https://github.com/babel/babel "babel/babel on GitHub"
 [3]: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/String/trim "String.prototype.trim() – MDN"
 [4]: mailto:thoughts@ponyfoo.com "Send me your questions and feedback!"
+[pony]: http://ponyfill.com "Like polyfill but with pony pureness"
