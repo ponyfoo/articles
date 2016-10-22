@@ -13,7 +13,7 @@ I first saw a barrage of tweets about **CSS Conf 2016** on my timeline, and I wa
 There's an [@mjavascript][mjavascript] Twitter account you can follow for everything related to the series. Upon launch, a week from now, there will be a bunch more ways to learn about the series, contribute to it with either code or donations, and read the raw content *-- for free --* as I work on it. The same content that's managed on GitHub repos will also be available here on [ponyfoo.com][pf], but **prettified with CSS** in such a way that it almost feels like any Pony Foo article you've read before.
 
 [nzgb]: https://twitter.com/nzgb "@nzgb on Twitter"
-[mjavascript]: https://twitter.com/nzgb "@mjavascript on Twitter"
+[mjavascript]: https://twitter.com/mjavascript "@mjavascript on Twitter"
 [jsd]: https://twitter.com/javascriptdaily "@javascriptdaily on Twitter"
 [lea]: https://twitter.com/leaverou "@leaverou on Twitter"
 [clap]: https://www.thunderclap.it/projects/48158-modular-javascript-book-series "Modular JavaScript Book Series on Thunderclap"
