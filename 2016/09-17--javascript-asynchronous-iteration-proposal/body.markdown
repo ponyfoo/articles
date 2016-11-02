@@ -59,11 +59,12 @@ Naturally, that was quite a contrived example. Another contrived example could b
 ```js
 const getResources = endpoints => ({
   [Symbol.asyncIterator]: () => ({
-    next: () => {
-      if (endpoints.length === 0) {
+    i: 0,
+    next () {
+      if (endpoints.length <= this.i) {
         return Promise.resolve({ done: true })
       }
-      return fetch(endpoints.shift())
+      return fetch(endpoints[this.i++])
         .then(response => response.json())
         .then(value => ({ value, done: false }))
     }
@@ -90,8 +91,7 @@ There's also async generator functions in this proposal. An async generator func
 
 ```js
 async function* getResources(endpoints) {
-  while (endpoints.length > 0) {
-    const endpoint = endpoints.shift()
+  for (endpoint of endpoints) {
     const response = await fetch(endpoint)
     yield await response.json()
   }

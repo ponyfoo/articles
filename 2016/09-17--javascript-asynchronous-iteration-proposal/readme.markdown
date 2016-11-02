@@ -53,11 +53,12 @@
 }
 </code></pre> <p>Naturally, that was quite a contrived example. Another contrived example could be a utility function that fetches a series of HTTP resources sequentially.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">const</span> getResources = endpoints =&gt; ({
   [Symbol.asyncIterator]: () =&gt; ({
-    next: () =&gt; {
-      <span class="md-code-keyword">if</span> (endpoints.length === <span class="md-code-number">0</span>) {
+    i: <span class="md-code-number">0</span>,
+    next () {
+      <span class="md-code-keyword">if</span> (endpoints.length &lt;= <span class="md-code-keyword">this</span>.i) {
         <span class="md-code-keyword">return</span> Promise.resolve({ done: <span class="md-code-literal">true</span> })
       }
-      <span class="md-code-keyword">return</span> fetch(endpoints.shift())
+      <span class="md-code-keyword">return</span> fetch(endpoints[<span class="md-code-keyword">this</span>.i++])
         .then(response =&gt; response.json())
         .then(value =&gt; ({ value, done: <span class="md-code-literal">false</span> }))
     }
@@ -74,8 +75,7 @@
   <span class="md-code-built_in">console</span>.log(data);
 }
 </code></pre> <p>There&#x2019;s also async generator functions in this proposal. An async generator function is just like a generator function, but also supports <code class="md-code md-code-inline">await</code> and <code class="md-code md-code-inline">for await..of</code> declarations.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">async <span class="md-code-function"><span class="md-code-keyword">function</span>* <span class="md-code-title">getResources</span><span class="md-code-params">(endpoints)</span> </span>{
-  <span class="md-code-keyword">while</span> (endpoints.length &gt; <span class="md-code-number">0</span>) {
-    <span class="md-code-keyword">const</span> endpoint = endpoints.shift()
+  <span class="md-code-keyword">for</span> (endpoint of endpoints) {
     <span class="md-code-keyword">const</span> response = await fetch(endpoint)
     <span class="md-code-keyword">yield</span> await response.json()
   }
