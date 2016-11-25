@@ -97,6 +97,8 @@ console.log(nested())
 In conclusion, block scoping can be quite useful in new codebases. Some people will tell you to drop `var` forever and just use `let` everywhere. Some will tell you to never use `let` because that's not the _One True Way of JavaScript_. My position might change over time, but this is it -- for the time being:
 
 > I plan on using `var` most of the time, and `let` in those situations where I would've otherwise hoisted a variable to the top of the scope for no reason, when they actually belonged inside a conditional or iterator code branch.
+>
+> **25 Nov 2016:** after working with ES6 for over a year, I've completely changed my mind on how to declare variables in ES6. [Prefer `const` where possible, `let` anywhere else!][constlet]
 
 ## The _Temporal Dead Zone_ and the Deathly Hallows
 
@@ -249,3 +251,4 @@ If `groceries` were a constant in the piece of code above, this re-assignment wo
   [3]: http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified/ "Temporal Dead Zone (TDZ) Demystified"
   [4]: https://i.imgur.com/79mp6As.jpg
   [5]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze "Object.freeze() – MDN"
+  [constlet]: https://ponyfoo.com/books/practical-es6/chapters/9#practical-considerations "Practical Considerations for ES6 – Practical ES6"
