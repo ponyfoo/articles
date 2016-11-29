@@ -474,7 +474,7 @@ Time for a bullet point detox. Then again, I _did warn you_ to read the [article
 [20]: /articles/es6-math-additions-in-depth "ES6 Math Additions in Depth on Pony Foo"
 [21]: /articles/es6-array-extensions-in-depth "ES6 Array Extensions in Depth on Pony Foo"
 [22]: /articles/es6-object-changes-in-depth "ES6 Object Changes in Depth on Pony Foo"
-[23]: /articles/es6-strings-and-unicode-in-depth "ES6 Strings (and Unicode, ❤) in Depth"
+[23]: /articles/es6-strings-and-unicode-in-depth "ES6 Strings (and Unicode) in Depth"
 [24]: /articles/es6-modules-in-depth "ES6 Modules in Depth on Pony Foo"
 [25]: /articles/a-brief-history-of-es6-tooling "A Brief History of ES6 Tooling on Pony Foo"
 [26]: /articles/gulp-grunt-whatever "Gulp, Grunt, Whatever on Pony Foo"
