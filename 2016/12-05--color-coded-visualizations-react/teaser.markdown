@@ -1,0 +1,1 @@
+For the past few days I've been working on a data visualization that displays Elasticsearch node distribution across different cloud instances and zones. This article shows off the visualization, the color generation script, an interesting performance issue, and the solution I arrived at.
