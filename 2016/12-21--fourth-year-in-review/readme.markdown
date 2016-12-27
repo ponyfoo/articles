@@ -4,7 +4,7 @@
 
 <h1>Fourth Year in Review</h1>
 
-<p><kbd>yearly-review</kbd></p>
+<p><kbd>yearly-review</kbd> <kbd>recommended-reading</kbd></p>
 
 <blockquote><p>Another year, another review of how Pony Foo did in its latest twelve months online!</p>
 </blockquote>
