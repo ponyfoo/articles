@@ -1,0 +1,1 @@
+When I found out I would be working on porting an old Python codebase to Node, I was slightly excited. These kinds of projects always give you more creative freedom than the ordinary code maintenance gig, and something about the challenge of rewriting other people's code makes it fun as hell.
