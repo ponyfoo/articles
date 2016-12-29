@@ -1,0 +1,1 @@
+When reading a piece of code, others can take cues from these signals in order to better understand what we did. ES6 offers `let` and `const` as new flavors of variable declaration, are they better signals than `var`?

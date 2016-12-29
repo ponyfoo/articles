@@ -1,0 +1,12 @@
+{
+  "id": "5864240d8a4d7b8603eb6abe",
+  "author": "543d222f4683586910034197",
+  "title": "Let's use `const`! Here's why.",
+  "slug": "var-let-const",
+  "tags": [
+    "const",
+    "es6",
+    "best-practices"
+  ],
+  "heroImage": "https://i.imgur.com/URl6zyr.jpg"
+}
