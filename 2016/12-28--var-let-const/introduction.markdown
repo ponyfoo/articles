@@ -6,6 +6,6 @@ Note that this means that the variable binding can't change, but it doesn't mean
 
 In addition to the signals offered by `let`, the `const` keyword indicates that a variable binding can't be reassigned. This is a strong signal. You know what the value is going to be; you know that the binding can't be accessed outside of its immediately containing block, due to block scoping; and you know that the binding is never accessed before declaration, because of TDZ semantics.
 
-You know all of this just by reading the +const+ declaration statement and without scanning for other references to that variable.
+You know all of this just by reading the `const` declaration statement and without scanning for other references to that variable.
 
 Constraints such as those offered by `let` and `const` are a powerful way of making code easier to understand. Try to accrue as many of these constraints as possible in the code you write. The more declarative constraints that limit what a piece of code could mean, the easier and faster it is for humans to read, parse, and understand a piece of code in the future.
