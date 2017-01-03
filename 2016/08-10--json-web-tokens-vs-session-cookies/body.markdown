@@ -97,6 +97,6 @@ Personally, I don’t think there is a one-size-fits-all approach. It will alway
 
 Would you still prefer using sessions in practice over JSON Web Tokens? Let us know your thoughts in the comment section!
 
-[1]: http://i.imgur.com/OCD5AJB.png
+[1]: https://i.imgur.com/OCD5AJB.png
 [2]: https://i.imgur.com/cGa7eQn.png
 [3]: https://i.imgur.com/VTtdMwC.png
