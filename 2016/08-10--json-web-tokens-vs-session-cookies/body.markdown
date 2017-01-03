@@ -46,11 +46,11 @@ Initially, I mentioned that JWTs can be stored in cookies. In fact, JWTs are sto
 
 Now, JWTs and session ids can also be exposed to unmitigated replay attacks. It is totally up to the developers to establish what replay-mitigation techniques are appropriate for their systems. One way of solving this problem is ensuring that JWTs rely on short expiration times. Although, this technique doesn’t totally solve the problem. However, other alternatives for solving this challenge are issuing JWTs to specific IP addresses and using [browser fingerprinting](http://www.networkworld.com/article/2884026/security0/browser-fingerprints-and-why-they-are-so-hard-to-erase.html).
 
-**Note**: Use HTTPS/SSL to ensure that your cookies and JWTs are encrypted by default during client and server transmission. This helps avoid man-in-the-middle attacks! 
+**Note**: Use HTTPS/SSL to ensure that your cookies and JWTs are encrypted by default during client and server transmission. This helps avoid man-in-the-middle attacks!
 
 **3. RESTful API Services:** A common pattern for modern applications is to retrieve and consume JSON data from a RESTful API. Most applications these days have [RESTful APIs](http://www.restapitutorial.com/) for other developers or applications to consume. Serving data from an API has several distinct advantages, one of them which is the ability for data to be used in more than just one application. The traditional approach of using sessions and cookies for the user's identity doesn't work well in this case because they introduce the **state** to the application.
 
-One of the tenets of a RESTful API is that it should be stateless, which means that when a request is made, a response within certain parameters can always be anticipated without side effects. A user's authentication state introduces such a side effect, which breaks this principle. Keeping the API stateless and therefore without side effects means that maintainability and debugging are made much easier. 
+One of the tenets of a RESTful API is that it should be stateless, which means that when a request is made, a response within certain parameters can always be anticipated without side effects. A user's authentication state introduces such a side effect, which breaks this principle. Keeping the API stateless and therefore without side effects means that maintainability and debugging are made much easier.
 
 Another challenge here is that it is quite common for an API to be served from one server and for the actual application to consume it from another. To make this happen, we need to enable [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS). Since cookies can only be used for the domain from which they originated, they aren't much help for APIs on different domains than the application. Using JWTs for authentication in this case ensures that the RESTful API is stateless, and you also don't have to worry about where the API or the application is being served from!
 
@@ -69,13 +69,13 @@ A JWT has 5 claims like so:
 }
 ```
 
-When encoded, the size of the JWT will be several times the size of a **SESSION ID (identifier)**, thus making this JWT add more overhead than a **SESSION ID** with every HTTP request. With sessions, there is also a server side lookup to find and deserialize the session on each request. 
+When encoded, the size of the JWT will be several times the size of a **SESSION ID (identifier)**, thus making this JWT add more overhead than a **SESSION ID** with every HTTP request. With sessions, there is also a server side lookup to find and deserialize the session on each request.
 
 JWTs trade size for latency by keeping the data on the client side. The data model of your application is a significant factor here because latency is saved by preventing incessant calls and queries to the database on the server. The idea here is to be careful not to store too many claims in a JWT to avoid huge, over-bloated requests.
 
-Worthy of mention is the fact that tokens may require access to the database on the backend. This is particularly the case for refresh tokens. They may require access to a database on the authorization server for blacklisting. Get more info about [refresh tokens and when to use them](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/). Also, check out this [article](https://auth0.com/blog/blacklist-json-web-token-api-keys) for more information on blacklisting. 
+Worthy of mention is the fact that tokens may require access to the database on the backend. This is particularly the case for refresh tokens. They may require access to a database on the authorization server for blacklisting. Get more info about [refresh tokens and when to use them](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/). Also, check out this [article](https://auth0.com/blog/blacklist-json-web-token-api-keys) for more information on blacklisting.
 
-**Note:** Developers need to strike a balance to make the usage of JWTs really worth it! 
+**Note:** Developers need to strike a balance to make the usage of JWTs really worth it!
 
 ![image description][3]
 
@@ -91,12 +91,12 @@ We also use JWTs to perform authentication and authorization in [Auth0’s API v
 
 ## Conclusion
 
-JSON Web Tokens (JWTs) are lightweight and can easily be used across platforms and languages. They are a clever way to authenticate & authorize without sessions. There are several [JWT libraries](https://jwt.io/#libraries-io) available for signing and verifying the tokens. There are also many reasons to use tokens, and Auth0 can help implement token authentication in an easy and secure way. 
+JSON Web Tokens (JWTs) are lightweight and can easily be used across platforms and languages. They are a clever way to authenticate & authorize without sessions. There are several [JWT libraries](https://jwt.io/#libraries-io) available for signing and verifying the tokens. There are also many reasons to use tokens, and Auth0 can help implement token authentication in an easy and secure way.
 
 Personally, I don’t think there is a one-size-fits-all approach. It will always depend on your application architecture and use case.
 
 Would you still prefer using sessions in practice over JSON Web Tokens? Let us know your thoughts in the comment section!
 
-[1]: https://i.imgur.com/0fZ13rD.png
+[1]: https://i.imgur.com/OCD5AJB.png
 [2]: https://i.imgur.com/cGa7eQn.png
 [3]: https://i.imgur.com/VTtdMwC.png
