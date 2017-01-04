@@ -52,11 +52,11 @@ Developers can be especially tricky to communicate with. In such a complex codeb
 
 ## Ignoring proven practices such as code reviews and unit testing
 
-Staying up to date on modern software development processes might not be enough to put a derailed project back on it's tracks, but it's certainly necessary anyway if you want your team to stay competitive. This is where proven practices step in, and there are a few of them. [Test-driven development has been shown to reduce defect rates](http://research.microsoft.com/en-us/news/features/nagappan-100609.aspx) 40% to 90%, with an increase in development time in the 15%-35% range. [Code reviews have also been shown to decrease defect rates](https://blog.codinghorror.com/code-reviews-just-do-it/), in some cases up to 80% over manual testing.
+Staying up to date on modern software development processes might not be enough to put a derailed project back on it's tracks, but it's certainly necessary anyway if you want your team to stay competitive. This is where proven practices step in, and there are a few of them. [Test-driven development has been shown to reduce defect rates][tdd] 40% to 90%, with an increase in development time in the 15%-35% range. [Code reviews have also been shown to decrease defect rates][cr], in some cases up to 80% over manual testing.
 
 Imagine my dismay when I had to collaborate with a colleague on that legacy project and his screen displayed Notepad in its full glory. Using "search" to find methods might have been rad back in the nineties, but these days, **refraining from using tools such as modern IDEs, version control and code inspection will set you back tremendously.** They are now  absolutely required for projects of any size.
 
-For an in-depth look at what is proven to work in software development, check out the book [Making Software: What Really Works, and Why We Believe It](https://www.amazon.com/Making-Software-Really-Works-Believe/dp/0596808321/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=chrimaiospo06-20&linkId=84b7d672a6bbc66f55547d8208526ef2). It has a nice list of valuable and proven practices which have been backed by studies over the years.
+For an in-depth look at what is proven to work in software development, check out the book [Making Software: What Really Works, and Why We Believe It][making]. It has a nice list of valuable and proven practices which have been backed by studies over the years.
 
 ## Hiring developers with no “people” skills
 
@@ -67,3 +67,10 @@ The problem comes when someone isn't willing to even try, or becomes annoyed by 
 ## Conclusions
 
 When you enable and encourage working smart by using the best tools, proven techniques and great communication, software development will definitely flow more naturally. **What you can't assume is that just because you've signed up to apply Agile or some other tool, that nothing else matters and things will sort themselves out.** There's a synergistic effect in action here which can make a team exponentially more productive if they're set up right, and terribly slow and sloppy when no attention is paid to the details.
+
+> This article originally appeared on [techbeacon.com][tb].
+
+[tb]: https://techbeacon.com/how-terrible-code-gets-written-perfectly-sane-people
+[tdd]: https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Realizing-Quality-Improvement-Through-Test-Driven-Development-Results-and-Experiences-of-Four-Industrial-Teams-nagappan_tdd.pdf
+[cr]: https://blog.codinghorror.com/code-reviews-just-do-it/
+[making]: http://amzn.to/2j25J6m
