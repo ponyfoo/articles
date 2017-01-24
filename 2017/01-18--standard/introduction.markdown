@@ -1,5 +1,7 @@
 *This is an excerpt extracted from the [first chapter in Practical ES6][ch1]. Special thanks to [Brendan Eich][be], for reviewing countless drafts of this piece --- as well as [Jordan Harband][jh], [Alex Russell][aru] and [Brian Terlson][bt]. Thanks peeps! 🎉*
 
+_<sub>Disclaimer: this article is not about the ["actual" "JavaScript" standard][jss]!</sub>_
+
 # A Brief History of JavaScript Standards
 
 Back in 1995, Netscape envisioned a dynamic web beyond what HTML could offer. Brendan Eich was initially brought into Netscape to develop a language that was functionally akin to Scheme, but for the browser. Once he joined, he learned that upper management wanted it to look like Java and a deal to that effect was already underway.
@@ -11,3 +13,4 @@ Brendan created the first JavaScript prototype in ten days, taking Scheme's firs
 [bt]: https://twitter.com/bterlson "@bterlson on Twitter"
 [aru]: https://twitter.com/slightlylate "@slightlylate on Twitter"
 [jh]: https://twitter.com/ljharb "@ljharb on Twitter"
+[jss]: https://blog.whatwg.org/javascript "Read about the JavaScript standard here."
