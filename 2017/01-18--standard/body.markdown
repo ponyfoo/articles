@@ -24,6 +24,8 @@ A couple of years later, in June 2011, the specification was once again reviewed
 
 It took TC39 another four years to formalize ECMAScript 6, in June 2015. Starting with ES6, revisions are also known by their release year: ES6 is also known as ES2015, ES7 is also referred to as ES2016, and so on. The sixth edition is the largest update to the language that made its way into publication, implementing many of the ES4 proposals that were deferred as part of the Harmony resolution. I'll be exploring ES6 in depth [throughout Practical ES6][ch1].
 
+In parallel with the ES6 effort, in 2012 the WHATWG (a standards body interested in pushing the web forward) set out to document the differences between ES5.1 and browser implementations, in terms of compatibility and interoperability requirements. The taskforce standardized `String#substr`, which was previously unspecified; unified several methods for wrapping strings in HTML tags, which were inconsistent across browsers; and documented `Object.prototype` properties like `__proto__` and `__defineGetter__`, among [other improvements][jssnote]. This effort was condensed into a Web ECMAScript specification, which eventually made its way into Annex B in 2015. Annex B was also updated to be normative and required for web browsers, whereas it used to be merely informative before.
+
 The sixth edition is a significant milestone in the history of JavaScript. Besides the dozens of new features, ES6 marks a key inflection point where ECMAScript would become a rolling standard.
 
 # ECMAScript as a Rolling Standard
@@ -89,3 +91,4 @@ Having gone over the rolling standard specification development process, one of 
 [bt]: https://twitter.com/bterlson "@bterlson on Twitter"
 [aru]: https://twitter.com/slightlylate "@slightlylate on Twitter"
 [jh]: https://twitter.com/ljharb "@ljharb on Twitter"
+[jssnote]: http://mjavascript.com/out/javascript "Check out this article for the full set of changes made when merging the Web ECMAScript specification upstream."
