@@ -1,0 +1,1 @@
+JavaScript has gone from being a marketing ploy to gain a tactical advantage, to becoming the core programming experience in the world’s most widely used application runtime platform. *Where to, next?*
