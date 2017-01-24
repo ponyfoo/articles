@@ -70,7 +70,7 @@ The JavaScript language has evolved from its humble beginnings in 1995, to the f
 
 Having gone over the rolling standard specification development process, one of the best ways to keep up with the standard is by periodically visiting the [TC39 proposals repository][proposals]. Keep an eye on candidate recommendations *(stage 3)*, which are likely to make their way into the specification. Subscribe to weekly email newsletters such as [Pony Foo Weekly][pfw] or [JavaScript Weekly][jsw]. Read JavaScript blogs with a focus on ECMAScript development, like [Pony Foo][pfes] or *Axel Rauschmayer's* [2ality.com][ar].
 
-*This is an excerpt extracted from the [first chapter in Practical ES6][ch1]. Special thanks to [Brendan Eich][be], for reviewing countless drafts of this piece --- as well as [Jordan Harband][jh], [Alex Russell][aru] and [Brian Terlson][bt]. Thanks peeps! 🎉*
+*This is an excerpt extracted from the [first chapter in Practical ES6][ch1]. Special thanks to [Brendan Eich][be], for reviewing countless drafts of this piece --- as well as [Mathias Bynens][mb], [Jordan Harband][jh], [Alex Russell][aru] and [Brian Terlson][bt]. Thanks peeps! 🎉*
 
 [ch1]: /books/practical-es6/chapters/1 "Read the first  chapter of Practical ES6 online"
 [lw]: https://mjavascript.com/out/serverside "A booklet from 1998 explains the intricacies of Server-Side JavaScript with LiveWire"
@@ -92,3 +92,4 @@ Having gone over the rolling standard specification development process, one of 
 [aru]: https://twitter.com/slightlylate "@slightlylate on Twitter"
 [jh]: https://twitter.com/ljharb "@ljharb on Twitter"
 [jssnote]: http://mjavascript.com/out/javascript "Check out this article for the full set of changes made when merging the Web ECMAScript specification upstream."
+[mb]: https://twitter.com/mathias "@mathias on Twitter"

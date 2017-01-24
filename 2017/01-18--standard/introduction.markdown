@@ -1,4 +1,4 @@
-*This is an excerpt extracted from the [first chapter in Practical ES6][ch1]. Special thanks to [Brendan Eich][be], for reviewing countless drafts of this piece --- as well as [Jordan Harband][jh], [Alex Russell][aru] and [Brian Terlson][bt]. Thanks peeps! 🎉*
+*This is an excerpt extracted from the [first chapter in Practical ES6][ch1]. Special thanks to [Brendan Eich][be], for reviewing countless drafts of this piece --- as well as [Mathias Bynens][mb], [Jordan Harband][jh], [Alex Russell][aru] and [Brian Terlson][bt]. Thanks peeps! 🎉*
 
 _<sub>Disclaimer: this article is not about the ["actual" "JavaScript" standard][jss]!</sub>_
 
@@ -14,3 +14,4 @@ Brendan created the first JavaScript prototype in ten days, taking Scheme's firs
 [aru]: https://twitter.com/slightlylate "@slightlylate on Twitter"
 [jh]: https://twitter.com/ljharb "@ljharb on Twitter"
 [jss]: https://blog.whatwg.org/javascript "Read about the JavaScript standard here."
+[mb]: https://twitter.com/mathias "@mathias on Twitter"
