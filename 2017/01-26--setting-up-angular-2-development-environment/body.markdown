@@ -388,10 +388,10 @@ The advantage of using SystemJS is that the setup is not as complex and verbose 
 
 [Cloudinary][cloudinary] already takes away the pain of having to write large amounts of code to interact with their API by providing a new [open source Angular 2 SDK][sdk] that ships with simple, easy-to-use helper methods for:
 
-1. Image uploading
-2. Image administration and sprite generation
-3. Embedding of images
-4. Image transformation and manipulation
+- Image uploading
+- Image administration and sprite generation
+- Embedding of images
+- Image transformation and manipulation
 
 With the Angular 2 SDK, you can also adapt images for delivery on any device. Uploaded images can be manipulated, on-the-fly to deliver each user a version that suits the requirements of the viewing device while optimizing performance. [Cloudinary][cloudinary] can automatically crop images to focus on the most important region, select the most optimal quality and format and responsively deliver the image on any device in any resolution or pixel density.
 
@@ -478,7 +478,7 @@ A typical example is:
 </cl-image>
 ```
 
-6\. Try running your app. You should be able to upload, list your images and perform some transformations on them.
+6\. Try running your app. You should be able to upload, list your images and perform some transformations on them, as seen below.
 
 ![Cloudinary is alive!][cloudinary-working]
 
