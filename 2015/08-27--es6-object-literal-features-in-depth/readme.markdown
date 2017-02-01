@@ -92,4 +92,4 @@ baz[foo] = <span class="md-code-string">&apos;ponyfoo&apos;</span>
     console.warn(`you&apos;re all going to pay for this!`)
   }</mark>
 }
-</code></pre> <p>I think it&#x2019;s nice that methods converged together with getters and setter. I for one don&#x2019;t use this syntax a lot because I like to name my functions and decouple them from their host objects as I explained in the <a href="https://ponyfoo.com/#property-value-shorthands">shorthand</a> section. However, it&#x2019;s still useful in some situations and definitely useful when declaring <em>&#x201C;classes&#x201D;</em> &#x2013; if you&#x2019;re into that sort of thing.</p></div>
+</code></pre> <p>I think it&#x2019;s nice that methods converged together with getters and setter. I for one don&#x2019;t use this syntax a lot because I like to name my functions and decouple them from their host objects as I explained in the <a href="#property-value-shorthands">shorthand</a> section. However, it&#x2019;s still useful in some situations and definitely useful when declaring <em>&#x201C;classes&#x201D;</em> &#x2013; if you&#x2019;re into that sort of thing.</p></div>
