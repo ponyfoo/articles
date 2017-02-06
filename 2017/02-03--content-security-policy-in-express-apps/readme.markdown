@@ -9,7 +9,7 @@
 <blockquote><p>The <code>Content-Security-Policy</code> header is a bit frightening &#x2014; will I break my website if I suddenly start blocking requests for external resources? In this article we go over a gradual approach to adopting CSP. &#x1F510;</p>
 </blockquote>
 
-<div><p>The <code class="md-code md-code-inline">Content-Security-Policy</code> header is a bit frightening &#x2014; will I break my website if I suddenly start blocking requests for external resources &#x1F630;? In this article we go over a gradual approach to adopting CSP, so that you can mitigate the risk of breaking your website while trying to making it more secure. &#x1F510;</p></div>
+<div><p>The <code class="md-code md-code-inline">Content-Security-Policy</code> header is a bit frightening &#x2014; will I break my website if I suddenly start blocking requests for external resources &#x1F630;? In this article we go over a gradual approach to adopting CSP, so that you can mitigate the risk of breaking your website while trying to make it more secure. &#x1F510;</p></div>
 
 <blockquote></blockquote>
 
