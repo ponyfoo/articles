@@ -1,0 +1,12 @@
+{
+  "id": "5894e7d4f29c28032e58b086",
+  "author": "543d222f4683586910034197",
+  "title": "`Content-Security-Policy` in Express apps",
+  "slug": "content-security-policy-in-express-apps",
+  "tags": [
+    "csp",
+    "security",
+    "http"
+  ],
+  "heroImage": "https://i.imgur.com/wWiTEO4.jpg"
+}

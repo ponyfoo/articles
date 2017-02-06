@@ -1,0 +1,1 @@
+The `Content-Security-Policy` header is a bit frightening --- will I break my website if I suddenly start blocking requests for external resources? In this article we go over a gradual approach to adopting CSP. 🔐
