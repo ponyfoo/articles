@@ -48,10 +48,18 @@ In double quoted strings, we need to escape double quotes using `\"`.
 In template literals, we need to escape backticks using `` \` ``.
 
 ```js
-`Hey, programmers use backticks to render code, like \`this\`.`
+`Hey, programmers use backticks to render code in Markdown, like \`this\`.`
 ```
 
-You're far less likely to need backticks in your everyday strings than single or double quotes, which are commonplace in English and language in general. Using template literals, then, translates into less escape codes that can pollute your otherwise beautiful strings.
+We also need to escape any dollar sign followed by an opening curly brace used to start template expressions. This can be done by escaping either the dollar sign, or the brace, or both. (It's hard to think of cases where this sequence of two characters might find its way into a string literal. As an unlikely example, the random symbols below are called [grawlix](https://en.wiktionary.org/wiki/grawlix) or "symbol swearing".)
+
+```js
+var message = `Check out this string literal example: \`Hello \${foo}!\`. It's #!$\{^% great!`
+console.log(message)
+// > Check out this string literal example: `Hello ${foo}!`. It's #!${^% great!
+```
+
+You're far less likely to need backticks in your everyday strings than single or double quotes, which are commonplace in English and language in general. The sequence "${" is unlikely to be seen except in random character sequences. Using template literals, then, translates into less escape codes that can pollute your otherwise beautiful strings.
 
 # Multiline Strings
 
@@ -199,7 +207,7 @@ Here's a Twitter poll I ran last week, asking about whether people are using tem
 
 Half of respondents still use single quotes, where close to half claim to be prefer template literals. Some replied to my tweet saying that they use template literals when they explicitly need interpolation or multiline support, but otherwise fall back to single quoted strings.
 
-Using backticks is better because you rarely need to escape backticks `` \` ``, you get multiline support, and you get variable interpolation. Many admitted they'd switch over from single quoted strings to template literals when interpolation or multiline support was required, so why not switch everything over by default and take advantage of the lower amount of `` \` `` escapes as opposed to `\'`?
+Using backticks is better because you rarely need to escape backticks `` \` `` or `` \${ ``, you get multiline support, and you get variable interpolation. Many admitted they'd switch over from single quoted strings to template literals when interpolation or multiline support was required, so why not switch everything over by default and take advantage of the lower amount of escapes?
 
 The only valid argument I've read against using template literals, much like with `const`, is that people are used to single quoted strings. While familiarity is a fair claim, you can conjure up the habit of using template literals very quickly, as we'll explore next.
 
