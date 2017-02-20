@@ -1,0 +1,11 @@
+{
+  "id": "58a7d18dbac0700328aeea2e",
+  "author": "543d222f4683586910034197",
+  "title": "Variables declared using `const` are not immutable",
+  "slug": "const-variables-not-immutable",
+  "tags": [
+    "const",
+    "immutability"
+  ],
+  "heroImage": "https://i.imgur.com/TjJ7TAS.jpg"
+}
