@@ -52,26 +52,36 @@ That code was _"better than using callbacks"_, when it comes to how sequential i
 We've already explored generators as a way of making the `html` available in a synthetic _"synchronous"_ manner [in the past][3]. Even though the code is now somewhat synchronous, there's quite a bit of wrapping involved, and generators may not be the most straightforward way of accomplishing the results that we want, so we might end up sticking to Promises anyways.
 
 ```js
+let request = require('request');
+let hget = require('hget');
+let marked = require('marked');
+
 function <mark>getRandomPonyFooArticle</mark> (gen) {
   var g = gen();
+  g.next(); // Important! Otherwise stops execution on `var html = yield`.
+  
   request('https://ponyfoo.com/articles/random', (err, res, body) => {
     if (err) {
       g.throw(err); return;
     }
+    
     g.next(body);
   });
 }
 
 getRandomPonyFooArticle(function* printRandomArticle () {
   var html = yield;
+  
   var md = hget(html, {
     markdown: true,
     root: 'main',
     ignore: '.at-subscribe,.mm-comments,.de-sidebar'
   });
+  
   var txt = marked(md, {
-    renderer: new Term()
+    renderer: new marked.Renderer()
   });
+  
   console.log(txt);
 });
 ```
