@@ -45,26 +45,36 @@ printRandomArticle();
     .then(txt =&gt; <span class="md-code-built_in">console</span>.log(txt))
     .catch(reason =&gt; <span class="md-code-built_in">console</span>.error(reason));
 }
-</code></pre> <p>When ran, that snippet of code produces output as shown in the following screenshot.</p> <figure><a href="https://github.com/bevacqua/read-ponyfoo/blob/966b4ce513250561826871b52cea436e0edbce09/cli" target="_blank" aria-label="bevacqua/read-ponyfoo on GitHub"><img alt="Screenshot" class="" src="https://i.imgur.com/ArxlARC.png"></a></figure> <p>That code was <em>&#x201C;better than using callbacks&#x201D;</em>, when it comes to how sequential it feels to read the code.</p> <h1 id="using-generators">Using Generators</h1> <p>We&#x2019;ve already explored generators as a way of making the <code class="md-code md-code-inline">html</code> available in a synthetic <em>&#x201C;synchronous&#x201D;</em> manner <a href="https://ponyfoo.com/articles/es6-generators-in-depth" aria-label="ES6 Generators in Depth on Pony Foo">in the past</a>. Even though the code is now somewhat synchronous, there&#x2019;s quite a bit of wrapping involved, and generators may not be the most straightforward way of accomplishing the results that we want, so we might end up sticking to Promises anyways.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title"><mark class="md-mark md-code-mark">getRandomPonyFooArticle</mark></span> <span class="md-code-params">(gen)</span> </span>{
+</code></pre> <p>When ran, that snippet of code produces output as shown in the following screenshot.</p> <figure><a href="https://github.com/bevacqua/read-ponyfoo/blob/966b4ce513250561826871b52cea436e0edbce09/cli" target="_blank" aria-label="bevacqua/read-ponyfoo on GitHub"><img alt="Screenshot" class="" src="https://i.imgur.com/ArxlARC.png"></a></figure> <p>That code was <em>&#x201C;better than using callbacks&#x201D;</em>, when it comes to how sequential it feels to read the code.</p> <h1 id="using-generators">Using Generators</h1> <p>We&#x2019;ve already explored generators as a way of making the <code class="md-code md-code-inline">html</code> available in a synthetic <em>&#x201C;synchronous&#x201D;</em> manner <a href="https://ponyfoo.com/articles/es6-generators-in-depth" aria-label="ES6 Generators in Depth on Pony Foo">in the past</a>. Even though the code is now somewhat synchronous, there&#x2019;s quite a bit of wrapping involved, and generators may not be the most straightforward way of accomplishing the results that we want, so we might end up sticking to Promises anyways.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">let</span> request = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;request&apos;</span>);
+<span class="md-code-keyword">let</span> hget = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;hget&apos;</span>);
+<span class="md-code-keyword">let</span> marked = <span class="md-code-built_in">require</span>(<span class="md-code-string">&apos;marked&apos;</span>);
+
+<span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title"><mark class="md-mark md-code-mark">getRandomPonyFooArticle</mark></span> <span class="md-code-params">(gen)</span> </span>{
   <span class="md-code-keyword">var</span> g = gen();
+  g.next(); <span class="md-code-comment">// Important! Otherwise stops execution on `var html = yield`.</span>
+  
   request(<span class="md-code-string">&apos;https://ponyfoo.com/articles/random&apos;</span>, (err, res, body) =&gt; {
     <span class="md-code-keyword">if</span> (err) {
       g.throw(err); <span class="md-code-keyword">return</span>;
     }
+    
     g.next(body);
   });
 }
 
 getRandomPonyFooArticle(<span class="md-code-function"><span class="md-code-keyword">function</span>* <span class="md-code-title">printRandomArticle</span> <span class="md-code-params">()</span> </span>{
   <span class="md-code-keyword">var</span> html = <span class="md-code-keyword">yield</span>;
+  
   <span class="md-code-keyword">var</span> md = hget(html, {
     markdown: <span class="md-code-literal">true</span>,
     root: <span class="md-code-string">&apos;main&apos;</span>,
     ignore: <span class="md-code-string">&apos;.at-subscribe,.mm-comments,.de-sidebar&apos;</span>
   });
+  
   <span class="md-code-keyword">var</span> txt = marked(md, {
-    renderer: <span class="md-code-keyword">new</span> Term()
+    renderer: <span class="md-code-keyword">new</span> marked.Renderer()
   });
+  
   <span class="md-code-built_in">console</span>.log(txt);
 });
 </code></pre> <blockquote> <p>Keep in mind you should wrap the <code class="md-code md-code-inline">yield</code> call in a <code class="md-code md-code-inline">try</code> / <code class="md-code md-code-inline">catch</code> block to preserve the error handling we had added when using promises.</p> </blockquote> <p>Needless to say, using generators like this <em>doesn&#x2019;t scale well</em>. Besides involving an unintuitive syntax into the mix, your iterator code will be highly coupled to the generator function that&#x2019;s being consumed. That means you&#x2019;ll have to change it often as you add new <code class="md-code md-code-inline">await</code> expressions to the generator. A better alternative is to use the upcoming <strong>Async Function</strong>.</p> <h1 id="using-async-await">Using <code class="md-code md-code-inline">async</code> / <code class="md-code md-code-inline">await</code></h1> <p>When <em>Async Functions</em> finally hit the road, we&#x2019;ll be able to take our <code class="md-code md-code-inline">Promise</code>-based implementation and have it take advantage of the synchronous-looking generator style. Another benefit in this approach is that you won&#x2019;t have to change <code class="md-code md-code-inline">getRandomPonyFooArticle</code> at all, as long as it returns a promise, it can be awaited.</p> <p><strong>Note that <code class="md-code md-code-inline">await</code> may only be used in functions marked with the <code class="md-code md-code-inline">async</code> keyword.</strong> It works similarly to generators, suspending execution in your context until the promise settles. If the awaited expression isn&#x2019;t a promise, its casted into a promise.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript">read();
