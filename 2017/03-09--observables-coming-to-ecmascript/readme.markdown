@@ -18,7 +18,7 @@
   observer.next(<span class="md-code-number">1</span>)
   observer.next(<span class="md-code-number">2</span>)
 })
-</code></pre> <p>We can use <code class="md-code md-code-inline">observer.error</code> to add report errors that occur during stream processing.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">new</span> Observable(observer =&gt; {
+</code></pre> <p>We can use <code class="md-code md-code-inline">observer.error</code> to report errors that occur during stream processing.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">new</span> Observable(observer =&gt; {
   observer.error(<span class="md-code-keyword">new</span> <span class="md-code-built_in">Error</span>(`Failed to stream events`))
 })
 </code></pre> <p>We can use <code class="md-code md-code-inline">observer.complete</code> to signal when the event stream has come to an end.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">new</span> Observable(observer =&gt; {

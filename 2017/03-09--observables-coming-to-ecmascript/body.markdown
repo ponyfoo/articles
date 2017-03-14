@@ -9,7 +9,7 @@ new Observable(observer => {
 })
 ```
 
-We can use `observer.error` to add report errors that occur during stream processing.
+We can use `observer.error` to report errors that occur during stream processing.
 
 ```js
 new Observable(observer => {
