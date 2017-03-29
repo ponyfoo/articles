@@ -1,0 +1,12 @@
+{
+  "id": "58dbea3cba8fc1032d35efa4",
+  "author": "543d222f4683586910034197",
+  "title": "Mixing Generators Into Iterators",
+  "slug": "iterators-as-generators",
+  "tags": [
+    "es6",
+    "generators",
+    "iterators"
+  ],
+  "heroImage": "https://i.imgur.com/YqpTJGF.jpg"
+}
