@@ -83,7 +83,7 @@ While array destructuring in the previous example hid our code's reliance on mag
 ```js
 function parseKeyValuePair(input) {
   const rattribute = /(?<key>[a-z]+)(?:=|\sis\s)(?<value>[a-z]+)/
-  const { group } = rattribute.exec(input)
+  const { groups } = rattribute.exec(input)
   return groups
 }
 parseKeyValuePair('strong=true') // <- { key: 'strong', value: 'true' }
