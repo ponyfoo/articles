@@ -149,7 +149,7 @@ getNonJavaScriptFilename(<span class="md-code-string">&apos;index.php&apos;</spa
 }
 getDollarAmount(<span class="md-code-string">&apos;$12.34&apos;</span>) <span class="md-code-comment">// &lt;- &apos;12.34&apos;</span>
 getDollarAmount(<span class="md-code-string">&apos;&#x20AC;12.34&apos;</span>) <span class="md-code-comment">// &lt;- null</span>
-</code></pre> <p>On the other hand, a negative lookbehind could be used to match numbers that aren&#x2019;t preceded by a dollar sign.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">getDollarAmount</span><span class="md-code-params">(input)</span> </span>{
+</code></pre> <p>On the other hand, a negative lookbehind could be used to match numbers that aren&#x2019;t preceded by a dollar sign.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">getNonDollarAmount</span><span class="md-code-params">(input)</span> </span>{
   <span class="md-code-keyword">const</span> rnumbers = <span class="md-code-regexp">/^(?&lt;!\$)(?&lt;amount&gt;\d+(?:\.\d+)?)$/</span>
   <span class="md-code-keyword">const</span> match = rnumbers.exec(input)
   <span class="md-code-keyword">if</span> (match === <span class="md-code-literal">null</span>) {
@@ -157,8 +157,8 @@ getDollarAmount(<span class="md-code-string">&apos;&#x20AC;12.34&apos;</span>) <
   }
   <span class="md-code-keyword">return</span> match.groups.amount
 }
-getDollarAmount(<span class="md-code-string">&apos;$12.34&apos;</span>) <span class="md-code-comment">// &lt;- null</span>
-getDollarAmount(<span class="md-code-string">&apos;&#x20AC;12.34&apos;</span>) <span class="md-code-comment">// &lt;- &apos;12.34&apos;</span>
+getNonDollarAmount(<span class="md-code-string">&apos;$12.34&apos;</span>) <span class="md-code-comment">// &lt;- null</span>
+getNonDollarAmount(<span class="md-code-string">&apos;&#x20AC;12.34&apos;</span>) <span class="md-code-comment">// &lt;- &apos;12.34&apos;</span>
 </code></pre> <h1 id="a-new-s-dotall-flag">A New <code class="md-code md-code-inline">/s</code> <em>(<code class="md-code md-code-inline">dotAll</code>)</em> Flag</h1> <p>When using the <code class="md-code md-code-inline">.</code> pattern, we typically expect to match every single character. In JavaScript, however, a <code class="md-code md-code-inline">.</code> expression doesn&#x2019;t match astral characters <em>(which can be fixed by adding the <code class="md-code md-code-inline">u</code> flag)</em> nor line terminators.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">const</span> rcharacter = <span class="md-code-regexp">/^.$/</span>
 rcharacter.test(<span class="md-code-string">&apos;a&apos;</span>) <span class="md-code-comment">// &lt;- true</span>
 rcharacter.test(<span class="md-code-string">&apos;\t&apos;</span>) <span class="md-code-comment">// &lt;- true</span>

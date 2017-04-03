@@ -230,7 +230,7 @@ getDollarAmount('€12.34') // <- null
 On the other hand, a negative lookbehind could be used to match numbers that aren't preceded by a dollar sign.
 
 ```js
-function getDollarAmount(input) {
+function getNonDollarAmount(input) {
   const rnumbers = /^(?<!\$)(?<amount>\d+(?:\.\d+)?)$/
   const match = rnumbers.exec(input)
   if (match === null) {
@@ -238,8 +238,8 @@ function getDollarAmount(input) {
   }
   return match.groups.amount
 }
-getDollarAmount('$12.34') // <- null
-getDollarAmount('€12.34') // <- '12.34'
+getNonDollarAmount('$12.34') // <- null
+getNonDollarAmount('€12.34') // <- '12.34'
 ```
 
 # A New `/s` _(`dotAll`)_ Flag
