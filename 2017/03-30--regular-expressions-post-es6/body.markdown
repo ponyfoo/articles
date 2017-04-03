@@ -33,7 +33,7 @@ The `u` flag introduces support for Unicode code point escapes, like the `\u{1f4
 Without the `u` flag, the `.` pattern matches any BMP symbol except for line terminators. The following example shows `U+1D11E MUSICAL SYMBOL G CLEF`, an astral symbol that wouldn't match the dot pattern in plain regular expressions.
 
 ```js
-const rdot = /./
+const rdot = /^.$/
 rdot.test('a') // <- true
 rdot.test('\n') // <- false
 rdot.test('\u{1d11e}') // <- false
@@ -42,7 +42,7 @@ rdot.test('\u{1d11e}') // <- false
 When using the `u` flag, Unicode symbols that aren't on the BMP are matched as well. The next snippet shows how the astral symbol matches when the flag is set.
 
 ```js
-const rdot = /./u
+const rdot = /^.$/u
 rdot.test('a') // <- true
 rdot.test('\n') // <- false
 rdot.test('\u{1d11e}') // <- true
