@@ -1,1 +1,1 @@
-In this article we'll take a look at regular expressions in and after ES6. There's a couple of regular expressions flags which were introduced in ES6: the `/y` or sticky flag, and the `/u` or Unicode flag. Then we'll discuss five proposals which are making their way through the ECMAScript specification development process at TC39.
+In this article we'll take a look at regular expressions improvements in and after ES6. We'll discuss the `/y`, `/u`, and `/s` flags, named capture groups, unicode property escapes, lookbehind assertions, and `String#matchAll`.

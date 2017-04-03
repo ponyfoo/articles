@@ -6,7 +6,7 @@
 
 <p><kbd>es6</kbd> <kbd>unicode</kbd> <kbd>regular-expressions</kbd></p>
 
-<blockquote><p>In this article we&#x2019;ll take a look at regular expressions in and after ES6. There&#x2019;s a couple of regular expressions flags which were introduced in ES6: the <code>/y</code> or sticky flag, and the <code>/u</code> or Unicode flag. Then we&#x2019;ll discuss five proposals which are making their way through the ECMAScript specification development process at TC39.</p>
+<blockquote><p>In this article we&#x2019;ll take a look at regular expressions improvements in and after ES6. We&#x2019;ll discuss the <code>/y</code>, <code>/u</code>, and <code>/s</code> flags, named capture groups, unicode property escapes, lookbehind assertions, and <code>String#matchAll</code>.</p>
 </blockquote>
 
 <div><p>In this article we&#x2019;ll take a look at regular expressions in and after ES6. There&#x2019;s a couple of regular expressions flags which were introduced in ES6: the <code class="md-code md-code-inline">/y</code> or sticky flag, and the <code class="md-code md-code-inline">/u</code> or Unicode flag. Then we&#x2019;ll discuss five proposals which are making their way through the <a href="https://ponyfoo.com/articles/standard" aria-label="The JavaScript Standard on Pony Foo">ECMAScript specification development process</a> at TC39.</p></div>
