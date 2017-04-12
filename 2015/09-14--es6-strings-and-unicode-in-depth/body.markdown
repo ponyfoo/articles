@@ -545,7 +545,7 @@ compare(
 // <- true
 ```
 
-See you tomorrow? _Modules are coming!_
+See you tomorrow? _Modules are coming._
 
 > _Many thanks to Mathias for reviewing drafts of this article_, ❤!
 

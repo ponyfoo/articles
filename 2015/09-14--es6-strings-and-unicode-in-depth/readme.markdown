@@ -230,4 +230,4 @@ compare(<span class="md-code-string">&apos;ma&#xF1;ana&apos;</span>, <span class
   <span class="md-code-string">&apos;\x6d\x61<mark class="md-mark md-code-mark">\x6e\u0303</mark>\x61\x6e\x61&apos;</span>
 )
 <span class="md-code-comment">// &lt;- true</span>
-</code></pre> <p>See you tomorrow? <em>Modules are coming!</em></p> <blockquote> <p><em>Many thanks to Mathias for reviewing drafts of this article</em>, &#x2764;!</p> </blockquote></div>
+</code></pre> <p>See you tomorrow? <em>Modules are coming.</em></p> <blockquote> <p><em>Many thanks to Mathias for reviewing drafts of this article</em>, &#x2764;!</p> </blockquote></div>
