@@ -530,7 +530,7 @@ Here's some additional resources you can read to further extend your comprehensi
 Please comment on any issues regarding this article, so _everyone can benefit_ from your feedback. Also, you should [follow me on Twitter][1]!
 
   [1]: https://twitter.com/nzgb "@nzgb on Twitter"
-  [2]: http://i.imgur.com/LSVpcm1.png
+  [2]: https://i.imgur.com/LSVpcm1.png
   [3]: http://angularjs.org/ "Angular.js"
   [4]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/compile.js#L549 "`'A'` is the default `restrict` value - Angular on GitHub"
   [5]: https://github.com/angular/angular.js/blob/caed2dfe4feeac5d19ecea2dbb1456b7fde21e6d/src/ng/compile.js#L980 "Where can I add a directive? - Angular on GitHub"
