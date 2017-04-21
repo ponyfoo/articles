@@ -4,9 +4,7 @@
   "title": "Are Regular Expressions Stateful?",
   "slug": "stateful-regular-expressions",
   "tags": [
-    "regex",
-    "bug",
-    "chrome"
+    "regular-expressions"
   ],
-  "heroImage": null
+  "heroImage": "https://i.imgur.com/sfKUWTN.jpg"
 }
