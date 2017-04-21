@@ -357,24 +357,24 @@ Cache vendor scripts on a bundle of their own. This is usually quite useful beca
 
 Hope you've found any of this useful and are able to put some of it to good use. In case you've missed it, [the previous part][88] described how to identify issues during continuous integration, which might also come in handy.
 
-[1]: http://i.imgur.com/aQeEys0.png
+[1]: https://i.imgur.com/aQeEys0.png
 [2]: http://blog.lmorchard.com/2015/07/22/the-verge-web-sucks/ "The Verge's Web Sucks"
 [3]: https://developers.google.com/speed/pagespeed/service/Deprecation "Turndown information for PageSpeed Service"
 [4]: https://news.ycombinator.com/item?id=9500195 "We're only deprecating PageSpeed Service"
 [5]: https://developers.google.com/speed/pagespeed/insights/ "PageSpeed Insights"
 [6]: https://github.com/defunctzombie/localtunnel "defunctzombie/localtunnel on GitHub"
-[7]: http://i.imgur.com/w0hO5MP.png
+[7]: https://i.imgur.com/w0hO5MP.png
 [8]: /articles/critical-path-performance-optimization "Critical Path Performance Optimization at Pony Foo"
 [9]: http://www.webpagetest.org/ "WebPageTest"
-[10]: http://i.imgur.com/mjik5WK.png
-[11]: http://i.imgur.com/LgFMmRj.png
-[12]: http://i.imgur.com/C1avf9e.png
-[13]: http://i.imgur.com/s8Ey7Ly.png
+[10]: https://i.imgur.com/mjik5WK.png
+[11]: https://i.imgur.com/LgFMmRj.png
+[12]: https://i.imgur.com/C1avf9e.png
+[13]: https://i.imgur.com/s8Ey7Ly.png
 [14]: http://techcrunch.com/2015/02/05/twitter-confirms-new-google-firehose-deal-to-distribute-traffic-to-logged-out-users/ "Twitter Confirms Google Firehose Deal To Target Logged Out Users"
-[15]: http://i.imgur.com/GvXqSfB.png
-[16]: http://i.imgur.com/RyCBNgH.png
-[17]: http://i.imgur.com/a7ORyGa.png
-[18]: http://i.imgur.com/TGz0yfr.png
+[15]: https://i.imgur.com/GvXqSfB.png
+[16]: https://i.imgur.com/RyCBNgH.png
+[17]: https://i.imgur.com/a7ORyGa.png
+[18]: https://i.imgur.com/TGz0yfr.png
 [19]: http://shop.oreilly.com/product/0636920033578.do "Designing for Performance by Lara Hogan"
 [20]: https://github.com/addyosmani/psi "addyosmani/psi on GitHub"
 [21]: https://github.com/jrcryer/grunt-pagespeed "jrcryer/grunt-pagespeed on GitHub"
@@ -382,13 +382,13 @@ Hope you've found any of this useful and are able to put some of it to good use.
 [23]: https://github.com/addyosmani/psi#cli "CLI to PageSpeed Insights API"
 [24]: https://github.com/addyosmani/psi#api "API for PageSpeed Insights"
 [25]: /articles/gulp-grunt-whatever "Gulp, Grunt, Whatever on Pony Foo"
-[26]: http://i.imgur.com/Bth1KNp.png
+[26]: https://i.imgur.com/Bth1KNp.png
 [27]: https://github.com/marcelduran/webpagetest-api "marcelduran/webpagetest-api on GitHub"
-[28]: http://i.imgur.com/zejyYBV.png
+[28]: https://i.imgur.com/zejyYBV.png
 [29]: https://github.com/andyshora/grunt-yslow "andyshora/grunt-yslow on GitHub"
-[30]: http://i.imgur.com/s182eSA.png
+[30]: https://i.imgur.com/s182eSA.png
 [31]: https://github.com/tkadlec/grunt-perfbudget "tkadlec/grunt-perfbudget on GitHub"
-[32]: http://i.imgur.com/TssYhZ7.png
+[32]: https://i.imgur.com/TssYhZ7.png
 [33]: https://developers.google.com/speed/articles/tcp_initcwnd_paper.pdf "An Argument for Increasing TCP’s Initial Congestion Window"
 [34]: http://www.cdnplanet.com/blog/tune-tcp-initcwnd-for-optimum-performance/#change-initcwnd "Tuning initcwnd for optimum performance"
 [35]: http://nginx.org/en/docs/http/ngx_http_spdy_module.html "nginx module: ngx_http_spdy_module"
@@ -421,7 +421,7 @@ Hope you've found any of this useful and are able to put some of it to good use.
 [62]: https://github.com/aheckmann/gm "aheckmann/gm on GitHub"
 [63]: https://github.com/Ensighten/spritesmith "Ensighten/spritesmith on GitHub"
 [64]: https://i.imgur.com/JF118g3.png
-[65]: http://i.imgur.com/l65vPpr.png
+[65]: https://i.imgur.com/l65vPpr.png
 [66]: https://github.com/bevacqua/perfschool "bevacqua/perfschool on GitHub"
 [67]: http://bevacqua.io/bf/book "JavaScript Application Design: A Build First Approach, on Manning Publishing"
 [68]: https://raw.githubusercontent.com/bevacqua/perfschool/master/resources/menu.png
