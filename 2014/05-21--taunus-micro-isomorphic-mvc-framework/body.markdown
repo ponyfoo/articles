@@ -173,4 +173,4 @@ There's still a long way to go, but I'm sure it'll drastically improve as I toy 
   [5]: /2014/05/16/modularizing-your-front-end "Modularizing Your Front-End"
   [6]: https://github.com/bevacqua/ponyfoo/blob/158a1a130d35f77b2d6f0c22f8651a6f21334083/build/debug "`npm start`!"
   [7]: https://github.com/bevacqua/taunus#events "Taunus Events on GitHub"
-  [8]: http://i.imgur.com/mfVdU9V.png "01_design.png"
+  [8]: https://i.imgur.com/mfVdU9V.png "01_design.png"
