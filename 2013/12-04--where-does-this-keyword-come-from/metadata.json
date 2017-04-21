@@ -1,7 +1,7 @@
 {
   "id": "543d225f46835869100341c5",
   "author": "543d222f4683586910034197",
-  "title": "Where does this keyword come from?",
+  "title": "Where does `this` keyword come from?",
   "slug": "where-does-this-keyword-come-from",
   "tags": [
     "js",
@@ -9,5 +9,5 @@
     "best-practices",
     "this"
   ],
-  "heroImage": null
+  "heroImage": "https://i.imgur.com/c8VEc57.jpg"
 }
