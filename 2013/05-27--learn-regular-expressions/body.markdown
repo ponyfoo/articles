@@ -126,4 +126,4 @@ In this post we've looked at some of the most common patterns of regex. Most imp
 
 I test out my regular expressions using this online [REGex Tester](http://regextester.com/ "REGex Tester Tool") tool, or directly in my browser if they are simple enough.
 
-[TL;DR cheatsheet](http://i.imgur.com/UTlGckN.png "Regular Expressions Cheat Sheet")
+[TL;DR cheatsheet](https://i.imgur.com/UTlGckN.png "Regular Expressions Cheat Sheet")
