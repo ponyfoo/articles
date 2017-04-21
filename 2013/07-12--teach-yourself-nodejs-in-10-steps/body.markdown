@@ -1,18 +1,18 @@
 To kick things off, here are _a couple of infographics_. Because who doesn't **love infographics**, right? I generally just embed pictures here, but these are way too large, so I'll just link to them.
 
-The [first infographic](http://i.imgur.com/KCkIkcY.jpg "Infographic - Getting to know Node") I want to show you is about the earlier days of Node. It depicts its strengths, such as its growing community and _the reasons it appeals to developers_. A second, [more recent infographic](http://i.imgur.com/qrhh5Xk.jpg "Infographic - Node Growth Trends"), reveals the steady rise in popularity [Node.JS](http://nodejs.org/ "Node.JS by Joyent") is trending towards.
+The [first infographic](https://i.imgur.com/KCkIkcY.jpg "Infographic - Getting to know Node") I want to show you is about the earlier days of Node. It depicts its strengths, such as its growing community and _the reasons it appeals to developers_. A second, [more recent infographic](https://i.imgur.com/qrhh5Xk.jpg "Infographic - Node Growth Trends"), reveals the steady rise in popularity [Node.js](http://nodejs.org/ "Node.js by Joyent") is trending towards.
 
 Those are pretty. You get it, _Node is popular, and awesome_. What is it? Where does it come from?
 
 ## History Lesson
 
-Node.JS was released _four years ago_, in 2009. Just a year after Google open-sourced [V8](https://code.google.com/p/v8/ "Google V8 Engine"), the JavaScript engine that powers _Chrome and Node.JS_ alike. You might want to learn more about V8 if the deep technical internals are your thing, you can watch this video in that case. It is _entirely optional_ to the purpose of this article, though, so you keep the link around for later.
+Node.js was released _four years ago_, in 2009. Just a year after Google open-sourced [V8](https://code.google.com/p/v8/ "Google V8 Engine"), the JavaScript engine that powers _Chrome and Node.js_ alike. You might want to learn more about V8 if the deep technical internals are your thing, you can watch this video in that case. It is _entirely optional_ to the purpose of this article, though, so you keep the link around for later.
 
 [![V8 Talk][1]](http://www.youtube.com/watch?v=FrufJFBSoQY "V8 Talk - High Performance JavaScript Engine - Google I/O")
 
-> Here's something _a bit more in the wheelhouse_ of what we're going to be talking about, an **introduction to Node.JS with Ryan Dahl**, the _huge nerd_ who invented Node. This is a _very entertaining, fast-paced talk_, where you'll learn the basics, _spoken by the original author_ himself. What's not to like? Go ahead, **watch the full thing!**
+> Here's something _a bit more in the wheelhouse_ of what we're going to be talking about, an **introduction to Node.js with Ryan Dahl**, the _huge nerd_ who invented Node. This is a _very entertaining, fast-paced talk_, where you'll learn the basics, _spoken by the original author_ himself. What's not to like? Go ahead, **watch the full thing!**
 
-> [![Intro to Node.JS][2]](http://www.youtube.com/watch?v=jo_B4LTHi3I "Introduction to Node.JS with Ryan Dahl")
+> [![Intro to Node.js][2]](http://www.youtube.com/watch?v=jo_B4LTHi3I "Introduction to Node.js with Ryan Dahl")
 
 Good stuff. Please note the talk is **two years old**, and _some of the statements Ryan makes are now outdated_.
 
@@ -36,7 +36,7 @@ var api = {
 module.exports = api;
 ```
 
-Note the variable `api` won't make it's way to the `global` object. You can [learn why](http://nodejs.org/api/globals.html "Global Objects in Node.JS") from the docs. Globals work differently in Node. The top-level scope of a module is local to that module, but you can still access a few globals on your own, such as `process`, and `console`. Setting up your own globals on the `global` object is discouraged.
+Note the variable `api` won't make it's way to the `global` object. You can [learn why](http://nodejs.org/api/globals.html "Global Objects in Node.js") from the docs. Globals work differently in Node. The top-level scope of a module is local to that module, but you can still access a few globals on your own, such as `process`, and `console`. Setting up your own globals on the `global` object is discouraged.
 
 Consequently, `module` isn't a global, but rather a _local variable_, private to the module we are currently working on.
 
@@ -109,7 +109,7 @@ math.sum(1, 2, function(err, result){
 });
 ```
 
-We are now _waiting reactively_ for the `sum` function to let us know when it's done. This is the _basest of asynchronous_ examples in **Node.JS**. Note how we _changed modes_, and use `throw` here; this is fine as long as we are in a synchronous path, `throw`ing errors should always have the end result of **process termination**, so keep that in mind when you are dealing with this type of situations. This is _acceptable for our console application_, however in a web application we probably would prefer to just return an HTTP status code 500, _internal server error_, for the current request.
+We are now _waiting reactively_ for the `sum` function to let us know when it's done. This is the _basest of asynchronous_ examples in **Node.js**. Note how we _changed modes_, and use `throw` here; this is fine as long as we are in a synchronous path, `throw`ing errors should always have the end result of **process termination**, so keep that in mind when you are dealing with this type of situations. This is _acceptable for our console application_, however in a web application we probably would prefer to just return an HTTP status code 500, _internal server error_, for the current request.
 
 You'll also have to consider the option of **bubbling errors** through _multiple asynchronous calls_. This, for example, might not be the best error-handling approach:
 
@@ -238,7 +238,7 @@ $ npm install async --save
 
 That's it. `async` has been added it to the `dependencies` object. Installing a module basically just fetches it, and adds it to a `node_modules` folder, which you should always exclude in your `.gitignore` settings.
 
-If you are interested in developing your own `npm` module, you'll be shocked to learn [how simple that is](/2013/01/23/publishing-nodejs-packages-with-npm "Publishing Node.JS Packages with npm").
+If you are interested in developing your own `npm` module, you'll be shocked to learn [how simple that is](/2013/01/23/publishing-nodejs-packages-with-npm "Publishing Node.js Packages with npm").
 
 Before we jump into building a decent application, lets look at one of the most powerful constructs in Node.
 
@@ -353,7 +353,7 @@ console.log('Listening!');
 
 Couple of things. First of all, `__dirname` is a _special local variable_ that contains the absolute path to the directory for our currently executing module. We just learned what events are, the [fs.createReadStream](http://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options "File System API - Node Documentation") method will provide us with an event emitter we can use to stream data to the response. The file will be piped straight into a [chunked](http://en.wikipedia.org/wiki/Chunked_transfer_encoding "HTTP Chunked Transfer Encoding") response, this can be achieved using the [readable.pipe method](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options "Node Readable Streams"). If the file isn't found, the stream will emit an `'error'` event; we can take advantage of that and respond with a _404 status code_ instead.
 
-This is, however, a very convoluted thing to do to just serve a file. Enter [Express.JS](http://expressjs.com/ "Express Web Application Framework").
+This is, however, a very convoluted thing to do to just serve a file. Enter [Express](http://expressjs.com/ "Express Web Application Framework").
 
 ## Express Application Framework
 
@@ -374,7 +374,7 @@ app.get('/', function(req, res){
 app.listen(8000);
 ```
 
-The [API](http://expressjs.com/api.html "Express.JS API Documentation") is **incredibly self-documenting**, I wish more projects had an API as clean as Express does.
+The [API](http://expressjs.com/api.html "Express API Documentation") is **incredibly self-documenting**, I wish more projects had an API as clean as Express does.
 
 Enough already. You are mean for laughing at _all of my stupid examples_. You know what else is mean?
 
@@ -385,13 +385,13 @@ The [MEAN Stack](http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb
 - [MongoDB](http://www.mongodb.org/ "MongoDB NoSQL Database Server") as a database
 - [ExpressJS](http://expressjs.com/ "Express Web Application Framework") as your web framework
 - [AngularJS](http://angularjs.org/ "AngularJS MV* Framework") as your client-side framework
-- [NodeJS](http://nodejs.org/ "Node.JS Platform") as the platform
+- [NodeJS](http://nodejs.org/ "Node.js Platform") as the platform
 
 The glaring benefit of using a stack such as this is the ease with which you can transfer objects through your application without having to resort to different interfaces, data presentation alternatives, and programming languages. You can really get away with just using JavaScript everywhere.
 
 > I have fun thinking of _JavaScript detractors melting in hell, as the rising tide that is JS continues to plow through and outclass everything in its wake_. People can't get away with hating JavaScript like they did a few years ago anymore. **Embrace it or fall behind.** That's simply all the truth there is.
 
-> You might not like _cross-browser issues_, but those are [pretty much gone](/2013/07/09/getting-over-jquery "Getting Over jQuery"), and you don't have to face any of that in the fancy world of **Node.JS**.
+> You might not like _cross-browser issues_, but those are [pretty much gone](/2013/07/09/getting-over-jquery "Getting Over jQuery"), and you don't have to face any of that in the fancy world of **Node.js**.
 
 Fine, enough ranting, there are a couple more things for you to look at.
 
