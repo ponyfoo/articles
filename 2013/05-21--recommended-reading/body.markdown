@@ -1,9 +1,3 @@
-### [The Pragmatic Programmer](http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X "Find it in Amazon") ###
-
-[![the-pragmatic-programmer.jpg][1]](http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X "Find it in Amazon")
-
-The authors focus on teaching a pragmatic approach to the software development process. They'll try to teach you what matters about a project, how to stay productive, and they'll provide you with an [extensive list of tips](http://www.codinghorror.com/blog/2004/10/a-pragmatic-quick-reference.html "A Pragmatic Quick Reference") you can, and probably should, apply to your day to day software development activities. In reading this book I had a lot of nodding moments, some "ahá!" moments, and _a lot of fun_.
-
 ### [The Mythical Man Month](http://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959 "Find it in Amazon") ###
 
 [![the-mythical-man-month.jpg][2]](http://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959 "Find it in Amazon")
@@ -57,7 +51,6 @@ The Good Parts is a must read for anyone who wants to write JavaScript, at any l
 [TDD](http://en.wikipedia.org/wiki/Test-driven_development "Definition of TDD") is a practice we should all be concerned about. JavaScript is often treated lightly in regards to testing, and this book teaches how to face it with a TDD mindset. As far as conscious architectural decisions and testing go, I can't stress enough that JavaScript should be treated as an equal to any other  "server-side" language. Christian will help you through the process of learning how to write code in a more structured way, all the while writing tests before refactoring your code.
 
 
-  [1]: https://i.imgur.com/fqvoJkR.jpg
   [2]: https://i.imgur.com/1JmntMT.jpg
   [3]: https://i.imgur.com/Rma7rpz.jpg
   [4]: https://i.imgur.com/7JR2rGf.jpg
