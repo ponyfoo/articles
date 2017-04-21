@@ -6,13 +6,14 @@
 
 <p><kbd>rehearsal</kbd> <kbd>utility</kbd> <kbd>presentations</kbd></p>
 
-<blockquote><p>Persist standard input to a file, then simulate real-time program execution.</p><blockquote></blockquote> <p>Ever needed to give a talk on a program and show exactly how the output is going to look &#x2026;</p></blockquote>
+<blockquote><p>Persist standard input to a file and keep track of timestamps, then simulate real-time program execution.</p>
+</blockquote>
 
-<div><p>Persist standard input to a file, then simulate real-time program execution.</p></div>
+<div><p>Persist standard input to a file and keep track of timestamps, then simulate real-time program execution.</p></div>
 
 <blockquote></blockquote>
 
-<div><blockquote></blockquote> <p>Ever needed to give a talk on a program and show exactly how the output is going to look like, and such?</p> <p>Maybe you ditched the idea because your program was a bit on the experimental side, and you were afraid it might break, or you were afraid to type the wrong things into the terminal, and boom. <a href="http://net.tutsplus.com/articles/editorials/the-holy-grail-of-conference-talks-live-coding/" target="_blank">Live coding turns into bloodbath</a>, hundreds die.</p></div>
+<div><p>Ever needed to give a talk on a program and show exactly how the output is going to look like, and such?</p> <p>Maybe you ditched the idea because your program was a bit on the experimental side, and you were afraid it might break, or you were afraid to type the wrong things into the terminal, and boom. <a href="http://net.tutsplus.com/articles/editorials/the-holy-grail-of-conference-talks-live-coding/" target="_blank">Live coding turns into bloodbath</a>, hundreds die.</p></div>
 
 <div><p>I just wrote <a href="https://github.com/bevacqua/rehearsal" target="_blank" aria-label="bevacqua/rehearsal on GitHub">a little thing</a> that can easily read the standard output of a program, and reproduce it at a later time. This sounds pretty simple business, but having it packaged up in a little script, with a simple API, is pretty important.</p> <p>Oh, it also respects delays in the original execution, rather than dumping everything at once.</p> <p>To install it, use <code class="md-code md-code-inline">npm</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-bash">npm i -g rehearsal
 </code></pre> <p>Now you can prepare an scenario, suppose you want to give a talk on the awesomeness of <a href="https://github.com/bevacqua/grunt-ec2" target="_blank" aria-label="bevacqua/grunt-ec2 on GitHub">grunt-ec2</a>, which makes lots of requests over the network, and does stuff. It would be great, being able to demonstrate its abilities without the need for an internet connection.</p> <p>You can simply run the command as usual, but pipe its output to <code class="md-code md-code-inline">rehearsal</code>, saving the <code class="md-code md-code-inline">scenario</code> to a file on disk.</p> <pre class="md-code-block"><code class="md-code md-lang-bash">grunt ec2_list --color | rehearsal &gt; scenario
