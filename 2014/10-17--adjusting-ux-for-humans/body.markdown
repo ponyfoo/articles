@@ -114,8 +114,8 @@ I had longed for related articles and now they're finally here!
   [3]: https://i.imgur.com/mZL61Hg.jpg
   [4]: /articles/archives "The archives link to every single article ever published on Pony Foo!"
   [5]: http://phantomjs.org/ "PhantomJS is a Headless Web Browser"
-  [6]: http://i.imgur.com/tuvKnoL.png
-  [7]: http://i.imgur.com/dfUjZHn.png "Screenshot of the invitation email"
+  [6]: https://i.imgur.com/tuvKnoL.png
+  [7]: https://i.imgur.com/dfUjZHn.png "Screenshot of the invitation email"
   [8]: http://darkpatterns.org/library/roach_motel/ "Also known as the 'Roach Motel' dark pattern category"
   [9]: http://www.google.com/fonts/specimen/Cardo "Cardo on Google Fonts"
   [10]: http://www.google.com/fonts/specimen/Merriweather "Merriweather on Google Fonts"
