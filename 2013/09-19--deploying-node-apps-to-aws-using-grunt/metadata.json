@@ -10,5 +10,5 @@
     "nodejs",
     "grunt-ec2"
   ],
-  "heroImage": null
+  "heroImage": "https://i.imgur.com/7W9amyy.jpg"
 }
