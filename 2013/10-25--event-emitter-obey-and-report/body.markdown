@@ -1,9 +1,3 @@
-# Obey and Report
-
-Recently, I came up with this idea where I laid out a library that _doesn't necessarily depend on Angular_, but which plays very nicely with it. The pattern basically dictates that the components **can only change their state through commands**, which can come from either its UI directly, or be _programatically invoked_. This allows me to provide a default UI for the component, but is flexible enough to let an Angular application take over and replace that UI layer with its own, which then simply dictates the library to obey the commands it's sent. **Reporting** happens whenever a public state property is updated, and the UI could use said property to update its _representation_ of the component's state.
-
-![obey-report][1]
-
 One way to make this communication pattern effective is using an event emitter (some day [Object.observe](http://updates.html5rocks.com/2012/11/Respond-to-change-with-Object-observe "Respond to change with Object.observe") will be a _realistic_ alternative), and emit events whenever our state changes. In code, we can make our library an event emitter like below. We'll keep state in a separate private variable so that it can't be accessed from outside of our library, making sure we're masters of the universe when it comes to one of our instance's state.
 
 ```js
@@ -127,5 +121,4 @@ A [working example](http://cdpn.io/ejBvu "View in CodePen") can be found clickin
 
 This kind of pattern might be most useful when your components present _complex interactions between their different properties_. In those cases, it might be even better to use **Angular.js**. Although sometimes a _combination of both_ might also prove to be useful. Of course, the hiding of information is entirely optional, and it might make sense not to hide anything but instead expose the properties in our components directly, however the event emitter pattern still makes sense to "report" _when_ these events take place.
 
-  [1]: https://i.imgur.com/64esjO6.png "Obey and Report Pattern"
   [2]: https://i.imgur.com/1f66Pk6.png
