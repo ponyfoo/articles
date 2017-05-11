@@ -16,7 +16,7 @@ ng generate // generates components, routes, services and pipes
 ng serve // serves your application in the browser
 ```
 
-In this tutorial, we'll avoid using the CLI and learn how to set up our development environment from scratch. Meanwhile if you are interested in using the CLI with [Cloudinary][cloudinary], check out this [great sample][cloudinary-angular]. Should we use SystemJS? Is Webpack the best option? How does the transpiling work? You'll get the answers to these questions as we get our hands dirty with the nitty-gritty of setting up and Angular 2 application.
+In this tutorial, we'll avoid using the CLI and learn how to set up our development environment from scratch. Meanwhile if you are interested in using the CLI with [Cloudinary][cloudinary], check out this [great sample][cloudinary-angular]. Should we use SystemJS? Is Webpack the best option? How does the transpiling work? You'll get the answers to these questions as we get our hands dirty with the nitty-gritty of setting up an Angular 2 application.
 
 [cli]: https://cli.angular.io/
 [cloudinary]: http://cloudinary.com/?utm_source=ponyfoo&utm_medium=Sponsored_post_1&utm_content=Angular2
