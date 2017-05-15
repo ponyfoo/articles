@@ -11,17 +11,17 @@ Modular JavaScript is an open effort to improve our collective understanding of 
 This may sound surprising if you've never written a book, but the Table of Contents is something you draft before you even start writing the first page, and it typically undergoes several radical changes as the book is being developed. It could be that the content needs better flow, some topics are deemed irrelevant or out of a particular scope, or different topics that need to be introduced.
 
 I've decided to make Modular JavaScript an open effort, which is something I'll circle back to after describing each book in the series. First off, check out the description for each book, and their currently proposed table of contents.  
-I invite you to look them over and chime in with your opinions. The first book, Practical ES6, is unlikely to change a lot. The rest of them are quite likely to change dramatically as they're developed.
+I invite you to look them over and chime in with your opinions. The first book, Practical Modern JavaScript, is unlikely to change a lot. The rest of them are quite likely to change dramatically as they're developed.
 
-# Book --- Practical ES6
+# Book --- Practical Modern JavaScript
 
 ::: .mde-right.mde-pad-20.mde-33.mde-text-center
-[<img src='https://i.imgur.com/DKya6OE.png' alt='Book cover for Practical ES6' />][toc]
+[<img src='https://i.imgur.com/DKya6OE.png' alt='Book cover for Practical Modern JavaScript' />][toc]
 <br>
 <sub><em>Boils down the essentials of ES6 with plain terminology and easy-to-follow code examples.</em></sub>
 :::
 
-The first book, *already in development*, is dedicated to ES6. When it comes to books on a language, these tend to be more of a reference style but not so much practical. **Practical ES6** aims to provide practical instances in which you could leverage the different language features, at the same time as it teaches you how each feature works.
+The first book, *already in development*, is dedicated to ES6. When it comes to books on a language, these tend to be more of a reference style but not so much practical. **Practical Modern JavaScript** aims to provide practical instances in which you could leverage the different language features, at the same time as it teaches you how each feature works.
 
 Code examples are meant to be readily consumable and applicable to real-world JavaScript applications. This is something I strived toward in the JavaScript Application Design book, although the code samples were sometimes a bit more contrived than they had to be.
 
@@ -33,7 +33,7 @@ This book will go over each feature in ES6 in detail, including how to use Babel
 
 <details>
 <summary>Table of Contents</summary>
-<h3 id='toc-practical-es6'>I. Practical ES6</h3>
+<h3 id='toc-practical-modern-javascript'>I. Practical Modern JavaScript</h3>
 
 1 Introduction to ECMAScript 6  
 1.1 What is ES6  
@@ -256,14 +256,14 @@ This book covers different ways you can deploy your JavaScript applications, suc
 
 As I mentioned earlier, Modular JavaScript will be an open effort. What does this entail? Well, that involves a four-part answer. *Let's start with the free stuff!*
 
-## Practical ES6 is *Free* to Read!
+## Practical Modern JavaScript is *Free* to Read!
 
 The book is publicly available in HTML format and **free forever**. Each book chapter is styled similarly to how Pony Foo blog posts _— such as the one you're reading —_ are styled, which makes for a fairly enjoyable read as far as HTML books go.
 
 *Every book in the series will be distributed in this way.*
 
 ::: .mde-right.mde-pad-20.mde-50.mde-text-center
-[<img src='https://i.imgur.com/F41tiVr.png' alt='The online version of Practical ES6' />][toc]
+[<img src='https://i.imgur.com/F41tiVr.png' alt='The online version of Practical Modern JavaScript' />][toc]
 <br>
 *<sub>Chapters are easy on your eyes and every section title comes with its own permalink.</sub>*
 :::
@@ -272,14 +272,14 @@ It took me a bit of time but I've managed to get the `git` repository to trigger
 
 Taking a page from Buffer's **radical transparency** program, where they advertise salaries, equity grants, revenue, and other figures of interest, I will do my best to make Modular JavaScript's numbers available on a regular basis. I'll disclose the amount of units sold, my losses and earnings, and how much money I end up generating through this adventure.
 
-> The free-to-read version of Practical ES6 is subject to [the same license][license] as the rest of the content I publish on Pony Foo: [*Creative Commons Attribution-NonCommercial-ShareAlike*][license].
+> The free-to-read version of Practical Modern JavaScript is subject to [the same license][license] as the rest of the content I publish on Pony Foo: [*Creative Commons Attribution-NonCommercial-ShareAlike*][license].
 
 _**Read** the [HTML version of the book][toc] on Pony Foo! 🦄_
 
 ## Source Code Repository!
 
 ::: .mde-right.mde-pad-20.mde-50.mde-text-center
-[<img src='https://i.imgur.com/RjdWVDK.png' alt='GitHub repository for Practical ES6' />][contrib]
+[<img src='https://i.imgur.com/RjdWVDK.png' alt='GitHub repository for Practical Modern JavaScript' />][contrib]
 <br>
 *<sub>All chapters, source code, and images!</sub>*
 :::
@@ -327,7 +327,7 @@ _**Participate** in the [crowdfunding campaign][campaign] on Indiegogo! 💸_
 ## O'Reilly Media Early Release!
 
 ::: .mde-right.mde-pad-20.mde-33.mde-text-center
-[<img src='https://i.imgur.com/DKya6OE.png' alt='Book cover for Practical ES6' />][er]
+[<img src='https://i.imgur.com/DKya6OE.png' alt='Book cover for Practical Modern JavaScript' />][er]
 <br>
 *<sub>O'Reilly Media is pretty amazing. I have over a dozen of their books on my shelves!</sub>*
 :::
@@ -350,7 +350,7 @@ I'd love to shoot screencasts to complement the books. *If the [crowdfunding cam
 
 # Thanks! 👋
 
-Thanks for reading this *needlessly long announcement* about Practical ES6 and the Modular JavaScript Book Series, and please consider sharing this piece so that more of our peers can check out [the web version of Practical ES6][toc] and maybe even help me out with the [crowdfunding campaign][campaign].
+Thanks for reading this *needlessly long announcement* about Practical Modern JavaScript and the Modular JavaScript Book Series, and please consider sharing this piece so that more of our peers can check out [the web version of Practical Modern JavaScript][toc] and maybe even help me out with the [crowdfunding campaign][campaign].
 
 # Where To?
 
@@ -366,10 +366,10 @@ Talk soon. 🐗
 [hire]: mailto:nico@elastic.co "Get in touch with a cover letter and your resume!"
 [married]: /articles/just-married "Just Married! announcement on Pony Foo"
 [license]: https://ponyfoo.com/license "Licensing Terms on Pony Foo"
-[repo]: /s/practical-es6-repo "mjavascript/practical-es6 on GitHub"
+[repo]: /s/practical-modern-javascript-repo "mjavascript/practical-modern-javascript on GitHub"
 [clap]: /s/modular-javascript-thunderclap "Back the Thunderclap campaign!"
 [tweet]: /s/modular-javascript-tweet "Send out a tweet promoting the Modular JavaScript launch"
-[toc]: /s/practical-es6-read "Practical ES6: A Practical Dive into ES6 and Maintainable JavaScript Modules"
-[contrib]: /s/practical-es6-repo-contrib "mjavascript/practical-es6 on GitHub"
+[toc]: /s/practical-modern-javascript-read "Practical Modern JavaScript: Dive into ES6 and the future of JavaScript"
+[contrib]: /s/practical-modern-javascript-repo-contrib "mjavascript/practical-modern-javascript on GitHub"
 [campaign]: /s/modular-javascript-indiegogo "Indiegogo campaign for Modular JavaScript: A Pragmatic JS Book Series"
-[er]: /s/practical-es6-early-release "Modular JavaScript: Practical ES6"
+[er]: /s/practical-modern-javascript-early-release "Modular JavaScript: Practical Modern JavaScript"

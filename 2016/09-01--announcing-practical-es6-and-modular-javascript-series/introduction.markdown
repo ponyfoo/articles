@@ -1,4 +1,4 @@
-**TL;DR** I'm working on a series of books that explore *Modular JavaScript* in five instalments. **I'm launching [a crowdfunding campaign 🚀][campaign] to help finance the endeavor.** Drafts of the first book, *Practical ES6*, are publicly available under [HTML][toc] format and under an [AsciiDoc source code][repo] repository on GitHub.
+**TL;DR** I'm working on a series of books that explore *Modular JavaScript* in five instalments. **I'm launching [a crowdfunding campaign 🚀][campaign] to help finance the endeavor.** Drafts of the first book, *Practical Modern JavaScript*, are publicly available under [HTML][toc] format and under an [AsciiDoc source code][repo] repository on GitHub.
 
 A while after I published [JavaScript Application Design][jsad] with Manning Publishing, I felt like writing again. JavaScript Application Design was a wonderful thing. When the pile of books arrived at my doorstep, I could finally point at a a physical thing and say "I made that" -- it was such a thrill.
 
@@ -25,12 +25,12 @@ As a result, the idea for a **Modular JavaScript** book series was born.
 
 [jsad]: /books/javascript-application-design "JavaScript Application Design: A Build-First Approach"
 [jsadtoc]: https://github.com/buildfirst/buildfirst#table-of-contents "Table of Contents for JavaScript Application Design on GitHub"
-[repo]: /s/practical-es6-repo "mjavascript/practical-es6 on GitHub"
+[repo]: /s/practical-modern-javascript-repo "mjavascript/practical-modern-javascript on GitHub"
 [clap]: /s/modular-javascript-thunderclap "Back the Thunderclap campaign!"
 [tweet]: /s/modular-javascript-tweet "Send out a tweet promoting the Modular JavaScript launch"
-[toc]: /s/practical-es6-read "Practical ES6: A Practical Dive into ES6 and Maintainable JavaScript Modules"
-[contrib]: /s/practical-es6-repo-contrib "mjavascript/practical-es6 on GitHub"
+[toc]: /s/practical-modern-javascript-read "Practical Modern JavaScript: Dive into ES6 and the future of JavaScript"
+[contrib]: /s/practical-modern-javascript-repo-contrib "mjavascript/practical-modern-javascript on GitHub"
 [campaign]: /s/modular-javascript-indiegogo "Indiegogo campaign for Modular JavaScript: A Pragmatic JS Book Series"
-[er]: /s/practical-es6-early-release "Modular JavaScript: Practical ES6"
+[er]: /s/practical-modern-javascript-early-release "Modular JavaScript: Practical Modern JavaScript"
 [cover]: https://i.imgur.com/saRiGkb.png
 [coverlink]: https://mjavascript.com "Let’s improve our collective understanding of writing robust, well-tested, modular JavaScript code."
