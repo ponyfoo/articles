@@ -34,7 +34,7 @@ On October 25th, through Indiegogo. It'll have some awesome perks, so I highly e
 
 ##### What else will launch that day? 🚀
 
-- An open-source GitHub repo, with all the contents I've written so far for Practical ES6, the first book in the series
+- An open-source GitHub repo, with all the contents I've written so far for Practical Modern JavaScript, the first book in the series
 - The HTML-based version of that same book
 - An official launch announcement here on Pony Foo with even more information
 
