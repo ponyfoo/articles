@@ -32,7 +32,7 @@
   doSomethingElse() <span class="md-code-comment">// sideEffect</span>
   data
 }
-</code></pre> <h1 id="using-do-today">Using <code class="md-code md-code-inline">do</code> Today</h1> <p>It&#x2019;s easy, there&#x2019;s <a href="https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-do-expressions" target="_blank" aria-label="babel/packages/babel-plugin-syntax-do-expressions on GitHub">a Babel plugin</a> we can use.</p> <pre class="md-code-block"><code class="md-code md-lang-bash">npm install --save-dev babel-plugin-syntax-do-expressions
+</code></pre> <h1 id="using-do-today">Using <code class="md-code md-code-inline">do</code> Today</h1> <p>It&#x2019;s easy, there&#x2019;s <a href="https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-do-expressions" target="_blank" rel="noopener noreferrer" aria-label="babel/packages/babel-plugin-syntax-do-expressions on GitHub">a Babel plugin</a> we can use.</p> <pre class="md-code-block"><code class="md-code md-lang-bash">npm install --save-dev babel-plugin-syntax-do-expressions
 </code></pre> <p>Then add the following to your <code class="md-code md-code-inline">.babelrc</code> file or the <code class="md-code md-code-inline">babel</code> property in <code class="md-code md-code-inline">package.json</code>.</p> <pre class="md-code-block"><code class="md-code md-lang-json">{
   &quot;<span class="md-code-attribute">plugins</span>&quot;: <span class="md-code-value">[<span class="md-code-string">&quot;syntax-do-expressions&quot;</span>]
 </span>}

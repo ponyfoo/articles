@@ -24,7 +24,7 @@ test();
 }
 </code></pre></div>
 
-<div><p>Enter <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Scope_Cheatsheet#Hoisting" target="_blank" aria-label="Variable Hosting on MDN">JavaScript variable hoisting</a>, and your code will actually end up looking like below. Hoisting <em>basically moves variable declarations</em> to the top of the scope those variables belong to. However, assignments stay where they are! Function declarations are hoisted only if they&#x2019;re not part of an assignment statement.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> value;
+<div><p>Enter <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Scope_Cheatsheet#Hoisting" target="_blank" rel="noopener noreferrer" aria-label="Variable Hosting on MDN">JavaScript variable hoisting</a>, and your code will actually end up looking like below. Hoisting <em>basically moves variable declarations</em> to the top of the scope those variables belong to. However, assignments stay where they are! Function declarations are hoisted only if they&#x2019;re not part of an assignment statement.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">var</span> value;
 
 <span class="md-code-function"><span class="md-code-keyword">function</span> <span class="md-code-title">test</span> <span class="md-code-params">()</span> </span>{
     <span class="md-code-keyword">var</span> value;

@@ -8,7 +8,7 @@
 
 <blockquote><p><a href="http://www.opensearch.org/" target="_blank">OpenSearch</a> is an specification that allows websites to improve <em>usability</em>. When implemented, it allows consumers to search your site <em>the way you intended them to</em>. All &#x2026;</p></blockquote>
 
-<div><p><a href="http://www.opensearch.org/" target="_blank">OpenSearch</a> is an specification that allows websites to improve <em>usability</em>. When implemented, it allows consumers to search your site <em>the way you intended them to</em>. All major browsers support OpenSearch. <strong>Google Chrome</strong> for instance, allows users to search <em>OpenSearch-enabled</em> websites by using tab in the search bar.</p></div>
+<div><p><a href="http://www.opensearch.org/" target="_blank" rel="noopener noreferrer">OpenSearch</a> is an specification that allows websites to improve <em>usability</em>. When implemented, it allows consumers to search your site <em>the way you intended them to</em>. All major browsers support OpenSearch. <strong>Google Chrome</strong> for instance, allows users to search <em>OpenSearch-enabled</em> websites by using tab in the search bar.</p></div>
 
 <blockquote></blockquote>
 
@@ -23,4 +23,4 @@
 </code></pre> <p>The <code class="md-code md-code-inline">{searchTerms}</code> placeholder will be replaced with the user&#x2019;s query.</p></div>
 
 <div><p>Next, all you have to do is reference your OpenSearch file somewhere, and reference it in site home, like this:</p> <pre class="md-code-block"><code class="md-code md-lang-xml"><span class="md-code-tag">&lt;<span class="md-code-title">link</span> <span class="md-code-attribute">rel</span>=<span class="md-code-value">&apos;search&apos;</span> <span class="md-code-attribute">type</span>=<span class="md-code-value">&apos;application/opensearchdescription+xml&apos;</span> <span class="md-code-attribute">title</span>=<span class="md-code-value">&apos;Pony Foo&apos;</span> <span class="md-code-attribute">href</span>=<span class="md-code-value">&apos;/opensearch.xml&apos;</span> /&gt;</span>
-</code></pre> <p>You can see OpenSearch in action at <a href="http://imdb.com/" target="_blank" aria-label="IMDb">IMDb.com</a>, <a href="http://stackoverflow.com/" target="_blank" aria-label="Stack Overflow">StackOverflow</a>, or <strong>right here</strong>.</p></div>
+</code></pre> <p>You can see OpenSearch in action at <a href="http://imdb.com/" target="_blank" rel="noopener noreferrer" aria-label="IMDb">IMDb.com</a>, <a href="http://stackoverflow.com/" target="_blank" rel="noopener noreferrer" aria-label="Stack Overflow">StackOverflow</a>, or <strong>right here</strong>.</p></div>

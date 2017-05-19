@@ -8,12 +8,12 @@
 
 <blockquote><p>Back when I <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">introduced assetify</a>, I mentioned publishing packages on <a href="https://npmjs.org/" target="_blank">npm</a> is <em>very</em> easy.</p><p>The first thing you have to do is <strong>identify yourself</strong>, create an account on <strong>npm</strong>:</p> <pre><code>$ npm &#x2026;</code></pre></blockquote>
 
-<div><p>Back when I <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">introduced assetify</a>, I mentioned publishing packages on <a href="https://npmjs.org/" target="_blank">npm</a> is <em>very</em> easy.</p></div>
+<div><p>Back when I <a href="https://ponyfoo.com/2013/01/18/asset-management-in-node">introduced assetify</a>, I mentioned publishing packages on <a href="https://npmjs.org/" target="_blank" rel="noopener noreferrer">npm</a> is <em>very</em> easy.</p></div>
 
 <blockquote></blockquote>
 
 <div><p>The first thing you have to do is <strong>identify yourself</strong>, create an account on <strong>npm</strong>:</p> <pre class="md-code-block"><code class="md-code md-lang-bash">$ npm adduser
-</code></pre> <p>After that all you have to do is code up a <a href="https://npmjs.org/doc/developers.html" target="_blank" aria-label="package.json specs">package.json</a>, which essentially requires a package <em>name</em> and a <em>version</em> string.</p> <p>Here&#x2019;s an example <strong>package.json</strong>, extracted from <a href="https://github.com/bevacqua/jsn" target="_blank" aria-label="JSN on GitHub">jsn</a>:</p> <pre class="md-code-block"><code class="md-code md-lang-json">{
+</code></pre> <p>After that all you have to do is code up a <a href="https://npmjs.org/doc/developers.html" target="_blank" rel="noopener noreferrer" aria-label="package.json specs">package.json</a>, which essentially requires a package <em>name</em> and a <em>version</em> string.</p> <p>Here&#x2019;s an example <strong>package.json</strong>, extracted from <a href="https://github.com/bevacqua/jsn" target="_blank" rel="noopener noreferrer" aria-label="JSN on GitHub">jsn</a>:</p> <pre class="md-code-block"><code class="md-code md-lang-json">{
   &quot;<span class="md-code-attribute">name</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;jsn&quot;</span></span>,
   &quot;<span class="md-code-attribute">description</span>&quot;: <span class="md-code-value"><span class="md-code-string">&quot;JavaScript Node server-side variable parser&quot;</span></span>,
   &quot;<span class="md-code-attribute">author</span>&quot;: <span class="md-code-value">{
