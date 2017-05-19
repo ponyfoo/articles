@@ -376,7 +376,6 @@ for (const { groups: { key, value } } of email.matchAll(rattributes)) {
 // <- placeholder: hello@mjavascript.com
 ```
 
-
 [ncg]: https://mjavascript.com/out/regexp-named-groups "Named capture groups proposal document"
 [upe]: https://mjavascript.com/out/unicode-property-escapes "Unicode property escapes proposal document"
 [props]: https://mjavascript.com/out/unicode-property-list "Exhaustive overview of supported Unicode properties and values"
