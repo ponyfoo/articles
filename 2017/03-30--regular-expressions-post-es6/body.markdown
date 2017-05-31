@@ -82,7 +82,7 @@ While array destructuring in the previous example hid our code's reliance on mag
 
 ```js
 function parseKeyValuePair(input) {
-  const rattribute = /(?<key>[a-z]+)(?:=|\sis\s)(?<value>[a-z]+)/
+  const rattribute = /(?<key>[a-z]+)(?:=|\sis\s)(?<value>[a-z]+)/u
   const { groups } = rattribute.exec(input)
   return groups
 }
@@ -105,7 +105,7 @@ The named capture groups proposal adds support for named backreferences, which r
 
 ```js
 function hasSameUserAndPassword(input) {
-  const rduplicate = /(?<user>[^:]+):\k<user>/
+  const rduplicate = /(?<user>[^:]+):\k<user>/u
   return rduplicate.exec(input) !== null
 }
 hasSameUserAndPassword('root:root') // <- true
@@ -118,7 +118,7 @@ Lastly, named groups can be referenced from the replacement passed to `String#re
 
 ```js
 function americanDateToHungarianFormat(input) {
-  const ramerican = /(?<month>\d{2})\/(?<day>\d{2})\/(?<year>\d{4})/
+  const ramerican = /(?<month>\d{2})\/(?<day>\d{2})\/(?<year>\d{4})/u
   const hungarian = input.replace(ramerican, '$<year>-$<month>-$<day>')
   return hungarian
 }
@@ -129,7 +129,7 @@ If the second argument to `String#replace` is a function, then the named groups 
 
 ```js
 function americanDateToHungarianFormat(input) {
-  const ramerican = /(?<month>\d{2})\/(?<day>\d{2})\/(?<year>\d{4})/
+  const ramerican = /(?<month>\d{2})\/(?<day>\d{2})\/(?<year>\d{4})/u
   const hungarian = input.replace(ramerican, (match, capture1, capture2, capture3, groups) => {
     const { month, day, year } = groups
     return `${ year }-${ month }-${ day }`
@@ -186,7 +186,7 @@ The following example uses a positive lookahead to test whether an input string 
 
 ```js
 function getJavaScriptFilename(input) {
-  const rfile = /^(?<filename>[a-z]+)(?=\.js)\.[a-z]+$/
+  const rfile = /^(?<filename>[a-z]+)(?=\.js)\.[a-z]+$/u
   const match = rfile.exec(input)
   if (match === null) {
     return null
@@ -201,7 +201,7 @@ There are also negative lookahead assertions, which are expressed as `(?!…)` a
 
 ```js
 function getNonJavaScriptFilename(input) {
-  const rfile = /^(?<filename>[a-z]+)(?!\.js)\.[a-z]+$/
+  const rfile = /^(?<filename>[a-z]+)(?!\.js)\.[a-z]+$/u
   const match = rfile.exec(input)
   if (match === null) {
     return null
@@ -216,7 +216,7 @@ The [proposal for lookbehind][lb] *(stage 3)* introduces positive and negative l
 
 ```js
 function getDollarAmount(input) {
-  const rdollars = /^(?<=\$)(?<amount>\d+(?:\.\d+)?)$/
+  const rdollars = /^(?<=\$)(?<amount>\d+(?:\.\d+)?)$/u
   const match = rdollars.exec(input)
   if (match === null) {
     return null
@@ -231,7 +231,7 @@ On the other hand, a negative lookbehind could be used to match numbers that are
 
 ```js
 function getNonDollarAmount(input) {
-  const rnumbers = /^(?<!\$)(?<amount>\d+(?:\.\d+)?)$/
+  const rnumbers = /^(?<!\$)(?<amount>\d+(?:\.\d+)?)$/u
   const match = rnumbers.exec(input)
   if (match === null) {
     return null
@@ -367,7 +367,7 @@ console.log(addressMatcher.next().value)
 The [`String#matchAll` proposal][sma] *(in stage 1 at the time of this writing)* introduces a new method for the string prototype which would behave in a similar fashion as our `matchAll` implementation, except the returned iterable is a sequence of `match` object as opposed to just the `captures` in the example above. Note that the `String#matchAll` sequence contains entire `match` objects, and not just numbered captures. This means we could access named captures through `match.groups` for each `match` in the sequence.
 
 ```js
-const rattributes = /(?<key>\w+)="(?<value>[^"]+)"\s/ig
+const rattributes = /(?<key>\w+)="(?<value>[^"]+)"\s/igu
 const email = '<input type="email" placeholder="hello@mjavascript.com" />'
 for (const { groups: { key, value } } of email.matchAll(rattributes)) {
   console.log(`${ key }: ${ value }`)
