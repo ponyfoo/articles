@@ -4,7 +4,7 @@
 
 <h1>Rehearsal: Record program output</h1>
 
-<p><kbd>rehearsal</kbd> <kbd>utility</kbd> <kbd>presentations</kbd></p>
+<p><kbd>utility</kbd> <kbd>talks</kbd></p>
 
 <blockquote><p>Persist standard input to a file and keep track of timestamps, then simulate real-time program execution.</p>
 </blockquote>
