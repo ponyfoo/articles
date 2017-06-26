@@ -6,7 +6,7 @@ The ECMAScript specification defines how JavaScript works on a discrete step-by-
 
 - how the string `'A'` is `NaN`
 - how the string `'A'` _is not equal_ to `NaN`
-- how `NaN is `NaN but _is not equal_ to `NaN`
+- how `NaN` is `NaN` but _is not equal_ to `NaN`
 - and why introducing `Number.isNaN` was obviously a very good idea…
 
 ```js
