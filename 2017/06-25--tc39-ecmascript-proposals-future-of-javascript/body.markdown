@@ -90,7 +90,7 @@ fetch('/api/products')
 
 Async functions are sugar that can be used to improve how we write Promise-based code. Let's start transforming our promise-based code line-by-line. We can prefix any expression using the `await` keyword. When we `await` on a promise, we get an expression that evaluates to that promise's fulfillment value.
 
-Promises gave a meaning to our code that was like "I want to run this operation, and _then_ I want to use it's result within this other operation".
+Promises gave a meaning to our code that was like "I want to run this operation, and _then_ I want to use its result within this other operation".
 
 Meanwhile, `await` effectively inverts that meaning, making it more like "I want to get back the result of this operation", which I like, because it sounds simpler.
 
