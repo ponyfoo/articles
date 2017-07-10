@@ -152,7 +152,7 @@ slowLog(<span class="md-code-string">&apos;Well that was underwhelming&apos;</sp
   <span class="md-code-keyword">const</span> listReq = await fetch(categoryUrl)
   <span class="md-code-keyword">const</span> list = await listReq.json()
   <span class="md-code-keyword">for</span> (<span class="md-code-keyword">const</span> product of list) {
-    <span class="md-code-keyword">const</span> productReq = await product.url
+    <span class="md-code-keyword">const</span> productReq = await fetch(product.url)
     <span class="md-code-keyword">const</span> product = await productReq.json()
     <span class="md-code-keyword">yield</span> product
   }
@@ -175,7 +175,7 @@ slowLog(<span class="md-code-string">&apos;Well that was underwhelming&apos;</sp
  ...{ a: <span class="md-code-string">&apos;c&apos;</span> }
 }
 <span class="md-code-comment">// &lt;- { a: &apos;c&apos;, b: &apos;b&apos; }</span>
-</code></pre> <p>There&#x2019;s also a rest counterpart to object spread, just like with spread in arrays and rest parameters. When destructuring an object, we can use the object spread operator to destructure any own properties not explicitly named in the pattern into another object.</p> <p>In the following example, the <code class="md-code md-code-inline">id</code> is explicitly named and will not included in the rest object. Object rest can be read literally as <em>&#x201C;everything else goes to an object named rest&#x201D;</em>, and of course, the variable name is for you to choose.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">const</span> item = {
+</code></pre> <p>There&#x2019;s also a rest counterpart to object spread, just like with spread in arrays and rest parameters. When destructuring an object, we can use the object spread operator to destructure any own properties not explicitly named in the pattern into another object.</p> <p>In the following example, the <code class="md-code md-code-inline">id</code> is explicitly named and will not be included in the rest object. Object rest can be read literally as <em>&#x201C;everything else goes to an object named rest&#x201D;</em>, and of course, the variable name is for you to choose.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">const</span> item = {
  id: <span class="md-code-string">&apos;4fe09c27&apos;</span>,
  name: <span class="md-code-string">&apos;Banana&apos;</span>,
  amount: <span class="md-code-number">3</span>
