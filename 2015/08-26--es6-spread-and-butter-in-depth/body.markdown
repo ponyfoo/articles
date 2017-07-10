@@ -158,7 +158,7 @@ Use Case | ES5                                                          | ES6
 Concatenation | `[1, 2].concat(more)`                                  | `[1, 2, ...more]`
 Push onto list | `list.push.apply(list, [3, 4])`                       | `list.push(...[3, 4])`
 Destructuring | `a = list[0], rest = list.slice(1)` | `[a, ...rest] = list`
-`new` + `apply` | [`new (Date.bind.apply(Date, [null,2015,31,8]))`][4] | `new Date(...[2015,31,8])`
+`new` + `apply` | [`new (Date.bind.apply(Date, [null,2015,8,1]))`][4] | `new Date(...[2015,8,1])`
 
 ## Default Operator
 
