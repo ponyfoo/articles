@@ -295,7 +295,7 @@ async function* getProducts(categoryUrl) {
   const listReq = await fetch(categoryUrl)
   const list = await listReq.json()
   for (const product of list) {
-    const productReq = await product.url
+    const productReq = await fetch(product.url)
     const product = await productReq.json()
     yield product
   }
