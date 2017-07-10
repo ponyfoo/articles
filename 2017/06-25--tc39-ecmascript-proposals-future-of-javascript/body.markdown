@@ -295,7 +295,7 @@ async function* getProducts(categoryUrl) {
   const listReq = await fetch(categoryUrl)
   const list = await listReq.json()
   for (const product of list) {
-    const productReq = await product.url
+    const productReq = await fetch(product.url)
     const product = await productReq.json()
     yield product
   }
@@ -341,7 +341,7 @@ The object spread proposal allows us to write equivalent code using plain syntax
 
 There's also a rest counterpart to object spread, just like with spread in arrays and rest parameters. When destructuring an object, we can use the object spread operator to destructure any own properties not explicitly named in the pattern into another object.
 
-In the following example, the `id` is explicitly named and will not included in the rest object. Object rest can be read literally as _"everything else goes to an object named rest"_, and of course, the variable name is for you to choose.
+In the following example, the `id` is explicitly named and will not be included in the rest object. Object rest can be read literally as _"everything else goes to an object named rest"_, and of course, the variable name is for you to choose.
 
 ```js
 const item = {
