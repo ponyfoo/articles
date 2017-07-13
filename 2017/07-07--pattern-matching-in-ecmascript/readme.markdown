@@ -76,7 +76,7 @@ matchPoint({ x: <span class="md-code-number">2</span>, y: <span class="md-code-n
 }
 matchNullPoint({ x: <span class="md-code-number">0</span>, y: <span class="md-code-number">0</span> })
 <span class="md-code-comment">// &lt;- [0, 0]</span>
-</code></pre> <p>The nested pattern could also contain other object matchers.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">const</span> isUSD = point =&gt; match (item) {
+</code></pre> <p>The nested pattern could also contain other object matchers.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">const</span> isUSD = item =&gt; match (item) {
   { options: { currency: <span class="md-code-string">&apos;USD&apos;</span> } }: <span class="md-code-literal">true</span>,
   <span class="md-code-keyword">else</span>: <span class="md-code-literal">false</span>
 }
@@ -95,7 +95,7 @@ matchPoint([{ x: <span class="md-code-number">1</span>, y: <span class="md-code-
   <mark class="md-mark md-code-mark">numbers</mark>: point.split(<span class="md-code-regexp">/,\s*/</span>).map(n =&gt; <span class="md-code-built_in">parseInt</span>(n))
 }
 
-matchPoint(`{ x: <span class="md-code-number">7</span>, y: -<span class="md-code-number">3</span> }) <span class="md-code-comment">// &lt;- [7, -3]</span>
+matchPoint({ x: <span class="md-code-number">7</span>, y: -<span class="md-code-number">3</span> }) <span class="md-code-comment">// &lt;- [7, -3]</span>
 matchPoint([<span class="md-code-number">7</span>, -<span class="md-code-number">3</span>]) <span class="md-code-comment">// &lt;- [7, -3]</span>
 matchPoint(`<span class="md-code-number">7</span>, -<span class="md-code-number">3</span>`) <span class="md-code-comment">// &lt;- [7, -3]</span>
 </code></pre> <p>Regular expressions as a pattern matcher are made possible thanks to symbols. The proposal includes <code class="md-code md-code-inline">Symbol.matches</code>, which can be used to determine whether the host object matches the received value.</p> <pre class="md-code-block"><code class="md-code md-lang-javascript"><span class="md-code-keyword">const</span> threeDigitNumber = {
