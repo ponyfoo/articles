@@ -133,7 +133,7 @@ matchNullPoint({ x: 0, y: 0 })
 The nested pattern could also contain other object matchers.
 
 ```js
-const isUSD = point => match (item) {
+const isUSD = item => match (item) {
   { options: { currency: 'USD' } }: true,
   else: false
 }
@@ -168,7 +168,7 @@ const matchPoint = point => match (point) {
   <mark>numbers</mark>: point.split(/,\s*/).map(n => parseInt(n))
 }
 
-matchPoint(`{ x: 7, y: -3 }) // <- [7, -3]
+matchPoint({ x: 7, y: -3 }) // <- [7, -3]
 matchPoint([7, -3]) // <- [7, -3]
 matchPoint(`7, -3`) // <- [7, -3]
 ```
