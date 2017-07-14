@@ -195,7 +195,7 @@ async function concurrent () {
 
 # Error Handling
 
-Note that **errors are swallowed _"silently"_** within an `async` function *-- just like inside normal Promises.* Unless we add `try` / `catch` blocks around `await` expressions, uncaught exceptions -- regardless of whether they were raised in the body of your `async` function or while its suspended during `await` -- will reject the promise returned by the `async` function.
+Note that **errors are swallowed _"silently"_** within an `async` function *-- just like inside normal Promises.* Unless we add `try` / `catch` blocks around `await` expressions, uncaught exceptions -- regardless of whether they were raised in the body of your `async` function or while it's suspended during `await` -- will reject the promise returned by the `async` function.
 
 Naturally, this can be seen as a strength: you're able to leverage `try` / `catch` conventions, something you were unable to do with callbacks -- and _somewhat_ able to with Promises. In this sense, *Async Functions* are akin to [generators][3], where you're also able to leverage `try` / `catch` thanks to function execution suspension turning asynchronous flows into synchronous code.
 
