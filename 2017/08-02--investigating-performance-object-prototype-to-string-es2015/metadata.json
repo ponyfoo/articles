@@ -1,0 +1,12 @@
+{
+  "id": "5981db295b50ce0262b0b0e8",
+  "author": "5980adf668ae2e0268fdb831",
+  "title": "Investigating Performance of Object#toString in ES2015",
+  "slug": "investigating-performance-object-prototype-to-string-es2015",
+  "tags": [
+    "performance",
+    "internals",
+    "v8"
+  ],
+  "heroImage": "https://s3.amazonaws.com/images.ponyfoo.com/uploads/microscope-275984-da789ca5e71c476e8ae5c332225a161e.jpg"
+}

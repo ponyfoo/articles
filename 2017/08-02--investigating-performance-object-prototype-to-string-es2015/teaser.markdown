@@ -1,0 +1,1 @@
+In this article, we'll discuss how `Object.prototype.toString()`  performs in the V8 engine, why it's important, how it changed with the introduction of ES2015 symbols, and how the baseline performance can be improved by **up to 6x** (based on findings from Mozilla engineers).

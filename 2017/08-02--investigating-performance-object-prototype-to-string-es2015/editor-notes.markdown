@@ -1,0 +1,1 @@
+We're thrilled to welcome Benedikt *--- the tech lead for JavaScript execution optimization at Google ---* to Pony Foo. He's been sharing a great deal of insight into V8 performance internals and caveats elsewhere on the web, and we're happy to host him on Pony Foo as well! ⏱
