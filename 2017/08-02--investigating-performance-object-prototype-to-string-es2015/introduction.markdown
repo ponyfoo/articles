@@ -10,7 +10,7 @@ The [ECMAScript 2015 Language Standard](http://ecma-international.org/ecma-262/6
 
 Most of these newly introduced symbols affect several parts of the JavaScript language in non-trivial and cross-cutting ways, and lead to significant changes in the performance profile due to the additional [monkey-patchability](https://en.wikipedia.org/wiki/Monkey_patch). Operations that were not observable by JavaScript code are all of a sudden observable and the behavior of these operations can be changed by user code.
 
-One particularly interesting example of this is the new [`Symbol.toStringTag`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) symbol, which is used to control the behavior of the [`Object.prototype.toString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) built-in method. For example, a developer can now put this special property on any instance, and it is then be used instead of the default built-in tag when the `toString` method is invoked:
+One particularly interesting example of this is the new [`Symbol.toStringTag`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) symbol, which is used to control the behavior of the [`Object.prototype.toString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) built-in method. For example, a developer can now put this special property on any instance, and it is then used instead of the default built-in tag when the `toString` method is invoked:
 
 ```javascript
 class A {
@@ -21,7 +21,7 @@ Object.prototype.toString.call({});     // "[object Object]"
 Object.prototype.toString.call(new A);  // "[object A]"
 ```
 
-This requires that the implementation of `Object.prototype.toString()` for ES2015 and later now converts its **_this_** *value* into an object first via the abstract operation [ToObject](https://tc39.github.io/ecma262/#sec-toobject) and then look for `Symbol.toStringTag` on the resulting object and in its prototype chain. The [relevant part](https://tc39.github.io/ecma262/#sec-object.prototype.tostring) of the language specification looks like this:
+This requires that the implementation of `Object.prototype.toString()` for ES2015 and later now converts its **_this_** *value* into an object first via the abstract operation [ToObject](https://tc39.github.io/ecma262/#sec-toobject) and then looks for `Symbol.toStringTag` on the resulting object and in its prototype chain. The [relevant part](https://tc39.github.io/ecma262/#sec-object.prototype.tostring) of the language specification looks like this:
 
 ![Object.prototype.toString ()][1]
 
