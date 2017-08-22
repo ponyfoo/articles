@@ -25,16 +25,24 @@ Our best option is to generate images based on the screen size and render them. 
 Add the Cloudinary SDK to your project simply by including it in your index.html using script tags:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.min.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.min.js">
+</script>
 ```
 
-### 2. Add Images with data-src
+### 2. Add Images with `data-src`
 
 You don't want the images rendered immediately, until JavaScript runs. Hence, include the image using the `data-src` attribute instead of `src`: 
 
 ```html
-<img data-src="http://res.cloudinary.com/christekh/image/upload/w_auto,c_scale/v1501761946/pexels-photo-457044_etqwsd.jpg" alt="" class="cld-responsive">
+<img
+  data-src="
+    http://res.cloudinary.com/christekh/image/upload/w_auto,c_scale/v1501761946/pexels-photo-457044_etqwsd.jpg
+  "
+  alt=""
+  class="cld-responsive" />
 ```
+
 Using this approach, Cloudinary analyzes your browser screen first, resizes the image saved in Cloudinary storage as provided in `data-src`, and then renders the image in the appropriate size and dimension using JavaScript.
 
 Two things to note from the tag:
