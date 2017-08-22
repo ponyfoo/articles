@@ -1,0 +1,1 @@
+Images are crucial to website performance, but most still don't implement responsive images. It’s not just about fitting an image on the screen, but also making the the image size relatively rational to the device. The `srcset` and `sizes` options, which are your best hit are hard to implement. Cloudinary provides an easier way, which we will discuss in this article.
