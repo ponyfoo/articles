@@ -1,0 +1,1 @@
+When it comes to JavaScript, modularity is a modern concept. In this article we'll quickly revisit and summarize the milestones in how modularity evolved in the world of JavaScript. This isn't meant to be a comprehensive list, by any means, but instead it's meant to illustrate the major paradigm changes along the history of JavaScript.
