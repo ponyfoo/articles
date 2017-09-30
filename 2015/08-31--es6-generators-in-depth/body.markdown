@@ -25,7 +25,7 @@ g[Symbol.iterator]() === g
 // the iterator for a generator object is the generator object itself
 console.log(<mark>[...g]</mark>)
 // <- ['f', 'o', 'o']
-console.log(<mark>Array.from(g)</mark>)
+console.log(<mark>Array.from(generator())</mark>)
 // <- ['f', 'o', 'o']
 ```
 
