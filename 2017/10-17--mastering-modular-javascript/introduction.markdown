@@ -3,3 +3,7 @@ Modular JavaScript is a book series with the mission of improving our collective
 - [Contribute to the open-source repository on GitHub][github]
 - [Get it from O'Reilly Safari Books Online][safari]
 - [Read it online on Pony Foo, under HTML format][html]
+
+[safari]: https://ponyfoo.com/s/mastering-modular-javascript-early-release "Mastering Modular JavaScript on Safari Books Online"
+[html]: https://ponyfoo.com/s/mastering-modular-javascript-read "Mastering Modular JavaScript on Pony Foo"
+[github]: https://ponyfoo.com/s/mastering-modular-javascript-repo-contrib "Mastering Modular JavaScript on GitHub"
