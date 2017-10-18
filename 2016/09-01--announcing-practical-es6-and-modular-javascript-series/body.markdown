@@ -90,7 +90,7 @@ This book will go over each feature in ES6 in detail, including how to use Babel
 :::
 
 ::: .mde-left.mde-pad-20.mde-33.mde-text-center
-[<img src='https://i.imgur.com/wOz6fTX.png' alt='Book cover for Mastering Modular JavaScript' />][toc]
+[<img src='https://i.imgur.com/wOz6fTX.png' alt='Book cover for Mastering Modular JavaScript' />][toc-mmj]
 <br>
 <sub><em>Managing complexity has never been so straightforward.</em></sub>
 :::
@@ -150,7 +150,7 @@ The modular nature of the series allows me to dig deep in this book and include
 # Book --- Universal JavaScript, Modules Everywhere
 
 ::: .mde-right.mde-pad-20.mde-33.mde-text-center
-[<img src='https://i.imgur.com/F6cRf0F.png' alt='Book cover for Universal JavaScript' />][toc]
+[<img src='https://i.imgur.com/F6cRf0F.png' alt='Book cover for Universal JavaScript' />][toc-universal]
 <br>
 <sub><em>Learn the essentials of code reuse and plumbing -- even across platforms.</em></sub>
 :::
@@ -189,7 +189,7 @@ The book sets out to answer the question: _"How do we scale out a module approac
 :::
 
 ::: .mde-left.mde-pad-20.mde-33.mde-text-center
-<img src='https://i.imgur.com/mrK7DSP.png' alt='Book cover for Testing JavaScript Modules' />
+[<img src='https://i.imgur.com/mrK7DSP.png' alt='Book cover for Testing JavaScript Modules' />][toc-testing]
 <br>
 <sub><em>Built on the foundation of testable code laid out in previous books in the series. Plenty of real life examples!</em></sub>
 :::
@@ -228,7 +228,7 @@ Continuous testing will be covered as well, and it will in fact be an excellent 
 # Book --- Deploying Modern JavaScript Applications
 
 ::: .mde-right.mde-pad-20.mde-33.mde-text-center
-<img src='https://i.imgur.com/YiJzLUB.png' alt='Book cover for Deploying Modern JavaScript Applications' />
+[<img src='https://i.imgur.com/YiJzLUB.png' alt='Book cover for Deploying Modern JavaScript Applications' />][toc-deploy]
 <br>
 <sub><em>Details on how to set up hassle-free deployment processes that don't get in the way of productive development, yet are optimized for performance.</em></sub>
 :::
@@ -373,3 +373,7 @@ Talk soon. 🐗
 [contrib]: /s/practical-modern-javascript-repo-contrib "mjavascript/practical-modern-javascript on GitHub"
 [campaign]: /s/modular-javascript-indiegogo "Indiegogo campaign for Modular JavaScript: A Pragmatic JS Book Series"
 [er]: /s/practical-modern-javascript-early-release "Modular JavaScript: Practical Modern JavaScript"
+[toc-mmj]: /s/mastering-modular-javascript-read
+[toc-universal]: /books
+[toc-testing]: /books
+[toc-deploy]: /books
