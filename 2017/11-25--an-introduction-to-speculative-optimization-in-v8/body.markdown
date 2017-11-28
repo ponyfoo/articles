@@ -130,7 +130,7 @@ console.log(add(1, 2));
 
 Running this with `--allow-natives-syntax` in `d8` we observe:
 
-```
+```html
 $ out/Debug/d8 --allow-natives-syntax add.js
 DebugPrint: 0xb5101ea9d89: [Function] in OldSpace
 …
@@ -174,7 +174,7 @@ console.log(add(1.1, 2.2));
 
 Running this again with `--allow-natives-syntax` in `d8` we observe:
 
-```
+```html
 $ out/Debug/d8 --allow-natives-syntax add.js
 DebugPrint: 0xb5101ea9d89: [Function] in OldSpace
 …
