@@ -196,7 +196,7 @@ The feedback starts as `None`, which indicates that we haven't seen anything so 
 
 *   `SignedSmall` means that all values have been small integers (signed 32-bit or 31-bit depending on the word size of the architecture), and all of them have been represented as _Smi_.
 *   `Number` indicates that all values have been regular numbers (this includes `SignedSmall`).
-*   `NumberOrOddball` includes all the values from `Number` plus `undefined`, null `and` booleans.
+*   `NumberOrOddball` includes all the values from `Number` plus `undefined`, `null`, `true` and `false`.
 *   `String` means that both inputs have been string values.
 *   `BigInt` means that both inputs have been BigInts, see the current [stage 2 proposal](https://tc39.github.io/proposal-bigint/) for details.
 
