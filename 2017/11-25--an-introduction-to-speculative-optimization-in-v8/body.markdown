@@ -136,7 +136,7 @@ DebugPrint: 0xb5101ea9d89: [Function] in OldSpace
 …
  - feedback vector: 0xb5101eaa091: [FeedbackVector] in OldSpace
  - length: 1
- SharedFunctionInfo: 0xb5101ea99c9 <SharedFunctionInfo add>
+…
  Optimized Code: 0
  Invocation Count: 1
  Profiler Ticks: 0
@@ -180,8 +180,8 @@ DebugPrint: 0xb5101ea9d89: [Function] in OldSpace
 …
  - feedback vector: 0x3fd6ea9ef9: [FeedbackVector] in OldSpace
  - length: 1
- SharedFunctionInfo: 0x3fd6ea9989 <SharedFunctionInfo add>
- Optimized Code: 0
+…
+Optimized Code: 0
  Invocation Count: 2
  Profiler Ticks: 0
  Slot #0 BinaryOp BinaryOp:Number
