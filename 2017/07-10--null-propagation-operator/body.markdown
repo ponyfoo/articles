@@ -54,12 +54,12 @@ Using Null Propagation, we could also optionally call functions. In the followin
 person.eat<mark>?.</mark>(carrot, pasta, apple)
 ```
 
-If we go back to the earlier example of reading a person's name, and assuming that names are in the form `'First Last'`, we could do the following to get each part of their name, but only if they indeed have a name and only if the name property value may be sliced.
+If we go back to the earlier example of reading a person's name, and assuming that names are in the form `'First Last'`, we could do the following to get each part of their name, but only if they indeed have a name and only if the name property value may be split.
 
 ```js
-const read = person => person.name<mark>?.</mark>slice<mark>?.</mark>(' ')
+const read = person => person.name<mark>?.</mark>split<mark>?.</mark>(' ')
 read({}) // <- undefined, because `name` doesn't exist
-read({ name: 33 }) // <- undefined, because `33` doesn't have a `slice` method
+read({ name: 33 }) // <- undefined, because `33` doesn't have a `split` method
 read({ name: 'Uncle Bob' }) // <- ['Uncle', 'Bob']
 ```
 
