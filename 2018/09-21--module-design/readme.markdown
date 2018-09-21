@@ -6,9 +6,9 @@
 
 <p><kbd>mastering-modular-javascript</kbd> <kbd>architecture</kbd></p>
 
-<blockquote><p>This article is an excerpt from Mastering Modular JavaScript, which is <a href="https://amzn.to/2QPItKI" target="_blank">being released tomorrow on Amazon</a>. You can also pay for the HTML version by <a href="https://ponyfoo.com/books/mastering-modular-javascript/chapters/1#read">sharing a single tweet</a>.</p></blockquote>
+<blockquote><p>This article is an excerpt from Mastering Modular JavaScript, which is <a href="https://amzn.to/2QPItKI" target="_blank">being released tomorrow on Amazon</a>. You can also &#x201C;pay&#x201D; for the HTML version by <a href="https://ponyfoo.com/books/mastering-modular-javascript/chapters/1#read">&#x2026;</a></p></blockquote>
 
-<div><p>This article is an excerpt from Mastering Modular JavaScript, which is <a href="https://amzn.to/2QPItKI" target="_blank" rel="noopener noreferrer">being released tomorrow on Amazon</a>. You can also pay for the HTML version by <a href="https://ponyfoo.com/books/mastering-modular-javascript/chapters/1#read">sharing a single tweet</a>.</p></div>
+<div><p>This article is an excerpt from Mastering Modular JavaScript, which is <a href="https://amzn.to/2QPItKI" target="_blank" rel="noopener noreferrer">being released tomorrow on Amazon</a>. You can also &#x201C;pay&#x201D; for the HTML version by <a href="https://ponyfoo.com/books/mastering-modular-javascript/chapters/1#read">sharing a single tweet</a>.</p></div>
 
 <blockquote></blockquote>
 
