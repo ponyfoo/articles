@@ -4,13 +4,11 @@ Small, single-purpose functions are the lifeblood of clean module design. Purpos
 
 Suppose that instead of implementing a single function with 100 lines of code we break it up into 3 or more smaller functions. We might later be able to reuse one of those smaller functions somewhere else in our module, or it might prove a useful addition to its public interface.
 
-In this chapter we'll discuss design considerations aimed at reducing complexity at the module level. While most of the concerns we'll discuss here have an effect on the way we write functions, it is in the next chapter where we'll be specifically devoting our time to the development of simple functions.
-
 ## Composability and Scalability
 
 Cleanly composed functions are at the heart of effective module design. Functions are the fundamental unit of our code. We could get away with writing the smallest possible number of functions required, the ones that are invoked by consumers or need to be passed for other interfaces to consume, but that wouldn't get us much in the way of maintainability.
 
-We could rely solely on intuition to decide what deserves to be its own function and what is better left inlined as part of a larger body of code, but this might leave us with inconsistencies that depend upon our frame of mind, as well as how each member of a team perceives functions are to be sliced. As we'll see in the next chapter, pairing a few rules of thumb with our own intuition is an effective way of keeping functions simple, limiting their scope.
+We could rely solely on intuition to decide what deserves to be its own function and what is better left inlined as part of a larger body of code, but this might leave us with inconsistencies that depend upon our frame of mind, as well as how each member of a team perceives functions are to be sliced. Pairing a few rules of thumb with our own intuition is an effective way of keeping functions simple, limiting their scope.
 
 At the module level, it's required that we implement features with the API surface in mind. When we plan out new functionality, we have to consider whether the abstraction is right for our consumers, how it might evolve and scale over time, and how narrowly or broadly it can support the use cases of its consumers.
 
@@ -42,7 +40,7 @@ As most things in program design, API design is a constant tradeoff between simp
 
 Before we go off and start pondering the best ways of abstracting a feature we need to implement so that it caters to every single requirement that might come in the future, it's necessary to take a step back and consider simpler alternatives. A simple implementation means we pay smaller upfront costs, but it doesn't necessarily mean that new requirements will result in breaking changes.
 
-Interfaces don't need to cater to every conceivable use case from the outset. As we've analyzed in chapter 2, sometimes we may get away with first implementing a solution for the simplest or most common use case, and then adding an options parameter through which newer use cases can be configured. As we get to more advanced use cases, we can make decisions as outlined in the previous section, choosing which use cases deserve to be grouped under an abstraction and which are too narrow for an abstraction to be worthwhile.
+Interfaces don't need to cater to every conceivable use case from the outset. Sometimes we may get away with first implementing a solution for the simplest or most common use case, and then adding an options parameter through which newer use cases can be configured. As we get to more advanced use cases, we can make decisions as outlined in the previous section, choosing which use cases deserve to be grouped under an abstraction and which are too narrow for an abstraction to be worthwhile.
 
 Similarly, the interface could start off supporting only one way of receiving its inputs, and as use cases evolve we might bake polymorphism into the mix, accepting multiple input types in the same parameter position. Grandiose thinking may take us to believe that, in order to be great, our interfaces must be able to handle every input type and be highly configurable with dozens of configuration options. This might well be true for the most advanced users of our interface, but if we don't take the time to let the interface evolve and mature as needed, we might code our interface into a corner that can then only be repaired by writing a different component from a ground up with a better thought out interface, and later replacing references to the old component with the new one.
 
