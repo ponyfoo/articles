@@ -4,11 +4,11 @@ Before we dive into the details of how TurboFan works, I'll briefly explain how 
 
 ![How V8 Works][1]
 
-Whenever Chrome or Node.js has to execute some piece of JavaScript, it passes the source code to V8. V8 takes that JavaScript source code and feeds it to the so-called [_Parser_](https://en.wikipedia.org/wiki/Parsing#Computer_languages), which creates an [_Abstract Syntax Tree (AST)_](https://en.wikipedia.org/wiki/Abstract_syntax_tree) representation for your source code. The talk ["Parsing JavaScript — better lazy than eager?"](https://www.youtube.com/watch?v=Fg7niTmNNLg) from my colleague [Marja Hölttä](https://twitter.com/marjakh) contains some details of how this works in V8. The AST is then passed on to the recently introduced [Ignition Interpreter](https://v8project.blogspot.com/2016/08/firing-up-ignition-interpreter.html), where it is turned into a sequence of bytecodes. This sequence of bytecodes is then executed by Ignition.
+Whenever Chrome or Node.js has to execute some piece of JavaScript, it passes the source code to V8. V8 takes that JavaScript source code and feeds it to the so-called [_Parser_](https://en.wikipedia.org/wiki/Parsing#Computer_languages), which creates an [_Abstract Syntax Tree (AST)_](https://en.wikipedia.org/wiki/Abstract_syntax_tree) representation for your source code. The talk ["Parsing JavaScript — better lazy than eager?"](https://www.youtube.com/watch?v=Fg7niTmNNLg) from my colleague [Marja Hölttä](https://twitter.com/marjakh) contains some details of how this works in V8. The AST is then passed on to the recently introduced [Ignition Interpreter](https://v8.dev/blog/ignition-interpreter), where it is turned into a sequence of bytecodes. This sequence of bytecodes is then executed by Ignition.
 
 During execution, Ignition collects _profiling information_ or _feedback_ about the inputs to certain operations. Some of this feedback is used by Ignition itself to speed up subsequent interpretation of the bytecode. For example, for property accesses such as `o.x`, where `o` has the same shape all the time (i.e. you always pass a value `{x:v}` for `o` where `v` is a String), we cache information on how to get to the value of `x`. Upon subsequent execution of the same bytecode we don't need to search for `x` in `o` again. The underlying machinery here is called [_inline cache (IC)_](https://en.wikipedia.org/wiki/Inline_caching). You can find a lot of details about how this works for property accesses in the blog post ["What's up with monomorphism?"](http://mrale.ph/blog/2015/01/11/whats-up-with-monomorphism.html) by my colleague [Vyacheslav Egorov](https://twitter.com/mraleph).
 
-Probably even more important — depending on your workload — the _feedback_ collected by the Ignition interpreter is consumed by the [TurboFan JavaScript compiler](https://v8project.blogspot.com/2017/05/launching-ignition-and-turbofan.html) to generate highly-optimized machine code using a technique called _Speculative Optimization_. Here the optimizing compiler looks at what kinds of values were seen in the past and assumes that in the future we're going to see the same kinds of values. This allows TurboFan to leave out a lot of cases that it doesn't need to handle, which is extremely important to execute JavaScript at peak performance.
+Probably even more important — depending on your workload — the _feedback_ collected by the Ignition interpreter is consumed by the [TurboFan JavaScript compiler](https://v8.dev/blog/launching-ignition-and-turbofan) to generate highly-optimized machine code using a technique called _Speculative Optimization_. Here the optimizing compiler looks at what kinds of values were seen in the past and assumes that in the future we're going to see the same kinds of values. This allows TurboFan to leave out a lot of cases that it doesn't need to handle, which is extremely important to execute JavaScript at peak performance.
 
 # The Basic Execution Pipeline
 
@@ -26,7 +26,7 @@ If you run this in the Chrome DevTools console, you'll see that it outputs the e
 
 ![Chrome DevTools][2]
 
-Let's examine what happens under the hood in V8 to actually get to these results. We'll do this step by step for the function `add`. As mentioned before, we first need to parse the function source code and turn that into an Abstract Syntax Tree (AST). This is done by the `Parser`. You can see the AST that V8 generates internally using the `--print-ast` command line flag in a Debug build of the [`d8 shell`](https://github.com/v8/v8/wiki/Using-D8).
+Let's examine what happens under the hood in V8 to actually get to these results. We'll do this step by step for the function `add`. As mentioned before, we first need to parse the function source code and turn that into an Abstract Syntax Tree (AST). This is done by the `Parser`. You can see the AST that V8 generates internally using the `--print-ast` command line flag in a Debug build of the [`d8 shell`](https://v8.dev/docs/d8).
 
 ```
 $ out/Debug/d8 --print-ast add.js
@@ -240,7 +240,7 @@ cmpq rsp,[r13+0xdb0]
 jna StackCheck
 ```
 
-The prologue checks whether the code object is still valid or whether some condition changed which requires us to throw away the code object. This was recently introduced by my intern [Juliana Franco](https://twitter.com/jupvfranco) as part of her ["Internship on Laziness"](https://v8project.blogspot.com/2017/10/lazy-unlinking.html). Once we know that the code is still valid, we build the _stack frame_ and check that there's enough space left on the stack to execute the code.
+The prologue checks whether the code object is still valid or whether some condition changed which requires us to throw away the code object. This was recently introduced by my intern [Juliana Franco](https://twitter.com/jupvfranco) as part of her ["Internship on Laziness"](https://v8.dev/blog/lazy-unlinking). Once we know that the code is still valid, we build the _stack frame_ and check that there's enough space left on the stack to execute the code.
 
 ```assembly
 # Check x is a small integer
