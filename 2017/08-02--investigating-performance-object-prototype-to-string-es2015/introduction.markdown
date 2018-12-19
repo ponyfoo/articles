@@ -27,4 +27,4 @@ This requires that the implementation of `Object.prototype.toString()` for ES201
 
 Here you can see the [`ToObject`](https://tc39.github.io/ecma262/#sec-toobject) conversion as well as the [`Get`](https://tc39.github.io/ecma262/#sec-get-o-p) for `@@toStringTag` (this is special internal syntax for the language specification for the well-known symbol with the name *toStringTag*). The addition of `Symbol.toStringTag` in ES2015 adds a lot of flexibility for developers, but at the same time comes at a cost.
 
-  [1]: https://s3.amazonaws.com/images.ponyfoo.com/uploads/object-prototype-tostring-8d733121570a47d4ae2132c85a59f36f.png "object-prototype-tostring.png"
+  [1]: https://images.ponyfoo.com/uploads/object-prototype-tostring-8d733121570a47d4ae2132c85a59f36f.png "object-prototype-tostring.png"

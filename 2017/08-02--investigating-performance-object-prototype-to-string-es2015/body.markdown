@@ -102,8 +102,8 @@ Even a highly optimized built-in like `Object.prototype.toString()` still provid
 It’s worth noting that JavaScriptCore, the JavaScript engine used by [WebKit](https://webkit.org/), caches the result of subsequent `Object.prototype.toString()` calls on the hidden class of the receiver instance (that cache was [introduced in early 2012](https://bugs.webkit.org/show_bug.cgi?id=84781), so it predates ES2015). It's a very interesting strategy, but it has limited applicability (i.e. it doesn’t help with other well-known symbols like [`Symbol.toPrimitive`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) or [`Symbol.hasInstance`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance)) and requires pretty complex [invalidation logic](https://github.com/WebKit/webkit/blob/29330a72e9d9e8a0fff4ec77c65eb18020695a96/Source/JavaScriptCore/runtime/StructureRareData.cpp#L113-L169) to react to changes in the prototype chain, which is why I decided against a caching based solution in V8 (for now).
 
 
-  [2]: https://s3.amazonaws.com/images.ponyfoo.com/uploads/angular-before-66fc535bf2b6413889537b23b30dde89.png "angular-before.png"
-  [3]: https://s3.amazonaws.com/images.ponyfoo.com/uploads/mozilla-before-a2de4ffc5dbc4c4db5e67b6670afeab0.png "mozilla-before.png"
-  [4]: https://s3.amazonaws.com/images.ponyfoo.com/uploads/mozilla-after-9f219c80c8ee4a418d0ff3da0ac91603.png "mozilla-after.png"
-  [5]: https://s3.amazonaws.com/images.ponyfoo.com/uploads/results-microbenchmark-7a8e974c49d24e7c9c5b5e22ebfa784f.png "results-microbenchmark.png"
-  [6]: https://s3.amazonaws.com/images.ponyfoo.com/uploads/results-speedometer-8d819bdc516c4e71bdf049bd1910369f.png "results-speedometer.png"
+  [2]: https://images.ponyfoo.com/uploads/angular-before-66fc535bf2b6413889537b23b30dde89.png "angular-before.png"
+  [3]: https://images.ponyfoo.com/uploads/mozilla-before-a2de4ffc5dbc4c4db5e67b6670afeab0.png "mozilla-before.png"
+  [4]: https://images.ponyfoo.com/uploads/mozilla-after-9f219c80c8ee4a418d0ff3da0ac91603.png "mozilla-after.png"
+  [5]: https://images.ponyfoo.com/uploads/results-microbenchmark-7a8e974c49d24e7c9c5b5e22ebfa784f.png "results-microbenchmark.png"
+  [6]: https://images.ponyfoo.com/uploads/results-speedometer-8d819bdc516c4e71bdf049bd1910369f.png "results-speedometer.png"
