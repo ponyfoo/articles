@@ -88,7 +88,7 @@ getRandomPonyFooArticle(function* printRandomArticle () {
 
 > Keep in mind you should wrap the `yield` call in a `try` / `catch` block to preserve the error handling we had added when using promises.
 
-Needless to say, using generators like this _doesn't scale well_. Besides involving an unintuitive syntax into the mix, your iterator code will be highly coupled to the generator function that's being consumed. That means you'll have to change it often as you add new `await` expressions to the generator. A better alternative is to use the upcoming **Async Function**.
+Needless to say, using generators like this _doesn't scale well_. Besides involving an unintuitive syntax into the mix, your iterator code will be highly coupled to the generator function that's being consumed. That means you'll have to change it often as you add new `yield` expressions to the generator code. A better alternative is to use the upcoming **Async Function**.
 
 # Using `async` / `await`
 
