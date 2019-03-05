@@ -1,0 +1,12 @@
+{
+  "id": "5c3e0f6c11beca028ecb0d19",
+  "author": "5980adf668ae2e0268fdb831",
+  "title": "JavaScript Performance Pitfalls in V8",
+  "slug": "javascript-performance-pitfalls-v8",
+  "tags": [
+    "performance",
+    "v8",
+    "internals"
+  ],
+  "heroImage": "https://images.ponyfoo.com/uploads/plumber-228010-740c90f82d324e9b810814df5f97af58.jpg"
+}
