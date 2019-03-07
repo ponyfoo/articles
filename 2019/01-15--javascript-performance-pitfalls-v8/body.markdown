@@ -238,7 +238,7 @@ The V8 engine uses a technique called [pointer tagging](https://en.wikipedia.org
 
 ![][1]
 
-A `Smi` is a small integer in the 31-bit range, i.e. a value between -2,147,483,648 and 2,147,483,647[^1], shifted up by one bit and padded with a `0` in the least significant bit. A `HeapObject` pointer is the address of an object in (managed) memory, with the two least significant bits set to `01`. That means when V8 wants to get to the real address of the object it has to subtract one from the value. There's also the `WeakHeapObject`, which has the least significant bits set to `11`, and is essentially like `HeapObject`, except that the reference is treated weakly by the garbage collector.
+A `Smi` is a small integer in the 31-bit range, i.e. a value between `-1,073,741,824` and `536,870,912`[^1], shifted up by one bit and padded with a `0` in the least significant bit. A `HeapObject` pointer is the address of an object in (managed) memory, with the two least significant bits set to `01`. That means when V8 wants to get to the real address of the object it has to subtract one from the value. There's also the `WeakHeapObject`, which has the least significant bits set to `11`, and is essentially like `HeapObject`, except that the reference is treated weakly by the garbage collector.
 
 [^1]: At the time of this writing, `Smi`s on 64-bit architectures are integers in the 32-bit range, but this is probably going to change to use 31-bit ranged integers everywhere in the near future.
 
@@ -255,7 +255,7 @@ Just consider the object `a` above. It has two properties `x` and `y`, and `x` h
 
 ![][2]
 
-Here `a` is represented as a `JSObject` with a `Shape` that holds the information about the properties of `a`, and the actual values of the properties are in the instance `a` (you can read more about shapes in our previous articles [JavaScript engine fundamentals: Shapes and Inline Caches](https://mathiasbynens.be/notes/shapes-ics) and [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes)]). Due to the value encoding mentioned above, the small integer `42` can be stored efficiently inside of the `JSObject` whereas the `String` value has to be represented as a separate entity in memory and pointed to by a `HeapObject` pointer.
+Here `a` is represented as a `JSObject` with a `Shape` that holds the information about the properties of `a`, and the actual values of the properties are in the instance `a` (you can read more about shapes in our previous articles [JavaScript engine fundamentals: Shapes and Inline Caches](https://mathiasbynens.be/notes/shapes-ics) and [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes)). Due to the value encoding mentioned above, the small integer `42` can be stored efficiently inside of the `JSObject` whereas the `String` value has to be represented as a separate entity in memory and pointed to by a `HeapObject` pointer.
 
 Now for `String`s that seems kind of obvious and makes sense to have them allocated as separate entities[^2], but what about other number values for example? In JavaScript numbers are [64-bit double precision floating point values](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) so they can encode a lot of values outside the 31-bit integer range. In the basic pointer tagging scheme used in V8, all numbers outside this range have to represented as separately allocated `HeapObject` entities.
 
