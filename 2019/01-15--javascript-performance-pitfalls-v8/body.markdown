@@ -238,7 +238,7 @@ The V8 engine uses a technique called [pointer tagging](https://en.wikipedia.org
 
 ![][1]
 
-A `Smi` is a small integer in the 31-bit range, i.e. a value between `-1,073,741,824` and `536,870,912`[^1], shifted up by one bit and padded with a `0` in the least significant bit. A `HeapObject` pointer is the address of an object in (managed) memory, with the two least significant bits set to `01`. That means when V8 wants to get to the real address of the object it has to subtract one from the value. There's also the `WeakHeapObject`, which has the least significant bits set to `11`, and is essentially like `HeapObject`, except that the reference is treated weakly by the garbage collector.
+A `Smi` is a small integer in the 31-bit range, i.e. a value between `-1,073,741,824` and `1,073,741,823`[^1], shifted up by one bit and padded with a `0` in the least significant bit. A `HeapObject` pointer is the address of an object in (managed) memory, with the two least significant bits set to `01`. That means when V8 wants to get to the real address of the object it has to subtract one from the value. There's also the `WeakHeapObject`, which has the least significant bits set to `11`, and is essentially like `HeapObject`, except that the reference is treated weakly by the garbage collector.
 
 [^1]: At the time of this writing, `Smi`s on 64-bit architectures are integers in the 32-bit range, but this is probably going to change to use 31-bit ranged integers everywhere in the near future.
 
