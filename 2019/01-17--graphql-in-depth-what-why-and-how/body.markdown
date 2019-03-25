@@ -430,7 +430,7 @@ Here, we use a mock call to a MongoDB database collection called `flavors`, pass
 
 ### Resolving nested fields
 
-What may not be clear above is how our nested `nutrition` data is resolved. Remember: we're not actually storing the nutrition data _on_ each `flavor` but assume it lives in another databse collection/table.
+What may not be clear above is how our nested `nutrition` data is resolved. Remember: we're not actually storing the nutrition data _on_ each `flavor` but assume it lives in another database collection/table.
 
 While we _did_ tell GraphQL that our `type Flavor` might include some `nutrition` data in the shape of the `type Nutrition`, we didn't explain how to actually _resolve_ that data. Again: **the  `nutrition` data for a flavor is assumed to be in a different collection than the flavor data**.
 
