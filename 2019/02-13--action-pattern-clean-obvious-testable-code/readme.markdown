@@ -4,7 +4,7 @@
 
 <h1>The Action Pattern: Clean, Obvious, Testable Code</h1>
 
-<p><kbd>26-03-2019</kbd> <kbd>09:00</kbd> <kbd>patterns</kbd> <kbd>action-pattern</kbd></p>
+<p><kbd>patterns</kbd> <kbd>action-pattern</kbd></p>
 
 <blockquote><p>Let&#x2019;s convert a mock API endpoint for signing up new users in a mobile app into using the action pattern.</p>
 </blockquote>
