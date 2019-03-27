@@ -599,4 +599,4 @@ There's ample nuance with testing, of course, but hopefully the point here is cl
 
 So there you have it! Actions are a wonderful way to clean up your codebase, make things more predictable, and save yourself a ton of time in the process. 
 
-Because actions are just a JavaScript pattern, the cost to test them out in your own app is zero. Try it, see if you like it. Most importantly: see if they improve the quality of your code. If you're struggling to write code that perform predictably, give this pattern a try. You won't regret it.
+Because actions are just a JavaScript pattern, the cost to test them out in your own app is zero. Try it, see if you like it. Most importantly: see if they improve the quality of your code. If you're struggling to write code that performs predictably, give this pattern a try. You won't regret it.
