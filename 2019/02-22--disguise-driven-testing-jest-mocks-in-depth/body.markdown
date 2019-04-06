@@ -100,7 +100,7 @@ Now, you should split the function. Pull the hard part away from the easy part. 
 
 As a quick side note, some consider it bad practice to break up your code to make it more testable. I would disagree. Testability tells you something about the complexity of your code. The harder it is to test, the more complex it tends to be. When you are refactoring your code to make it more testable, you just changing the complex to the simple.
 
-Since you’ve isolate the complex part, the next the step is pulling the `fetch` call out into a separate function. Call the new function`service` and since it now has a separate responsibility go ahead and move it into a new file called `service.js`. To keep things clean, move it to a separate directory called `api` this will be important later when you set up the mock.
+Since you’ve isolated the complex part, the next the step is pulling the `fetch` call out into a separate function. Call the new function`service` and since it now has a separate responsibility go ahead and move it into a new file called `service.js`. To keep things clean, move it to a separate directory called `api` this will be important later when you set up the mock.
 
 ```js
 export default function service() {
