@@ -1,0 +1,1 @@
+This article covers one nifty trick I've been using lately in these cases that lets you review exactly the conflict resolution, while ignoring the mountains of changes that don't represent any conflicts (and can thus be safely ignored).

@@ -1,0 +1,1 @@
+Have you ever tried to do a code review on a PR that merges a large release branch or feature branch back into mainline, fixing merge conflicts? It's not pretty. The diffs are often and easily very big, *— 50k+ LOC big —* have hundreds of commits, and the actual changes made by the engineer resolving the merge conflicts are virtually impossible to spot.
