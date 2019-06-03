@@ -1,0 +1,1 @@
+React's flexibility means you can handle data in a lot of different ways. This guide will teach you patterns for fetching, storing, and retrieving data in React without the stress of maintaining a complex system.
